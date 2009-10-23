@@ -1,0 +1,50 @@
+\name{HistData-package}
+\Rdversion{1.1}
+\alias{HistData-package}
+\alias{HistData}
+\docType{package}
+\title{
+Data sets from the history of statistics and data visualization}
+
+\description{
+The HistData package provides a collection of data sets
+that are interesting and important in the history of statistics and data visualization.
+The goal of the package is to make these available, both for instructional use
+and for historical research.
+
+}
+\details{
+\tabular{ll}{
+Package: \tab HistData\cr
+Type: \tab Package\cr
+Version: \tab 0.2\cr
+Date: \tab 2009-10-23\cr
+License: \tab GPL\cr
+LazyLoad: \tab yes\cr
+}
+%~~ An overview of how to use the package, including the most important ~~
+%~~ functions ~~
+}
+\author{
+Michael Friendly
+
+Maintainer: Michael Friendly <friendly@yorku.ca>
+}
+\references{
+Friendly, M. (2007). A Brief History of Data Visualization.
+In Chen, C., Hardle, W. & Unwin, A. (eds.)  
+\emph{Handbook of Computational Statistics: Data Visualization}, Springer-Verlag, III, Ch. 1, 1-34.
+
+Friendly, M. & Denis, D. (2005). The early origins and development of the scatterplot. 
+\emph{Journal of the History of the Behavioral Sciences}, 
+41, 103-130.
+
+}
+\keyword{ package }
+%\seealso{
+%~~ Optional links to other man pages, e.g. ~~
+%~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
+%}
+\examples{
+# see examples for the separate data sets
+}
