@@ -1,8 +1,8 @@
+\encoding{latin1}
 \name{Guerry}
 \Rdversion{1.1}
 \alias{Guerry}
 \docType{data}
-%\encoding{latin1}
 \title{
 Data from A.-M. Guerry, "Essay on the Moral Statistics of France"
 }
@@ -74,7 +74,7 @@ Dray, S. and Jombart, T. (2009). A Revisit Of Guerry's Data: Introducing
 Spatial Constraints In Multivariate Analysis. Unpublished manuscript.
 
 Brunsdon, C. and Dykes, J. (2007). 
-Geographically weighted visualization – interactive graphics
+Geographically weighted visualization - interactive graphics
 for scale-varying exploratory analysis. 
 Geographical Information Science Research Conference (GISRUK 07),
 NUI Maynooth, Ireland, April, 2007.

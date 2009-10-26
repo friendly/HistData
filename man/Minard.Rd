@@ -90,7 +90,8 @@ Friendly, M. (2003). Re-Visions of Minard.
 data(Minard.troops); data(Minard.cities)
 ## maybe str(Minard.troops) ; plot(Minard.troops) ...
 
-if (require(ggplot2)) {
+\dontrun{
+require(ggplot2)
  plot_troops <- ggplot(Minard.troops, aes(long, lat)) +
    geom_path(aes(size = survivors, colour = direction, group = group))
    
@@ -108,6 +109,6 @@ if (require(ggplot2)) {
  plot_polished
  
  ## TODO: add the plot of temperature below
- }
+}
 }
 \keyword{datasets}

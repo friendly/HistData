@@ -7,7 +7,7 @@ Author: Michael Friendly
 Maintainer: Michael Friendly <friendly@yorku.ca>
 Description: The HistData package provides a collection of small data sets
 	that are interesting and important in the history of statistics and data visualization.
-Suggests: ggplot2
+Suggests: ggplot2, gtools
 License: GPL
 LazyLoad: yes
 LazyData: yes
