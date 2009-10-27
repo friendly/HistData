@@ -88,7 +88,6 @@ Friendly, M. (2003). Re-Visions of Minard.
 }
 \examples{
 data(Minard.troops); data(Minard.cities)
-## maybe str(Minard.troops) ; plot(Minard.troops) ...
 
 \dontrun{
 require(ggplot2)
@@ -105,7 +104,7 @@ require(ggplot2)
    xlab(NULL) + 
    ylab(NULL)
  
- # need to re-scale the plot window to an aspect ratio of ~ 4 x 1
+ # TODO: need to re-scale the plot window to an aspect ratio of ~ 4 x 1
  plot_polished
  
  ## TODO: add the plot of temperature below

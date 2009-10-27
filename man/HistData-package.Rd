@@ -17,10 +17,11 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.2\cr
-Date: \tab 2009-10-23\cr
+Version: \tab 0.3\cr
+Date: \tab 2009-10-27\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
+LazyData: \tab yes\cr
 }
 %~~ An overview of how to use the package, including the most important ~~
 %~~ functions ~~
