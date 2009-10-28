@@ -120,30 +120,63 @@ Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
 \examples{
 data(Snow.deaths); data(Snow.pumps); data(Snow.streets); data(Snow.polygons)
 
-# draw a rough approximation to the map and data
-# make sure that the plot limits include all the other stuff
-plot(Snow.deaths[,2:3], col="red", pch=15, cex=0.6, 
-	xlab="", ylab="", xlim=c(3,20), ylim=c(3,20),
-	main="Snow's Cholera Map of London")
-# plot and label the pump locations
-points(Snow.pumps[,3:4], col="blue", pch=17, cex=1.5)
-text(Snow.pumps[,3:4], labels=Snow.pumps$label, pos=1, cex=0.8)
+## draw a rough approximation to Snow's map and data
 
-# draw the streets
-for(i in 1:max(Snow.streets$street)) {
-		this <- Snow.streets$street == i
-		lines(Snow.streets[this,3:4], col="gray")
+# define some funtions to make the pieces re-usable
+Sdeaths <- function() {
+		# make sure that the plot limits include all the other stuff
+   plot(Snow.deaths[,2:3], col="red", pch=15, cex=0.6, 
+   	xlab="", ylab="", xlim=c(3,20), ylim=c(3,20),
+   	main="Snow's Cholera Map of London")
 	}
+Spumps <- function()  {
+# function to plot and label the pump locations
+   points(Snow.pumps[,3:4], col="blue", pch=17, cex=1.5)
+   text(Snow.pumps[,3:4], labels=Snow.pumps$label, pos=1, cex=0.8)
+}
 
-# draw the Thiessen polygons
+Sstreets <- function() {
+# function to draw the streets
+   for(i in 1:max(Snow.streets$street)) {
+   		this <- Snow.streets$street == i
+   		lines(Snow.streets[this,3:4], col="gray")
+   	}
+}
+
+# draw a scale showing distance in meters in upper left
+mapscale <- function(xs=3.5, ys=19.7) {
+   scale <- matrix(c(0,0, 4,0, NA, NA), nrow=3, ncol=2, byrow=TRUE)
+   colnames(scale)<- c("x","y")
+	# tick marks
+   scale <- rbind(scale, expand.grid(y=c(-.1, .1, NA), x=0:4)[,2:1])
+   lines(xs+scale[,1], ys+scale[,2])
+	# value and axis labels
+   stext <- matrix(c(0,0, 2,0, 4,0, 4, 0.1), nrow=4, ncol=2, byrow=TRUE)
+   text(xs+stext[,1], ys+stext[,2], labels=c("0", "2", "4", "100 m."), pos=c(1,1,1,4), cex=0.8)
+}
+
+# draw the map with the pieces
+Sdeaths()
+Spumps()
+Sstreets()
+mapscale()
+
+
+# draw the Thiessen polygon boundaries
 starts <- which(Snow.polygons$start==0)
 for(i in 1:length(starts)) {
 	this <- starts[i]:(starts[i]+1)
 	lines(Snow.polygons[this,2:3], col="blue", lwd=2, lty=2)
 	}
 
-# TODO: draw a scale showing distance in meters in upper left
 
-# TODO: overlay bivariate kernel density contours of deaths
+## overlay bivariate kernel density contours of deaths
+Sdeaths()
+Spumps()
+Sstreets()
+mapscale()
+require(KernSmooth)
+kde2d <- bkde2D(Snow.deaths[,2:3], bandwidth=c(0.5,0.5))
+contour(x=kde2d$x1, y=kde2d$x2,z=kde2d$fhat, add=TRUE)
 }
 \keyword{datasets}
