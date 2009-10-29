@@ -179,4 +179,7 @@ require(KernSmooth)
 kde2d <- bkde2D(Snow.deaths[,2:3], bandwidth=c(0.5,0.5))
 contour(x=kde2d$x1, y=kde2d$x2,z=kde2d$fhat, add=TRUE)
 }
-\keyword{datasets}
+\keyword{
+datasets
+spatial
+}

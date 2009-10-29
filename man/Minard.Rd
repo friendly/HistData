@@ -110,4 +110,7 @@ require(ggplot2)
  ## TODO: add the plot of temperature below
 }
 }
-\keyword{datasets}
+\keyword{
+datasets
+spatial
+}
