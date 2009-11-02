@@ -123,24 +123,22 @@ data(Snow.deaths); data(Snow.pumps); data(Snow.streets); data(Snow.polygons)
 ## draw a rough approximation to Snow's map and data
 
 # define some funtions to make the pieces re-usable
-Sdeaths <- function() {
+Sdeaths <- function(col="red", pch=15, cex=0.6) {
 		# make sure that the plot limits include all the other stuff
-   plot(Snow.deaths[,2:3], col="red", pch=15, cex=0.6, 
+   plot(Snow.deaths[,c("x","y")], col=col, pch=pch, cex=cex, 
    	xlab="", ylab="", xlim=c(3,20), ylim=c(3,20),
    	main="Snow's Cholera Map of London")
 	}
-Spumps <- function()  {
 # function to plot and label the pump locations
-   points(Snow.pumps[,3:4], col="blue", pch=17, cex=1.5)
-   text(Snow.pumps[,3:4], labels=Snow.pumps$label, pos=1, cex=0.8)
+Spumps <- function(col="blue", pch=17, cex=1.5)  {
+   points(Snow.pumps[,c("x","y")], col=col, pch=pch, cex=cex)
+   text(Snow.pumps[,c("x","y")], labels=Snow.pumps$label, pos=1, cex=0.8)
 }
 
-Sstreets <- function() {
-# function to draw the streets
-   for(i in 1:max(Snow.streets$street)) {
-   		this <- Snow.streets$street == i
-   		lines(Snow.streets[this,3:4], col="gray")
-   	}
+# function to draw the streets 
+Sstreets <- function(col="gray") {
+	slist <- split(Snow.streets[,c("x","y")],as.factor(Snow.streets[,"street"]))
+	invisible(lapply(slist, lines, col=col))
 }
 
 # draw a scale showing distance in meters in upper left
@@ -178,6 +176,28 @@ mapscale()
 require(KernSmooth)
 kde2d <- bkde2D(Snow.deaths[,2:3], bandwidth=c(0.5,0.5))
 contour(x=kde2d$x1, y=kde2d$x2,z=kde2d$fhat, add=TRUE)
+
+## re-do this the sp way... [thx: Stephane Dray]
+library(sp)
+
+# streets
+slist <- split(Snow.streets[,c("x","y")],as.factor(Snow.streets[,"street"]))
+Ll1 <- lapply(slist,Line)
+Lsl1 <- Lines(Ll1,paste("Street",1:length(Ll1)))
+Snow.streets.sp <- SpatialLines(list(Lsl1))
+plot(Snow.streets.sp, col="gray")
+title(main="Snow's Cholera Map of London")
+
+# deaths
+Snow.deaths.sp = SpatialPoints(Snow.deaths[,c("x","y")])
+plot(Snow.deaths.sp, add=TRUE, col ='red', pch=15, cex=0.6)
+
+# pumps
+spp <- SpatialPoints(Snow.pumps[,c("x","y")])
+Snow.pumps.sp <- SpatialPointsDataFrame(spp,Snow.pumps[,c("x","y")])
+plot(Snow.pumps.sp, add=TRUE, col='blue', pch=17, cex=1.5)
+text(Snow.pumps[,c("x","y")], labels=Snow.pumps$label, pos=1, cex=0.8)
+
 }
 \keyword{
 datasets
