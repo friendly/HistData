@@ -77,11 +77,53 @@ English translation available at \url{http://www.math.yorku.ca/SCS/Gallery/langr
 Lelewel, J. (1851). \emph{Géographie du Moyen Âge}. Paris: Pilliet, 1851.
 
 }
-\examples{
-data(Langren1644)
-## maybe str(Langren1644) ; plot(Langren1644) ...
-}
 \keyword{
 datasets
 spatial
+}
+\examples{
+data(Langren1644)
+
+\dontrun{
+require(maps)
+require(ggplot2)
+require(reshape)
+require(plyr)
+
+# set latitude to that of Toledo
+Langren1644$Latitude <- 39.68
+
+#          x/long   y/lat
+bbox <- c( 38.186, -9.184,
+           43.692, 28.674 )
+bbox <- matrix(bbox, 2, 2, byrow=TRUE)
+
+borders <- as.data.frame(map("world", plot = FALSE,
+  xlim = expand_range(bbox[,2], 0.2),
+  ylim = expand_range(bbox[,1], 0.2))[c("x", "y")])
+
+data(world.cities)
+# get actual locations of Toledo & Rome
+cities <- subset(world.cities,
+  name \%in\% c("Rome", "Toledo") & country.etc \%in\% c("Spain", "Italy"))
+colnames(cities)[4:5]<-c("Latitude", "Longitude")
+
+mplot <- ggplot(Langren1644, aes(Longitude, Latitude) ) +
+  geom_path(aes(x, y), borders, colour = "grey60") +
+  geom_point(y = 40) +
+  geom_text(aes(label = Name), y = 40.1, angle = 90, hjust = 0, size = 3)
+mplot <- mplot +
+	geom_segment(aes(x=-4.03, y=40, xend=30, yend=40))
+
+mplot <- mplot +
+  geom_point(data = cities, colour = "red", size = 2) +
+  geom_text(data=cities, aes(label=name), color="red", size=3, vjust=-0.5) +
+  coord_cartesian(xlim=bbox[,2], ylim=bbox[,1])
+
+# make the plot have approximately aspect ratio = 1
+windows(width=10, height=2)
+mplot
+}
+
+
 }

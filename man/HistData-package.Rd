@@ -17,13 +17,13 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.4\cr
-Date: \tab 2009-11-02\cr
+Version: \tab 0.5\cr
+Date: \tab 2009-11-03\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
 }
-Some of the data sets have examples which reproduce an historical graph.
+Some of the data sets have examples which reproduce an historical graph or analysis.
 These are meant mainly as starters for more extensive re-analysis or graphical
 elaboration. Some of these present graphical challenges to reproduce in R.
 }

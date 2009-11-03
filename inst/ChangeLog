@@ -3,16 +3,17 @@ Version 0.1 (2009-10-20)
    Initial version uploaded to R-Forge
 
 Version 0.2 (2009-10-23)
-
 	Added Minard data
 	Added Bowley data
 	
 Version 0.3 (2009-10-27)
-
 	Added Snow data
 	Added Langren data
 	Added inst/images/google-toledo-rome3.jpg
 
 Version 0.4 (2009-11-02)
-
 	Added Nightingale data
+
+Version 0.5 (2009-11-03)
+	Added Macdonell data
+	Added Langren/ggplot2 example
