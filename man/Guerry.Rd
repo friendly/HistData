@@ -85,6 +85,11 @@ Friendly, M. (2007). A.-M. Guerry's Moral Statistics of France: Challenges for M
 Friendly, M. (2007). Data from A.-M. Guerry, Essay on the Moral Statistics of France (1833),
  \url{http://www.math.yorku.ca/SCS/Gallery/guerry/guerrydat.html}.
 }
+\seealso{
+The \pkg{Guerry} package for maps of France: \code{\link[Guerry]{gfrance}}
+and related data.
+}
+
 \examples{
 data(Guerry)
 ## maybe str(Guerry) ; plot(Guerry) ...

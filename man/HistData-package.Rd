@@ -42,6 +42,10 @@ Friendly, M. & Denis, D. (2005). The early origins and development of the scatte
 41, 103-130.
 
 }
+\seealso{
+The \code{\link[Guerry]{Guerry-package}} package
+}
+
 \keyword{ package }
 %\seealso{
 %~~ Optional links to other man pages, e.g. ~~

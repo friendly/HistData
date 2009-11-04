@@ -104,7 +104,8 @@ require(ggplot2)
    xlab(NULL) + 
    ylab(NULL)
  
- # TODO: need to re-scale the plot window to an aspect ratio of ~ 4 x 1
+# re-scale the plot window to an aspect ratio of ~ 4 x 1
+ windows(width=12, height=3)
  plot_polished
  
  ## TODO: add the plot of temperature below
