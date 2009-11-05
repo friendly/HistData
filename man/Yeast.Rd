@@ -1,0 +1,71 @@
+\name{Yeast}
+\Rdversion{1.1}
+\alias{Yeast}
+\alias{YeastD.mat}
+\docType{data}
+\title{
+Student's (1906) Yeast Cell Counts
+}
+\description{
+Counts of the number of yeast cells were made each of 400 regions in a 20 x 20 grid on a microscope
+slide, comprising a 1 sq. mm. area.
+This experiment was repeated four times, giving samples A, B, C and D.
+
+Student (1906) used these data to investigate the errors in random sampling.
+He says "there are two sources of error: (a) the drop taken may not be representative
+of the bulk of the liquid; (b) the cistribution of the cells over the area 
+which is examined is never exactly uniform, so that there is an 'error of
+random sampling.'"
+
+The data in the paper are provided in the form of discrete frequency distributions
+for the four samples.  Each shows the frequency distribution squares containing
+a \code{count} of 0, 1, 2, ... yeast cells. These are combined here in \code{Yeast}. 
+In addition, he gives a table
+(Table I) showing the actual number of yeast cells counted in the 20 x 20
+grid for sample D, given here as \code{YeastD.mat}.
+}
+\usage{
+	data(Yeast)
+	data(YeastD.mat)
+	}
+\format{
+  \code{Yeast}: A frequency data frame with 36 observations on the following 3 variables,
+  giving the frequencies of 
+  \describe{
+    \item{\code{sample}}{Sample identifier, a factor with levels \code{A} \code{B} \code{C} \code{D}}
+    \item{\code{count}}{The number of yeast cells counted in a square}
+    \item{\code{freq}}{The number of squares with the given \code{count}}
+  }
+
+  \code{YeastD.mat}: A 20 x 20 matrix containing the count of yeast cells in each square for
+  sample D.  
+
+}
+\details{
+Student considers the distribution of a total of \eqn{Nm} particles distributed over
+\eqn{N} unit areas with an average of \eqn{m} particles per unit area.
+With uniform mixing, for a given particle, the probability of it falling on any one
+area is \eqn{p = 1/N}, and not falling on that area is \eqn{q = 1 - 1/N}.
+He derives the probability distribution of 0, 1, 2, 3, ...
+particles on a single unit area from the binomial expansion of \eqn{(p + q)^{mN}}.
+
+}
+\source{
+D. J. Hand, F. Daly,  D. Lunn, K. McConway and E. Ostrowski (1994). 
+\emph{A Handbook of Small Data Sets}.
+London: Chapman \& Hall.
+The data may be found at
+\url{http://www.stat.duke.edu/courses/Spring98/sta113/Data/Hand/yeast.dat}
+
+}
+\references{
+"Student" (1906)
+On the error of counting with a haemocytometer.
+Biometrika, 5, 351-360.
+\url{http://www.jstor.org/stable/pdfplus/2331633.pdf}
+}
+\examples{
+data(YeastA)
+## maybe str(YeastA) ; plot(YeastA) ...
+}
+\keyword{datasets}

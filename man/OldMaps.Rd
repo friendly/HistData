@@ -17,10 +17,13 @@ It was conjectured that maps might be systematically in error in five key ways:
 (c) proportional error in latitude; (d)proportional error in longitude;
 (e) angular error from a non-zero difference between true North and the map's North.
 
+One challenge from these data is to produce useful analyses and graphical displays
+ that relate to these characteristics or to other aspects of the data.
 }
 \usage{data(OldMaps)}
 \format{
-  A data frame with 468 observations on the following 6 variables
+  A data frame with 468 observations on the following 6 variables, giving the latitude
+  and longitude of 39 points recorded from 12 sources (Actual + 11 maps).
   \describe{
     \item{\code{point}}{a numeric vector}
     \item{\code{col}}{Column in the table a numeric vector}
