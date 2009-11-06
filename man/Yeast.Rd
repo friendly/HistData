@@ -65,7 +65,12 @@ Biometrika, 5, 351-360.
 \url{http://www.jstor.org/stable/pdfplus/2331633.pdf}
 }
 \examples{
-data(YeastA)
-## maybe str(YeastA) ; plot(YeastA) ...
+data(Yeast)
+
+require(lattice)
+# basic bar charts 
+# TODO: frequencies should start at 0, not 1.
+barchart(count~freq|sample, data=Yeast, ylab="Number of Cells", xlab="Frequency")
+barchart(freq~count|sample, data=Yeast, xlab="Number of Cells", ylab="Frequency",horizontal=FALSE, origin=0)
 }
 \keyword{datasets}

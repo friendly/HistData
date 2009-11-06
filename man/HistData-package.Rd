@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.6\cr
-Date: \tab 2009-11-05\cr
+Version: \tab 0.6-1\cr
+Date: \tab 2009-11-06\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -45,14 +45,14 @@ Friendly, M. & Denis, D. (2005). The early origins and development of the scatte
 \seealso{
 Other packages containing data sets of historical interest include:
 
-The \code{\link[Guerry]{Guerry-package}} package, containing maps and
+The \code{\link[Guerry]{Guerry-package}}, containing maps and
 other data sets related to Guerry's (1833) \emph{Moral Statistics of France}.
 
 \code{\link[xgobi]{morsecodes}} from the \pkg{xgobi} package
 for data from Rothkopf (1957) on errors in learning morse code, a classical
 example for MDS.
 
-The \pkg{psych}, containing Galton's \code{\link[psych]{peas}} data.
+The \pkg{psych} package, containing Galton's \code{\link[psych]{peas}} data.
 The same data set is contained in \pkg{alr3} as \code{\link[alr3]{galtonpeas}}.
 }
 
