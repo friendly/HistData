@@ -125,5 +125,38 @@ windows(width=10, height=2)
 mplot
 }
 
+if (require(ReadImages)) {
+  gimage <- read.jpeg(system.file("images", "google-toledo-rome3.jpg", package="HistData"))
+  plot(gimage)
+  
+  # pixel coordinates of Toledo and Rome in the image, measured from the bottom left corner
+  toledo.map <- c(130, 59)
+  rome.map <- c(505, 119)
+  
+  # confirm locations of Toledo and Rome
+  points(rbind(toledo.map, rome.map), cex=2)
+  
+  # set a scale for translation of lat,long to pixel x,y
+  scale <- data.frame(x=c(130, 856), y=c(52,52))
+  rownames(scale)=c(0,30)
+  lines(scale)
+  
+  xlate <- function(x) {
+    130+x*726/30	
+  }
+  points(x=xlate(Langren1644$Longitude), y=rep(57, nrow(Langren1644)), pch=25, col="blue")
+  text(x=xlate(Langren1644$Longitude), y=rep(57, nrow(Langren1644)), labels=Langren1644$Name, srt=90, adj=c(0, 0.5), cex=0.8)
+}
+
+# show variation in estimates across graphs
+library(lattice)
+graph <- paste(Langren.all$Author, Langren.all$Year)
+dotplot(Name ~ Longitude, data=Langren.all)
+
+dotplot( as.factor(Year) ~ Longitude, data=Langren.all, groups=Name)
+
+dotplot(Name ~ Longitude|graph, data=Langren.all, groups=graph)
+
+
 
 }

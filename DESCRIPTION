@@ -9,7 +9,7 @@ Description: The HistData package provides a collection of small data sets
 	that are interesting and important in the history of statistics and data visualization.
 	The goal of the package is to make these available, both for instructional use
     and for historical research.
-Suggests: gtools, KernSmooth, maps, ggplot2, proto, grid, reshape, plyr, lattice
+Suggests: gtools, KernSmooth, maps, ggplot2, proto, grid, reshape, plyr, lattice, ReadImages
 License: GPL
 LazyLoad: yes
 LazyData: yes
