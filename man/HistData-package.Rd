@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.6-2\cr
-Date: \tab 2009-11-08\cr
+Version: \tab 0.6-3\cr
+Date: \tab 2009-11-10\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -36,6 +36,10 @@ Maintainer: Michael Friendly <friendly@yorku.ca>
 Friendly, M. (2007). A Brief History of Data Visualization.
 In Chen, C., Hardle, W. & Unwin, A. (eds.)  
 \emph{Handbook of Computational Statistics: Data Visualization}, Springer-Verlag, III, Ch. 1, 1-34.
+
+Friendly, M. & Denis, D. (2001).
+Milestones in the history of thematic cartography, statistical graphics, and data visualization.
+\url{http://datavis.ca/milestones/}
 
 Friendly, M. & Denis, D. (2005). The early origins and development of the scatterplot. 
 \emph{Journal of the History of the Behavioral Sciences}, 

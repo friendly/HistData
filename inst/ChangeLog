@@ -27,3 +27,8 @@ Version 0.6-1 (2009-11-06)
 	Fixed latin1 characters in Langren1644
 	Extended Langren example
 
+Version 0.6-3 (2009-11-08)
+	Nightingale$Month made ordered factor
+	Added Nightingale examples
+
+

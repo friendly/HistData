@@ -27,7 +27,7 @@ before a Sanitary Commissioners arrived in March 1855 to improve hygiene in the 
   A data frame with 24 observations on the following 10 variables.
   \describe{
     \item{\code{Date}}{a Date, composed as \code{as.Date(paste(Year, Month, 1, sep='-'), "\%Y-\%b-\%d")}}
-    \item{\code{Month}}{Month of the Crimean War, a factor}
+    \item{\code{Month}}{Month of the Crimean War, an ordered factor}
     \item{\code{Year}}{Year of the Crimean War}
     \item{\code{Army}}{Estimated average monthly strength of the British army}
     \item{\code{Disease}}{Number of deaths from preventable or mitagable zymotic diseases}
@@ -39,7 +39,10 @@ before a Sanitary Commissioners arrived in March 1855 to improve hygiene in the 
   }
 }
 \details{
-For a given cause of death, \code{D}, annual rates per 1000 are calculated as \code{12 * 1000 * D / Army}.
+For a given cause of death, \code{D}, annual rates per 1000 are calculated as \code{12 * 1000 * D / Army},
+rounded to 1 decimal.
+
+The two panels of Nightingale's Coxcomb correspond to dates before and after March 1855
 }
 \source{
 The data were obtained from:
@@ -70,7 +73,52 @@ Nightingale's Rose (flash animation).
 \examples{
 data(Nightingale)
 
-# What if she had made a set of line graphs?
+# For some graphs, it is more convenient to reshape death rates to long format
+#  keep only Date and death rates
+require(reshape)
+Night<- Nightingale[,c(1,8:10)]
+melted <- melt(Night, "Date")
+names(melted) <- c("Date", "Cause", "Deaths")
+melted$Cause <- sub("\\\\.rate", "", melted$Cause)
+melted$Regime <- ordered( rep(c(rep('Before', 12), rep('After', 12)), 3), levels=c('Before', 'After'))
+Night <- melted
+
+# subsets, to facilitate separate plotting
+Night1 <- subset(Night, Date < as.Date("1855-03-01"))
+Night2 <- subset(Night, Date >= as.Date("1855-03-01"))
+
+\dontrun{
+require(ggplot2)
+# Before plot
+cxc1 <- ggplot(Night1, aes(x = factor(Date), y=Deaths, fill = Cause)) +
+		# do it as a stacked bar chart first
+ geom_bar(width = 1, position="identity", color="black") +
+		# set scale so area ~ Deaths	
+ scale_y_sqrt() 
+		# A coxcomb plot = bar chart + polar coordinates
+cxc1 + coord_polar(start=3*pi/2) + 
+	opts(title="Causes of Mortality in the Army in the East") + 
+	xlab("")
+
+# After plot
+cxc2 <- ggplot(Night2, aes(x = factor(Date), y=Deaths, fill = Cause)) +
+ geom_bar(width = 1, position="identity", color="black") +
+ scale_y_sqrt()
+cxc2 + coord_polar(start=3*pi/2) +
+	opts(title="Causes of Mortality in the Army in the East") + 
+	xlab("")
+
+# do both together, with faceting
+cxc <- ggplot(Night, aes(x = factor(Date), y=Deaths, fill = Cause)) +
+ geom_bar(width = 1, position="identity", color="black") + 
+ scale_y_sqrt() +
+ facet_grid(. ~ Regime, scales="free", labeller=label_both)
+cxc + coord_polar(start=3*pi/2) +
+	opts(title="Causes of Mortality in the Army in the East") + 
+	xlab("")
+}
+
+## What if she had made a set of line graphs?
 
 colors <- c("blue", "red", "black")
 with(Nightingale, {
@@ -92,16 +140,6 @@ with(Nightingale, {
 axis.Date(1, at=seq(as.Date("1854/4/1"), as.Date("1856/3/1"), "4 months"), format="\%b \%Y")
 legend(as.Date("1855/10/20"), 700, c("Disease", "Wounds", "Other"),
 	col=colors, fill=colors, title="Cause")
-
-# For some graphs, it is more convenient to
-# reshape death rates to long format; keep only Date and death rates
-require(reshape)
-Night<- Nightingale[,c(1,8:10)]
-nm <- melt(Night, "Date")
-names(nm) <- c("Date", "Cause", "Deaths")
-nm$Cause <- sub("\\\\.rate", "", nm$Cause)
-nm$Regime <- ordered( rep(c(rep('Before', 12), rep('After', 12)), 3), levels=c('Before', 'After'))
-Night <- nm
 
 }
 \keyword{datasets}
