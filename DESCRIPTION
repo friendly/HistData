@@ -1,15 +1,16 @@
 Package: HistData
 Type: Package
 Title: Data sets from the history of statistics and data visualization
-Version: 0.6-3
-Date: 2009-11-10
+Version: 0.6-4
+Date: 2009-11-11
 Author: Michael Friendly, with contributions by Stephane Dray, Hadley Wickham
 Maintainer: Michael Friendly <friendly@yorku.ca>
 Description: The HistData package provides a collection of small data sets
 	that are interesting and important in the history of statistics and data visualization.
 	The goal of the package is to make these available, both for instructional use
-    and for historical research.
-Suggests: gtools, KernSmooth, maps, ggplot2, proto, grid, reshape, plyr, lattice, ReadImages
+    and for historical research.  Some of these present interesting challenges for graphics
+    or analysis in R.
+Suggests: gtools, KernSmooth, maps, ggplot2, proto, grid, reshape, plyr, lattice, ReadImages, car
 License: GPL
 LazyLoad: yes
 LazyData: yes
