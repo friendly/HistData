@@ -31,4 +31,12 @@ Version 0.6-3 (2009-11-08)
 	Nightingale$Month made ordered factor
 	Added Nightingale examples
 
+Version 0.6-4 (2009-11-11)
+	Initial release to CRAN
+
+Version 0.6-5 (2009-11-13)
+	Added Dactyl data
+	Added Pyx data
+
+
 
