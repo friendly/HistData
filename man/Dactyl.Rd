@@ -40,6 +40,19 @@ On methods of ascertaining variations in the rate of births, deaths and marriage
 }
 \examples{
 data(Dactyl)
-## maybe str(Dactyl) ; plot(Dactyl) ...
+
+# display the basic table
+xtabs(count ~ Foot+Lines, data=Dactyl)
+
+# simple two-way anova
+anova(dact.lm <- lm(count ~ Foot+Lines, data=Dactyl))
+
+# plot the lm-quartet
+op <- par(mfrow=c(2,2))
+plot(dact.lm)
+par(op)
+
+# show table as a simple mosaicplot
+mosaicplot(xtabs(count ~ Foot+Lines, data=Dactyl), shade=TRUE)
 }
 \keyword{datasets}

@@ -41,7 +41,7 @@ This classification is reflected in \code{Group}.
 }
 \source{
 Stigler, S. M. (1999).
-\emph{Statistics on the Table}
+\emph{Statistics on the Table}.
 Cambridge, MA: Harvard University Press, table 21.1.
 }
 \references{
@@ -57,6 +57,7 @@ Eight Centuries of Sampling Inspection: The Trial of the Pyx
 }
 \examples{
 data(Pyx)
-## maybe str(Pyx) ; plot(Pyx) ...
+# display as table
+xtabs(count ~ Bags+Deviation, data=Pyx)
 }
 \keyword{datasets}

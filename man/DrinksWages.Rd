@@ -29,10 +29,11 @@ August 10, 1910.
 }
 \usage{data(DrinksWages)}
 \format{
-  A data frame with 70 observations on the following 6 variables.
+  A data frame with 70 observations on the following 6 variables, giving the number of non-drinkers (\code{sober})
+  and drinkers (\code{drinks}) in various occupational categories (\code{trade}).
   \describe{
     \item{\code{class}}{wage class: a factor with levels \code{A} \code{B} \code{C}}
-    \item{\code{trade}}{a factor with levels \code{baker} \code{barman} \code{billposter} \code{blacksmith} \code{bookbinder} \code{bottler} \code{brassfounder} \code{butcher} \code{cabinetmaker} \code{cabmen} \code{carter} \code{cellarman} \code{chemist} \code{chimneysweep} \code{clerk} \code{coachbuilder} \code{coopers} \code{engineer} \code{factory worker} \code{french polisher} \code{gardener} \code{gasworker} \code{general labourer} \code{glassmaker} \code{goldbeater} \code{hammerman} \code{ironfounder} \code{ironmoulder} \code{jeweller} \code{joiner} \code{letterpresser} \code{linesman} \code{lithographer} \code{maltmen} \code{mason} \code{millworker} \code{painter} \code{papercutter} \code{picture framer} \code{pipelayer} \code{plasterer} \code{platelayer} \code{plumber} \code{porter} \code{postman} \code{printer} \code{railway porter} \code{rivetter} \code{sadler} \code{sailor} \code{scavenger} \code{shoemaker} \code{shop hand} \code{slater} \code{stablemen} \code{stoker} \code{stonecutter} \code{stream crane} \code{surfaceman} \code{tailors} \code{timekeeper} \code{tinsmith} \code{tramdriver} \code{turnroom} \code{typecaster} \code{upholsterer} \code{wagon examiner} \code{warehouse} \code{wellsinker} \code{wireworker}}
+    \item{\code{trade}}{a factor with levels \code{baker} \code{barman} \code{billposter} ...  \code{wellsinker} \code{wireworker}}
     \item{\code{sober}}{the number of non-drinkers, a numeric vector}
     \item{\code{drinks}}{the number of drinkers, a numeric vector}
     \item{\code{wage}}{weekly wage (in shillings), a numeric vector}

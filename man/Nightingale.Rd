@@ -84,8 +84,8 @@ melted$Regime <- ordered( rep(c(rep('Before', 12), rep('After', 12)), 3), levels
 Night <- melted
 
 # subsets, to facilitate separate plotting
-Night1 <- subset(Night, Date < as.Date("1855-03-01"))
-Night2 <- subset(Night, Date >= as.Date("1855-03-01"))
+Night1 <- subset(Night, Date < as.Date("1855-04-01"))
+Night2 <- subset(Night, Date >= as.Date("1855-04-01"))
 
 \dontrun{
 require(ggplot2)

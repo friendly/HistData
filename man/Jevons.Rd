@@ -45,6 +45,11 @@ The Magical Number Seven, Plus or Minus Two: Some Limits on Our Capacity for Pro
 }
 \examples{
 data(Jevons)
+# show as tables
+xtabs(frequency ~ estimated+actual, data=Jevons)
+xtabs(frequency ~ error+actual, data=Jevons)
+
+# show as balloonplots
 if (require(gplots)) {
 
 with(Jevons, balloonplot(actual, estimated, frequency, xlab="actual", ylab="estimated", 
