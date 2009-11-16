@@ -39,6 +39,6 @@ Version 0.6-5 (2009-11-13)
 	Added Pyx data
 	Fixed one-off error creating Night1, Night2
 	Added simple Dactyl examples; minor updates to other examples
-
-
+	Extended example(Jevons)
+	Added Fingerprints data
 
