@@ -57,9 +57,11 @@ Technical Report No. 40, Department of Statistics, University of Chicago.
 \examples{
 data(Arbuthnot)
 # plot the sex ratios
-# TODO: add loess smooth
-with(Arbuthnot, plot(Year,Ratio, type='b', ylim=c(1, 1.20), ylab="Sex Ratio"))
+with(Arbuthnot, plot(Year,Ratio, type='b', ylim=c(1, 1.20), ylab="Sex Ratio (M/F)"))
 abline(h=1, col="red")
+#  add loess smooth
+Arb.smooth <- with(Arbuthnot, loess.smooth(Year,Ratio))
+lines(Arb.smooth$x, Arb.smooth$y, col="blue", lwd=2)
 
 # plot the total christenings to observe the anomalie in 1704
 with(Arbuthnot, plot(Year,Total, type='b', ylab="Total Christenings"))
