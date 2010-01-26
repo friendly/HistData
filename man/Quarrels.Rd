@@ -31,90 +31,90 @@ similarities and dissimilarities between the pair of combatants.
 \format{
   A data frame with 779 observations on the following 84 variables.
   \describe{
-    \item{\code{ID }}{Id sequence }
-    \item{\code{year }}{Begin date of quarrel }
-    \item{\code{international }}{Nation vs nation }
-    \item{\code{colonial }}{Nation vs colony }
-    \item{\code{revolution }}{Revolution or civil war }
-    \item{\code{nat.grp }}{Nation vs gp in other nation }
-    \item{\code{grp.grpSame }}{Grp vs grp (same nation) }
-    \item{\code{grp.grpDif }}{Grp vs grp (between nations) }
-    \item{\code{numGroups }}{Num grps agst which fighting }
-    \item{\code{months }}{Num months fighting }
-    \item{\code{pairs }}{Num pairs in whole matrix }
-    \item{\code{monthsPairs }}{Num mons for all in mtrx }
-    \item{\code{logDeaths }}{Log (killed) matrix }
-    \item{\code{deaths }}{Total killed for matrix }
-    \item{\code{exchangeGoods }}{Gp sent goods to other }
-    \item{\code{obstacleGoods }}{Gp puts obstacles to goods }
-    \item{\code{intermarriageOK }}{Present intermarriages }
-    \item{\code{intermarriageBan }}{Intermarriages banned }
-    \item{\code{simBody }}{Similar body characteristics }
-    \item{\code{difBody }}{Difference in body characteristics }
-    \item{\code{simDress }}{Similarity of customs (dress) }
-    \item{\code{difDress }}{Difference of customs (dress) }
-    \item{\code{eqWealth }}{Common level of wealth }
-    \item{\code{difWealth }}{Difference in wealth }
-    \item{\code{simMariagCust }}{Similar marriage cusomst }
-    \item{\code{difMariagCust }}{Different marriage customs }
-    \item{\code{simRelig }}{Similar religeon or philosophy of life }
-    \item{\code{difRelig }}{Religeon or philisophy felt different }
-    \item{\code{philanthropy }}{General philanthropy }
-    \item{\code{restrictMigration }}{Restricted immigrations }
-    \item{\code{sameLanguage }}{Common mother tongue }
-    \item{\code{difLanguage }}{Different languages }
-    \item{\code{simArtSci }}{Similar science, arts }
-    \item{\code{travel }}{Travel }
-    \item{\code{ignorance }}{Ignorant of other/both }
-    \item{\code{simPersLiberty }}{Personal liberty similar }
-    \item{\code{difPersLiberty }}{More personal liberty }
-    \item{\code{sameGov }}{Common government }
-    \item{\code{sameGovYrs }}{Years since common govt established }
-    \item{\code{prevConflict }}{Belligerents fought previously }
-    \item{\code{prevConflictYrs }}{Years since belligerents fought }
-    \item{\code{chronicFighting }}{Chronic figthing between belligerents }
-    \item{\code{persFriendship }}{Autocrats personal friends }
-    \item{\code{persResentment }}{Leaders personal resentment }
-    \item{\code{difLegal }}{Annoyingly different legal systems }
-    \item{\code{nonintervention }}{Policy of nonintervention }
-    \item{\code{thirdParty }}{Led by 3rd group to conflict }
-    \item{\code{supportEnemy }}{Supported others enemy }
-    \item{\code{attackAlly }}{Attacked ally of other }
-    \item{\code{rivalsLand }}{Rivals territory concess }
-    \item{\code{rivalsTrade }}{Rivals trade }
-    \item{\code{churchPower }}{Church civil power }
-    \item{\code{noExtension }}{Policy not extending ter }
-    \item{\code{territory }}{Desired territory }
-    \item{\code{habitation }}{Wanted habitation }
-    \item{\code{minerals }}{Desired minerals }
-    \item{\code{StrongHold }}{Wanted strategic stronghold }
-    \item{\code{taxation }}{Taxed other }
-    \item{\code{loot }}{Wanted loot }
-    \item{\code{objectedWar }}{Objected to war }
-    \item{\code{enjoyFight }}{Enjoyed fighting }
-    \item{\code{pride }}{Elated by strong pride }
-    \item{\code{overpopulated }}{Insufficient land for population }
-    \item{\code{fightForPay }}{Fought only for pay }
-    \item{\code{joinWinner }}{Desired to join winners }
-    \item{\code{otherDesiredWar }}{Quarrel desired by other }
-    \item{\code{propaganda3rd }}{Issued of propaganda to third parties }
-    \item{\code{protection }}{Offered protection }
-    \item{\code{sympathy }}{Sympathized under control }
-    \item{\code{debt }}{Owed money to others }
-    \item{\code{prevAllies }}{Had fought as allies }
-    \item{\code{yearsAllies }}{Years since fought as allies }
-    \item{\code{intermingled }}{Had intermingled on territory }
-    \item{\code{interbreeding }}{Interbreeding between groups }
-    \item{\code{propadanda }}{Issued propaganda to other group }
-    \item{\code{orderedObey }}{Ordered other to obey }
-    \item{\code{commerceOther }}{Commercial enterprises }
-    \item{\code{feltStronger }}{Felt stronger }
-    \item{\code{competeIntellect }}{Competed succesfully intellectual occ }
-    \item{\code{insecureGovt }}{Government insecure }
-    \item{\code{prepWar }}{Preparations for war }
-    \item{\code{RegionalError }}{Regional error measure }
-    \item{\code{CasualtyError }}{Casualty error measure }
-    \item{\code{Auxiliaries }}{Auxiliaries in service of nation at war }
+    \item{\code{ID }}{V84: Id sequence }
+    \item{\code{year }}{V1: Begin date of quarrel }
+    \item{\code{international }}{V2: Nation vs nation }
+    \item{\code{colonial }}{V3: Nation vs colony }
+    \item{\code{revolution }}{V4: Revolution or civil war }
+    \item{\code{nat_grp }}{V5: Nation vs gp in other nation }
+    \item{\code{grp_grpSame }}{V6: Grp vs grp (same nation) }
+    \item{\code{grp_grpDif }}{V7: Grp vs grp (between nations) }
+    \item{\code{numGroups }}{V8: Num grps agst which fighting }
+    \item{\code{months }}{V9: Num months fighting }
+    \item{\code{pairs }}{V10: Num pairs in whole matrix }
+    \item{\code{monthsPairs }}{V11: Num mons for all in mtrx }
+    \item{\code{logDeaths }}{V12: Log (killed) matrix }
+    \item{\code{deaths }}{V13: Total killed for matrix }
+    \item{\code{exchangeGoods }}{V14: Gp sent goods to other }
+    \item{\code{obstacleGoods }}{V15: Gp puts obstacles to goods }
+    \item{\code{intermarriageOK }}{V16: Present intermarriages }
+    \item{\code{intermarriageBan }}{V17: Intermarriages banned }
+    \item{\code{simBody }}{V18: Similar body characteristics }
+    \item{\code{difBody }}{V19: Difference in body characteristics }
+    \item{\code{simDress }}{V20: Similarity of customs (dress) }
+    \item{\code{difDress }}{V21: Difference of customs (dress) }
+    \item{\code{eqWealth }}{V22: Common level of wealth }
+    \item{\code{difWealth }}{V23: Difference in wealth }
+    \item{\code{simMariagCust }}{V24: Similar marriage cusomst }
+    \item{\code{difMariagCust }}{V25: Different marriage customs }
+    \item{\code{simRelig }}{V26: Similar religeon or philosophy of life }
+    \item{\code{difRelig }}{V27: Religeon or philisophy felt different }
+    \item{\code{philanthropy }}{V28: General philanthropy }
+    \item{\code{restrictMigration }}{V29: Restricted immigrations }
+    \item{\code{sameLanguage }}{V30: Common mother tongue }
+    \item{\code{difLanguage }}{V31: Different languages }
+    \item{\code{simArtSci }}{V32: Similar science, arts }
+    \item{\code{travel }}{V33: Travel }
+    \item{\code{ignorance }}{V34: Ignorant of other/both }
+    \item{\code{simPersLiberty }}{V35: Personal liberty similar }
+    \item{\code{difPersLiberty }}{V36: More personal liberty }
+    \item{\code{sameGov }}{V37: Common government }
+    \item{\code{sameGovYrs }}{V38: Years since common govt established }
+    \item{\code{prevConflict }}{V39: Belligerents fought previously }
+    \item{\code{prevConflictYrs }}{V40: Years since belligerents fought }
+    \item{\code{chronicFighting }}{V41: Chronic figthing between belligerents }
+    \item{\code{persFriendship }}{V42: Autocrats personal friends }
+    \item{\code{persResentment }}{V43: Leaders personal resentment }
+    \item{\code{difLegal }}{V44: Annoyingly different legal systems }
+    \item{\code{nonintervention }}{V45: Policy of nonintervention }
+    \item{\code{thirdParty }}{V46: Led by 3rd group to conflict }
+    \item{\code{supportEnemy }}{V47: Supported others enemy }
+    \item{\code{attackAlly }}{V48: Attacked ally of other }
+    \item{\code{rivalsLand }}{V49: Rivals territory concess }
+    \item{\code{rivalsTrade }}{V50: Rivals trade }
+    \item{\code{churchPower }}{V51: Church civil power }
+    \item{\code{noExtension }}{V52: Policy not extending ter }
+    \item{\code{territory }}{V53: Desired territory }
+    \item{\code{habitation }}{V54: Wanted habitation }
+    \item{\code{minerals }}{V55: Desired minerals }
+    \item{\code{StrongHold }}{V56: Wanted strategic stronghold }
+    \item{\code{taxation }}{V57: Taxed other }
+    \item{\code{loot }}{V58: Wanted loot }
+    \item{\code{objectedWar }}{V59: Objected to war }
+    \item{\code{enjoyFight }}{V60: Enjoyed fighting }
+    \item{\code{pride }}{V61: Elated by strong pride }
+    \item{\code{overpopulated }}{V62: Insufficient land for population }
+    \item{\code{fightForPay }}{V63: Fought only for pay }
+    \item{\code{joinWinner }}{V64: Desired to join winners }
+    \item{\code{otherDesiredWar }}{V65: Quarrel desired by other }
+    \item{\code{propaganda3rd }}{V66: Issued of propaganda to third parties }
+    \item{\code{protection }}{V67: Offered protection }
+    \item{\code{sympathy }}{V68: Sympathized under control }
+    \item{\code{debt }}{V69: Owed money to others }
+    \item{\code{prevAllies }}{V70: Had fought as allies }
+    \item{\code{yearsAllies }}{V71: Years since fought as allies }
+    \item{\code{intermingled }}{V72: Had intermingled on territory }
+    \item{\code{interbreeding }}{V73: Interbreeding between groups }
+    \item{\code{propadanda }}{V74: Issued propaganda to other group }
+    \item{\code{orderedObey }}{V75: Ordered other to obey }
+    \item{\code{commerceOther }}{V76: Commercial enterprises }
+    \item{\code{feltStronger }}{V77: Felt stronger }
+    \item{\code{competeIntellect }}{V78: Competed succesfully intellectual occ }
+    \item{\code{insecureGovt }}{V79: Government insecure }
+    \item{\code{prepWar }}{V80: Preparations for war }
+    \item{\code{RegionalError }}{V81: Regional error measure }
+    \item{\code{CasualtyError }}{V82: Casualty error measure }
+    \item{\code{Auxiliaries }}{V83: Auxiliaries in service of nation at war }
   }
 }
 \details{
