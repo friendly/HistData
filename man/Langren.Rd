@@ -153,7 +153,7 @@ library(lattice)
 graph <- paste(Langren.all$Author, Langren.all$Year)
 dotplot(Name ~ Longitude, data=Langren.all)
 
-dotplot( as.factor(Year) ~ Longitude, data=Langren.all, groups=Name)
+dotplot( as.factor(Year) ~ Longitude, data=Langren.all, groups=Name, type="o")
 
 dotplot(Name ~ Longitude|graph, data=Langren.all, groups=graph)
 
