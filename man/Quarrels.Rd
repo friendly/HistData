@@ -138,8 +138,11 @@ for details not contained here.
 }
 \references{
 Lewis F. Richardson, (1960).
-\emph{The Statistics Of Deadly Quarrels}.  Boxwood Press.                    
-
+\emph{The Statistics Of Deadly Quarrels}. (Edited by Q. Wright and C. C. Lienau). 
+ Pittsburgh: Boxwood Press.  
+                 
+Rummel, Rudolph J. (1967), "Dimensions of Dyadic War, 1820-1952." \emph{Journal of
+Conflict Resolution}. 11, (2), 176 - 183.
 }
 \examples{
 data(Quarrels)
