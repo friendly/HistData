@@ -1,0 +1,15 @@
+[OPTIONS]
+Auto Index=Yes
+Contents file=HistData.toc
+Compatibility=1.1 or later
+Compiled file=HistData.chm
+Default topic=00Index.html
+Display compile progress=No
+Full-text search=Yes
+Full text search stop list file=..\..\..\gnuwin32\help\R.stp
+Title=R Help for package HistData
+
+
+[FILES]
+00Index.html
+

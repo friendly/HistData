@@ -13,7 +13,7 @@ This experiment was repeated four times, giving samples A, B, C and D.
 
 Student (1906) used these data to investigate the errors in random sampling.
 He says "there are two sources of error: (a) the drop taken may not be representative
-of the bulk of the liquid; (b) the cistribution of the cells over the area 
+of the bulk of the liquid; (b) the distribution of the cells over the area 
 which is examined is never exactly uniform, so that there is an 'error of
 random sampling.'"
 

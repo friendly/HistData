@@ -36,9 +36,9 @@ similarities and dissimilarities between the pair of combatants.
     \item{\code{international }}{V2: Nation vs nation }
     \item{\code{colonial }}{V3: Nation vs colony }
     \item{\code{revolution }}{V4: Revolution or civil war }
-    \item{\code{nat_grp }}{V5: Nation vs gp in other nation }
-    \item{\code{grp_grpSame }}{V6: Grp vs grp (same nation) }
-    \item{\code{grp_grpDif }}{V7: Grp vs grp (between nations) }
+    \item{\code{nat.grp }}{V5: Nation vs gp in other nation }
+    \item{\code{grp.grpSame }}{V6: Grp vs grp (same nation) }
+    \item{\code{grp.grpDif }}{V7: Grp vs grp (between nations) }
     \item{\code{numGroups }}{V8: Num grps agst which fighting }
     \item{\code{months }}{V9: Num months fighting }
     \item{\code{pairs }}{V10: Num pairs in whole matrix }

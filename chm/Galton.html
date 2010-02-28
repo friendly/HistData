@@ -1,0 +1,124 @@
+<html><head><title>Galton's data on the heights of parents and their children</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="stylesheet" type="text/css" href="Rchm.css">
+</head>
+<body>
+
+<table width="100%"><tr><td>Galton(HistData)</td><td align="right">R Documentation</td></tr></table><object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e">
+<param name="keyword" value="R:   Galton">
+<param name="keyword" value=" Galton's data on the heights of parents and their children">
+</object>
+
+
+<h2>Galton's data on the heights of parents and their children</h2>
+
+
+<h3>Description</h3>
+
+<p>
+Galton (1886) presented these data in a table, showing a cross-tabulation of
+928 adult children born to 205 fathers and mothers, by their height and
+their mid-parent's height.
+He visually smoothed the bivariate frequency distribution and showed that the
+contours formed concentric and similar ellipses, thus setting the stage for
+correlation, regression and the bivariate normal distribution.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>data(Galton)</pre>
+
+
+<h3>Format</h3>
+
+<p>
+A data frame with 928 observations on the following 2 variables.
+<dl>
+<dt><code>parent</code></dt><dd>a numeric vector: height of the mid-parent (average of father and mother)</dd>
+<dt><code>child</code></dt><dd>a numeric vector: height of the child</dd>
+</dl>
+
+<h3>Details</h3>
+
+<p>
+The data are recorded in class intervals of witdth 1.0 in. He used non-integer
+values for the center of each class interval because of the strong bias toward
+integral inches.
+All of the heights of female children were multiplied by 1.08  before tablulation
+to compensate for sex differences.
+</p>
+
+
+<h3>Source</h3>
+
+<p>
+Galton, F. (1886). Regression Towards Mediocrity in Hereditary Stature
+<EM>Journal of the Anthropological Institute</EM>, 15, 246-263
+</p>
+
+
+<h3>References</h3>
+
+<p>
+Friendly, M. &amp; Denis, D. (2005). The early origins and development of the scatterplot. 
+<EM>Journal of the History of the Behavioral Sciences</EM>, 
+41, 103-130.
+</p>
+<p>
+Galton, F. (1869). <EM>Hereditary Genius: An Inquiry into its Laws and Consequences</EM>.
+London: Macmillan.
+</p>
+<p>
+Stigler, S. M. (1986). 
+<EM>The History of Statistics: The Measurement of Uncertainty before 1900</EM>.
+Cambridge, MA: Harvard University Press, Table 8.1
+</p>
+<p>
+Wachsmuth, A. W., Wilkinson L., Dallal G. E. (2003). 
+Galton's bend: A previously undiscovered nonlinearity in Galton's family stature regression data. 
+<EM>The American Statistician</EM>, 57, 190-1922. 
+<a href="http://www.cs.uic.edu/~wilkinson/Publications/galton.pdf">http://www.cs.uic.edu/~wilkinson/Publications/galton.pdf</a>
+</p>
+
+
+<h3>See Also</h3>
+
+<p>
+<code><a href="PearsonLee.html">PearsonLee</a></code>,
+<code><a onclick="findlink('psych', 'galton.html')" style="text-decoration: underline; color: blue; cursor: hand">galton</a></code>
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(Galton)
+
+# sunflower plot with regression line and data ellipses
+with(Galton, 
+        {
+        sunflowerplot(parent,child, xlim=c(62,74), ylim=c(62,74))
+        reg &lt;- lm(child ~ parent)
+        abline(reg)
+        if(require(car)) {
+        data.ellipse(parent,child, xlim=c(62,74), ylim=c(62,74), plot.points=FALSE)
+                }
+  })
+
+</pre>
+
+<script Language="JScript">
+function findlink(pkg, fn) {
+var Y, link;
+Y = location.href.lastIndexOf("\\") + 1;
+link = location.href.substring(0, Y);
+link = link + "../../" + pkg + "/chtml/" + pkg + ".chm::/" + fn;
+location.href = link;
+}
+</script>
+
+
+<hr><div align="center">[Package <em>HistData</em> version 0.2 <a href="00Index.html">Index</a>]</div>
+
+</body></html>
