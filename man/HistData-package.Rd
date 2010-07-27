@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.6-8\cr
-Date: \tab 2010-03-19\cr
+Version: \tab 0.6-9\cr
+Date: \tab 2010-07-27\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -105,7 +105,7 @@ Other packages containing data sets of historical interest include:
 The \code{\link[Guerry]{Guerry-package}}, containing maps and
 other data sets related to Guerry's (1833) \emph{Moral Statistics of France}.
 
-\code{\link[xgobi]{morsecodes}} from the \pkg{xgobi} package
+\code{morsecodes} from the (defunct) \pkg{xgobi} package
 for data from Rothkopf (1957) on errors in learning morse code, a classical
 example for MDS.
 

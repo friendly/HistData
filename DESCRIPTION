@@ -1,8 +1,8 @@
 Package: HistData
 Type: Package
 Title: Data sets from the history of statistics and data visualization
-Version: 0.6-8
-Date: 2010-03-19
+Version: 0.6-9
+Date: 2010-07-27
 Author: Michael Friendly, with contributions by Stephane Dray, Hadley Wickham
 Maintainer: Michael Friendly <friendly@yorku.ca>
 Description: The HistData package provides a collection of small data sets

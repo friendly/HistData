@@ -1,3 +1,8 @@
+Version 0.6-9 (2010-07-27)
+
+	\dontrun{} portion of example(Snow) using sp, due to error from sp::Lines()
+	Minor documentation fix for car_2
+
 Version 0.6-8 (2010-03-19)
 
 	Added links to data sets on main package page
