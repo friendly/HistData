@@ -178,16 +178,16 @@ kde2d <- bkde2D(Snow.deaths[,2:3], bandwidth=c(0.5,0.5))
 contour(x=kde2d$x1, y=kde2d$x2,z=kde2d$fhat, add=TRUE)
 
 ## re-do this the sp way... [thx: Stephane Dray]
-\dontrun{
+%\dontrun{
 library(sp)
 
 # streets
 slist <- split(Snow.streets[,c("x","y")],as.factor(Snow.streets[,"street"]))
 Ll1 <- lapply(slist,Line)
-Lsl1 <- Lines(Ll1,paste("Street",1:length(Ll1)))
+Lsl1 <- Lines(Ll1,"Street")
 Snow.streets.sp <- SpatialLines(list(Lsl1))
 plot(Snow.streets.sp, col="gray")
-title(main="Snow's Cholera Map of London")
+title(main="Snow's Cholera Map of London (sp)")
 
 # deaths
 Snow.deaths.sp = SpatialPoints(Snow.deaths[,c("x","y")])
@@ -198,9 +198,8 @@ spp <- SpatialPoints(Snow.pumps[,c("x","y")])
 Snow.pumps.sp <- SpatialPointsDataFrame(spp,Snow.pumps[,c("x","y")])
 plot(Snow.pumps.sp, add=TRUE, col='blue', pch=17, cex=1.5)
 text(Snow.pumps[,c("x","y")], labels=Snow.pumps$label, pos=1, cex=0.8)
+%}
 }
-}
-\keyword{
-datasets
-spatial
-}
+\keyword{datasets}
+\keyword{spatial}
+
