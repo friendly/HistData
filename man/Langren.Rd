@@ -161,6 +161,9 @@ dotplot( as.factor(Year) ~ Longitude, data=Langren.all, groups=Name, type="o")
 
 dotplot(Name ~ Longitude|graph, data=Langren.all, groups=graph)
 
+# why the gap?
+gap.mod <- glm(Gap ~ Year + Source + Latitude, family=binomial, data=Langren1644)
+anova(gap.mod, test="Chisq")
 
 
 }
