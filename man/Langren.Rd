@@ -31,14 +31,18 @@ from all known versions of this graph.
 	data(Langren.all)
 	}
 \format{
-  \code{Langren1644}: A data frame with 12 observations on the following 5 variables,
+  \code{Langren1644}: A data frame with 12 observations on the following 9 variables,
   giving determinations of the distance in longitude between Toledo and Rome, from the 1644 graph.
-  \describe{
+   \describe{
     \item{\code{Name}}{The name of the person giving a determination, a factor with levels \code{A. Argelius} ... \code{T. Brahe}}
     \item{\code{Longitude}}{Estimated value of the longitude distance between Toledo and Rome}
     \item{\code{Year}}{Year associated with this determination}
     \item{\code{Longname}}{A longer version of the \code{Name}, where appropriate; a factor with levels \code{Andrea Argoli} \code{Christoph Clavius}  \code{Tycho Brahe}}
-    \item{\code{Where}}{a factor with levels \code{Alexandria} \code{Belgium} \code{Denmark} \code{Flanders} \code{France} \code{Germany} \code{Italy} \code{Italy }}
+    \item{\code{City}}{The principal city where this person worked; a factor with levels \code{Alexandria} \code{Amsterdam} \code{Bamberg} \code{Bologna} \code{Frankfurt} \code{Hven} \code{Leuven} \code{Middelburg} \code{Nuremberg} \code{Padua} \code{Paris} \code{Rome}}
+    \item{\code{Country}}{The country where this person worked; a factor with levels \code{Belgium} \code{Denmark} \code{Egypt} \code{Flanders} \code{France} \code{Germany} \code{Italy} \code{Italy }}
+    \item{\code{Latitude}}{Latitude of this \code{City}; a numeric vector}
+    \item{\code{Source}}{Likely source for this determination of Longitude; a factor with levels \code{Astron} \code{Map}}
+    \item{\code{Gap}}{A numeric vector indicating whether the \code{Longitude} value is below or above the median}
   }
 
   \code{Langren.all}: A data frame with 61 observations on the following 4 variables,
