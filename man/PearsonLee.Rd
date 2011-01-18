@@ -3,7 +3,7 @@
 \alias{PearsonLee}
 \docType{data}
 \title{
-Pearson and Lee's 1896 data on the heights of parents and children classified by gender
+Pearson and Lee's  data on the heights of parents and children classified by gender
 }
 \description{
 Wachsmuth et. al (2003) noticed that a loess smooth through Galton's data
@@ -12,7 +12,7 @@ trend, and asked whether this might be due to Galton having pooled the heights o
 fathers and mothers and sons and daughters in constructing his tables and graphs.
 
 To answer this question, they used analogous data from English families at about the
-same time, tabulated by Karl Pearson and Alice Lee (1896), but where the heights
+same time, tabulated by Karl Pearson and Alice Lee (1896, 1903), but where the heights
 of parents and children were each classified by gender of the parent.
 }
 \usage{data(PearsonLee)}
@@ -35,6 +35,12 @@ the data according to the gender of the father/mother and son/daughter.
 Pearson, K. and Lee, A. (1896). Mathematical contributions to the theory
 of evolution. On telegony in man, etc. \emph{Proceedings of the Royal Society of
 London}, 60 , 273-283.
+
+Pearson, K. and Lee, A. (1903). 
+On the laws of inheritance in man: I. Inheritance of physical characters. \emph{Biometika}, 2(4), 357-462.
+(Tables XXII, p. 415; XXV, p. 417; XXVIII, p. 419 and XXXI, p. 421.)
+
+
 }
 \references{
 Wachsmuth, A.W., Wilkinson L., Dallal G.E. (2003). 
