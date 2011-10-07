@@ -47,6 +47,7 @@ Data sets included with HistData are:
   \item{\code{\link{Jevons}}}{W. Stanley Jevons' data on numerical discrimination}
   \item{\code{\link{Langren}}}{van Langren's data on longitude distance between Toledo and Rome}
   \item{\code{\link{Macdonell}}}{Macdonell's data on height and finger length of criminals, used by Gosset (1908)}
+  \item{\code{\link{Michelson}}}{Michelson's 1879 determinations of the velocity of light}
   \item{\code{\link{Minard}}}{Data from Minard's famous graphic map of Napoleon's march on Moscow}
   \item{\code{\link{Nightingale}}}{Florence Nightingale's data on deaths from various causes in the Crimean War}
   \item{\code{\link{OldMaps}}}{Latitudes and Longitudes of 39 Points in 11 Old Maps}
@@ -93,6 +94,7 @@ Friendly, M. & Denis, D. (2005). The early origins and development of the scatte
 \code{\link{Jevons}},
 \code{\link{Langren}},
 \code{\link{Macdonell}},
+\code{\link{Michelson}},
 \code{\link{Minard}},
 \code{\link{Nightingale}},
 \code{\link{OldMaps}},
