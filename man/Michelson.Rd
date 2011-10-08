@@ -9,7 +9,7 @@ Michelson's Determinations of the Velocity of Light
 The data frame \code{Michelson} gives Albert Michelson's measurements of the velocity of light in air, 
 made from June 5 to July 2, 1879, reported in Michelson (1882). 
 The given values + 299,000 are Michelson's measurements in km/sec. 
-The number of cases is 100 and the "true" value is 734.5.
+The number of cases is 100 and the "true" value on this scale is 734.5.
 
 Stigler (1977) used these data to illustrate properties of robust estimators
 with real, historical data.  For this purpose, he divided the 100 measurements
@@ -38,6 +38,7 @@ data(MichelsonSets)
 The "true" value is taken to be 734.5, arrived at by taking the "true" speed of light
 in a vacuum to be 299,792.5 km/sec, and adjusting for the velocity in air.
 
+The data values are recorded in order, and so may also be taken as a time series.
 }
 \source{
 Kyle Siegrist, "Virtual Laboratories in Probability and Statistics", \url{http://www.math.uah.edu/stat/data/Michelson.xhtml}
@@ -53,12 +54,16 @@ U. S. Nautical Almanac Office.
 data(Michelson)
 plot(Michelson$velocity, type="b")
 abline(h=734.5, col="red", lwd=2)
+lines(lowess(Michelson$velocity), col="blue", lwd=2)
 
 boxplot(MichelsonSets, ylab="Velocity of light - 299000", xlab="Data set")
 abline(h=734.5, col="red", lwd=2)
 
 # means and trimmed means
-apply(MichelsonSets, 2, mean)
-apply(MichelsonSets, 2, mean, trim=.1)
+(mn <-apply(MichelsonSets, 2, mean))
+(tm <- apply(MichelsonSets, 2, mean, trim=.1))
+points(1:5, mn)
+points(1:5+.05, tm, pch=16, col="blue")
+
 }
 \keyword{datasets}
