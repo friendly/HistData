@@ -62,7 +62,7 @@ boxplot(Cavendish, ylab='Density', xlab='Data set')
 abline(h=5.517, col="red", lwd=2)
 
 # trimmed means
-mean(Cavendish, trim=.1, na.rm=TRUE)
+sapply(Cavendish, mean, trim=.1, na.rm=TRUE)
 
 # express in terms of G
 G <- function(D, g=9.806, R=6371) 3*g / (4 * pi * R * D)

@@ -56,5 +56,9 @@ abline(h=734.5, col="red", lwd=2)
 
 boxplot(MichelsonSets, ylab="Velocity of light - 299000", xlab="Data set")
 abline(h=734.5, col="red", lwd=2)
+
+# means and trimmed means
+apply(MichelsonSets, 2, mean)
+apply(MichelsonSets, 2, mean, trim=.1)
 }
 \keyword{datasets}
