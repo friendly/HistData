@@ -3,7 +3,7 @@ Type: Package
 Title: Data sets from the history of statistics and data visualization
 Version: 0.6-11
 Date: 2011-10-05
-Author@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre"), email="friendly@yorku.ca"),
+Authors@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre"), email="friendly@yorku.ca"),
             person(given = "Stephane", family = "Dray", role="ctb"),
             person(given = "Hadley", family = "Wickham", role="ctb"))
 Author: Michael Friendly, with contributions by Stephane Dray, Hadley Wickham
