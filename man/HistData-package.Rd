@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.6-11\cr
-Date: \tab 2011-10-05\cr
+Version: \tab 0.6-12\cr
+Date: \tab 2011-10-02\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -32,13 +32,14 @@ Descriptions of each data set can be found using \code{help(DataSet)};
 \code{example(DataSet)} will likely show applications similar to the
 historical use.
 
-Data sets included with HistData are:
+Data sets included in the HistData package are:
 
 \describe{
   \item{\code{\link{Arbuthnot}}}{Arbuthnot's data on male and female birth ratios in London from 1629-1710}
   \item{\code{\link{Bowley}}}{Bowley's data on values of British and Irish trade, 1855-1899}
   \item{\code{\link{Cavendish}}}{Cavendish's 1798 determinations of the density of the earth}
   \item{\code{\link{ChestSizes}}}{Quetelet's data on chest measurements of Scottish militiamen}
+  \item{\code{\link{CushnyPebbles}}}{Cushny-Pebbles data: Soporific effects of scopolamine derivatives}
   \item{\code{\link{Dactyl}}}{Edgeworth's counts of dactyls in Virgil's Aeneid}
   \item{\code{\link{DrinksWages}}}{Elderton and Pearson's (1910) data on drinking and wages}
   \item{\code{\link{Fingerprints}}}{Waite's data on Patterns in Fingerprints}
@@ -84,8 +85,7 @@ Friendly, M. & Denis, D. (2005). The early origins and development of the scatte
 \seealso{
 \code{\link{Arbuthnot}},
 \code{\link{Bowley}},
-\code{\link{Cavendish}},
-\code{\link{ChestSizes}},
+\code{\link{Cavendish}}, \code{\link{ChestSizes}}, \code{\link{CushnyPebbles}},
 \code{\link{Dactyl}},
 \code{\link{DrinksWages}},
 \code{\link{Fingerprints}},
