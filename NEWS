@@ -1,6 +1,8 @@
-Version 0.6-12 (2011-10-02)
+Version 0.6-12 (2011-10-12)
 
-	Added CusnyPebbles data
+	Added CushnyPebbles data
+	Extended examples for Michelson and CushnyPebbles
+	Fixed Suggests: for all packages used in examples
 	
 Version 0.6-11 (2011-10-05)
 

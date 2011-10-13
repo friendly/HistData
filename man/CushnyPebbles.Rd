@@ -77,8 +77,32 @@ Senn, S.J. and Richardson, W. (1994), "The first t-test", \emph{Statistics in Me
 }
 \examples{
 data(CushnyPebbles)
+# quick looks at the data
 plot(CushnyPebbles)
-boxplot(CushnyPebbles, ylab="Hours of Sleep")
+boxplot(CushnyPebbles, ylab="Hours of Sleep", xlab="Treatment")
+
+##########################
+# Repeated measures MANOVA
+require(car)
+
+CPmod <- lm(cbind(Control, L_hyoscyamine, L_hyoscine, DL_hyoscine) ~ 1, data=CushnyPebbles)
+
+# Assign within-S factor and contrasts
+Treatment <- factor(colnames(CushnyPebbles), levels=colnames(CushnyPebbles))
+contrasts(Treatment) <- matrix(
+	c(-3, 1, 1, 1,
+	   0,-2, 1, 1,
+	   0, 0,-1, 1), ncol=3)
+colnames(contrasts(Treatment)) <- c("Control.Drug", "L.DL", "L_hy.DL_hy")
+
+Treats <- data.frame(Treatment)
+(CPaov <- Anova(CPmod, idata=Treats, idesign= ~Treatment))
+summary(CPaov, univariate=FALSE)
+
+if (require(heplots)) {
+heplot(CPmod, idata=Treats, idesign= ~Treatment, iterm="Treatment")
+pairs(CPmod, idata=Treats, idesign= ~Treatment, iterm="Treatment")
+}
 
 }
 \keyword{datasets}
