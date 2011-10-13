@@ -56,6 +56,11 @@ plot(Michelson$velocity, type="b")
 abline(h=734.5, col="red", lwd=2)
 lines(lowess(Michelson$velocity), col="blue", lwd=2)
 
+# examine lag=1 differences
+plot(diff(Michelson$velocity), type="b")
+lines(lowess(diff(Michelson$velocity)), col="blue", lwd=2)
+
+
 boxplot(MichelsonSets, ylab="Velocity of light - 299000", xlab="Data set")
 abline(h=734.5, col="red", lwd=2)
 
