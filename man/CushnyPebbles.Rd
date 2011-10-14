@@ -75,6 +75,11 @@ Student (1908), "The Probable Error of a Mean," \emph{Biometrika}, 6, 1-25.
 
 Senn, S.J. and Richardson, W. (1994), "The first t-test", \emph{Statistics in Medicine}, 13, 785-803.
 }
+
+\seealso{
+\code{\link[datasets]{sleep}} for an alternative form of this data set.
+}
+
 \examples{
 data(CushnyPebbles)
 # quick looks at the data
@@ -100,9 +105,19 @@ Treats <- data.frame(Treatment)
 summary(CPaov, univariate=FALSE)
 
 if (require(heplots)) {
-heplot(CPmod, idata=Treats, idesign= ~Treatment, iterm="Treatment")
-pairs(CPmod, idata=Treats, idesign= ~Treatment, iterm="Treatment")
+  heplot(CPmod, idata=Treats, idesign= ~Treatment, iterm="Treatment", 
+	xlab="Control vs Drugs", ylab="L vs DL drug")
+  pairs(CPmod, idata=Treats, idesign= ~Treatment, iterm="Treatment")
 }
+
+################################
+# reshape to long format, add Ns
+
+CPlong <- stack(CushnyPebbles)[,2:1]
+colnames(CPlong) <- c("treatment", "sleep")
+CPN <- stack(CushnyPebblesN)
+CPlong <- data.frame(patient=rep(1:11,4), CPlong, n=CPN$values)
+str(CPlong)
 
 }
 \keyword{datasets}

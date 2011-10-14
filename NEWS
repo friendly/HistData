@@ -3,13 +3,14 @@ Version 0.6-12 (2011-10-12)
 	Added CushnyPebbles data
 	Extended examples for Michelson and CushnyPebbles
 	Fixed Suggests: for all packages used in examples
+	Added ZeaMays data from Darwin, used by Fisher for an early non-parametric test
 	
 Version 0.6-11 (2011-10-05)
 
-	Added ChestSizes data
-	Added PolioTrials data
-	Added Cavendish data
-	Added Michelson data
+	Added ChestSizes data - Quetelet's data on chest measurements of 5738 Scottish Militiamen
+	Added PolioTrials data - two experiments on the Salk polio vaccine
+	Added Cavendish data - density of the earth
+	Added Michelson data - speed of light experiments
 
 Version 0.6-10 (2010-12-22)
 

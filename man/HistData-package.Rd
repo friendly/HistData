@@ -60,6 +60,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{Snow}}}{John Snow's map and data on the 1854 London Cholera outbreak}
   \item{\code{\link{Wheat}}}{Playfair's data on wages and the price of wheat}
   \item{\code{\link{Yeast}}}{Student's (1906) Yeast Cell Counts}
+  \item{\code{\link{ZeaMays}}}{Darwin's Heights of Cross- and Self-fertilized Zea May Pairs}
 }
 
 }
@@ -83,30 +84,23 @@ Friendly, M. & Denis, D. (2005). The early origins and development of the scatte
 
 }
 \seealso{
-\code{\link{Arbuthnot}},
-\code{\link{Bowley}},
+\code{\link{Arbuthnot}}, \code{\link{Bowley}},
 \code{\link{Cavendish}}, \code{\link{ChestSizes}}, \code{\link{CushnyPebbles}},
-\code{\link{Dactyl}},
-\code{\link{DrinksWages}},
-\code{\link{Fingerprints}},
-\code{\link{Galton}},
-\code{\link{Guerry}},
-\code{\link{Jevons}},
-\code{\link{Langren}},
-\code{\link{Macdonell}},
-\code{\link{Michelson}},
-\code{\link{Minard}},
+
+\code{\link{Dactyl}}, \code{\link{DrinksWages}}, \code{\link{Fingerprints}},
+\code{\link{Galton}}, \code{\link{Guerry}},
+
+\code{\link{Jevons}}, \code{\link{Langren}},
+\code{\link{Macdonell}}, \code{\link{Michelson}}, \code{\link{Minard}},
 \code{\link{Nightingale}},
-\code{\link{OldMaps}},
-\code{\link{PearsonLee}},
-\code{\link{PolioTrials}},
-\code{\link{Prostitutes}},
-\code{\link{Pyx}},
+
+\code{\link{OldMaps}}, \code{\link{PearsonLee}},
+\code{\link{PolioTrials}}, \code{\link{Prostitutes}}, \code{\link{Pyx}},
 \code{\link{Quarrels}},
 \code{\link{Snow}},
 \code{\link{Wheat}},
-\code{\link{Yeast}}
-
+\code{\link{Yeast}},
+\code{\link{ZeaMays}}
 
 Other packages containing data sets of historical interest include:
 
