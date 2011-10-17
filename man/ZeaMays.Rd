@@ -29,7 +29,8 @@ test, treating each paired difference as having (randomly) either a positive or 
   }
 }
 \details{
-Two types of non-parametric tests can be contemplated:
+In addition to the standard paired t-test,
+several types of non-parametric tests can be contemplated:
 
 (a) Permutation test, where the values of, say \code{self} are permuted and \code{diff=cross - self}
 is calculated for each permutation.  There are 15! permutations, but a reasonably
@@ -41,6 +42,8 @@ There are \eqn{2^{15}} such possible values.  This is essentially what Fisher
 proposed.  The p-value for the test is the proportion of absolute mean differences
 under such randomization which exceed the observed mean difference.
 
+(c) Wilcoxon signed rank test: tests the hypothesis that the median signed rank of the \code{diff} is zero,
+or that the distribution of \code{diff} is symmetric about 0, vs. a location shifted alternative.
 
 }
 \source{
@@ -54,6 +57,13 @@ New York: Springer. Data retrieved from: \url{http://lib.stat.cmu.edu/datasets/A
 \references{
 Fisher, R. A. (1935). \emph{The Design of Experiments}. London: Oliver & Boyd.
 }
+\seealso{
+\code{\link[stats]{wilcox.test}}
+
+\code{\link[coin]{independence_test}} in the \code{coin} package, a general framework for conditional inference procedures
+(permutation tests)
+}
+
 \examples{
 data(ZeaMays)
 
@@ -76,6 +86,11 @@ abline(lm(cross ~ self, data=ZeaMays), col="red", lwd=2)
 ##############################
 ## Tests of mean difference ##
 ##############################
+# Wilcoxon signed rank test
+# signed ranks:
+with(ZeaMays, sign(diff) * rank(abs(diff)))
+wilcox.test(ZeaMays$cross, ZeaMays$self, conf.int=TRUE, exact=FALSE)
+
 # t-tests
 with(ZeaMays, t.test(cross, self))
 with(ZeaMays, t.test(diff))
@@ -102,3 +117,5 @@ abline(v=c(1, -1)*mean(ZeaMays$diff), col="red", lwd=2, lty=1:2)
 
 }
 \keyword{datasets}
+\keyword{nonparametric}
+

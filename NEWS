@@ -4,6 +4,8 @@ Version 0.6-12 (2011-10-12)
 	Extended examples for Michelson and CushnyPebbles
 	Fixed Suggests: for all packages used in examples
 	Added ZeaMays data from Darwin, used by Fisher for an early non-parametric test
+	Illustrated permutation and non-parametric tests for ZeaMays data
+	Added examples for Macdonell data [thx: Jim Hanley]
 	
 Version 0.6-11 (2011-10-05)
 
