@@ -11,7 +11,7 @@ paper, \emph{On Criminal Anthropometry and the Identification of Criminals}
 in which he included numerous tables of physical characteristics 3000 non-habitual 
 male criminals serving their sentences in England and Wales.  His Table III (p. 216)
 recorded a bivariate frequency distribution of \code{height} by \code{finger} length.
-His main purpose was to show, via a Principal Components analysis, that Scotland Yard 
+His main purpose was to show that Scotland Yard 
 could have indexed their material more efficiently, and find a given profile more quickly. 
 
 W. S. Gosset (aka "Student") used these data in two classic papers in 1908,
@@ -43,6 +43,7 @@ The values of \code{height} are taken as the lower class boundaries.
 Macdonell, W. R. (1902).
 On Criminal Anthropometry and the Identification of Criminals.
 \emph{Biometrika}, 1(2), 177-227. doi:10.1093/biomet/1.2.177
+\url{http://www.jstor.org/stable/2331487}
 
 The data used here were obtained from:
 
