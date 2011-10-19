@@ -1,7 +1,7 @@
 \name{Macdonell}
 \Rdversion{1.1}
 \alias{Macdonell}
-\alias{MacdonnellDF}
+\alias{MacdonellDF}
 \docType{data}
 \title{
 Macdonell's Data on Height and Finger Length of Criminals, used by Gosset (1908)
@@ -26,7 +26,7 @@ for each sample.
 }
 \usage{
 data(Macdonell)
-data(MacdonnellDF)
+data(MacdonellDF)
 }
 \format{
   \code{Macdonell}: A frequency data frame with 924 observations on the following 3 variables giving
@@ -126,10 +126,10 @@ contour(ht, fi, fr, add=TRUE, drawlabels=FALSE, col="grey60")
 
 
 # smoother contour plot (Galton smoothed 2-D frequencies this way)
-# [Galton had experience with plotting isbars for meteorological data]
+# [Galton had experience with plotting isobars for meteorological data]
 # it was the smoothed plot that made him remember his 'conic sections'
 # and ask a mathematician to work out for him the iso-density
-# countours of a bivariate Gaussian distribution... 
+# contours of a bivariate Gaussian distribution... 
 
 dx <- 0.5/12; dy <- 0.05  ; # shifts caused by averaging
 
@@ -141,13 +141,29 @@ for(i in 1:21) {
 	   smooth.freq  <-  (1/4) * sum( fr[i:(i+1), j:(j+1)] ) 
 	   sm.fr[i,j]  <-  smooth.freq
 	   if(smooth.freq > 0 )
-	   text(ht[i]+dx,fi[j]+dy, sub("^0.", ".",toString(smooth.freq)), cex=0.4, col="grey40" )
+	   text(ht[i]+dx, fi[j]+dy, sub("^0.", ".",toString(smooth.freq)), cex=0.4, col="grey40" )
 	   }
 	}
  
 contour(ht[1:21]+dx, fi[1:41]+dy, sm.fr, add=TRUE, drawlabels=FALSE, col="grey60")
 text(6.05,11, "Smoothed bin\nfrequencies", adj=c(0.5,1), col="grey40", cex=0.85) ;
 par(op)
+
+#############################################################
+## sunflower plot of height and finger with data ellipses  ##
+#############################################################
+
+with(MacdonellDF, 
+	{
+	sunflowerplot(height, finger, size=1/12, seg.col="green3",
+		xlab="Height (feet)", ylab="Finger length (cm)")
+	reg <- lm(finger ~ height)
+	abline(reg, lwd=2)
+	if(require(car)) {
+	dataEllipse(height, finger, plot.points=FALSE, levels=c(.40, .68, .95))
+		}
+  })
+
 
 ############################################################
 ## Sampling distributions of sample sd (s) and z=(ybar-mu)/s
