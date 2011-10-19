@@ -5,7 +5,8 @@ Version 0.6-12 (2011-10-12)
 	Fixed Suggests: for all packages used in examples
 	Added ZeaMays data from Darwin, used by Fisher for an early non-parametric test
 	Illustrated permutation and non-parametric tests for ZeaMays data
-	Added examples for Macdonell data [thx: Jim Hanley]
+	Added examples for Macdonell data showing contour plots and simulations [thx: Jim Hanley]
+	Added frequency-expanded version, MacdonellRD
 	
 Version 0.6-11 (2011-10-05)
 

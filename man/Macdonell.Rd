@@ -1,6 +1,7 @@
 \name{Macdonell}
 \Rdversion{1.1}
 \alias{Macdonell}
+\alias{MacdonnellDF}
 \docType{data}
 \title{
 Macdonell's Data on Height and Finger Length of Criminals, used by Gosset (1908)
@@ -23,21 +24,32 @@ the 3000 observations from Macdonell's table, and then grouped them into samples
 of size 4, 8, ..., calculating the sample means, standard deviations and correlations
 for each sample. 
 }
-\usage{data(Macdonell)}
+\usage{
+data(Macdonell)
+data(MacdonnellDF)
+}
 \format{
-  A frequency data frame with 924 observations on the following 3 variables giving
+  \code{Macdonell}: A frequency data frame with 924 observations on the following 3 variables giving
   the bivariate frequency distribution of \code{height} and \code{finger}.
   \describe{
     \item{\code{height}}{lower class boundaries of height, in decimal ft.}
     \item{\code{finger}}{length of the left middle finger, in mm.}
     \item{\code{frequency}}{frequency of this combination of \code{height} and \code{finger}}
   }
+  \code{MacdonellDF}: A data frame with 3000 observations on the following 2 variables.
+  \describe{
+    \item{\code{height}}{a numeric vector}
+    \item{\code{finger}}{a numeric vector}
+  }
+  
 }
 \details{
 Class intervals for \code{height} in Macdonell's table were given in 1 in.
 ranges, from (4' 7" 9/16 - 4' 8" 9/16), to (6' 4" 9/16 - 6' 5" 9/16).
 The values of \code{height} are taken as the lower class boundaries.
 
+For convenience, the data frame \code{MacdonellDF} presents the same data, in expanded form, with
+each combination of \code{height} and \code{finger} replicated \code{frequency} times.
 }
 \source{
 Macdonell, W. R. (1902).
