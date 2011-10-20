@@ -85,13 +85,13 @@ data(Macdonell)
 # display the frequency table
 xtabs(frequency ~ finger+round(height,3), data=Macdonell)
 
-## Examples by james.hanley@mcgill.ca    October 16, 2011
+## Some examples by james.hanley@mcgill.ca    October 16, 2011
 ## http://www.biostat.mcgill.ca/hanley/
 ## See:  http://www.biostat.mcgill.ca/hanley/Student/
 
-#########################################
-##  contour plots of height and finger ##
-#########################################
+###############################################
+##  naive contour plots of height and finger ##
+###############################################
  
 # make a 22 x 42 table
 attach(Macdonell)
@@ -149,6 +149,17 @@ contour(ht[1:21]+dx, fi[1:41]+dy, sm.fr, add=TRUE, drawlabels=FALSE, col="grey60
 text(6.05,11, "Smoothed bin\nfrequencies", adj=c(0.5,1), col="grey40", cex=0.85) ;
 par(op)
 
+#######################################
+## bivariate kernel density estimate
+#######################################
+
+if(require(KernSmooth)) {
+MDest <- bkde2D(MacdonellDF, bandwidth=c(1/8, 1/8))
+contour(x=MDest$x1, y=MDest$x2, z=MDest$fhat,
+	xlab="Height (feet)", ylab="Finger length (cm)", col="red", lwd=2)
+with(MacdonellDF, points(jitter(height), jitter(finger), cex=0.5))
+}
+
 #############################################################
 ## sunflower plot of height and finger with data ellipses  ##
 #############################################################
@@ -185,6 +196,7 @@ c(mu,sigma)
 # under the link "Gosset' 750 samples of size n=4" 
 # on website http://www.biostat.mcgill.ca/hanley/Student/
 # and while there, look at the cover of the Notebook containing his yeast-cell counts
+# http://www.medicine.mcgill.ca/epidemiology/hanley/Student/750samplesOf4/Covers.JPG
 # (Biometrika 1907) and decide for yourself why Gosset, when forced to write under a 
 # pen-name, might have taken the name he did!
 
@@ -219,6 +231,20 @@ hist(z.values,breaks=z-0.125, main="Histogram of z=(ybar-mu)/s")
 # theoretical
 lines(z, 750*0.25*sqrt(n-1)*dt(sqrt(n-1)*z,3), col="red", lwd=1)
 par(op)
+
+#####################################################
+## Chisquare probability plot for bivariate normality
+#####################################################
+
+mu <- colMeans(MacdonellDF)
+sigma <- var(MacdonellDF)
+Dsq <- mahalanobis(MacdonellDF, mu, sigma)
+
+Q <- qchisq(1:3000/3000, 2)
+plot(Q, sort(Dsq), xlab="Chisquare (2) quantile", ylab="Squared distance")
+abline(a=0, b=1, col="red", lwd=2)
+
+
 
 }
 \keyword{datasets}

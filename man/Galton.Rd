@@ -64,12 +64,16 @@ Galton's bend: A previously undiscovered nonlinearity in Galton's family stature
 }
 data(Galton)
 
-# sunflower plot with regression line and data ellipses
+###########################################################################
+# sunflower plot with regression line and data ellipses and lowess smooth
+###########################################################################
+
 with(Galton, 
 	{
 	sunflowerplot(parent,child, xlim=c(62,74), ylim=c(62,74))
 	reg <- lm(child ~ parent)
 	abline(reg)
+	lines(lowess(parent, child), col="blue", lwd=2)
 	if(require(car)) {
 	dataEllipse(parent,child, xlim=c(62,74), ylim=c(62,74), plot.points=FALSE)
 		}
