@@ -7,6 +7,8 @@ Version 0.6-12 (2011-10-12)
 	Illustrated permutation and non-parametric tests for ZeaMays data
 	Added examples for Macdonell data showing contour plots and simulations [thx: Jim Hanley]
 	Added frequency-expanded version, MacdonellRD
+	Now Suggest: lattice
+	Added plotting examples to PearsonLee
 	
 Version 0.6-11 (2011-10-05)
 

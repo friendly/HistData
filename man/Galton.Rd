@@ -22,11 +22,13 @@ correlation, regression and the bivariate normal distribution.
   }
 }
 \details{
-The data are recorded in class intervals of witdth 1.0 in. He used non-integer
+The data are recorded in class intervals of width 1.0 in. He used non-integer
 values for the center of each class interval because of the strong bias toward
 integral inches.
+
 All of the heights of female children were multiplied by 1.08  before tablulation
-to compensate for sex differences.
+to compensate for sex differences.  See Hanley (2004) for a reanalysis of
+Galton's raw data questioning whether this was appropriate.
 }
 \source{
 Galton, F. (1886). Regression Towards Mediocrity in Hereditary Stature
@@ -40,13 +42,17 @@ Friendly, M. & Denis, D. (2005). The early origins and development of the scatte
 Galton, F. (1869). \emph{Hereditary Genius: An Inquiry into its Laws and Consequences}.
 London: Macmillan.
 
+Hanley, J. A. (2004). "Transmuting" Women into Men: Galton's Family Data on Human Stature.
+\emph{The American Statistician}, 58, 237-243.
+See: \url{http://www.medicine.mcgill.ca/epidemiology/hanley/galton/} for source materials.
+
 Stigler, S. M. (1986). 
 \emph{The History of Statistics: The Measurement of Uncertainty before 1900}.
 Cambridge, MA: Harvard University Press, Table 8.1
 
 Wachsmuth, A. W., Wilkinson L., Dallal G. E. (2003). 
 Galton's bend: A previously undiscovered nonlinearity in Galton's family stature regression data. 
-\emph{The American Statistician}, 57, 190-1922. 
+\emph{The American Statistician}, 57, 190-192. 
 \url{http://www.cs.uic.edu/~wilkinson/Publications/galton.pdf}
 
 }

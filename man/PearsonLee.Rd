@@ -55,6 +55,24 @@ Galton's bend: A previously undiscovered nonlinearity in Galton's family stature
 
 \examples{
 data(PearsonLee)
-## maybe str(PearsonLee) ; plot(PearsonLee) ...
+str(PearsonLee)
+
+with(PearsonLee, 
+	{
+	lim <- c(55,80)
+	xv <- seq(55,80, .5)
+	sunflowerplot(parent,child, number=frequency, xlim=lim, ylim=lim, seg.col="gray", size=.1)
+	abline(lm(child ~ parent, weights=frequency), col="blue", lwd=2)
+	lines(xv, predict(loess(child ~ parent, weights=frequency), data.frame(parent=xv)), col="blue", lwd=2)
+	# NB: dataEllipse doesn't take frequency into account
+	if(require(car)) {
+	dataEllipse(parent,child, xlim=lim, ylim=lim, plot.points=FALSE)
+		}
+  })
+
+
+# this doesn't quite work, because xyplot can't handle weights
+require(lattice)
+xyplot(child ~ parent|par+chl, data=PearsonLee, type=c("p", "r", "smooth"), col.line="red")
 }
 \keyword{datasets}
