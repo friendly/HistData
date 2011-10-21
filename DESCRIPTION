@@ -6,8 +6,10 @@ Date: 2011-10-12
 Authors@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre"), email="friendly@yorku.ca"),
             person(given = "Stephane", family = "Dray", role="ctb"),
             person(given = "Hadley", family = "Wickham", role="ctb"),
-            person(given = "James", family = "Hanley", role="ctb"))
-Author: Michael Friendly, with contributions by Stephane Dray, Hadley Wickham, James Hanley
+            person(given = "James", family = "Hanley", role="ctb"),
+            person(given = "Dennis", family = "Murphy", role="ctb")
+            )
+Author: Michael Friendly, with contributions by Stephane Dray, Hadley Wickham, James Hanley, Dennis Murphy
 Maintainer: Michael Friendly <friendly@yorku.ca>
 Description: The HistData package provides a collection of small data sets
 	that are interesting and important in the history of statistics and data visualization.
