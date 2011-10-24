@@ -100,7 +100,8 @@ fi <- unique(finger)
 fr <- t(matrix(frequency, nrow=42))
 detach(Macdonell)
 
-windows(10, 5)  # make plot double wide
+
+dev.new(width=10, height=5)  # make plot double wide
 op <- par(mfrow=c(1,2),mar=c(0.5,0.5,0.5,0.5),oma=c(2,2,0,0))
 
 dx <- 0.5/12
@@ -148,6 +149,7 @@ for(i in 1:21) {
 contour(ht[1:21]+dx, fi[1:41]+dy, sm.fr, add=TRUE, drawlabels=FALSE, col="grey60")
 text(6.05,11, "Smoothed bin\nfrequencies", adj=c(0.5,1), col="grey40", cex=0.85) ;
 par(op)
+dev.new()    # new default device
 
 #######################################
 ## bivariate kernel density estimate
@@ -218,7 +220,7 @@ for (samp in 1:Nsamples) {
 	z.values <- c(z.values,z)
 	}
 
-windows()	
+	
 op <- par(mfrow=c(2,2),mar=c(2.5,2.5,2.5,2.5),oma=c(2,2,0,0))
 # sampling distributions
 hist(heights,breaks=seq(4.5,6.5,1/12), main="Histogram of heights (N=3000)")
