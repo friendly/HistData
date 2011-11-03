@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.6-12\cr
-Date: \tab 2011-10-02\cr
+Version: \tab 0.6-13\cr
+Date: \tab 2011-11-03\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -44,6 +44,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{DrinksWages}}}{Elderton and Pearson's (1910) data on drinking and wages}
   \item{\code{\link{Fingerprints}}}{Waite's data on Patterns in Fingerprints}
   \item{\code{\link{Galton}}}{Galton's data on the heights of parents and their children}
+  \item{\code{\link{GaltonFamilies}}}{Galton's data on the heights of parents and their children, by family}
   \item{\code{\link{Guerry}}}{Data from A.-M. Guerry, "Essay on the Moral Statistics of France"}
   \item{\code{\link{Jevons}}}{W. Stanley Jevons' data on numerical discrimination}
   \item{\code{\link{Langren}}}{van Langren's data on longitude distance between Toledo and Rome}
@@ -88,7 +89,7 @@ Friendly, M. & Denis, D. (2005). The early origins and development of the scatte
 \code{\link{Cavendish}}, \code{\link{ChestSizes}}, \code{\link{CushnyPebbles}},
 
 \code{\link{Dactyl}}, \code{\link{DrinksWages}}, \code{\link{Fingerprints}},
-\code{\link{Galton}}, \code{\link{Guerry}},
+\code{\link{Galton}}, \code{\link{GaltonFamilies}}, \code{\link{Guerry}},
 
 \code{\link{Jevons}}, \code{\link{Langren}},
 \code{\link{Macdonell}}, \code{\link{Michelson}}, \code{\link{Minard}},
@@ -96,6 +97,7 @@ Friendly, M. & Denis, D. (2005). The early origins and development of the scatte
 
 \code{\link{OldMaps}}, \code{\link{PearsonLee}},
 \code{\link{PolioTrials}}, \code{\link{Prostitutes}}, \code{\link{Pyx}},
+
 \code{\link{Quarrels}},
 \code{\link{Snow}},
 \code{\link{Wheat}},
