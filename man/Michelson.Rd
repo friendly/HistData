@@ -51,6 +51,10 @@ Michelson, A. A. (1882). "Experimental determination of the velocity of light ma
 United States Naval Academy, Anapolis". \emph{Astronomical Papers}, 1,109-145,
 U. S. Nautical Almanac Office.
 }
+\seealso{
+\code{\link[datasets]{morley}} for these data in another format
+}
+
 \examples{
 data(Michelson)
 

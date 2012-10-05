@@ -97,7 +97,7 @@ cxc1 <- ggplot(Night1, aes(x = factor(Date), y=Deaths, fill = Cause)) +
  scale_y_sqrt() 
 		# A coxcomb plot = bar chart + polar coordinates
 cxc1 + coord_polar(start=3*pi/2) + 
-	opts(title="Causes of Mortality in the Army in the East") + 
+	ggtitle("Causes of Mortality in the Army in the East") + 
 	xlab("")
 
 # After plot
@@ -105,7 +105,7 @@ cxc2 <- ggplot(Night2, aes(x = factor(Date), y=Deaths, fill = Cause)) +
  geom_bar(width = 1, position="identity", color="black") +
  scale_y_sqrt()
 cxc2 + coord_polar(start=3*pi/2) +
-	opts(title="Causes of Mortality in the Army in the East") + 
+	ggtitle("Causes of Mortality in the Army in the East") + 
 	xlab("")
 
 # do both together, with faceting
@@ -114,7 +114,7 @@ cxc <- ggplot(Night, aes(x = factor(Date), y=Deaths, fill = Cause)) +
  scale_y_sqrt() +
  facet_grid(. ~ Regime, scales="free", labeller=label_both)
 cxc + coord_polar(start=3*pi/2) +
-	opts(title="Causes of Mortality in the Army in the East") + 
+	ggtitle("Causes of Mortality in the Army in the East") + 
 	xlab("")
 }
 
