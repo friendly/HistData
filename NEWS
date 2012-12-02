@@ -1,6 +1,9 @@
 Version 0.6-14 (2012-12-01)
 
 	Extended examples for Playfair Wheat
+	Replaced original data(Wheat) on 26 intervals with a new version at 53 time points
+	  and a separate data.frame, Wheat.monarchs giving the reigns. Updated examples to
+	  more closely approximate Playfair's original and a revision.
 
 Version 0.6-13 (2011-11-03)
 
