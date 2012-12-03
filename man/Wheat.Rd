@@ -136,7 +136,7 @@ text(1740, 8.5,
         sep="\n"), cex=1.5, font=3)
 
 with(Wheat.monarchs, {
-	y <- ifelse( !commonwealth & (!seq_along(start) %% 2), 12.3, 12.5)
+	y <- ifelse( !commonwealth & (!seq_along(start) \%\% 2), 12.3, 12.5)
 	segments(start, y, end, y, col="black", lwd=7, lend=1)
 	segments(start, y, end, y, col=ifelse(commonwealth, "white", NA), lwd=4, lend=1)
 	text((start+end)/2, y-0.2, name, cex=0.5)
