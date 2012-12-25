@@ -78,7 +78,7 @@ Supplementary materials: \url{http://www.math.yorku.ca/SCS/Gallery/langren/}.
 Langren, M. F. van. (1644).  \emph{La Verdadera Longitud por Mar y Tierra}. Antwerp: (n.p.), 1644.
 English translation available at \url{http://www.math.yorku.ca/SCS/Gallery/langren/verdadera.pdf}.
 
-Lelewel, J. (1851). \emph{Géographie du Moyen Âge}. Paris: Pilliet, 1851.
+Lelewel, J. (1851). \emph{G?ographie du Moyen ?ge}. Paris: Pilliet, 1851.
 
 }
 \keyword{
@@ -93,6 +93,7 @@ require(maps)
 require(ggplot2)
 require(reshape)
 require(plyr)
+require(scales)
 
 # set latitude to that of Toledo
 Langren1644$Latitude <- 39.68
