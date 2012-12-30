@@ -4,7 +4,7 @@
 \alias{HistData}
 \docType{package}
 \title{
-Data sets from the history of statistics and data visualization}
+Data sets from the History of Statistics and Data Visualization}
 
 \description{
 The HistData package provides a collection of data sets
@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.6-14\cr
-Date: \tab 2011-12-01\cr
+Version: \tab 0.7-0\cr
+Date: \tab 2012-12-30\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -27,8 +27,12 @@ Some of the data sets have examples which reproduce an historical graph or analy
 These are meant mainly as starters for more extensive re-analysis or graphical
 elaboration. Some of these present graphical challenges to reproduce in R.
 
+They are part of a program of research called \emph{statistical historiography},
+meaning the use of statistical methods to study problems and questions in the
+history of statistics and graphics.
 
-Descriptions of each data set can be found using \code{help(DataSet)};
+
+Descriptions of each DataSet can be found using \code{help(DataSet)};
 \code{example(DataSet)} will likely show applications similar to the
 historical use.
 
@@ -118,10 +122,6 @@ The same data set is contained in \pkg{alr3} as \code{\link[alr3]{galtonpeas}}.
 }
 
 \keyword{ package }
-%\seealso{
-%~~ Optional links to other man pages, e.g. ~~
-%~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-%}
 \examples{
 # see examples for the separate data sets
 }
