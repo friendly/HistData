@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.7-0\cr
-Date: \tab 2012-12-30\cr
+Version: \tab 0.7-1\cr
+Date: \tab 2013-01-17\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -43,7 +43,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{Bowley}}}{Bowley's data on values of British and Irish trade, 1855-1899}
   \item{\code{\link{Cavendish}}}{Cavendish's 1798 determinations of the density of the earth}
   \item{\code{\link{ChestSizes}}}{Quetelet's data on chest measurements of Scottish militiamen}
-  \item{\code{\link{CushnyPebbles}}}{Cushny-Pebbles data: Soporific effects of scopolamine derivatives}
+  \item{\code{\link{CushnyPeebles}}}{Cushny-Peebles data: Soporific effects of scopolamine derivatives}
   \item{\code{\link{Dactyl}}}{Edgeworth's counts of dactyls in Virgil's Aeneid}
   \item{\code{\link{DrinksWages}}}{Elderton and Pearson's (1910) data on drinking and wages}
   \item{\code{\link{Fingerprints}}}{Waite's data on Patterns in Fingerprints}
@@ -87,10 +87,15 @@ Friendly, M. & Denis, D. (2005). The early origins and development of the scatte
 \emph{Journal of the History of the Behavioral Sciences}, 
 41, 103-130.
 
+Friendly, M. & Sigal, M. & Harnanansingh, D. (2013).
+"The Milestones Project: A Database for the History of Data Visualization,"  
+In Kostelnick, C. & Kimball, M. (ed.),  
+\emph{Visible Numbers: The History of Data Visualization}, Ashgate Press, In press.
+
 }
 \seealso{
 \code{\link{Arbuthnot}}, \code{\link{Bowley}},
-\code{\link{Cavendish}}, \code{\link{ChestSizes}}, \code{\link{CushnyPebbles}},
+\code{\link{Cavendish}}, \code{\link{ChestSizes}}, \code{\link{CushnyPeebles}},
 
 \code{\link{Dactyl}}, \code{\link{DrinksWages}}, \code{\link{Fingerprints}},
 \code{\link{Galton}}, \code{\link{GaltonFamilies}}, \code{\link{Guerry}},
