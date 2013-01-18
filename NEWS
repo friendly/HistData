@@ -1,7 +1,7 @@
 Version 0.7-1
 
-	CushnyPebbles renamed to proper spelling, CushnyPeebles (thx: Ian E. Holliday); for now, retain
-	  both versions.
+	CushnyPebbles renamed to proper spelling, CushnyPeebles (thx: Ian E. Holliday)
+
 	Removed Suggests: ReadImages; for now, retain old code examples as \dontrun{}
 
 Version 0.7-0

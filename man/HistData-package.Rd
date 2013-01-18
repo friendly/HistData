@@ -29,7 +29,7 @@ elaboration. Some of these present graphical challenges to reproduce in R.
 
 They are part of a program of research called \emph{statistical historiography},
 meaning the use of statistical methods to study problems and questions in the
-history of statistics and graphics.
+history of statistics and graphics.  
 
 
 Descriptions of each DataSet can be found using \code{help(DataSet)};
