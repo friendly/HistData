@@ -4,6 +4,8 @@ Version 0.7-1
 
 	Removed Suggests: ReadImages; for now, retain old code examples as \dontrun{}
 
+  Extended GaltonFamilies examples
+
 Version 0.7-0
 
 	Revised Langren.Rd examples to replace ReadImage with jpeg
