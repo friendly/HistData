@@ -1,10 +1,12 @@
+Version 0.7-2
+
+	Extended Nightingale examples
+
 Version 0.7-1
 
 	CushnyPebbles renamed to proper spelling, CushnyPeebles (thx: Ian E. Holliday)
-
 	Removed Suggests: ReadImages; for now, retain old code examples as \dontrun{}
-
-  Extended GaltonFamilies examples
+	Extended GaltonFamilies examples
 
 Version 0.7-0
 
