@@ -78,20 +78,21 @@ data(Wheat)
 
 # convenience function to fill area under a curve down to a minimum value
 fillpoly <- function(x,y, low=min(y),  ...) {
-	n <- length(x)
-	polygon( c(x, x[n], x[1]), c(y, low, low), ...)
+    n <- length(x)
+    polygon( c(x, x[n], x[1]), c(y, low, low), ...)
 }
 
 # For best results, this graph should be viewed with width ~ 2 * height
 # Note use of type='s' to plot a step function for Wheat
 #   and panel.first to provide a background grid()
-# 	The curve for Wages is plotted after the polygon below it is filled
+#     The curve for Wages is plotted after the polygon below it is filled
 with(Wheat, {
-	plot(Year, Wheat, type="s", ylim=c(0,105), ylab="Price of the Quarter of Wheat (shillings)", 
-		panel.first=grid(col=gray(.9), lty=1))
-	fillpoly(Year, Wages, low=0, col="lightskyblue", border=NA)
-	lines(Year, Wages, lwd=3, col="red")
-	})
+    plot(Year, Wheat, type="s", ylim=c(0,105), 
+        ylab="Price of the Quarter of Wheat (shillings)", 
+        panel.first=grid(col=gray(.9), lty=1))
+    fillpoly(Year, Wages, low=0, col="lightskyblue", border=NA)
+    lines(Year, Wages, lwd=3, col="red")
+    })
 
 
 # add some annotations

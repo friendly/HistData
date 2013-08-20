@@ -80,7 +80,8 @@ Night<- Nightingale[,c(1,8:10)]
 melted <- melt(Night, "Date")
 names(melted) <- c("Date", "Cause", "Deaths")
 melted$Cause <- sub("\\\\.rate", "", melted$Cause)
-melted$Regime <- ordered( rep(c(rep('Before', 12), rep('After', 12)), 3), levels=c('Before', 'After'))
+melted$Regime <- ordered( rep(c(rep('Before', 12), rep('After', 12)), 3), 
+                          levels=c('Before', 'After'))
 Night <- melted
 
 # subsets, to facilitate separate plotting

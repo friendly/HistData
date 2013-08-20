@@ -58,16 +58,17 @@ data(PearsonLee)
 str(PearsonLee)
 
 with(PearsonLee, 
-	{
-	lim <- c(55,80)
-	xv <- seq(55,80, .5)
-	sunflowerplot(parent,child, number=frequency, xlim=lim, ylim=lim, seg.col="gray", size=.1)
-	abline(lm(child ~ parent, weights=frequency), col="blue", lwd=2)
-	lines(xv, predict(loess(child ~ parent, weights=frequency), data.frame(parent=xv)), col="blue", lwd=2)
-	# NB: dataEllipse doesn't take frequency into account
-	if(require(car)) {
-	dataEllipse(parent,child, xlim=lim, ylim=lim, plot.points=FALSE)
-		}
+    {
+    lim <- c(55,80)
+    xv <- seq(55,80, .5)
+    sunflowerplot(parent,child, number=frequency, xlim=lim, ylim=lim, seg.col="gray", size=.1)
+    abline(lm(child ~ parent, weights=frequency), col="blue", lwd=2)
+    lines(xv, predict(loess(child ~ parent, weights=frequency), data.frame(parent=xv)), 
+          col="blue", lwd=2)
+    # NB: dataEllipse doesn't take frequency into account
+    if(require(car)) {
+    dataEllipse(parent,child, xlim=lim, ylim=lim, plot.points=FALSE)
+        }
   })
 
 ## separate plots for combinations of (chl, par)

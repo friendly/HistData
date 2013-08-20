@@ -99,7 +99,8 @@ mean(ZeaMays$diff)
 # complete permutation distribution of diff, for all 2^15 ways of assigning
 # one value to cross and the other to self (thx: Bert Gunter)
 N <- nrow(ZeaMays)
-allmeans <- as.matrix(expand.grid(as.data.frame(matrix(rep(c(-1,1),N), nr =2)))) \%*\% abs(ZeaMays$diff) / N
+allmeans <- as.matrix(expand.grid(as.data.frame(
+                         matrix(rep(c(-1,1),N), nr =2))))  \%*\% abs(ZeaMays$diff) / N
 
 # upper-tail p-value
 sum(allmeans > mean(ZeaMays$diff)) / 2^N

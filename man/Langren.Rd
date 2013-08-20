@@ -131,9 +131,10 @@ if (require(jpeg, quietly=TRUE)) {
   text(xlate(8), 17, "Grados de la Longitud", cex=1.7)
 
   # label the observations with the names
-  points(x=xlate(Langren1644$Longitude), y=rep(57, nrow(Langren1644)), pch=25, col="blue", bg="blue")
-  text(x=xlate(Langren1644$Longitude), y=rep(57, nrow(Langren1644)), labels=Langren1644$Name, srt=90, adj=c(-.1, .5), cex=0.8)
-
+  points(x=xlate(Langren1644$Longitude), y=rep(57, nrow(Langren1644)), 
+         pch=25, col="blue", bg="blue")
+  text(x=xlate(Langren1644$Longitude), y=rep(57, nrow(Langren1644)), 
+       labels=Langren1644$Name, srt=90, adj=c(-.1, .5), cex=0.8)
   par(op)
 }
 
@@ -158,8 +159,10 @@ if (require(ReadImages)) {
   xlate <- function(x) {
     130+x*726/30	
   }
-  points(x=xlate(Langren1644$Longitude), y=rep(57, nrow(Langren1644)), pch=25, col="blue")
-  text(x=xlate(Langren1644$Longitude), y=rep(57, nrow(Langren1644)), labels=Langren1644$Name, srt=90, adj=c(0, 0.5), cex=0.8)
+  points(x=xlate(Langren1644$Longitude), y=rep(57, nrow(Langren1644)), 
+         pch=25, col="blue")
+  text(x=xlate(Langren1644$Longitude), y=rep(57, nrow(Langren1644)), 
+         labels=Langren1644$Name, srt=90, adj=c(0, 0.5), cex=0.8)
 }
 }
 
