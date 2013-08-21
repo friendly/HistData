@@ -18,7 +18,7 @@ Description: The HistData package provides a collection of small data sets
     or analysis in R.
 Suggests: gtools, KernSmooth, maps, ggplot2, proto, grid, reshape, plyr, lattice, 
 	jpeg,
-	car, gplots, sp, heplots, lattice
+	car, gplots, sp, heplots
 License: GPL
 LazyLoad: yes
 LazyData: yes
