@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.7-3\cr
-Date: \tab 2013-08-20\cr
+Version: \tab 0.7-4\cr
+Date: \tab 2013-10-29\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -124,6 +124,14 @@ example for MDS.
 
 The \pkg{psych} package, containing Galton's \code{\link[psych]{peas}} data.
 The same data set is contained in \pkg{alr3} as \code{\link[alr3]{galtonpeas}}.
+
+The \pkg{agridat} contains a large number of data sets of agricultural data,
+including some extra data sets related to
+ the classical barley data 
+(\code{\link[MASS]{immer}} and \code{\link[lattice]{barley}})
+ from Immer (1934): 
+\code{\link[agridat]{minnesota.barley.yield}},
+\code{\link[agridat]{minnesota.barley.weather}}.
 }
 
 \keyword{ package }
