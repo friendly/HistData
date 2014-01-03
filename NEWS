@@ -1,6 +1,7 @@
 Version 0.7-4 (2013-10-29)
 
 	Added reference to agridat package
+	Fixed Nightingale.Rd examples to avoid obscuring some segments by overplotting [thx: Monique Graf].  
 
 Version 0.7-3 (2013-08-20)
 
