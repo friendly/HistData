@@ -1,15 +1,14 @@
 Package: HistData
 Type: Package
 Title: Data sets from the history of statistics and data visualization
-Version: 0.7-4
-Date: 2013-10-29
+Version: 0.7-5
+Date: 2014-04-25
 Authors@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre"), email="friendly@yorku.ca"),
             person(given = "Stephane", family = "Dray", role="ctb"),
             person(given = "Hadley", family = "Wickham", role="ctb"),
             person(given = "James", family = "Hanley", role="ctb"),
             person(given = "Dennis", family = "Murphy", role="ctb")
             )
-Author: Michael Friendly, with contributions by Stephane Dray, Hadley Wickham, James Hanley, Dennis Murphy
 Maintainer: Michael Friendly <friendly@yorku.ca>
 Description: The HistData package provides a collection of small data sets
     that are interesting and important in the history of statistics and data visualization.
