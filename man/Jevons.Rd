@@ -72,6 +72,7 @@ if(require(reshape)) {
 unJevons <- untable(Jevons, Jevons$frequency)
 str(unJevons)
 
+require(plyr)
 mean_error <- function(df) mean(df$error, na.rm=TRUE)
 Jmean <- ddply(unJevons, .(actual), mean_error)
 with(Jmean, plot(actual, V1, ylab='Mean error', xlab='Actual number', type='b', main='Jevons data'))
