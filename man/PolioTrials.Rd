@@ -53,7 +53,7 @@ administrations of the vaccine.
 
 }
 \source{
-Kyle Siegrist, "Virtual Laboratories in Probability and Statistics", \url{http://www.math.uah.edu/stat/data/Polio.xhtml}
+Kyle Siegrist, "Virtual Laboratories in Probability and Statistics", \url{http://www.math.uah.edu/stat/data/Polio.html}
 
 Thomas Francis, Robert Korn, et al. (1955). "An Evaluation of the 1954 Poliomyelitis Vaccine Trials", 
 \emph{American Journal of Public Health},  45, (50 page supplement with a 63 page appendix).

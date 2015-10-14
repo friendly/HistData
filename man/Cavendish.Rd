@@ -41,7 +41,7 @@ The gravitational constant can be expressed as \eqn{G = 6.674 * 10^-11 m^3/kg/s^
 
 }
 \source{
-Kyle Siegrist, "Virtual Laboratories in Probability and Statistics", \url{http://www.math.uah.edu/stat/data/Cavendish.xhtml}
+Kyle Siegrist, "Virtual Laboratories in Probability and Statistics", \url{http://www.math.uah.edu/stat/data/Cavendish.html}
 
 Stephen M. Stigler (1977), "Do robust estimators work with \emph{real} data?", \emph{Annals of Statistics},  5, 1055-1098
 }

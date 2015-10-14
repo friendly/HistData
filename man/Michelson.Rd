@@ -42,7 +42,7 @@ in a vacuum to be 299,792.5 km/sec, and adjusting for the velocity in air.
 The data values are recorded in order, and so may also be taken as a time series.
 }
 \source{
-Kyle Siegrist, "Virtual Laboratories in Probability and Statistics", \url{http://www.math.uah.edu/stat/data/Michelson.xhtml}
+Kyle Siegrist, "Virtual Laboratories in Probability and Statistics", \url{http://www.math.uah.edu/stat/data/Michelson.html}
 
 Stephen M. Stigler (1977), "Do robust estimators work with \emph{real} data?", \emph{Annals of Statistics},  5, 1055-1098
 }
