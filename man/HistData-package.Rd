@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.7-5\cr
-Date: \tab 2014-04-25\cr
+Version: \tab 0.7-6\cr
+Date: \tab 2015-10-13\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -40,6 +40,7 @@ Data sets included in the HistData package are:
 
 \describe{
   \item{\code{\link{Arbuthnot}}}{Arbuthnot's data on male and female birth ratios in London from 1629-1710}
+  \item{\code{\link{Armada}}}{The Spanish Armada}
   \item{\code{\link{Bowley}}}{Bowley's data on values of British and Irish trade, 1855-1899}
   \item{\code{\link{Cavendish}}}{Cavendish's 1798 determinations of the density of the earth}
   \item{\code{\link{ChestSizes}}}{Quetelet's data on chest measurements of Scottish militiamen}
@@ -87,14 +88,14 @@ Friendly, M. & Denis, D. (2005). The early origins and development of the scatte
 \emph{Journal of the History of the Behavioral Sciences}, 
 41, 103-130.
 
-Friendly, M. & Sigal, M. & Harnanansingh, D. (2013).
+Friendly, M. & Sigal, M. & Harnanansingh, D. (2016).
 "The Milestones Project: A Database for the History of Data Visualization,"  
 In Kostelnick, C. & Kimball, M. (ed.),  
 \emph{Visible Numbers: The History of Data Visualization}, Ashgate Press, In press.
 
 }
 \seealso{
-\code{\link{Arbuthnot}}, \code{\link{Bowley}},
+\code{\link{Arbuthnot}}, \code{\link{Armada}}, \code{\link{Bowley}},
 \code{\link{Cavendish}}, \code{\link{ChestSizes}}, \code{\link{CushnyPeebles}},
 
 \code{\link{Dactyl}}, \code{\link{DrinksWages}}, \code{\link{Fingerprints}},
