@@ -1,6 +1,6 @@
 Package: HistData
 Type: Package
-Title: Data sets from the history of statistics and data visualization
+Title: Data Sets from the History of Statistics and Data Visualization
 Version: 0.7-6
 Date: 2015-10-13
 Authors@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre"), email="friendly@yorku.ca"),

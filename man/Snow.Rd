@@ -93,9 +93,10 @@ analysis of the time course of the outbreak. See Koch (2000), Koch (2004),  Koch
 \& Denike (2009) and Tufte (1999), p. 27-37,  for further discussion. 
 }
 \source{
-Tobler, W. (1994). Snow's Cholera Map
-\url{http://www.ncgia.ucsb.edu/pubs/snow/snow.html}; data files were obtained from
-\url{http://ncgia.ucsb.edu/Publications/Software/cholera/}
+Tobler, W. (1994). Snow's Cholera Map, 
+\code{http://www.ncgia.ucsb.edu/pubs/snow/snow.html}; data files were obtained from
+\code{http://ncgia.ucsb.edu/Publications/Software/cholera/}, but these sites
+seem to be down.
 
 The data in  these files were first digitized in 1992  by Rusty Dodson  of the NCGIA,
 Santa  Barbara,  from the  map  included in  the  book by  John  Snow: "Snow  on
