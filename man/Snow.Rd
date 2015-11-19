@@ -2,6 +2,7 @@
 \Rdversion{1.1}
 \alias{Snow}
 \alias{Snow.deaths}
+\alias{Snow.deaths2}
 \alias{Snow.pumps}
 \alias{Snow.streets}
 \alias{Snow.polygons}
@@ -18,7 +19,7 @@ Another data frame provides boundaries of a tesselation of the map into
 Thiessen (Voronoi) regions which include all cholera deaths nearer to
 a given pump than to any other.
 
-The apochrophal story of the significance of Snow's map is that, by closing  the
+The apocryphal story of the significance of Snow's map is that, by closing  the
 Broad Street pump (by removing its  handle), Dr. Snow  stopped the epidemic,  and
 demonstrated that  cholera is  a water  borne disease.  The method of contagion of cholera
 was  not previously
@@ -79,6 +80,9 @@ it points to the Broad Street pump as the source of the outbreak.
     \item{\code{x}}{x coordinate}
     \item{\code{y}}{y coordinate}
   }
+
+  \code{Snow.deaths2}: An alternative version of \code{Snow.deaths} correcting some possible
+  duplicate and missing cases, as described in \code{vigentte("Snow_deaths-duplicates")}.
 
 }
 \details{

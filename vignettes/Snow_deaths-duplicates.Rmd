@@ -1,0 +1,343 @@
+---
+title: "Duplicate and Missing Cases in Snow.deaths"
+author: "Peter Li"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Duplicate and Missing Cases in Snow.deaths}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+```{r, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+
+```
+John Snow's map of the 1854 Cholera outbreak in London, published in his 1855 book *On The Mode Of Communication Of Cholera* and reprinted in Edward Tufte's 1997 *Visual Explanations: Images and Quantities, Evidence and Narrative*, records 578 cases. However, while the `Snow.deaths` data set also lists 578 cases, only 575 are unique: there are three pairs of cases that have identical "x" and "y" coordinates: 1) 93 and 214; 2) 91 and 241; and 3) 209 and 429. 
+
+```{r, warning=FALSE}
+library(HistData)
+
+duplicates <- Snow.deaths[(duplicated(Snow.deaths[, c("x", "y")])), ]
+
+duplicates.id <- lapply(duplicates$x, function(i) {
+   Snow.deaths[Snow.deaths$x == i, "case"]
+})
+
+Snow.deaths[unlist(duplicates.id), ]
+```
+An expedient solution would be to copy the data set and recode the data with the following values:
+
+```{r}
+Snow.deaths2 <- Snow.deaths
+
+fix <- data.frame(x = c(12.56974, 12.53617, 12.33145), y = c(11.51226, 11.58107, 14.80316)) 
+                          
+Snow.deaths2[c(91, 93, 209), c("x", "y")] <- fix
+
+```
+For those interested, a detailed explanation of how these numbers were derived follows.
+
+The reason why duplicate coordinates are likely to be coding errors is that the primary aim of the data is to replicate Snow's map. In the [high resolution map](http://www.ph.ucla.edu/epi/snow/highressnowmap.html), the number of cases at an individual address are stacked as horizontal bars. This means that there should not be any cases with duplicate coordinates.
+
+The six points in question are found at two locations along Cambridge Street. Cambridge Street lies on the right side of the figure below and runs in a roughly North-South direction. It intersects Broad Street, which lies at the top of the figure and runs in a roughly East-West direction. The two streets intersect near the Broad Street pump.
+
+```{r, fig.width = 7, fig.height = 7, echo = FALSE}
+street.list <- split(Snow.streets[, c("x", "y")], 
+  as.factor(Snow.streets$street))
+
+plot(Snow.deaths[, c("x", "y")], xlim = c(12, 13), ylim = c(10.9, 11.9), 
+  pch = NA, cex = 0.5, col = "blue", asp = 1)
+invisible(lapply(street.list, lines, col = "lightgray"))
+points(Snow.pumps[, c("x", "y")], col = "blue", pch = 2, cex = 1)
+text(Snow.pumps[, c("x", "y")], col = "blue", labels = Snow.pumps$label, 
+  pos = 3)
+points(Snow.deaths[-unlist(duplicates.id), c("x", "y")])
+title(main = "The Three Pairs of Duplicate Cases in Snow.deaths")
+
+invisible(lapply(duplicates.id, function(x) {
+  points(Snow.deaths[c(x[1], x[2]), c("x", "y")], pch = 1:0, cex = c(1, 1.75), 
+    col = c("black", "red"))
+}))
+
+id.data <- do.call(rbind, duplicates.id)
+top.data <- Snow.deaths[id.data[, 1], c("x", "y")]
+bottom.data <- Snow.deaths[id.data[, 2], c("x", "y")]
+text(top.data, labels = rownames(top.data), pos = c(3, 2), cex = 0.9, 
+     col = "red")
+text(bottom.data[1:2, ], labels = rownames(bottom.data)[1:2], pos = 1, 
+     cex = 0.9)
+text(bottom.data[3, c("x", "y")] + c(0.03, -0.03), 
+     labels = rownames(bottom.data)[3], cex = 0.9)
+legend(x = "bottomleft",
+       legend = c("Well", "Duplicate", "Case"),
+       col = c("blue", "red", "black"),
+       pch = c(2, 0, 1),
+       bg = "white",
+       cex = 0.8,
+       title = "Key")
+```
+
+Finding a plausible and reasonable solution to this problem is made easier by the fact that a comparison of the data in Snow's map and those in `Snow.deaths` data set reveals that, at two different locations, three cases or "bars" are unaccounted for in Snow.deaths. 
+
+The first location is 40 Broad Street, which lies just southwest (below and left) of well. It is the accepted home of patient zero. `Snow.deaths` lists two cases, 32 and 122, but Snow's map shows four. 
+
+```{r, fig.width = 7, fig.height = 7, echo = FALSE}
+
+broad.40 <- c(32, 122)
+
+plot(Snow.deaths[, c("x", "y")], xlim = c(12, 13), ylim = c(10.9, 11.9), 
+     pch = NA, cex = 0.5, col = "blue", asp = 1)
+invisible(lapply(street.list, lines, col = "lightgray"))
+points(Snow.pumps[, c("x", "y")], col = "blue", pch = 2, cex = 1)
+text(Snow.pumps[, c("x", "y")], col = "blue", labels = Snow.pumps$label, 
+     pos = 3)
+points(Snow.deaths[-unlist(duplicates.id), c("x", "y")])
+text(Snow.deaths[broad.40, c("x", "y")], labels = Snow.deaths$case[broad.40],
+     cex = 0.9, pos = 4)
+title(main = "40 Broad Street:\nTwo (32 & 122) Rather than Four Cases Recorded")
+
+invisible(lapply(duplicates.id, function(x) {
+  points(Snow.deaths[c(x[1], x[2]), c("x", "y")], pch = 1:0, cex = c(1, 1.75), 
+         col = c("black", "red"))
+}))
+
+id.data <- do.call(rbind, duplicates.id)
+top.data <- Snow.deaths[id.data[, 1], c("x", "y")]
+bottom.data <- Snow.deaths[id.data[, 2], c("x", "y")]
+text(top.data, labels = rownames(top.data), pos = c(3, 2), cex = 0.9, 
+  col = "red")
+text(bottom.data[1:2, ], labels = rownames(bottom.data)[1:2], pos = 1, 
+  cex = 0.9)
+text(bottom.data[3, c("x", "y")] + c(0.03, -0.03), 
+     labels = rownames(bottom.data)[3], cex = 0.9)
+
+legend(x = "bottomleft",
+       legend = c("Well", "Duplicate", "Case"),
+       col = c("blue", "red", "black"),
+       pch = c(2, 0, 1),
+       bg = "white",
+       cex = 0.8,
+       title = "Key")
+```       
+
+The second location is at the end of Noel Street, which is north of Broad street one block south of Oxford Street at the intersection with Berwick Street. Here, `Snow.deaths` lists two cases, 282 and 422, but Snow's map shows three.
+
+```{r, fig.width = 7, fig.height = 7, echo = FALSE}
+
+noel.street <- c(282, 422)
+
+plot(Snow.deaths[, c("x", "y")], xlim = c(11.75, 12.75), ylim = c(14.25, 15.25), 
+     asp = 1)
+invisible(lapply(street.list, lines, col = "lightgray"))
+points(Snow.pumps[-noel.street, c("x", "y")], col = "blue", pch = 2, cex = 1)
+text(Snow.pumps[ c("x", "y")], col = "blue", labels = Snow.pumps$label, pos = 3)
+text(Snow.deaths[noel.street, c("x", "y")], cex = 0.9, pos = 4, 
+     labels = Snow.deaths$case[noel.street])
+title(main = "End of Noel Street:\nTwo Rather than Three Cases Listed")
+```
+
+As a potential solution, one could use the three duplicates to fill in for the three "missing" observations in Snow.data. What makes this solution plausible is that the `Snow.deaths` data are used primarily as a way to visually replicate Snow's map. This means that, with the exception of cases that represent "addresses" (i.e., cases directly adjacent to a street), the coordinate locations of other points are not as important: they do not represent the location of cases; they are simply a way to visually "stack" cases at an address. So moving duplicate points to fill in for missing observations should not be objectionable.
+
+To find a reasonable solution that is more systematic and less arbitrary, one could use simple geometric interpolation. Using one of the observed cases as a point of reference, possible locations will be found along the line that is orthogonal to the street (i.e., -1 / slope of street segment) and passes through that reference point. The specific location along the orthogonal will be a function of the Euclidean distance between observed points. For example, to put a point between two observed points, locate it on the orthogonal line at half the distance from the reference point; to put a point just beyond two observed points, use 1.5 times the distance. (In practice, the orthogonal lines for different observed points at a given address are not identical: they have the same slope but different intercepts. However, for the cases in question, the difference between these intercepts is very small and the orthogonal lines are visually indistinguishable).
+
+Essentially, this means finding the coordinates of the point of intersection between a circle, whose radius represents the desired multiple of the Euclidean distance between observed points, and a line which posses through the center of the circle, which represent the point of reference. Doing so boils down to solving a quadratic equation. The two formulas below were used to compute the solution.
+
+```{r}
+quadratic <- function(a, b, c) {
+  root1 <- (-b + sqrt(b^2 - 4 * a * c)) / (2 * a)
+  root2 <- (-b - sqrt(b^2 - 4 * a * c)) / (2 * a)
+  c(root1, root2)
+}
+
+interpolatedPoints <- function(case, radius.multiplier = 0.5, orthogonal.intercept) {
+  p <- Snow.deaths[case, "x"]
+  q <- Snow.deaths[case, "y"]
+  # extant.point.distance is the Euclidean distance between observed points
+  r <- radius.multiplier * extant.point.distance
+  m <- orthogonal.slope
+  b <- orthogonal.intercept
+  A <- (m^2 + 1)
+  B <- 2 * (m * b - m * q - p)
+  C <- (q^2 - r^2 + p^2 - 2 * b * q + b^2)
+  quadratic(A, B, C) 
+}
+
+```
+Using these equations and the procedure described above, I get the following results. For the two missing cases at 40 Broad Street:
+
+```{r, fig.width = 7, fig.height = 7, echo = FALSE}
+
+orthogonalIntercept <- function(case) {
+  Snow.deaths[case, "y"] - orthogonal.slope * Snow.deaths[case, "x"]
+}
+
+plot(Snow.deaths[, c("x", "y")], xlim = c(12, 13), ylim = c(10.9, 11.9), 
+     pch = NA, cex = 0.5, col = "blue", asp = 1)
+title(main = "Use Two Duplicate Cases (91 & 93)\nas Substitutes for Two Missing Cases at 40 Broad Street")
+invisible(lapply(street.list, lines, col = "lightgray"))
+points(Snow.pumps[, c("x", "y")], col = "blue", pch = 2, cex = 1)
+text(Snow.pumps[, c("x", "y")], col = "blue", labels = Snow.pumps$label, 
+     pos = 3)
+points(Snow.deaths[-c(unlist(duplicates.id)), c("x", "y")])
+
+points(bottom.data)
+
+points(top.data[3, ], col = "red", pch = 0, cex = 1.75)
+text(Snow.deaths[broad.40, c("x", "y")], labels = Snow.deaths$case[broad.40],
+     cex = 0.9, pos = 4)
+text(bottom.data[1:2, ], labels = rownames(bottom.data)[1:2], pos = 1, cex = 0.9)
+
+text(bottom.data[3, c("x", "y")] + c(0.03, -0.03), cex = 0.9,
+     labels = rownames(bottom.data)[3])
+text(top.data[3, ], labels = rownames(top.data)[3], pos = 3, cex = 0.9, 
+     col = "red")
+
+seg.data <- unlist(street.list$'216') 
+segments(seg.data["x1"], seg.data["y1"], seg.data["x2"], seg.data["y2"], 
+         col = "green")
+
+seg.df <- data.frame(street.list$'216')
+
+ols <- lm(y ~ x, data = seg.df)
+segment.slope <- coef(ols)[2]
+segment.intercept <- coef(ols)[1]
+orthogonal.slope <- -1 / segment.slope
+
+orthogonal.intercept.32 <- orthogonalIntercept(32)
+orthogonal.intercept.122 <- orthogonalIntercept(122)
+
+move.candidates <- c(91, 93, 209)
+stay.in.place <- c(214, 241, 429)
+candidates <- c(move.candidates, stay.in.place)
+
+extant.point.distance <- dist(Snow.deaths[c(32, 122), c("x", "y")])
+x.out1 <- max(interpolatedPoints(32, orthogonal.intercept = orthogonal.intercept.32)) 
+x.out2 <- max(interpolatedPoints(32, radius.multiplier = 1.5, 
+  orthogonal.intercept = orthogonal.intercept.122))
+y.out1 <- orthogonal.slope * x.out1 + orthogonal.intercept.32 
+y.out2 <- orthogonal.slope * x.out2 + orthogonal.intercept.32 
+
+broad40.32 <- Snow.deaths[32, c("x", "y")]
+broad40.122 <- Snow.deaths[122, c("x", "y")]
+broad.df <- data.frame(x = c(broad40.32$x, broad40.122$x), 
+                       y = c(broad40.32$y, broad40.122$y))
+
+r <- dist(broad.df) / 2  # radius
+unit.base <- 100
+unit.radians <- 2 * pi / unit.base
+circumference.x <- Snow.deaths[32, "x"] + r * cos(0:unit.base * unit.radians)
+circumference.y <- Snow.deaths[32, "y"] + r * sin(0:unit.base * unit.radians)
+lines(circumference.x, circumference.y, col = "green")
+
+r <- dist(broad.df) * 1.5  # radius
+unit.base <- 100
+unit.radians <- 2 * pi / unit.base
+circumference.x <- Snow.deaths[32, "x"] + r * cos(0:unit.base * unit.radians)
+circumference.y <- Snow.deaths[32, "y"] + r * sin(0:unit.base * unit.radians)
+lines(circumference.x, circumference.y, col = "green")
+
+x.pt <- (orthogonal.intercept.32 - segment.intercept) / 
+  (segment.slope - orthogonal.slope)
+y.pt <- segment.slope * x.pt + segment.intercept
+segments(x.pt, y.pt, x.out2, y.out2, col = "green")
+
+points(x.out1, y.out1, pch = 0, col = "red")
+points(x.out2, y.out2, pch = 0, col = "red")
+text(x.out1, y.out1, pos = 2, cex = 0.9, col = "red", 
+  labels = move.candidates[2])
+text(x.out2, y.out2, pos = 2, cex = 0.9, col = "red", 
+     labels = move.candidates[1])
+
+ordered.pair1 <- paste0("(", round(x.out1[1], 3), ", ", round(y.out1[1], 3),
+  ")")
+ordered.pair2 <- paste0("(", round(x.out2[1], 3), ", ", round(y.out2[1], 3),
+  ")")     
+
+arrows(Snow.deaths[93, "x"], Snow.deaths[93, "y"], x.out1, y.out1, 
+       col = "gray", length = 1/8)
+arrows(Snow.deaths[91, "x"], Snow.deaths[91, "y"], x.out2, y.out2, 
+       col = "gray", length = 1/8)
+
+text(x.out1, y.out1, pos = 4, cex = 0.8, col = "red", labels = ordered.pair1)
+text(x.out2, y.out2, pos = 4, cex = 0.8, col = "red", labels = ordered.pair2)
+
+legend(x = "bottomleft",
+       legend = c("Well", "Duplicate", "Case"),
+       col = c("blue", "red", "black"),
+       pch = c(2, 0, 1),
+       bg = "white",
+       cex = 0.8,
+       title = "Key")
+
+```
+For the one missing case on Noel Street:
+
+```{r, fig.width = 7, fig.height = 7, echo = FALSE}
+
+noel.street <- c(282, 422)
+
+plot(Snow.deaths[, c("x", "y")], xlim = c(12.25, 12.5), ylim = c(14.5, 15.25), 
+     asp = 1)
+invisible(lapply(street.list, lines, col = "lightgray"))
+points(Snow.pumps[-noel.street, c("x", "y")], col = "blue", pch = 2, cex = 1)
+text(Snow.pumps[ c("x", "y")], col = "blue", labels = Snow.pumps$label, pos = 3)
+text(Snow.deaths[noel.street, c("x", "y")], cex = 0.9, pos = 4, 
+     labels = Snow.deaths$case[noel.street])
+title(main = "Use Duplicate Observation (209)\n as Substitute for Missing Case on Noel Street")
+
+seg.data <- unlist(street.list$'118')
+segments(seg.data["x1"], seg.data["y1"], seg.data["x2"], seg.data["y2"], 
+         col = "green")
+
+seg.df <- data.frame(street.list$'118')
+
+ols <- lm(y ~ x, data = seg.df)
+segment.slope <- coef(ols)[2]
+segment.intercept <- coef(ols)[1]
+orthogonal.slope <- -1 / segment.slope
+
+orthogonal.intercept.282 <- orthogonalIntercept(noel.street[1])
+orthogonal.intercept.422 <- orthogonalIntercept(noel.street[2])
+
+extant.point.distance <- dist(Snow.deaths[noel.street, c("x", "y")])
+
+x.out <- interpolatedPoints(noel.street[1], 0.5, orthogonal.intercept.282)
+y.out <- orthogonal.slope * x.out + orthogonal.intercept.282 
+
+noel.282 <- Snow.deaths[282, c("x", "y")]
+noel.422 <- Snow.deaths[422, c("x", "y")]
+noel.df <- data.frame(x = c(noel.282$x, noel.422$x), 
+                      y = c(noel.282$y, noel.422$y))
+
+r <- dist(noel.df) * 0.5  # radius
+unit.base <- 100
+unit.radians <- 2 * pi / unit.base
+circumference.x <- Snow.deaths[282, "x"] + r * cos(0:unit.base * unit.radians)
+circumference.y <- Snow.deaths[282, "y"] + r * sin(0:unit.base * unit.radians)
+lines(circumference.x, circumference.y, col = "green")
+
+x.pt <- (orthogonal.intercept.282 - segment.intercept) /
+  (segment.slope - orthogonal.slope)
+y.pt <- segment.slope * x.pt + segment.intercept
+segments(x.pt, y.pt, x.out, y.out, col = "green")
+
+ordered.pair <- paste0("(", round(x.out[1], 3), ", ", round(y.out[1], 3), ")")
+
+points(x.out[1], y.out[1], pch = 0, col = "red")
+text(x.out[1], y.out[1], labels = 209, col = "red", cex = 0.9, pos = 2)
+text(x.out[1], y.out[1], labels = ordered.pair, col = "red", cex = 0.8, 
+  pos = 4)
+
+arrows(Snow.deaths[209, "x"], Snow.deaths[209, "y"], x.out[1], y.out[1], 
+       col = "gray", length = 1/8)
+
+legend(x = "bottomleft",
+       legend = c("Duplicate", "Case"),
+       col = c("red", "black"),
+       pch = c(0, 1),
+       bg = "white",
+       cex = 0.8,
+       title = "Key")
+       
+```

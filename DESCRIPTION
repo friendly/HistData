@@ -7,7 +7,8 @@ Authors@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre")
             person(given = "Stephane", family = "Dray", role="ctb"),
             person(given = "Hadley", family = "Wickham", role="ctb"),
             person(given = "James", family = "Hanley", role="ctb"),
-            person(given = "Dennis", family = "Murphy", role="ctb")
+            person(given = "Dennis", family = "Murphy", role="ctb"),
+            person(given = "Peter", family = "Li", role="ctb")
             )
 Maintainer: Michael Friendly <friendly@yorku.ca>
 Description: The HistData package provides a collection of small data sets
@@ -17,7 +18,10 @@ Description: The HistData package provides a collection of small data sets
     or analysis in R.
 Suggests: gtools, KernSmooth, maps, ggplot2, proto, grid, reshape, plyr, lattice, 
 	jpeg,
-	car, gplots, sp, heplots
+	car, gplots, sp, heplots,
+    knitr,
+    rmarkdown
 License: GPL
 LazyLoad: yes
 LazyData: yes
+VignetteBuilder: knitr
