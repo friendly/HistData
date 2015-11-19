@@ -82,7 +82,7 @@ it points to the Broad Street pump as the source of the outbreak.
   }
 
   \code{Snow.deaths2}: An alternative version of \code{Snow.deaths} correcting some possible
-  duplicate and missing cases, as described in \code{vigentte("Snow_deaths-duplicates")}.
+  duplicate and missing cases, as described in \code{vignette("Snow_deaths-duplicates")}.
 
 }
 \details{
