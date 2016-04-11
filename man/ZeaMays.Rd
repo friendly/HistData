@@ -52,7 +52,7 @@ Darwin, C. (1876). \emph{The Effect of Cross- and Self-fertilization in the Vege
 
 Andrews, D. and Herzberg, A. (1985) \emph{Data:
 a collection of problems from many fields for the student and research worker}.
-New York: Springer. Data retrieved from: \url{http://lib.stat.cmu.edu/datasets/Andrews/}
+New York: Springer. Data retrieved from: \url{https://www.stat.cmu.edu/StatDat/}
 }
 \references{
 Fisher, R. A. (1935). \emph{The Design of Experiments}. London: Oliver & Boyd.

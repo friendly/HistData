@@ -45,8 +45,9 @@ Arbuthnot, John (1710). "An argument for Devine Providence, taken from the const
 	Published in 1711.
 }
 \references{
-Campbell, R. B., Arbuthnot and the Human Sex Ratio,
-\url{http://www.math.uni.edu/~campbell/arbuth.html}
+Campbell, R. B., Arbuthnot and the Human Sex Ratio (2001).
+\emph{Human Biology}, 73:4, 605-610.
+%\url{http://www.math.uni.edu/~campbell/arbuth.html}
 
 Creighton, C. (1965). A History of Epidemics in Britain, 2nd edition, vol. 1 and 2. 
     NY: Barnes and Noble.
