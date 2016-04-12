@@ -62,7 +62,7 @@ The data may be found at:
 "Student" (1906)
 On the error of counting with a haemocytometer.
 Biometrika, 5, 351-360.
-\url{http://http://www.medicine.mcgill.ca/epidemiology/hanley/c626/Student_counting.pdf}
+\url{http://www.medicine.mcgill.ca/epidemiology/hanley/c626/Student_counting.pdf}
 }
 \examples{
 data(Yeast)
