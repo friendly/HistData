@@ -1,4 +1,3 @@
 .project
 ^cran-comments\.md$
 .gitignore
-inst/doc

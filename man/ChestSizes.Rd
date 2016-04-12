@@ -22,8 +22,7 @@ data as a demonstration of the normal distribution of physical characteristics.
 \source{
 Velleman, P. F. and Hoaglin, D. C. (1981). 
 \emph{Applications, Basics, and Computing of Exploratory Data Analysis}. Belmont. CA: Wadsworth.
-
-Statlib: \url{https://www.stat.cmu.edu/StatDat/Datafiles/MilitiamenChests.html}
+Retrieved from Statlib: \code{https://www.stat.cmu.edu/StatDat/Datafiles/MilitiamenChests.html}
 }
 \references{
 A. Quetelet, \emph{Lettres a S.A.R. le Duc Regnant de Saxe-Cobourg et Gotha, sur la Theorie des Probabilites, 
