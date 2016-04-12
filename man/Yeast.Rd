@@ -54,7 +54,7 @@ particles on a single unit area from the binomial expansion of \eqn{(p + q)^{mN}
 D. J. Hand, F. Daly,  D. Lunn, K. McConway and E. Ostrowski (1994). 
 \emph{A Handbook of Small Data Sets}.
 London: Chapman \& Hall.
-The data may be found at
+The data may be found at:
 \url{http://www.stat.duke.edu/courses/Spring98/sta113/Data/Hand/yeast.dat}
 
 }
@@ -62,7 +62,7 @@ The data may be found at
 "Student" (1906)
 On the error of counting with a haemocytometer.
 Biometrika, 5, 351-360.
-\url{http://www.jstor.org/stable/pdfplus/2331633.pdf}
+\url{http://http://www.medicine.mcgill.ca/epidemiology/hanley/c626/Student_counting.pdf}
 }
 \examples{
 data(Yeast)
