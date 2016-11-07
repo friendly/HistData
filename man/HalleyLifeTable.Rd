@@ -25,12 +25,12 @@ of surviving until age k + 1 given that one had already reached age k, a numeric
 }
 \details{
 Halley's table contained only \code{age} and \code{number}.
-For people aged over 84 years, Halley just noted that their number was 107.
+For people aged over 84 years, Halley just noted that their total number was 107.
 This value is not included in the data set.
 
 The data from Breslau had a mean of 1,238 births per year: this is the value that
 Halley took for the size, \eqn{P_0} of the population cohort at age 0. 
-He could also compute from the data the annual mean
+From the data, he could compute the annual mean
 \eqn{D_k} of the number of deaths among people aged \eqn{k} for all \eqn{k >= 0}.
 From this, he calculated the number \eqn{P_{k+1}} surviving one more year,
 \deqn{P_{k+1} = P_k - D_k}
@@ -40,7 +40,7 @@ number of births and deaths and of the age at which people died during a few yea
 
 }
 \source{
-N. Bacaer (2011), "Halley’s life table (1693)", Ch 2, pp 5-10.
+N. Bacaer (2011), "Halley's life table (1693)", Ch 2, pp 5-10.
 In \emph{A Short History of Mathematical Population Dynamics},
 Springer-Verlag London,
 DOI 10.1007/978-0-85729-115-8_2.  Data taken from Table 1.
@@ -51,6 +51,9 @@ curious tables of the births and funerals at the city of Breslaw; with an attemp
 to ascertain the price of annuities upon lives. 
 \emph{Philosophical Transactions of the Royal Society, London}, 17,
 596-610.
+
+The text of Halley's paper was found at
+\url{http://www.pierre-marteau.com/editions/1693-mortality.html}
 }
 
 \seealso{
