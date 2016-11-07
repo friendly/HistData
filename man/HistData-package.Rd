@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.7-8\cr
-Date: \tab 2016-04-13\cr
+Version: \tab 0.7-9\cr
+Date: \tab 2016-11-07\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -51,6 +51,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{Galton}}}{Galton's data on the heights of parents and their children}
   \item{\code{\link{GaltonFamilies}}}{Galton's data on the heights of parents and their children, by family}
   \item{\code{\link{Guerry}}}{Data from A.-M. Guerry, "Essay on the Moral Statistics of France"}
+  \item{\code{\link{HalleyLifeTable}}}{Halley's Life Table}
   \item{\code{\link{Jevons}}}{W. Stanley Jevons' data on numerical discrimination}
   \item{\code{\link{Langren}}}{van Langren's data on longitude distance between Toledo and Rome}
   \item{\code{\link{Macdonell}}}{Macdonell's data on height and finger length of criminals, used by Gosset (1908)}
@@ -100,6 +101,7 @@ In Kostelnick, C. & Kimball, M. (ed.),
 
 \code{\link{Dactyl}}, \code{\link{DrinksWages}}, \code{\link{Fingerprints}},
 \code{\link{Galton}}, \code{\link{GaltonFamilies}}, \code{\link{Guerry}},
+\code{\link{HalleyLifeTable}},
 
 \code{\link{Jevons}}, \code{\link{Langren}},
 \code{\link{Macdonell}}, \code{\link{Michelson}}, \code{\link{Minard}},
