@@ -44,6 +44,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{Bowley}}}{Bowley's data on values of British and Irish trade, 1855-1899}
   \item{\code{\link{Cavendish}}}{Cavendish's 1798 determinations of the density of the earth}
   \item{\code{\link{ChestSizes}}}{Quetelet's data on chest measurements of Scottish militiamen}
+  \item{\code{\link{Cholera}}}{William Farr's Data on Cholera in London, 1849}
   \item{\code{\link{CushnyPeebles}}}{Cushny-Peebles data: Soporific effects of scopolamine derivatives}
   \item{\code{\link{Dactyl}}}{Edgeworth's counts of dactyls in Virgil's Aeneid}
   \item{\code{\link{DrinksWages}}}{Elderton and Pearson's (1910) data on drinking and wages}

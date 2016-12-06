@@ -23,7 +23,7 @@ Farr's table.
   \describe{
     \item{\code{district}}{name of the district in London, a character vector}
     \item{\code{cholera_drate}}{deaths from cholera in 1849 per 10,000 inhabitants, a numeric vector}
-    \item{\code{cholera_deaths}}{number of deaths registered from cohlera, a numeric vector}
+    \item{\code{cholera_deaths}}{number of deaths registered from cohlera in 1849, a numeric vector}
     \item{\code{popn}}{population, in the middle of 1849, a numeric vector}
     \item{\code{elevation}}{elevation, in feet above the high water mark, a numeric vector}
     \item{\code{region}}{a grouping of the London districts, a factor with levels \code{West} \code{North} \code{Central} \code{South} \code{Kent}}
@@ -61,11 +61,33 @@ The relevant tables are at pages clii -- clvii.
 \seealso{\code{\link{Snow.deaths}}}
 \examples{
 data(Cholera)
-str(Cholera)
 
-plot(cholera_drate ~ elevation, data=Cholera)
-
+# plot cholera deaths vs. elevation
 plot(cholera_drate ~ elevation, data=Cholera, col=water, pch=(15:17)[water])
+
+# better plot, using car::scatterplot
+library(car)
+
+# show separate regression lines for each water supply
+scatterplot(cholera_drate ~ elevation|water, data=Cholera, 
+	smooth=FALSE, pch=15:17, lwd=2, id.n=2, legend.coords="topright",
+	xlab="Elevation above high water mark (ft)",
+	ylab="Deaths from cholera in 1849 per 10,000")
+
+# fit a logistic regression model a la Bingham etal.
+fit <- glm( cbind(cholera_deaths, popn) ~ 
+            water + elevation + poor_rate + annual_deaths +
+            pop_dens + persons_house,
+            data=Cholera, family=binomial)
+summary(fit)
+
+# odds ratios
+cbind( OR = exp(coef(fit))[-1], exp(confint(fit))[-1,] )
+
+if (require(effects)) {
+  eff <- allEffects(fit)
+  plot(eff)
+}
 
 }
 \keyword{datasets}

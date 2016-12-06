@@ -20,7 +20,8 @@ Suggests: gtools, KernSmooth, maps, ggplot2, proto, grid, reshape, plyr, lattice
 	jpeg,
 	car, gplots, sp, heplots,
     knitr,
-    rmarkdown
+    rmarkdown,
+    effects
 License: GPL
 LazyLoad: yes
 LazyData: yes

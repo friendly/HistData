@@ -1,9 +1,9 @@
 Version 0.7-9 (2016-11-07)
 
   Added HalleyLifeTable
-  Added Cholera data from Farr 1852
+  Added Cholera data from Farr 1852 [thx: Neville Verlander]
   Correction to ZeaMays.Rd [thx: Bryan Clair]
-
+  Add Suggests: effects
 
 Version 0.7-8 (2016-04-13)
 
@@ -16,7 +16,7 @@ Version 0.7-7 (2016-04-09)
 
 Version 0.7-6 (2015-10-13)
 
-  Added Armada data
+  Added Armada data [thx: Antoine de Falguerolles]
 
 Version 0.7-4 (2013-10-29)
 
