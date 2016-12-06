@@ -24,7 +24,7 @@ test, treating each paired difference as having (randomly) either a positive or 
     \item{\code{pair}}{pair number, a numeric vector}
     \item{\code{pot}}{pot, a factor with levels \code{1} \code{2} \code{3} \code{4}}
     \item{\code{cross}}{height of cross fertilized plant, a numeric vector}
-    \item{\code{self}}{height of cross fertilized plant, a numeric vector}
+    \item{\code{self}}{height of self fertilized plant, a numeric vector}
     \item{\code{diff}}{\code{cross - self} for each pair}
   }
 }
