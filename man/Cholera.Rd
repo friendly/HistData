@@ -44,12 +44,16 @@ The supply of \code{water} was classified as \dQuote{Thames, between Battersea a
 \dQuote{New River, Rivers Lea and Ravensbourne}, and \dQuote{Thames, at Kew and Hammersmith}
 (western London).
 The factor levels use abbreviations for these.
+
+The data frame is sorted by increasing elevation above the high water mark.
 }
 \source{
 Bingham P., Verlander, N. Q., Cheal M. J. (2004).
 John Snow, William Farr and the 1849 outbreak of cholera that affected London: 
 a reworking of the data highlights the importance of the water supply.
 \emph{Public Health}, 118(6), 387-394, Table 2.
+(The data was kindly supplied by Neville Verlander, including additional variables
+not shown in their Table 2.)
 }
 \references{
 Registrar-General (1852). \emph{Report on the Mortality of Cholera in England 1848?49},
