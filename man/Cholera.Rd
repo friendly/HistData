@@ -56,7 +56,7 @@ a reworking of the data highlights the importance of the water supply.
 not shown in their Table 2.)
 }
 \references{
-Registrar-General (1852). \emph{Report on the Mortality of Cholera in England 1848?49},
+Registrar-General (1852). \emph{Report on the Mortality of Cholera in England 1848-49},
 W. Clowes and Sons, for Her Majesty's Stationary Office.
 Written by William Farr.
 \url{https://ia800309.us.archive.org/22/items/b24751297/b24751297.pdf}
