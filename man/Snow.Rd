@@ -6,6 +6,7 @@
 \alias{Snow.pumps}
 \alias{Snow.streets}
 \alias{Snow.polygons}
+\alias{Snow.dates}
 \docType{data}
 \title{
 John Snow's map and data on the 1854 London Cholera outbreak
@@ -34,6 +35,7 @@ it points to the Broad Street pump as the source of the outbreak.
 	data(Snow.pumps)
 	data(Snow.streets)
 	data(Snow.polygons)
+	data(Snow.dates)
 }
 \format{
   \code{Snow.deaths}: A  data frame  with 578  observations on  the following  3
@@ -41,7 +43,7 @@ it points to the Broad Street pump as the source of the outbreak.
   points are associated with  a single street address,  they are "stacked" in  a
   line away from the street so that they are more easily visualized. This is how
   they are displayed on  John Snow's original map.  The dates of the  deaths are
-  not recorded.
+  not individually recorded.
   \describe{
     \item{\code{case}}{Sequential case number, in some arbitrary, randomized order}
     \item{\code{x}}{x coordinate}
@@ -84,6 +86,8 @@ it points to the Broad Street pump as the source of the outbreak.
   \code{Snow.deaths2}: An alternative version of \code{Snow.deaths} correcting some possible
   duplicate and missing cases, as described in \code{vignette("Snow_deaths-duplicates")}.
 
+  \code{Snow.dates}: A data frame of 44 observations and 3 variables from Table 1
+  of Snow (1855).
 }
 \details{
 The scale of the source map is approx. 1:2000.  The \code{(x, y)} coordinate units are 100 meters,
@@ -119,6 +123,10 @@ Koch, T. and Denike, K. (2009).
 Crediting his critics' concerns: Remaking John Snow's map of Broad Street
 cholera, 1854.
 \emph{Social Science \& Medicine} 69, 1246-1251.
+
+Snow, J. (1885). \emph{On the Mode of Communication of Cholera}.
+London: John Churchill.
+\url{http://www.ph.ucla.edu/epi/snow/snowbook.html}.
 
 Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
 }
