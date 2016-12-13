@@ -1,8 +1,8 @@
 Package: HistData
 Type: Package
 Title: Data Sets from the History of Statistics and Data Visualization
-Version: 0.7-9
-Date: 2016-11-07
+Version: 0.8-0
+Date: 2016-12-07
 Authors@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre"), email="friendly@yorku.ca"),
             person(given = "Stephane", family = "Dray", role="ctb"),
             person(given = "Hadley", family = "Wickham", role="ctb"),
@@ -11,7 +11,7 @@ Authors@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre")
             person(given = "Peter", family = "Li", role="ctb")
             )
 Maintainer: Michael Friendly <friendly@yorku.ca>
-Description: The HistData package provides a collection of small data sets
+Description: The 'HistData' package provides a collection of small data sets
     that are interesting and important in the history of statistics and data visualization.
     The goal of the package is to make these available, both for instructional use
     and for historical research.  Some of these present interesting challenges for graphics

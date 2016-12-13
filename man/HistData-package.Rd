@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.7-9\cr
-Date: \tab 2016-11-07\cr
+Version: \tab 0.8-0\cr
+Date: \tab 2016-12-07\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -98,7 +98,7 @@ In Kostelnick, C. & Kimball, M. (ed.),
 }
 \seealso{
 \code{\link{Arbuthnot}}, \code{\link{Armada}}, \code{\link{Bowley}},
-\code{\link{Cavendish}}, \code{\link{ChestSizes}}, \code{\link{CushnyPeebles}},
+\code{\link{Cavendish}}, \code{\link{ChestSizes}}, \code{\link{Cholera}}, \code{\link{CushnyPeebles}},
 
 \code{\link{Dactyl}}, \code{\link{DrinksWages}}, \code{\link{Fingerprints}},
 \code{\link{Galton}}, \code{\link{GaltonFamilies}}, \code{\link{Guerry}},
