@@ -4,6 +4,7 @@ Version 0.7-9 (2016-11-07)
   Added Cholera data from Farr 1852 [thx: Neville Verlander]
   Correction to ZeaMays.Rd [thx: Bryan Clair]
   Add Suggests: effects
+  Adde Snow.dates -- deaths by date from Aug 19 -- Sept 30, 1854
 
 Version 0.7-8 (2016-04-13)
 

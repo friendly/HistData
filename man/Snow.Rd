@@ -87,7 +87,7 @@ it points to the Broad Street pump as the source of the outbreak.
   duplicate and missing cases, as described in \code{vignette("Snow_deaths-duplicates")}.
 
   \code{Snow.dates}: A data frame of 44 observations and 3 variables from Table 1
-  of Snow (1855).
+  of Snow (1855), giving the number of deaths by date from Aug. 19 -- Sept. 30, 1854.
 }
 \details{
 The scale of the source map is approx. 1:2000.  The \code{(x, y)} coordinate units are 100 meters,
