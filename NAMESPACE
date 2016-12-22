@@ -1,1 +1,3 @@
-# This package exports nothing (it uses lazydata)
+# This package exports only SnowMap (it uses lazydata)
+export(SnowMap)
+export(Splot,Sdeaths,Spumps,Sstreets,Sscale,Spolygons,Sdensity)

@@ -9,7 +9,7 @@
 \alias{Snow.dates}
 \docType{data}
 \title{
-John Snow's map and data on the 1854 London Cholera outbreak
+John Snow's Map and Data on the 1854 London Cholera Outbreak
 }
 \description{
 The \code{Snow} data consists of the relevant 1854 London streets, the location of 578 
@@ -25,7 +25,9 @@ Broad Street pump (by removing its  handle), Dr. Snow  stopped the epidemic,  an
 demonstrated that  cholera is  a water  borne disease.  The method of contagion of cholera
 was  not previously
 understood. Snow's map is the most famous and classical example in the field  of
-medical cartography, even if  it didn't happen exactly  this way.  At any  rate,
+medical cartography, even if  it didn't happen exactly  this way.
+(the apocryphal part is that the epidemic ended when the pump handle was removed.)
+At any  rate,
 the map, together with  various statistical annotations,  is  compelling because
 it points to the Broad Street pump as the source of the outbreak.
 
@@ -135,6 +137,10 @@ London: John Churchill.
 
 Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
 }
+
+\seealso{
+\code{\link{SnowMap}}
+}
 \examples{
 data(Snow.deaths)
 data(Snow.pumps)
@@ -150,99 +156,16 @@ points(deaths ~ date, data=Snow.dates, cex=0.5, pch=16, col=clr)
 text( mdy("09/08/1854"), 40, "Pump handle\nremoved Sept. 8", pos=4)
 
 
-## draw an approximation to Snow's map and data
+## draw Snow's map and data
 
-# define some funtions to make the pieces re-usable
-
-# setup basic Snow map plot
-Splot <- function(xlim=c(3,20), ylim=c(3,20), 
-				xlab="", ylab="", axis.labels=FALSE,
-				main="Snow's Cholera Map of London") {
-	# make sure that the plot limits include all the other stuff
-	plot(Snow.deaths[,c("x","y")], type="n",
-		 	xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim,
-		 	xaxt = if (axis.labels) "s" else "n",
-		 	yaxt = if (axis.labels) "s" else "n",
-		 	main=main)
-}
-
-# draw points for deaths
-Sdeaths <- function(col="red", pch=15, cex=0.6) {
-   points(Snow.deaths[,c("x","y")], col=col, pch=pch, cex=cex)
-	}
-
-# function to plot and label the pump locations
-Spumps <- function(col="blue", pch=17, cex=1.5, cex.lab=0.9)  {
-   points(Snow.pumps[,c("x","y")], col=col, pch=pch, cex=cex)
-   text(Snow.pumps[,c("x","y")], labels=Snow.pumps$label, pos=1, cex=cex.lab)
-}
-
-# function to draw the streets 
-Sstreets <- function(col="gray") {
-	slist <- split(Snow.streets[,c("x","y")],as.factor(Snow.streets[,"street"]))
-	invisible(lapply(slist, lines, col=col))
-}
-
-# draw a scale showing distance in meters in upper left
-mapscale <- function(xs=3.5, ys=19.7) {
-   scale <- matrix(c(0,0, 4,0, NA, NA), nrow=3, ncol=2, byrow=TRUE)
-   colnames(scale)<- c("x","y")
-	# tick marks
-   scale <- rbind(scale, expand.grid(y=c(-.1, .1, NA), x=0:4)[,2:1])
-   lines(xs+scale[,1], ys+scale[,2])
-	# value and axis labels
-   stext <- matrix(c(0,0, 2,0, 4,0, 4, 0.1), nrow=4, ncol=2, byrow=TRUE)
-   text(xs+stext[,1], ys+stext[,2], labels=c("0", "2", "4", "100 m."), pos=c(1,1,1,4), cex=0.8)
-}
-
-# draw the Thiessen polygon boundaries
-Spolygons <- function(col="brown", lwd=2, lty=1) {
-	starts <- which(Snow.polygons$start==0)
-	for(i in 1:length(starts)) {
-		this <- starts[i]:(starts[i]+1)
-		lines(Snow.polygons[this,2:3], col=col, lwd=lwd, lty=lty)
-		}
-}
-
-# Plot a bivariate density estimate of deaths
-Sdensity <- function(bandwidth=c(0.5,0.5), 
-                     col1=rgb(0,1,0,0),    # green
-                     col2=rgb(1,0,0,.8)    # red
-                     ) {
-	require(KernSmooth)
-	kde2d <- bkde2D(Snow.deaths[,2:3], bandwidth=bandwidth)	
-	clrs=colorRampPalette(c(col1, col2), alpha = TRUE)(20)	
-	contour(x=kde2d$x1, y=kde2d$x2,z=kde2d$fhat, add=TRUE)
-	image(x=kde2d$x1, y=kde2d$x2,z=kde2d$fhat, add=TRUE, col=clrs)
-}
-
-# ----------------------------------------
-# function to draw the map with the pieces
-# ----------------------------------------
-
-SnowMap <- function(xlim=c(3,20), ylim=c(3,20), axis.labels=FALSE, 
-			main="Snow's Cholera Map of London",
-			mapscale=TRUE, polygons=FALSE) {
-	Splot(xlim=xlim, ylim=ylim, axis.labels=axis.labels, main=main)
-	Sstreets()
-	Sdeaths()
-	Spumps()
-	if (mapscale) mapscale()
-	if (polygons) Spolygons()
-}
-
-
-# draw the map 
 SnowMap()
 
 # add polygons
 SnowMap(polygons=TRUE, main="Snow's Cholera Map with Pump Polygons")
 
 # zoom in a bit, and show density estimate
-SnowMap(xlim=c(7.5,16.5), ylim=c(7,16), polygons=TRUE,
+SnowMap(xlim=c(7.5,16.5), ylim=c(7,16), polygons=TRUE, density=TRUE,
         main="Snow's Cholera Map, Annotated")
-Sdensity()
-Spumps()
 
 
 ## re-do this the sp way... [thx: Stephane Dray]
