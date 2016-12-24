@@ -159,6 +159,8 @@ None
 }
 \references{
 Snow, J. (1885). \emph{On the Mode of Communication of Cholera}. London: John Churchill
+
+John Mackenzie, "GIS Analyses of Dr. Snow's Map"", \url{http://www1.udel.edu/johnmack/frec480/cholera/cholera2.html} describes some related visualizations using ArcGIS.
 }
 \author{
 Michael Friendly

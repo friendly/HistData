@@ -1,6 +1,7 @@
 Version 0.8-1 (2016-12-22)
 
 * Added SnowMap()
+* fixed Snow.pumps data:  label should be character, not a factor; added missing labels for pumps 1:2
 
 Version 0.8-0 (2016-12-07)
 
