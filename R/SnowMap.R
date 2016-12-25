@@ -33,7 +33,7 @@ Splot <- function(xlim=c(3,20), ylim=c(3,20),
 	# make CRAN checks happy
   Snow.deaths <- NULL   #immediately replaced on next line
   data(Snow.deaths, package = 'HistData', envir = environment())
-	plot(Snow.deaths[,c("x","y")], type="n",
+	plot(Snow.deaths[,c("x","y")], type="n", asp=1,
 		 	xlab=xlab, ylab=ylab, xlim=xlim, ylim=ylim,
 		 	xaxt = if (axis.labels) "s" else "n",
 		 	yaxt = if (axis.labels) "s" else "n",
