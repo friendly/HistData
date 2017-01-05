@@ -99,7 +99,8 @@ List of arguments passed to \code{Sscale}
 }
   \item{polygons.args}{
 List of arguments passed to \code{Spolygons}. Note that \code{col} here now refers to the fill colors,
-passed to \code{\link[graphics]{polygon}}
+passed to \code{\link[graphics]{polygon}}. The \code{col} argument here can be a vector of up to
+13 colors, one for each pump region.
 }
 
   \item{density.args}{
