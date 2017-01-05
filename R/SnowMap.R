@@ -3,17 +3,17 @@
 
 # draw the map with the pieces
 SnowMap <- function(xlim=c(3,20), ylim=c(3,20), axis.labels=FALSE, 
-			main="Snow's Cholera Map of London",
-			scale=TRUE, polygons=FALSE, density=FALSE,
-			streets.args=list(col="grey", lwd=1),
-			deaths.args=list(col="red", pch=15, cex=0.6),
-			pumps.args=list(col="blue", pch=17, cex=1.5, cex.lab=0.9),
-			scale.args=list(xs=3.5, ys=19.7),
-			polygons.args=list(col="brown", lwd=2, lty=1),
-			density.args=list(bandwidth=c(0.5,0.5), 
-                        col1=rgb(0,1,0,0),    # green
-                        col2=rgb(1,0,0,.8))
-			) {
+                    main="Snow's Cholera Map of London",
+                    scale=TRUE, polygons=FALSE, density=FALSE,
+                    streets.args=list(col="grey", lwd=1),
+                    deaths.args=list(col="red", pch=15, cex=0.6),
+                    pumps.args=list(col="blue", pch=17, cex=1.5, cex.lab=0.9),
+                    scale.args=list(xs=3.5, ys=19.7),
+                    polygons.args=list(col=NA, border="brown", lwd=2, lty=1),
+                    density.args=list(bandwidth=c(0.5,0.5), 
+                                      col1=rgb(0,1,0,0),    # green
+                                      col2=rgb(1,0,0,.8))
+) {
 	Splot(xlim=xlim, ylim=ylim, axis.labels=axis.labels, main=main)
 	do.call("Sstreets", streets.args)
 	if (density) do.call("Sdensity", density.args) 
@@ -78,16 +78,30 @@ Sscale <- function(xs=3.5, ys=19.7) {
 }
 
 # draw the Thiessen polygon boundaries
-Spolygons <- function(col="brown", lwd=2, lty=1) {
-  # make CRAN checks happy
-  Snow.polygons <- NULL   #immediately replaced on next line
-  data(Snow.polygons, package = 'HistData', envir = environment())
-	starts <- which(Snow.polygons$start==0)
-	for(i in 1:length(starts)) {
-		this <- starts[i]:(starts[i]+1)
-		lines(Snow.polygons[this,2:3], col=col, lwd=lwd, lty=lty)
-		}
+# Spolygons <- function(col="brown", lwd=2, lty=1) {
+#   # make CRAN checks happy
+#   Snow.polygons <- NULL   #immediately replaced on next line
+#   data(Snow.polygons, package = 'HistData', envir = environment())
+# 	starts <- which(Snow.polygons$start==0)
+# 	for(i in 1:length(starts)) {
+# 		this <- starts[i]:(starts[i]+1)
+# 		lines(Snow.polygons[this,2:3], col=col, lwd=lwd, lty=lty)
+# 		}
+# }
+
+Spolygons <- function(col=NA, border="brown", lwd=2, lty=1) {
+  #  Snow.polygons2 <- NULL   #immediately replaced on next line
+  #  data(Snow.polygons2, package = 'HistData', envir = environment())
+  polygons <- HistData::Snow.polygons
+  np <- length(polygons)
+  if (length(col) < np) col <- rep(col, length.out=np) 
+  if (length(border) < np) border <- rep(border, length.out=np) 
+  for(i in seq_along(polygons)) {
+    coord <- polygons[[i]]
+    polygon(coord$x, coord$y, col=col[i], border=border[i], lwd=lwd, lty=lty)
+  }
 }
+
 
 # Plot a bivariate density estimate of deaths
 Sdensity <- function(bandwidth=c(0.5,0.5), 

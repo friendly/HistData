@@ -71,16 +71,26 @@ it points to the Broad Street pump as the source of the outbreak.
     \item{\code{y}}{y coordinate}
   }
 
-  \code{Snow.polygons}: A  data frame  with 54  observations on  the following 3
-  variables,  giving Thiessen  (Voronoi) polygons  containing each  pump. Their
+%  \code{Snow.polygons}: A  data frame  with 54  observations on  the following 3
+%  variables,  giving Thiessen  (Voronoi) polygons  containing each  pump. Their
+%  boundaries define the area that is closest to each pump relative to all  other
+%  pumps. They are mathematically defined  by the perpendicular bisectors of  the
+%  lines  between all  pumps. The  outlines of  these polygons  can be  drawn by
+%  connecting all points sequentially starting at each value of \code{start==0}.
+%  Here, each line segment consists of two sequential points.
+%  \describe{
+%    \item{\code{start}}{line start indicator. The value \code{start==0} indicates the
+%    	start of a new line, including all following points having \code{start==1}}
+%    \item{\code{x}}{x coordinate}
+%    \item{\code{y}}{y coordinate}
+%  }
+
+  \code{Snow.polygons}: A list of 13 data frames, giving the vertices of
+  Thiessen  (Voronoi) polygons  containing each  pump. Their
   boundaries define the area that is closest to each pump relative to all  other
   pumps. They are mathematically defined  by the perpendicular bisectors of  the
-  lines  between all  pumps. The  outlines of  these polygons  can be  drawn by
-  connecting all points sequentially starting at each value of \code{start==0}.
-  Here, each line segment consists of two sequential points.
+  lines between all pumps. Each data frame contains:
   \describe{
-    \item{\code{start}}{line start indicator. The value \code{start==0} indicates the
-    	start of a new line, including all following points having \code{start==1}}
     \item{\code{x}}{x coordinate}
     \item{\code{y}}{y coordinate}
   }

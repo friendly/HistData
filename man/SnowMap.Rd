@@ -16,7 +16,7 @@ The main function \code{SnowMap} draws versions of John Snow's map of cholera de
 the South London area surrounding the Borad Street pump.
 during the 1854 outbreak.
 
-It is a wrapper for the various subfunctions also listed here:
+It is a wrapper for the various subfunctions also listed here:\cr
 \code{Splot} sets up the basic plot\cr
 \code{Sstreets} draws the streets\cr
 \code{Sdeaths} plots the deaths\cr
@@ -35,7 +35,7 @@ SnowMap(xlim = c(3, 20), ylim = c(3, 20),
         deaths.args = list(col = "red", pch = 15, cex = 0.6), 
         pumps.args = list(col = "blue", pch = 17, cex = 1.5, cex.lab = 0.9), 
         scale.args = list(xs = 3.5, ys = 19.7), 
-        polygons.args = list(col = "brown", lwd = 2, lty = 1),
+        polygons.args = list(col=NA, border="brown", lwd=2, lty=1),
   			density.args=list(bandwidth=c(0.5,0.5), 
                   col1=rgb(0,1,0,0),
                   col2=rgb(1,0,0,.8))
@@ -54,7 +54,7 @@ Sstreets(col = "gray", lwd = 1)
 
 Sscale(xs = 3.5, ys = 19.7)
 
-Spolygons(col = "brown", lwd = 2, lty = 1)
+Spolygons(col=NA, border="brown", lwd=2, lty=1)
 
 Sdensity(bandwidth = c(0.5, 0.5), col1 = rgb(0, 1, 0, 0), col2 = rgb(1, 0, 0, 0.8))
 }
@@ -98,7 +98,8 @@ List of arguments passed to \code{Spumps}
 List of arguments passed to \code{Sscale}
 }
   \item{polygons.args}{
-List of arguments passed to \code{Spolygons}
+List of arguments passed to \code{Spolygons}. Note that \code{col} here now refers to the fill colors,
+passed to \code{\link[graphics]{polygon}}
 }
 
   \item{density.args}{
@@ -130,6 +131,9 @@ Character size for labels used by \code{Spumps}
 Line width used by by various functions
 }
 
+  \item{border}{
+Color of border lines used by \code{Spolygons}
+}
   \item{xs}{
 x location of the scale used by \code{Sscale}
 }
