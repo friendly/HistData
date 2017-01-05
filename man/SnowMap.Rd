@@ -36,7 +36,7 @@ SnowMap(xlim = c(3, 20), ylim = c(3, 20),
         pumps.args = list(col = "blue", pch = 17, cex = 1.5, cex.lab = 0.9), 
         scale.args = list(xs = 3.5, ys = 19.7), 
         polygons.args = list(col=NA, border="brown", lwd=2, lty=1),
-  			density.args=list(bandwidth=c(0.5,0.5), 
+        density.args=list(bandwidth=c(0.5,0.5), 
                   col1=rgb(0,1,0,0),
                   col2=rgb(1,0,0,.8))
 )
