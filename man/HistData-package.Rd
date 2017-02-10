@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.8-0\cr
-Date: \tab 2016-12-07\cr
+Version: \tab 0.8-2\cr
+Date: \tab 2017-02-10\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -66,6 +66,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{Pyx}}}{Trial of the Pyx}
   \item{\code{\link{Quarrels}}}{Statistics of Deadly Quarrels}
   \item{\code{\link{Snow}}}{John Snow's map and data on the 1854 London Cholera outbreak}
+  \item{\code{\link{Virginis}}}{J. F. W. Herschel's data on the oribit of the twin star gamma Virginis}
   \item{\code{\link{Wheat}}}{Playfair's data on wages and the price of wheat}
   \item{\code{\link{Yeast}}}{Student's (1906) Yeast Cell Counts}
   \item{\code{\link{ZeaMays}}}{Darwin's Heights of Cross- and Self-fertilized Zea May Pairs}
@@ -93,7 +94,11 @@ Friendly, M. & Denis, D. (2005). The early origins and development of the scatte
 Friendly, M. & Sigal, M. & Harnanansingh, D. (2016).
 "The Milestones Project: A Database for the History of Data Visualization,"  
 In Kostelnick, C. & Kimball, M. (ed.),  
-\emph{Visible Numbers: The History of Data Visualization}, Ashgate Press, In press.
+\emph{Visible Numbers: The History of Data Visualization}, Ashgate Press, Chapter 10.
+
+Friendly, M. & Wainer, H. (in progress). \emph{The Origin of Graphical Species}.
+Harvard University Press.
+
 
 }
 \seealso{
