@@ -1,17 +1,15 @@
 ## Test environments
-* local Windows 7 install, 3.2.5 (2016-04-14)
-* win-builder (R Under development (unstable) (2017-01-06 r71920)), R version 3.3.2 (2016-10-31)
+* local Windows 7 install, R version 3.3.2 (2016-10-31) x86_64-w64-mingw32/x64 (64-bit)
+* win-builder: R Under development (unstable) (2017-08-15 r73096), R version 3.4.1 (2017-06-30)
 
 ## R CMD check results
 There were no ERRORs, WARNINGs or NOTEs 
   
 ## Comments
-This is a minor release, adding a a new set of functions to draw John Snow's map of cholera
+This is a minor release, adding a new data set and completing the plot of Minard's data
 
-Version 0.8-1 (2016-12-22)
+Version 0.8-2 (2017-02-10)
 
-* Added SnowMap()
-* fixed Snow.pumps data:  label should be character, not a factor; added missing labels for pumps 1:2
-* SnowMap now uses asp=1
-* Replaced Snow.polygons with new version consisting of actual vertices of the polygons surrounding each pump.
+* Added Herschel's data on the twin stars Virginis, used in the first scatterplot
+* Complete the example plots of Minard data
 
