@@ -2,7 +2,7 @@ Package: HistData
 Type: Package
 Title: Data Sets from the History of Statistics and Data Visualization
 Version: 0.8-2
-Date: 2017-02-10
+Date: 2017-08-16
 Authors@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre"), email="friendly@yorku.ca"),
             person(given = "Stephane", family = "Dray", role="ctb"),
             person(given = "Hadley", family = "Wickham", role="ctb"),
@@ -21,6 +21,7 @@ Suggests:
     KernSmooth,
     maps,
     ggplot2,
+    scales,
     proto,
     grid,
     reshape,
@@ -34,7 +35,8 @@ Suggests:
     knitr,
     rmarkdown,
     effects,
-    lubridate
+    lubridate,
+    gridExtra
 License: GPL
 LazyLoad: yes
 LazyData: yes

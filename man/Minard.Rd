@@ -87,28 +87,55 @@ Friendly, M. (2003). Re-Visions of Minard.
 \url{http://www.math.yorku.ca/SCS/Gallery/re-minard.html}
 }
 \examples{
-data(Minard.troops); data(Minard.cities)
+data(Minard.troops)
+data(Minard.cities)
+data(Minard.temp)
 
 \dontrun{
+#' ## Load required packages
 require(ggplot2)
+require(scales)
+require(gridExtra)
+
+#' ## plot path of troops, and another layer for city names
  plot_troops <- ggplot(Minard.troops, aes(long, lat)) +
-   geom_path(aes(size = survivors, colour = direction, group = group))
-   
- plot_both <- plot_troops + 
-   geom_text(aes(label = city), size = 4, data = Minard.cities)
-   
- plot_polished <- plot_both + 
-   scale_size(to = c(1, 12), 
-     breaks = c(1, 2, 3) * 10^5, labels = comma(c(1, 2, 3) * 10^5)) + 
-   scale_colour_manual(values = c("grey50","red")) +
-   xlab(NULL) + 
-   ylab(NULL)
+		geom_path(aes(size = survivors, colour = direction, group = group),
+                 lineend = "round", linejoin = "round")
+ plot_cities <- geom_text(aes(label = city), size = 4, data = Minard.cities)
  
-# re-scale the plot window to an aspect ratio of ~ 4 x 1
- windows(width=12, height=3)
- plot_polished
+#' ## Combine these, and add scale information, labels, etc.
+#' Set the x-axis limits for longitude explicitly, to coincide with those for temperature
+
+breaks <- c(1, 2, 3) * 10^5 
+plot_minard <- plot_troops + plot_cities +
+ 	scale_size("Survivors", range = c(1, 10), 
+ 	            breaks = breaks, labels = scales::comma(breaks)) +
+  scale_color_manual("Direction", 
+                     values = c("grey50", "red"), 
+                     labels=c("Advance", "Retreat")) +
+  coord_cartesian(xlim = c(24, 38)) +
+  xlab(NULL) + 
+  ylab("Latitude") + 
+  ggtitle("Napoleon's March on Moscow") +
+  theme_bw() +
+  theme(legend.position=c(.8, .2), legend.box="horizontal")
  
- ## TODO: add the plot of temperature below
+#' ## plot temperature vs. longitude, with labels for dates
+plot_temp <- ggplot(Minard.temp, aes(long, temp)) +
+	geom_path(color="grey", size=1.5) +
+	geom_point(size=2) +
+	geom_text(aes(label=date)) +
+	xlab("Longitude") + ylab("Temperature") +
+	coord_cartesian(xlim = c(24, 38)) + 
+	theme_bw()
+	
+
+#' The plot works best if we  re-scale the plot window to an aspect ratio of ~ 2 x 1
+# windows(width=10, height=5)
+
+#' Combine the two plots into one
+grid.arrange(plot_minard, plot_temp, nrow=2, heights=c(3,1))
+
 }
 }
 \keyword{
