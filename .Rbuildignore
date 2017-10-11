@@ -1,3 +1,5 @@
 .project
 ^cran-comments\.md$
 .gitignore
+^.*\.Rproj$
+^\.Rproj\.user$
