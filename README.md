@@ -35,9 +35,9 @@ Milestones in the history of thematic cartography, statistical graphics, and dat
 
 Friendly, M. & Sigal, M. & Harnanansingh, D. (2016).
 "The Milestones Project: A Database for the History of Data Visualization,"  
-In Kostelnick, C. & Kimball, M. (ed.),
+In Kostelnick, C. & Kimball, M. (ed.),  
 *Visible Numbers: The History of Data Visualization*, Ashgate Press, Chapter 10.
 
 Friendly, M. & Wainer, H. (2018). *The Origin of Graphical Species*.
-Harvard University Press. In preparation.
+Harvard University Press.
 
