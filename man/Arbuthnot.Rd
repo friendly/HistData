@@ -7,7 +7,7 @@ Arbuthnot's data on male and female birth ratios in London from 1629-1710.
 }
 \description{
 John Arbuthnot (1710) used these time series data on the ratios of
-male to female births in London from 1629-1710 to carry out the first known
+male to female christenings in London from 1629-1710 to carry out the first known
 significance test, comparing observed data to a null hypothesis.
 The data for these 81 years showed that in every year there were
 more male than female christenings.
@@ -38,6 +38,18 @@ mortality obtained by Campbell and from Creighton (1965).
 Sandy Zabell (1976) pointed out several errors and inconsistencies in the
 Arbuthnot data.  In particular, the values for 1674 and 1704 are identical,
 suggesting that the latter were copied erroneously from the former.
+
+Jim Oeppen <joeppen@health.sdu.dk> points out that:
+"Arbuthnot’s data are annual counts of public baptisms, not births.
+Birth-baptism delay meant that infant deaths could occur before
+baptism.  As male infants are more likely to die than females, the sex
+ratio at baptism might be expected to be lower than the “normal” male-
+female birth ratio of 105:100.  These effects were not constant as
+there were trends in birth-baptism delay, and in early infant
+mortality.  In addition, the English Civil War and Commonwealth period
+1642-1660 is thought to have been a period of both under-registration
+and lower fertility, but it is not clear whether these had sex-specific effects."
+
 }
 \source{
 Arbuthnot, John (1710). "An argument for Devine Providence, taken from the constant Regularity
