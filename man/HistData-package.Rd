@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.8-3\cr
-Date: \tab 2017-10-01\cr
+Version: \tab 0.8-4\cr
+Date: \tab 2018-04-04\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
