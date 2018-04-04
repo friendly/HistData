@@ -11,4 +11,6 @@ This is a minor release, fixing small problems related to car 3.0-0
 Version 0.8-4 (2018-04-04)
 
 * fixed errors in Cholera.Rd related to car 3.0-0
+* fix spelling errors
+
 

@@ -57,8 +57,8 @@ similarities and dissimilarities between the pair of combatants.
     \item{\code{difWealth }}{V23: Difference in wealth }
     \item{\code{simMariagCust }}{V24: Similar marriage cusomst }
     \item{\code{difMariagCust }}{V25: Different marriage customs }
-    \item{\code{simRelig }}{V26: Similar religeon or philosophy of life }
-    \item{\code{difRelig }}{V27: Religeon or philisophy felt different }
+    \item{\code{simRelig }}{V26: Similar religion or philosophy of life }
+    \item{\code{difRelig }}{V27: Religion or philisophy felt different }
     \item{\code{philanthropy }}{V28: General philanthropy }
     \item{\code{restrictMigration }}{V29: Restricted immigrations }
     \item{\code{sameLanguage }}{V30: Common mother tongue }
@@ -109,7 +109,7 @@ similarities and dissimilarities between the pair of combatants.
     \item{\code{orderedObey }}{V75: Ordered other to obey }
     \item{\code{commerceOther }}{V76: Commercial enterprises }
     \item{\code{feltStronger }}{V77: Felt stronger }
-    \item{\code{competeIntellect }}{V78: Competed succesfully intellectual occ }
+    \item{\code{competeIntellect }}{V78: Competed successfully intellectual occ }
     \item{\code{insecureGovt }}{V79: Government insecure }
     \item{\code{prepWar }}{V80: Preparations for war }
     \item{\code{RegionalError }}{V81: Regional error measure }
