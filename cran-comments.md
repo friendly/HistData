@@ -6,10 +6,9 @@
 There were no ERRORs, WARNINGs or NOTEs 
   
 ## Comments
-This is a minor release, adding a new data set and completing the plot of Minard's data
+This is a minor release, fixing small problems related to car 3.0-0
 
-Version 0.8-2 (2017-02-10)
+Version 0.8-4 (2018-04-04)
 
-* Added Herschel's data on the twin stars Virginis, used in the first scatterplot
-* Complete the example plots of Minard data
+* fixed errors in Cholera.Rd related to car 3.0-0
 
