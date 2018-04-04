@@ -23,20 +23,20 @@ added from other sources.
     \item{\code{Region}}{Region of France ('N'='North', 'S'='South', 'E'='East', 'W'='West', 'C'='Central'). Corsica is coded as NA }
     \item{\code{Department}}{Department name: Departments are named according to usage in 1830, but without accents.
     	A factor with levels \code{Ain} \code{Aisne} \code{Allier} ... \code{Vosges} \code{Yonne}}
-    \item{\code{Crime_pers}}{Population per Crime against persons. Source: A2 (Compte général, 1825-1830)}
-    \item{\code{Crime_prop}}{Population per Crime against property. Source: A2 (Compte général, 1825-1830)}
+    \item{\code{Crime_pers}}{Population per Crime against persons. Source: A2 (Compte general, 1825-1830)}
+    \item{\code{Crime_prop}}{Population per Crime against property. Source: A2 (Compte general, 1825-1830)}
     \item{\code{Literacy}}{Percent Read & Write: Percent of military conscripts who can read and write. Source: A2 }
     \item{\code{Donations}}{Donations to the poor. Source: A2 (Bulletin des lois)}
     \item{\code{Infants}}{Population per illegitimate birth. Source: A2 (Bureaau des Longitudes, 1817-1821)}
-    \item{\code{Suicides}}{Population per suicide. Source: A2 (Compte général, 1827-1830)}
+    \item{\code{Suicides}}{Population per suicide. Source: A2 (Compte general, 1827-1830)}
     \item{\code{MainCity}}{Size of principal city ('1:Sm', '2:Med', '3:Lg'), used as a surrogate for poulation density. Large refers to the top 10, small to the bottom 10; all the rest are classed Medium.
 Source: A1. An ordered factor with levels \code{1:Sm} < \code{2:Med} < \code{3:Lg}}
     \item{\code{Wealth}}{Per capita tax on personal property. A ranked index based on taxes on personal and movable property per inhabitant.
 Source: A1}
     \item{\code{Commerce}}{Commerce and Industry, measured by the rank of the number of patents / population. Source: A1}
     \item{\code{Clergy}}{Distribution of clergy, measured by the rank of the number of Catholic priests in active service / population. Source: A1 (Almanach officiel du clergy, 1829)}
-    \item{\code{Crime_parents}}{Crimes against parents, measured by the rank of the ratio of crimes against parents to all crimes-- Average for the years 1825-1830. Source: A1 (Compte général) }
-    \item{\code{Infanticide}}{Infanticides per capita. A ranked ratio of number of infanticides to population-- Average for the years 1825-1830. Source: A1 (Compte général) }
+    \item{\code{Crime_parents}}{Crimes against parents, measured by the rank of the ratio of crimes against parents to all crimes-- Average for the years 1825-1830. Source: A1 (Compte general) }
+    \item{\code{Infanticide}}{Infanticides per capita. A ranked ratio of number of infanticides to population-- Average for the years 1825-1830. Source: A1 (Compte general) }
     \item{\code{Donation_clergy}}{Donations to the clergy. A ranked ratio of the number of bequests and donations inter vivios to population-- Average for the years 1815-1824. Source: A1 (Bull. des lois, ordunn. d'autorisation) }
     \item{\code{Lottery}}{Per capita wager on Royal Lottery. Ranked ratio of the proceeds bet on the royal lottery to population--- Average for the years 1822-1826. Source: A1 (Compte rendus par le ministre des finances)}
     \item{\code{Desertion}}{Military disertion, ratio of the number of young soldiers accused of desertion to the force of the military contingent, minus the deficit produced by the insufficiency of available billets-- Average of the years 1825-1827.
@@ -48,7 +48,7 @@ Source: Parent-Duchatelet (1836), \emph{De la prostitution en Paris}}
     \item{\code{Distance}}{Distance to Paris (km). Distance of each department centroid to the centroid of the Seine (Paris)
 Source: cakculated from department centroids }
     \item{\code{Area}}{Area (1000 km^2). Source: Angeville (1836) }
-    \item{\code{Pop1831}}{1831 population. Population in 1831, taken from Angeville (1836), \emph{Essai sur la Statistique de la Population français}, in 1000s }
+    \item{\code{Pop1831}}{1831 population. Population in 1831, taken from Angeville (1836), \emph{Essai sur la Statistique de la Population fran?ais}, in 1000s }
   }
 }
 \details{
@@ -62,7 +62,7 @@ The maximum is indicated by rank 1, and the minimum by rank 86.
  
 }
 \source{
-Angeville, A. (1836). \emph{Essai sur la Statistique de la Population française} Paris: F. Doufour.
+Angeville, A. (1836). \emph{Essai sur la Statistique de la Population fran?aise} Paris: F. Doufour.
 
 Guerry, A.-M. (1833). \emph{Essai sur la statistique morale de la France} Paris: Crochard.
 English translation: Hugh P. Whitt and Victor W. Reinking, Lewiston, N.Y. : Edwin Mellen Press, 2002.
