@@ -45,7 +45,7 @@ the body of the table.
 Andrews, D. F., and Herzberg, A. M. (1985).
 \emph{Data: A Collection of Problems from Many fields for the Student and Research Worker}.
 New York: Springer, Table 10.1.  
-The data were obtained from \url{http://www.stat.duke.edu/courses/Spring01/sta114/data/Andrews/T10.1}.
+The data were obtained from \code{http://www.stat.duke.edu/courses/Spring01/sta114/data/Andrews/T10.1}.
 
 }
 %\references{
