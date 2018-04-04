@@ -40,10 +40,10 @@ Arbuthnot data.  In particular, the values for 1674 and 1704 are identical,
 suggesting that the latter were copied erroneously from the former.
 
 Jim Oeppen <joeppen@health.sdu.dk> points out that:
-"Arbuthnot’s data are annual counts of public baptisms, not births.
+"Arbuthnot's data are annual counts of public baptisms, not births.
 Birth-baptism delay meant that infant deaths could occur before
 baptism.  As male infants are more likely to die than females, the sex
-ratio at baptism might be expected to be lower than the “normal” male-
+ratio at baptism might be expected to be lower than the 'normal' male-
 female birth ratio of 105:100.  These effects were not constant as
 there were trends in birth-baptism delay, and in early infant
 mortality.  In addition, the English Civil War and Commonwealth period
