@@ -59,7 +59,7 @@ Galton's bend: A previously undiscovered nonlinearity in Galton's family stature
 \seealso{
   \code{link{GaltonFamilies}},
 	\code{\link{PearsonLee}},
-	\code{\link[psych:galton]{galton}}
+	\code{\link[psych]{galton}}
 	}
 
 \examples{
