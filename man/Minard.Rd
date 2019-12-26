@@ -84,7 +84,7 @@ Visions and Re-visions of Charles Joseph Minard,
  \emph{Journal of Educational and Behavioral Statistics}, 27, No. 1, 31-51.
 
 Friendly, M. (2003). Re-Visions of Minard.
-\url{http://www.math.yorku.ca/SCS/Gallery/re-minard.html}
+\url{http://datavis.ca/gallery/re-minard.html}
 }
 \examples{
 data(Minard.troops)
@@ -138,7 +138,6 @@ grid.arrange(plot_minard, plot_temp, nrow=2, heights=c(3,1))
 
 }
 }
-\keyword{
-datasets
-spatial
-}
+
+\keyword{datasets}
+\keyword{spatial}

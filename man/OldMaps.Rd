@@ -57,7 +57,5 @@ data(OldMaps)
 
 with(OldMaps, plot(abs(long),abs(lat), pch=col, col=colors()[point]))
 }
-\keyword{
-	datasets
-	spatial
-	}
+\keyword{datasets}
+\keyword{spatial}
