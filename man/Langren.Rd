@@ -76,15 +76,14 @@ The First (Known) Statistical Graph: Michael Florent van Langren and the "Secret
 Supplementary materials: \url{http://datavis.ca/gallery/langren/}. 
 
 Langren, M. F. van. (1644).  \emph{La Verdadera Longitud por Mar y Tierra}. Antwerp: (n.p.), 1644.
-English translation available at \url{http://www.math.yorku.ca/SCS/Gallery/langren/verdadera.pdf}.
+English translation available at \url{http://datavis.ca/gallery/langren/verdadera.pdf}.
 
-Lelewel, J. (1851). \emph{G?ographie du Moyen ?ge}. Paris: Pilliet, 1851.
+Lelewel, J. (1851). \emph{Geographie du Moyen Age}. Paris: Pilliet, 1851.
 
 }
-\keyword{
-datasets
-spatial
-}
+\keyword{datasets}
+\keyword{spatial}
+
 \examples{
 data(Langren1644)
 

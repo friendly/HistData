@@ -44,7 +44,7 @@ L'analyse des donnees; before and around.
 \emph{Journal Electronique  d'Histoire des
 Probabilites et de la Statistique},
 4 (2),
-\url{www.jehps.net/Decembre2008/Falguerolles.pdf}
+http://www.jehps.net/Decembre2008/Falguerolles.pdf
 }
 \references{
 Pedro de Paz Salas and Antonio Alvares. La felicissima armada que elrey Don
