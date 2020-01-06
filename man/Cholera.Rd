@@ -32,7 +32,7 @@ Farr's table.
     \item{\code{pop_dens}}{population density (persons per acre), a numeric vector}
     \item{\code{persons_house}}{persons per inhabited house, a numeric vector}
     \item{\code{house_valpp}}{average annual value of house, per person (pounds), a numeric vector}
-    \item{\code{poor_rate}}{poor rate precept per pound of howse value, a numeric vector}
+    \item{\code{poor_rate}}{poor rate precept per pound of house value, a numeric vector}
     \item{\code{area}}{district area, a numeric vector}
     \item{\code{houses}}{number of houses, a numeric vector}
     \item{\code{house_val}}{total house values, a numeric vector}
