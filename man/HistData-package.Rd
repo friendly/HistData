@@ -18,7 +18,7 @@ and for historical research.
 Package: \tab HistData\cr
 Type: \tab Package\cr
 Version: \tab 0.8-6\cr
-Date: \tab 2019-12-22\cr
+Date: \tab 2020-01-06\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
