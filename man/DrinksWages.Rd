@@ -42,7 +42,7 @@ August 10, 1910.
 }
 \details{
 The data give Karl Pearson's tabulation of the father's trades from
-an Edinburgh sample, classified by whether they dring or are sober,
+an Edinburgh sample, classified by whether they drink or are sober,
 and giving average weekly wage.
 
 The wages are averages of the individuals' nominal wages.

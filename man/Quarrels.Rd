@@ -39,10 +39,10 @@ similarities and dissimilarities between the pair of combatants.
     \item{\code{nat.grp }}{V5: Nation vs gp in other nation }
     \item{\code{grp.grpSame }}{V6: Grp vs grp (same nation) }
     \item{\code{grp.grpDif }}{V7: Grp vs grp (between nations) }
-    \item{\code{numGroups }}{V8: Num grps agst which fighting }
-    \item{\code{months }}{V9: Num months fighting }
-    \item{\code{pairs }}{V10: Num pairs in whole matrix }
-    \item{\code{monthsPairs }}{V11: Num mons for all in mtrx }
+    \item{\code{numGroups }}{V8: Number groups against which fighting }
+    \item{\code{months }}{V9: Number months fighting }
+    \item{\code{pairs }}{V10: Number pairs in whole matrix }
+    \item{\code{monthsPairs }}{V11: Num mons for all in matrix }
     \item{\code{logDeaths }}{V12: Log (killed) matrix }
     \item{\code{deaths }}{V13: Total killed for matrix }
     \item{\code{exchangeGoods }}{V14: Gp sent goods to other }
@@ -58,7 +58,7 @@ similarities and dissimilarities between the pair of combatants.
     \item{\code{simMariagCust }}{V24: Similar marriage cusomst }
     \item{\code{difMariagCust }}{V25: Different marriage customs }
     \item{\code{simRelig }}{V26: Similar religion or philosophy of life }
-    \item{\code{difRelig }}{V27: Religion or philisophy felt different }
+    \item{\code{difRelig }}{V27: Religion or philsophy felt different }
     \item{\code{philanthropy }}{V28: General philanthropy }
     \item{\code{restrictMigration }}{V29: Restricted immigrations }
     \item{\code{sameLanguage }}{V30: Common mother tongue }
