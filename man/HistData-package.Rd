@@ -66,7 +66,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{Pyx}}}{Trial of the Pyx}
   \item{\code{\link{Quarrels}}}{Statistics of Deadly Quarrels}
   \item{\code{\link{Snow}}}{John Snow's map and data on the 1854 London Cholera outbreak}
-  \item{\code{\link{Virginis}}}{J. F. W. Herschel's data on the oribit of the twin star gamma Virginis}
+  \item{\code{\link{Virginis}}}{J. F. W. Herschel's data on the orbit of the twin star gamma Virginis}
   \item{\code{\link{Wheat}}}{Playfair's data on wages and the price of wheat}
   \item{\code{\link{Yeast}}}{Student's (1906) Yeast Cell Counts}
   \item{\code{\link{ZeaMays}}}{Darwin's Heights of Cross- and Self-fertilized Zea May Pairs}

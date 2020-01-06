@@ -29,7 +29,7 @@ added from other sources.
     \item{\code{Donations}}{Donations to the poor. Source: A2 (Bulletin des lois)}
     \item{\code{Infants}}{Population per illegitimate birth. Source: A2 (Bureaau des Longitudes, 1817-1821)}
     \item{\code{Suicides}}{Population per suicide. Source: A2 (Compte general, 1827-1830)}
-    \item{\code{MainCity}}{Size of principal city ('1:Sm', '2:Med', '3:Lg'), used as a surrogate for poulation density. Large refers to the top 10, small to the bottom 10; all the rest are classed Medium.
+    \item{\code{MainCity}}{Size of principal city ('1:Sm', '2:Med', '3:Lg'), used as a surrogate for population density. Large refers to the top 10, small to the bottom 10; all the rest are classed Medium.
 Source: A1. An ordered factor with levels \code{1:Sm} < \code{2:Med} < \code{3:Lg}}
     \item{\code{Wealth}}{Per capita tax on personal property. A ranked index based on taxes on personal and movable property per inhabitant.
 Source: A1}

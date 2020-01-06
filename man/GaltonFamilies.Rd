@@ -35,7 +35,7 @@ Keen [p. 297-298](2010) provides a brief discussion of this topic.
 Galton's notebook lists 963 children in 205 families ranging from 1-15 adult children children.
 Of these, 29 had non-numeric heights recorded and are not included here.
 
-Families are largely listed in decending order of fathers and mothers height.
+Families are largely listed in descending order of fathers and mothers height.
 }
 \source{
 Galton's notebook,
