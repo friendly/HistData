@@ -1,3 +1,7 @@
+Version 0.8-7 (2020-12-24)
+
+* Added `ChestStigler` data, Stigler's correction of Quetelet `ChestSizes`
+
 Version 0.8-6 (2019-12-22)
 
 * fix documention problems with CRAN checks
