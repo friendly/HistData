@@ -52,7 +52,7 @@ See: \url{http://www.medicine.mcgill.ca/epidemiology/hanley/galton/} for source 
 
 Keen, K. J. (2010). \emph{Graphics for Statistics and Data Analysis with R}, 
 Boca Raton: CRC Press,
-\url{http://www.unbc.ca/keen/graphics-for-statistics-and-data-analysis-with-r}. 
+\url{https://www.unbc.ca/keen/graphics-for-statistics-and-data-analysis-with-r}. 
 
 
 

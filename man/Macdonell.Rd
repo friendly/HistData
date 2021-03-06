@@ -54,8 +54,9 @@ each combination of \code{height} and \code{finger} replicated \code{frequency} 
 \source{
 Macdonell, W. R. (1902).
 On Criminal Anthropometry and the Identification of Criminals.
-\emph{Biometrika}, 1(2), 177-227. doi:10.1093/biomet/1.2.177
-\url{http://www.jstor.org/stable/2331487}
+\emph{Biometrika}, 1(2), 177-227. 
+\doi{10.1093/biomet/1.2.177}
+% \url{http://www.jstor.org/stable/2331487}
 
 The data used here were obtained from:
 

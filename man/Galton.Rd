@@ -53,7 +53,7 @@ Cambridge, MA: Harvard University Press, Table 8.1
 Wachsmuth, A. W., Wilkinson L., Dallal G. E. (2003). 
 Galton's bend: A previously undiscovered nonlinearity in Galton's family stature regression data. 
 \emph{The American Statistician}, 57, 190-192. 
-\url{http://www.cs.uic.edu/~wilkinson/Publications/galton.pdf}
+\url{https://www.cs.uic.edu/~wilkinson/Publications/galton.pdf}
 
 }
 \seealso{

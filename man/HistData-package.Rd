@@ -133,7 +133,7 @@ example for MDS.
 
 The \pkg{psych} package, containing Galton's \code{peas} data.
 % \code{\link[psych]{peas}} data.
-The same data set is contained in \pkg{alr3} as \code{\link[alr3]{galtonpeas}}.
+The same data set is contained in \pkg{alr4} as \code{\link[alr4]{galtonpeas}}.
 
 The \pkg{agridat} contains a large number of data sets of agricultural data,
 including some extra data sets related to

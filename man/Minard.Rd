@@ -76,7 +76,7 @@ data(Minard.temp)
 \code{date} in \code{Minard.temp} should be made a real date in 1815.
 }
 \source{
-\url{http://www.cs.uic.edu/~wilkinson/TheGrammarOfGraphics/minard.txt}
+\url{https://www.cs.uic.edu/~wilkinson/TheGrammarOfGraphics/minard.txt}
 }
 \references{
 Friendly, M. (2002). 

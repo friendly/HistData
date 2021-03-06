@@ -60,7 +60,7 @@ Playfair, W. (1821). \emph{Letter on our Agricultural Distresses, Their Causes a
 
 Data values:
 originally digitized from \url{http://datavis.ca/gallery/images/playfair-wheat1.gif}
-now taken from \url{http://mbostock.github.com/protovis/ex/wheat.js}
+now taken from \url{http://mbostock.github.io/protovis/ex/wheat.js}
 }
 \references{
 Friendly, M. & Denis, D. (2005). The early origins and development of the scatterplot 

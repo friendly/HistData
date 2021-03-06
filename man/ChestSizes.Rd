@@ -25,14 +25,6 @@ Gallagher (2020) used these data sets to re-consider the question of normality i
   }
 }
 
-\usage{data(ChestStigler)}
-\format{
-  A data frame with 16 observations on the following 2 variables.  Total count=5732.
-  \describe{
-    \item{\code{chest}}{Chest size (in inches)}
-    \item{\code{count}}{Number of soldiers with this chest size}
-  }
-}
 
 %\details{
 %%%  ~~ If necessary, more details than the __description__ above ~~
@@ -46,7 +38,7 @@ Retrieved from Statlib: \code{https://www.stat.cmu.edu/StatDat/Datafiles/Militia
 A. Quetelet, \emph{Lettres a S.A.R. le Duc Regnant de Saxe-Cobourg et Gotha, sur la Theorie des Probabilites, 
 Appliquee aux Sciences Morales et Politiques}. Brussels: M. Hayes, 1846, p. 400.
 
-Eugene D. Gallagher (2020). Was Quetelet’s Average Man Normal?, \emph{The American Statistician}, 74:3, 301-306, 
+Eugene D. Gallagher (2020). Was Quetelet's Average Man Normal?, \emph{The American Statistician}, 74:3, 301-306, 
 DOI: 10.1080/00031305.2019.1706635 
 
 Stephen M. Stigler (1986). \emph{The History of Statistics: The Measurement of Uncertainty before 1900}. Cambridge, MA: Harvard University Press, 1986, p. 208.
