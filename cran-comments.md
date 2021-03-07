@@ -1,12 +1,14 @@
 ## Test environments
 * local Windows 7 install, 3.6.3 (2020-02-29)
-* win-builder: R Under development (unstable) (2019-12-24 r77619)
+* win-builder: R Under development (unstable) (2021-03-05 r80073)
 
 ## R CMD check results
 There were no ERRORs, WARNINGs or NOTEs 
   
 ## Comments
 
+This is a minor release.  It was triggered by a CRAN-check NOTE on the last version
+regarding a reference to the `alr3` package.
 
 ## Version 0.8-7 
 
