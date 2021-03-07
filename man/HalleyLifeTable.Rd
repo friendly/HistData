@@ -47,7 +47,7 @@ DOI 10.1007/978-0-85729-115-8_2.  Data taken from Table 1.
 }
 \references{
 Halley, E. (1693). An estimate of the degrees of the mortality of mankind, drawn from
-curious tables of the births and funerals at the city of Breslaw; with an attempt
+curious tables of the births and funerals at the city of Breslau; with an attempt
 to ascertain the price of annuities upon lives. 
 \emph{Philosophical Transactions of the Royal Society, London}, 17,
 596-610.

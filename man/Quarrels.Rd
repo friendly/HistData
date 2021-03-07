@@ -58,7 +58,7 @@ similarities and dissimilarities between the pair of combatants.
     \item{\code{simMariagCust }}{V24: Similar marriage cusomst }
     \item{\code{difMariagCust }}{V25: Different marriage customs }
     \item{\code{simRelig }}{V26: Similar religion or philosophy of life }
-    \item{\code{difRelig }}{V27: Religion or philsophy felt different }
+    \item{\code{difRelig }}{V27: Religion or philosophy felt different }
     \item{\code{philanthropy }}{V28: General philanthropy }
     \item{\code{restrictMigration }}{V29: Restricted immigrations }
     \item{\code{sameLanguage }}{V30: Common mother tongue }
@@ -72,7 +72,7 @@ similarities and dissimilarities between the pair of combatants.
     \item{\code{sameGovYrs }}{V38: Years since common govt established }
     \item{\code{prevConflict }}{V39: Belligerents fought previously }
     \item{\code{prevConflictYrs }}{V40: Years since belligerents fought }
-    \item{\code{chronicFighting }}{V41: Chronic figthing between belligerents }
+    \item{\code{chronicFighting }}{V41: Chronic fighting between belligerents }
     \item{\code{persFriendship }}{V42: Autocrats personal friends }
     \item{\code{persResentment }}{V43: Leaders personal resentment }
     \item{\code{difLegal }}{V44: Annoyingly different legal systems }
@@ -83,7 +83,7 @@ similarities and dissimilarities between the pair of combatants.
     \item{\code{rivalsLand }}{V49: Rivals territory concess }
     \item{\code{rivalsTrade }}{V50: Rivals trade }
     \item{\code{churchPower }}{V51: Church civil power }
-    \item{\code{noExtension }}{V52: Policy not extending ter }
+    \item{\code{noExtension }}{V52: Policy not extending term }
     \item{\code{territory }}{V53: Desired territory }
     \item{\code{habitation }}{V54: Wanted habitation }
     \item{\code{minerals }}{V55: Desired minerals }

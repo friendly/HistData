@@ -69,7 +69,7 @@ Macdonell data used by Student.
 \references{
 Hanley, J. and Julien, M. and Moodie, E. (2008).
 Student's z, t, and s: What if Gosset had R?
-\emph{The American Statistican}, 62(1), 64-69.
+\emph{The American Statistician}, 62(1), 64-69.
 
 Gosset, W. S. [Student] (1908).
 Probable error of a mean.

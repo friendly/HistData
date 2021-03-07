@@ -47,7 +47,7 @@ Probabilites et de la Statistique},
 http://www.jehps.net/Decembre2008/Falguerolles.pdf
 }
 \references{
-Pedro de Paz Salas and Antonio Alvares. La felicissima armada que elrey Don
+Pedro de Paz Salas and Antonio Alvares. La felicisima armada que elrey Don
 Felipe nuestro Senor mando juntar enel puerto de la ciudad de Lisboa enel Reyno
 de Portugal. Lisbon, 1588.
 }
