@@ -2,6 +2,7 @@ Version 0.8-7 (2021-03-04)
 
 * Added `ChestStigler` data, Stigler's correction of Quetelet `ChestSizes` (now depends on R (>= 3.5.0))
 * Fixed URLs broken since the last release
+* Now Depends: R >= 3.5.0
 
 Version 0.8-6 (2019-12-22)
 
