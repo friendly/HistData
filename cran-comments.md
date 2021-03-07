@@ -10,6 +10,13 @@ There were no ERRORs, WARNINGs or NOTEs
 This is a minor release.  It was triggered by a CRAN-check NOTE on the last version
 regarding a reference to the `alr3` package.
 
+## Reverse dependencies
+
+> devtools::revdep()
+[1] "cholera" "statsr"  "UsingR
+
+*Wow, no problems at all. :)*
+
 ## Version 0.8-7 
 
 * Added `ChestStigler` data, Stigler's correction of Quetelet `ChestSizes` (now depends on R (>= 3.5.0))

@@ -1,0 +1,37 @@
+Package: HistData
+Type: Package
+Title: Data Sets from the History of Statistics and Data Visualization
+Version: 0.8-6
+Date: 2020-01-06
+Authors@R: c(person(given = "Michael", family = "Friendly", role=c("aut", "cre"), email="friendly@yorku.ca"),
+            person(given = "Stephane", family = "Dray", role="ctb"),
+            person(given = "Hadley", family = "Wickham", role="ctb"),
+            person(given = "James", family = "Hanley", role="ctb"),
+            person(given = "Dennis", family = "Murphy", role="ctb"),
+            person(given = "Peter", family = "Li", role="ctb")
+            )
+Maintainer: Michael Friendly <friendly@yorku.ca>
+Description: The 'HistData' package provides a collection of small data sets
+    that are interesting and important in the history of statistics and data
+    visualization. The goal of the package is to make these available, both for
+    instructional use and for historical research. Some of these present interesting
+    challenges for graphics or analysis in R.
+Suggests: gtools, KernSmooth, maps, ggplot2, scales, proto, grid,
+        reshape, plyr, lattice, jpeg, car, gplots, sp, heplots, knitr,
+        rmarkdown, effects, lubridate, gridExtra, vcd, MASS
+License: GPL
+LazyLoad: yes
+LazyData: yes
+VignetteBuilder: knitr
+RoxygenNote: 5.0.1
+NeedsCompilation: no
+Packaged: 2020-01-07 13:50:13 UTC; Friendly
+Author: Michael Friendly [aut, cre],
+  Stephane Dray [ctb],
+  Hadley Wickham [ctb],
+  James Hanley [ctb],
+  Dennis Murphy [ctb],
+  Peter Li [ctb]
+Repository: CRAN
+Date/Publication: 2020-01-08 23:02:37 UTC
+Built: R 3.6.3; ; 2021-03-03 14:36:48 UTC; windows
