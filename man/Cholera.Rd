@@ -23,7 +23,7 @@ Farr's table.
   \describe{
     \item{\code{district}}{name of the district in London, a character vector}
     \item{\code{cholera_drate}}{deaths from cholera in 1849 per 10,000 inhabitants, a numeric vector}
-    \item{\code{cholera_deaths}}{number of deaths registered from cohlera in 1849, a numeric vector}
+    \item{\code{cholera_deaths}}{number of deaths registered from cholera in 1849, a numeric vector}
     \item{\code{popn}}{population, in the middle of 1849, a numeric vector}
     \item{\code{elevation}}{elevation, in feet above the high water mark, a numeric vector}
     \item{\code{region}}{a grouping of the London districts, a factor with levels \code{West} \code{North} \code{Central} \code{South} \code{Kent}}

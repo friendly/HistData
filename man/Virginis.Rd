@@ -38,7 +38,7 @@ accessible example of his methods.
     \item{\code{year}}{year ("epoch") of the observation, a decimal numeric vector}
     \item{\code{posangle}}{recorded position angle between the two stars, a numeric vector}
     \item{\code{distance}}{separation distance, calculated \eqn{1/sqrt(velocity)}}
-    \item{\code{velocity}}{angular velocity, calcualted as the instantaneous slopes of 
+    \item{\code{velocity}}{angular velocity, calculated as the instantaneous slopes of 
     tangents to the smoothed curve, a numeric vector}
   }
 

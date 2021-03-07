@@ -72,7 +72,7 @@ similarities and dissimilarities between the pair of combatants.
     \item{\code{sameGovYrs }}{V38: Years since common govt established }
     \item{\code{prevConflict }}{V39: Belligerents fought previously }
     \item{\code{prevConflictYrs }}{V40: Years since belligerents fought }
-    \item{\code{chronicFighting }}{V41: Chronic figthing between belligerents }
+    \item{\code{chronicFighting }}{V41: Chronic fighting between belligerents }
     \item{\code{persFriendship }}{V42: Autocrats personal friends }
     \item{\code{persResentment }}{V43: Leaders personal resentment }
     \item{\code{difLegal }}{V44: Annoyingly different legal systems }

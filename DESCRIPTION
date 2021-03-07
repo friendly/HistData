@@ -43,4 +43,5 @@ License: GPL
 LazyLoad: yes
 LazyData: yes
 VignetteBuilder: knitr
+Language: en-US
 RoxygenNote: 5.0.1
