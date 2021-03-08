@@ -1,6 +1,7 @@
 ## Test environments
 * local Windows 7 install, 3.6.3 (2020-02-29)
 * win-builder: R Under development (unstable) (2021-03-05 r80073)
+* rhub: Fedora Linux, R-devel, clang, gfortran
 
 ## R CMD check results
 There were no ERRORs, WARNINGs or NOTEs 
