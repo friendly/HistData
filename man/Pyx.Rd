@@ -26,13 +26,13 @@ R = 123 * (12/5760) = .25625, in grains, for a single sovereign.
 \usage{data(Pyx)}
 \format{
   A frequency data frame with 72 observations on the following 4 variables giving the
-  distribution of 10,000 soverigns, classified according to the \code{Bags} in which
+  distribution of 10,000 sovereigns, classified according to the \code{Bags} in which
   they were collected and the \code{Deviation} from the standard weight.
   \describe{
     \item{\code{Bags}}{an ordered factor with levels \code{1 and 2} < \code{3} < \code{4} < \code{5} < \code{6} < \code{7} < \code{8} < \code{9} < \code{10}}
     \item{\code{Group}}{an ordered factor with levels \code{below std} < \code{near std} < \code{above std}}
     \item{\code{Deviation}}{an ordered factor with levels \code{Below -R} < \code{(-R to -.2)} < \code{(-.2 to -.l)} < \code{(-.1 to 0)} < \code{(0 to .l)} < \code{(.1 to .2)} < \code{(.2 to R)} < \code{Above R}}
-    \item{\code{count}}{number of soverigns}
+    \item{\code{count}}{number of sovereigns}
   }
 }
 \details{

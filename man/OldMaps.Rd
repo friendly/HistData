@@ -37,7 +37,7 @@ One challenge from these data is to produce useful analyses and graphical displa
 }
 \details{
 Some of the latitude and longitude values are inexplicably negative.
-It is probable that this is an error in type settting, because the table footnote
+It is probable that this is an error in type setting, because the table footnote
 says "* denotes that interpolation accuracy is not good," yet no "*"s appear in
 the body of the table.
 }
