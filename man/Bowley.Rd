@@ -39,23 +39,28 @@ Digitized from Bowley's graph.
 data(Bowley)
 
 # plot the data 
-with(Bowley,plot(Year, Value, type='b', 
+with(Bowley,plot(Year, Value, type='b', lwd=2, 
 	ylab="Value of British and Irish Exports",
 	main="Bowley's example of the method of smoothing curves"))
 
 # find moving averages-- use center alignment (requires width=ODD)
-require(gtools, warn.conflicts=FALSE)
-mav3<-running(Bowley$Value, width=3, align="center")
-mav5<-running(Bowley$Value, width=5, align="center")
-mav9<-running(Bowley$Value, width=9, align="center")
-lines(Bowley$Year[2:44], mav3, col='blue', lty=2)
-lines(Bowley$Year[3:43], mav5, col='green3', lty=3)
-lines(Bowley$Year[5:41], mav9, col='brown', lty=4)
+#require(gtools, warn.conflicts=FALSE)
+# simpler version using stats::filter
+running <- function(x, width = 5){as.vector(stats::filter(x, rep(1 / width, width), sides = 2))}
+
+mav3<-running(Bowley$Value, width=3)
+mav5<-running(Bowley$Value, width=5)
+mav9<-running(Bowley$Value, width=9)
+lines(Bowley$Year, mav3, col='blue', lty=2)
+lines(Bowley$Year, mav5, col='green3', lty=3)
+lines(Bowley$Year, mav9, col='brown', lty=4)
 
 # add lowess smooth
 lines(lowess(Bowley), col='red', lwd=2)
 
-require(ggplot2, warn.conflicts=FALSE)
-qplot(Year,Value, data=Bowley)+geom_smooth()
+#require(ggplot2, warn.conflicts=FALSE)
+ggplot(aes(x=Year, y=value), data=Bowley) +
+  geom_point() +
+  geom_smooth(method="loess", formula=y~x)
 }
 \keyword{datasets}

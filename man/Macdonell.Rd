@@ -74,7 +74,7 @@ Student's z, t, and s: What if Gosset had R?
 Gosset, W. S. [Student] (1908).
 Probable error of a mean.
 \emph{Biometrika}, 6(1), 1-25.
-\url{http://www.york.ac.uk/depts/maths/histstat/student.pdf}
+\url{https://www.york.ac.uk/depts/maths/histstat/student.pdf}
 
 Gosset, W. S. [Student] (1908).
 Probable error of a correlation coefficient.
