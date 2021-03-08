@@ -58,8 +58,8 @@ lines(Bowley$Year, mav9, col='brown', lty=4)
 # add lowess smooth
 lines(lowess(Bowley), col='red', lwd=2)
 
-if(requireNamespace("ggplot2")) {
-  ggplot(aes(x=Year, y=value), data=Bowley) +
+if(requireNamespace("ggplot2", quietly=TRUE)) {
+  ggplot2::ggplot(aes(x=Year, y=value), data=Bowley) +
     geom_point() +
     geom_smooth(method="loess", formula=y~x)
   }
