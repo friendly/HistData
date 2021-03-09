@@ -10,7 +10,8 @@ There were no ERRORs, WARNINGs or NOTEs
 ## Comments
 
 This is a minor release.  It was triggered by a CRAN-check NOTE on the last version
-regarding a reference to the `alr3` package.
+regarding a reference to the `alr3` package, changed to `alr4`.  As well a number of
+documentation problems were corrrected.
 
 ## Reverse dependencies
 
