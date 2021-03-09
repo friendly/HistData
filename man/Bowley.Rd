@@ -59,7 +59,7 @@ lines(Bowley$Year, mav9, col='brown', lty=4)
 lines(lowess(Bowley), col='red', lwd=2)
 
 if(require("ggplot2", quietly=TRUE)) {
-  ggplot(aes(x=Year, y=value), data=Bowley) +
+  ggplot(aes(x=Year, y=Value), data=Bowley) +
     geom_point() +
     geom_smooth(method="loess", formula=y~x)
   }
