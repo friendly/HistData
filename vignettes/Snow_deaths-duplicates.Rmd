@@ -6,9 +6,11 @@ output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Duplicate and Missing Cases in Snow.deaths}
   %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+  %\VignetteEncoding{utf8}
 ---
 
+  <!-- \usepackage[utf8]{inputenc} -->
+  
 ```{r, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(collapse = T, comment = "#>")
 
