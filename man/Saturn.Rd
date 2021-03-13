@@ -70,6 +70,8 @@ addition, was required."
 Stigler, Stephen (1975). "Napoleonic statistics: The work of Laplace",
 \emph{Biometrika}, 62, 503-517.
 }
+\author{Luiz Fernando Palin Droubi}
+
 \references{
 Stigler, Stephen M. (1986).
 \emph{The History of Statistics: The Measurement of Uncertainty before 1900}.

@@ -82,6 +82,8 @@ Stigler, Stephen M. (1986).
 \emph{The History of Statistics: The Measurement of Uncertainty before 1900}.
 Cambridge, MA: Harvard University Press, 1986, Table 1.1, p. 22.
 }
+\author{Luiz Fernando Palin Droubi}
+
 \examples{
 library(sp)
 data(Mayer)
