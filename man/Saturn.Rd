@@ -78,7 +78,7 @@ Stigler, Stephen M. (1986).
 Cambridge, MA: Harvard University Press, 1986, Table 1.1, p. 22.
 }
 \examples{
-data(Laplace)
+data(Saturn)
 fit <- lm(Y ~ X1 + X2 + X3, data = Saturn)
 # Same residuals of Stigler (1975), Table 1, last column.
 library(sp)
