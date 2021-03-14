@@ -2,8 +2,7 @@
 [![](http://cranlogs.r-pkg.org/badges/grand-total/HistData)](https://cran.r-project.org/package=HistData)
 [![Rdoc](https://www.rdocumentation.org/badges/version/HistData)](http://www.rdocumentation.org/packages/HistData)
 
-# HistData
-
+# HistData  <img src="HistData-logo.png" align="right" height="200px" />
 **Data Sets from the History of Statistics and Data Visualization**
 
 Dev. Version: 0.8-8
