@@ -21,7 +21,7 @@ about the sun are approximately in the ratio 5:2".
     \item{\code{Y}}{a numeric vector, adjusted measure of the observed longitude
     of Saturn, in minutes}
     \item{\code{X1}}{a numeric vector, the rate of change of the mean annual
-    motion of Sarturn}
+    motion of Saturn}
     \item{\code{X2}}{a numeric vector, the rate of change of the eccentricity of
     Saturn's orbit}
     \item{\code{X3}}{a numeric vector, a variable compound of the rate of change
@@ -75,7 +75,7 @@ Stigler, Stephen (1975). "Napoleonic statistics: The work of Laplace",
 \references{
 Stigler, Stephen M. (1986).
 \emph{The History of Statistics: The Measurement of Uncertainty before 1900}.
-Cambridge, MA: Harvard University Press, 1986, Table 1.1, p. 22.
+Cambridge, MA: Harvard University Press, 1986, Table 1.3, p. 34.
 }
 \examples{
 data(Saturn)

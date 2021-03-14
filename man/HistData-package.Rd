@@ -56,6 +56,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{Jevons}}}{W. Stanley Jevons' data on numerical discrimination}
   \item{\code{\link{Langren}}}{van Langren's data on longitude distance between Toledo and Rome}
   \item{\code{\link{Macdonell}}}{Macdonell's data on height and finger length of criminals, used by Gosset (1908)}
+  \item{\code{\link{Mayer}}}{Mayer's data on the libration of the moon}
   \item{\code{\link{Michelson}}}{Michelson's 1879 determinations of the velocity of light}
   \item{\code{\link{Minard}}}{Data from Minard's famous graphic map of Napoleon's march on Moscow}
   \item{\code{\link{Nightingale}}}{Florence Nightingale's data on deaths from various causes in the Crimean War}
@@ -65,6 +66,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{Prostitutes}}}{Parent-Duchatelet's time-series data on the number of prostitutes in Paris}
   \item{\code{\link{Pyx}}}{Trial of the Pyx}
   \item{\code{\link{Quarrels}}}{Statistics of Deadly Quarrels}
+  \item{\code{\link{Saturn}}}{Laplace's Saturn data}
   \item{\code{\link{Snow}}}{John Snow's map and data on the 1854 London Cholera outbreak}
   \item{\code{\link{Virginis}}}{J. F. W. Herschel's data on the orbit of the twin star gamma Virginis}
   \item{\code{\link{Wheat}}}{Playfair's data on wages and the price of wheat}

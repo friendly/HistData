@@ -2,7 +2,7 @@
 \alias{Mayer}
 \docType{data}
 \title{
-Mayer's data on the libration of the moon.
+Mayer's Data on the Libration of the Moon.
 }
 \description{
 
