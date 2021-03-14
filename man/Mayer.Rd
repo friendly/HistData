@@ -87,6 +87,14 @@ Cambridge, MA: Harvard University Press, 1986, Table 1.1, p. 22.
 \examples{
 library(sp)
 data(Mayer)
+
+# some scatterplots
+plot(Y ~ X2, pch=(15:17)[as.factor(Group)], 
+             col=c("red", "blue", "darkgreen")[as.factor(Group)], data=Mayer)
+plot(Y ~ X3, pch=(15:17)[as.factor(Group)], 
+             col=c("red", "blue", "darkgreen")[as.factor(Group)], data=Mayer)
+
+
 Avg_Method <- aggregate(Mayer[, 2:5], by = list(Group = Mayer$Group), FUN=sum)
 fit_Mayer <- lm(Y ~ X1 + X2 + X3 - 1, Avg_Method)
 

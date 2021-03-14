@@ -1,3 +1,8 @@
+Version 0.8-8 (2021-03-14)
+
+* Added `Mayer` and `Saturn` data sets [thx: Luiz Fernando Palin Droubi]
+
+
 Version 0.8-7 (2021-03-04)
 
 * Added `ChestStigler` data, Stigler's correction of Quetelet `ChestSizes` (now depends on R (>= 3.5.0))
