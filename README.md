@@ -20,7 +20,21 @@ They are part of a program of research called *statistical historiography*
 (Friendly, 2007; Friendly & Denis, 2001; Friendly et-al, 2016)
 meaning the use of statistical methods to study problems and questions in the
 history of statistics and graphics. They are also used in a forthcoming book on the history
-of data visualization (Friendly & Wainer, 2018).
+of data visualization (Friendly & Wainer, 2021).
+
+## Installation
+
+Get the released version from CRAN:
+
+    install.packages("HistData")
+
+The development version can be installed to your R library directly from github via:
+
+    if (!require(devtools)) install.packages("devtools")
+    library(devtools)
+    install_github("friendly/HistData")
+
+
 
 ## References
 
@@ -34,9 +48,9 @@ Milestones in the history of thematic cartography, statistical graphics, and dat
 [http://datavis.ca/milestones/](http://datavis.ca/milestones/)
 
 Friendly, M. & Sigal, M. & Harnanansingh, D. (2016).
-"The Milestones Project: A Database for the History of Data Visualization,"  
+"The Milestones Project: A Database for the History of Data Visualization,"
 In Kostelnick, C. & Kimball, M. (ed.), *Visible Numbers: The History of Data Visualization*, Ashgate Press, Chapter 10.
 
-Friendly, M. & Wainer, H. (2018). *The Origin of Graphical Species*.
+Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and Graphic Communication*.
 Harvard University Press.
 
