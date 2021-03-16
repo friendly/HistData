@@ -86,13 +86,21 @@ Cambridge, MA: Harvard University Press, 1986, Table 1.1, p. 22.
 
 \examples{
 library(sp)
+library(effects)
 data(Mayer)
 
 # some scatterplots
 plot(Y ~ X2, pch=(15:17)[as.factor(Group)], 
              col=c("red", "blue", "darkgreen")[as.factor(Group)], data=Mayer)
+abline(lm(Y ~ X2, data=Mayer), lwd=2)
+
 plot(Y ~ X3, pch=(15:17)[as.factor(Group)], 
              col=c("red", "blue", "darkgreen")[as.factor(Group)], data=Mayer)
+abline(lm(Y ~ X3, data=Mayer), lwd=2)
+
+
+fit <- lm(Y ~ X2 + X3, data=Mayer)
+plot(predictorEffects(fit, residuals=TRUE))
 
 
 Avg_Method <- aggregate(Mayer[, 2:5], by = list(Group = Mayer$Group), FUN=sum)
