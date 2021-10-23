@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.8-8\cr
-Date: \tab 2021-03-13\cr
+Version: \tab 0.8-9\cr
+Date: \tab 2021-10-23\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -42,6 +42,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{Arbuthnot}}}{Arbuthnot's data on male and female birth ratios in London from 1629-1710}
   \item{\code{\link{Armada}}}{The Spanish Armada}
   \item{\code{\link{Bowley}}}{Bowley's data on values of British and Irish trade, 1855-1899}
+  \item{\code{\link{Breslau}}}{}
   \item{\code{\link{Cavendish}}}{Cavendish's 1798 determinations of the density of the earth}
   \item{\code{\link{ChestSizes}}}{Quetelet's data on chest measurements of Scottish militiamen}
   \item{\code{\link{Cholera}}}{William Farr's Data on Cholera in London, 1849}
