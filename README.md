@@ -5,7 +5,7 @@
 # HistData  <img src="HistData-logo.png" align="right" height="200px" />
 **Data Sets from the History of Statistics and Data Visualization**
 
-Dev. Version: 0.8-8
+Dev. Version: 0.8-9
 
 The `HistData` package provides a collection of small data sets
 that are interesting and important in the history of statistics and data
@@ -20,8 +20,10 @@ elaboration.
 They are part of a program of research called *statistical historiography*
 (Friendly, 2007; Friendly & Denis, 2001; Friendly et-al, 2016)
 meaning the use of statistical methods to study problems and questions in the
-history of statistics and graphics. They are also used in a forthcoming book on the history
-of data visualization (Friendly & Wainer, 2021).
+history of statistics and graphics. They are also used in our book,
+_A History of Data Visualization & Graphic Communication_
+(Friendly & Wainer, 2021). See also the companion website for this book,
+https://friendly.github.io/HistDataVis/.
 
 ## Installation
 
@@ -52,6 +54,6 @@ Friendly, M. & Sigal, M. & Harnanansingh, D. (2016).
 "The Milestones Project: A Database for the History of Data Visualization,"
 In Kostelnick, C. & Kimball, M. (ed.), *Visible Numbers: The History of Data Visualization*, Ashgate Press, Chapter 10.
 
-Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and Graphic Communication*.
+Friendly, M. & Wainer, H. (2021). [*A History of Data Visualization and Graphic Communication*](https://www.hup.harvard.edu/catalog.php?isbn=9780674975231).
 Harvard University Press.
 

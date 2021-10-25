@@ -44,11 +44,15 @@ Halley, E. (1693). An estimate of the degrees of mortality of mankind, drawn fro
 funerals in the City of Breslaw; with an attempt to ascertain the price of annuities upon lives. 
 \emph{Phil. Trans.}, \bold{17}, 596-610.
 }
+\seealso{
+\code{\link{Arbuthnot}}, \code{\link{HalleyLifeTable}}
+}
+
 \examples{
 data(Breslau)
 
 # Reproduce Figure 1 in Bellhouse (2011)
-# He excluded age < 5 and made a point of the overrepresentation of deaths in quinquennial years.
+# He excluded age < 5 and made a point of the over-representation of deaths in quinquennial years.
 library(ggplot2)
 library(dplyr)
 Breslau5 <- Breslau \%>\%
