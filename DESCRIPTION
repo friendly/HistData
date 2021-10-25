@@ -23,6 +23,7 @@ Suggests:
     KernSmooth,
     maps,
     ggplot2,
+    dplyr,
     scales,
     proto,
     grid,
