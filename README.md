@@ -9,7 +9,7 @@
 # HistData  <img src="man/figures/HistData-logo.png" align="right" height="200px" />
 **Data Sets from the History of Statistics and Data Visualization**
 
-Dev. Version: 0.8-9
+Dev. Version: 0.9-0
 
 The `HistData` package provides a collection of small data sets
 that are interesting and important in the history of statistics and data

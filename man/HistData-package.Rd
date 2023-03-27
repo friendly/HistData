@@ -17,8 +17,8 @@ and for historical research.
 \tabular{ll}{
 Package: \tab HistData\cr
 Type: \tab Package\cr
-Version: \tab 0.8-9\cr
-Date: \tab 2021-10-23\cr
+Version: \tab 0.9-0\cr
+Date: \tab 2023-03-27\cr
 License: \tab GPL\cr
 LazyLoad: \tab yes\cr
 LazyData: \tab yes\cr
@@ -64,6 +64,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{OldMaps}}}{Latitudes and Longitudes of 39 Points in 11 Old Maps}
   \item{\code{\link{PearsonLee}}}{Pearson and Lee's 1896 data on the heights of parents and children classified by gender}
   \item{\code{\link{PolioTrials}}}{Polio Field Trials Data on the Salk vaccine}
+  \item{\code{\link{Pollen}}}{5D dataset from the 1986 JSM Challenge}
   \item{\code{\link{Prostitutes}}}{Parent-Duchatelet's time-series data on the number of prostitutes in Paris}
   \item{\code{\link{Pyx}}}{Trial of the Pyx}
   \item{\code{\link{Quarrels}}}{Statistics of Deadly Quarrels}
