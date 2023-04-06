@@ -106,19 +106,35 @@ Harvard University Press.
 
 }
 \seealso{
-\code{\link{Arbuthnot}}, \code{\link{Armada}}, \code{\link{Bowley}},
-\code{\link{Cavendish}}, \code{\link{ChestSizes}}, \code{\link{Cholera}}, \code{\link{CushnyPeebles}},
+\code{\link{Arbuthnot}}, 
+\code{\link{Armada}}, 
+\code{\link{Bowley}},
+\code{\link{Cavendish}}, 
+\code{\link{ChestSizes}}, 
+\code{\link{Cholera}}, 
+\code{\link{CushnyPeebles}},
 
-\code{\link{Dactyl}}, \code{\link{DrinksWages}}, \code{\link{Fingerprints}},
-\code{\link{Galton}}, \code{\link{GaltonFamilies}}, \code{\link{Guerry}},
+\code{\link{Dactyl}}, 
+\code{\link{DrinksWages}}, 
+\code{\link{Fingerprints}},
+\code{\link{Galton}}, 
+\code{\link{GaltonFamilies}}, 
+\code{\link{Guerry}},
 \code{\link{HalleyLifeTable}},
 
-\code{\link{Jevons}}, \code{\link{Langren}},
-\code{\link{Macdonell}}, \code{\link{Michelson}}, \code{\link{Minard}},
+\code{\link{Jevons}}, 
+\code{\link{Langren}},
+\code{\link{Macdonell}}, 
+\code{\link{Michelson}}, 
+\code{\link{Minard}},
 \code{\link{Nightingale}},
 
-\code{\link{OldMaps}}, \code{\link{PearsonLee}},
-\code{\link{PolioTrials}}, \code{\link{Prostitutes}}, \code{\link{Pyx}},
+\code{\link{OldMaps}}, 
+\code{\link{PearsonLee}},
+\code{\link{PolioTrials}}, 
+\code{\link{Pollen}}, 
+\code{\link{Prostitutes}}, 
+\code{\link{Pyx}},
 
 \code{\link{Quarrels}},
 \code{\link{Snow}},
