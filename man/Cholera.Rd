@@ -62,7 +62,7 @@ Written by William Farr.
 \url{https://ia800309.us.archive.org/22/items/b24751297/b24751297.pdf}
 The relevant tables are at pages clii -- clvii.
 }
-\seealso{\code{\link{Snow.deaths}}}
+\seealso{\code{\link{CholeraDeaths1849}}, \code{\link{Snow.deaths}}}
 \examples{
 data(Cholera)
 

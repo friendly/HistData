@@ -6,4 +6,6 @@
 ^CRAN-RELEASE$
 ^revdep$
 README\.md
+README\.Rmd
+data-raw/
 ^HistData-logo.png$
