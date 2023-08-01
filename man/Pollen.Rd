@@ -63,7 +63,7 @@ Slomka, M. (1986). The Analysis of a Synthetic Data Set.
 }
 
 \examples{
-data(pollen)
-pairs(pollen)
+data(Pollen)
+pairs(Pollen)
 }
 \keyword{datasets}
