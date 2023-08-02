@@ -143,7 +143,7 @@ cholera, 1854.
 
 Snow, J. (1885). \emph{On the Mode of Communication of Cholera}.
 London: John Churchill.
-\url{http://www.ph.ucla.edu/epi/snow/snowbook.html}.
+\url{https://www.ph.ucla.edu/epi/snow/snowbook.html}.
 
 Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
 }

@@ -170,7 +170,7 @@ John Mackenzie, "GIS Analyses of Dr. Snow's Map",
 describes some related visualizations using ArcGIS.
 
 Thomas Coleman, "John Snow Research project",
-\url{http://www.hilerun.org/econ/papers/snow/index.html}
+\url{https://www.hilerun.org/econ/papers/snow/index.html}
 gives extensive analyses of Snow's data with R notebooks on Github.
 }
 
