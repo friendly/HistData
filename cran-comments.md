@@ -1,8 +1,8 @@
 ## Test environments
 * local Windows 10 install, 4.2.3 (2023-03-15 ucrt)
-* win-builder: R Under development (unstable) (2021-03-05 r80073)
+* win-builder: R Under development (unstable) (2023-08-01 r84819 ucrt)
 * rhub: Fedora Linux, R-devel, clang, gfortran
-* rhub: Windows Server 2008 R2 SP1, R-devel, 32/64 bit
+* rhub: Windows Server 2022, R-devel, 64 bit
 
 ## R CMD check results
 There were no ERRORs, WARNINGs or NOTEs 
