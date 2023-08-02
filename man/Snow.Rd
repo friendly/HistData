@@ -115,7 +115,7 @@ is the lack of any data that would serve as a population denominator to
 allow for  a comparison  of mortality  rates in  the Broad  Street pump  area as
 opposed to  others.  
 See Koch (2000), Koch (2004),  Koch
-\& Denike (2009) and Tufte (1999), p. 27-37,  for further discussion. 
+& Denike (2009) and Tufte (1999), p. 27-37,  for further discussion. 
 }
 \source{
 Tobler, W. (1994). Snow's Cholera Map, 
@@ -139,11 +139,11 @@ The Map as Intent: Variations on the Theme of John Snow
 Koch, T. and Denike, K. (2009).
 Crediting his critics' concerns: Remaking John Snow's map of Broad Street
 cholera, 1854.
-\emph{Social Science \& Medicine} 69, 1246-1251.
+\emph{Social Science & Medicine} 69, 1246-1251.
 
 Snow, J. (1885). \emph{On the Mode of Communication of Cholera}.
 London: John Churchill.
-\url{http://www.ph.ucla.edu/epi/snow/snowbook.html}.
+\url{https://www.ph.ucla.edu/epi/snow/snowbook.html}.
 
 Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
 }
