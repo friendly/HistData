@@ -1,0 +1,57 @@
+Arbuthnot               Arbuthnot's data on male and female birth
+                        ratios in London from 1629-1710.
+Armada                  La Felicisima Armada
+Bowley                  Bowley's data on values of British and Irish
+                        trade, 1855-1899
+Cavendish               Cavendish's Determinations of the Density of
+                        the Earth
+ChestSizes              Chest measurements of Scottish Militiamen
+Cholera                 William Farr's Data on Cholera in London, 1849
+CushnyPeebles           Cushny-Peebles Data: Soporific Effects of
+                        Scopolamine Derivatives
+Dactyl                  Edgeworth's counts of dactyls in Virgil's
+                        Aeneid
+DrinksWages             Elderton and Pearson's (1910) data on drinking
+                        and wages
+EdgeworthDeaths         Edgeworth's Data on Death Rates in British
+                        Counties
+Fingerprints            Waite's data on Patterns in Fingerprints
+Galton                  Galton's data on the heights of parents and
+                        their children
+GaltonFamilies          Galton's data on the heights of parents and
+                        their children, by child
+Guerry                  Data from A.-M. Guerry, "Essay on the Moral
+                        Statistics of France"
+HalleyLifeTable         Halley's Life Table
+HistData-package        Data sets from the History of Statistics and
+                        Data Visualization
+Jevons                  W. Stanley Jevons' data on numerical
+                        discrimination
+Langren                 van Langren's Data on Longitude Distance
+                        between Toledo and Rome
+Macdonell               Macdonell's Data on Height and Finger Length of
+                        Criminals, used by Gosset (1908)
+Michelson               Michelson's Determinations of the Velocity of
+                        Light
+Minard                  Data from Minard's famous graphic map of
+                        Napoleon's march on Moscow
+Nightingale             Florence Nightingale's data on deaths from
+                        various causes in the Crimean War
+OldMaps                 Latitudes and Longitudes of 39 Points in 11 Old
+                        Maps
+PearsonLee              Pearson and Lee's data on the heights of
+                        parents and children classified by gender
+PolioTrials             Polio Field Trials Data
+Prostitutes             Parent-Duchatelet's time-series data on the
+                        number of prostitutes in Paris
+Pyx                     Trial of the Pyx
+Quarrels                Statistics of Deadly Quarrels
+Snow                    John Snow's Map and Data on the 1854 London
+                        Cholera Outbreak
+SnowMap                 Draw John Snow's Map of Cholera in London
+Virginis                John F. W. Herschel's Data on the Orbit of the
+                        Twin Stars gamma _Virginis_
+Wheat                   Playfair's Data on Wages and the Price of Wheat
+Yeast                   Student's (1906) Yeast Cell Counts
+ZeaMays                 Darwin's Heights of Cross- and Self-fertilized
+                        Zea May Pairs

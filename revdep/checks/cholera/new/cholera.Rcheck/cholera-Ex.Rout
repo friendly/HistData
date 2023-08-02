@@ -1,0 +1,1676 @@
+
+R version 4.2.3 (2023-03-15 ucrt) -- "Shortstop Beagle"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "cholera"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> library('cholera')
+The legacy packages maptools, rgdal, and rgeos, underpinning the sp package,
+which was just loaded, will retire in October 2023.
+Please refer to R-spatial evolution reports for details, especially
+https://r-spatial.org/r/2023/05/15/evolution4.html.
+It may be desirable to make the sf package available;
+package maintainers should consider adding sf to Suggests:.
+The sp package is now running under evolution status 2
+     (status 2 uses the sf package in place of rgdal)
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("addCase")
+> ### * addCase
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addCase
+> ### Title: Add observed case(s) to plot.
+> ### Aliases: addCase
+> 
+> ### ** Examples
+> 
+> snowMap(add.cases = FALSE)
+> addCase(1)
+> 
+> snowMap(add.cases = FALSE)
+> addCase(100)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("addDelaunay")
+> ### * addDelaunay
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addDelaunay
+> ### Title: Add Delaunay triangles.
+> ### Aliases: addDelaunay
+> 
+> ### ** Examples
+> 
+> snowMap()
+> addDelaunay()
+> 
+> 
+> 
+> cleanEx()
+> nameEx("addIndexCase")
+> ### * addIndexCase
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addIndexCase
+> ### Title: Highlight index case at 40 Broad Street.
+> ### Aliases: addIndexCase
+> 
+> ### ** Examples
+> 
+> segmentLocator("216-1")
+> addIndexCase()
+> 
+> 
+> 
+> cleanEx()
+> nameEx("addKernelDensity")
+> ### * addKernelDensity
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addKernelDensity
+> ### Title: Add 2D kernel density contours.
+> ### Aliases: addKernelDensity
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D snowMap()
+> ##D addKernelDensity()
+> ##D 
+> ##D snowMap()
+> ##D addKernelDensity("individual")
+> ##D 
+> ##D snowMap()
+> ##D addKernelDensity(c(6, 8))
+> ##D 
+> ##D snowMap()
+> ##D addKernelDensity(pump.select = c(6, 8))
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("addLandmarks")
+> ### * addLandmarks
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addLandmarks
+> ### Title: Add landmarks to plot.
+> ### Aliases: addLandmarks
+> 
+> ### ** Examples
+> 
+> snowMap(add.landmarks = FALSE)
+> addLandmarks()
+> 
+> 
+> 
+> cleanEx()
+> nameEx("addNeighborhoodCases")
+> ### * addNeighborhoodCases
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addNeighborhoodCases
+> ### Title: Add observed cases by neighborhood.
+> ### Aliases: addNeighborhoodCases
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D snowMap(add.cases = FALSE)
+> ##D addNeighborhoodCases(pump.subset = c(6, 10))
+> ##D 
+> ##D snowMap(add.cases = FALSE)
+> ##D addNeighborhoodCases(pump.select = c(6, 10))
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("addNeighborhoodEuclidean")
+> ### * addNeighborhoodEuclidean
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addNeighborhoodEuclidean
+> ### Title: Add expected Euclidean pump neighborhoods.
+> ### Aliases: addNeighborhoodEuclidean
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D streetNameLocator("marshall street", zoom = 0.5, highlight = FALSE,
+> ##D   add.subtitle = FALSE)
+> ##D addNeighborhoodEuclidean()
+> ##D 
+> ##D streetNameLocator("marshall street", zoom = 0.5, highlight = FALSE,
+> ##D   add.subtitle = FALSE)
+> ##D addNeighborhoodEuclidean(type = "area.points")
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("addNeighborhoodWalking")
+> ### * addNeighborhoodWalking
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addNeighborhoodWalking
+> ### Title: Add expected walking neighborhoods.
+> ### Aliases: addNeighborhoodWalking
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D streetNameLocator("marshall street", zoom = 0.5)
+> ##D addNeighborhoodWalking()
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("addPlaguePit")
+> ### * addPlaguePit
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addPlaguePit
+> ### Title: Add plague pit (Marshall Street).
+> ### Aliases: addPlaguePit
+> 
+> ### ** Examples
+> 
+> snowMap(add.landmarks = FALSE)
+> addPlaguePit()
+> 
+> 
+> 
+> cleanEx()
+> nameEx("addSnow")
+> ### * addSnow
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addSnow
+> ### Title: Adds Snow's graphical annotation of the Broad Street pump
+> ###   walking neighborhood.
+> ### Aliases: addSnow
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D plot(neighborhoodVoronoi())
+> ##D addSnow()
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("addVoronoi")
+> ### * addVoronoi
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addVoronoi
+> ### Title: Add Voronoi cells.
+> ### Aliases: addVoronoi
+> 
+> ### ** Examples
+> 
+> snowMap()
+> # addVoronoi()
+> 
+> 
+> 
+> cleanEx()
+> nameEx("addWalkingPath")
+> ### * addWalkingPath
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addWalkingPath
+> ### Title: Add the shortest walking path between a selected cases or pumps.
+> ### Aliases: addWalkingPath
+> 
+> ### ** Examples
+> 
+> streetNameLocator("broad street", zoom = TRUE, highlight = FALSE,
++   add.subtitle = FALSE)
+> addWalkingPath(447)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("addWhitehead")
+> ### * addWhitehead
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: addWhitehead
+> ### Title: Add Rev. Henry Whitehead's Broad Street pump neighborhood.
+> ### Aliases: addWhitehead
+> 
+> ### ** Examples
+> 
+> snowMap(add.landmarks = FALSE)
+> addWhitehead()
+> 
+> 
+> 
+> cleanEx()
+> nameEx("caseLocator")
+> ### * caseLocator
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: caseLocator
+> ### Title: Locate case by numerical ID.
+> ### Aliases: caseLocator
+> 
+> ### ** Examples
+> 
+> caseLocator(290)
+> caseLocator(290, zoom = TRUE)
+> caseLocator(290, observed = FALSE)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("euclideanPath")
+> ### * euclideanPath
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: euclideanPath
+> ### Title: Compute path of the Euclidean distance between cases and/or
+> ###   pumps.
+> ### Aliases: euclideanPath
+> 
+> ### ** Examples
+> 
+> # path from case 1 to nearest pump.
+> euclideanPath(1)
+$ego
+         x       y
+1 13.58801 11.0956
+
+$alter
+         x        y
+7 12.57136 11.72717
+
+$data
+  case anchor pump    pump.name distance     time
+1    1      1    7 Broad Street 64.63988 46.54072
+
+> 
+> # path from pump 1 to nearest case.
+> euclideanPath(NULL, 1)
+$ego
+         x     y
+5 10.31919 16.55
+
+$alter
+         x       y
+1 8.651201 17.8916
+
+$data
+          case anchor    pump.name pump distance     time
+1 The Pantheon  20005 Market Place    1 115.6085 83.23811
+
+> 
+> # path from case 1 to pump 6.
+> euclideanPath(1, 6)
+$ego
+         x       y
+1 13.58801 11.0956
+
+$alter
+         x        y
+6 8.864416 12.75354
+
+$data
+  case anchor pump                 pump.name distance     time
+1    1      1    6 Little Marlborough Street 270.3707 194.6669
+
+> 
+> # exclude pump 7 from consideration.
+> euclideanPath(1, -7)
+$ego
+         x       y
+1 13.58801 11.0956
+
+$alter
+         x       y
+9 13.52146 7.95825
+
+$data
+  case anchor pump     pump.name distance     time
+1    1      1    9 Bridle Street 169.4807 122.0261
+
+> 
+> # path from case 1 to case 6.
+> euclideanPath(1, 6, type = "cases")
+$ego
+         x       y
+1 13.58801 11.0956
+
+$alter
+          x        y
+80 13.77803 8.864945
+
+$data
+  caseA anchorA caseB anchorB distance     time
+1     1       1     6      80  119.753 86.22216
+
+> 
+> # path from pump 1 to pump 6.
+> euclideanPath(1, 6, type = "pumps")
+$ego
+         x       y
+1 8.651201 17.8916
+
+$alter
+         x        y
+6 8.864416 12.75354
+
+$data
+  pumpA pumpB   pump.nameA                pump.nameB distance   time
+1     1     6 Market Place Little Marlborough Street 277.7361 199.97
+
+> 
+> # compute multiple cases.
+> lapply(1:3, euclideanPath)
+[[1]]
+$ego
+         x       y
+1 13.58801 11.0956
+
+$alter
+         x        y
+7 12.57136 11.72717
+
+$data
+  case anchor pump    pump.name distance     time
+1    1      1    7 Broad Street 64.63988 46.54072
+
+
+[[2]]
+$ego
+         x        y
+2 9.878124 12.55918
+
+$alter
+         x        y
+6 8.864416 12.75354
+
+$data
+  case anchor pump                 pump.name distance     time
+1    2      2    6 Little Marlborough Street 55.74574 40.13693
+
+
+[[3]]
+$ego
+         x        y
+3 14.65398 10.18044
+
+$alter
+          x       y
+10 16.43489 9.25213
+
+$data
+  case anchor pump     pump.name distance     time
+1    3      3   10 Rupert Street 108.4664 78.09583
+
+
+> 
+> # plot path
+> plot(euclideanPath(1))
+> 
+> 
+> 
+> cleanEx()
+> nameEx("latlongVoronoi")
+> ### * latlongVoronoi
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: latlongVoronoi
+> ### Title: Compute Georeferenced Latitude and Longitude of vertices of
+> ###   Voronoi polygons.
+> ### Aliases: latlongVoronoi
+> 
+> ### ** Examples
+> 
+> snowMap(latlong = TRUE)
+> cells <- latlongVoronoi()
+> invisible(lapply(cells, function(x) polygon(x[, c("lon", "lat")])))
+> 
+> 
+> 
+> cleanEx()
+> nameEx("neighborhoodEuclidean")
+> ### * neighborhoodEuclidean
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: neighborhoodEuclidean
+> ### Title: Compute Euclidean path pump neighborhoods.
+> ### Aliases: neighborhoodEuclidean
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D neighborhoodEuclidean()
+> ##D neighborhoodEuclidean(-6)
+> ##D neighborhoodEuclidean(pump.select = 6:7)
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("neighborhoodVoronoi")
+> ### * neighborhoodVoronoi
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: neighborhoodVoronoi
+> ### Title: Compute Voronoi pump neighborhoods.
+> ### Aliases: neighborhoodVoronoi
+> 
+> ### ** Examples
+> 
+> neighborhoodVoronoi()
+$pump.id
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13
+
+$case.location
+[1] "address"
+
+$vestry
+[1] FALSE
+
+$statistic
+[1] "address"
+
+> neighborhoodVoronoi(vestry = TRUE)
+$pump.id
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14
+
+$case.location
+[1] "address"
+
+$vestry
+[1] TRUE
+
+$statistic
+[1] "address"
+
+> neighborhoodVoronoi(pump.select = 6:7)
+$pump.id
+[1] 6 7
+
+$case.location
+[1] "address"
+
+$vestry
+[1] FALSE
+
+$statistic
+[1] "address"
+
+> neighborhoodVoronoi(pump.select = -6)
+$pump.id
+ [1]  1  2  3  4  5  7  8  9 10 11 12 13
+
+$case.location
+[1] "address"
+
+$vestry
+[1] FALSE
+
+$statistic
+[1] "address"
+
+> neighborhoodVoronoi(pump.select = -6, polygon.vertices = TRUE)
+$pt.1
+          x        y
+1  9.678367 18.72500
+2  3.390000 18.72500
+3  3.390000 16.32146
+4 10.296353 16.42222
+
+$pt.2
+          x        y
+1 12.542312 18.72500
+2  9.678367 18.72500
+3 10.296353 16.42222
+4 11.194356 15.85294
+
+$pt.3
+         x        y
+1 13.81843 18.72500
+2 12.54231 18.72500
+3 11.19436 15.85294
+4 11.79153 14.72931
+5 15.05211 14.26512
+
+$pt.4
+         x        y
+1 19.91200 18.72500
+2 13.81843 18.72500
+3 15.05211 14.26512
+4 16.55610 13.69434
+5 16.84189 13.74627
+6 19.91200 15.28076
+
+$pt.5
+          x         y
+1 11.791529 14.729307
+2 11.194356 15.852944
+3 10.296353 16.422219
+4  3.390000 16.321458
+5  3.390000  9.833668
+6  4.770556  9.876568
+7  8.649155 10.896535
+
+$pt.6
+          x         y
+1 16.556099 13.694337
+2 15.052111 14.265117
+3 11.791529 14.729307
+4  8.649155 10.896535
+5 11.753629  9.516815
+6 14.289421 10.156058
+
+$pt.7
+          x         y
+1 11.753629  9.516815
+2  8.649155 10.896535
+3  4.770556  9.876568
+4 12.496764  4.361363
+5 12.646096  4.696425
+
+$pt.8
+         x         y
+1 14.28942 10.156058
+2 11.75363  9.516815
+3 12.64610  4.696425
+4 15.59636  7.213220
+
+$pt.9
+         x         y
+1 16.84189 13.746269
+2 16.55610 13.694337
+3 14.28942 10.156058
+4 15.59636  7.213220
+5 18.17318  6.949869
+
+$pt.10
+         x         y
+1 19.91200 15.280758
+2 16.84189 13.746269
+3 18.17318  6.949869
+4 19.91200  5.871477
+
+$pt.11
+         x        y
+1 19.91200 5.871477
+2 18.17318 6.949869
+3 15.59636 7.213220
+4 12.64610 4.696425
+5 12.49676 4.361363
+6 12.48805 3.235000
+7 19.91200 3.235000
+
+$pt.12
+          x        y
+1  4.770556 9.876568
+2  3.390000 9.833668
+3  3.390000 3.235000
+4 12.488052 3.235000
+5 12.496764 4.361363
+
+> 
+> # coordinates for vertices also available in the returned object.
+> dat <- neighborhoodVoronoi(pump.select = -6)
+> dat$coordinates
+$pt.1
+          x        y
+1  9.678367 18.72500
+2  3.390000 18.72500
+3  3.390000 16.32146
+4 10.296353 16.42222
+
+$pt.2
+          x        y
+1 12.542312 18.72500
+2  9.678367 18.72500
+3 10.296353 16.42222
+4 11.194356 15.85294
+
+$pt.3
+         x        y
+1 13.81843 18.72500
+2 12.54231 18.72500
+3 11.19436 15.85294
+4 11.79153 14.72931
+5 15.05211 14.26512
+
+$pt.4
+         x        y
+1 19.91200 18.72500
+2 13.81843 18.72500
+3 15.05211 14.26512
+4 16.55610 13.69434
+5 16.84189 13.74627
+6 19.91200 15.28076
+
+$pt.5
+          x         y
+1 11.791529 14.729307
+2 11.194356 15.852944
+3 10.296353 16.422219
+4  3.390000 16.321458
+5  3.390000  9.833668
+6  4.770556  9.876568
+7  8.649155 10.896535
+
+$pt.6
+          x         y
+1 16.556099 13.694337
+2 15.052111 14.265117
+3 11.791529 14.729307
+4  8.649155 10.896535
+5 11.753629  9.516815
+6 14.289421 10.156058
+
+$pt.7
+          x         y
+1 11.753629  9.516815
+2  8.649155 10.896535
+3  4.770556  9.876568
+4 12.496764  4.361363
+5 12.646096  4.696425
+
+$pt.8
+         x         y
+1 14.28942 10.156058
+2 11.75363  9.516815
+3 12.64610  4.696425
+4 15.59636  7.213220
+
+$pt.9
+         x         y
+1 16.84189 13.746269
+2 16.55610 13.694337
+3 14.28942 10.156058
+4 15.59636  7.213220
+5 18.17318  6.949869
+
+$pt.10
+         x         y
+1 19.91200 15.280758
+2 16.84189 13.746269
+3 18.17318  6.949869
+4 19.91200  5.871477
+
+$pt.11
+         x        y
+1 19.91200 5.871477
+2 18.17318 6.949869
+3 15.59636 7.213220
+4 12.64610 4.696425
+5 12.49676 4.361363
+6 12.48805 3.235000
+7 19.91200 3.235000
+
+$pt.12
+          x        y
+1  4.770556 9.876568
+2  3.390000 9.833668
+3  3.390000 3.235000
+4 12.488052 3.235000
+5 12.496764 4.361363
+
+> 
+> 
+> 
+> cleanEx()
+> nameEx("neighborhoodWalking")
+> ### * neighborhoodWalking
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: neighborhoodWalking
+> ### Title: Compute walking path pump neighborhoods.
+> ### Aliases: neighborhoodWalking
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D neighborhoodWalking()
+> ##D neighborhoodWalking(pump.select = -6)
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.euclidean")
+> ### * plot.euclidean
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.euclidean
+> ### Title: Plot method for neighborhoodEuclidean().
+> ### Aliases: plot.euclidean
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D plot(neighborhoodEuclidean())
+> ##D plot(neighborhoodEuclidean(-6))
+> ##D plot(neighborhoodEuclidean(pump.select = 6:7))
+> ##D plot(neighborhoodEuclidean(case.set = "expected"), type = "area.points")
+> ##D plot(neighborhoodEuclidean(case.set = "expected"), type = "area.polygons")
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.euclidean_path")
+> ### * plot.euclidean_path
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.euclidean_path
+> ### Title: Plot the path of the Euclidean distance between cases and/or
+> ###   pumps.
+> ### Aliases: plot.euclidean_path
+> 
+> ### ** Examples
+> 
+> plot(euclideanPath(15))
+> plot(euclideanPath(15), unit.posts = "time")
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.neighborhood_data")
+> ### * plot.neighborhood_data
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.neighborhood_data
+> ### Title: Plot method for neighborhoodData().
+> ### Aliases: plot.neighborhood_data
+> 
+> ### ** Examples
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.time_series")
+> ### * plot.time_series
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.time_series
+> ### Title: Plot aggregate time series data from Vestry report.
+> ### Aliases: plot.time_series
+> 
+> ### ** Examples
+> 
+> plot(timeSeries())
+> plot(timeSeries(), statistic = "deaths")
+> plot(timeSeries(), bty = "n", type = "h", lwd = 4)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.voronoi")
+> ### * plot.voronoi
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.voronoi
+> ### Title: Plot Voronoi neighborhoods.
+> ### Aliases: plot.voronoi
+> 
+> ### ** Examples
+> 
+> plot(neighborhoodVoronoi())
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.walking")
+> ### * plot.walking
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.walking
+> ### Title: Plot method for neighborhoodWalking().
+> ### Aliases: plot.walking
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D plot(neighborhoodWalking())
+> ##D plot(neighborhoodWalking(case.set = "expected"))
+> ##D plot(neighborhoodWalking(case.set = "expected"), type = "area.points")
+> ##D plot(neighborhoodWalking(case.set = "expected"), type = "area.polygons")
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.walking_path")
+> ### * plot.walking_path
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.walking_path
+> ### Title: Plot the walking path between selected cases and/or pumps.
+> ### Aliases: plot.walking_path
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D plot(walkingPath(15))
+> ##D plot(walkingPath(15), unit.posts = "time")
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("plot.winterTemperatures")
+> ### * plot.winterTemperatures
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: plot.winterTemperatures
+> ### Title: Plot method for winterTemperatures().
+> ### Aliases: plot.winterTemperatures
+> 
+> ### ** Examples
+> 
+> plot(winterTemperatures())
+> 
+> 
+> 
+> cleanEx()
+> nameEx("print.euclidean")
+> ### * print.euclidean
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: print.euclidean
+> ### Title: Print method for neighborhoodEuclidean().
+> ### Aliases: print.euclidean
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D neighborhoodEuclidean()
+> ##D print(neighborhoodEuclidean())
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("print.euclidean_path")
+> ### * print.euclidean_path
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: print.euclidean_path
+> ### Title: Print method for euclideanPath().
+> ### Aliases: print.euclidean_path
+> 
+> ### ** Examples
+> 
+> euclideanPath(1)
+$ego
+         x       y
+1 13.58801 11.0956
+
+$alter
+         x        y
+7 12.57136 11.72717
+
+$data
+  case anchor pump    pump.name distance     time
+1    1      1    7 Broad Street 64.63988 46.54072
+
+> print(euclideanPath(1))
+$ego
+         x       y
+1 13.58801 11.0956
+
+$alter
+         x        y
+7 12.57136 11.72717
+
+$data
+  case anchor pump    pump.name distance     time
+1    1      1    7 Broad Street 64.63988 46.54072
+
+> 
+> 
+> 
+> cleanEx()
+> nameEx("print.time_series")
+> ### * print.time_series
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: print.time_series
+> ### Title: Print summary data for timeSeries().
+> ### Aliases: print.time_series
+> 
+> ### ** Examples
+> 
+> timeSeries()
+         date       day deaths fatal.attacks
+1  1854-08-19  Saturday      1             1
+2  1854-08-20    Sunday      0             1
+3  1854-08-21    Monday      2             1
+4  1854-08-22   Tuesday      0             0
+5  1854-08-23 Wednesday      0             1
+6  1854-08-24  Thursday      2             1
+7  1854-08-25    Friday      0             0
+8  1854-08-26  Saturday      0             1
+9  1854-08-27    Sunday      1             1
+10 1854-08-28    Monday      0             1
+11 1854-08-29   Tuesday      1             1
+12 1854-08-30 Wednesday      2             8
+13 1854-08-31  Thursday      3            56
+14 1854-09-01    Friday     70           143
+15 1854-09-02  Saturday    127           116
+16 1854-09-03    Sunday     76            54
+17 1854-09-04    Monday     71            46
+18 1854-09-05   Tuesday     45            36
+19 1854-09-06 Wednesday     37            20
+20 1854-09-07  Thursday     32            28
+21 1854-09-08    Friday     30            12
+22 1854-09-09  Saturday     24            11
+23 1854-09-10    Sunday     18             5
+24 1854-09-11    Monday     15             5
+25 1854-09-12   Tuesday      6             1
+26 1854-09-13 Wednesday     13             4
+27 1854-09-14  Thursday      6             0
+28 1854-09-15    Friday      8             1
+29 1854-09-16  Saturday      6             4
+30 1854-09-17    Sunday      5             2
+31 1854-09-18    Monday      2             3
+32 1854-09-19   Tuesday      3             0
+33 1854-09-20 Wednesday      0             0
+34 1854-09-21  Thursday      0             2
+35 1854-09-22    Friday      2             1
+36 1854-09-23  Saturday      3             1
+37 1854-09-24    Sunday      0             1
+38 1854-09-25    Monday      0             1
+39 1854-09-26   Tuesday      2             1
+40 1854-09-27 Wednesday      0             1
+41 1854-09-28  Thursday      2             0
+42 1854-09-29    Friday      1             0
+43 1854-09-30  Saturday      0             0
+> print(timeSeries())
+         date       day deaths fatal.attacks
+1  1854-08-19  Saturday      1             1
+2  1854-08-20    Sunday      0             1
+3  1854-08-21    Monday      2             1
+4  1854-08-22   Tuesday      0             0
+5  1854-08-23 Wednesday      0             1
+6  1854-08-24  Thursday      2             1
+7  1854-08-25    Friday      0             0
+8  1854-08-26  Saturday      0             1
+9  1854-08-27    Sunday      1             1
+10 1854-08-28    Monday      0             1
+11 1854-08-29   Tuesday      1             1
+12 1854-08-30 Wednesday      2             8
+13 1854-08-31  Thursday      3            56
+14 1854-09-01    Friday     70           143
+15 1854-09-02  Saturday    127           116
+16 1854-09-03    Sunday     76            54
+17 1854-09-04    Monday     71            46
+18 1854-09-05   Tuesday     45            36
+19 1854-09-06 Wednesday     37            20
+20 1854-09-07  Thursday     32            28
+21 1854-09-08    Friday     30            12
+22 1854-09-09  Saturday     24            11
+23 1854-09-10    Sunday     18             5
+24 1854-09-11    Monday     15             5
+25 1854-09-12   Tuesday      6             1
+26 1854-09-13 Wednesday     13             4
+27 1854-09-14  Thursday      6             0
+28 1854-09-15    Friday      8             1
+29 1854-09-16  Saturday      6             4
+30 1854-09-17    Sunday      5             2
+31 1854-09-18    Monday      2             3
+32 1854-09-19   Tuesday      3             0
+33 1854-09-20 Wednesday      0             0
+34 1854-09-21  Thursday      0             2
+35 1854-09-22    Friday      2             1
+36 1854-09-23  Saturday      3             1
+37 1854-09-24    Sunday      0             1
+38 1854-09-25    Monday      0             1
+39 1854-09-26   Tuesday      2             1
+40 1854-09-27 Wednesday      0             1
+41 1854-09-28  Thursday      2             0
+42 1854-09-29    Friday      1             0
+43 1854-09-30  Saturday      0             0
+> 
+> 
+> 
+> cleanEx()
+> nameEx("print.voronoi")
+> ### * print.voronoi
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: print.voronoi
+> ### Title: Print method for neighborhoodVoronoi().
+> ### Aliases: print.voronoi
+> 
+> ### ** Examples
+> 
+> neighborhoodVoronoi()
+$pump.id
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13
+
+$case.location
+[1] "address"
+
+$vestry
+[1] FALSE
+
+$statistic
+[1] "address"
+
+> print(neighborhoodVoronoi())
+$pump.id
+ [1]  1  2  3  4  5  6  7  8  9 10 11 12 13
+
+$case.location
+[1] "address"
+
+$vestry
+[1] FALSE
+
+$statistic
+[1] "address"
+
+> 
+> 
+> 
+> cleanEx()
+> nameEx("print.walking")
+> ### * print.walking
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: print.walking
+> ### Title: Print method for neighborhoodWalking().
+> ### Aliases: print.walking
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D neighborhoodWalking()
+> ##D print(neighborhoodWalking())
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("print.walking_path")
+> ### * print.walking_path
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: print.walking_path
+> ### Title: Print method for walkingPath().
+> ### Aliases: print.walking_path
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D walkingPath()
+> ##D print(walkingPath())
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("profile2D")
+> ### * profile2D
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: profile2D
+> ### Title: 2D Profile .
+> ### Aliases: profile2D
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D profile2D(angle = 30)
+> ##D profile2D(angle = 30, type = "ggplot2")
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("profile3D")
+> ### * profile3D
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: profile3D
+> ### Title: 3D Profile.
+> ### Aliases: profile3D
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D profile3D(pump.select = 6:7)
+> ##D profile3D(pump.subset = -7)
+> ##D profile3D(pump.subset = -7, drop.neg.subset = TRUE)
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("pumpCase")
+> ### * pumpCase
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: pumpCase
+> ### Title: Extract numeric case IDs by pump neighborhood.
+> ### Aliases: pumpCase
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D pumpCase(neighborhoodEuclidean())
+> ##D pumpCase(neighborhoodVoronoi())
+> ##D pumpCase(neighborhoodWalking())
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("pumpFatalities")
+> ### * pumpFatalities
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: pumpFatalities
+> ### Title: Compute fatalities by pump.
+> ### Aliases: pumpFatalities
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D pumpFatalities(pump.select = -7)
+> ##D pumpFatalities(metric = "euclidean")
+> ##D pumpFatalities(metric = "euclidean", vestry = TRUE)
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("pumpLocator")
+> ### * pumpLocator
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: pumpLocator
+> ### Title: Locate water pump by numerical ID.
+> ### Aliases: pumpLocator
+> 
+> ### ** Examples
+> 
+> pumpLocator()
+> pumpLocator(zoom = TRUE)
+> pumpLocator(14, vestry = TRUE, zoom = TRUE)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("segmentHighlight")
+> ### * segmentHighlight
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: segmentHighlight
+> ### Title: Highlight segment by ID.
+> ### Aliases: segmentHighlight
+> 
+> ### ** Examples
+> 
+> streetNameLocator("Soho Square", zoom = TRUE, highlight = FALSE)
+> ids <- road.segments[road.segments$name == "Soho Square", "id"]
+> invisible(lapply(ids, function(x) segmentHighlight(x, highlight = FALSE)))
+> 
+> 
+> 
+> cleanEx()
+> nameEx("segmentLength")
+> ### * segmentLength
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: segmentLength
+> ### Title: Compute length of road segment.
+> ### Aliases: segmentLength
+> 
+> ### ** Examples
+> 
+> segmentLength("242-1")
+[1] 45.94801
+> segmentLength("242-1", distance.unit = "yard")
+[1] 50.25181
+> 
+> 
+> 
+> cleanEx()
+> nameEx("segmentLocator")
+> ### * segmentLocator
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: segmentLocator
+> ### Title: Locate road segment by ID.
+> ### Aliases: segmentLocator
+> 
+> ### ** Examples
+> 
+> segmentLocator("190-1")
+> segmentLocator("216-1")
+> segmentLocator("216-1", distance.unit = "yard")
+> 
+> 
+> 
+> cleanEx()
+> nameEx("sim.pump.case")
+> ### * sim.pump.case
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: sim.pump.case
+> ### Title: List of "simulated" fatalities grouped by walking-distance pump
+> ###   neighborhood.
+> ### Aliases: sim.pump.case
+> ### Keywords: datasets
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D pumpCase(neighborhoodWalking(case.set = "expected"))
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("snowMap")
+> ### * snowMap
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: snowMap
+> ### Title: Plot John Snow's cholera map.
+> ### Aliases: snowMap
+> 
+> ### ** Examples
+> 
+> snowMap()
+> snowMap(vestry = TRUE, stacked = FALSE)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("streetHighlight")
+> ### * streetHighlight
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: streetHighlight
+> ### Title: Highlight road by name.
+> ### Aliases: streetHighlight
+> 
+> ### ** Examples
+> 
+> snowMap()
+> streetHighlight("Broad Street")
+> 
+> 
+> 
+> cleanEx()
+> nameEx("streetLength")
+> ### * streetLength
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: streetLength
+> ### Title: Compute length of selected street.
+> ### Aliases: streetLength
+> 
+> ### ** Examples
+> 
+> streetLength("Oxford Street")
+[1] 882.1046
+> streetLength("oxford street")
+[1] 882.1046
+> streetLength("oxford street", distance.unit = "yard")
+[1] 964.7284
+> 
+> 
+> 
+> cleanEx()
+> nameEx("streetNameLocator")
+> ### * streetNameLocator
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: streetNameLocator
+> ### Title: Locate road by name.
+> ### Aliases: streetNameLocator
+> 
+> ### ** Examples
+> 
+> streetNameLocator("Oxford Street")
+> streetNameLocator("oxford street")
+> streetNameLocator("Cambridge Street", zoom = TRUE)
+> streetNameLocator("Cambridge Street", zoom = 0.5)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("streetNumberLocator")
+> ### * streetNumberLocator
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: streetNumberLocator
+> ### Title: Locate road by numerical ID.
+> ### Aliases: streetNumberLocator
+> 
+> ### ** Examples
+> 
+> streetNumberLocator(243)
+> streetNumberLocator(243, zoom = TRUE)
+> streetNumberLocator(243, zoom = 0.5)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("summary.euclidean")
+> ### * summary.euclidean
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: summary.euclidean
+> ### Title: Summary method for neighborhoodEuclidean().
+> ### Aliases: summary.euclidean
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D summary(neighborhoodEuclidean())
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("summary.voronoi")
+> ### * summary.voronoi
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: summary.voronoi
+> ### Title: Summary method for neighborhoodVoronoi().
+> ### Aliases: summary.voronoi
+> 
+> ### ** Examples
+> 
+> summary(neighborhoodVoronoi())
+ p1  p2  p3  p4  p5  p6  p7  p8  p9 p10 p11 p12 p13 
+  0   1  10  13   3  39 182  12  17  38   2   2   2 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("summary.walking")
+> ### * summary.walking
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: summary.walking
+> ### Title: Summary method for neighborhoodWalking().
+> ### Aliases: summary.walking
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D summary(neighborhoodWalking())
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("timeSeries")
+> ### * timeSeries
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: timeSeries
+> ### Title: Aggregate time series fatality data from the Vestry report.
+> ### Aliases: timeSeries
+> 
+> ### ** Examples
+> 
+> timeSeries(vestry = TRUE)
+         date       day deaths fatal.attacks
+1  1854-07-26 Wednesday      0             1
+2  1854-08-03  Thursday      0             1
+3  1854-08-04    Friday      0             0
+4  1854-08-05  Saturday      1             1
+5  1854-08-06    Sunday      1             0
+6  1854-08-07    Monday      1             1
+7  1854-08-08   Tuesday      0             0
+8  1854-08-09 Wednesday      0             0
+9  1854-08-10  Thursday      0             0
+10 1854-08-11    Friday      1             2
+11 1854-08-12  Saturday      2             3
+12 1854-08-13    Sunday      2             0
+13 1854-08-14    Monday      0             3
+14 1854-08-15   Tuesday      1             0
+15 1854-08-16 Wednesday      2             3
+16 1854-08-17  Thursday      2             1
+17 1854-08-18    Friday      1             2
+18 1854-08-19  Saturday      3             2
+19 1854-08-20    Sunday      0             1
+20 1854-08-21    Monday      3             2
+21 1854-08-22   Tuesday      1             0
+22 1854-08-23 Wednesday      0             2
+23 1854-08-24  Thursday      3             0
+24 1854-08-25    Friday      0             0
+25 1854-08-26  Saturday      0             1
+26 1854-08-27    Sunday      1             0
+27 1854-08-28    Monday      0             3
+28 1854-08-29   Tuesday      2             2
+29 1854-08-30 Wednesday      2             3
+30 1854-08-31  Thursday      4            34
+31 1854-09-01    Friday     72           142
+32 1854-09-02  Saturday    127           128
+33 1854-09-03    Sunday     76            62
+34 1854-09-04    Monday     71            55
+35 1854-09-05   Tuesday     45            26
+36 1854-09-06 Wednesday     40            28
+37 1854-09-07  Thursday     34            22
+38 1854-09-08    Friday     30            14
+39 1854-09-09  Saturday     24             6
+40 1854-09-10    Sunday     18             2
+41 1854-09-11    Monday     15             3
+42 1854-09-12   Tuesday      7             1
+43 1854-09-13 Wednesday     13             3
+44 1854-09-14  Thursday      6             0
+45 1854-09-15    Friday      8             1
+46 1854-09-16  Saturday      6             3
+47 1854-09-17    Sunday      5             4
+48 1854-09-18    Monday      4             0
+49 1854-09-19   Tuesday      4             1
+50 1854-09-20 Wednesday      1             0
+51 1854-09-21  Thursday      0             0
+52 1854-09-22    Friday      3             2
+53 1854-09-23  Saturday      3             0
+54 1854-09-24    Sunday      0             1
+55 1854-09-25    Monday      1             0
+56 1854-09-26   Tuesday      2             1
+57 1854-09-27 Wednesday      0             0
+58 1854-09-28  Thursday      2             2
+59 1854-09-29    Friday      1             0
+60 1854-09-30  Saturday      0             0
+61 1854-10-01    Sunday      1             1
+> plot(timeSeries())
+> 
+> 
+> 
+> cleanEx()
+> nameEx("voronoiPolygons")
+> ### * voronoiPolygons
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: voronoiPolygons
+> ### Title: Extract vertices of Delaunay triangles and Dirichelet (Voronoi)
+> ###   tiles.
+> ### Aliases: voronoiPolygons
+> 
+> ### ** Examples
+> 
+> snowMap()
+> voronoiPolygons(pumps, output = "polygons")
+> 
+> snowMap()
+> voronoiPolygons(pumps, roads, output = "polygons")
+> 
+> snowMap()
+> voronoiPolygons(pumps, roads, type = "triangles", output = "polygons")
+> 
+> vertices <- voronoiPolygons(pumps, roads)
+> snow.colors <- grDevices::adjustcolor(snowColors(), alpha.f = 1/3)
+> snowMap(add.cases = FALSE)
+> invisible(lapply(seq_along(vertices), function(i) {
++   polygon(vertices[[i]], col = snow.colors[[i]])
++ }))
+> 
+> 
+> 
+> cleanEx()
+> nameEx("walkingPath")
+> ### * walkingPath
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: walkingPath
+> ### Title: Compute the shortest walking path between cases and/or pumps.
+> ### Aliases: walkingPath
+> 
+> ### ** Examples
+> 
+> ## Not run: 
+> ##D # path from case 1 to nearest pump.
+> ##D walkingPath(1)
+> ##D 
+> ##D # path from pump 1 to nearest case.
+> ##D walkingPath(NULL, 1)
+> ##D 
+> ##D # path from case 1 to pump 6.
+> ##D walkingPath(1, 6)
+> ##D 
+> ##D # exclude pump 7 from consideration.
+> ##D walkingPath(1, -7)
+> ##D 
+> ##D # path from case 1 to case 6.
+> ##D walkingPath(1, 6, type = "cases")
+> ##D 
+> ##D # path from pump 1 to pump 6.
+> ##D walkingPath(1, 6, type = "pumps")
+> ##D 
+> ##D # for multiple cases.
+> ##D lapply(1:3, walkingPath)
+> ##D 
+> ##D # path from case 1 to nearest pump.
+> ##D plot(walkingPath(1))
+> ##D 
+> ##D # path from John Snow's residence to Broad Street pump.
+> ##D plot(walkingPath("John Snow", 7))
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("winterTemperatures")
+> ### * winterTemperatures
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: winterTemperatures
+> ### Title: Average Winter Temperatures.
+> ### Aliases: winterTemperatures
+> 
+> ### ** Examples
+> 
+> plot(winterTemperatures(), "1859-6-1")
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> cleanEx()
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  5.44 0.42 6.09 NA NA 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

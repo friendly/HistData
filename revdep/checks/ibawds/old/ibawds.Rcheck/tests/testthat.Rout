@@ -1,0 +1,44 @@
+
+R version 4.2.3 (2023-03-15 ucrt) -- "Shortstop Beagle"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(testthat)
+> library(ibawds)
+Loading required package: dslabs
+> 
+> test_check("ibawds")
+[ FAIL 0 | WARN 24 | SKIP 8 | PASS 120 ]
+
+══ Skipped tests (8) ═══════════════════════════════════════════════════════════
+• On CRAN (8): 'test-cran_packages.R:2:3', 'test-cran_packages.R:8:3',
+  'test-dist_plots.R:25:3', 'test-dist_plots.R:39:3', 'test-dist_plots.R:55:3',
+  'test-dist_plots.R:71:3', 'test-slide_tools.R:37:3', 'test-voronoi.R:8:3'
+
+[ FAIL 0 | WARN 24 | SKIP 8 | PASS 120 ]
+Deleting unused snapshots:
+• dist_plots/density-plot-chi2.svg
+• dist_plots/density-plot-poisson.svg
+• dist_plots/density-plot-weibull.svg
+• dist_plots/distribution-plot-poisson-continuous.svg
+• dist_plots/distribution-plot-uniform.svg
+• voronoi/voronoi-suppress-data.svg
+• voronoi/voronoi-uncoloured-data.svg
+• voronoi/voronoi-with-data.svg
+• voronoi/voronoi-with-options.svg
+> 
+> proc.time()
+   user  system elapsed 
+   3.28    0.92   48.00 
