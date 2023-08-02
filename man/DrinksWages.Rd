@@ -23,7 +23,7 @@ negative:  the tendency of parents to drink appeared unrelated
 to any thing he had measured.
 
 The firestorm that this report set off is well described by Stigler (1999),
-Chapter 1.  The data set \code{DrinksWages} is just one of Pearsons
+Chapter 1.  The data set \code{DrinksWages} is just one of Pearson's
 many tables, that he published in a letter to \emph{The Times},
 August 10, 1910. 
 }

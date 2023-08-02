@@ -38,7 +38,7 @@ Source: A1}
     \item{\code{Crime_parents}}{Crimes against parents, measured by the rank of the ratio of crimes against parents to all crimes-- Average for the years 1825-1830. Source: A1 (Compte general) }
     \item{\code{Infanticide}}{Infanticides per capita. A ranked ratio of number of infanticides to population-- Average for the years 1825-1830. Source: A1 (Compte general) }
     \item{\code{Donation_clergy}}{Donations to the clergy. A ranked ratio of the number of bequests and donations inter vivios to population-- Average for the years 1815-1824. Source: A1 (Bull. des lois, ordunn. d'autorisation) }
-    \item{\code{Lottery}}{Per capita wager on Royal Lottery. Ranked ratio of the proceeds bet on the royal lottery to population--- Average for the years 1822-1826. Source: A1 (Compte rendus par le ministre des finances)}
+    \item{\code{Lottery}}{Per capita wager on Royal Lottery. Ranked ratio of the proceeds bet on the royal lottery to population--- Average for the years 1822-1826. Source: A1 (Compte rendus par le ministere des finances)}
     \item{\code{Desertion}}{Military desertion, ratio of the number of young soldiers accused of desertion to the force of the military contingent, minus the deficit produced by the insufficiency of available billets-- Average of the years 1825-1827.
 Source: A1 (Compte du ministere du guerre, 1829 etat V) }
     \item{\code{Instruction}}{Instruction. Ranks recorded from Guerry's map of Instruction. Note: this is inversely related to \code{Literacy} (as defined here)}

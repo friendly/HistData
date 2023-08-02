@@ -12,17 +12,6 @@ that are interesting and important in the history of statistics and data visuali
 The goal of the package is to make these available, both for instructional use
 and for historical research.
 
-}
-\details{
-\tabular{ll}{
-Package: \tab HistData\cr
-Type: \tab Package\cr
-Version: \tab 0.9-0\cr
-Date: \tab 2023-03-27\cr
-License: \tab GPL\cr
-LazyLoad: \tab yes\cr
-LazyData: \tab yes\cr
-}
 Some of the data sets have examples which reproduce an historical graph or analysis.
 These are meant mainly as starters for more extensive re-analysis or graphical
 elaboration. Some of these present graphical challenges to reproduce in R.
@@ -30,6 +19,11 @@ elaboration. Some of these present graphical challenges to reproduce in R.
 They are part of a program of research called \emph{statistical historiography},
 meaning the use of statistical methods to study problems and questions in the
 history of statistics and graphics.  
+
+A number of these are illustrated in our book,
+Friendly & Wainer (2021), \emph{A History of Data Visualization and Graphic Communication},
+and some are re-produced in R in the companion web site, \url{https://friendly.github.io/HistDataVis/}.
+}
 
 
 Descriptions of each DataSet can be found using \code{help(DataSet)};
@@ -46,9 +40,11 @@ Data sets included in the HistData package are:
   \item{\code{\link{Cavendish}}}{Cavendish's 1798 determinations of the density of the earth}
   \item{\code{\link{ChestSizes}}}{Quetelet's data on chest measurements of Scottish militiamen}
   \item{\code{\link{Cholera}}}{William Farr's Data on Cholera in London, 1849}
+  \item{\code{\link{CholeraDeaths1849}}}{Daily Deaths from Cholera and Diarrhaea in England, 1849}
   \item{\code{\link{CushnyPeebles}}}{Cushny-Peebles data: Soporific effects of scopolamine derivatives}
   \item{\code{\link{Dactyl}}}{Edgeworth's counts of dactyls in Virgil's Aeneid}
   \item{\code{\link{DrinksWages}}}{Elderton and Pearson's (1910) data on drinking and wages}
+  \item{\code{\link{EdgeworthDeaths}}}{Edgeworth’s Data on Death Rates in British Counties}
   \item{\code{\link{Fingerprints}}}{Waite's data on Patterns in Fingerprints}
   \item{\code{\link{Galton}}}{Galton's data on the heights of parents and their children}
   \item{\code{\link{GaltonFamilies}}}{Galton's data on the heights of parents and their children, by family}
@@ -100,7 +96,11 @@ Friendly, M. & Sigal, M. & Harnanansingh, D. (2016).
 In Kostelnick, C. & Kimball, M. (ed.),  
 \emph{Visible Numbers: The History of Data Visualization}, Ashgate Press, Chapter 10.
 
-Friendly, M. & Wainer, H. (in progress). \emph{The Origin of Graphical Species}.
+Friendly, M. & Wainer, H. (2021). \emph{A History of Data Visualization and Graphic Communication}.
+Harvard University Press. Book: \url{https://www.hup.harvard.edu/catalog.php?isbn=9780674975231}, Web site:
+\url{https://friendly.github.io/HistDataVis/}.
+
+[**]().
 Harvard University Press.
 
 
@@ -112,10 +112,12 @@ Harvard University Press.
 \code{\link{Cavendish}}, 
 \code{\link{ChestSizes}}, 
 \code{\link{Cholera}}, 
+\code{\link{CholeraDeaths1849}}, 
 \code{\link{CushnyPeebles}},
 
 \code{\link{Dactyl}}, 
 \code{\link{DrinksWages}}, 
+\code{\link{EdgeworthDeaths}}, 
 \code{\link{Fingerprints}},
 \code{\link{Galton}}, 
 \code{\link{GaltonFamilies}}, 
@@ -148,7 +150,7 @@ The \code{\link[Guerry]{Guerry-package}}, containing maps and
 other data sets related to Guerry's (1833) \emph{Moral Statistics of France}.
 
 \code{morsecodes} from the (defunct) \pkg{xgobi} package
-for data from Rothkopf (1957) on errors in learning morse code, a classical
+for data from Rothkopf (1957) on errors in learning Morse code, a classical
 example for MDS.
 
 The \pkg{psych} package, containing Galton's \code{peas} data.

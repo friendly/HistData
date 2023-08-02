@@ -93,7 +93,7 @@
 ## Version 0.7-1
 
 *  CushnyPebbles renamed to proper spelling, CushnyPeebles (thx: Ian E. Holliday)
-*  Removed Suggests: ReadImages; for now, retain old code examples as \dontrun{}
+*  Removed Suggests: ReadImage; for now, retain old code examples as \dontrun{}
 *  Extended GaltonFamilies examples
 
 ## Version 0.7-0

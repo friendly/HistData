@@ -6,7 +6,7 @@ Halley's Breslau Life Table
 }
 \description{
 Edmond Halley published his Breslau life table in 1693, which was arguably the first
-in the world based on population data. David Bellhouse (2011) resurected the original
+in the world based on population data. David Bellhouse (2011) resurrected the original
 sources of these data, collected by Caspar Neumann in the city of Breslau (now called Wroclaw),
 and then reconstructed in the 1880s by Jonas Graetzer, the medical officer
 in Breslau at that time.  
