@@ -107,11 +107,8 @@ Friendly, M. & Wainer, H. (2021). \emph{A History of Data Visualization and Grap
 Harvard University Press. Book: \url{https://www.hup.harvard.edu/catalog.php?isbn=9780674975231}, Web site:
 \url{https://friendly.github.io/HistDataVis/}.
 
-[**]().
-Harvard University Press.
-
-
 }
+
 \seealso{
 \code{\link{Arbuthnot}}, 
 \code{\link{Armada}}, 
@@ -149,7 +146,8 @@ Harvard University Press.
 \code{\link{Snow}},
 \code{\link{Wheat}},
 \code{\link{Yeast}},
-\code{\link{ZeaMays}}
+\code{\link{ZeaMays}
+}
 
 Other packages containing data sets of historical interest include:
 
