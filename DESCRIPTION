@@ -55,3 +55,4 @@ LazyData: yes
 VignetteBuilder: knitr
 Language: en-US
 RoxygenNote: 5.0.1
+BugReports: https://github.com/friendly/HistData/issues

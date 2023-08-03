@@ -96,10 +96,22 @@ vcdExtra::datasets("HistData") |> dplyr::select(Item, Title) |> knitr::kable()
 
 ## Contributors
 
-Over the years, many people have contributed new data sets, or offered corrections
-or suggestions. They are listed below in no particular order:
+Over the years, many people have contributed new data sets, or offered corrections,
+suggestions, or documentation examples. They are listed below:
 
-Stephane Dray <stephane.dray@univ-lyon1.fr>, Hadley Wickham <hadley@rstudio.com>, James Hanley <james.hanley@mcgill.ca>, Dennis Murphy <djmuser@gmail.com>, Peter Li <lindbrook@gmail.com>, Luiz Droubi <lfpdroubi@gmail.com>, James Riley <jimr1603@gmail.com>, Antoine de Falguerolles, Monique Graf, Neville Verlander <Neville.Verlander@phe.gov.uk>, Brian Clair, Jim Oeppen <joeppen@health.sdu.dk>, David Bellhouse <bellhouse@stats.uwo.ca>.
+David Bellhouse,
+Brian Clair,
+Stephane Dray, 
+Luiz Droubi,
+Antoine de Falguerolles,
+Monique Graf,
+James Hanley, 
+Peter Li, 
+Dennis Murphy, 
+Jim Oeppen,
+James Riley,
+Neville Verlander, 
+Hadley Wickham. 
 
 ## References
 
