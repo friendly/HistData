@@ -79,9 +79,7 @@ Get the released version from CRAN:
 The development version can be installed to your R library directly from
 github via:
 
-    if (!require(devtools)) install.packages("devtools")
-    library(devtools)
-    install_github("friendly/HistData")
+    remotes::install_github("friendly/HistData")
 
 ## Data sets
 

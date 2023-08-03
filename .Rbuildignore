@@ -9,3 +9,4 @@ README\.md
 README\.Rmd
 data-raw/
 ^HistData-logo.png$
+^CRAN-SUBMISSION$
