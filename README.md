@@ -18,20 +18,57 @@ Dev. Version: 0.9-1
 The `HistData` package provides a collection of small data sets that are
 interesting and important in the history of statistics and data
 visualization. The goal of the package is to make these available, both
-for instructional use and for historical research. Some of these present
-interesting challenges for graphics or analysis in R.
+for instructional use (as examples, problem sets or projects) and for
+historical research (extending or criticizing a previous analysis). Some
+of these present interesting challenges, or opportunities to “show off”,
+with graphics or analysis in R.
 
-Some of the data sets have examples which reproduce an historical graph
+Many of the data sets have examples which reproduce an historical graph
 or analysis. These are meant mainly as starters for more extensive
-re-analysis or graphical elaboration.
+re-analysis or graphical elaboration. If you are interested in any of
+these problems or data sets, I’ve purposely left lots of room to do
+better!
 
 They are part of a program of research called *statistical
 historiography* (Friendly, 2007; Friendly & Denis, 2001; Friendly et-al,
 2016) meaning the use of statistical methods to study problems and
-questions in the history of statistics and graphics. They are also used
-in our book, *A History of Data Visualization & Graphic Communication*
-(Friendly & Wainer, 2021). See also the companion website for this book,
-<https://friendly.github.io/HistDataVis/>.
+questions in the history of statistics and graphics. A main aspect of
+this is the increased understanding of historical problems in science
+and data analysis trough the process of trying to reproduce a graph or
+analysis using modern methods. I call this “Re-visioning”, meaning *to
+see again, hopefully in a new light*.
+
+They are also used in our book, [*A History of Data Visualization &
+Graphic
+Communication*](https://www.hup.harvard.edu/catalog.php?isbn=9780674975231)
+(Friendly & Wainer, 2021). See also the [companion website for this
+book](https://friendly.github.io/HistDataVis/).
+
+### Data science
+
+There is another R aspect that should be noted here: A great deal of
+“data sciency” work was involved in constructing this package, alas (for
+teaching) not captured in the resulting CRAN-friendly package.
+
+- In some cases, data had to be **extracted** from historical documents,
+  using a variety of techniques (web scraping, OCR of PDS files followed
+  by conversion to a data set), each problem with its own toolbox, in R
+  or outside. In many cases, transcription errors had to be corrected
+  with code or manually;
+- **digitization** of data from an image;
+- **conversion** of text-based data sets to a CSV file and then to an
+  `.RData` file with proper column names. Ever seen a Unix `.shar`
+  (shell archive) file? Well, I have.
+- **cleaning** variable names, e.g., using `janitor::clean_names()`, or,
+  in some cases, manually editing an excel file.
+- Applying **type-conversion**, e.g., `chr` to `factor` or `ordered`;
+  constructing appropriate contrasts for factors to facilitate
+  re-analysis.
+- **tidying** data.frames: long \<–\> wide, abbreviations of character
+  string labels, …
+- **documentation**: The thankless task? No – considerable effort was
+  made to give detailed descriptions, notes on methods, executable
+  examples, references to original sources and analyses, …
 
 ## Installation
 
@@ -109,6 +146,20 @@ vcdExtra::datasets("HistData") |> dplyr::select(Item, Title) |> knitr::kable()
 | Yeast             | Student’s (1906) Yeast Cell Counts                                                 |
 | YeastD.mat        | Student’s (1906) Yeast Cell Counts                                                 |
 | ZeaMays           | Darwin’s Heights of Cross- and Self-fertilized Zea May Pairs                       |
+
+## Contributors
+
+Over the years, many people have contributed new data sets, or offered
+corrections or suggestions. They are listed below in no particular
+order:
+
+Stephane Dray <stephane.dray@univ-lyon1.fr>, Hadley Wickham
+<hadley@rstudio.com>, James Hanley <james.hanley@mcgill.ca>, Dennis
+Murphy <djmuser@gmail.com>, Peter Li <lindbrook@gmail.com>, Luiz Droubi
+<lfpdroubi@gmail.com>, James Riley <jimr1603@gmail.com>, Antoine de
+Falguerolles, Monique Graf, Neville Verlander
+<Neville.Verlander@phe.gov.uk>, Brian Clair, Jim Oeppen
+<joeppen@health.sdu.dk>, David Bellhouse <bellhouse@stats.uwo.ca>.
 
 ## References
 
