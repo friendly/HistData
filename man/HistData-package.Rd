@@ -18,7 +18,11 @@ elaboration. Some of these present graphical challenges to reproduce in R.
 
 They are part of a program of research called \emph{statistical historiography},
 meaning the use of statistical methods to study problems and questions in the
-history of statistics and graphics.  
+history of statistics and graphics.  A main aspect of this is the increased
+understanding of historical problems in science and data analysis
+trough the process of trying to reproduce a graph or analysis using
+modern methods. I call this "Re-visioning", meaning to \emph{see again,
+hopefully in a new light}.
 
 A number of these are illustrated in our book,
 Friendly & Wainer (2021), \emph{A History of Data Visualization and Graphic Communication},
@@ -26,6 +30,7 @@ and some are re-produced in R in the companion web site, \url{https://friendly.g
 }
 
 
+\details{
 Descriptions of each DataSet can be found using \code{help(DataSet)};
 \code{example(DataSet)} will likely show applications similar to the
 historical use.
@@ -44,7 +49,7 @@ Data sets included in the HistData package are:
   \item{\code{\link{CushnyPeebles}}}{Cushny-Peebles data: Soporific effects of scopolamine derivatives}
   \item{\code{\link{Dactyl}}}{Edgeworth's counts of dactyls in Virgil's Aeneid}
   \item{\code{\link{DrinksWages}}}{Elderton and Pearson's (1910) data on drinking and wages}
-  \item{\code{\link{EdgeworthDeaths}}}{Edgeworth’s Data on Death Rates in British Counties}
+  \item{\code{\link{EdgeworthDeaths}}}{Edgeworth's Data on Death Rates in British Counties}
   \item{\code{\link{Fingerprints}}}{Waite's data on Patterns in Fingerprints}
   \item{\code{\link{Galton}}}{Galton's data on the heights of parents and their children}
   \item{\code{\link{GaltonFamilies}}}{Galton's data on the heights of parents and their children, by family}
@@ -73,6 +78,8 @@ Data sets included in the HistData package are:
 }
 
 }
+
+
 \author{
 Michael Friendly
 
