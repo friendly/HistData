@@ -9,7 +9,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 [![DOI](https://zenodo.org/badge/106572219.svg)](https://zenodo.org/badge/latestdoi/106572219)
 <!-- badges: end -->
 
-# HistData <img src="man/figures/HistData-logo.png" align="right" height="200px" />
+# HistData <img src="man/figures/logo.png" align="right" height="200px" />
 
 **Data Sets from the History of Statistics and Data Visualization**
 
