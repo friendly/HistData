@@ -116,16 +116,16 @@ Hadley Wickham.
 Friendly, M. (2007). A Brief History of Data Visualization.
 In Chen, C., Hardle, W. & Unwin, A. (eds.)  
 *Handbook of Computational Statistics: Data Visualization*, Springer-Verlag, III, Ch. 1, 1-34.
-[preprint](http://datavis.ca/papers/hbook.pdf)
+[Preprint](http://datavis.ca/papers/hbook.pdf)
 
 Friendly, M. & Denis, D. (2001).
 Milestones in the history of thematic cartography, statistical graphics, and data visualization.
-[http://datavis.ca/milestones/](http://datavis.ca/milestones/)
+Web stite: [http://datavis.ca/milestones/](http://datavis.ca/milestones/)
 
 Friendly, M. & Sigal, M. & Harnanansingh, D. (2016).
 "The Milestones Project: A Database for the History of Data Visualization,"
-In Kostelnick, C. & Kimball, M. (ed.), *Visible Numbers: The History of Data Visualization*, Ashgate Press, Chapter 10.
+In Kostelnick, C. & Kimball, M. (ed.), *Visible Numbers: The History of Data Visualization*, Ashgate Press, Chapter 10. [Preprint](https://www.datavis.ca/papers/MilestonesProject.pdf)
 
 Friendly, M. & Wainer, H. (2021). [*A History of Data Visualization and Graphic Communication*](https://www.hup.harvard.edu/catalog.php?isbn=9780674975231).
-Harvard University Press.
+Harvard University Press. Companion [web site](https://friendly.github.io/HistDataVis/)
 

@@ -6,7 +6,7 @@
 # plots from: https://openor.blog/2023/07/27/cholera-in-victorian-england/
 
 library(readr)
-library(dplyr)
+library(dplyr, warn.conflicts = FALSE)
 library(tidyr)
 library(stringr)
 library(lubridate)
