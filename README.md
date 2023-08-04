@@ -142,9 +142,14 @@ vcdExtra::datasets("HistData") |> dplyr::select(Item, Title) |> knitr::kable()
 
 ## Contributors
 
-Over the years, many people have contributed new data sets, or offered
-corrections, suggestions, or documentation examples. They are listed
-below:
+Please note that the `HistData` project is released with a [Contributor
+Code of
+Conduct](https://friendly.github.io/HistData/CODE_OF_CONDUCT.html). By
+contributing to this project, you agree to abide by its terms.
+
+Over the years, many people have contributed new data sets, offered
+corrections, suggestions, or documentation examples. They are
+appreciatedly listed below:
 
 David Bellhouse, Brian Clair, Stephane Dray, Luiz Droubi, Antoine de
 Falguerolles, Monique Graf, James Hanley, Peter Li, Dennis Murphy, Jim

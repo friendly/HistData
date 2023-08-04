@@ -55,8 +55,8 @@ data(Breslau)
 # He excluded age < 5 and made a point of the over-representation of deaths in quinquennial years.
 library(ggplot2)
 library(dplyr, warn.conflicts = FALSE)
-Breslau5 <- Breslau \%>\%
-  filter(age >= 5) \%>\%
+Breslau5 <- Breslau |>
+  filter(age >= 5) |>
   mutate(div5 = factor(age \%\% 5 == 0))
 
 ggplot(Breslau5, aes(x=age, y=total), size=1.5) +
