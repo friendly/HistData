@@ -5,7 +5,7 @@
 La Felicisima Armada
 }
 \description{
-The Spanish Armada (Spanish: \emph{Grande y Felicissima Armada}, literally "Great and Most Fortunate Navy") was a Spanish fleet of 130 ships 
+The Spanish Armada (Spanish: \emph{Grande y Felicisima Armada}, literally "Great and Most Fortunate Navy") was a Spanish fleet of 130 ships 
 that sailed from La Coruna in August 1588.
 During its preparation, several accounts of its formidable strength
 were circulated to reassure allied powers of Spain or to intimidate its enemies.

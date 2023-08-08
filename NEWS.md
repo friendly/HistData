@@ -24,7 +24,7 @@
 
 ## Version 0.8-6 (2019-12-22)
 
-* fix documention problems with CRAN checks
+* fix documentation problems with CRAN checks
 
 ## Version 0.8-5 (2018-04-26)
 
