@@ -4,7 +4,7 @@
 
 First of all, thanks for considering contributing to HistData! 👍 It's people like you that make it rewarding for us - the project maintainers - to work on HistData. 😊
 
-HistData is an open source project, maintained by people who care. We are not directly funded to do so.
+HistData is an open source project.
 
 * **repo**: https://github.com/friendly/HistData
 * **issues**: https://github.com/friendly/HistData/issues
@@ -13,9 +13,9 @@ HistData is an open source project, maintained by people who care. We are not di
 * **citation**: https://friendly.github.io/HistData/authors.html
 * **email**: mailto:friendly@yorku.ca
 
-## Code of conduct
+## Code of Conduct
 
-Please note that this project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please note that the HistData project is released with a [Contributor Code of Conduct](https://friendly.github.io/HistData/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 
 ## How you can contribute
 
@@ -29,46 +29,41 @@ Using HistData for a paper you are writing? Consider [citing it](https://friendl
 
 ### Ask a question ⁉️
 
-Using HistData and got stuck? Browse the [documentation][website] to see if you can find a solution. Still stuck? Post your question as an [issue on GitHub](https://github.com/friendly/HistData/issues/new). While we cannot offer user support, we'll try to do our best to address it, as questions often lead to better documentation or the discovery of bugs.
+Using HistData and got stuck? Browse the [documentation](https://friendly.github.io/HistData) to see if you can find a solution. Still stuck? Post your question as an [issue on GitHub](https://github.com/friendly/HistData/issues/new). While we cannot offer user support, we'll try to do our best to address it, as questions often lead to better documentation or the discovery of bugs.
 
 Want to ask a question in private? Contact the package maintainer by [email](mailto:friendly@yorku.ca).
 
 ### Propose an idea 💡
 
-Have an idea for a new HistData feature? Take a look at the [documentation][website] and [issue list][issues] to see if it isn't included or suggested yet. If not, suggest your idea as an [issue on GitHub](https://github.com/friendly/HistData/issues/new). While we can't promise to implement your idea, it helps to:
+Have an idea for a new HistData feature? Take a look at the [documentation](https://friendly.github.io/HistData) and [issue list](https://github.com/friendly/HistData/issues) to see if it isn't included or suggested yet. If not, suggest your idea as an [issue on GitHub](https://github.com/friendly/HistData/issues/new). While we can't promise to implement your idea, it helps to:
 
 * Explain in detail how it would work.
 * Keep the scope as narrow as possible.
 
 See below if you want to contribute code for your idea as well.
 
-### Report a bug 🐛
-
-Using HistData and discovered a bug? That's annoying! Don't let others have the same experience and report it as an [issue on GitHub][new_issue] so we can fix it. A good bug report makes it easier for us to do so, so please include:
-
-* Your operating system name and version (e.g. Mac OS 10.13.6).
-* Any details about your local setup that might be helpful in troubleshooting.
-* Detailed steps to reproduce the bug.
-
 ### Improve the documentation 📖
 
-Noticed a typo on the website? Think a function could use a better example? Good documentation makes all the difference, so your help to improve it is very welcome!
+Noticed a typo on the website? Think a data set could use a better or additional example? Good documentation makes all the difference, so your help to improve it is very welcome!
 
 #### The website
 
-[This website][website] is generated with [`pkgdown`](http://pkgdown.r-lib.org/). That means we don't have to write any html: content is pulled together from documentation in the code, vignettes, [Markdown](https://guides.github.com/features/mastering-markdown/) files, the package `DESCRIPTION` and `_pkgdown.yml` settings. If you know your way around `pkgdown`, you can [propose a file change](https://help.github.com/articles/editing-files-in-another-user-s-repository/) to improve documentation. If not, [report an issue][new_issue] and we can point you in the right direction.
+[This website](https://friendly.github.io/HistData) is generated with [`pkgdown`](http://pkgdown.r-lib.org/). That means we don't have to write any html: content is pulled together from documentation in the code, vignettes, [Markdown](https://guides.github.com/features/mastering-markdown/) files, the package `DESCRIPTION` and `_pkgdown.yml` settings. If you know your way around `pkgdown`, you can [propose a file change](https://help.github.com/articles/editing-files-in-another-user-s-repository/) to improve documentation. If not, [report an issue](https://github.com/friendly/HistData/issues/new) and we can point you in the right direction.
 
-#### Function documentation
+### Contribute a new data set 
 
-Functions are described as comments near their code and translated to documentation using [`roxygen2`](https://klutometis.github.io/roxygen/). If you want to improve a function description:
+If you have an interesting historical data set you think should be added to the package,
+first suggest it as an [issue on GitHub](https://github.com/friendly/HistData/issues/new).
+To be acceptable for the package, your contribution should consist of:
 
-1. Go to `R/` directory in the [code repository](https://github.com/friendly/HistData/).
-2. Look for the file with the name of the function.
-3. [Propose a file change](https://help.github.com/articles/editing-files-in-another-user-s-repository/) to update the function documentation in the roxygen comments (starting with `#'`).
+1. The data set, as an `.RData` or `.rda` file, as generated by `save(mydata, file="mydata.RData")`. Please make sure that the data set is **tidy**, and that variable types are appropriate for analysis and plotting. This will go into the `data/` directory of the package.
 
-### Contribute code 📝
+2. Optionally, you can also submit a new data set as a `mydata.csv` file, together with the script, `mydata.R` used to create the data.frame.  These will go into the `data-raw/` directory.
 
-Care to fix bugs or implement new functionality for HistData? Awesome! 👏 Have a look at the [issue list](https://github.com/friendly/HistData/issues) and leave a comment on the things you want to work on. See also the development guidelines below.
+3. Documentation for the data set, in the form of an `.Rd` file, such as generated by `promptData(mydata, filename = "mydata.Rd")`.  You will need to edit this file to fill in the `\title{}`, `\description{}`, `\references{}`, `\source{}` fields, as well as sufficient `\examples{}` to illustrate something about the data and/or its context in history. 
+
+4. Optionally, you can document your data set in a `mydata.R` file in [`roxygen2`](https://klutometis.github.io/roxygen/) format. This will go into the `R/` directory and be converted to `.Rd` format.
+
 
 ## Development guidelines
 

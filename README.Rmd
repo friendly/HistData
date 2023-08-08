@@ -26,7 +26,7 @@ library(HistData)
 <!-- badges: end -->
 
 
-# HistData  <img src="man/figures/HistData-logo.png" align="right" height="200px" />
+# HistData  <img src="man/figures/logo.png" align="right" height="200px" />
 **Data Sets from the History of Statistics and Data Visualization**
 
 Dev. Version: 0.9-1
@@ -93,9 +93,10 @@ vcdExtra::datasets("HistData") |> dplyr::select(Item, Title) |> knitr::kable()
 ```
 
 ## Contributors
+Please note that the `HistData` project is released with a [Contributor Code of Conduct](https://friendly.github.io/HistData/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 
-Over the years, many people have contributed new data sets, or offered corrections,
-suggestions, or documentation examples. They are listed below:
+Over the years, many people have contributed new data sets, offered corrections,
+suggestions, or documentation examples. They are appreciatedly listed below:
 
 David Bellhouse,
 Brian Clair,
@@ -116,16 +117,16 @@ Hadley Wickham.
 Friendly, M. (2007). A Brief History of Data Visualization.
 In Chen, C., Hardle, W. & Unwin, A. (eds.)  
 *Handbook of Computational Statistics: Data Visualization*, Springer-Verlag, III, Ch. 1, 1-34.
-[preprint](http://datavis.ca/papers/hbook.pdf)
+[Preprint](http://datavis.ca/papers/hbook.pdf)
 
 Friendly, M. & Denis, D. (2001).
 Milestones in the history of thematic cartography, statistical graphics, and data visualization.
-[http://datavis.ca/milestones/](http://datavis.ca/milestones/)
+Web stite: [http://datavis.ca/milestones/](http://datavis.ca/milestones/)
 
 Friendly, M. & Sigal, M. & Harnanansingh, D. (2016).
 "The Milestones Project: A Database for the History of Data Visualization,"
-In Kostelnick, C. & Kimball, M. (ed.), *Visible Numbers: The History of Data Visualization*, Ashgate Press, Chapter 10.
+In Kostelnick, C. & Kimball, M. (ed.), *Visible Numbers: The History of Data Visualization*, Ashgate Press, Chapter 10. [Preprint](https://www.datavis.ca/papers/MilestonesProject.pdf)
 
 Friendly, M. & Wainer, H. (2021). [*A History of Data Visualization and Graphic Communication*](https://www.hup.harvard.edu/catalog.php?isbn=9780674975231).
-Harvard University Press.
+Harvard University Press. Companion [web site](https://friendly.github.io/HistDataVis/)
 

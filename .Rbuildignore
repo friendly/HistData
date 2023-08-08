@@ -10,3 +10,7 @@ README\.Rmd
 data-raw/
 ^HistData-logo.png$
 ^CRAN-SUBMISSION$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^CODE_OF_CONDUCT\.md$
