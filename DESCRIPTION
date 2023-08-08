@@ -56,3 +56,4 @@ VignetteBuilder: knitr
 Language: en-US
 RoxygenNote: 5.0.1
 BugReports: https://github.com/friendly/HistData/issues
+URL: https://friendly.github.io/HistData/
