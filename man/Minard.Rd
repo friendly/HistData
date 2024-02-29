@@ -91,7 +91,6 @@ data(Minard.troops)
 data(Minard.cities)
 data(Minard.temp)
 
-\dontrun{
 #' ## Load required packages
 require(ggplot2)
 require(scales)
@@ -99,7 +98,7 @@ require(gridExtra)
 
 #' ## plot path of troops, and another layer for city names
  plot_troops <- ggplot(Minard.troops, aes(long, lat)) +
-		geom_path(aes(size = survivors, colour = direction, group = group),
+		geom_path(aes(linewidth = survivors, colour = direction, group = group),
                  lineend = "round", linejoin = "round")
  plot_cities <- geom_text(aes(label = city), size = 4, data = Minard.cities)
  
@@ -118,7 +117,9 @@ plot_minard <- plot_troops + plot_cities +
   ylab("Latitude") + 
   ggtitle("Napoleon's March on Moscow") +
   theme_bw() +
-  theme(legend.position=c(.8, .2), legend.box="horizontal")
+  theme(legend.position = "inside", 
+        legend.position.inside=c(.8, .2), 
+        legend.box="horizontal")
  
 #' ## plot temperature vs. longitude, with labels for dates
 plot_temp <- ggplot(Minard.temp, aes(long, temp)) +
@@ -136,7 +137,6 @@ plot_temp <- ggplot(Minard.temp, aes(long, temp)) +
 #' Combine the two plots into one
 grid.arrange(plot_minard, plot_temp, nrow=2, heights=c(3,1))
 
-}
 }
 
 \keyword{datasets}
