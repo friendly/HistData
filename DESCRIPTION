@@ -54,7 +54,9 @@ Suggests:
     lubridate,
     gridExtra,
     vcd,
-    MASS
+    MASS,
+    dplyr,
+    tidyr
 License: GPL
 LazyLoad: yes
 LazyData: yes
