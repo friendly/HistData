@@ -22,29 +22,34 @@ as an early example of data to which multivariate methods might be applied.
 \format{
   A data frame with 10 observations on the following 11 variables.
   \describe{
-    \item{\code{Armada}}{designation of the fleet, a factor with levels \code{Andalucia} \code{Castilla} \code{Galeras} \code{Guipuscua} \code{Napoles} \code{Pataches} \code{Portugal} \code{Uantiscas} \code{Vizca} \code{Vrcas}}
+    \item{\code{Fleet}}{designation of the origin of the fleet, a factor with levels \code{Andalucia}, \code{Castilla}, \code{Galeras}, \code{Guipuscua}, \code{Napoles}, \code{Pataches}, \code{Portugal}, \code{Uantiscas}, \code{Vizca}, \code{Vrcas}}
     \item{\code{ships}}{number of ships, a numeric vector}
-    \item{\code{tons}}{total tons, a numeric vector}
+    \item{\code{tons}}{total tons of the ships, a numeric vector}
     \item{\code{soldiers}}{number of soldiers, a numeric vector}
     \item{\code{sailors}}{number of sailors, a numeric vector}
     \item{\code{men}}{total of soldiers plus sailors, a numeric vector}
-    \item{\code{artillery}}{a numeric vector}
-    \item{\code{balls}}{a numeric vector}
-    \item{\code{gunpowder}}{a numeric vector}
+    \item{\code{artillery}}{number of canons, a numeric vector}
+    \item{\code{balls}}{number of canonballs, a numeric vector}
+    \item{\code{gunpowder}}{amount of gunpowder loaded, a numeric vector}
     \item{\code{lead}}{a numeric vector}
     \item{\code{rope}}{a numeric vector}
   }
 }
 \details{
-Note that \code{men = soldiers + sailors}
+Note that \code{men = soldiers + sailors}, so this variable is redundant in a multivariate analysis.
+
+A complete list of the ships of the Spanish Armada, their types, armaments and fate can be found at
+\url{https://en.wikipedia.org/wiki/List_of_ships_of_the_Spanish_Armada}. An enterprising
+data historian might attempt to square the data given there with this table.
+
+The fleet of Portugal, under the command of Alonso Pérez de Guzmán, 7th Duke of Medina Sidonia
+was largely in control of the attempted invasion of England.
+
 }
 \source{
-de Falguerolles, A. (2008)
-L'analyse des donnees; before and around.
-\emph{Journal Electronique  d'Histoire des
-Probabilites et de la Statistique},
-4 (2),
-http://www.jehps.net/Decembre2008/Falguerolles.pdf
+de Falguerolles, A. (2008). L'analyse des donnees; before and around.
+\emph{Journal Electronique  d'Histoire des Probabilites et de la Statistique},
+\bold{4} (2), \url{http://www.jehps.net/Decembre2008/Falguerolles.pdf}
 }
 \references{
 Pedro de Paz Salas and Antonio Alvares. La felicisima armada que elrey Don
@@ -55,11 +60,18 @@ de Portugal. Lisbon, 1588.
 data(Armada)
 # delete character and redundant variable
 armada <- Armada[,-c(1,6)]
+# use fleet as labels
+fleet <- Armada[, 1]
 
+# do a PCA of the standardized data
 armada.pca <- prcomp(armada, scale.=TRUE)
 summary(armada.pca)
 
+# screeplot
 plot(armada.pca, type="lines", pch=16, cex=2)
-biplot(armada.pca)
+
+biplot(armada.pca, xlabs = fleet,
+  xlab = "PC1 (Fleet size)",
+  ylab = "PC2 (Fleet configuration)")
 }
 \keyword{datasets}

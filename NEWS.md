@@ -1,3 +1,8 @@
+## Version 0.9-2
+
+* now run Minard examples for documentation
+* renamed `Armada$Armada` -> `Armada$Fleet` and updated documentation.
+
 ## Version 0.9-1
 
 * Added `CholeraDeaths1849` [Thx: James Riley]
