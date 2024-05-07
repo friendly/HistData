@@ -54,12 +54,14 @@ Suggests:
     lubridate,
     gridExtra,
     vcd,
-    MASS
+    MASS,
+    Rdatasets
 License: GPL
 LazyLoad: yes
 LazyData: yes
 VignetteBuilder: knitr
 Language: en-US
-RoxygenNote: 5.0.1
+RoxygenNote: 7.3.1
+Encoding: UTF-8
 BugReports: https://github.com/friendly/HistData/issues
 URL: https://friendly.github.io/HistData/

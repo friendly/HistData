@@ -3,7 +3,7 @@
 \alias{Arbuthnot}
 \docType{data}
 \title{
-Arbuthnot's data on male and female birth ratios in London from 1629-1710.
+Arbuthnot's data on male and female birth ratios
 }
 \description{
 John Arbuthnot (1710) used these time series data on the ratios of
