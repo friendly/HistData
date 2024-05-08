@@ -110,11 +110,16 @@ dsets <- vcdExtra::datasets("HistData") |>
   dplyr::select(Item, Title) |> 
   dplyr::mutate(Item = glue::glue("[{Item}]({refurl}{Item}.html)")) 
 
-knitr::kable(dsets)
+#knitr::kable(dsets)
+library(tinytable)
+tt(dsets) |>
+  format_tt(j = 1, markdown = TRUE) |>
+  style_tt(j = 1, bootstrap_css = "width: 30%;") |> 
+  style_tt(j = 2, bootstrap_css = "width: 70%;")
 ```
 
 | Item                                                                                     | Title                                                                              |
-|:-----------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
+|------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | [Arbuthnot](http://friendly.github.io/HistData/reference/Arbuthnot.html)                 | Arbuthnot’s data on male and female birth ratios                                   |
 | [Armada](http://friendly.github.io/HistData/reference/Armada.html)                       | La Felicisima Armada                                                               |
 | [Bowley](http://friendly.github.io/HistData/reference/Bowley.html)                       | Bowley’s data on values of British and Irish trade, 1855-1899                      |
