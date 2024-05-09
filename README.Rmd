@@ -107,10 +107,12 @@ dsets <- vcdExtra::datasets("HistData") |>
 
 #knitr::kable(dsets)
 library(tinytable)
-tt(dsets) |>
-  format_tt(j = 1, markdown = TRUE) |>
-  style_tt(j = 1, bootstrap_css = "width: 30%;") |> 
-  style_tt(j = 2, bootstrap_css = "width: 70%;")
+# tt(dsets) |>
+#   format_tt(j = 1, markdown = TRUE) |>
+#   style_tt(j = 1, bootstrap_css = "width: 30%;") |> 
+#   style_tt(j = 2, bootstrap_css = "width: 70%;")
+tt(dsets, width = c(.3, .7)) |> 
+    format_tt(j = 1, markdown = TRUE)
 ```
 
 ## Contributors
