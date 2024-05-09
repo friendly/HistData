@@ -1,0 +1,17 @@
+---
+  format: html
+---
+  
+  ```{r}
+library(tinytable)
+
+packageVersion("tinytable")
+
+dat <- data.frame
+refurl <- "http://friendly.github.io/HistData/reference/"
+dsets <- vcdExtra::datasets("HistData") |> 
+  dplyr::select(Item, Title) |> 
+  dplyr::mutate(Item = glue::glue("[{Item}]({refurl}{Item}.html)")) 
+
+tt(dsets, width = c(.3, .7)) |> format_tt(j = 1, markdown = TRUE)
+```

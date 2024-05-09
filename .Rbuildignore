@@ -14,3 +14,4 @@ data-raw/
 ^docs$
 ^pkgdown$
 ^CODE_OF_CONDUCT\.md$
+sandbox/

@@ -111,13 +111,14 @@ dsets <- vcdExtra::datasets("HistData") |>
   dplyr::mutate(Item = glue::glue("[{Item}]({refurl}{Item}.html)")) 
 
 #knitr::kable(dsets)
+
 library(tinytable)
 # tt(dsets) |>
 #   format_tt(j = 1, markdown = TRUE) |>
-#   style_tt(j = 1, bootstrap_css = "width: 30%;") |> 
+#   style_tt(j = 1, bootstrap_css = "width: 30%;") |>
 #   style_tt(j = 2, bootstrap_css = "width: 70%;")
-tt(dsets, width = c(.3, .7)) |> 
-    format_tt(j = 1, markdown = TRUE)
+tt(dsets, width = c(.2, .8)) |> 
+    format_tt(j = 1, markdown = TRUE) 
 ```
 
 | Item                                                                                     | Title                                                                              |
@@ -174,6 +175,11 @@ tt(dsets, width = c(.3, .7)) |>
 | [Yeast](http://friendly.github.io/HistData/reference/Yeast.html)                         | Student’s (1906) Yeast Cell Counts                                                 |
 | [YeastD.mat](http://friendly.github.io/HistData/reference/YeastD.mat.html)               | Student’s (1906) Yeast Cell Counts                                                 |
 | [ZeaMays](http://friendly.github.io/HistData/reference/ZeaMays.html)                     | Darwin’s Heights of Cross- and Self-fertilized Zea May Pairs                       |
+
+``` r
+#    save_tt("html") |>
+#    knitr::asis_output()
+```
 
 ## Contributors
 

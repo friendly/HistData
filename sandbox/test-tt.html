@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.29">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>trash</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="trash_files/libs/clipboard/clipboard.min.js"></script>
+<script src="trash_files/libs/quarto-html/quarto.js"></script>
+<script src="trash_files/libs/quarto-html/popper.min.js"></script>
+<script src="trash_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="trash_files/libs/quarto-html/anchor.min.js"></script>
+<link href="trash_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="trash_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="trash_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="trash_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="trash_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+
+
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tinytable)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">packageVersion</span>(<span class="st">"tinytable"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] '0.2.1.15'</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> data.frame</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>refurl <span class="ot">&lt;-</span> <span class="st">"http://friendly.github.io/HistData/reference/"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>dsets <span class="ot">&lt;-</span> vcdExtra<span class="sc">::</span><span class="fu">datasets</span>(<span class="st">"HistData"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(Item, Title) <span class="sc">|&gt;</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">mutate</span>(<span class="at">Item =</span> glue<span class="sc">::</span><span class="fu">glue</span>(<span class="st">"[{Item}]({refurl}{Item}.html)"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Loading package: HistData </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tt</span>(dsets, <span class="at">width =</span> <span class="fu">c</span>(.<span class="dv">3</span>, .<span class="dv">7</span>)) <span class="sc">|&gt;</span> <span class="fu">format_tt</span>(<span class="at">j =</span> <span class="dv">1</span>, <span class="at">markdown =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+ 
+
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_gp4unohx2hv8bdqnwb3d</title>
+    <style>
+.table td.tinytable_css_ui07vo21hbaqogko7p7t, .table th.tinytable_css_ui07vo21hbaqogko7p7t {    border-bottom: solid 0.1em #d3d8dc; }
+.table td.tinytable_css_6pt2tih3m8c0b1xh6w7t, .table th.tinytable_css_6pt2tih3m8c0b1xh6w7t {  width: 30%;  }
+.table td.tinytable_css_08a7aooq51a3olx9xcf8, .table th.tinytable_css_08a7aooq51a3olx9xcf8 {  width: 70%;  }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+    </script>
+  
+
+  
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_gp4unohx2hv8bdqnwb3d" style="table-layout: fixed; width: 100% !important; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        <thead>
+        
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Title</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Arbuthnot.html">Arbuthnot</a></td>
+                  <td>Arbuthnot's data on male and female birth ratios in London from 1629-1710.        </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Armada.html">Armada</a></td>
+                  <td>La Felicisima Armada                                                              </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Bowley.html">Bowley</a></td>
+                  <td>Bowley's data on values of British and Irish trade, 1855-1899                     </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Breslau.html">Breslau</a></td>
+                  <td>Halley's Breslau Life Table                                                       </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Cavendish.html">Cavendish</a></td>
+                  <td>Cavendish's Determinations of the Density of the Earth                            </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/ChestSizes.html">ChestSizes</a></td>
+                  <td>Chest measurements of Scottish Militiamen                                         </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/ChestStigler.html">ChestStigler</a></td>
+                  <td>Chest measurements of Scottish Militiamen                                         </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Cholera.html">Cholera</a></td>
+                  <td>William Farr's Data on Cholera in London, 1849                                    </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/CholeraDeaths1849.html">CholeraDeaths1849</a></td>
+                  <td>Daily Deaths from Cholera and Diarrhaea in England, 1849                          </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/CushnyPeebles.html">CushnyPeebles</a></td>
+                  <td>Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives                 </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/CushnyPeeblesN.html">CushnyPeeblesN</a></td>
+                  <td>Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives                 </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Dactyl.html">Dactyl</a></td>
+                  <td>Edgeworth's counts of dactyls in Virgil's Aeneid                                  </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/DrinksWages.html">DrinksWages</a></td>
+                  <td>Elderton and Pearson's (1910) data on drinking and wages                          </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/EdgeworthDeaths.html">EdgeworthDeaths</a></td>
+                  <td>Edgeworth's Data on Death Rates in British Counties                               </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Fingerprints.html">Fingerprints</a></td>
+                  <td>Waite's data on Patterns in Fingerprints                                          </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Galton.html">Galton</a></td>
+                  <td>Galton's data on the heights of parents and their children                        </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/GaltonFamilies.html">GaltonFamilies</a></td>
+                  <td>Galton's data on the heights of parents and their children, by child              </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Guerry.html">Guerry</a></td>
+                  <td>Data from A.-M. Guerry, "Essay on the Moral Statistics of France"                 </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/HalleyLifeTable.html">HalleyLifeTable</a></td>
+                  <td>Halley's Life Table                                                               </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Jevons.html">Jevons</a></td>
+                  <td>W. Stanley Jevons' data on numerical discrimination                               </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Langren.all.html">Langren.all</a></td>
+                  <td>van Langren's Data on Longitude Distance between Toledo and Rome                  </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Langren1644.html">Langren1644</a></td>
+                  <td>van Langren's Data on Longitude Distance between Toledo and Rome                  </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Macdonell.html">Macdonell</a></td>
+                  <td>Macdonell's Data on Height and Finger Length of Criminals, used by Gosset (1908)  </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/MacdonellDF.html">MacdonellDF</a></td>
+                  <td>Macdonell's Data on Height and Finger Length of Criminals, used by Gosset (1908)  </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Mayer.html">Mayer</a></td>
+                  <td>Mayer's Data on the Libration of the Moon.                                        </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Michelson.html">Michelson</a></td>
+                  <td>Michelson's Determinations of the Velocity of Light                               </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/MichelsonSets.html">MichelsonSets</a></td>
+                  <td>Michelson's Determinations of the Velocity of Light                               </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Minard.cities.html">Minard.cities</a></td>
+                  <td>Data from Minard's famous graphic map of Napoleon's march on Moscow               </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Minard.temp.html">Minard.temp</a></td>
+                  <td>Data from Minard's famous graphic map of Napoleon's march on Moscow               </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Minard.troops.html">Minard.troops</a></td>
+                  <td>Data from Minard's famous graphic map of Napoleon's march on Moscow               </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Nightingale.html">Nightingale</a></td>
+                  <td>Florence Nightingale's data on deaths from various causes in the Crimean War      </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/OldMaps.html">OldMaps</a></td>
+                  <td>Latitudes and Longitudes of 39 Points in 11 Old Maps                              </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/PearsonLee.html">PearsonLee</a></td>
+                  <td>Pearson and Lee's data on the heights of parents and children classified by gender</td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/PolioTrials.html">PolioTrials</a></td>
+                  <td>Polio Field Trials Data                                                           </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Pollen.html">Pollen</a></td>
+                  <td>Pollen Data Challenge                                                             </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Prostitutes.html">Prostitutes</a></td>
+                  <td>Parent-Duchatelet's time-series data on the number of prostitutes in Paris        </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Pyx.html">Pyx</a></td>
+                  <td>Trial of the Pyx                                                                  </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Quarrels.html">Quarrels</a></td>
+                  <td>Statistics of Deadly Quarrels                                                     </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Saturn.html">Saturn</a></td>
+                  <td>Laplace's Saturn data.                                                            </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Snow.dates.html">Snow.dates</a></td>
+                  <td>John Snow's Map and Data on the 1854 London Cholera Outbreak                      </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Snow.deaths.html">Snow.deaths</a></td>
+                  <td>John Snow's Map and Data on the 1854 London Cholera Outbreak                      </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Snow.deaths2.html">Snow.deaths2</a></td>
+                  <td>John Snow's Map and Data on the 1854 London Cholera Outbreak                      </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Snow.polygons.html">Snow.polygons</a></td>
+                  <td>John Snow's Map and Data on the 1854 London Cholera Outbreak                      </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Snow.pumps.html">Snow.pumps</a></td>
+                  <td>John Snow's Map and Data on the 1854 London Cholera Outbreak                      </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Snow.streets.html">Snow.streets</a></td>
+                  <td>John Snow's Map and Data on the 1854 London Cholera Outbreak                      </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Virginis.html">Virginis</a></td>
+                  <td>John F. W. Herschel's Data on the Orbit of the Twin Stars gamma _Virginis_        </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Virginis.interp.html">Virginis.interp</a></td>
+                  <td>John F. W. Herschel's Data on the Orbit of the Twin Stars gamma _Virginis_        </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Wheat.html">Wheat</a></td>
+                  <td>Playfair's Data on Wages and the Price of Wheat                                   </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Wheat.monarchs.html">Wheat.monarchs</a></td>
+                  <td>Playfair's Data on Wages and the Price of Wheat                                   </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/Yeast.html">Yeast</a></td>
+                  <td>Student's (1906) Yeast Cell Counts                                                </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/YeastD.mat.html">YeastD.mat</a></td>
+                  <td>Student's (1906) Yeast Cell Counts                                                </td>
+                </tr>
+                <tr>
+                  <td><a href="http://friendly.github.io/HistData/reference/ZeaMays.html">ZeaMays</a></td>
+                  <td>Darwin's Heights of Cross- and Self-fertilized Zea May Pairs                      </td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      function styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(i, j, css_id) {
+        var table = document.getElementById("tinytable_gp4unohx2hv8bdqnwb3d");
+        table.rows[i].cells[j].classList.add(css_id);
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_gp4unohx2hv8bdqnwb3d');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_tinytable_ow1yjbgvqll2ub0yq9rw(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_gp4unohx2hv8bdqnwb3d");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(0, 0, 'tinytable_css_ui07vo21hbaqogko7p7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(0, 1, 'tinytable_css_ui07vo21hbaqogko7p7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(0, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(1, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(2, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(3, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(4, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(5, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(6, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(7, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(8, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(9, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(10, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(11, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(12, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(13, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(14, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(15, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(16, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(17, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(18, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(19, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(20, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(21, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(22, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(23, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(24, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(25, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(26, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(27, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(28, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(29, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(30, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(31, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(32, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(33, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(34, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(35, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(36, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(37, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(38, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(39, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(40, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(41, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(42, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(43, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(44, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(45, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(46, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(47, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(48, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(49, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(50, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(51, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(52, 0, 'tinytable_css_6pt2tih3m8c0b1xh6w7t') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(0, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(1, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(2, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(3, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(4, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(5, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(6, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(7, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(8, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(9, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(10, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(11, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(12, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(13, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(14, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(15, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(16, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(17, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(18, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(19, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(20, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(21, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(22, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(23, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(24, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(25, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(26, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(27, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(28, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(29, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(30, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(31, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(32, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(33, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(34, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(35, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(36, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(37, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(38, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(39, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(40, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(41, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(42, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(43, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(44, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(45, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(46, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(47, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(48, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(49, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(50, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(51, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+window.addEventListener('load', function () { styleCell_tinytable_ow1yjbgvqll2ub0yq9rw(52, 1, 'tinytable_css_08a7aooq51a3olx9xcf8') })
+    </script>
+
+  
+
+
+</div>
+</div>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
