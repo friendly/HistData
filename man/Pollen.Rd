@@ -48,7 +48,7 @@ See the video on \url{https://vimeo.com/1982725}.
 }
 \source{
 The canonical source for this data is the StatLib -- Datasets Archive
-\url{http://lib.stat.cmu.edu/datasets/pollen.data}
+\url{https://lib.stat.cmu.edu/datasets/pollen.data}
 in the inconvenient form of .sh archive.
 
 It is also available as \code{data(pollen, package="animate")}.

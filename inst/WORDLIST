@@ -8,15 +8,20 @@ ArcGIS
 Ashgate
 Biometrika
 Bowley
+Breslau
+Breslaw
 centroid
 centroids
+ChestSizes
 codebook
 Cushny
 datavis
 Diarrhaea
 doi
 DOI
+DrinksWages
 Duchatelet
+Duchatelet's
 dyad
 Edgeworth
 Electronique
@@ -30,9 +35,11 @@ Florent
 Fraunhofer
 Galton
 Galton's
+ggplot
 Github
 Gotha
 Guerry
+Guerry's
 Hammersmith
 Hardle
 Harnanansingh
@@ -49,9 +56,11 @@ ICPSR
 immigrations
 jehps
 Jevons
+Jombart
 Kimball
 Kostelnick
 Langren
+libration
 Lifecycle
 Lisboa
 Lunn
@@ -64,6 +73,7 @@ MDS
 MichelsonSets
 Micrometrical
 Minard
+Minard's
 ministere
 mitagable
 Moodie
@@ -80,6 +90,8 @@ overdetermined
 Palin
 PearsonLee
 Peebles
+Playfair
+Playfair's
 PolioTrials
 Probabilites
 preprint
@@ -90,6 +102,7 @@ Raton
 Ravensbourne
 README
 ReadImage
+Rdatasets
 recode
 Reinking
 Rothkopf
@@ -99,6 +112,7 @@ Senn
 Shipley
 Siegrist
 Sigal
+SnowMap
 Springer
 statistique
 Statlib

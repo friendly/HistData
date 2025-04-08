@@ -25,7 +25,7 @@ library(HistData)
 [![HistData status badge](https://friendly.r-universe.dev/badges/HistData)](https://friendly.r-universe.dev/HistData)
 [![](http://cranlogs.r-pkg.org/badges/grand-total/HistData)](https://cran.r-project.org/package=HistData)
 [![DOI](https://zenodo.org/badge/106572219.svg)](https://zenodo.org/badge/latestdoi/106572219)
-[![](https://img.shields.io/badge/documentation-blue)](https://friendly.github.io/HistData)
+[![](https://img.shields.io/badge/documentation-blue)](https://friendly.github.io/HistData/)
 
 <!-- badges: end -->
 
@@ -99,7 +99,7 @@ data sets.
 
 ```{r datasets, results='asis'}
 # link dataset to pkgdown doc
-refurl <- "http://friendly.github.io/HistData/reference/"
+refurl <- "https://friendly.github.io/HistData/reference/"
 
 dsets <- vcdExtra::datasets("HistData") |> 
   dplyr::select(Item, Title) |> 

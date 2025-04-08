@@ -50,16 +50,6 @@ data(Minard.temp)
   }
 
 }
-%\usage{data(Minard.cities)}
-%\format{
-%  A data frame with 20 observations on the following 3 variables giving the locations of
-%  various places along the path of Napoleon's army.
-%  \describe{
-%    \item{\code{long}}{Longitude}
-%    \item{\code{lat}}{Latitude}
-%    \item{\code{city}}{a factor with levels \code{Bobr} \code{Chjat} \code{Dorogobouge} \code{Gloubokoe} \code{Kowno} \code{Malo-Jarosewii} \code{Minsk} \code{Mohilow} \code{Moiodexno} \code{Mojaisk} \code{Moscou} \code{Orscha} \code{Polotzk} \code{Smolensk} \code{Smorgoni} \code{Studienska} \code{Tarantino} \code{Wilna} \code{Witebsk} \code{Wixma}}
-%  }
-%}
 
 %\usage{data(Minard.temp)}
 %\format{
@@ -76,7 +66,9 @@ data(Minard.temp)
 \code{date} in \code{Minard.temp} should be made a real date in 1815.
 }
 \source{
-\url{https://www.cs.uic.edu/~wilkinson/TheGrammarOfGraphics/minard.txt}
+Originally given by Lee Wilkinson, in a text file associated with 
+\emph{The Grammar of Graphics} (1990). Springer.
+
 }
 \references{
 Friendly, M. (2002). 

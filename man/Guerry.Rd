@@ -73,7 +73,7 @@ Parent-Duchatelet, A. (1836). \emph{De la prostitution dans la ville de Paris}, 
 Dray, S. and Jombart, T. (2011). A Revisit Of Guerry's Data: Introducing
 Spatial Constraints In Multivariate Analysis. 
 \emph{The Annals of Applied Statistics},
-Vol. 5, No. 4, 2278-2299. \url{https://arxiv.org/pdf/1202.6485.pdf},
+Vol. 5, No. 4, 2278-2299. \url{http://arxiv.org/pdf/1202.6485},
 DOI: 10.1214/10-AOAS356.
 
 Brunsdon, C. and Dykes, J. (2007). 
