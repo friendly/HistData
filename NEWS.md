@@ -1,3 +1,7 @@
+## Version 0.9-3
+
+* add Pyx ggplot histogram
+
 ## Version 0.9-2
 
 * now run Minard examples for documentation

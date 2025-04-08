@@ -1,8 +1,8 @@
 Package: HistData
 Type: Package
 Title: Data Sets from the History of Statistics and Data Visualization
-Version: 0.9-2
-Date: 2024-02-29
+Version: 0.9-3
+Date: 2025-04-08
 Authors@R: c(person(given = "Michael", family = "Friendly", 
                     role=c("aut", "cre"), 
                     comment = c(ORCID = "0000-0002-3237-0941"),
@@ -55,7 +55,8 @@ Suggests:
     gridExtra,
     vcd,
     MASS,
-    Rdatasets
+    Rdatasets,
+    forcats
 License: GPL
 LazyLoad: yes
 LazyData: yes

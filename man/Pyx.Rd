@@ -59,5 +59,26 @@ Eight Centuries of Sampling Inspection: The Trial of the Pyx
 data(Pyx)
 # display as table
 xtabs(count ~ Bags+Deviation, data=Pyx)
+
+# grouped histogram
+# from: https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge08.R
+library(ggplot2)
+library(dplyr)
+Pyx |> 
+  mutate(Bags=forcats::fct_relevel(Bags,"5","6","7")) |>
+  group_by(Bags) |> 
+  mutate(percent=count/sum(count)*100) |>
+  ungroup() |>
+  ggplot(aes(x=Deviation, y=percent,
+             group=Bags, fill=Group)) +
+  geom_col(position=position_dodge()) +
+  scale_fill_brewer(palette="Dark2") +
+  theme_minimal() +
+  theme(legend.position = "top") +
+  labs(x="Deviation from the Standard",
+       y="Percentage of an individual bag",
+       title="Trial of the Pyx (1848)",
+       fill="")
+
 }
 \keyword{datasets}
