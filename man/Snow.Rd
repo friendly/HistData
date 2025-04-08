@@ -144,7 +144,7 @@ cholera, 1854.
 
 Snow, J. (1885). \emph{On the Mode of Communication of Cholera}.
 London: John Churchill.
-\url{https://www.ph.ucla.edu/epi/snow/snowbook.html}.
+\url{http://resource.nlm.nih.gov/0050707}.
 
 Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
 }
@@ -164,8 +164,10 @@ data(Snow.deaths)
 ## Plot deaths over time
 require(lubridate)
 clr <- ifelse(Snow.dates$date < mdy("09/08/1854"), "red", "darkgreen")
-plot(deaths ~ date, data=Snow.dates, type="h", lwd=2, col=clr)
-points(deaths ~ date, data=Snow.dates, cex=0.5, pch=16, col=clr)
+plot(deaths ~ date, data=Snow.dates, 
+     type="h", lwd=2, col=clr)
+points(deaths ~ date, data=Snow.dates, 
+       cex=0.5, pch=16, col=clr)
 text( mdy("09/08/1854"), 40, "Pump handle\nremoved Sept. 8", pos=4)
 
 

@@ -104,7 +104,7 @@ In Kostelnick, C. & Kimball, M. (ed.),
 \emph{Visible Numbers: The History of Data Visualization}, Ashgate Press, Chapter 10.
 
 Friendly, M. & Wainer, H. (2021). \emph{A History of Data Visualization and Graphic Communication}.
-Harvard University Press. Book: \url{https://www.hup.harvard.edu/catalog.php?isbn=9780674975231}, Web site:
+Harvard University Press. Book: \url{https://www.hup.harvard.edu/books/9780674975231}, Web site:
 \url{https://friendly.github.io/HistDataVis/}.
 
 }

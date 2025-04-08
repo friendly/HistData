@@ -59,7 +59,7 @@ not shown in their Table 2.)
 Registrar-General (1852). \emph{Report on the Mortality of Cholera in England 1848-49},
 W. Clowes and Sons, for Her Majesty's Stationary Office.
 Written by William Farr.
-\url{https://ia800309.us.archive.org/22/items/b24751297/b24751297.pdf}
+\url{https://ia600208.us.archive.org/11/items/b24751297/b24751297.pdf}
 The relevant tables are at pages clii -- clvii.
 }
 \seealso{\code{\link{CholeraDeaths1849}}, \code{\link{Snow.deaths}}}

@@ -57,7 +57,7 @@ trough the process of trying to reproduce a graph or analysis using
 modern methods. I call this "Re-visioning", meaning _to see again, hopefully in a new light_.
 
 They are also used in our book,
-[_A History of Data Visualization & Graphic Communication_](https://www.hup.harvard.edu/catalog.php?isbn=9780674975231)
+[_A History of Data Visualization & Graphic Communication_](https://www.hup.harvard.edu/books/9780674975231)
 (Friendly & Wainer, 2021). See also the [companion website for this book](https://friendly.github.io/HistDataVis/).
 
 If you are looking more widely for datasets to use for examples, teaching or research, check out Vincent Arel-Bundock's

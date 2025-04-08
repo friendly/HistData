@@ -55,7 +55,6 @@ Suggests:
     gridExtra,
     vcd,
     MASS,
-    Rdatasets,
     forcats
 License: GPL
 LazyLoad: yes

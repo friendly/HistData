@@ -1,9 +1,12 @@
 ## Version 0.9-3
 
+This is a maintenance release, largely fixing CRAN check problems since the last public release, 0.9-1
+
 * add Pyx ggplot histogram
 * add seealso: cholera pkg for Snow
 * fix http -> https in README
 * fixed other moved / broken url links
+* Remove Rdatasets from Suggests b/c not on CRAN
 
 ## Version 0.9-2
 
