@@ -144,7 +144,7 @@ cholera, 1854.
 
 Snow, J. (1885). \emph{On the Mode of Communication of Cholera}.
 London: John Churchill.
-\url{http://resource.nlm.nih.gov/0050707}.
+\url{https://resource.nlm.nih.gov/0050707}.
 
 Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
 }

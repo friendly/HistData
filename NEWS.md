@@ -7,6 +7,7 @@ This is a maintenance release, largely fixing CRAN check problems since the last
 * fix http -> https in README
 * fixed other moved / broken url links
 * Remove Rdatasets from Suggests b/c not on CRAN
+* Now Depends: R >= 4.1.0 for use of |> in examples
 
 ## Version 0.9-2
 
