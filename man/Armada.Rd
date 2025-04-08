@@ -49,7 +49,7 @@ was largely in control of the attempted invasion of England.
 \source{
 de Falguerolles, A. (2008). L'analyse des donnees; before and around.
 \emph{Journal Electronique  d'Histoire des Probabilites et de la Statistique},
-\bold{4} (2), \url{https://www.jehps.net/Decembre2008/Falguerolles.pdf}
+\bold{4} (2), Link: https://www.jehps.net/Decembre2008/Falguerolles.pdf
 }
 \references{
 Pedro de Paz Salas and Antonio Alvares. La felicisima armada que elrey Don

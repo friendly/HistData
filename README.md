@@ -45,10 +45,10 @@ and data analysis trough the process of trying to reproduce a graph or
 analysis using modern methods. I call this “Re-visioning”, meaning *to
 see again, hopefully in a new light*.
 
-They are also used in our book, [*A History of Data Visualization &
-Graphic
-Communication*](https://www.hup.harvard.edu/catalog.php?isbn=9780674975231)
-(Friendly & Wainer, 2021). See also the [companion website for this
+They are also used in our book, (Friendly & Wainer, 2021), *A History of
+Data Visualization & Graphic Communication*,
+<https://www.hup.harvard.edu/books/9780674975231>. See also the
+[companion website for this
 book](https://friendly.github.io/HistDataVis/).
 
 If you are looking more widely for datasets to use for examples,
@@ -213,8 +213,8 @@ Kostelnick, C. & Kimball, M. (ed.), *Visible Numbers: The History of
 Data Visualization*, Ashgate Press, Chapter 10.
 [Preprint](https://www.datavis.ca/papers/MilestonesProject.pdf)
 
-Friendly, M. & Wainer, H. (2021). [*A History of Data Visualization and
-Graphic
-Communication*](https://www.hup.harvard.edu/catalog.php?isbn=9780674975231).
-Harvard University Press. Companion [web
+Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and
+Graphic Communication*,
+<https://www.hup.harvard.edu/catalog.php?isbn=9780674975231>, Harvard
+University Press. Companion [web
 site](https://friendly.github.io/HistDataVis/)
