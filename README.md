@@ -8,10 +8,10 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/HistData)](https://cran.r-project.org/package=HistData)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/HistData)](https://cran.r-project.org/package=HistData)
-[![DOI](https://zenodo.org/badge/106572219.svg)](https://zenodo.org/badge/latestdoi/106572219)
 [![HistData status
 badge](https://friendly.r-universe.dev/badges/HistData)](https://friendly.r-universe.dev/HistData)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/HistData)](https://cran.r-project.org/package=HistData)
+[![DOI](https://zenodo.org/badge/106572219.svg)](https://zenodo.org/badge/latestdoi/106572219)
 [![](https://img.shields.io/badge/documentation-blue)](https://friendly.github.io/HistData)
 
 <!-- badges: end -->
@@ -20,7 +20,7 @@ badge](https://friendly.r-universe.dev/badges/HistData)](https://friendly.r-univ
 
 **Data Sets from the History of Statistics and Data Visualization**
 
-Dev. Version: 0.9-2
+Dev. Version: 0.9-3
 
 The `HistData` package provides a collection of small data sets that are
 interesting and important in the history of statistics and data
@@ -86,15 +86,14 @@ teaching) not captured in the resulting CRAN-friendly package.
 
 ## Installation
 
-Get the released version from CRAN or
-[R-universe](https://friendly.r-universe.dev/)
+Get the released version from CRAN
 
     install.packages("HistData")
-    install.packages('HistData', repos = 'https://friendly.r-universe.dev')
 
 The development version can be installed to your R library directly from
-github via:
+github or my [R-universe](https://friendly.r-universe.dev/) via:
 
+    install.packages('HistData', repos = 'https://friendly.r-universe.dev')
     remotes::install_github("friendly/HistData")
 
 ## Data sets
@@ -121,60 +120,60 @@ tt(dsets, width = c(.2, .8)) |>
     format_tt(j = 1, markdown = TRUE) 
 ```
 
-| Item                                                                                     | Title                                                                              |
-|------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| [Arbuthnot](http://friendly.github.io/HistData/reference/Arbuthnot.html)                 | Arbuthnot’s data on male and female birth ratios                                   |
-| [Armada](http://friendly.github.io/HistData/reference/Armada.html)                       | La Felicisima Armada                                                               |
-| [Bowley](http://friendly.github.io/HistData/reference/Bowley.html)                       | Bowley’s data on values of British and Irish trade, 1855-1899                      |
-| [Breslau](http://friendly.github.io/HistData/reference/Breslau.html)                     | Halley’s Breslau Life Table                                                        |
-| [Cavendish](http://friendly.github.io/HistData/reference/Cavendish.html)                 | Cavendish’s Determinations of the Density of the Earth                             |
-| [ChestSizes](http://friendly.github.io/HistData/reference/ChestSizes.html)               | Chest measurements of Scottish Militiamen                                          |
-| [ChestStigler](http://friendly.github.io/HistData/reference/ChestStigler.html)           | Chest measurements of Scottish Militiamen                                          |
-| [Cholera](http://friendly.github.io/HistData/reference/Cholera.html)                     | William Farr’s Data on Cholera in London, 1849                                     |
-| [CholeraDeaths1849](http://friendly.github.io/HistData/reference/CholeraDeaths1849.html) | Daily Deaths from Cholera and Diarrhaea in England, 1849                           |
-| [CushnyPeebles](http://friendly.github.io/HistData/reference/CushnyPeebles.html)         | Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives                  |
-| [CushnyPeeblesN](http://friendly.github.io/HistData/reference/CushnyPeeblesN.html)       | Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives                  |
-| [Dactyl](http://friendly.github.io/HistData/reference/Dactyl.html)                       | Edgeworth’s counts of dactyls in Virgil’s Aeneid                                   |
-| [DrinksWages](http://friendly.github.io/HistData/reference/DrinksWages.html)             | Elderton and Pearson’s (1910) data on drinking and wages                           |
-| [EdgeworthDeaths](http://friendly.github.io/HistData/reference/EdgeworthDeaths.html)     | Edgeworth’s Data on Death Rates in British Counties                                |
-| [Fingerprints](http://friendly.github.io/HistData/reference/Fingerprints.html)           | Waite’s data on Patterns in Fingerprints                                           |
-| [Galton](http://friendly.github.io/HistData/reference/Galton.html)                       | Galton’s data on the heights of parents and their children                         |
-| [GaltonFamilies](http://friendly.github.io/HistData/reference/GaltonFamilies.html)       | Galton’s data on the heights of parents and their children, by child               |
-| [Guerry](http://friendly.github.io/HistData/reference/Guerry.html)                       | Data from A.-M. Guerry, “Essay on the Moral Statistics of France”                  |
-| [HalleyLifeTable](http://friendly.github.io/HistData/reference/HalleyLifeTable.html)     | Halley’s Life Table                                                                |
-| [Jevons](http://friendly.github.io/HistData/reference/Jevons.html)                       | W. Stanley Jevons’ data on numerical discrimination                                |
-| [Langren.all](http://friendly.github.io/HistData/reference/Langren.all.html)             | van Langren’s Data on Longitude Distance between Toledo and Rome                   |
-| [Langren1644](http://friendly.github.io/HistData/reference/Langren1644.html)             | van Langren’s Data on Longitude Distance between Toledo and Rome                   |
-| [Macdonell](http://friendly.github.io/HistData/reference/Macdonell.html)                 | Macdonell’s Data on Height and Finger Length of Criminals, used by Gosset (1908)   |
-| [MacdonellDF](http://friendly.github.io/HistData/reference/MacdonellDF.html)             | Macdonell’s Data on Height and Finger Length of Criminals, used by Gosset (1908)   |
-| [Mayer](http://friendly.github.io/HistData/reference/Mayer.html)                         | Mayer’s Data on the Libration of the Moon.                                         |
-| [Michelson](http://friendly.github.io/HistData/reference/Michelson.html)                 | Michelson’s Determinations of the Velocity of Light                                |
-| [MichelsonSets](http://friendly.github.io/HistData/reference/MichelsonSets.html)         | Michelson’s Determinations of the Velocity of Light                                |
-| [Minard.cities](http://friendly.github.io/HistData/reference/Minard.cities.html)         | Data from Minard’s famous graphic map of Napoleon’s march on Moscow                |
-| [Minard.temp](http://friendly.github.io/HistData/reference/Minard.temp.html)             | Data from Minard’s famous graphic map of Napoleon’s march on Moscow                |
-| [Minard.troops](http://friendly.github.io/HistData/reference/Minard.troops.html)         | Data from Minard’s famous graphic map of Napoleon’s march on Moscow                |
-| [Nightingale](http://friendly.github.io/HistData/reference/Nightingale.html)             | Florence Nightingale’s data on deaths from various causes in the Crimean War       |
-| [OldMaps](http://friendly.github.io/HistData/reference/OldMaps.html)                     | Latitudes and Longitudes of 39 Points in 11 Old Maps                               |
-| [PearsonLee](http://friendly.github.io/HistData/reference/PearsonLee.html)               | Pearson and Lee’s data on the heights of parents and children classified by gender |
-| [PolioTrials](http://friendly.github.io/HistData/reference/PolioTrials.html)             | Polio Field Trials Data                                                            |
-| [Pollen](http://friendly.github.io/HistData/reference/Pollen.html)                       | Pollen Data Challenge                                                              |
-| [Prostitutes](http://friendly.github.io/HistData/reference/Prostitutes.html)             | Parent-Duchatelet’s time-series data on the number of prostitutes in Paris         |
-| [Pyx](http://friendly.github.io/HistData/reference/Pyx.html)                             | Trial of the Pyx                                                                   |
-| [Quarrels](http://friendly.github.io/HistData/reference/Quarrels.html)                   | Statistics of Deadly Quarrels                                                      |
-| [Saturn](http://friendly.github.io/HistData/reference/Saturn.html)                       | Laplace’s Saturn data.                                                             |
-| [Snow.dates](http://friendly.github.io/HistData/reference/Snow.dates.html)               | John Snow’s Map and Data on the 1854 London Cholera Outbreak                       |
-| [Snow.deaths](http://friendly.github.io/HistData/reference/Snow.deaths.html)             | John Snow’s Map and Data on the 1854 London Cholera Outbreak                       |
-| [Snow.deaths2](http://friendly.github.io/HistData/reference/Snow.deaths2.html)           | John Snow’s Map and Data on the 1854 London Cholera Outbreak                       |
-| [Snow.polygons](http://friendly.github.io/HistData/reference/Snow.polygons.html)         | John Snow’s Map and Data on the 1854 London Cholera Outbreak                       |
-| [Snow.pumps](http://friendly.github.io/HistData/reference/Snow.pumps.html)               | John Snow’s Map and Data on the 1854 London Cholera Outbreak                       |
-| [Snow.streets](http://friendly.github.io/HistData/reference/Snow.streets.html)           | John Snow’s Map and Data on the 1854 London Cholera Outbreak                       |
-| [Virginis](http://friendly.github.io/HistData/reference/Virginis.html)                   | John F. W. Herschel’s Data on the Orbit of the Twin Stars gamma *Virginis*         |
-| [Virginis.interp](http://friendly.github.io/HistData/reference/Virginis.interp.html)     | John F. W. Herschel’s Data on the Orbit of the Twin Stars gamma *Virginis*         |
-| [Wheat](http://friendly.github.io/HistData/reference/Wheat.html)                         | Playfair’s Data on Wages and the Price of Wheat                                    |
-| [Wheat.monarchs](http://friendly.github.io/HistData/reference/Wheat.monarchs.html)       | Playfair’s Data on Wages and the Price of Wheat                                    |
-| [Yeast](http://friendly.github.io/HistData/reference/Yeast.html)                         | Student’s (1906) Yeast Cell Counts                                                 |
-| [YeastD.mat](http://friendly.github.io/HistData/reference/YeastD.mat.html)               | Student’s (1906) Yeast Cell Counts                                                 |
-| [ZeaMays](http://friendly.github.io/HistData/reference/ZeaMays.html)                     | Darwin’s Heights of Cross- and Self-fertilized Zea May Pairs                       |
+| Item | Title |
+|----|----|
+| [Arbuthnot](http://friendly.github.io/HistData/reference/Arbuthnot.html) | Arbuthnot’s data on male and female birth ratios in London from 1629-1710. |
+| [Armada](http://friendly.github.io/HistData/reference/Armada.html) | La Felicisima Armada |
+| [Bowley](http://friendly.github.io/HistData/reference/Bowley.html) | Bowley’s data on values of British and Irish trade, 1855-1899 |
+| [Breslau](http://friendly.github.io/HistData/reference/Breslau.html) | Halley’s Breslau Life Table |
+| [Cavendish](http://friendly.github.io/HistData/reference/Cavendish.html) | Cavendish’s Determinations of the Density of the Earth |
+| [ChestSizes](http://friendly.github.io/HistData/reference/ChestSizes.html) | Chest measurements of Scottish Militiamen |
+| [ChestStigler](http://friendly.github.io/HistData/reference/ChestStigler.html) | Chest measurements of Scottish Militiamen |
+| [Cholera](http://friendly.github.io/HistData/reference/Cholera.html) | William Farr’s Data on Cholera in London, 1849 |
+| [CholeraDeaths1849](http://friendly.github.io/HistData/reference/CholeraDeaths1849.html) | Daily Deaths from Cholera and Diarrhaea in England, 1849 |
+| [CushnyPeebles](http://friendly.github.io/HistData/reference/CushnyPeebles.html) | Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives |
+| [CushnyPeeblesN](http://friendly.github.io/HistData/reference/CushnyPeeblesN.html) | Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives |
+| [Dactyl](http://friendly.github.io/HistData/reference/Dactyl.html) | Edgeworth’s counts of dactyls in Virgil’s Aeneid |
+| [DrinksWages](http://friendly.github.io/HistData/reference/DrinksWages.html) | Elderton and Pearson’s (1910) data on drinking and wages |
+| [EdgeworthDeaths](http://friendly.github.io/HistData/reference/EdgeworthDeaths.html) | Edgeworth’s Data on Death Rates in British Counties |
+| [Fingerprints](http://friendly.github.io/HistData/reference/Fingerprints.html) | Waite’s data on Patterns in Fingerprints |
+| [Galton](http://friendly.github.io/HistData/reference/Galton.html) | Galton’s data on the heights of parents and their children |
+| [GaltonFamilies](http://friendly.github.io/HistData/reference/GaltonFamilies.html) | Galton’s data on the heights of parents and their children, by child |
+| [Guerry](http://friendly.github.io/HistData/reference/Guerry.html) | Data from A.-M. Guerry, “Essay on the Moral Statistics of France” |
+| [HalleyLifeTable](http://friendly.github.io/HistData/reference/HalleyLifeTable.html) | Halley’s Life Table |
+| [Jevons](http://friendly.github.io/HistData/reference/Jevons.html) | W. Stanley Jevons’ data on numerical discrimination |
+| [Langren.all](http://friendly.github.io/HistData/reference/Langren.all.html) | van Langren’s Data on Longitude Distance between Toledo and Rome |
+| [Langren1644](http://friendly.github.io/HistData/reference/Langren1644.html) | van Langren’s Data on Longitude Distance between Toledo and Rome |
+| [Macdonell](http://friendly.github.io/HistData/reference/Macdonell.html) | Macdonell’s Data on Height and Finger Length of Criminals, used by Gosset (1908) |
+| [MacdonellDF](http://friendly.github.io/HistData/reference/MacdonellDF.html) | Macdonell’s Data on Height and Finger Length of Criminals, used by Gosset (1908) |
+| [Mayer](http://friendly.github.io/HistData/reference/Mayer.html) | Mayer’s Data on the Libration of the Moon. |
+| [Michelson](http://friendly.github.io/HistData/reference/Michelson.html) | Michelson’s Determinations of the Velocity of Light |
+| [MichelsonSets](http://friendly.github.io/HistData/reference/MichelsonSets.html) | Michelson’s Determinations of the Velocity of Light |
+| [Minard.cities](http://friendly.github.io/HistData/reference/Minard.cities.html) | Data from Minard’s famous graphic map of Napoleon’s march on Moscow |
+| [Minard.temp](http://friendly.github.io/HistData/reference/Minard.temp.html) | Data from Minard’s famous graphic map of Napoleon’s march on Moscow |
+| [Minard.troops](http://friendly.github.io/HistData/reference/Minard.troops.html) | Data from Minard’s famous graphic map of Napoleon’s march on Moscow |
+| [Nightingale](http://friendly.github.io/HistData/reference/Nightingale.html) | Florence Nightingale’s data on deaths from various causes in the Crimean War |
+| [OldMaps](http://friendly.github.io/HistData/reference/OldMaps.html) | Latitudes and Longitudes of 39 Points in 11 Old Maps |
+| [PearsonLee](http://friendly.github.io/HistData/reference/PearsonLee.html) | Pearson and Lee’s data on the heights of parents and children classified by gender |
+| [PolioTrials](http://friendly.github.io/HistData/reference/PolioTrials.html) | Polio Field Trials Data |
+| [Pollen](http://friendly.github.io/HistData/reference/Pollen.html) | Pollen Data Challenge |
+| [Prostitutes](http://friendly.github.io/HistData/reference/Prostitutes.html) | Parent-Duchatelet’s time-series data on the number of prostitutes in Paris |
+| [Pyx](http://friendly.github.io/HistData/reference/Pyx.html) | Trial of the Pyx |
+| [Quarrels](http://friendly.github.io/HistData/reference/Quarrels.html) | Statistics of Deadly Quarrels |
+| [Saturn](http://friendly.github.io/HistData/reference/Saturn.html) | Laplace’s Saturn data. |
+| [Snow.dates](http://friendly.github.io/HistData/reference/Snow.dates.html) | John Snow’s Map and Data on the 1854 London Cholera Outbreak |
+| [Snow.deaths](http://friendly.github.io/HistData/reference/Snow.deaths.html) | John Snow’s Map and Data on the 1854 London Cholera Outbreak |
+| [Snow.deaths2](http://friendly.github.io/HistData/reference/Snow.deaths2.html) | John Snow’s Map and Data on the 1854 London Cholera Outbreak |
+| [Snow.polygons](http://friendly.github.io/HistData/reference/Snow.polygons.html) | John Snow’s Map and Data on the 1854 London Cholera Outbreak |
+| [Snow.pumps](http://friendly.github.io/HistData/reference/Snow.pumps.html) | John Snow’s Map and Data on the 1854 London Cholera Outbreak |
+| [Snow.streets](http://friendly.github.io/HistData/reference/Snow.streets.html) | John Snow’s Map and Data on the 1854 London Cholera Outbreak |
+| [Virginis](http://friendly.github.io/HistData/reference/Virginis.html) | John F. W. Herschel’s Data on the Orbit of the Twin Stars gamma *Virginis* |
+| [Virginis.interp](http://friendly.github.io/HistData/reference/Virginis.interp.html) | John F. W. Herschel’s Data on the Orbit of the Twin Stars gamma *Virginis* |
+| [Wheat](http://friendly.github.io/HistData/reference/Wheat.html) | Playfair’s Data on Wages and the Price of Wheat |
+| [Wheat.monarchs](http://friendly.github.io/HistData/reference/Wheat.monarchs.html) | Playfair’s Data on Wages and the Price of Wheat |
+| [Yeast](http://friendly.github.io/HistData/reference/Yeast.html) | Student’s (1906) Yeast Cell Counts |
+| [YeastD.mat](http://friendly.github.io/HistData/reference/YeastD.mat.html) | Student’s (1906) Yeast Cell Counts |
+| [ZeaMays](http://friendly.github.io/HistData/reference/ZeaMays.html) | Darwin’s Heights of Cross- and Self-fertilized Zea May Pairs |
 
 ``` r
 #    save_tt("html") |>
@@ -190,7 +189,7 @@ contributing to this project, you agree to abide by its terms.
 
 Over the years, many people have contributed new data sets, offered
 corrections, suggestions, or documentation examples. They are
-appreciatedly listed below:
+appreciatively listed below:
 
 David Bellhouse, Brian Clair, Stephane Dray, Luiz Droubi, Antoine de
 Falguerolles, Monique Graf, James Hanley, Peter Li, Dennis Murphy, Jim

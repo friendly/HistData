@@ -127,6 +127,7 @@ The data in  these files were first digitized in 1992  by Rusty Dodson  of the N
 Santa  Barbara,  from the  map  included in  the  book by  John  Snow: "Snow  on
 Cholera...", London, Oxford University Press, 1936.  
 }
+
 \references{
 Koch, T. (2000). \emph{Cartographies of Disease: Maps, Mapping, and Medicine}.
 ESRI Press. 
@@ -149,7 +150,9 @@ Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
 }
 
 \seealso{
-\code{\link{SnowMap}}
+   \code{\link{SnowMap}} for code to draw Snow's map;
+   \code{\link{Cholera}} for William Farr's cholera data. 
+   The \pkg{cholera} package contains more analytical methods for understanding Snow's cholera data.
 }
 \examples{
 data(Snow.deaths)
