@@ -2,7 +2,7 @@
 
 This is a maintenance release, largely fixing CRAN check problems since the last public release, 0.9-1
 
-* add Pyx ggplot histogram
+* add Pyx ggplot histogram [thx: John Russell]
 * add seealso: cholera pkg for Snow
 * fix http -> https in README
 * fixed other moved / broken url links
