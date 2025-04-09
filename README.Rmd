@@ -23,9 +23,9 @@ library(HistData)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/HistData)](https://cran.r-project.org/package=HistData)
 [![HistData status badge](https://friendly.r-universe.dev/badges/HistData)](https://friendly.r-universe.dev/HistData)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/HistData)](https://cran.r-project.org/package=HistData)
+[![cranlog](http://cranlogs.r-pkg.org/badges/grand-total/HistData)](https://cran.r-project.org/package=HistData)
 [![DOI](https://zenodo.org/badge/106572219.svg)](https://zenodo.org/badge/latestdoi/106572219)
-[![](https://img.shields.io/badge/documentation-blue)](https://friendly.github.io/HistData/)
+[![docs](https://img.shields.io/badge/documentation-blue)](https://friendly.github.io/HistData/)
 
 <!-- badges: end -->
 

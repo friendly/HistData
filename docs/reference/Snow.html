@@ -39,7 +39,7 @@ it points to the Broad Street pump as the source of the outbreak."><meta propert
 
     <a class="navbar-brand me-2" href="../index.html">HistData</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9-3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9.4</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -211,7 +211,7 @@ cholera, 1854.
 <em>Social Science &amp; Medicine</em> 69, 1246-1251.</p>
 <p>Snow, J. (1885). <em>On the Mode of Communication of Cholera</em>.
 London: John Churchill.
-<a href="https://www.ph.ucla.edu/epi/snow/snowbook.html" class="external-link">https://www.ph.ucla.edu/epi/snow/snowbook.html</a>.</p>
+Possibly at https://resource.nlm.nih.gov/0050707.</p>
 <p>Tufte, E. (1997). <em>Visual Explanations</em>. Cheshire, CT: Graphics Press.</p>
     </div>
     <div class="section level2">
@@ -242,8 +242,10 @@ London: John Churchill.
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span>     date, intersect, setdiff, union</span>
 <span class="r-in"><span><span class="va">clr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">Snow.dates</span><span class="op">$</span><span class="va">date</span> <span class="op">&lt;</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html" class="external-link">mdy</a></span><span class="op">(</span><span class="st">"09/08/1854"</span><span class="op">)</span>, <span class="st">"red"</span>, <span class="st">"darkgreen"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">deaths</span> <span class="op">~</span> <span class="va">date</span>, data<span class="op">=</span><span class="va">Snow.dates</span>, type<span class="op">=</span><span class="st">"h"</span>, lwd<span class="op">=</span><span class="fl">2</span>, col<span class="op">=</span><span class="va">clr</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/points.html" class="external-link">points</a></span><span class="op">(</span><span class="va">deaths</span> <span class="op">~</span> <span class="va">date</span>, data<span class="op">=</span><span class="va">Snow.dates</span>, cex<span class="op">=</span><span class="fl">0.5</span>, pch<span class="op">=</span><span class="fl">16</span>, col<span class="op">=</span><span class="va">clr</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">deaths</span> <span class="op">~</span> <span class="va">date</span>, data<span class="op">=</span><span class="va">Snow.dates</span>, </span></span>
+<span class="r-in"><span>     type<span class="op">=</span><span class="st">"h"</span>, lwd<span class="op">=</span><span class="fl">2</span>, col<span class="op">=</span><span class="va">clr</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/points.html" class="external-link">points</a></span><span class="op">(</span><span class="va">deaths</span> <span class="op">~</span> <span class="va">date</span>, data<span class="op">=</span><span class="va">Snow.dates</span>, </span></span>
+<span class="r-in"><span>       cex<span class="op">=</span><span class="fl">0.5</span>, pch<span class="op">=</span><span class="fl">16</span>, col<span class="op">=</span><span class="va">clr</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/text.html" class="external-link">text</a></span><span class="op">(</span> <span class="fu"><a href="https://lubridate.tidyverse.org/reference/ymd.html" class="external-link">mdy</a></span><span class="op">(</span><span class="st">"09/08/1854"</span><span class="op">)</span>, <span class="fl">40</span>, <span class="st">"Pump handle\nremoved Sept. 8"</span>, pos<span class="op">=</span><span class="fl">4</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="Snow-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>

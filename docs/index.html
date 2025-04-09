@@ -32,7 +32,7 @@
 
     <a class="navbar-brand me-2" href="index.html">HistData</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9-3</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9.4</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,11 +70,11 @@
 </h1>
 </div>
 <p><strong>Data Sets from the History of Statistics and Data Visualization</strong></p>
-<p>Dev. Version: 0.9-3</p>
+<p>Dev. Version: 0.9-4</p>
 <p>The <code>HistData</code> package provides a collection of small data sets that are interesting and important in the history of statistics and data visualization. The goal of the package is to make these available, both for instructional use (as examples, problem sets or projects) and for historical research (extending or criticizing a previous analysis). Some of these present interesting challenges, or opportunities to “show off”, with graphics or analysis in R.</p>
 <p>Many of the data sets have examples which reproduce an historical graph or analysis. These are meant mainly as starters for more extensive re-analysis or graphical elaboration. If you are interested in any of these problems or data sets, I’ve purposely left lots of room to do better!</p>
 <p>They are part of a program of research called <em>statistical historiography</em> (Friendly, 2007; Friendly &amp; Denis, 2001; Friendly et-al, 2016) meaning the use of statistical methods to study problems and questions in the history of statistics and graphics. A main aspect of this is the increased understanding of historical problems in science and data analysis trough the process of trying to reproduce a graph or analysis using modern methods. I call this “Re-visioning”, meaning <em>to see again, hopefully in a new light</em>.</p>
-<p>They are also used in our book, <a href="https://www.hup.harvard.edu/catalog.php?isbn=9780674975231" class="external-link"><em>A History of Data Visualization &amp; Graphic Communication</em></a> (Friendly &amp; Wainer, 2021). See also the <a href="https://friendly.github.io/HistDataVis/">companion website for this book</a>.</p>
+<p>They are also used in our book, (Friendly &amp; Wainer, 2021), <em>A History of Data Visualization &amp; Graphic Communication</em>, <a href="https://www.hup.harvard.edu/books/9780674975231" class="external-link uri">https://www.hup.harvard.edu/books/9780674975231</a>. See also the <a href="https://friendly.github.io/HistDataVis/">companion website for this book</a>.</p>
 <p>If you are looking more widely for datasets to use for examples, teaching or research, check out Vincent Arel-Bundock’s <a href="https://vincentarelbundock.github.io/Rdatasets/" class="external-link">Rdatasets</a> package, with over 2200 datasets from various R packages, with this list of <a href="https://vincentarelbundock.github.io/Rdatasets/articles/data.html" class="external-link">Available datasets</a>.</p>
 <div class="section level3">
 <h3 id="data-science">Data science<a class="anchor" aria-label="anchor" href="#data-science"></a>
@@ -110,7 +110,7 @@
 <p>Here are the data sets in the package, with links to their documentation. Some topics are represented by two or more data sets.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># link dataset to pkgdown doc</span></span>
-<span><span class="va">refurl</span> <span class="op">&lt;-</span> <span class="st">"http://friendly.github.io/HistData/reference/"</span></span>
+<span><span class="va">refurl</span> <span class="op">&lt;-</span> <span class="st">"https://friendly.github.io/HistData/reference/"</span></span>
 <span></span>
 <span><span class="va">dsets</span> <span class="op">&lt;-</span> <span class="fu">vcdExtra</span><span class="fu">::</span><span class="fu"><a href="http://friendly.github.io/vcdExtra/reference/datasets.html" class="external-link">datasets</a></span><span class="op">(</span><span class="st">"HistData"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">Item</span>, <span class="va">Title</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
@@ -136,213 +136,213 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Arbuthnot.html" class="external-link">Arbuthnot</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Arbuthnot.html">Arbuthnot</a></td>
 <td>Arbuthnot’s data on male and female birth ratios in London from 1629-1710.</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Armada.html" class="external-link">Armada</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Armada.html">Armada</a></td>
 <td>La Felicisima Armada</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Bowley.html" class="external-link">Bowley</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Bowley.html">Bowley</a></td>
 <td>Bowley’s data on values of British and Irish trade, 1855-1899</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Breslau.html" class="external-link">Breslau</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Breslau.html">Breslau</a></td>
 <td>Halley’s Breslau Life Table</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Cavendish.html" class="external-link">Cavendish</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Cavendish.html">Cavendish</a></td>
 <td>Cavendish’s Determinations of the Density of the Earth</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/ChestSizes.html" class="external-link">ChestSizes</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/ChestSizes.html">ChestSizes</a></td>
 <td>Chest measurements of Scottish Militiamen</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/ChestStigler.html" class="external-link">ChestStigler</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/ChestStigler.html">ChestStigler</a></td>
 <td>Chest measurements of Scottish Militiamen</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Cholera.html" class="external-link">Cholera</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Cholera.html">Cholera</a></td>
 <td>William Farr’s Data on Cholera in London, 1849</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/CholeraDeaths1849.html" class="external-link">CholeraDeaths1849</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/CholeraDeaths1849.html">CholeraDeaths1849</a></td>
 <td>Daily Deaths from Cholera and Diarrhaea in England, 1849</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/CushnyPeebles.html" class="external-link">CushnyPeebles</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/CushnyPeebles.html">CushnyPeebles</a></td>
 <td>Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/CushnyPeeblesN.html" class="external-link">CushnyPeeblesN</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/CushnyPeeblesN.html">CushnyPeeblesN</a></td>
 <td>Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Dactyl.html" class="external-link">Dactyl</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Dactyl.html">Dactyl</a></td>
 <td>Edgeworth’s counts of dactyls in Virgil’s Aeneid</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/DrinksWages.html" class="external-link">DrinksWages</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/DrinksWages.html">DrinksWages</a></td>
 <td>Elderton and Pearson’s (1910) data on drinking and wages</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/EdgeworthDeaths.html" class="external-link">EdgeworthDeaths</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/EdgeworthDeaths.html">EdgeworthDeaths</a></td>
 <td>Edgeworth’s Data on Death Rates in British Counties</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Fingerprints.html" class="external-link">Fingerprints</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Fingerprints.html">Fingerprints</a></td>
 <td>Waite’s data on Patterns in Fingerprints</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Galton.html" class="external-link">Galton</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Galton.html">Galton</a></td>
 <td>Galton’s data on the heights of parents and their children</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/GaltonFamilies.html" class="external-link">GaltonFamilies</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/GaltonFamilies.html">GaltonFamilies</a></td>
 <td>Galton’s data on the heights of parents and their children, by child</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Guerry.html" class="external-link">Guerry</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Guerry.html">Guerry</a></td>
 <td>Data from A.-M. Guerry, “Essay on the Moral Statistics of France”</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/HalleyLifeTable.html" class="external-link">HalleyLifeTable</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/HalleyLifeTable.html">HalleyLifeTable</a></td>
 <td>Halley’s Life Table</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Jevons.html" class="external-link">Jevons</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Jevons.html">Jevons</a></td>
 <td>W. Stanley Jevons’ data on numerical discrimination</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Langren.all.html" class="external-link">Langren.all</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Langren.all.html">Langren.all</a></td>
 <td>van Langren’s Data on Longitude Distance between Toledo and Rome</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Langren1644.html" class="external-link">Langren1644</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Langren1644.html">Langren1644</a></td>
 <td>van Langren’s Data on Longitude Distance between Toledo and Rome</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Macdonell.html" class="external-link">Macdonell</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Macdonell.html">Macdonell</a></td>
 <td>Macdonell’s Data on Height and Finger Length of Criminals, used by Gosset (1908)</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/MacdonellDF.html" class="external-link">MacdonellDF</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/MacdonellDF.html">MacdonellDF</a></td>
 <td>Macdonell’s Data on Height and Finger Length of Criminals, used by Gosset (1908)</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Mayer.html" class="external-link">Mayer</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Mayer.html">Mayer</a></td>
 <td>Mayer’s Data on the Libration of the Moon.</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Michelson.html" class="external-link">Michelson</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Michelson.html">Michelson</a></td>
 <td>Michelson’s Determinations of the Velocity of Light</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/MichelsonSets.html" class="external-link">MichelsonSets</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/MichelsonSets.html">MichelsonSets</a></td>
 <td>Michelson’s Determinations of the Velocity of Light</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Minard.cities.html" class="external-link">Minard.cities</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Minard.cities.html">Minard.cities</a></td>
 <td>Data from Minard’s famous graphic map of Napoleon’s march on Moscow</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Minard.temp.html" class="external-link">Minard.temp</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Minard.temp.html">Minard.temp</a></td>
 <td>Data from Minard’s famous graphic map of Napoleon’s march on Moscow</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Minard.troops.html" class="external-link">Minard.troops</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Minard.troops.html">Minard.troops</a></td>
 <td>Data from Minard’s famous graphic map of Napoleon’s march on Moscow</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Nightingale.html" class="external-link">Nightingale</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Nightingale.html">Nightingale</a></td>
 <td>Florence Nightingale’s data on deaths from various causes in the Crimean War</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/OldMaps.html" class="external-link">OldMaps</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/OldMaps.html">OldMaps</a></td>
 <td>Latitudes and Longitudes of 39 Points in 11 Old Maps</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/PearsonLee.html" class="external-link">PearsonLee</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/PearsonLee.html">PearsonLee</a></td>
 <td>Pearson and Lee’s data on the heights of parents and children classified by gender</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/PolioTrials.html" class="external-link">PolioTrials</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/PolioTrials.html">PolioTrials</a></td>
 <td>Polio Field Trials Data</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Pollen.html" class="external-link">Pollen</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Pollen.html">Pollen</a></td>
 <td>Pollen Data Challenge</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Prostitutes.html" class="external-link">Prostitutes</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Prostitutes.html">Prostitutes</a></td>
 <td>Parent-Duchatelet’s time-series data on the number of prostitutes in Paris</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Pyx.html" class="external-link">Pyx</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Pyx.html">Pyx</a></td>
 <td>Trial of the Pyx</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Quarrels.html" class="external-link">Quarrels</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Quarrels.html">Quarrels</a></td>
 <td>Statistics of Deadly Quarrels</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Saturn.html" class="external-link">Saturn</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Saturn.html">Saturn</a></td>
 <td>Laplace’s Saturn data.</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Snow.dates.html" class="external-link">Snow.dates</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Snow.dates.html">Snow.dates</a></td>
 <td>John Snow’s Map and Data on the 1854 London Cholera Outbreak</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Snow.deaths.html" class="external-link">Snow.deaths</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Snow.deaths.html">Snow.deaths</a></td>
 <td>John Snow’s Map and Data on the 1854 London Cholera Outbreak</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Snow.deaths2.html" class="external-link">Snow.deaths2</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Snow.deaths2.html">Snow.deaths2</a></td>
 <td>John Snow’s Map and Data on the 1854 London Cholera Outbreak</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Snow.polygons.html" class="external-link">Snow.polygons</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Snow.polygons.html">Snow.polygons</a></td>
 <td>John Snow’s Map and Data on the 1854 London Cholera Outbreak</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Snow.pumps.html" class="external-link">Snow.pumps</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Snow.pumps.html">Snow.pumps</a></td>
 <td>John Snow’s Map and Data on the 1854 London Cholera Outbreak</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Snow.streets.html" class="external-link">Snow.streets</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Snow.streets.html">Snow.streets</a></td>
 <td>John Snow’s Map and Data on the 1854 London Cholera Outbreak</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Virginis.html" class="external-link">Virginis</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Virginis.html">Virginis</a></td>
 <td>John F. W. Herschel’s Data on the Orbit of the Twin Stars gamma <em>Virginis</em>
 </td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Virginis.interp.html" class="external-link">Virginis.interp</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Virginis.interp.html">Virginis.interp</a></td>
 <td>John F. W. Herschel’s Data on the Orbit of the Twin Stars gamma <em>Virginis</em>
 </td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Wheat.html" class="external-link">Wheat</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Wheat.html">Wheat</a></td>
 <td>Playfair’s Data on Wages and the Price of Wheat</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/Wheat.monarchs.html" class="external-link">Wheat.monarchs</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Wheat.monarchs.html">Wheat.monarchs</a></td>
 <td>Playfair’s Data on Wages and the Price of Wheat</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/Yeast.html" class="external-link">Yeast</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/Yeast.html">Yeast</a></td>
 <td>Student’s (1906) Yeast Cell Counts</td>
 </tr>
 <tr class="odd">
-<td><a href="http://friendly.github.io/HistData/reference/YeastD.mat.html" class="external-link">YeastD.mat</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/YeastD.mat.html">YeastD.mat</a></td>
 <td>Student’s (1906) Yeast Cell Counts</td>
 </tr>
 <tr class="even">
-<td><a href="http://friendly.github.io/HistData/reference/ZeaMays.html" class="external-link">ZeaMays</a></td>
+<td><a href="https://friendly.github.io/HistData/reference/ZeaMays.html">ZeaMays</a></td>
 <td>Darwin’s Heights of Cross- and Self-fertilized Zea May Pairs</td>
 </tr>
 </tbody>
@@ -364,7 +364,7 @@
 <p>Friendly, M. (2007). A Brief History of Data Visualization. In Chen, C., Hardle, W. &amp; Unwin, A. (eds.)<br><em>Handbook of Computational Statistics: Data Visualization</em>, Springer-Verlag, III, Ch. 1, 1-34. <a href="http://datavis.ca/papers/hbook.pdf" class="external-link">Preprint</a></p>
 <p>Friendly, M. &amp; Denis, D. (2001). Milestones in the history of thematic cartography, statistical graphics, and data visualization. Web stite: <a href="http://datavis.ca/milestones/" class="external-link uri">http://datavis.ca/milestones/</a></p>
 <p>Friendly, M. &amp; Sigal, M. &amp; Harnanansingh, D. (2016). “The Milestones Project: A Database for the History of Data Visualization,” In Kostelnick, C. &amp; Kimball, M. (ed.), <em>Visible Numbers: The History of Data Visualization</em>, Ashgate Press, Chapter 10. <a href="https://www.datavis.ca/papers/MilestonesProject.pdf" class="external-link">Preprint</a></p>
-<p>Friendly, M. &amp; Wainer, H. (2021). <a href="https://www.hup.harvard.edu/catalog.php?isbn=9780674975231" class="external-link"><em>A History of Data Visualization and Graphic Communication</em></a>. Harvard University Press. Companion <a href="https://friendly.github.io/HistDataVis/">web site</a></p>
+<p>Friendly, M. &amp; Wainer, H. (2021). <em>A History of Data Visualization and Graphic Communication</em>, <a href="https://www.hup.harvard.edu/books/9780674975231" class="external-link uri">https://www.hup.harvard.edu/books/9780674975231</a>, Harvard University Press. Companion <a href="https://friendly.github.io/HistDataVis/">web site</a></p>
 </div>
 </div>
 
@@ -409,13 +409,13 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.repostatus.org/#active" class="external-link"><img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active – The project has reached a stable, usable state and is being actively developed."></a></li>
+<li><a href="https://www.repostatus.org/#active" class="external-link"><img src="https://www.repostatus.org/badges/latest/active.svg" alt="Project Status: Active"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#stable" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
 <li><a href="https://cran.r-project.org/package=HistData" class="external-link"><img src="http://www.r-pkg.org/badges/version/HistData" alt="CRAN_Status_Badge"></a></li>
 <li><a href="https://friendly.r-universe.dev/HistData" class="external-link"><img src="https://friendly.r-universe.dev/badges/HistData" alt="HistData status badge"></a></li>
 <li><a href="https://cran.r-project.org/package=HistData" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/grand-total/HistData"></a></li>
 <li><a href="https://zenodo.org/badge/latestdoi/106572219" class="external-link"><img src="https://zenodo.org/badge/106572219.svg" alt="DOI"></a></li>
-<li><a href="https://friendly.github.io/HistData"><img src="https://img.shields.io/badge/documentation-blue"></a></li>
+<li><a href="https://friendly.github.io/HistData/"><img src="https://img.shields.io/badge/documentation-blue"></a></li>
 </ul>
 </div>
 
