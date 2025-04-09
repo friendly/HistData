@@ -6,10 +6,20 @@
 *** moving datasets to lazyload DB
 ** inst
 ** byte-compile and prepare package for lazy loading
+Warning messages:
+1: package 'MASS' was built under R version 4.4.3 
+2: package 'HistData' was built under R version 4.4.3 
+3: package 'Hmisc' was built under R version 4.4.3 
 ** help
 *** installing help indices
 ** building package indices
 ** testing if installed package can be loaded from temporary location
+Warning: package 'MASS' was built under R version 4.4.3
+Warning: package 'HistData' was built under R version 4.4.3
+Warning: package 'Hmisc' was built under R version 4.4.3
 ** testing if installed package can be loaded from final location
+Warning: package 'MASS' was built under R version 4.4.3
+Warning: package 'HistData' was built under R version 4.4.3
+Warning: package 'Hmisc' was built under R version 4.4.3
 ** testing if installed package keeps a record of temporary installation path
 * DONE (UsingR)

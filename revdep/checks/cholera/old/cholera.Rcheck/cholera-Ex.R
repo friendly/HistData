@@ -89,6 +89,23 @@ flush(stderr()); flush(stdout())
 
 
 cleanEx()
+nameEx("addLandmarkSquares")
+### * addLandmarkSquares
+
+flush(stderr()); flush(stdout())
+
+### Name: addLandmarkSquares
+### Title: Add Golden and Soho Squares to plot.
+### Aliases: addLandmarkSquares
+
+### ** Examples
+
+snowMap()
+addLandmarkSquares()
+
+
+
+cleanEx()
 nameEx("addLandmarks")
 ### * addLandmarks
 
@@ -112,17 +129,29 @@ nameEx("addNeighborhoodCases")
 flush(stderr()); flush(stdout())
 
 ### Name: addNeighborhoodCases
-### Title: Add observed cases by neighborhood.
+### Title: Add observed neighborhood cases.
 ### Aliases: addNeighborhoodCases
 
 ### ** Examples
 
 ## Not run: 
 ##D snowMap(add.cases = FALSE)
+##D addNeighborhoodCases()
+##D 
+##D snowMap(add.cases = FALSE)
 ##D addNeighborhoodCases(pump.subset = c(6, 10))
 ##D 
 ##D snowMap(add.cases = FALSE)
 ##D addNeighborhoodCases(pump.select = c(6, 10))
+##D 
+##D snowMap(add.cases = FALSE, latlong = TRUE)
+##D addNeighborhoodCases(latlong = TRUE)
+##D 
+##D snowMap(add.cases = FALSE, latlong = TRUE)
+##D addNeighborhoodCases(pump.subset = c(6, 10), latlong = TRUE)
+##D 
+##D snowMap(add.cases = FALSE, latlong = TRUE)
+##D addNeighborhoodCases(pump.select = c(6, 10), latlong = TRUE)
 ## End(Not run)
 
 
@@ -144,9 +173,28 @@ flush(stderr()); flush(stdout())
 ##D   add.subtitle = FALSE)
 ##D addNeighborhoodEuclidean()
 ##D 
-##D streetNameLocator("marshall street", zoom = 0.5, highlight = FALSE,
-##D   add.subtitle = FALSE)
-##D addNeighborhoodEuclidean(type = "area.points")
+##D streetNameLocator("marshall street", zoom = -50, highlight = FALSE)
+##D addNeighborhoodEuclidean(case.set = "expected", type = "area.polygons")
+## End(Not run)
+
+
+
+cleanEx()
+nameEx("addNeighborhoodSnow")
+### * addNeighborhoodSnow
+
+flush(stderr()); flush(stdout())
+
+### Name: addNeighborhoodSnow
+### Title: Adds Snow's graphical annotation of the Broad Street pump
+###   walking neighborhood.
+### Aliases: addNeighborhoodSnow
+
+### ** Examples
+
+## Not run: 
+##D plot(neighborhoodVoronoi())
+##D addNeighborhoodSnow()
 ## End(Not run)
 
 
@@ -158,7 +206,7 @@ nameEx("addNeighborhoodWalking")
 flush(stderr()); flush(stdout())
 
 ### Name: addNeighborhoodWalking
-### Title: Add expected walking neighborhoods.
+### Title: Add walking neighborhoods.
 ### Aliases: addNeighborhoodWalking
 
 ### ** Examples
@@ -188,26 +236,6 @@ addPlaguePit()
 
 
 cleanEx()
-nameEx("addSnow")
-### * addSnow
-
-flush(stderr()); flush(stdout())
-
-### Name: addSnow
-### Title: Adds Snow's graphical annotation of the Broad Street pump
-###   walking neighborhood.
-### Aliases: addSnow
-
-### ** Examples
-
-## Not run: 
-##D plot(neighborhoodVoronoi())
-##D addSnow()
-## End(Not run)
-
-
-
-cleanEx()
 nameEx("addVoronoi")
 ### * addVoronoi
 
@@ -225,24 +253,6 @@ snowMap()
 
 
 cleanEx()
-nameEx("addWalkingPath")
-### * addWalkingPath
-
-flush(stderr()); flush(stdout())
-
-### Name: addWalkingPath
-### Title: Add the shortest walking path between a selected cases or pumps.
-### Aliases: addWalkingPath
-
-### ** Examples
-
-streetNameLocator("broad street", zoom = TRUE, highlight = FALSE,
-  add.subtitle = FALSE)
-addWalkingPath(447)
-
-
-
-cleanEx()
 nameEx("addWhitehead")
 ### * addWhitehead
 
@@ -254,7 +264,7 @@ flush(stderr()); flush(stdout())
 
 ### ** Examples
 
-snowMap(add.landmarks = FALSE)
+snowMap()
 addWhitehead()
 
 
@@ -274,84 +284,7 @@ flush(stderr()); flush(stdout())
 caseLocator(290)
 caseLocator(290, zoom = TRUE)
 caseLocator(290, observed = FALSE)
-
-
-
-cleanEx()
-nameEx("euclideanPath")
-### * euclideanPath
-
-flush(stderr()); flush(stdout())
-
-### Name: euclideanPath
-### Title: Compute path of the Euclidean distance between cases and/or
-###   pumps.
-### Aliases: euclideanPath
-
-### ** Examples
-
-# path from case 1 to nearest pump.
-euclideanPath(1)
-
-# path from pump 1 to nearest case.
-euclideanPath(NULL, 1)
-
-# path from case 1 to pump 6.
-euclideanPath(1, 6)
-
-# exclude pump 7 from consideration.
-euclideanPath(1, -7)
-
-# path from case 1 to case 6.
-euclideanPath(1, 6, type = "cases")
-
-# path from pump 1 to pump 6.
-euclideanPath(1, 6, type = "pumps")
-
-# compute multiple cases.
-lapply(1:3, euclideanPath)
-
-# plot path
-plot(euclideanPath(1))
-
-
-
-cleanEx()
-nameEx("latlongVoronoi")
-### * latlongVoronoi
-
-flush(stderr()); flush(stdout())
-
-### Name: latlongVoronoi
-### Title: Compute Georeferenced Latitude and Longitude of vertices of
-###   Voronoi polygons.
-### Aliases: latlongVoronoi
-
-### ** Examples
-
-snowMap(latlong = TRUE)
-cells <- latlongVoronoi()
-invisible(lapply(cells, function(x) polygon(x[, c("lon", "lat")])))
-
-
-
-cleanEx()
-nameEx("neighborhoodEuclidean")
-### * neighborhoodEuclidean
-
-flush(stderr()); flush(stdout())
-
-### Name: neighborhoodEuclidean
-### Title: Compute Euclidean path pump neighborhoods.
-### Aliases: neighborhoodEuclidean
-
-### ** Examples
-
-## Not run: 
-##D neighborhoodEuclidean()
-##D neighborhoodEuclidean(-6)
-##D neighborhoodEuclidean(pump.select = 6:7)
-## End(Not run)
+caseLocator(290, latlong = TRUE, zoom = TRUE)
 
 
 
@@ -367,33 +300,36 @@ flush(stderr()); flush(stdout())
 
 ### ** Examples
 
-neighborhoodVoronoi()
-neighborhoodVoronoi(vestry = TRUE)
-neighborhoodVoronoi(pump.select = 6:7)
-neighborhoodVoronoi(pump.select = -6)
-neighborhoodVoronoi(pump.select = -6, polygon.vertices = TRUE)
-
-# coordinates for vertices also available in the returned object.
-dat <- neighborhoodVoronoi(pump.select = -6)
-dat$coordinates
+## Not run: 
+##D neighborhoodVoronoi()
+##D neighborhoodVoronoi(vestry = TRUE)
+##D neighborhoodVoronoi(pump.select = 6:7)
+##D neighborhoodVoronoi(pump.select = -6)
+##D neighborhoodVoronoi(pump.select = -6, polygon.vertices = TRUE)
+##D 
+##D # coordinates for vertices also available in the returned object.
+##D dat <- neighborhoodVoronoi(pump.select = -6)
+##D dat$coordinates
+## End(Not run)
 
 
 
 cleanEx()
-nameEx("neighborhoodWalking")
-### * neighborhoodWalking
+nameEx("pearsonResiduals")
+### * pearsonResiduals
 
 flush(stderr()); flush(stdout())
 
-### Name: neighborhoodWalking
-### Title: Compute walking path pump neighborhoods.
-### Aliases: neighborhoodWalking
+### Name: pearsonResiduals
+### Title: Compute Pearson Residuals (prototype)
+### Aliases: pearsonResiduals
 
 ### ** Examples
 
 ## Not run: 
-##D neighborhoodWalking()
-##D neighborhoodWalking(pump.select = -6)
+##D pearsonResiduals(neighborhoodEuclidean())
+##D pearsonResiduals(neighborhoodVoronoi())
+##D pearsonResiduals(neighborhoodWalking())
 ## End(Not run)
 
 
@@ -421,39 +357,6 @@ flush(stderr()); flush(stdout())
 
 
 cleanEx()
-nameEx("plot.euclidean_path")
-### * plot.euclidean_path
-
-flush(stderr()); flush(stdout())
-
-### Name: plot.euclidean_path
-### Title: Plot the path of the Euclidean distance between cases and/or
-###   pumps.
-### Aliases: plot.euclidean_path
-
-### ** Examples
-
-plot(euclideanPath(15))
-plot(euclideanPath(15), unit.posts = "time")
-
-
-
-cleanEx()
-nameEx("plot.neighborhood_data")
-### * plot.neighborhood_data
-
-flush(stderr()); flush(stdout())
-
-### Name: plot.neighborhood_data
-### Title: Plot method for neighborhoodData().
-### Aliases: plot.neighborhood_data
-
-### ** Examples
-
-
-
-
-cleanEx()
 nameEx("plot.time_series")
 ### * plot.time_series
 
@@ -468,78 +371,6 @@ flush(stderr()); flush(stdout())
 plot(timeSeries())
 plot(timeSeries(), statistic = "deaths")
 plot(timeSeries(), bty = "n", type = "h", lwd = 4)
-
-
-
-cleanEx()
-nameEx("plot.voronoi")
-### * plot.voronoi
-
-flush(stderr()); flush(stdout())
-
-### Name: plot.voronoi
-### Title: Plot Voronoi neighborhoods.
-### Aliases: plot.voronoi
-
-### ** Examples
-
-plot(neighborhoodVoronoi())
-
-
-
-cleanEx()
-nameEx("plot.walking")
-### * plot.walking
-
-flush(stderr()); flush(stdout())
-
-### Name: plot.walking
-### Title: Plot method for neighborhoodWalking().
-### Aliases: plot.walking
-
-### ** Examples
-
-## Not run: 
-##D plot(neighborhoodWalking())
-##D plot(neighborhoodWalking(case.set = "expected"))
-##D plot(neighborhoodWalking(case.set = "expected"), type = "area.points")
-##D plot(neighborhoodWalking(case.set = "expected"), type = "area.polygons")
-## End(Not run)
-
-
-
-cleanEx()
-nameEx("plot.walking_path")
-### * plot.walking_path
-
-flush(stderr()); flush(stdout())
-
-### Name: plot.walking_path
-### Title: Plot the walking path between selected cases and/or pumps.
-### Aliases: plot.walking_path
-
-### ** Examples
-
-## Not run: 
-##D plot(walkingPath(15))
-##D plot(walkingPath(15), unit.posts = "time")
-## End(Not run)
-
-
-
-cleanEx()
-nameEx("plot.winterTemperatures")
-### * plot.winterTemperatures
-
-flush(stderr()); flush(stdout())
-
-### Name: plot.winterTemperatures
-### Title: Plot method for winterTemperatures().
-### Aliases: plot.winterTemperatures
-
-### ** Examples
-
-plot(winterTemperatures())
 
 
 
@@ -563,19 +394,21 @@ flush(stderr()); flush(stdout())
 
 
 cleanEx()
-nameEx("print.euclidean_path")
-### * print.euclidean_path
+nameEx("print.euclideanLatlong")
+### * print.euclideanLatlong
 
 flush(stderr()); flush(stdout())
 
-### Name: print.euclidean_path
-### Title: Print method for euclideanPath().
-### Aliases: print.euclidean_path
+### Name: print.euclideanLatlong
+### Title: Print method for neighborhoodEuclidean(latlong = TRUE).
+### Aliases: print.euclideanLatlong
 
 ### ** Examples
 
-euclideanPath(1)
-print(euclideanPath(1))
+## Not run: 
+##D neighborhoodEuclidean(latlong = TRUE)
+##D print(neighborhoodEuclidean(latlong = TRUE))
+## End(Not run)
 
 
 
@@ -593,23 +426,6 @@ flush(stderr()); flush(stdout())
 
 timeSeries()
 print(timeSeries())
-
-
-
-cleanEx()
-nameEx("print.voronoi")
-### * print.voronoi
-
-flush(stderr()); flush(stdout())
-
-### Name: print.voronoi
-### Title: Print method for neighborhoodVoronoi().
-### Aliases: print.voronoi
-
-### ** Examples
-
-neighborhoodVoronoi()
-print(neighborhoodVoronoi())
 
 
 
@@ -633,25 +449,6 @@ flush(stderr()); flush(stdout())
 
 
 cleanEx()
-nameEx("print.walking_path")
-### * print.walking_path
-
-flush(stderr()); flush(stdout())
-
-### Name: print.walking_path
-### Title: Print method for walkingPath().
-### Aliases: print.walking_path
-
-### ** Examples
-
-## Not run: 
-##D walkingPath()
-##D print(walkingPath())
-## End(Not run)
-
-
-
-cleanEx()
 nameEx("profile2D")
 ### * profile2D
 
@@ -665,7 +462,7 @@ flush(stderr()); flush(stdout())
 
 ## Not run: 
 ##D profile2D(angle = 30)
-##D profile2D(angle = 30, type = "ggplot2")
+##D profile2D(angle = 30, graphics = "ggplot2")
 ## End(Not run)
 
 
@@ -724,7 +521,7 @@ flush(stderr()); flush(stdout())
 
 ## Not run: 
 ##D pumpFatalities(pump.select = -7)
-##D pumpFatalities(metric = "euclidean")
+##D pumpFatalities(latlong = TRUE)
 ##D pumpFatalities(metric = "euclidean", vestry = TRUE)
 ## End(Not run)
 
@@ -767,37 +564,22 @@ invisible(lapply(ids, function(x) segmentHighlight(x, highlight = FALSE)))
 
 
 cleanEx()
-nameEx("segmentLength")
-### * segmentLength
-
-flush(stderr()); flush(stdout())
-
-### Name: segmentLength
-### Title: Compute length of road segment.
-### Aliases: segmentLength
-
-### ** Examples
-
-segmentLength("242-1")
-segmentLength("242-1", distance.unit = "yard")
-
-
-
-cleanEx()
 nameEx("segmentLocator")
 ### * segmentLocator
 
 flush(stderr()); flush(stdout())
 
 ### Name: segmentLocator
-### Title: Locate road segment by ID.
+### Title: Plot/Locate road segment by ID.
 ### Aliases: segmentLocator
 
 ### ** Examples
 
-segmentLocator("190-1")
 segmentLocator("216-1")
+segmentLocator("216-1", zoom = -10)
+segmentLocator("216-1", latlong = TRUE, zoom = -10)
 segmentLocator("216-1", distance.unit = "yard")
+segmentLocator("216-1", zoom = FALSE)
 
 
 
@@ -880,15 +662,16 @@ nameEx("streetNameLocator")
 flush(stderr()); flush(stdout())
 
 ### Name: streetNameLocator
-### Title: Locate road by name.
+### Title: Locate street(s) by name(s).
 ### Aliases: streetNameLocator
 
 ### ** Examples
 
-streetNameLocator("Oxford Street")
-streetNameLocator("oxford street")
-streetNameLocator("Cambridge Street", zoom = TRUE)
-streetNameLocator("Cambridge Street", zoom = 0.5)
+streetNameLocator("broad street")
+streetNameLocator("Broad Street", zoom = -10)
+streetNameLocator("Broad Street", latlong = TRUE, zoom = -10)
+streetNameLocator("Broad Street", distance.unit = "yard")
+streetNameLocator("Broad Street", zoom = FALSE)
 
 
 
@@ -899,14 +682,16 @@ nameEx("streetNumberLocator")
 flush(stderr()); flush(stdout())
 
 ### Name: streetNumberLocator
-### Title: Locate road by numerical ID.
+### Title: Locate street by its numerical ID.
 ### Aliases: streetNumberLocator
 
 ### ** Examples
 
-streetNumberLocator(243)
-streetNumberLocator(243, zoom = TRUE)
-streetNumberLocator(243, zoom = 0.5)
+streetNumberLocator(216)
+streetNumberLocator(216, zoom = -10)
+streetNumberLocator(216, latlong = TRUE, zoom = -10)
+streetNumberLocator(216, distance.unit = "yard")
+streetNumberLocator(216, zoom = FALSE)
 
 
 
@@ -924,40 +709,6 @@ flush(stderr()); flush(stdout())
 
 ## Not run: 
 ##D summary(neighborhoodEuclidean())
-## End(Not run)
-
-
-
-cleanEx()
-nameEx("summary.voronoi")
-### * summary.voronoi
-
-flush(stderr()); flush(stdout())
-
-### Name: summary.voronoi
-### Title: Summary method for neighborhoodVoronoi().
-### Aliases: summary.voronoi
-
-### ** Examples
-
-summary(neighborhoodVoronoi())
-
-
-
-cleanEx()
-nameEx("summary.walking")
-### * summary.walking
-
-flush(stderr()); flush(stdout())
-
-### Name: summary.walking
-### Title: Summary method for neighborhoodWalking().
-### Aliases: summary.walking
-
-### ** Examples
-
-## Not run: 
-##D summary(neighborhoodWalking())
 ## End(Not run)
 
 
@@ -1007,65 +758,6 @@ snowMap(add.cases = FALSE)
 invisible(lapply(seq_along(vertices), function(i) {
   polygon(vertices[[i]], col = snow.colors[[i]])
 }))
-
-
-
-cleanEx()
-nameEx("walkingPath")
-### * walkingPath
-
-flush(stderr()); flush(stdout())
-
-### Name: walkingPath
-### Title: Compute the shortest walking path between cases and/or pumps.
-### Aliases: walkingPath
-
-### ** Examples
-
-## Not run: 
-##D # path from case 1 to nearest pump.
-##D walkingPath(1)
-##D 
-##D # path from pump 1 to nearest case.
-##D walkingPath(NULL, 1)
-##D 
-##D # path from case 1 to pump 6.
-##D walkingPath(1, 6)
-##D 
-##D # exclude pump 7 from consideration.
-##D walkingPath(1, -7)
-##D 
-##D # path from case 1 to case 6.
-##D walkingPath(1, 6, type = "cases")
-##D 
-##D # path from pump 1 to pump 6.
-##D walkingPath(1, 6, type = "pumps")
-##D 
-##D # for multiple cases.
-##D lapply(1:3, walkingPath)
-##D 
-##D # path from case 1 to nearest pump.
-##D plot(walkingPath(1))
-##D 
-##D # path from John Snow's residence to Broad Street pump.
-##D plot(walkingPath("John Snow", 7))
-## End(Not run)
-
-
-
-cleanEx()
-nameEx("winterTemperatures")
-### * winterTemperatures
-
-flush(stderr()); flush(stdout())
-
-### Name: winterTemperatures
-### Title: Average Winter Temperatures.
-### Aliases: winterTemperatures
-
-### ** Examples
-
-plot(winterTemperatures(), "1859-6-1")
 
 
 

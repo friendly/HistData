@@ -40,7 +40,7 @@ Snow.deaths2[c(91, 93, 209), c("x", "y")] <- fix
 ```
 For those interested, a detailed explanation of how these numbers were derived follows.
 
-The reason why duplicate coordinates are likely to be coding errors is that the primary aim of the data is to replicate Snow's map. In the [high resolution map](http://www.ph.ucla.edu/epi/snow/highressnowmap.html), the number of cases at an individual address are stacked as horizontal bars. This means that there should not be any cases with duplicate coordinates.
+The reason why duplicate coordinates are likely to be coding errors is that the primary aim of the data is to replicate Snow's map. In the [high resolution map](https://www.ph.ucla.edu/epi/snow/highressnowmap.html), the number of cases at an individual address are stacked as horizontal bars. This means that there should not be any cases with duplicate coordinates.
 
 The six points in question are found at two locations along Cambridge Street. Cambridge Street lies on the right side of the figure below and runs in a roughly North-South direction. It intersects Broad Street, which lies at the top of the figure and runs in a roughly East-West direction. The two streets intersect near the Broad Street pump.
 

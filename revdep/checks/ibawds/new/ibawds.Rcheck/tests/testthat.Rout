@@ -1,7 +1,7 @@
 
-R version 4.2.3 (2023-03-15 ucrt) -- "Shortstop Beagle"
-Copyright (C) 2023 The R Foundation for Statistical Computing
-Platform: x86_64-w64-mingw32/x64 (64-bit)
+R version 4.4.1 (2024-06-14 ucrt) -- "Race for Your Life"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -16,18 +16,26 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 Type 'q()' to quit R.
 
 > library(testthat)
+Warning message:
+package 'testthat' was built under R version 4.4.3 
 > library(ibawds)
 Loading required package: dslabs
+Warning message:
+package 'dslabs' was built under R version 4.4.3 
 > 
 > test_check("ibawds")
-[ FAIL 0 | WARN 24 | SKIP 8 | PASS 120 ]
+[ FAIL 0 | WARN 12 | SKIP 14 | PASS 166 ]
 
-══ Skipped tests (8) ═══════════════════════════════════════════════════════════
-• On CRAN (8): 'test-cran_packages.R:2:3', 'test-cran_packages.R:8:3',
-  'test-dist_plots.R:25:3', 'test-dist_plots.R:39:3', 'test-dist_plots.R:55:3',
-  'test-dist_plots.R:71:3', 'test-slide_tools.R:37:3', 'test-voronoi.R:8:3'
+══ Skipped tests (14) ══════════════════════════════════════════════════════════
+• On CRAN (11): 'test-checks.R:83:3', 'test-checks.R:98:3',
+  'test-cran_packages.R:8:3', 'test-cran_packages.R:20:3',
+  'test-cran_packages.R:27:3', 'test-dist_plots.R:25:3',
+  'test-dist_plots.R:39:3', 'test-dist_plots.R:55:3', 'test-dist_plots.R:71:3',
+  'test-slide_tools.R:37:3', 'test-voronoi.R:8:3'
+• On Windows (3): 'test-checks.R:4:3', 'test-checks.R:47:3',
+  'test-checks.R:172:3'
 
-[ FAIL 0 | WARN 24 | SKIP 8 | PASS 120 ]
+[ FAIL 0 | WARN 12 | SKIP 14 | PASS 166 ]
 Deleting unused snapshots:
 • dist_plots/density-plot-chi2.svg
 • dist_plots/density-plot-poisson.svg
@@ -41,4 +49,4 @@ Deleting unused snapshots:
 > 
 > proc.time()
    user  system elapsed 
-   3.15    1.06   46.81 
+   4.14    1.04    5.54 

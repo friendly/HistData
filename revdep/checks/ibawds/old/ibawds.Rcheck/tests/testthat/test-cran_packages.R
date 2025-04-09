@@ -1,28 +1,42 @@
-test_that("test n_available_packages() with valid input", {
+library(stringr)
+
+# CRAN URL must be set for the tests to work
+options(repos = c(CRAN = "https://cloud.r-project.org"))
+
+
+test_that("get_cran_page() works", {
   skip_on_cran()
-  skip_on_ci()
-  expect_equal(n_available_packages("2020-01-01"), 15368)
+  expect_true(
+    any(str_detect(get_cran_page("packages"), "Contributed Packages"))
+  )
+  expect_true(
+    any(str_detect(get_cran_page("main"), "Comprehensive R Archive Network"))
+  )
+  expect_error(get_cran_page("nonsense"), "invalid value for type")
 })
 
-test_that("test available_r_version() with valid input", {
+
+test_that("n_available_packages() works", {
   skip_on_cran()
-  skip_on_ci()
-  expect_equal(available_r_version("2020-01-01"), "3.6.2")
+  expect_type(n_available_packages(), "integer")
+  expect_gt(n_available_packages(), 15000)
 })
 
-test_that("tests with invalid input", {
-  expect_error(available_r_version(10), "is not a valid date")
-  expect_error(n_available_packages("abc"), "is not a valid date")
-  expect_error(n_available_packages("2013-07-02"),
-               "MRAN has no data for dates before 2014-09-17")
-  expect_error(available_r_version(Sys.Date() + 10),
-               "MRAN has no data for dates in the future.")
+
+test_that("available_r_version() works", {
+  skip_on_cran()
+  expect_match(available_r_version(), "\\d\\.\\d\\.\\d")
+})
+
+
+test_that("failing internet connection is handled", {
   # setting these options causes file() to fail on URLs
   opts <- options(url.method = "none", encoding = "none")
-  expect_error(n_available_packages(Sys.Date()),
-               "Obtaining data from MRAN failed")
-  expect_error(available_r_version(Sys.Date()),
-               "Obtaining data from MRAN failed")
+  expect_error(get_cran_page("packages"),
+               "Obtaining data from CRAN failed")
+  expect_error(n_available_packages(),
+               "Obtaining data from CRAN failed")
+  expect_error(available_r_version(),
+               "Obtaining data from CRAN failed")
   options(opts)
-  expect_error(get_mran_page(Sys.Date(), ""), "invalid value for type")
 })

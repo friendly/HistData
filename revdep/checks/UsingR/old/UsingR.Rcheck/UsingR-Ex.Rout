@@ -1,7 +1,7 @@
 
-R version 4.2.3 (2023-03-15 ucrt) -- "Shortstop Beagle"
-Copyright (C) 2023 The R Foundation for Statistical Computing
-Platform: x86_64-w64-mingw32/x64 (64-bit)
+R version 4.4.1 (2024-06-14 ucrt) -- "Race for Your Life"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -23,8 +23,11 @@ Type 'q()' to quit R.
 > options(pager = "console")
 > library('UsingR')
 Loading required package: MASS
+Warning: package 'MASS' was built under R version 4.4.3
 Loading required package: HistData
+Warning: package 'HistData' was built under R version 4.4.3
 Loading required package: Hmisc
+Warning: package 'Hmisc' was built under R version 4.4.3
 
 Attaching package: 'Hmisc'
 
@@ -295,6 +298,7 @@ bondsba01
 + split(x,f)
 + }
 Loading required package: zoo
+Warning: package 'zoo' was built under R version 4.4.3
 
 Attaching package: 'zoo'
 
@@ -2798,6 +2802,7 @@ Warning in chisq.test(oral.lesion) :
 > 
 > require(zoo)
 Loading required package: zoo
+Warning: package 'zoo' was built under R version 4.4.3
 
 Attaching package: 'zoo'
 
@@ -3623,10 +3628,6 @@ detaching 'student.expenses'
 Call:
 glm(formula = enjoyed ~ gender + age, family = binomial, data = tastesgreat)
 
-Deviance Residuals: 
-     Min        1Q    Median        3Q       Max  
--1.84192  -0.88512  -0.06624   0.74655   2.55961  
-
 Coefficients:
             Estimate Std. Error z value Pr(>|z|)   
 (Intercept) -8.18443    3.09644  -2.643  0.00821 **
@@ -3695,6 +3696,7 @@ Order selected 6  sigma^2 estimated as  0.00374
 +   abline(lm(salinity ~ temperature, tempsalinity, subset = -(1:67)))
 +   }
 Loading required package: zoo
+Warning: package 'zoo' was built under R version 4.4.3
 
 Attaching package: 'zoo'
 
@@ -4086,6 +4088,7 @@ The Joshua Tree. I Still Haven't Found What I'm Looking For
 + acf(diff(watertemp))
 + }
 Loading required package: zoo
+Warning: package 'zoo' was built under R version 4.4.3
 
 Attaching package: 'zoo'
 
@@ -4157,7 +4160,7 @@ detaching 'package:zoo'
 > cleanEx()
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  1.26 0.87 2.77 NA NA 
+Time elapsed:  1.35 0.76 2.24 NA NA 
 > grDevices::dev.off()
 null device 
           1 

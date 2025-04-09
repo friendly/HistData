@@ -1,7 +1,7 @@
 
-R version 4.2.3 (2023-03-15 ucrt) -- "Shortstop Beagle"
-Copyright (C) 2023 The R Foundation for Statistical Computing
-Platform: x86_64-w64-mingw32/x64 (64-bit)
+R version 4.4.1 (2024-06-14 ucrt) -- "Race for Your Life"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -22,4 +22,4 @@ NULL
 > 
 > proc.time()
    user  system elapsed 
-   0.06    0.04    0.15 
+   0.07    0.07    0.15 

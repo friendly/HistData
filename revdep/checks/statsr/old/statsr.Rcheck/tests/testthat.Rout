@@ -1,7 +1,7 @@
 
-R version 4.2.3 (2023-03-15 ucrt) -- "Shortstop Beagle"
-Copyright (C) 2023 The R Foundation for Statistical Computing
-Platform: x86_64-w64-mingw32/x64 (64-bit)
+R version 4.4.1 (2024-06-14 ucrt) -- "Race for Your Life"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -16,12 +16,14 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 Type 'q()' to quit R.
 
 > library(testthat)
+Warning message:
+package 'testthat' was built under R version 4.4.3 
 > library(statsr)
 Loading required package: BayesFactor
 Loading required package: coda
 Loading required package: Matrix
 ************
-Welcome to BayesFactor 0.9.12-4.4. If you have questions, please contact Richard Morey (richarddmorey@gmail.com).
+Welcome to BayesFactor 0.9.12-4.7. If you have questions, please contact Richard Morey (richarddmorey@gmail.com).
 
 Type BFManual() to open the manual.
 ************
@@ -32,6 +34,10 @@ The following object is masked from 'package:testthat':
 
     compare
 
+Warning messages:
+1: package 'BayesFactor' was built under R version 4.4.3 
+2: package 'coda' was built under R version 4.4.3 
+3: package 'Matrix' was built under R version 4.4.3 
 > 
 > test_check("statsr")
 Single numerical variable
@@ -50,4 +56,4 @@ Student t with posterior mean = 45.8428, posterior scale = 2.9457 on 52 df
 > 
 > proc.time()
    user  system elapsed 
-   1.45    0.71    3.14 
+   1.40    0.76    2.20 

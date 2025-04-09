@@ -1,11 +1,15 @@
 * using log directory 'C:/R/Projects/HistData/revdep/checks/cholera/old/cholera.Rcheck'
-* using R version 4.2.3 (2023-03-15 ucrt)
-* using platform: x86_64-w64-mingw32 (64-bit)
+* using R version 4.4.1 (2024-06-14 ucrt)
+* using platform: x86_64-w64-mingw32
+* R was compiled by
+    gcc.exe (GCC) 13.2.0
+    GNU Fortran (GCC) 13.2.0
+* running under: Windows 10 x64 (build 19044)
 * using session charset: UTF-8
 * using options '--no-manual --no-build-vignettes'
 * checking for file 'cholera/DESCRIPTION' ... OK
 * checking extension type ... Package
-* this is package 'cholera' version '0.8.0'
+* this is package 'cholera' version '0.9.0'
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... OK
@@ -15,12 +19,7 @@
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
 * checking whether package 'cholera' can be installed ... OK
-* checking installed package size ... NOTE
-  installed size is  5.5Mb
-  sub-directories of 1Mb or more:
-    data   1.0Mb
-    doc    1.5Mb
-    help   2.2Mb
+* checking installed package size ... OK
 * checking package directory ... OK
 * checking 'build' directory ... OK
 * checking DESCRIPTION meta-information ... OK
@@ -28,7 +27,7 @@
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
-* checking R files for non-ASCII characters ... OK
+* checking code files for non-ASCII characters ... OK
 * checking R files for syntax errors ... OK
 * checking whether the package can be loaded ... OK
 * checking whether the package can be loaded with stated dependencies ... OK
@@ -56,7 +55,7 @@
 * checking files in 'vignettes' ... OK
 * checking examples ... OK
 * checking for unstated dependencies in vignettes ... OK
-* checking package vignettes in 'inst/doc' ... OK
+* checking package vignettes ... OK
 * checking running R code from vignettes ... NONE
   'duplicate.missing.cases.Rmd' using 'UTF-8'... OK
   'kernel.density.Rmd' using 'UTF-8'... OK
@@ -67,4 +66,4 @@
   'unstacking.bars.Rmd' using 'UTF-8'... OK
 * checking re-building of vignette outputs ... SKIPPED
 * DONE
-Status: 1 NOTE
+Status: OK

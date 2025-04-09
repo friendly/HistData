@@ -1,6 +1,10 @@
 * using log directory 'C:/R/Projects/HistData/revdep/checks/UsingR/new/UsingR.Rcheck'
-* using R version 4.2.3 (2023-03-15 ucrt)
-* using platform: x86_64-w64-mingw32 (64-bit)
+* using R version 4.4.1 (2024-06-14 ucrt)
+* using platform: x86_64-w64-mingw32
+* R was compiled by
+    gcc.exe (GCC) 13.2.0
+    GNU Fortran (GCC) 13.2.0
+* running under: Windows 10 x64 (build 19044)
 * using session charset: UTF-8
 * using options '--no-manual --no-build-vignettes'
 * checking for file 'UsingR/DESCRIPTION' ... OK
@@ -12,7 +16,11 @@
 * checking for executable files ... OK
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
-* checking whether package 'UsingR' can be installed ... OK
+* checking whether package 'UsingR' can be installed ... WARNING
+Found the following significant warnings:
+  Warning: package 'MASS' was built under R version 4.4.3
+  Warning: package 'Hmisc' was built under R version 4.4.3
+See 'C:/R/Projects/HistData/revdep/checks/UsingR/new/UsingR.Rcheck/00install.out' for details.
 * checking installed package size ... OK
 * checking package directory ... OK
 * checking DESCRIPTION meta-information ... OK
@@ -20,7 +28,7 @@
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
-* checking R files for non-ASCII characters ... OK
+* checking code files for non-ASCII characters ... OK
 * checking R files for syntax errors ... OK
 * checking whether the package can be loaded ... OK
 * checking whether the package can be loaded with stated dependencies ... OK
@@ -33,7 +41,19 @@
 * checking replacement functions ... OK
 * checking foreign function calls ... OK
 * checking R code for possible problems ... OK
-* checking Rd files ... OK
+* checking Rd files ... NOTE
+checkRd: (-1) aosat.Rd:20: Escaped LaTeX specials: \_ \_ \_
+checkRd: (-1) aosat.Rd:21: Escaped LaTeX specials: \_
+checkRd: (-1) arctic.oscillations.Rd:19: Escaped LaTeX specials: \_ \_ \_
+checkRd: (-1) arctic.oscillations.Rd:20: Escaped LaTeX specials: \_
+checkRd: (-1) babies.Rd:28: Escaped LaTeX specials: \&
+checkRd: (-1) babies.Rd:41: Escaped LaTeX specials: \$
+checkRd: (-1) cabinet.Rd:25: Escaped LaTeX specials: \$
+checkRd: (-1) cabinet.Rd:43: Escaped LaTeX specials: \$
+checkRd: (-1) cabinet.Rd:48: Escaped LaTeX specials: \$
+checkRd: (-1) exec.pay.Rd:5: Escaped LaTeX specials: \$
+checkRd: (-1) sp500.excess.Rd:4: Escaped LaTeX specials: \&
+checkRd: (-1) sp500.excess.Rd:6: Escaped LaTeX specials: \&
 * checking Rd metadata ... OK
 * checking Rd cross-references ... OK
 * checking for missing documentation entries ... OK
@@ -47,4 +67,4 @@
 * checking data for ASCII and uncompressed saves ... OK
 * checking examples ... OK
 * DONE
-Status: OK
+Status: 1 WARNING, 1 NOTE

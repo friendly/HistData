@@ -94,6 +94,31 @@ flush(stderr()); flush(stdout())
 
 
 cleanEx()
+nameEx("dice_data")
+### * dice_data
+
+flush(stderr()); flush(stdout())
+
+### Name: dice_data
+### Title: Simulated Dice Throws
+### Aliases: dice_data
+### Keywords: datasets
+
+### ** Examples
+
+# the numeric vectors differ in length
+lengths(dice_data)
+
+# compute the mean for each dice
+sapply(dice_data, mean)
+
+# look at the contingency table for dice 3
+table(dice_data$d3)
+
+
+
+
+cleanEx()
 nameEx("distribution_plot")
 ### * distribution_plot
 
@@ -198,6 +223,30 @@ all.equal(sd(x1), sd(x))
 x2 <- rescale(x, mu = 3, sigma = 2)
 all.equal(mean(x2), 3)
 all.equal(sd(x2), 2)
+
+
+
+
+cleanEx()
+nameEx("throw_dice")
+### * throw_dice
+
+flush(stderr()); flush(stdout())
+
+### Name: throw_dice
+### Title: Simulate Throws With One Or More Fair Dice
+### Aliases: throw_dice
+
+### ** Examples
+
+# throw a single 6-sided dice 5 times
+throw_dice(5)
+
+# throw a single 20-sided dice 7 times
+throw_dice(7, faces = 20)
+
+# throw two 6-sided dice 9 times
+throw_dice(9, dice = 2)
 
 
 

@@ -27,9 +27,9 @@
 </defs>
 <g clip-path='url(#cpMzUuMjR8NjY4LjcxfDIyLjc4fDU0NS4xMQ==)'>
 <rect x='35.24' y='22.78' width='633.48' height='522.33' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<polygon points='662.50,322.08 41.45,465.29 41.45,539.99 662.50,539.99 ' style='stroke-width: 1.49; fill: #FBB4AE; fill-opacity: 0.80;' />
-<polygon points='662.50,27.90 41.45,27.90 41.45,162.01 662.50,226.75 ' style='stroke-width: 1.49; fill: #B3CDE3; fill-opacity: 0.80;' />
-<polygon points='662.50,226.75 41.45,162.01 41.45,465.29 662.50,322.08 ' style='stroke-width: 1.49; fill: #CCEBC5; fill-opacity: 0.80;' />
+<polygon points='662.50,322.08 41.45,465.29 41.45,539.99 662.50,539.99 ' style='stroke-width: 1.49; stroke-linecap: butt; fill: #FBB4AE; fill-opacity: 0.80;' />
+<polygon points='662.50,27.90 41.45,27.90 41.45,162.01 662.50,226.75 ' style='stroke-width: 1.49; stroke-linecap: butt; fill: #B3CDE3; fill-opacity: 0.80;' />
+<polygon points='662.50,226.75 41.45,162.01 41.45,465.29 662.50,322.08 ' style='stroke-width: 1.49; stroke-linecap: butt; fill: #CCEBC5; fill-opacity: 0.80;' />
 <polygon points='603.99,497.32 610.75,490.56 617.50,497.32 610.75,504.07 ' style='stroke-width: 0.71; stroke: none; fill: #E41A1C;' />
 <polygon points='334.17,70.58 340.93,63.82 347.68,70.58 340.93,77.33 ' style='stroke-width: 0.71; stroke: none; fill: #377EB8;' />
 <polygon points='86.45,290.05 93.20,283.30 99.96,290.05 93.20,296.81 ' style='stroke-width: 0.71; stroke: none; fill: #4DAF4A;' />

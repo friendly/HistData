@@ -1,6 +1,10 @@
 * using log directory 'C:/R/Projects/HistData/revdep/checks/statsr/old/statsr.Rcheck'
-* using R version 4.2.3 (2023-03-15 ucrt)
-* using platform: x86_64-w64-mingw32 (64-bit)
+* using R version 4.4.1 (2024-06-14 ucrt)
+* using platform: x86_64-w64-mingw32
+* R was compiled by
+    gcc.exe (GCC) 13.2.0
+    GNU Fortran (GCC) 13.2.0
+* running under: Windows 10 x64 (build 19044)
 * using session charset: UTF-8
 * using options '--no-manual --no-build-vignettes'
 * checking for file 'statsr/DESCRIPTION' ... OK
@@ -14,7 +18,12 @@
 * checking for executable files ... OK
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
-* checking whether package 'statsr' can be installed ... OK
+* checking whether package 'statsr' can be installed ... WARNING
+Found the following significant warnings:
+  Warning: package 'BayesFactor' was built under R version 4.4.3
+  Warning: package 'coda' was built under R version 4.4.3
+  Warning: package 'Matrix' was built under R version 4.4.3
+See 'C:/R/Projects/HistData/revdep/checks/statsr/old/statsr.Rcheck/00install.out' for details.
 * checking installed package size ... OK
 * checking package directory ... OK
 * checking DESCRIPTION meta-information ... OK
@@ -22,7 +31,7 @@
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
-* checking R files for non-ASCII characters ... OK
+* checking code files for non-ASCII characters ... OK
 * checking R files for syntax errors ... OK
 * checking whether the package can be loaded ... OK
 * checking whether the package can be loaded with stated dependencies ... OK
@@ -53,4 +62,4 @@
   Running 'spelling.R'
   Running 'testthat.R'
 * DONE
-Status: OK
+Status: 1 WARNING

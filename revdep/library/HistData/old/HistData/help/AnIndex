@@ -2,10 +2,12 @@ HistData-package	HistData-package
 Arbuthnot	Arbuthnot
 Armada	Armada
 Bowley	Bowley
+Breslau	Breslau
 Cavendish	Cavendish
 ChestSizes	ChestSizes
 ChestStigler	ChestSizes
 Cholera	Cholera
+CholeraDeaths1849	CholeraDeaths1849
 CushnyPeebles	CushnyPeebles
 CushnyPeeblesN	CushnyPeebles
 Dactyl	Dactyl
@@ -23,6 +25,7 @@ Langren.all	Langren
 Langren1644	Langren
 Macdonell	Macdonell
 MacdonellDF	Macdonell
+Mayer	Mayer
 Michelson	Michelson
 MichelsonSets	Michelson
 Minard	Minard
@@ -33,9 +36,11 @@ Nightingale	Nightingale
 OldMaps	OldMaps
 PearsonLee	PearsonLee
 PolioTrials	PolioTrials
+Pollen	Pollen
 Prostitutes	Prostitutes
 Pyx	Pyx
 Quarrels	Quarrels
+Saturn	Saturn
 Sdeaths	SnowMap
 Sdensity	SnowMap
 Snow	Snow

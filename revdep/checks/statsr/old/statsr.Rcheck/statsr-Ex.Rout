@@ -1,7 +1,7 @@
 
-R version 4.2.3 (2023-03-15 ucrt) -- "Shortstop Beagle"
-Copyright (C) 2023 The R Foundation for Statistical Computing
-Platform: x86_64-w64-mingw32/x64 (64-bit)
+R version 4.4.1 (2024-06-14 ucrt) -- "Race for Your Life"
+Copyright (C) 2024 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64
 
 R is free software and comes with ABSOLUTELY NO WARRANTY.
 You are welcome to redistribute it under certain conditions.
@@ -23,10 +23,13 @@ Type 'q()' to quit R.
 > options(pager = "console")
 > library('statsr')
 Loading required package: BayesFactor
+Warning: package 'BayesFactor' was built under R version 4.4.3
 Loading required package: coda
+Warning: package 'coda' was built under R version 4.4.3
 Loading required package: Matrix
+Warning: package 'Matrix' was built under R version 4.4.3
 ************
-Welcome to BayesFactor 0.9.12-4.4. If you have questions, please contact Richard Morey (richarddmorey@gmail.com).
+Welcome to BayesFactor 0.9.12-4.7. If you have questions, please contact Richard Morey (richarddmorey@gmail.com).
 
 Type BFManual() to open the manual.
 ************
@@ -323,6 +326,7 @@ n = 28, y-bar = 55.5239, s = 23.254
 > 
 > data("atheism")
 > library("dplyr")
+Warning: package 'dplyr' was built under R version 4.4.3
 
 Attaching package: 'dplyr'
 
@@ -450,7 +454,7 @@ detaching 'package:dplyr'
 > cleanEx()
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  2.14 0.94 3.77 NA NA 
+Time elapsed:  2.15 0.99 8.71 NA NA 
 > grDevices::dev.off()
 null device 
           1 

@@ -20,9 +20,9 @@ mrt2_ref <- mrt1_ref %>%
 
 grt1_ref <- tibble(
   Titel = c("Text", "Tabellen", "Plots", "Code", "Stat. Auswertungen", "Total"),
-  Punkte = c(4, 2.5, 3, 1, 2, 12.5),
-  Von = c(5L, 5L, 5L, 5L, 5L, 25L),
-  Prozent = c("80%", "50%", "60%", "20%", "40%", "50%")
+  Punkte = c(2.5, 2, 3, 1, 2, 10.5),
+  Von = c(3L, 3L, 5L, 5L, 5L, 21L),
+  Prozent = c("83%", "67%", "60%", "20%", "40%", "50%")
 )
 
 # helper function to parse the tables
@@ -44,7 +44,7 @@ test_that("test create_minreq_table", {
 
 
 test_that("test create_grading_table", {
-  grt1 <- create_grading_table(4, 2.5, 3, 1, 2)
+  grt1 <- create_grading_table(2.5, 2, 3, 1, 2)
   expect_s3_class(grt1, "kableExtra")
   expect_equal(parse_tab(grt1), grt1_ref)
 })

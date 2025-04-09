@@ -1,11 +1,15 @@
 * using log directory 'C:/R/Projects/HistData/revdep/checks/ibawds/old/ibawds.Rcheck'
-* using R version 4.2.3 (2023-03-15 ucrt)
-* using platform: x86_64-w64-mingw32 (64-bit)
+* using R version 4.4.1 (2024-06-14 ucrt)
+* using platform: x86_64-w64-mingw32
+* R was compiled by
+    gcc.exe (GCC) 13.2.0
+    GNU Fortran (GCC) 13.2.0
+* running under: Windows 10 x64 (build 19044)
 * using session charset: UTF-8
 * using options '--no-manual --no-build-vignettes'
 * checking for file 'ibawds/DESCRIPTION' ... OK
 * checking extension type ... Package
-* this is package 'ibawds' version '0.5.0'
+* this is package 'ibawds' version '1.1.0'
 * package encoding: UTF-8
 * checking package namespace information ... OK
 * checking package dependencies ... OK
@@ -14,7 +18,10 @@
 * checking for executable files ... OK
 * checking for hidden files and directories ... OK
 * checking for portable file names ... OK
-* checking whether package 'ibawds' can be installed ... OK
+* checking whether package 'ibawds' can be installed ... WARNING
+Found the following significant warnings:
+  Warning: package 'dslabs' was built under R version 4.4.3
+See 'C:/R/Projects/HistData/revdep/checks/ibawds/old/ibawds.Rcheck/00install.out' for details.
 * checking installed package size ... OK
 * checking package directory ... OK
 * checking DESCRIPTION meta-information ... OK
@@ -22,7 +29,7 @@
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
-* checking R files for non-ASCII characters ... OK
+* checking code files for non-ASCII characters ... OK
 * checking R files for syntax errors ... OK
 * checking whether the package can be loaded ... OK
 * checking whether the package can be loaded with stated dependencies ... OK
@@ -51,6 +58,7 @@
 * checking examples ... OK
 * checking for unstated dependencies in 'tests' ... OK
 * checking tests ... OK
+  Running 'spelling.R'
   Running 'testthat.R'
 * DONE
-Status: 1 NOTE
+Status: 1 WARNING, 1 NOTE
