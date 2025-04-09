@@ -1,8 +1,8 @@
 Package: HistData
 Type: Package
 Title: Data Sets from the History of Statistics and Data Visualization
-Version: 0.9-3
-Date: 2025-04-08
+Version: 0.9.4
+Date: 2025-04-09
 Authors@R: c(person(given = "Michael", family = "Friendly", 
                     role=c("aut", "cre"), 
                     comment = c(ORCID = "0000-0002-3237-0941"),

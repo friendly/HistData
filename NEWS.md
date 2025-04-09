@@ -1,3 +1,8 @@
+## Version 0.9.4
+
+* Switch to recommended versioning
+* Add example graphs from John Russell to `sandbox/`
+
 ## Version 0.9-3
 
 This is a maintenance release, largely fixing CRAN check problems since the last public release, 0.9-1
