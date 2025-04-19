@@ -145,6 +145,8 @@ Galton's bend: A previously undiscovered nonlinearity in Galton's family stature
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># this doesn't quite work, because xyplot can't handle weights</span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="va"><a href="https://lattice.r-forge.r-project.org/" class="external-link">lattice</a></span><span class="op">)</span></span></span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: lattice</span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>package 'lattice' was built under R version 4.4.3</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/pkg/lattice/man/xyplot.html" class="external-link">xyplot</a></span><span class="op">(</span><span class="va">child</span> <span class="op">~</span> <span class="va">parent</span><span class="op">|</span><span class="va">par</span><span class="op">+</span><span class="va">chl</span>, data<span class="op">=</span><span class="va">PearsonLee</span>, type<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"p"</span>, <span class="st">"r"</span>, <span class="st">"smooth"</span><span class="op">)</span>, col.line<span class="op">=</span><span class="st">"red"</span><span class="op">)</span></span></span>
 <span class="r-plt img"><img src="PearsonLee-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>

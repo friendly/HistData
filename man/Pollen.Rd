@@ -64,6 +64,8 @@ Slomka, M. (1986). The Analysis of a Synthetic Data Set.
 
 \examples{
 data(Pollen)
+
+# All pairwise plots -- just a bunch of blobs?
 pairs(Pollen)
 
 # plot ridge vs. nub
