@@ -44,7 +44,7 @@ The reason why duplicate coordinates are likely to be coding errors is that the 
 
 The six points in question are found at two locations along Cambridge Street. Cambridge Street lies on the right side of the figure below and runs in a roughly North-South direction. It intersects Broad Street, which lies at the top of the figure and runs in a roughly East-West direction. The two streets intersect near the Broad Street pump.
 
-```{r, fig.width = 7, fig.height = 7, echo = FALSE}
+```{r, snow-deaths1, fig.width = 7, fig.height = 7, echo = FALSE}
 street.list <- split(Snow.streets[, c("x", "y")], 
   as.factor(Snow.streets$street))
 
@@ -84,7 +84,7 @@ Finding a plausible and reasonable solution to this problem is made easier by th
 
 The first location is 40 Broad Street, which lies just southwest (below and left) of well. It is the accepted home of patient zero. `Snow.deaths` lists two cases, 32 and 122, but Snow's map shows four. 
 
-```{r, fig.width = 7, fig.height = 7, echo = FALSE}
+```{r, snow-deaths2, fig.width = 7, fig.height = 7, echo = FALSE}
 
 broad.40 <- c(32, 122)
 
@@ -125,7 +125,7 @@ legend(x = "bottomleft",
 
 The second location is at the end of Noel Street, which is north of Broad street one block south of Oxford Street at the intersection with Berwick Street. Here, `Snow.deaths` lists two cases, 282 and 422, but Snow's map shows three.
 
-```{r, fig.width = 7, fig.height = 7, echo = FALSE}
+```{r, snow-deaths3, fig.width = 7, fig.height = 7, echo = FALSE}
 
 noel.street <- c(282, 422)
 
@@ -168,7 +168,7 @@ interpolatedPoints <- function(case, radius.multiplier = 0.5, orthogonal.interce
 ```
 Using these equations and the procedure described above, I get the following results. For the two missing cases at 40 Broad Street:
 
-```{r, fig.width = 7, fig.height = 7, echo = FALSE}
+```{r, snow-deaths4, fig.width = 7, fig.height = 7, echo = FALSE}
 
 orthogonalIntercept <- function(case) {
   Snow.deaths[case, "y"] - orthogonal.slope * Snow.deaths[case, "x"]

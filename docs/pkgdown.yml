@@ -3,7 +3,7 @@ pkgdown: 2.1.2
 pkgdown_sha: ~
 articles:
   Snow_deaths-duplicates: Snow_deaths-duplicates.html
-last_built: 2025-05-12T13:47Z
+last_built: 2025-05-12T13:57Z
 urls:
   reference: https://friendly.github.io/HistData/reference
   article: https://friendly.github.io/HistData/articles

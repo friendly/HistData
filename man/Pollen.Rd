@@ -64,6 +64,17 @@ Slomka, M. (1986). The Analysis of a Synthetic Data Set.
 
 \examples{
 data(Pollen)
+
+# All pairwise plots -- just a bunch of blobs?
 pairs(Pollen)
+
+# plot ridge vs. nub
+plot(nub ~ ridge, data = Pollen, pch = 16)
+
+# zoom in to see the secret
+plot(nub ~ ridge, data = Pollen, pch = 16,
+     xlim = c(2, -3),
+     ylim = c(-1, 2))
+
 }
 \keyword{datasets}
