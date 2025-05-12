@@ -19,10 +19,10 @@ library(HistData)
 ```
 
 <!-- badges: start -->
-[![Project Status: Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active) 
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/HistData)](https://cran.r-project.org/package=HistData)
 [![HistData status badge](https://friendly.r-universe.dev/badges/HistData)](https://friendly.r-universe.dev/HistData)
+[![Last Commit](https://img.shields.io/github/last-commit/friendly/HistData)](https://github.com/friendly/HistData)
 [![cranlog](http://cranlogs.r-pkg.org/badges/grand-total/HistData)](https://cran.r-project.org/package=HistData)
 [![DOI](https://zenodo.org/badge/106572219.svg)](https://zenodo.org/badge/latestdoi/106572219)
 [![docs](https://img.shields.io/badge/documentation-blue)](https://friendly.github.io/HistData/)
@@ -61,7 +61,7 @@ _A History of Data Visualization & Graphic Communication_, https://www.hup.harva
 See also the [companion website for this book](https://friendly.github.io/HistDataVis/).
 
 If you are looking more widely for datasets to use for examples, teaching or research, check out Vincent Arel-Bundock's
-[Rdatasets](https://vincentarelbundock.github.io/Rdatasets/) package, with over 2200 datasets from various
+[Rdatasets](https://vincentarelbundock.github.io/Rdatasets/) package, with over 2500 datasets from various
 R packages, with this list of [Available datasets](https://vincentarelbundock.github.io/Rdatasets/articles/data.html).
 
 ### Data science
@@ -105,8 +105,6 @@ dsets <- vcdExtra::datasets("HistData") |>
   dplyr::select(Item, Title) |> 
   dplyr::mutate(Item = glue::glue("[{Item}]({refurl}{Item}.html)")) 
 
-#knitr::kable(dsets)
-
 library(tinytable)
 # tt(dsets) |>
 #   format_tt(j = 1, markdown = TRUE) |>
@@ -114,9 +112,16 @@ library(tinytable)
 #   style_tt(j = 2, bootstrap_css = "width: 70%;")
 tt(dsets, width = c(.2, .8)) |> 
     format_tt(j = 1, markdown = TRUE) 
-#    save_tt("html") |>
-#    knitr::asis_output()
 ```
+
+## See also
+
+* The [Horsekicks package](https://cran.r-project.org/package=Horsekicks) contains the classic data from von Bortkeiwicz, "Death by the kick of a horse in the Prussian Army", with additional data on
+deaths by falling from a horse and by drowning. A [vignette](https://cran.r-project.org/web/packages/Horsekicks/vignettes/hkdeaths.html) provides some
+analyses.
+
+* [Rdatasets](https://vincentarelbundock.github.io/Rdatasets/) is a collection of over 2500 datasets
+culled from CRAN packages to make them broadly accessible for teaching and statistical software development.
 
 ## Contributors
 Please note that the `HistData` project is released with a [Contributor Code of Conduct](https://friendly.github.io/HistData/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.

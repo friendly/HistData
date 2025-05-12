@@ -2,16 +2,16 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
 
-[![Project Status:
-Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/HistData)](https://cran.r-project.org/package=HistData)
 [![HistData status
 badge](https://friendly.r-universe.dev/badges/HistData)](https://friendly.r-universe.dev/HistData)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/HistData)](https://cran.r-project.org/package=HistData)
+[![Last
+Commit](https://img.shields.io/github/last-commit/friendly/HistData)](https://github.com/friendly/HistData)
+[![cranlog](http://cranlogs.r-pkg.org/badges/grand-total/HistData)](https://cran.r-project.org/package=HistData)
 [![DOI](https://zenodo.org/badge/106572219.svg)](https://zenodo.org/badge/latestdoi/106572219)
-[![](https://img.shields.io/badge/documentation-blue)](https://friendly.github.io/HistData/)
+[![docs](https://img.shields.io/badge/documentation-blue)](https://friendly.github.io/HistData/)
 
 <!-- badges: end -->
 
@@ -53,7 +53,7 @@ book](https://friendly.github.io/HistDataVis/).
 If you are looking more widely for datasets to use for examples,
 teaching or research, check out Vincent Arel-Bundock’s
 [Rdatasets](https://vincentarelbundock.github.io/Rdatasets/) package,
-with over 2200 datasets from various R packages, with this list of
+with over 2500 datasets from various R packages, with this list of
 [Available
 datasets](https://vincentarelbundock.github.io/Rdatasets/articles/data.html).
 
@@ -108,8 +108,6 @@ dsets <- vcdExtra::datasets("HistData") |>
   dplyr::select(Item, Title) |> 
   dplyr::mutate(Item = glue::glue("[{Item}]({refurl}{Item}.html)")) 
 
-#knitr::kable(dsets)
-
 library(tinytable)
 # tt(dsets) |>
 #   format_tt(j = 1, markdown = TRUE) |>
@@ -121,7 +119,7 @@ tt(dsets, width = c(.2, .8)) |>
 
 | Item | Title |
 |----|----|
-| [Arbuthnot](https://friendly.github.io/HistData/reference/Arbuthnot.html) | Arbuthnot’s data on male and female birth ratios in London from 1629-1710. |
+| [Arbuthnot](https://friendly.github.io/HistData/reference/Arbuthnot.html) | Arbuthnot’s data on male and female birth ratios |
 | [Armada](https://friendly.github.io/HistData/reference/Armada.html) | La Felicisima Armada |
 | [Bowley](https://friendly.github.io/HistData/reference/Bowley.html) | Bowley’s data on values of British and Irish trade, 1855-1899 |
 | [Breslau](https://friendly.github.io/HistData/reference/Breslau.html) | Halley’s Breslau Life Table |
@@ -174,10 +172,20 @@ tt(dsets, width = c(.2, .8)) |>
 | [YeastD.mat](https://friendly.github.io/HistData/reference/YeastD.mat.html) | Student’s (1906) Yeast Cell Counts |
 | [ZeaMays](https://friendly.github.io/HistData/reference/ZeaMays.html) | Darwin’s Heights of Cross- and Self-fertilized Zea May Pairs |
 
-``` r
-#    save_tt("html") |>
-#    knitr::asis_output()
-```
+## See also
+
+- The [Horsekicks
+  package](https://cran.r-project.org/package=Horsekicks) contains the
+  classic data from von Bortkeiwicz, “Death by the kick of a horse in
+  the Prussian Army”, with additional data on deaths by falling from a
+  horse and by drowning. A
+  [vignette](https://cran.r-project.org/web/packages/Horsekicks/vignettes/hkdeaths.html)
+  provides some analyses.
+
+- [Rdatasets](https://vincentarelbundock.github.io/Rdatasets/) is a
+  collection of over 2500 datasets culled from CRAN packages to make
+  them broadly accessible for teaching and statistical software
+  development.
 
 ## Contributors
 

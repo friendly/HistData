@@ -2,6 +2,7 @@
 
 * Switch to recommended versioning
 * Add example graphs from John Russell to `sandbox/`
+* Add link to Horsekicks package
 
 ## Version 0.9-3
 
