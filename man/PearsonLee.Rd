@@ -36,16 +36,16 @@ Pearson, K. and Lee, A. (1896). Mathematical contributions to the theory
 of evolution. On telegony in man, etc. \emph{Proceedings of the Royal Society of
 London}, 60 , 273-283.
 
-Pearson, K. and Lee, A. (1903). 
+Pearson, K. and Lee, A. (1903).
 On the laws of inheritance in man: I. Inheritance of physical characters. \emph{Biometrika}, 2(4), 357-462.
 (Tables XXII, p. 415; XXV, p. 417; XXVIII, p. 419 and XXXI, p. 421.)
 
 
 }
 \references{
-Wachsmuth, A.W., Wilkinson L., Dallal G.E. (2003). 
-Galton's bend: A previously undiscovered nonlinearity in Galton's family stature regression data. 
-\emph{The American Statistician}, 57, 190-192. 
+Wachsmuth, A.W., Wilkinson L., Dallal G.E. (2003).
+Galton's bend: A previously undiscovered nonlinearity in Galton's family stature regression data.
+\emph{The American Statistician}, 57, 190-192.
 %\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
 \doi{10.1198/0003130031874}
 }
@@ -58,13 +58,13 @@ Galton's bend: A previously undiscovered nonlinearity in Galton's family stature
 data(PearsonLee)
 str(PearsonLee)
 
-with(PearsonLee, 
+with(PearsonLee,
     {
     lim <- c(55,80)
     xv <- seq(55,80, .5)
     sunflowerplot(parent,child, number=frequency, xlim=lim, ylim=lim, seg.col="gray", size=.1)
     abline(lm(child ~ parent, weights=frequency), col="blue", lwd=2)
-    lines(xv, predict(loess(child ~ parent, weights=frequency), data.frame(parent=xv)), 
+    lines(xv, predict(loess(child ~ parent, weights=frequency), data.frame(parent=xv)),
           col="blue", lwd=2)
     # NB: dataEllipse doesn't take frequency into account
     if(require(car)) {
@@ -105,6 +105,22 @@ ggplot(PearsonLee, aes(x = child, y = parent, weight=frequency)) +
                        values = c('green', 'red')) +
    theme(legend.position = c(0.14, 0.885),
         legend.background = element_rect(fill = 'white'))
+
+###########################################################################
+# Challenge 02: Dr. John Russell
+# github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge02.R
+###########################################################################
+
+PearsonLee |>
+  ggplot(aes(x=parent,y=child)) +
+  geom_point() +
+  theme_minimal() +
+  geom_smooth(aes(weight=frequency), method="lm", se=FALSE, color="red",size=2) +
+  geom_smooth(aes(weight = frequency), method="lm", se=FALSE) +
+  facet_grid(par ~ chl) +
+  labs(title="Pearson and Lee's Data on Parent and Child",
+       x="Parent Height (inches)",
+       y="Child Height (inches)")
 
 }
 \keyword{datasets}

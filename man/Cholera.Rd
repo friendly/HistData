@@ -40,7 +40,7 @@ Farr's table.
 }
 \details{
 The supply of \code{water} was classified as \dQuote{Thames, between Battersea and Waterloo Bridges}
-(central London), 
+(central London),
 \dQuote{New River, Rivers Lea and Ravensbourne}, and \dQuote{Thames, at Kew and Hammersmith}
 (western London).
 The factor levels use abbreviations for these.
@@ -49,7 +49,7 @@ The data frame is sorted by increasing elevation above the high water mark.
 }
 \source{
 Bingham P., Verlander, N. Q., Cheal M. J. (2004).
-John Snow, William Farr and the 1849 outbreak of cholera that affected London: 
+John Snow, William Farr and the 1849 outbreak of cholera that affected London:
 a reworking of the data highlights the importance of the water supply.
 \emph{Public Health}, 118(6), 387-394, Table 2.
 (The data was kindly supplied by Neville Verlander, including additional variables
@@ -67,7 +67,7 @@ The relevant tables are at pages clii -- clvii.
 data(Cholera)
 
 # plot cholera deaths vs. elevation
-plot(cholera_drate ~ elevation, data=Cholera, 
+plot(cholera_drate ~ elevation, data=Cholera,
 	pch=16, cex.lab=1.2, cex=1.2,
 	xlab="Elevation above high water mark (ft)",
 	ylab="Deaths from cholera in 1849 per 10,000")
@@ -81,15 +81,15 @@ lines(mort ~ elev, lwd=2, col="blue")
 
 if(require("car", quietly=TRUE)) {
 # show separate regression lines for each water supply
-  scatterplot(cholera_drate ~ elevation | water, data=Cholera, 
+  scatterplot(cholera_drate ~ elevation | water, data=Cholera,
               smooth=FALSE, pch=15:17,
               id=list(n=2, labels=sub(",.*", "", Cholera$district)),
               col=c("red", "darkgreen", "blue"),
               legend=list(coords="topleft", title="Water supply"),
               xlab="Elevation above high water mark (ft)",
               ylab="Deaths from cholera in 1849 per 10,000")
-  
-  scatterplot(cholera_drate ~ poor_rate | water, data=Cholera, 
+
+  scatterplot(cholera_drate ~ poor_rate | water, data=Cholera,
               smooth=FALSE, pch=15:17,
               id=list(n=2, labels=sub(",.*", "", Cholera$district)),
               col=c("red", "darkgreen", "blue"),
@@ -99,7 +99,7 @@ if(require("car", quietly=TRUE)) {
   }
 
 # fit a logistic regression model a la Bingham etal.
-fit <- glm( cbind(cholera_deaths, popn) ~ 
+fit <- glm( cbind(cholera_deaths, popn) ~
             water + elevation + poor_rate + annual_deaths +
             pop_dens + persons_house,
             data=Cholera, family=binomial)
@@ -111,6 +111,51 @@ cbind( OR = exp(coef(fit))[-1], exp(confint(fit))[-1,] )
 if (require(effects)) {
   eff <- allEffects(fit)
   plot(eff)
+}
+
+###########################################################################
+# Challenge 01: Dr. John Russell
+# github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge01.R
+# Hint: It works better if emojifont package is installed!
+###########################################################################
+
+if (require("emojifont")) {
+  load.fontawesome()
+}
+
+require(ggplot2)
+plot1 <- Cholera |>
+  ggplot(aes(x=elevation, y=cholera_drate,color=water)) +
+  geom_point() +
+  theme_bw() +
+  labs(y="Cholera Death Rate per 10000 citizens (log)",
+       x="Elevation (log)",
+       color="Water Source") +
+  theme(legend.position="bottom") +
+  scale_y_log10() +
+  scale_x_log10() +
+  scale_color_brewer(palette="Dark2")
+
+plot1
+
+if (require("waffle")) {
+  day1 <- Cholera |>
+    transform(newcholeradeaths = cholera_deaths/40) |>
+    sort_by(~water) |>
+    ggplot(aes(fill=water,values=newcholeradeaths)) +
+    geom_waffle(radius=grid::unit(0.4,"npc"),
+                size=.25) +
+    theme_void() +
+    labs(title="Deaths from Cholera in London in 1849",
+         subtitle="40 Deaths per Square",
+         caption="Data from William Farr's initial report, where he concluded
+         elevation \nwas the factor in the spread of plague",
+         fill="Water Source") +
+    scale_fill_brewer(palette="Dark2") +
+    theme(legend.position="bottom",
+          panel.background=element_rect(color="white"))
+
+day1
 }
 
 }

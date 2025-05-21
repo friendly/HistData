@@ -61,7 +61,7 @@ Campbell, R. B., Arbuthnot and the Human Sex Ratio (2001).
 \emph{Human Biology}, 73:4, 605-610.
 %\url{http://www.math.uni.edu/~campbell/arbuth.html}
 
-Creighton, C. (1965). A History of Epidemics in Britain, 2nd edition, vol. 1 and 2. 
+Creighton, C. (1965). A History of Epidemics in Britain, 2nd edition, vol. 1 and 2.
     NY: Barnes and Noble.
 
 S. Zabell (1976). Arbuthnot, Heberden, and the \emph{Bills of Mortality}.
@@ -78,5 +78,26 @@ lines(Arb.smooth$x, Arb.smooth$y, col="blue", lwd=2)
 
 # plot the total christenings to observe the anomalie in 1704
 with(Arbuthnot, plot(Year,Total, type='b', ylab="Total Christenings"))
+
+###########################################################################
+# Challenge 03: Dr. John Russell
+# github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge03.R
+###########################################################################
+
+if (require("PieGlyph")) {
+  require(ggplot2)
+  Arbuthnot |>
+  transform(total=`Males` + `Females`) |>
+  ggplot(aes(x=Year, y=total)) +
+  geom_pie_glyph(slices=c("Males","Females"),
+                 color="black",radius=0.4) +
+  scale_fill_manual(values=c("lightblue","pink")) +
+  theme_minimal() +
+  theme(legend.position="bottom") +
+  labs(fill="Gender",
+       title="John Arbuthnot's Data on Male and Female Baptisms in London",
+       x="Year",
+       y="Total Baptisms")
+}
 }
 \keyword{datasets}

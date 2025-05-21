@@ -55,7 +55,10 @@ Suggests:
     gridExtra,
     vcd,
     MASS,
-    forcats
+    forcats,
+    emojifont,
+    waffle,
+    PieGlyph
 License: GPL
 LazyLoad: yes
 LazyData: yes
