@@ -35,8 +35,8 @@ Galton, F. (1886). Regression Towards Mediocrity in Hereditary Stature
  \emph{Journal of the Anthropological Institute}, 15, 246-263
 }
 \references{
-Friendly, M. & Denis, D. (2005). The early origins and development of the scatterplot. 
-\emph{Journal of the History of the Behavioral Sciences}, 
+Friendly, M. & Denis, D. (2005). The early origins and development of the scatterplot.
+\emph{Journal of the History of the Behavioral Sciences},
 41, 103-130.
 
 Galton, F. (1869). \emph{Hereditary Genius: An Inquiry into its Laws and Consequences}.
@@ -46,13 +46,13 @@ Hanley, J. A. (2004). "Transmuting" Women into Men: Galton's Family Data on Huma
 \emph{The American Statistician}, 58, 237-243.
 See: \url{http://www.medicine.mcgill.ca/epidemiology/hanley/galton/} for source materials.
 
-Stigler, S. M. (1986). 
+Stigler, S. M. (1986).
 \emph{The History of Statistics: The Measurement of Uncertainty before 1900}.
 Cambridge, MA: Harvard University Press, Table 8.1
 
-Wachsmuth, A. W., Wilkinson L., Dallal G. E. (2003). 
-Galton's bend: A previously undiscovered nonlinearity in Galton's family stature regression data. 
-\emph{The American Statistician}, 57, 190-192. 
+Wachsmuth, A. W., Wilkinson L., Dallal G. E. (2003).
+Galton's bend: A previously undiscovered nonlinearity in Galton's family stature regression data.
+\emph{The American Statistician}, 57, 190-192.
 %\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
 \doi{10.1198/0003130031874}
 
@@ -60,7 +60,7 @@ Galton's bend: A previously undiscovered nonlinearity in Galton's family stature
 \seealso{
   \code{link{GaltonFamilies}},
 	\code{\link{PearsonLee}},
-	\code{galton} in the \pkg{psych} % \code{\link[psych]{galton}} 
+	\code{galton} in the \pkg{psych} % \code{\link[psych]{galton}}
 	}
 
 \examples{
@@ -76,7 +76,7 @@ data(Galton)
 # sunflower plot with regression line and data ellipses and lowess smooth
 ###########################################################################
 
-with(Galton, 
+with(Galton,
 	{
 	sunflowerplot(parent,child, xlim=c(62,74), ylim=c(62,74))
 	reg <- lm(child ~ parent)
@@ -86,6 +86,26 @@ with(Galton,
 	dataEllipse(parent,child, xlim=c(62,74), ylim=c(62,74), plot.points=FALSE)
 		}
   })
+
+###########################################################################
+# Challenge 02: Dr. John Russell
+# github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge02.R
+###########################################################################
+
+
+require(ggplot2)
+
+Galton |>
+  ggplot(aes(x=parent,y=child)) +
+  geom_point(position="jitter") +
+  geom_density2d_filled(alpha=.6,show.legend=FALSE,bins=9) +
+  theme_minimal() +
+  geom_smooth(method="loess",se=FALSE,color="red") +
+  geom_smooth(method="lm",se=FALSE) +
+  labs(title="Galton's Height Data",
+       x="Parent Height (inches)",
+       y="Child Height (inches)") +
+  scale_fill_brewer(type="seq")
 
 }
 \keyword{datasets}
