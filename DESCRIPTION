@@ -22,7 +22,8 @@ Authors@R: c(person(given = "Michael", family = "Friendly",
             person(given = "Neville", family = "Verlander", role="ctb", email="Neville.Verlander@phe.gov.uk"),
             person(given = "Brian", family = "Clair", role="ctb"),
             person(given = "Jim", family = "Oeppen", role="ctb", email = "joeppen@health.sdu.dk"),
-            person(given = "David", family = "Bellhouse", role="ctb", email="bellhouse@stats.uwo.ca")
+            person(given = "David", family = "Bellhouse", role="ctb", email="bellhouse@stats.uwo.ca"),
+            person(given = "Ivan", family = "Lokhov", role="ctb", email="ivan@datawrapper.de")
             )
 Maintainer: Michael Friendly <friendly@yorku.ca>
 Description: The 'HistData' package provides a collection of small data sets
@@ -61,7 +62,7 @@ LazyLoad: yes
 LazyData: yes
 VignetteBuilder: knitr
 Language: en-US
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.3
 Encoding: UTF-8
 BugReports: https://github.com/friendly/HistData/issues
 URL: https://friendly.github.io/HistData/

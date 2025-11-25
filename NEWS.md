@@ -3,6 +3,7 @@
 * Switch to recommended versioning
 * Add example graphs from John Russell to `sandbox/`
 * Add link to Horsekicks package
+* Add Playfair1824 data [Thx: Ivan Lokhov]
 
 ## Version 0.9-3
 
