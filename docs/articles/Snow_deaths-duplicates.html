@@ -66,7 +66,7 @@
       <img src="../logo.png" class="logo" alt=""><h1>Duplicate and Missing Cases in Snow.deaths</h1>
                         <h4 data-toc-skip class="author">Peter Li</h4>
             
-            <h4 data-toc-skip class="date">2025-05-12</h4>
+            <h4 data-toc-skip class="date">2025-11-25</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/friendly/HistData/blob/HEAD/vignettes/Snow_deaths-duplicates.Rmd" class="external-link"><code>vignettes/Snow_deaths-duplicates.Rmd</code></a></small>
       <div class="d-none name"><code>Snow_deaths-duplicates.Rmd</code></div>
@@ -121,7 +121,7 @@ Street. Cambridge Street lies on the right side of the figure below and
 runs in a roughly North-South direction. It intersects Broad Street,
 which lies at the top of the figure and runs in a roughly East-West
 direction. The two streets intersect near the Broad Street pump.</p>
-<p><img src="Snow_deaths-duplicates_files/figure-html/snow-deaths1-1.png" width="672"></p>
+<p><img src="Snow_deaths-duplicates_files/figure-html/snow-deaths1-1.png" class="r-plt" width="672"></p>
 <p>Finding a plausible and reasonable solution to this problem is made
 easier by the fact that a comparison of the data in Snow’s map and those
 in <code>Snow.deaths</code> data set reveals that, at two different
@@ -130,12 +130,12 @@ locations, three cases or “bars” are unaccounted for in Snow.deaths.</p>
 (below and left) of well. It is the accepted home of patient zero.
 <code>Snow.deaths</code> lists two cases, 32 and 122, but Snow’s map
 shows four.</p>
-<p><img src="Snow_deaths-duplicates_files/figure-html/snow-deaths2-1.png" width="672"></p>
+<p><img src="Snow_deaths-duplicates_files/figure-html/snow-deaths2-1.png" class="r-plt" width="672"></p>
 <p>The second location is at the end of Noel Street, which is north of
 Broad street one block south of Oxford Street at the intersection with
 Berwick Street. Here, <code>Snow.deaths</code> lists two cases, 282 and
 422, but Snow’s map shows three.</p>
-<p><img src="Snow_deaths-duplicates_files/figure-html/snow-deaths3-1.png" width="672"></p>
+<p><img src="Snow_deaths-duplicates_files/figure-html/snow-deaths3-1.png" class="r-plt" width="672"></p>
 <p>As a potential solution, one could use the three duplicates to fill
 in for the three “missing” observations in Snow.data. What makes this
 solution plausible is that the <code>Snow.deaths</code> data are used
@@ -188,9 +188,9 @@ two formulas below were used to compute the solution.</p>
 <span><span class="op">}</span></span></code></pre></div>
 <p>Using these equations and the procedure described above, I get the
 following results. For the two missing cases at 40 Broad Street:</p>
-<p><img src="Snow_deaths-duplicates_files/figure-html/snow-deaths4-1.png" width="672">
+<p><img src="Snow_deaths-duplicates_files/figure-html/snow-deaths4-1.png" class="r-plt" width="672">
 For the one missing case on Noel Street:</p>
-<p><img src="Snow_deaths-duplicates_files/figure-html/unnamed-chunk-5-1.png" width="672"></p>
+<p><img src="Snow_deaths-duplicates_files/figure-html/unnamed-chunk-5-1.png" class="r-plt" width="672"></p>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
 </div>
@@ -202,7 +202,7 @@ For the one missing case on Noel Street:</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.2.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>
