@@ -3015,19 +3015,20 @@ NULL
 #' @name Saturn
 #' @docType data
 #' @format A data frame with 24 observations on the following 6 variables.
-#' \describe{ \item{list("Equation")}{an integer vector, id of the Equation}
+#' \describe{ 
+#' \item{list("Equation")}{an integer vector, id of the Equation}
 #' \item{list("Year")}{an integer vector, year of the observations}
-#' \item{list("Y")}{a numeric vector, adjusted measure of the observed
-#' longitude of Saturn, in minutes} \item{list("X1")}{a numeric vector, the
-#' rate of change of the mean annual motion of Saturn} \item{list("X2")}{a
-#' numeric vector, the rate of change of the eccentricity of Saturn's orbit}
-#' \item{list("X3")}{a numeric vector, a variable compound of the rate of
-#' change of Saturn's aphelion minus rates of change of the mean longitude of
-#' Saturn in 1750, multiplied by 2 times the mean eccentricity of Saturn} }
+#' \item{list("Y")}{a numeric vector, adjusted measure of the observed longitude of Saturn, in minutes} 
+#' \item{list("X1")}{a numeric vector, the rate of change of the mean annual motion of Saturn} 
+#' \item{list("X2")}{a numeric vector, the rate of change of the eccentricity of Saturn's orbit}
+#' \item{list("X3")}{a numeric vector, a variable compound of the rate of change of Saturn's aphelion minus rates of change of the mean longitude of Saturn in 1750, multiplied by 2 times the mean eccentricity of Saturn} 
+#' }
 #' @author Luiz Fernando Palin Droubi
+#' 
 #' @references Stigler, Stephen M. (1986). \emph{The History of Statistics: The
 #' Measurement of Uncertainty before 1900}. Cambridge, MA: Harvard University
 #' Press, 1986, Table 1.3, p. 34.
+#' 
 #' @source Stigler, Stephen (1975). "Napoleonic statistics: The work of
 #' Laplace", \emph{Biometrika}, 62, 503-517.
 #' @keywords datasets
@@ -3096,9 +3097,10 @@ NULL
 #' "stacked" in a line away from the street so that they are more easily
 #' visualized. This is how they are displayed on John Snow's original map.  The
 #' dates of the deaths are not individually recorded in this data set.
-#' \describe{ \item{list("case")}{Sequential case number, in some arbitrary,
-#' randomized order} \item{list("x")}{x coordinate} \item{list("y")}{y
-#' coordinate} }
+#' \describe{ 
+#' \item{list("case")}{Sequential case number, in some arbitrary, randomized order} 
+#' \item{list("x")}{x coordinate} 
+#' \item{list("y")}{y coordinate} }
 #' 
 #' \code{Snow.pumps}: A data frame with 13 observations on the following 4
 #' variables, giving the locations of water pumps within the boundaries of the
@@ -3109,10 +3111,12 @@ NULL
 #' \code{Snow.streets}: A data frame with 1241 observations on the following 4
 #' variables, giving coordinates used to draw the 528 street segment lines
 #' within the boundaries of the map.  The map is created by drawing lines
-#' connecting the \code{n} points in each street segment.  \describe{
+#' connecting the \code{n} points in each street segment.  
+#' \describe{
 #' \item{list("street")}{street segment number: \code{1:528}}
 #' \item{list("n")}{number of points in this street line segment}
-#' \item{list("x")}{x coordinate} \item{list("y")}{y coordinate} }
+#' \item{list("x")}{x coordinate} 
+#' \item{list("y")}{y coordinate} }
 #' 
 #' % \code{Snow.polygons}: A data frame with 54 observations on the following 3
 #' % variables, giving Thiessen (Voronoi) polygons containing each pump. Their
@@ -3130,8 +3134,11 @@ NULL
 #' Thiessen (Voronoi) polygons containing each pump. Their boundaries define
 #' the area that is closest to each pump relative to all other pumps. They are
 #' mathematically defined by the perpendicular bisectors of the lines between
-#' all pumps. Each data frame contains: \describe{ \item{list("x")}{x
-#' coordinate} \item{list("y")}{y coordinate} }
+#' all pumps. Each data frame contains: 
+#' \describe{ 
+#' \item{list("x")}{x coordinate} 
+#' \item{list("y")}{y coordinate} 
+#' }
 #' 
 #' \code{Snow.deaths2}: An alternative version of \code{Snow.deaths} correcting
 #' some possible duplicate and missing cases, as described in
@@ -3142,10 +3149,12 @@ NULL
 #' deaths by date from Aug. 19 -- Sept. 30, 1854.  There are a total of 616
 #' deaths represented in both columns \code{attacks} and \code{deaths}; of
 #' these, the date of the attack is unknown for 45 cases.
+#' 
 #' @seealso \code{\link{SnowMap}} for code to draw Snow's map;
 #' \code{\link{Cholera}} for William Farr's cholera data.  The \pkg{cholera}
 #' package contains more analytical methods for understanding Snow's cholera
 #' data.
+#' 
 #' @references Koch, T. (2000). \emph{Cartographies of Disease: Maps, Mapping,
 #' and Medicine}. ESRI Press.  ISBN: 9781589481206.
 #' 
@@ -3160,6 +3169,7 @@ NULL
 #' John Churchill. Possibly at https://resource.nlm.nih.gov/0050707.
 #' 
 #' Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
+#' 
 #' @source Tobler, W. (1994). Snow's Cholera Map,
 #' \code{http://www.ncgia.ucsb.edu/pubs/snow/snow.html}; data files were
 #' obtained from \code{http://ncgia.ucsb.edu/Publications/Software/cholera/},
@@ -3263,28 +3273,32 @@ NULL
 #' @format \code{Virgins}: A data frame with 18 observations on the following 6
 #' variables giving the measurements of position angle and angular distance
 #' between the central (brightest) star and its twin, recorded by various
-#' observers over more than 100 years.  \describe{ \item{list("year")}{year
-#' ("epoch") of the observation, a decimal numeric vector}
-#' \item{list("posangle")}{recorded position angle between the two stars, a
-#' numeric vector} \item{list("distance")}{separation distance between the two
-#' stars, a numeric vector} \item{list("weight")}{a subjective weight
-#' attributed to the accuracy of this observation, a numeric vector}
-#' \item{list("notes")}{Herschel's notes on this observation, a character
-#' vector} \item{list("authority")}{A simplified version of the notes giving
-#' just the attribution of authority of the observation, a character vector} }
+#' observers over more than 100 years.  
+#' \describe{ 
+#' \item{list("year")}{year ("epoch") of the observation, a decimal numeric vector}
+#' \item{list("posangle")}{recorded position angle between the two stars, a numeric vector} 
+#' \item{list("distance")}{separation distance between the two stars, a numeric vector} 
+#' \item{list("weight")}{a subjective weight attributed to the accuracy of this observation, a numeric vector}
+#' \item{list("notes")}{Herschel's notes on this observation, a character vector} 
+#' \item{list("authority")}{A simplified version of the notes giving just the attribution of authority of the observation, a character vector} 
+#' }
 #' 
 #' \code{Virgins.interp}: A data frame with 14 observations on the following 4
 #' variables, giving the position angles and angular distance that Herschel
-#' interpolated from his smoothed curve.  \describe{ \item{list("year")}{year
-#' ("epoch") of the observation, a decimal numeric vector}
-#' \item{list("posangle")}{recorded position angle between the two stars, a
-#' numeric vector} \item{list("distance")}{separation distance, calculated
-#' \eqn{1/sqrt(velocity)}} \item{list("velocity")}{angular velocity, calculated
-#' as the instantaneous slopes of tangents to the smoothed curve, a numeric
-#' vector} }
+#' interpolated from his smoothed curve.  
+#' 
+#' \describe{ 
+#' \item{list("year")}{year ("epoch") of the observation, a decimal numeric vector}
+#' \item{list("posangle")}{recorded position angle between the two stars, a numeric vector} 
+#' \item{list("distance")}{separation distance, calculated \eqn{1/sqrt(velocity)}} 
+#' \item{list("velocity")}{angular velocity, calculated as the instantaneous slopes of tangents to the smoothed curve, a numeric
+#' vector} 
+#' }
+#' 
 #' @references Friendly, M. & Denis, D.  The early origins and development of
 #' the scatterplot. \emph{Journal of the History of the Behavioral Sciences},
 #' 2005, 41, 103-130.
+#' 
 #' @source Herschel, J. F. W.  III. Micrometrical Measures of 364 Double Stars
 #' with a 7-feet Equatorial Acromatic Telescope, taken at Slough, in the years
 #' 1828, 1829, and 1830 \emph{Memoirs of the Royal Astronomical Society}, 1833,
@@ -3351,17 +3365,17 @@ NULL
 #' wage (Shillings): a numeric vector} }
 #' 
 #' \code{Wheat.monarchs} A data frame with 12 observations on the following 4
-#' variables.  \describe{ \item{list("name")}{Reigning monarch, a factor with
-#' levels \code{Anne} \code{Charles I} \code{Charles II} \code{Cromwell}
-#' \code{Elizabeth} \code{George I} \code{George II} \code{George III}
-#' \code{George IV} \code{James I} \code{James II} \code{W&M}}
+#' variables.  
+#' \describe{ 
+#' \item{list("name")}{Reigning monarch, a factor with levels \code{Anne} \code{Charles I} \code{Charles II} \code{Cromwell} \code{Elizabeth} \code{George I} \code{George II} \code{George III} \code{George IV} \code{James I} \code{James II} \code{W&M}}
 #' \item{list("start")}{Starting year of reign, a numeric vector}
 #' \item{list("end")}{Starting year of reign, a numeric vector}
-#' \item{list("commonwealth")}{A binary variable indicating the period of the
-#' Commonwealth under Cromwell} }
+#' \item{list("commonwealth")}{A binary variable indicating the period of the Commonwealth under Cromwell} 
+#' }
 #' @references Friendly, M. & Denis, D. (2005). The early origins and
 #' development of the scatterplot \emph{Journal of the History of the
 #' Behavioral Sciences}, 41, 103-130.
+#' 
 #' @source Playfair, W. (1821). \emph{Letter on our Agricultural Distresses,
 #' Their Causes and Remedies}. London: W. Sams, 1821
 #' 
@@ -3483,14 +3497,16 @@ NULL
 #' @aliases Yeast YeastD.mat
 #' @docType data
 #' @format \code{Yeast}: A frequency data frame with 36 observations on the
-#' following 3 variables, giving the frequencies of \describe{
-#' \item{list("sample")}{Sample identifier, a factor with levels \code{A}
-#' \code{B} \code{C} \code{D}} \item{list("count")}{The number of yeast cells
-#' counted in a square} \item{list("freq")}{The number of squares with the
-#' given \code{count}} }
+#' following 3 variables, giving the frequencies of 
+#' \describe{
+#' \item{list("sample")}{Sample identifier, a factor with levels \code{A} \code{B} \code{C} \code{D}} 
+#' \item{list("count")}{The number of yeast cells counted in a square} 
+#' \item{list("freq")}{The number of squares with the given \code{count}} 
+#' }
 #' 
 #' \code{YeastD.mat}: A 20 x 20 matrix containing the count of yeast cells in
 #' each square for sample D.
+#' 
 #' @references "Student" (1906) On the error of counting with a haemocytometer.
 #' Biometrika, 5, 351-360.
 #' \url{http://www.medicine.mcgill.ca/epidemiology/hanley/c626/Student_counting.pdf}
@@ -3557,17 +3573,24 @@ NULL
 #' @name ZeaMays
 #' @docType data
 #' @format A data frame with 15 observations on the following 4 variables.
-#' \describe{ \item{list("pair")}{pair number, a numeric vector}
+#' \describe{ 
+#' \item{list("pair")}{pair number, a numeric vector}
 #' \item{list("pot")}{pot, a factor with levels \code{1} \code{2} \code{3}
-#' \code{4}} \item{list("cross")}{height of cross fertilized plant, a numeric
-#' vector} \item{list("self")}{height of self fertilized plant, a numeric
-#' vector} \item{list("diff")}{\code{cross - self} for each pair} }
+#' \code{4}} 
+#' \item{list("cross")}{height of cross fertilized plant, a numeric
+#' vector} 
+#' \item{list("self")}{height of self fertilized plant, a numeric
+#' vector} 
+#' \item{list("diff")}{\code{cross - self} for each pair} 
+#' }
 #' @seealso \code{\link[stats]{wilcox.test}}
 #' 
 #' \code{\link[coin]{independence_test}} in the \code{coin} package, a general
 #' framework for conditional inference procedures (permutation tests)
+#' 
 #' @references Fisher, R. A. (1935). \emph{The Design of Experiments}. London:
 #' Oliver & Boyd.
+#' 
 #' @source Darwin, C. (1876). \emph{The Effect of Cross- and Self-fertilization
 #' in the Vegetable Kingdom}, 2nd Ed. London: John Murray.
 #' 
