@@ -1,10 +1,16 @@
+## Version 1.0.0
+
+This is a major release of the package, ...
+
+* Add Playfair1824 data [Thx: Ivan Lokhov]
+* Convert documentation from Rd to roxygen (painfully!), but also make edits to dataset descriptions, references, ...
+* Some contributors made authors
+
 ## Version 0.9.4
 
 * Switch to recommended versioning
 * Add example graphs from John Russell to `sandbox/`
 * Add link to Horsekicks package
-* Add Playfair1824 data [Thx: Ivan Lokhov]
-* Convert documentation fro Rd to roxygen, painfully
 
 ## Version 0.9-3
 
