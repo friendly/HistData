@@ -729,15 +729,16 @@ NULL
 #' @name Dactyl
 #' @docType data
 #' @format A data frame with 60 observations on the following 3 variables.
-#' \describe{ \item{list("Foot")}{an ordered factor with levels \code{1} <
-#' \code{2} < \code{3} < \code{4}} \item{list("Lines")}{an ordered factor with
-#' levels \code{1:5} < \code{6:10} < \code{11:15} < \code{16:20} < \code{21:25}
-#' < \code{26:30} < \code{31:35} < \code{36:40} < \code{41:45} < \code{46:50} <
-#' \code{51:55} < \code{56:60} < \code{61:65} < \code{66:70} < \code{71:75}}
-#' \item{list("count")}{number of dactyls} }
+#' \describe{ 
+#' \item{list("Foot")}{an ordered factor with levels \code{1} < \code{2} < \code{3} < \code{4}} 
+#' \item{list("Lines")}{an ordered factor with levels \code{1:5} < \code{6:10} < \code{11:15} < \code{16:20} < \code{21:25} < \code{26:30} < \code{31:35} < \code{36:40} < \code{41:45} < \code{46:50} < \code{51:55} < \code{56:60} < \code{61:65} < \code{66:70} < \code{71:75}}
+#' \item{list("count")}{number of dactyls} 
+#' }
+#' 
 #' @references Edgeworth, F. Y. (1885). On methods of ascertaining variations
 #' in the rate of births, deaths and marriages. \emph{Journal of the [Royal]
 #' Statistical Society}, 48, 628-649.
+#' 
 #' @source Stigler, S. (1999) \emph{Statistics on the Table} Cambridge, MA:
 #' Harvard University Press, table 5.1.
 #' @keywords datasets
@@ -799,13 +800,15 @@ NULL
 #' @format A data frame with 70 observations on the following 6 variables,
 #' giving the number of non-drinkers (\code{sober}) and drinkers
 #' (\code{drinks}) in various occupational categories (\code{trade}).
-#' \describe{ \item{list("class")}{wage class: a factor with levels \code{A}
-#' \code{B} \code{C}} \item{list("trade")}{a factor with levels \code{baker}
-#' \code{barman} \code{billposter} ...  \code{wellsinker} \code{wireworker}}
+#' \describe{ 
+#' \item{list("class")}{wage class: a factor with levels \code{A} \code{B} \code{C}} 
+#' \item{list("trade")}{a factor with levels \code{baker} \code{barman} \code{billposter} ...  \code{wellsinker} \code{wireworker}}
 #' \item{list("sober")}{the number of non-drinkers, a numeric vector}
 #' \item{list("drinks")}{the number of drinkers, a numeric vector}
 #' \item{list("wage")}{weekly wage (in shillings), a numeric vector}
-#' \item{list("n")}{total number, a numeric vector} }
+#' \item{list("n")}{total number, a numeric vector} 
+#' }
+#' 
 #' @references M. E. Elderton & K. Pearson (1910). A first study of the
 #' influence of parental alcoholism on the physique and ability of their
 #' offspring, Eugenics Laboratory Memoirs, 10.
@@ -859,14 +862,16 @@ NULL
 #' @name EdgeworthDeaths
 #' @docType data
 #' @format A data frame with 42 observations on the following 3 variables.
-#' \describe{ \item{list("County")}{a factor with levels \code{Berks}
-#' \code{Herts} \code{Bucks} \code{Oxford} \code{Bedford} \code{Cambridge}}
-#' \item{list("year")}{an ordered factor with levels \code{1876} < \code{1877}
-#' < \code{1878} < \code{1879} < \code{1880} < \code{1881} < \code{1882}}
-#' \item{list("Freq")}{a numeric vector, death rate per 1000 population} }
+#' \describe{ 
+#' \item{list("County")}{a factor with levels \code{Berks} \code{Herts} \code{Bucks} \code{Oxford} \code{Bedford} \code{Cambridge}}
+#' \item{list("year")}{an ordered factor with levels \code{1876} < \code{1877} < \code{1878} < \code{1879} < \code{1880} < \code{1881} < \code{1882}}
+#' \item{list("Freq")}{a numeric vector, death rate per 1000 population} 
+#' }
+#' 
 #' @references Edgeworth, F. Y. (1885). On Methods of Ascertaining Variations
 #' in the Rate of Births, Deaths, and Marriages.  \emph{Journal of the
 #' Statistical Society of London}, 48(4), 628-649. doi:10.2307/2979201
+#' 
 #' @source The data were scanned from Table 5.2 in Stigler, S. M. (1999)
 #' \emph{Statistics on the Table: The History of Statistical Concepts and
 #' Methods}, Harvard University Press.
@@ -920,12 +925,13 @@ NULL
 #' @docType data
 #' @format A frequency data frame with 36 observations on the following 3
 #' variables, representing a 6 x 6 table giving the cross-classification of the
-#' fingers on 2000 right hands as a whorl, small loop or neither.  \describe{
-#' \item{list("Whorls")}{Number of whorls, an ordered factor with levels
-#' \code{0} < \code{1} < \code{2} < \code{3} < \code{4} < \code{5}}
-#' \item{list("Loops")}{Number of small loops, an ordered factor with levels
-#' \code{0} < \code{1} < \code{2} < \code{3} < \code{4} < \code{5}}
-#' \item{list("count")}{Number of hands} }
+#' fingers on 2000 right hands as a whorl, small loop or neither.  
+#' \describe{
+#' \item{list("Whorls")}{Number of whorls, an ordered factor with levels \code{0} < \code{1} < \code{2} < \code{3} < \code{4} < \code{5}}
+#' \item{list("Loops")}{Number of small loops, an ordered factor with levels \code{0} < \code{1} < \code{2} < \code{3} < \code{4} < \code{5}}
+#' \item{list("count")}{Number of hands} 
+#' }
+#' 
 #' @references Pearson, K. (1904). Mathematical contributions to the theory of
 #' evolution. XIII. On the theory of contingency and its relation to
 #' association and normal correlation. Reprinted in \emph{Karl Pearson's Early
@@ -933,6 +939,7 @@ NULL
 #' 
 #' Waite, H. (1915). The analysis of fingerprints, \emph{Biometrika}, 10,
 #' 421-478.
+#' 
 #' @source Stigler, S. M. (1999). \emph{Statistics on the Table}. Cambridge,
 #' MA: Harvard University Press, table 19.4.
 #' @keywords datasets
@@ -967,11 +974,14 @@ NULL
 #' @name Galton
 #' @docType data
 #' @format A data frame with 928 observations on the following 2 variables.
-#' \describe{ \item{list("parent")}{a numeric vector: height of the mid-parent
-#' (average of father and mother)} \item{list("child")}{a numeric vector:
-#' height of the child} }
+#' \describe{ 
+#' \item{list("parent")}{a numeric vector: height of the mid-parent (average of father and mother)} 
+#' \item{list("child")}{a numeric vector: height of the child} 
+#' }
+#' 
 #' @seealso \code{link{GaltonFamilies}}, \code{\link{PearsonLee}},
 #' \code{galton} in the \pkg{psych} % \code{\link[psych]{galton}}
+#' 
 #' @references Friendly, M. & Denis, D. (2005). The early origins and
 #' development of the scatterplot.  \emph{Journal of the History of the
 #' Behavioral Sciences}, 41, 103-130.
@@ -993,6 +1003,7 @@ NULL
 #' %\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
 #' c("\\Sexpr[results=rd]{tools:::Rd_expr_doi(\"#1\")}",
 #' "10.1198/0003130031874")\Sexpr{tools:::Rd_expr_doi("10.1198/0003130031874")}
+#' 
 #' @source Galton, F. (1886). Regression Towards Mediocrity in Hereditary
 #' Stature \emph{Journal of the Anthropological Institute}, 15, 246-263
 #' @keywords datasets
@@ -1050,16 +1061,18 @@ NULL
 #' @name GaltonFamilies
 #' @docType data
 #' @format A data frame with 934 observations on the following 8 variables.
-#' \describe{ \item{list("family")}{family ID, a factor with levels
-#' \code{001}-\code{204}} \item{list("father")}{height of father}
+#' \describe{ 
+#' \item{list("family")}{family ID, a factor with levels \code{001}-\code{204}} 
+#' \item{list("father")}{height of father}
 #' \item{list("mother")}{height of mother}
-#' \item{list("midparentHeight")}{mid-parent height, calculated as
-#' \code{(father + 1.08*mother)/2}} \item{list("children")}{number of children
-#' in this family} \item{list("childNum")}{number of this child within family.
-#' Children are listed in decreasing order of height for boys followed by
-#' girls} \item{list("gender")}{child gender, a factor with levels
-#' \code{female} \code{male}} \item{list("childHeight")}{height of child} }
+#' \item{list("midparentHeight")}{mid-parent height, calculated as \code{(father + 1.08*mother)/2}} 
+#' \item{list("children")}{number of children in this family} 
+#' \item{list("childNum")}{number of this child within family. Children are listed in decreasing order of height for boys followed by girls} 
+#' \item{list("gender")}{child gender, a factor with levels \code{female} \code{male}} 
+#' \item{list("childHeight")}{height of child} 
+#' }
 #' @seealso \code{\link{Galton}}, \code{\link{PearsonLee}}
+#' 
 #' @references Galton, F. (1886). Regression Towards Mediocrity in Hereditary
 #' Stature \emph{Journal of the Anthropological Institute}, 15, 246-263
 #' 
@@ -1140,60 +1153,37 @@ NULL
 #' @name Guerry
 #' @docType data
 #' @format A data frame with 86 observations (the departments of France) on the
-#' following 23 variables.  \describe{ \item{list("dept")}{Department ID:
-#' Standard numbers for the departments, except for Corsica (200)}
-#' \item{list("Region")}{Region of France ('N'='North', 'S'='South',
-#' 'E'='East', 'W'='West', 'C'='Central'). Corsica is coded as NA }
-#' \item{list("Department")}{Department name: Departments are named according
-#' to usage in 1830, but without accents.  A factor with levels \code{Ain}
+#' following 23 variables.  
+#' \describe{ 
+#' \item{list("dept")}{Department ID: Standard numbers for the departments, except for Corsica (200)}
+#' \item{list("Region")}{Region of France ('N'='North', 'S'='South', 'E'='East', 'W'='West', 'C'='Central'). Corsica is coded as NA }
+#' \item{list("Department")}{Department name: Departments are named according to usage in 1830, but without accents.  A factor with levels \code{Ain}
 #' \code{Aisne} \code{Allier} ... \code{Vosges} \code{Yonne}}
-#' \item{list("Crime_pers")}{Population per Crime against persons. Source: A2
-#' (Compte general, 1825-1830)} \item{list("Crime_prop")}{Population per Crime
-#' against property. Source: A2 (Compte general, 1825-1830)}
-#' \item{list("Literacy")}{Percent Read & Write: Percent of military conscripts
-#' who can read and write. Source: A2 } \item{list("Donations")}{Donations to
-#' the poor. Source: A2 (Bulletin des lois)} \item{list("Infants")}{Population
-#' per illegitimate birth. Source: A2 (Bureau des Longitudes, 1817-1821)}
-#' \item{list("Suicides")}{Population per suicide. Source: A2 (Compte general,
-#' 1827-1830)} \item{list("MainCity")}{Size of principal city ('1:Sm', '2:Med',
-#' '3:Lg'), used as a surrogate for population density. Large refers to the top
-#' 10, small to the bottom 10; all the rest are classed Medium. Source: A1. An
-#' ordered factor with levels \code{1:Sm} < \code{2:Med} < \code{3:Lg}}
-#' \item{list("Wealth")}{Per capita tax on personal property. A ranked index
-#' based on taxes on personal and movable property per inhabitant. Source: A1}
-#' \item{list("Commerce")}{Commerce and Industry, measured by the rank of the
-#' number of patents / population. Source: A1}
-#' \item{list("Clergy")}{Distribution of clergy, measured by the rank of the
-#' number of Catholic priests in active service / population. Source: A1
-#' (Almanach officiel du clergy, 1829)} \item{list("Crime_parents")}{Crimes
-#' against parents, measured by the rank of the ratio of crimes against parents
-#' to all crimes-- Average for the years 1825-1830. Source: A1 (Compte general)
-#' } \item{list("Infanticide")}{Infanticides per capita. A ranked ratio of
-#' number of infanticides to population-- Average for the years 1825-1830.
-#' Source: A1 (Compte general) } \item{list("Donation_clergy")}{Donations to
-#' the clergy. A ranked ratio of the number of bequests and donations inter
-#' vivios to population-- Average for the years 1815-1824. Source: A1 (Bull.
-#' des lois, ordunn. d'autorisation) } \item{list("Lottery")}{Per capita wager
-#' on Royal Lottery. Ranked ratio of the proceeds bet on the royal lottery to
-#' population--- Average for the years 1822-1826. Source: A1 (Compte rendus par
-#' le ministere des finances)} \item{list("Desertion")}{Military desertion,
-#' ratio of the number of young soldiers accused of desertion to the force of
-#' the military contingent, minus the deficit produced by the insufficiency of
-#' available billets-- Average of the years 1825-1827. Source: A1 (Compte du
-#' ministere du guerre, 1829 etat V) } \item{list("Instruction")}{Instruction.
-#' Ranks recorded from Guerry's map of Instruction. Note: this is inversely
-#' related to \code{Literacy} (as defined here)}
-#' \item{list("Prostitutes")}{Prostitutes in Paris. Number of prostitutes
-#' registered in Paris from 1816 to 1834, classified by the department of their
-#' birth Source: Parent-Duchatelet (1836), \emph{De la prostitution en Paris}}
-#' \item{list("Distance")}{Distance to Paris (km). Distance of each department
-#' centroid to the centroid of the Seine (Paris) Source: calculated from
-#' department centroids } \item{list("Area")}{Area (1000 km^2). Source:
-#' Angeville (1836) } \item{list("Pop1831")}{1831 population. Population in
-#' 1831, taken from Angeville (1836), \emph{Essai sur la Statistique de la
-#' Population fran?ais}, in 1000s } }
+#' \item{list("Crime_pers")}{Population per Crime against persons. Source: A2 (Compte general, 1825-1830)} 
+#' \item{list("Crime_prop")}{Population per Crime against property. Source: A2 (Compte general, 1825-1830)}
+#' \item{list("Literacy")}{Percent Read & Write: Percent of military conscripts who can read and write. Source: A2 } 
+#' \item{list("Donations")}{Donations to the poor. Source: A2 (Bulletin des lois)} 
+#' \item{list("Infants")}{Population per illegitimate birth. Source: A2 (Bureau des Longitudes, 1817-1821)}
+#' \item{list("Suicides")}{Population per suicide. Source: A2 (Compte general, 1827-1830)} 
+#' \item{list("MainCity")}{Size of principal city ('1:Sm', '2:Med', '3:Lg'), used as a surrogate for population density. Large refers to the top 10, small to the bottom 10; all the rest are classed Medium. Source: A1. An ordered factor with levels \code{1:Sm} < \code{2:Med} < \code{3:Lg}}
+#' \item{list("Wealth")}{Per capita tax on personal property. A ranked index based on taxes on personal and movable property per inhabitant. Source: A1}
+#' \item{list("Commerce")}{Commerce and Industry, measured by the rank of the number of patents / population. Source: A1}
+#' \item{list("Clergy")}{Distribution of clergy, measured by the rank of the number of Catholic priests in active service / population. Source: A1 (Almanach officiel du clergy, 1829)} 
+#' \item{list("Crime_parents")}{Crimes against parents, measured by the rank of the ratio of crimes against parents to all crimes-- Average for the years 1825-1830. Source: A1 (Compte general) } 
+#' \item{list("Infanticide")}{Infanticides per capita. A ranked ratio of number of infanticides to population-- Average for the years 1825-1830. Source: A1 (Compte general) } 
+#' \item{list("Donation_clergy")}{Donations to the clergy. A ranked ratio of the number of bequests and donations inter vivios to population-- Average for the years 1815-1824. Source: A1 (Bull. des lois, ordunn. d'autorisation) } 
+#' \item{list("Lottery")}{Per capita wager on Royal Lottery. Ranked ratio of the proceeds bet on the royal lottery to population--- Average for the years 1822-1826. Source: A1 (Compte rendus par le ministere des finances)} 
+#' \item{list("Desertion")}{Military desertion, ratio of the number of young soldiers accused of desertion to the force of the military contingent, minus the deficit produced by the insufficiency of available billets-- Average of the years 1825-1827. Source: A1 (Compte du ministere du guerre, 1829 etat V) } 
+#' \item{list("Instruction")}{Instruction. Ranks recorded from Guerry's map of Instruction. Note: this is inversely related to \code{Literacy} (as defined here)}
+#' \item{list("Prostitutes")}{Prostitutes in Paris. Number of prostitutes registered in Paris from 1816 to 1834, classified by the department of thei birth Source: Parent-Duchatelet (1836), \emph{De la prostitution en Paris}}
+#' \item{list("Distance")}{Distance to Paris (km). Distance of each department centroid to the centroid of the Seine (Paris) Source: calculated from department centroids } 
+#' \item{list("Area")}{Area (1000 km^2). Source: Angeville (1836) } 
+#' \item{list("Pop1831")}{1831 population. Population in 1831, taken from Angeville (1836), \emph{Essai sur la Statistique de la Population fran?ais}, in 1000s } 
+#' }
+#' 
 #' @seealso The \pkg{Guerry} package for maps of France:
 #' \code{\link[Guerry]{gfrance}} and related data.
+#' 
 #' @references Dray, S. and Jombart, T. (2011). A Revisit Of Guerry's Data:
 #' Introducing Spatial Constraints In Multivariate Analysis.  \emph{The Annals
 #' of Applied Statistics}, Vol. 5, No. 4, 2278-2299.
@@ -1257,13 +1247,14 @@ NULL
 #' @name HalleyLifeTable
 #' @docType data
 #' @format A data frame with 84 observations on the following 4 variables.
-#' \describe{ \item{list("age")}{a numeric vector} \item{list("deaths")}{number
-#' of deaths, \eqn{D_k}, among people of age k, a numeric vector}
-#' \item{list("number")}{size of the population, \eqn{P_k} surviving until this
-#' age, a numeric vector} \item{list("ratio")}{the ratio \eqn{P_{k+1}/P_k}, the
-#' conditional probability of surviving until age k + 1 given that one had
-#' already reached age k, a numeric vector} }
+#' \describe{ 
+#' \item{list("age")}{a numeric vector} 
+#' \item{list("deaths")}{number of deaths, \eqn{D_k}, among people of age k, a numeric vector}
+#' \item{list("number")}{size of the population, \eqn{P_k} surviving until this age, a numeric vector} 
+#' \item{list("ratio")}{the ratio \eqn{P_{k+1}/P_k}, the conditional probability of surviving until age k + 1 given that one had already reached age k, a numeric vector} 
+#' }
 #' @seealso \code{\link{Arbuthnot}}
+#' 
 #' @references Halley, E. (1693). An estimate of the degrees of the mortality
 #' of mankind, drawn from curious tables of the births and funerals at the city
 #' of Breslau; with an attempt to ascertain the price of annuities upon lives.
@@ -1271,6 +1262,7 @@ NULL
 #' 
 #' The text of Halley's paper was found at
 #' \url{http://www.pierre-marteau.com/editions/1693-mortality.html}
+#' 
 #' @source N. Bacaer (2011), "Halley's life table (1693)", Ch 2, pp 5-10. In
 #' \emph{A Short History of Mathematical Population Dynamics}, Springer-Verlag
 #' London, DOI 10.1007/978-0-85729-115-8_2.  Data taken from Table 1.
@@ -1325,15 +1317,19 @@ NULL
 #' @name Jevons
 #' @docType data
 #' @format A frequency data frame with 50 observations on the following 4
-#' variables.  \describe{ \item{list("actual")}{Actual number: a numeric
-#' vector} \item{list("estimated")}{Estimated number: a numeric vector}
-#' \item{list("frequency")}{Frequency of this combination of (actual,
-#' estimated): a numeric vector}
-#' \item{list("error")}{\code{actual}-\code{estimated}: a numeric vector} }
+#' variables.  
+#' \describe{ 
+#' \item{list("actual")}{Actual number: a numeric vector} 
+#' \item{list("estimated")}{Estimated number: a numeric vector}
+#' \item{list("frequency")}{Frequency of this combination of (actual, estimated): a numeric vector}
+#' \item{list("error")}{\code{actual}-\code{estimated}: a numeric vector} 
+#' }
+#' 
 #' @references Miller, G. A. (1956). The Magical Number Seven, Plus or Minus
 #' Two: Some Limits on Our Capacity for Processing Information,
 #' \emph{Psychological Review}, 63, 81-97,
 #' \url{http://www.musanim.com/miller1956/}
+#' 
 #' @source Jevons, W. S. (1871). The Power of Numerical Discrimination,
 #' \emph{Nature}, 1871, III (281-282)
 #' @keywords datasets
@@ -1414,35 +1410,27 @@ NULL
 #' @docType data
 #' @format \code{Langren1644}: A data frame with 12 observations on the
 #' following 9 variables, giving determinations of the distance in longitude
-#' between Toledo and Rome, from the 1644 graph.  \describe{
-#' \item{list("Name")}{The name of the person giving a determination, a factor
-#' with levels \code{A. Argelius} ... \code{T. Brahe}}
-#' \item{list("Longitude")}{Estimated value of the longitude distance between
-#' Toledo and Rome} \item{list("Year")}{Year associated with this
-#' determination} \item{list("Longname")}{A longer version of the \code{Name},
-#' where appropriate; a factor with levels \code{Andrea Argoli} \code{Christoph
-#' Clavius} \code{Tycho Brahe}} \item{list("City")}{The principal city where
-#' this person worked; a factor with levels \code{Alexandria} \code{Amsterdam}
-#' \code{Bamberg} \code{Bologna} \code{Frankfurt} \code{Hven} \code{Leuven}
-#' \code{Middelburg} \code{Nuremberg} \code{Padua} \code{Paris} \code{Rome}}
-#' \item{list("Country")}{The country where this person worked; a factor with
-#' levels \code{Belgium} \code{Denmark} \code{Egypt} \code{Flanders}
-#' \code{France} \code{Germany} \code{Italy} \code{Italy }}
+#' between Toledo and Rome, from the 1644 graph.  
+#' \describe{
+#' \item{list("Name")}{The name of the person giving a determination, a factor with levels \code{A. Argelius} ... \code{T. Brahe}}
+#' \item{list("Longitude")}{Estimated value of the longitude distance between Toledo and Rome} 
+#' \item{list("Year")}{Year associated with this determination} 
+#' \item{list("Longname")}{A longer version of the \code{Name}, where appropriate; a factor with levels \code{Andrea Argoli} \code{Christoph Clavius} \code{Tycho Brahe}} 
+#' \item{list("City")}{The principal city where this person worked; a factor with levels \code{Alexandria} \code{Amsterdam} \code{Bamberg} \code{Bologna} \code{Frankfurt} \code{Hven} \code{Leuven} \code{Middelburg} \code{Nuremberg} \code{Padua} \code{Paris} \code{Rome}}
+#' \item{list("Country")}{The country where this person worked; a factor with levels \code{Belgium} \code{Denmark} \code{Egypt} \code{Flanders} \code{France} \code{Germany} \code{Italy} \code{Italy }}
 #' \item{list("Latitude")}{Latitude of this \code{City}; a numeric vector}
-#' \item{list("Source")}{Likely source for this determination of Longitude; a
-#' factor with levels \code{Astron} \code{Map}} \item{list("Gap")}{A numeric
-#' vector indicating whether the \code{Longitude} value is below or above the
-#' median} }
+#' \item{list("Source")}{Likely source for this determination of Longitude; a factor with levels \code{Astron} \code{Map}} \item{list("Gap")}{A numeric vector indicating whether the \code{Longitude} value is below or above th median} }
 #' 
 #' \code{Langren.all}: A data frame with 61 observations on the following 4
 #' variables, giving determinations of Longitude between Toledo and Rome from
-#' all known versions of van Langren's graph.  \describe{
-#' \item{list("Author")}{Author of the graph, a factor with levels
-#' \code{Langren} \code{Lelewel}} \item{list("Year")}{Year of publication}
-#' \item{list("Name")}{The name of the person giving a determination, a factor
-#' with levels \code{Algunos1} \code{Algunos2} \code{Apianus} ...
-#' \code{Schonerus}} \item{list("Longitude")}{Estimated value of the longitude
-#' distance between Toledo and Rome} }
+#' all known versions of van Langren's graph.  
+#' \describe{
+#' \item{list("Author")}{Author of the graph, a factor with levels \code{Langren} \code{Lelewel}} 
+#' \item{list("Year")}{Year of publication}
+#' \item{list("Name")}{The name of the person giving a determination, a factor with levels \code{Algunos1} \code{Algunos2} \code{Apianus} ... \code{Schonerus}} 
+#' \item{list("Longitude")}{Estimated value of the longitude distance between Toledo and Rome} 
+#' }
+#' 
 #' @references Friendly, M., Valero-Mora, P. and Ulargui, J. I. (2010). The
 #' First (Known) Statistical Graph: Michael Florent van Langren and the
 #' "Secret" of Longitude. \emph{The American Statistician}, \bold{64} (2),
@@ -1453,6 +1441,7 @@ NULL
 #' \url{http://datavis.ca/gallery/langren/verdadera.pdf}.
 #' 
 #' Lelewel, J. (1851). \emph{Geographie du Moyen Age}. Paris: Pilliet, 1851.
+#' 
 #' @source The longitude values were digitized from images of the various
 #' graphs, which may be found on the Supplementary materials page for Friendly
 #' etal. (2009).
@@ -1641,13 +1630,20 @@ NULL
 #' @docType data
 #' @format \code{Macdonell}: A frequency data frame with 924 observations on
 #' the following 3 variables giving the bivariate frequency distribution of
-#' \code{height} and \code{finger}.  \describe{ \item{list("height")}{lower
-#' class boundaries of height, in decimal ft.} \item{list("finger")}{length of
-#' the left middle finger, in mm.} \item{list("frequency")}{frequency of this
-#' combination of \code{height} and \code{finger}} } \code{MacdonellDF}: A data
-#' frame with 3000 observations on the following 2 variables.  \describe{
-#' \item{list("height")}{a numeric vector} \item{list("finger")}{a numeric
-#' vector} }
+#' \code{height} and \code{finger}.  
+#' \describe{ 
+#' \item{list("height")}{lower class boundaries of height, in decimal ft.} 
+#' \item{list("finger")}{length of the left middle finger, in mm.} 
+#' \item{list("frequency")}{frequency of this combination of \code{height} and \code{finger}} 
+#' } 
+#' 
+#' \code{MacdonellDF}: A data
+#' frame with 3000 observations on the following 2 variables.  
+#' \describe{
+#' \item{list("height")}{a numeric vector} 
+#' \item{list("finger")}{a numeric vector} 
+#' }
+#' 
 #' @references Hanley, J. and Julien, M. and Moodie, E. (2008). Student's z, t,
 #' and s: What if Gosset had R? \emph{The American Statistician}, 62(1), 64-69.
 #' 
@@ -1656,6 +1652,7 @@ NULL
 #' 
 #' Gosset, W. S. [Student] (1908). Probable error of a correlation coefficient.
 #' \emph{Biometrika}, 6, 302-310.
+#' 
 #' @source Macdonell, W. R. (1902). On Criminal Anthropometry and the
 #' Identification of Criminals. \emph{Biometrika}, 1(2), 177-227.
 #' c("\\Sexpr[results=rd]{tools:::Rd_expr_doi(\"#1\")}",
@@ -1908,14 +1905,16 @@ NULL
 #' @name Mayer
 #' @docType data
 #' @format A data frame with 27 observations on the following 4 variables.
-#' \describe{ \item{list("Equation")}{an integer vector, id of the Equation}
-#' \item{list("Y")}{a numeric vector, representing the term \eqn{(h-90)} (see
-#' details)} \item{list("X1")}{a numeric vector, representing \eqn{\beta}}
+#' \describe{ 
+#' \item{list("Equation")}{an integer vector, id of the Equation}
+#' \item{list("Y")}{a numeric vector, representing the term \eqn{(h-90)} (see details)} 
+#' \item{list("X1")}{a numeric vector, representing \eqn{\beta}}
 #' \item{list("X2")}{a numeric vector, representing \eqn{\alpha}}
-#' \item{list("X3")}{a numeric vector, representing the term \eqn{\alpha
-#' sin\theta}} \item{list("Group")}{a character vector, representing the Mayer
-#' grouping} }
+#' \item{list("X3")}{a numeric vector, representing the term \eqn{\alpha sin\theta}} 
+#' \item{list("Group")}{a character vector, representing the Mayer grouping} 
+#' }
 #' @author Luiz Fernando Palin Droubi
+#' 
 #' @source Stigler, Stephen M. (1986). \emph{The History of Statistics: The
 #' Measurement of Uncertainty before 1900}. Cambridge, MA: Harvard University
 #' Press, 1986, Table 1.1, p. 22.
@@ -1981,16 +1980,21 @@ NULL
 #' @aliases Michelson MichelsonSets
 #' @docType data
 #' @format \code{Michelson}: A data frame with 100 observations on the
-#' following variable, given in time order of data collection \describe{
-#' \item{list("velocity")}{a numeric vector} }
+#' following variable, given in time order of data collection 
+#' \describe{
+#' \item{list("velocity")}{a numeric vector} 
+#' }
 #' 
 #' \code{MichelsonSets}: A 20 x 5 matrix, with format int [1:20, 1:5] 850 850
 #' 1000 810 960 800 830 830 880 720 ...  - attr(*, "dimnames")=List of 2 ..$ :
 #' NULL ..$ : chr [1:5] "ds12" "ds13" "ds14" "ds15" ...
+#' 
 #' @seealso \code{\link[datasets]{morley}} for these data in another format
+#' 
 #' @references Michelson, A. A. (1882). "Experimental determination of the
 #' velocity of light made at the United States Naval Academy, Anapolis".
 #' \emph{Astronomical Papers}, 1,109-145, U. S. Nautical Almanac Office.
+#' 
 #' @source Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
 #' \url{https://www.math.uah.edu/stat/data/Michelson.html}
 #' 
@@ -2053,31 +2057,38 @@ NULL
 #' @aliases Minard Minard.cities Minard.troops Minard.temp
 #' @docType data
 #' @format \code{Minard.troops}: A data frame with 51 observations on the
-#' following 5 variables giving the number of surviving troops.  \describe{
-#' \item{list("long")}{Longitude} \item{list("lat")}{Latitude}
+#' following 5 variables giving the number of surviving troops.  
+#' \describe{
+#' \item{list("long")}{Longitude} 
+#' \item{list("lat")}{Latitude}
 #' \item{list("survivors")}{Number of surviving troops, a numeric vector}
-#' \item{list("direction")}{a factor with levels \code{A} ("Advance") \code{R}
-#' ("Retreat")} \item{list("group")}{a numeric vector} }
+#' \item{list("direction")}{a factor with levels \code{A} ("Advance") \code{R} ("Retreat")} \item{list("group")}{a numeric vector} 
+#' }
 #' 
 #' \code{Minard.cities}: A data frame with 20 observations on the following 3
 #' variables giving the locations of various places along the path of
-#' Napoleon's army.  \describe{ \item{list("long")}{Longitude}
-#' \item{list("lat")}{Latitude} \item{list("city")}{City name: a factor with
-#' levels \code{Bobr} \code{Chjat} ... \code{Witebsk} \code{Wixma}} }
+#' Napoleon's army.  
+#' \describe{ 
+#' \item{list("long")}{Longitude}
+#' \item{list("lat")}{Latitude} 
+#' \item{list("city")}{City name: a factor with levels \code{Bobr} \code{Chjat} ... \code{Witebsk} \code{Wixma}} }
 #' 
 #' \code{Minard.temp}: A data frame with 9 observations on the following 4
 #' variables, giving the temperature at various places along the march of
-#' retreat from Moscow.  \describe{ \item{list("long")}{Longitude}
-#' \item{list("temp")}{Temperature} \item{list("days")}{Number of days on the
-#' retreat march} \item{list("date")}{a factor with levels \code{Dec01}
-#' \code{Dec06} \code{Dec07} \code{Nov09} \code{Nov14} \code{Nov28}
-#' \code{Oct18} \code{Oct24}} }
+#' retreat from Moscow.  
+#' \describe{ 
+#' \item{list("long")}{Longitude}
+#' \item{list("temp")}{Temperature} 
+#' \item{list("days")}{Number of days on the retreat march} \item{list("date")}{a factor with levels \code{Dec01}
+#' \code{Dec06} \code{Dec07} \code{Nov09} \code{Nov14} \code{Nov28} \code{Oct18} \code{Oct24}} 
+#' }
 #' @references Friendly, M. (2002).  Visions and Re-visions of Charles Joseph
 #' Minard, \emph{Journal of Educational and Behavioral Statistics}, 27, No. 1,
 #' 31-51.
 #' 
 #' Friendly, M. (2003). Re-Visions of Minard.
 #' \url{http://datavis.ca/gallery/re-minard.html}
+#' 
 #' @source Originally given by Lee Wilkinson, in a text file associated with
 #' \emph{The Grammar of Graphics} (1990). Springer.
 #' @keywords datasets spatial
@@ -2169,16 +2180,16 @@ NULL
 #' @name Nightingale
 #' @docType data
 #' @format A data frame with 24 observations on the following 10 variables.
-#' \describe{ \item{list("Date")}{a Date, composed as \code{as.Date(paste(Year,
-#' Month, 1, sep='-'), "%Y-%b-%d")}} \item{list("Month")}{Month of the Crimean
-#' War, an ordered factor} \item{list("Year")}{Year of the Crimean War}
+#' \describe{ 
+#' \item{list("Date")}{a Date, composed as \code{as.Date(paste(Year, Month, 1, sep='-'), "%Y-%b-%d")}} 
+#' \item{list("Month")}{Month of the Crimean War, an ordered factor} 
+#' \item{list("Year")}{Year of the Crimean War}
 #' \item{list("Army")}{Estimated average monthly strength of the British army}
-#' \item{list("Disease")}{Number of deaths from preventable or mitagable
-#' zymotic diseases} \item{list("Wounds")}{Number of deaths directly from
-#' battle wounds} \item{list("Other")}{Number of deaths from other causes}
-#' \item{list("Disease.rate")}{Annual rate of deaths from preventable or
-#' mitagable zymotic diseases, per 1000} \item{list("Wounds.rate")}{Annual rate
-#' of deaths directly from battle wounds, per 1000}
+#' \item{list("Disease")}{Number of deaths from preventable or mitagable zymotic diseases} 
+#' \item{list("Wounds")}{Number of deaths directly from battle wounds} 
+#' \item{list("Other")}{Number of deaths from other causes}
+#' \item{list("Disease.rate")}{Annual rate of deaths from preventable or mitagable zymotic diseases, per 1000} 
+#' \item{list("Wounds.rate")}{Annual rate of deaths directly from battle wounds, per 1000}
 #' \item{list("Other.rate")}{Annual rate of deaths from other causes, per 1000}
 #' }
 #' @references Nightingale, F. (1858) \emph{Notes on Matters Affecting the
@@ -2194,6 +2205,7 @@ NULL
 #' 
 #' Pearson, M. and Short, I. (2008) Nightingale's Rose (flash animation).
 #' \url{http://understandinguncertainty.org/files/animations/Nightingale11/Nightingale1.html}
+#' 
 #' @source The data were obtained from:
 #' 
 #' Pearson, M. and Short, I. (2007). Understanding Uncertainty: Mathematics of
@@ -2344,14 +2356,15 @@ NULL
 #' @docType data
 #' @format A data frame with 468 observations on the following 6 variables,
 #' giving the latitude and longitude of 39 points recorded from 12 sources
-#' (Actual + 11 maps).  \describe{ \item{list("point")}{a numeric vector}
+#' (Actual + 11 maps).  
+#' \describe{ 
+#' \item{list("point")}{a numeric vector}
 #' \item{list("col")}{Column in the table a numeric vector}
-#' \item{list("name")}{Name of the map maker, using \code{Actual} for the true
-#' coordinates of the points.  A factor with levels \code{Actual}
-#' \code{Arrowsmith} \code{Belin} \code{Cary} \code{Coronelli} \code{D'Anville}
-#' \code{Del'Isle} \code{Lattre} \code{Melish} \code{Mitchell} \code{Popple}}
-#' \item{list("year")}{Year of the map} \item{list("lat")}{Latitude}
-#' \item{list("long")}{Longitude} }
+#' \item{list("name")}{Name of the map maker, using \code{Actual} for the true coordinates of the points.  A factor with levels \code{Actual} \code{Arrowsmith} \code{Belin} \code{Cary} \code{Coronelli} \code{D'Anville} \code{Del'Isle} \code{Lattre} \code{Melish} \code{Mitchell} \code{Popple}}
+#' \item{list("year")}{Year of the map} 
+#' \item{list("lat")}{Latitude}
+#' \item{list("long")}{Longitude} 
+#' }
 #' @source Andrews, D. F., and Herzberg, A. M. (1985). \emph{Data: A Collection
 #' of Problems from Many fields for the Student and Research Worker}. New York:
 #' Springer, Table 10.1.  The data were obtained from
@@ -2391,19 +2404,24 @@ NULL
 #' @name PearsonLee
 #' @docType data
 #' @format A frequency data frame with 746 observations on the following 6
-#' variables.  \describe{ \item{list("child")}{child height in inches, a
-#' numeric vector} \item{list("parent")}{parent height in inches, a numeric
-#' vector} \item{list("frequency")}{a numeric vector} \item{list("gp")}{a
-#' factor with levels \code{fd} \code{fs} \code{md} \code{ms}}
+#' variables.  
+#' \describe{ \item{list("child")}{child height in inches, a numeric vector} 
+#' \item{list("parent")}{parent height in inches, a numeric vector} 
+#' \item{list("frequency")}{a numeric vector} 
+#' \item{list("gp")}{a factor with levels \code{fd} \code{fs} \code{md} \code{ms}}
 #' \item{list("par")}{a factor with levels \code{Father} \code{Mother}}
-#' \item{list("chl")}{a factor with levels \code{Daughter} \code{Son}} }
+#' \item{list("chl")}{a factor with levels \code{Daughter} \code{Son}} 
+#' }
+#' 
 #' @seealso \code{\link{Galton}}
+#' 
 #' @references Wachsmuth, A.W., Wilkinson L., Dallal G.E. (2003).  Galton's
 #' bend: A previously undiscovered nonlinearity in Galton's family stature
 #' regression data.  \emph{The American Statistician}, 57, 190-192.
 #' %\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
 #' c("\\Sexpr[results=rd]{tools:::Rd_expr_doi(\"#1\")}",
 #' "10.1198/0003130031874")\Sexpr{tools:::Rd_expr_doi("10.1198/0003130031874")}
+#' 
 #' @source Pearson, K. and Lee, A. (1896). Mathematical contributions to the
 #' theory of evolution. On telegony in man, etc. \emph{Proceedings of the Royal
 #' Society of London}, 60 , 273-283.
@@ -2490,17 +2508,18 @@ NULL
 #' @name Playfair1824
 #' @docType data
 #' @format A data frame with 55 observations on the following 9 variables.
-#' \describe{ \item{list("Year")}{numeric, a numeric vector}
-#' \item{list("Stocks")}{Price of Stocks (Pounds per 3\% consol bond), a
-#' numeric vector} \item{list("Wheat")}{Price of Wheat (Shillings per quarter),
-#' a numeric vector} \item{list("Bread")}{Price of Bread (Farthings per
-#' quarter-loaf), a numeric vector} \item{list("Debt")}{National debt (Tens of
-#' millions of pounds), a numeric vector} \item{list("Exports")}{Exports
-#' (Millions of pounds), a numeric vector} \item{list("Imports")}{Imports
-#' (Millions of pounds), a numeric vector}
-#' \item{list("Expenditure")}{Expenditure (Millions of pounds), a numeric
-#' vector} \item{list("Revenue")}{Revenue (Millions of pounds), a numeric
-#' vector} }
+#' \describe{ 
+#' \item{list("Year")}{numeric, a numeric vector}
+#' \item{list("Stocks")}{Price of Stocks (Pounds per 3\% consol bond), a numeric vector} 
+#' \item{list("Wheat")}{Price of Wheat (Shillings per quarter), a numeric vector} 
+#' \item{list("Bread")}{Price of Bread (Farthings per quarter-loaf), a numeric vector} 
+#' \item{list("Debt")}{National debt (Tens of millions of pounds), a numeric vector} 
+#' \item{list("Exports")}{Exports (Millions of pounds), a numeric vector} 
+#' \item{list("Imports")}{Imports (Millions of pounds), a numeric vector}
+#' \item{list("Expenditure")}{Expenditure (Millions of pounds), a numeric vector} 
+#' \item{list("Revenue")}{Revenue (Millions of pounds), a numeric vector} 
+#' }
+#' 
 #' @references Playfair, W. (1824). \emph{Chronology of Public Events and
 #' Remarkable Occurrences within the Last Fifty Years; or from 1774 to 1824},
 #' published in London.
@@ -2591,19 +2610,19 @@ NULL
 #' @name PolioTrials
 #' @docType data
 #' @format A data frame with 8 observations on the following 6 variables.
-#' \describe{ \item{list("Experiment")}{a factor with levels
-#' \code{ObservedControl} \code{RandomizedControl}} \item{list("Group")}{a
-#' factor with levels \code{Controls} \code{Grade2NotInoculated}
-#' \code{IncompleteVaccinations} \code{NotInoculated} \code{Placebo}
-#' \code{Vaccinated}} \item{list("Population")}{the size of the population in
-#' each group in each experiment} \item{list("Paralytic")}{the number of cases
-#' of paralytic polio observed in that group} \item{list("NonParalytic")}{the
-#' number of cases of paralytic polio observed in that group}
-#' \item{list("FalseReports")}{the number of cases initially reported as polio,
-#' but later determined not to be polio in that group} }
+#' \describe{ 
+#' \item{list("Experiment")}{a factor with levels \code{ObservedControl} \code{RandomizedControl}} 
+#' \item{list("Group")}{a factor with levels \code{Controls} \code{Grade2NotInoculated} \code{IncompleteVaccinations} \code{NotInoculated} \code{Placebo}
+#' \code{Vaccinated}} 
+#' \item{list("Population")}{the size of the population in each group in each experiment} 
+#' \item{list("Paralytic")}{the number of cases of paralytic polio observed in that group} 
+#' \item{list("NonParalytic")}{the number of cases of paralytic polio observed in that group}
+#' \item{list("FalseReports")}{the number of cases initially reported as polio, but later determined not to be polio in that group} 
+#' }
 #' @references K. A.  Brownlee (1955). "Statistics of the 1954 Polio Vaccine
 #' Trials", \emph{Journal of the American Statistical Association}, 50,
 #' 1005-1013.
+#' 
 #' @source Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
 #' \url{https://www.math.uah.edu/stat/data/Polio.html}
 #' 
@@ -2652,11 +2671,14 @@ NULL
 #' @name Pollen
 #' @docType data
 #' @format A data frame with 3848 observations on the following 5 variables,
-#' representing ficticious measurements of grains of pollen.  \describe{
-#' \item{list("ridge")}{along X, a numeric vector} \item{list("nub")}{along y,
-#' a numeric vector} \item{list("crack")}{along z, a numeric vector}
+#' representing ficticious measurements of grains of pollen.  
+#' \describe{
+#' \item{list("ridge")}{along X, a numeric vector} 
+#' \item{list("nub")}{along y, a numeric vector} 
+#' \item{list("crack")}{along z, a numeric vector}
 #' \item{list("weight")}{weight of pollen grain, a numeric vector}
-#' \item{list("density")}{weight of pollen grain, a numeric vector} }
+#' \item{list("density")}{weight of pollen grain, a numeric vector} 
+#' }
 #' @references Becker, R.A., Denby, L., McGill, R., and Wilks, A. (1986).
 #' Datacryptanalysis: A Case Study. \emph{Proceedings of the Section on
 #' Statistical Graphics}, 92-97.
@@ -2703,12 +2725,14 @@ NULL
 #' @name Prostitutes
 #' @docType data
 #' @format A data frame with 516 observations on the following 5 variables.
-#' \describe{ \item{list("Year")}{a numeric vector} \item{list("month")}{a
-#' factor with levels \code{Apr} \code{Aug} \code{Dec} \code{Feb} \code{Jan}
-#' \code{Jul} \code{Jun} \code{Mar} \code{May} \code{Nov} \code{Oct}
-#' \code{Sep}} \item{list("count")}{a numeric vector: number of prostitutes}
-#' \item{list("mon")}{a numeric vector: numeric month} \item{list("date")}{a
-#' Date} }
+#' \describe{ 
+#' \item{list("Year")}{a numeric vector} 
+#' \item{list("month")}{a factor with levels \code{Apr} \code{Aug} \code{Dec} \code{Feb} \code{Jan} \code{Jul} \code{Jun} \code{Mar} \code{May} \code{Nov} \code{Oct} \code{Sep}} 
+#' \item{list("count")}{a numeric vector: number of prostitutes}
+#' \item{list("mon")}{a numeric vector: numeric month} 
+#' \item{list("date")}{a Date} 
+#' }
+#' 
 #' @source Parent-Duchatelet, A. (1857), \emph{De la prostitution dans la ville
 #' de Paris}, 3rd ed, p. 32, 36
 #' @keywords datasets
@@ -2751,14 +2775,15 @@ NULL
 #' @format A frequency data frame with 72 observations on the following 4
 #' variables giving the distribution of 10,000 sovereigns, classified according
 #' to the \code{Bags} in which they were collected and the \code{Deviation}
-#' from the standard weight.  \describe{ \item{list("Bags")}{an ordered factor
-#' with levels \code{1 and 2} < \code{3} < \code{4} < \code{5} < \code{6} <
-#' \code{7} < \code{8} < \code{9} < \code{10}} \item{list("Group")}{an ordered
-#' factor with levels \code{below std} < \code{near std} < \code{above std}}
-#' \item{list("Deviation")}{an ordered factor with levels \code{Below -R} <
-#' \code{(-R to -.2)} < \code{(-.2 to -.l)} < \code{(-.1 to 0)} < \code{(0 to
+#' from the standard weight.  
+#' \describe{ 
+#' \item{list("Bags")}{an ordered factor with levels \code{1 and 2} < \code{3} < \code{4} < \code{5} < \code{6} < \code{7} < \code{8} < \code{9} < \code{10}} 
+#' \item{list("Group")}{an ordered factor with levels \code{below std} < \code{near std} < \code{above std}}
+#' \item{list("Deviation")}{an ordered factor with levels \code{Below -R} < \code{(-R to -.2)} < \code{(-.2 to -.l)} < \code{(-.1 to 0)} < \code{(0 to
 #' .l)} < \code{(.1 to .2)} < \code{(.2 to R)} < \code{Above R}}
-#' \item{list("count")}{number of sovereigns} }
+#' \item{list("count")}{number of sovereigns} 
+#' }
+#' 
 #' @references Great Britain (1848). "Report of the Commissioners Appointed to
 #' Inquire into the Constitution, Management and Expense of the Royal Mint." In
 #' Vol 28 of \emph{House Documents for 1849}.
@@ -2839,17 +2864,18 @@ NULL
 #' @name Quarrels
 #' @docType data
 #' @format A data frame with 779 observations on the following 84 variables.
-#' \describe{ \item{list("ID ")}{V84: Id sequence } \item{list("year ")}{V1:
-#' Begin date of quarrel } \item{list("international ")}{V2: Nation vs nation }
-#' \item{list("colonial ")}{V3: Nation vs colony } \item{list("revolution
-#' ")}{V4: Revolution or civil war } \item{list("nat.grp ")}{V5: Nation vs gp
-#' in other nation } \item{list("grp.grpSame ")}{V6: Grp vs grp (same nation) }
-#' \item{list("grp.grpDif ")}{V7: Grp vs grp (between nations) }
-#' \item{list("numGroups ")}{V8: Number groups against which fighting }
-#' \item{list("months ")}{V9: Number months fighting } \item{list("pairs
-#' ")}{V10: Number pairs in whole matrix } \item{list("monthsPairs ")}{V11: Num
-#' mons for all in matrix } \item{list("logDeaths ")}{V12: Log (killed) matrix
-#' } \item{list("deaths ")}{V13: Total killed for matrix }
+#' \describe{ 
+#' \item{list("ID ")}{V84: Id sequence } \item{list("year ")}{V1: Begin date of quarrel } 
+#' \item{list("international")}{V2: Nation vs nation }
+#' \item{list("colonial")}{V3: Nation vs colony } \item{list("revolution ")}{V4: Revolution or civil war } 
+#' \item{list("nat.grp")}{V5: Nation vs gp in other nation } \item{list("grp.grpSame ")}{V6: Grp vs grp (same nation) }
+#' \item{list("grp.grpDif")}{V7: Grp vs grp (between nations) }
+#' \item{list("numGroups")}{V8: Number groups against which fighting }
+#' \item{list("months")}{V9: Number months fighting } 
+#' \item{list("pairs")}{V10: Number pairs in whole matrix } 
+#' \item{list("monthsPairs")}{V11: Num mons for all in matrix } 
+#' \item{list("logDeaths ")}{V12: Log (killed) matrix } 
+#' \item{list("deaths ")}{V13: Total killed for matrix }
 #' \item{list("exchangeGoods ")}{V14: Gp sent goods to other }
 #' \item{list("obstacleGoods ")}{V15: Gp puts obstacles to goods }
 #' \item{list("intermarriageOK ")}{V16: Present intermarriages }
@@ -2858,47 +2884,56 @@ NULL
 #' \item{list("difBody ")}{V19: Difference in body characteristics }
 #' \item{list("simDress ")}{V20: Similarity of customs (dress) }
 #' \item{list("difDress ")}{V21: Difference of customs (dress) }
-#' \item{list("eqWealth ")}{V22: Common level of wealth } \item{list("difWealth
-#' ")}{V23: Difference in wealth } \item{list("simMariagCust ")}{V24: Similar
-#' marriage cusomst } \item{list("difMariagCust ")}{V25: Different marriage
-#' customs } \item{list("simRelig ")}{V26: Similar religion or philosophy of
-#' life } \item{list("difRelig ")}{V27: Religion or philosophy felt different }
+#' \item{list("eqWealth ")}{V22: Common level of wealth } 
+#' \item{list("difWealth ")}{V23: Difference in wealth } 
+#' \item{list("simMariagCust ")}{V24: Similar marriage customst } 
+#' \item{list("difMariagCust ")}{V25: Different marriage customs } 
+#' \item{list("simRelig ")}{V26: Similar religion or philosophy of
+#' life } 
+#' \item{list("difRelig ")}{V27: Religion or philosophy felt different }
 #' \item{list("philanthropy ")}{V28: General philanthropy }
 #' \item{list("restrictMigration ")}{V29: Restricted immigrations }
 #' \item{list("sameLanguage ")}{V30: Common mother tongue }
-#' \item{list("difLanguage ")}{V31: Different languages } \item{list("simArtSci
-#' ")}{V32: Similar science, arts } \item{list("travel ")}{V33: Travel }
+#' \item{list("difLanguage ")}{V31: Different languages } 
+#' \item{list("simArtSci ")}{V32: Similar science, arts } 
+#' \item{list("travel ")}{V33: Travel }
 #' \item{list("ignorance ")}{V34: Ignorant of other/both }
 #' \item{list("simPersLiberty ")}{V35: Personal liberty similar }
 #' \item{list("difPersLiberty ")}{V36: More personal liberty }
-#' \item{list("sameGov ")}{V37: Common government } \item{list("sameGovYrs
-#' ")}{V38: Years since common govt established } \item{list("prevConflict
-#' ")}{V39: Belligerents fought previously } \item{list("prevConflictYrs
-#' ")}{V40: Years since belligerents fought } \item{list("chronicFighting
-#' ")}{V41: Chronic fighting between belligerents } \item{list("persFriendship
-#' ")}{V42: Autocrats personal friends } \item{list("persResentment ")}{V43:
-#' Leaders personal resentment } \item{list("difLegal ")}{V44: Annoyingly
-#' different legal systems } \item{list("nonintervention ")}{V45: Policy of
-#' nonintervention } \item{list("thirdParty ")}{V46: Led by 3rd group to
-#' conflict } \item{list("supportEnemy ")}{V47: Supported others enemy }
+#' \item{list("sameGov ")}{V37: Common government } 
+#' \item{list("sameGovYrs ")}{V38: Years since common govt established } 
+#' \item{list("prevConflict ")}{V39: Belligerents fought previously } 
+#' \item{list("prevConflictYrs ")}{V40: Years since belligerents fought } 
+#' \item{list("chronicFighting ")}{V41: Chronic fighting between belligerents } 
+#' \item{list("persFriendship ")}{V42: Autocrats personal friends } 
+#' \item{list("persResentment ")}{V43: Leaders personal resentment } 
+#' \item{list("difLegal ")}{V44: Annoyingly different legal systems } 
+#' \item{list("nonintervention ")}{V45: Policy of nonintervention } 
+#' \item{list("thirdParty ")}{V46: Led by 3rd group to conflict } 
+#' \item{list("supportEnemy ")}{V47: Supported others enemy }
 #' \item{list("attackAlly ")}{V48: Attacked ally of other }
 #' \item{list("rivalsLand ")}{V49: Rivals territory concess }
-#' \item{list("rivalsTrade ")}{V50: Rivals trade } \item{list("churchPower
-#' ")}{V51: Church civil power } \item{list("noExtension ")}{V52: Policy not
-#' extending term } \item{list("territory ")}{V53: Desired territory }
-#' \item{list("habitation ")}{V54: Wanted habitation } \item{list("minerals
-#' ")}{V55: Desired minerals } \item{list("StrongHold ")}{V56: Wanted strategic
-#' stronghold } \item{list("taxation ")}{V57: Taxed other } \item{list("loot
-#' ")}{V58: Wanted loot } \item{list("objectedWar ")}{V59: Objected to war }
-#' \item{list("enjoyFight ")}{V60: Enjoyed fighting } \item{list("pride
-#' ")}{V61: Elated by strong pride } \item{list("overpopulated ")}{V62:
-#' Insufficient land for population } \item{list("fightForPay ")}{V63: Fought
-#' only for pay } \item{list("joinWinner ")}{V64: Desired to join winners }
+#' \item{list("rivalsTrade ")}{V50: Rivals trade } 
+#' \item{list("churchPower ")}{V51: Church civil power } 
+#' \item{list("noExtension ")}{V52: Policy not extending term } 
+#' \item{list("territory ")}{V53: Desired territory }
+#' \item{list("habitation ")}{V54: Wanted habitation } 
+#' \item{list("minerals ")}{V55: Desired minerals } 
+#' \item{list("StrongHold ")}{V56: Wanted strategic stronghold } 
+#' \item{list("taxation ")}{V57: Taxed other } 
+#' \item{list("loot ")}{V58: Wanted loot } 
+#' \item{list("objectedWar ")}{V59: Objected to war }
+#' \item{list("enjoyFight ")}{V60: Enjoyed fighting } 
+#' \item{list("pride ")}{V61: Elated by strong pride } 
+#' \item{list("overpopulated ")}{V62: Insufficient land for population } 
+#' \item{list("fightForPay ")}{V63: Fought only for pay } 
+#' \item{list("joinWinner ")}{V64: Desired to join winners }
 #' \item{list("otherDesiredWar ")}{V65: Quarrel desired by other }
 #' \item{list("propaganda3rd ")}{V66: Issued of propaganda to third parties }
-#' \item{list("protection ")}{V67: Offered protection } \item{list("sympathy
-#' ")}{V68: Sympathized under control } \item{list("debt ")}{V69: Owed money to
-#' others } \item{list("prevAllies ")}{V70: Had fought as allies }
+#' \item{list("protection ")}{V67: Offered protection } 
+#' \item{list("sympathy ")}{V68: Sympathized under control }
+#' \item{list("debt ")}{V69: Owed money to others } 
+#' \item{list("prevAllies ")}{V70: Had fought as allies }
 #' \item{list("yearsAllies ")}{V71: Years since fought as allies }
 #' \item{list("intermingled ")}{V72: Had intermingled on territory }
 #' \item{list("interbreeding ")}{V73: Interbreeding between groups }
@@ -2906,18 +2941,20 @@ NULL
 #' \item{list("orderedObey ")}{V75: Ordered other to obey }
 #' \item{list("commerceOther ")}{V76: Commercial enterprises }
 #' \item{list("feltStronger ")}{V77: Felt stronger }
-#' \item{list("competeIntellect ")}{V78: Competed successfully intellectual occ
-#' } \item{list("insecureGovt ")}{V79: Government insecure }
+#' \item{list("competeIntellect ")}{V78: Competed successfully intellectual occ } 
+#' \item{list("insecureGovt ")}{V79: Government insecure }
 #' \item{list("prepWar ")}{V80: Preparations for war }
 #' \item{list("RegionalError ")}{V81: Regional error measure }
 #' \item{list("CasualtyError ")}{V82: Casualty error measure }
-#' \item{list("Auxiliaries ")}{V83: Auxiliaries in service of nation at war } }
+#' \item{list("Auxiliaries ")}{V83: Auxiliaries in service of nation at war } 
+#' }
 #' @references Lewis F. Richardson, (1960). \emph{The Statistics Of Deadly
 #' Quarrels}. (Edited by Q. Wright and C. C. Lienau).  Pittsburgh: Boxwood
 #' Press.
 #' 
 #' Rummel, Rudolph J. (1967), "Dimensions of Dyadic War, 1820-1952."
 #' \emph{Journal of Conflict Resolution}. 11, (2), 176 - 183.
+#' 
 #' @source \url{http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/05407}
 #' @keywords datasets
 #' @examples
