@@ -1,7 +1,9 @@
 
 
-#' Arbuthnot's data on male and female birth ratios
-#' 
+#' Arbuthnot's Data on Male and Female Birth Ratios
+#'
+#' @description
+#'  
 #' John Arbuthnot (1710) used these time series data on the ratios of male to
 #' female christenings in London from 1629-1710 to carry out the first known
 #' significance test, comparing observed data to a null hypothesis. The data
@@ -14,7 +16,9 @@
 #' nearly constant birth ratio > 1 could be interpreted to show the guiding
 #' hand of a devine being. The data set adds variables of deaths from the
 #' plague and total mortality obtained by Campbell and from Creighton (1965).
-#' 
+#'
+#' @details
+#'  
 #' Sandy Zabell (1976) pointed out several errors and inconsistencies in the
 #' Arbuthnot data.  In particular, the values for 1674 and 1704 are identical,
 #' suggesting that the latter were copied erroneously from the former.
@@ -76,6 +80,7 @@ NULL
 
 #' La Felicisima Armada
 #' 
+#' @description
 #' The Spanish Armada (Spanish: \emph{Grande y Felicisima Armada}, literally
 #' "Great and Most Fortunate Navy") was a Spanish fleet of 130 ships that
 #' sailed from La Coruna in August 1588. During its preparation, several
@@ -89,6 +94,7 @@ NULL
 #' de Falguerolles (2008) reports the table given here as \code{Armada} as an
 #' early example of data to which multivariate methods might be applied.
 #' 
+#' @details
 #' Note that \code{men = soldiers + sailors}, so this variable is redundant in
 #' a multivariate analysis.
 #' 
@@ -154,6 +160,7 @@ NULL
 
 #' Bowley's data on values of British and Irish trade, 1855-1899
 #' 
+#' @description
 #' In one of the first statistical textbooks, Arthur Bowley (1901) used these
 #' data to illustrate an arithmetic and graphical analysis of time-series data
 #' using the total value of British and Irish exports from 1855-1899.  He
@@ -190,9 +197,9 @@ NULL
 #'   as.vector(stats::filter(x, rep(1 / width, width), sides = 2))
 #'   }
 #' 
-#' mav3<-running(Bowley$Value, width=3)
-#' mav5<-running(Bowley$Value, width=5)
-#' mav9<-running(Bowley$Value, width=9)
+#' mav3 <- running(Bowley$Value, width=3)
+#' mav5 <- running(Bowley$Value, width=5)
+#' mav9 <- running(Bowley$Value, width=9)
 #' lines(Bowley$Year, mav3, col='blue', lty=2)
 #' lines(Bowley$Year, mav5, col='green3', lty=3)
 #' lines(Bowley$Year, mav9, col='brown', lty=4)
@@ -214,12 +221,14 @@ NULL
 
 #' Halley's Breslau Life Table
 #' 
+#' @description
 #' Edmond Halley published his Breslau life table in 1693, which was arguably
 #' the first in the world based on population data. David Bellhouse (2011)
 #' resurrected the original sources of these data, collected by Caspar Neumann
 #' in the city of Breslau (now called Wroclaw), and then reconstructed in the
 #' 1880s by Jonas Graetzer, the medical officer in Breslau at that time.
 #' 
+#' @details
 #' The dataset here follows Graetzer, and gives the number of deaths at ages
 #' \code{1:100} recorded in each of the years \code{1687:1691}. Halley's
 #' analysis was based on the total over those years.
@@ -284,6 +293,7 @@ NULL
 
 #' Cavendish's Determinations of the Density of the Earth
 #' 
+#' @description
 #' Henry Cavendish carried out a series of experiments in 1798 to determine the
 #' mean density of the earth, as an indirect means to calculate the
 #' gravitational constant, G, in Newton's formula for the force (f) of
@@ -294,6 +304,7 @@ NULL
 #' with real, historical data.  For these data sets, he found that trimmed
 #' means performed as well or better than more elaborate robust estimators.
 #' 
+#' @details
 #' Density values (D) of the earth are given as relative to that of water.  If
 #' the earth is regarded as a sphere of radius R, Newton's law can be expressed
 #' as \eqn{G D = 3 g / (4 \pi R)}, where \eqn{g=9.806 m/s^2} is the
@@ -355,6 +366,7 @@ NULL
 
 #' Chest measurements of Scottish Militiamen
 #' 
+#' @description
 #' Quetelet's data on chest measurements of 5738 Scottish Militiamen. Quetelet
 #' (1846) used this data as a demonstration of the normal distribution of
 #' physical characteristics and the concept of \emph{l'homme moyen}.
@@ -419,6 +431,7 @@ NULL
 
 #' William Farr's Data on Cholera in London, 1849
 #' 
+#' @description
 #' In 1852, William Farr, published a report of the Registrar-General on
 #' mortality due to cholera in England in the years 1848-1849, during which
 #' there was a large epidemic throughout the country.  Farr initially believed
@@ -431,6 +444,7 @@ NULL
 #' the districts of London in relation to the available predictors from Farr's
 #' table.
 #' 
+#' @details
 #' The supply of \code{water} was classified as \dQuote{Thames, between
 #' Battersea and Waterloo Bridges} (central London), \dQuote{New River, Rivers
 #' Lea and Ravensbourne}, and \dQuote{Thames, at Kew and Hammersmith} (western
@@ -533,6 +547,7 @@ NULL
 
 #' Daily Deaths from Cholera and Diarrhaea in England, 1849
 #' 
+#' @description
 #' Deaths from Cholera and Diarrhaea, for each day of the month of each of the
 #' 12 months of 1849.
 #' 
@@ -546,6 +561,7 @@ NULL
 #' James Riley (2023) notes, "Cholera 1849 has special significance --- it is
 #' likely to be one of few modern pandemics that was completely unmitigated."
 #' 
+#' @details
 #' The data set was transcribed by James Riley to a spreadsheet,
 #' \url{https://github.com/jimr1603/1849-cholera}. He notes, "the scan at
 #' Internet Archive has a fold on day 11. I have derived this column from the
@@ -600,6 +616,7 @@ NULL
 
 #' Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives
 #' 
+#' @description
 #' Cushny and Peebles (1905) studied the effects of hydrobromides related to
 #' scopolamine and atropine in producing sleep. The sleep of mental patients
 #' was measured without hypnotic (\code{Control}) and after treatment with one
@@ -625,6 +642,7 @@ NULL
 #' analyses. To allow weighted analyses, the number of observations for each
 #' mean is contained in the data frame \code{CushnyPeeblesN}.
 #' 
+#' @details
 #' The last patient (11) has no \code{Control} observations, and so is often
 #' excluded in analyses or other versions of this data set.
 #' 
@@ -716,6 +734,7 @@ NULL
 
 #' Edgeworth's counts of dactyls in Virgil's Aeneid
 #' 
+#' @description
 #' Edgeworth (1885) took the first 75 lines in Book XI of Virgil's
 #' \emph{Aeneid} and classified each of the first four "feet" of the line as a
 #' dactyl (one long syllable followed by two short ones) or not.
@@ -768,6 +787,7 @@ NULL
 
 #' Elderton and Pearson's (1910) data on drinking and wages
 #' 
+#' @description
 #' In 1910, Karl Pearson weighed in on the debate, fostered by the temperance
 #' movement, on the evils done by alcohol not only to drinkers, but to their
 #' families. The report "A first study of the influence of parental alcoholism
@@ -787,6 +807,7 @@ NULL
 #' Chapter 1.  The data set \code{DrinksWages} is just one of Pearson's many
 #' tables, that he published in a letter to \emph{The Times}, August 10, 1910.
 #' 
+#' @details
 #' The data give Karl Pearson's tabulation of the father's trades from an
 #' Edinburgh sample, classified by whether they drink or are sober, and giving
 #' average weekly wage.
@@ -842,6 +863,7 @@ NULL
 
 #' Edgeworth's Data on Death Rates in British Counties
 #' 
+#' @description
 #' In 1885, Francis Edgeworth published a paper, \emph{On methods of
 #' ascertaining variations in the rate of births, deaths and marriages}. It
 #' contained among the first examples of two-way tables, analyzed to show
@@ -855,6 +877,7 @@ NULL
 #' Treated as frequencies, the data is also a good example of a case where the
 #' independence model fits reasonably well.
 #' 
+#' @details
 #' Edgeworth's data came from the Registrar General's report for the final
 #' year, 1883. The \code{Freq} variable represents death rates per 1000
 #' population in the six counties listed.
@@ -906,6 +929,7 @@ NULL
 
 #' Waite's data on Patterns in Fingerprints
 #' 
+#' @description
 #' Waite (1915) was interested in analyzing the association of patterns in
 #' fingerprints, and produced a table of counts for 2000 right hands,
 #' classified by the number of fingers describable as a "whorl", a "small loop"
@@ -919,7 +943,8 @@ NULL
 #' formulation of such tests for association in restricted tables is now
 #' referred to as models for quasi-independence.
 #' 
-#' Cells for which \code{Whorls + Loops>5} have \code{NA} for \code{count}
+#' @details
+#' Cells for which \code{Whorls + Loops > 5} have \code{NA} for \code{count}
 #' 
 #' @name Fingerprints
 #' @docType data
@@ -927,7 +952,7 @@ NULL
 #' variables, representing a 6 x 6 table giving the cross-classification of the
 #' fingers on 2000 right hands as a whorl, small loop or neither.  
 #' \describe{
-#' \item{list("Whorls")}{Number of whorls, an ordered factor with levels \code{0} < \code{1} < \code{2} < \code{3} < \code{4} < \code{5}}
+#' \item{list("Whorls")}{Number of whorls, an ordered factor with levels \code{0} < \code{1} < \code{2} < \dots < \code{5}}
 #' \item{list("Loops")}{Number of small loops, an ordered factor with levels \code{0} < \code{1} < \code{2} < \code{3} < \code{4} < \code{5}}
 #' \item{list("count")}{Number of hands} 
 #' }
@@ -963,6 +988,7 @@ NULL
 #' ellipses, thus setting the stage for correlation, regression and the
 #' bivariate normal distribution.
 #' 
+#' @details
 #' The data are recorded in class intervals of width 1.0 in. He used
 #' non-integer values for the center of each class interval because of the
 #' strong bias toward integral inches.
@@ -1009,12 +1035,6 @@ NULL
 #' @keywords datasets
 #' @examples
 #' 
-#' \dontshow{
-#' 	# allow to work with car 1
-#' 	if (packageDescription("car")[["Version"]] < 2) {
-#' 		dataEllipse <- data.ellipse
-#' 	}
-#' }
 #' data(Galton)
 #' 
 #' ###########################################################################
@@ -1041,16 +1061,18 @@ NULL
 
 #' Galton's data on the heights of parents and their children, by child
 #' 
+#' @description
 #' This data set lists the individual observations for 934 children in 205
 #' families on which Galton (1886) based his cross-tabulation.
 #' 
 #' In addition to the question of the relation between heights of parents and
 #' their offspring, for which this data is mainly famous, Galton had another
 #' purpose which the data in this form allows to address: Does marriage
-#' selection indicate a relationship between the heights of husbands and wives,
-#' a topic he called \emph{assortative mating}? Keen [p. 297-298](2010)
+#' selection indicate a relationship between the heights of husbands and wives?,
+#' a topic he called \emph{assortative mating}. Keen [p. 297--298](2010)
 #' provides a brief discussion of this topic.
 #' 
+#' @details
 #' Galton's notebook lists 963 children in 205 families ranging from 1-15 adult
 #' children children. Of these, 29 had non-numeric heights recorded and are not
 #' included here.
@@ -1133,16 +1155,20 @@ NULL
 
 #' Data from A.-M. Guerry, "Essay on the Moral Statistics of France"
 #' 
+#' @description
 #' Andre-Michel Guerry (1833) was the first to systematically collect and
 #' analyze social data on such things as crime, literacy and suicide with the
 #' view to determining social laws and the relations among these variables.
 #' 
-#' The Guerry data frame comprises a collection of 'moral variables' on the 86
+#' The \code{Guerry} data frame comprises a collection of 'moral variables' on the 86
 #' departments of France around 1830.  A few additional variables have been
 #' added from other sources.
 #' 
+#' @details
 #' Note that most of the variables (e.g., \code{Crime_pers}) are scaled so that
-#' 'more is better' morally.
+#' 'more is better' morally.  
+#' This is done by expressing "bad" numbers as \emph{population per} crime or by using ranks.
+#' Thus, in his choropleth maps, he was able to assign darker shading consistently to the departments that were worse.
 #' 
 #' Values for the quantitative variables displayed on Guerry's maps were taken
 #' from Table A2 in the English translation of Guerry (1833) by Whitt and
@@ -1157,8 +1183,7 @@ NULL
 #' \describe{ 
 #' \item{list("dept")}{Department ID: Standard numbers for the departments, except for Corsica (200)}
 #' \item{list("Region")}{Region of France ('N'='North', 'S'='South', 'E'='East', 'W'='West', 'C'='Central'). Corsica is coded as NA }
-#' \item{list("Department")}{Department name: Departments are named according to usage in 1830, but without accents.  A factor with levels \code{Ain}
-#' \code{Aisne} \code{Allier} ... \code{Vosges} \code{Yonne}}
+#' \item{list("Department")}{Department name: Departments are named according to usage in 1830, but without accents.  A factor with levels \code{Ain}, \code{Aisne}, \code{Allier}, ..., \code{Vosges}, \code{Yonne}}
 #' \item{list("Crime_pers")}{Population per Crime against persons. Source: A2 (Compte general, 1825-1830)} 
 #' \item{list("Crime_prop")}{Population per Crime against property. Source: A2 (Compte general, 1825-1830)}
 #' \item{list("Literacy")}{Percent Read & Write: Percent of military conscripts who can read and write. Source: A2 } 
@@ -1182,7 +1207,7 @@ NULL
 #' }
 #' 
 #' @seealso The \pkg{Guerry} package for maps of France:
-#' \code{\link[Guerry]{gfrance}} and related data.
+#' \code{\link[Guerry]{gfrance}}, related data, creating maps of his data and multivariate spatial analysis.
 #' 
 #' @references Dray, S. and Jombart, T. (2011). A Revisit Of Guerry's Data:
 #' Introducing Spatial Constraints In Multivariate Analysis.  \emph{The Annals
@@ -1222,13 +1247,15 @@ NULL
 
 
 #' Halley's Life Table
-#' 
+#'
+#' @description
 #' In 1693 the famous English astronomer Edmond Halley studied the birth and
 #' death records of the city of Breslau, which had been transmitted to the
 #' Royal Society by Caspar Neumann. He produced a life table showing the number
 #' of people surviving to any age from a cohort born the same year. He also
 #' used his table to compute the price of life annuities.
 #' 
+#' @details
 #' Halley's table contained only \code{age} and \code{number}. For people aged
 #' over 84 years, Halley just noted that their total number was 107. This value
 #' is not included in the data set.
@@ -1289,19 +1316,14 @@ NULL
 
 
 
-
-
-
-
-
-
-#' W. Stanley Jevons' data on numerical discrimination
+#' W. Stanley Jevons' data on Numerical Discrimination
 #' 
+#' @description
 #' In a remarkable brief note in \emph{Nature}, 1871, W. Stanley Jevons
 #' described the results of an experiment he had conducted on himself to
 #' determine the limits of the number of objects an observer could comprehend
 #' immediately without counting them.  This was an important philosophical
-#' question: How many objects can the mind embrace at once?
+#' question: \emph{How many objects can the mind embrace at once?}
 #' 
 #' He carried out 1027 trials in which he tossed an "uncertain number" of
 #' uniform black beans into a box and immediately attempted to estimate the
@@ -1311,6 +1333,7 @@ NULL
 #' plus or minus 2: Some limits on ..."  For Jevons, the magical number was
 #' 4.5, representing an empirical law of complete accuracy.
 #' 
+#' @details
 #' The original data were presented in a two-way, 13 x 13 frequency table,
 #' \code{estimated} (3:15) x \code{actual} (3:15).
 #' 
@@ -1399,8 +1422,9 @@ NULL
 #' \code{Langren.all} gives the estimates derived from all known versions of
 #' this graph.
 #' 
+#' @details
 #' In all the graphs, Toledo is implicitly at the origin and Rome is located
-#' relatively at the value of \code{Longitude} To judge correspondence with an
+#' relatively at the value of \code{Longitude}. To judge correspondence with an
 #' actual map, the positions in (lat, long) are
 #' 
 #' \code{ toledo <- c(39.86, -4.03); rome <- c(41.89, 12.5) }
@@ -1599,6 +1623,7 @@ NULL
 #' Macdonell's Data on Height and Finger Length of Criminals, used by Gosset
 #' (1908)
 #' 
+#' @description
 #' In the second issue of \emph{Biometrika}, W. R. Macdonell (1902) published
 #' an extensive paper, \emph{On Criminal Anthropometry and the Identification
 #' of Criminals} in which he included numerous tables of physical
@@ -1617,6 +1642,7 @@ NULL
 #' size 4, 8, ..., calculating the sample means, standard deviations and
 #' correlations for each sample.
 #' 
+#' @details
 #' Class intervals for \code{height} in Macdonell's table were given in 1 in.
 #' ranges, from (4' 7" 9/16 - 4' 8" 9/16), to (6' 4" 9/16 - 6' 5" 9/16). The
 #' values of \code{height} are taken as the lower class boundaries.
@@ -1862,12 +1888,13 @@ NULL
 #' second group were those with the nine largest negative values for this
 #' coefficient: equations 8, 18, 19, 21, 22, 23, 24, 25, and 26. The remaining
 #' nine equations formed the third group, which he described as having the
-#' largest values for the coefficient of \eqn{\alpha sin \theta}."
+#' largest values for the coefficient of \eqn{\alpha \sin \theta}."
 #' 
 #' Stigler (1986, p.21)
 #' 
 #' 
-#' Stigler (1986):
+#' @details
+#' Stigler (1986) says:
 #' 
 #' "The development of the method of least squares was closely associated with
 #' three of the major scientific problems of the eighteenth century: (1) to
@@ -1890,16 +1917,16 @@ NULL
 #' 
 #' His analysis led to this equation:
 #' 
-#' \deqn{\beta - (90-h) = \alpha sin(g-k) - \alpha sin\theta cos(g-k)}
+#' \deqn{\beta - (90-h) = \alpha \sin(g-k) - \alpha \sin\theta \cos(g-k)}
 #' 
 #' According to Stigler (1986, p. 21), this "equation would hold if no errors
 #' were present. The modern tendency would be to write, say":
 #' 
-#' \deqn{(h - 90) = - \beta + \alpha sin (g - k) - \alpha sin\theta cos(g - k)
+#' \deqn{(h - 90) = - \beta + \alpha \sin (g - k) - \alpha \sin\theta \cos(g - k)
 #' + E}
 #' 
 #' treating \eqn{(h - 90)} as the dependent variable and \eqn{-\beta},
-#' \eqn{\alpha}, and \eqn{-\alpha sin \theta} as the parameters in a linear
+#' \eqn{\alpha}, and \eqn{-\alpha \sin \theta} as the parameters in a linear
 #' regression model.
 #' 
 #' @name Mayer
@@ -1958,6 +1985,7 @@ NULL
 
 #' Michelson's Determinations of the Velocity of Light
 #' 
+#' @description
 #' The data frame \code{Michelson} gives Albert Michelson's measurements of the
 #' velocity of light in air, made from June 5 to July 2, 1879, reported in
 #' Michelson (1882).  The given values + 299,000 are Michelson's measurements
@@ -1969,6 +1997,7 @@ NULL
 #' measurements into 5 sets of 20 each.  These are contained in
 #' \code{MichelsonSets}.
 #' 
+#' @details
 #' The "true" value is taken to be 734.5, arrived at by taking the "true" speed
 #' of light in a vacuum to be 299,792.5 km/sec, and adjusting for the velocity
 #' in air.
@@ -2487,85 +2516,6 @@ NULL
 NULL
 
 
-
-
-
-#' Playfair's Linear Chronology
-#' 
-#' Data from William Playfair's (1824) last graph, titled "Linear Chronology,
-#' Exhibiting the Revenues, Expenditure, Debt, Price of Stocks and Bread, from
-#' 1770 to 1824".  The chart tracks multiple economic variables, including
-#' national debt, exports, imports, revenue, expenditure, the price of stocks,
-#' and the price of bread over a 154 year time span.
-#' 
-#' Playfair's 1824 chart is a pivotal work in the history of data visualization
-#' because it uses a multiple line graphs showing time series of economic
-#' indicators over time, with a fine appreciation of the complexity and
-#' directly labeled curves. The dataset, extracted from the image by Ivan
-#' Lokhov using WebPlotDigitizer, presents a challenge in trying re-create it,
-#' or do better using modern graphics methods.
-#' 
-#' @name Playfair1824
-#' @docType data
-#' @format A data frame with 55 observations on the following 9 variables.
-#' \describe{ 
-#' \item{list("Year")}{numeric, a numeric vector}
-#' \item{list("Stocks")}{Price of Stocks (Pounds per 3\% consol bond), a numeric vector} 
-#' \item{list("Wheat")}{Price of Wheat (Shillings per quarter), a numeric vector} 
-#' \item{list("Bread")}{Price of Bread (Farthings per quarter-loaf), a numeric vector} 
-#' \item{list("Debt")}{National debt (Tens of millions of pounds), a numeric vector} 
-#' \item{list("Exports")}{Exports (Millions of pounds), a numeric vector} 
-#' \item{list("Imports")}{Imports (Millions of pounds), a numeric vector}
-#' \item{list("Expenditure")}{Expenditure (Millions of pounds), a numeric vector} 
-#' \item{list("Revenue")}{Revenue (Millions of pounds), a numeric vector} 
-#' }
-#' 
-#' @references Playfair, W. (1824). \emph{Chronology of Public Events and
-#' Remarkable Occurrences within the Last Fifty Years; or from 1774 to 1824},
-#' published in London.
-#' 
-#' The original chart can be seen on Wikimedia at: \url{https://bit.ly/4ihX92a}
-#' 
-#' Spence, I., Fenn, C. R., & Klein, S. (2017). Who is buried in Playfairs
-#' grave? \emph{Significance}, 14(5), 20–23.
-#' c("\\Sexpr[results=rd]{tools:::Rd_expr_doi(\"#1\")}",
-#' "10.1111/j.1740-9713.2017.01071.x")\Sexpr{tools:::Rd_expr_doi("10.1111/j.1740-9713.2017.01071.x")}
-#' @source Ivan Lokhov, Remaking a 200-year-old chart
-#' \url{https://www.datawrapper.de/blog/playfair-chronology-multiple-lines}
-#' @keywords datasets
-#' @examples
-#' 
-#' data(Playfair1824)
-#' str(Playfair1824)
-#' 
-#' # Plot multiple time series with matplot()
-#' matplot(Playfair1824$Year, Playfair1824[, -1],
-#'         pch = c("S", "W", "B", "D", "E", "I", "X", "R"),
-#'         type = "b",
-#'         xlab = "Year",
-#'         ylab = "value",
-#'         ylim = c(0, 140),
-#'         main = "Linear Chronology, Exhibiting the Revenues, Expenditure, ... from 1770 to 1824")
-#' 
-#' # main events
-#' events <- data.frame(
-#'   start = c(1776, 1793, 1804),
-#'   end = c(1782.2, 1802, 1815.2),
-#'   event = c("American War", "War: French Republic", "War: Napoleon")
-#' )
-#' 
-#' with(events, {
-#'   arrows(x0 = start, x1 = end, 
-#'          y0 = 130, y1 = 130, 
-#'          lwd = 3,
-#'          code = 3,
-#'          angle = 90, length = 0.05)
-#'   text((start+end)/2, 132, event, pos = 3)
-#' })
-#' 
-#' 
-#' 
-NULL
 
 
 
