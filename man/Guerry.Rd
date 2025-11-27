@@ -75,7 +75,7 @@ data(Guerry)
 Dray, S. and Jombart, T. (2011). A Revisit Of Guerry's Data:
 Introducing Spatial Constraints In Multivariate Analysis.  \emph{The Annals
 of Applied Statistics}, Vol. 5, No. 4, 2278-2299.
-\url{http://arxiv.org/pdf/1202.6485}, DOI: 10.1214/10-AOAS356.
+\url{https://arxiv.org/pdf/1202.6485}, DOI: 10.1214/10-AOAS356.
 
 Brunsdon, C. and Dykes, J. (2007).  Geographically weighted visualization:
 interactive graphics for scale-varying exploratory analysis.  Geographical

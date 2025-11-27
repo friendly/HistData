@@ -19,7 +19,7 @@ A data frame with 934 observations on the following 8 variables.
 }
 \source{
 Galton's notebook,
-\url{http://www.medicine.mcgill.ca/epidemiology/hanley/galton/notebook/},
+\url{https://jhanley.biostat.mcgill.ca/galton/galton_heights_197_families.txt},
 transcribed by Beverley Shipley in 2001.
 }
 \description{
@@ -86,7 +86,7 @@ Stature \emph{Journal of the Anthropological Institute}, 15, 246-263
 
 Hanley, J. A. (2004). "Transmuting" Women into Men: Galton's Family Data on
 Human Stature. \emph{The American Statistician}, 58, 237-243. See:
-\url{http://www.medicine.mcgill.ca/epidemiology/hanley/galton/} for source
+\url{https://jhanley.biostat.mcgill.ca/galton/} for source
 materials.
 
 Keen, K. J. (2010). \emph{Graphics for Statistics and Data Analysis with R},

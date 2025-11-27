@@ -71,17 +71,17 @@ R packages, with this list of [Available datasets](https://vincentarelbundock.gi
 
 There is another R aspect that should be noted here: 
 A great deal of "data sciency" work was involved in constructing this package,
-alas (for teaching) not captured in the resulting CRAN-friendly package.
+alas (for teaching what's involved in this) not captured in the resulting CRAN-friendly package.
 
-* In some cases, data had to be **extracted** from historical documents, using a variety of techniques (web scraping, OCR of PDS files followed by conversion to a data set), each problem with its own toolbox, in R or outside. In many cases, transcription errors had to be corrected 
+* In some cases, data had to be **extracted** from historical documents, using a variety of techniques (web scraping, OCR of PDF files followed by conversion to a data set), each problem with its own toolbox, in R or outside. In many cases, transcription errors had to be corrected 
 with code or manually;
 * **digitization** of data from an image;
 * **conversion** of text-based data sets to a CSV file and then to an `.RData` file with proper column names. Ever seen a Unix `.shar` (shell archive) file? Well, I have.
 * **cleaning** variable names, e.g., using `janitor::clean_names()`, or, in some cases, manually editing an excel file.
 * Applying **type-conversion**, e.g., `chr` to `factor` or `ordered`; constructing appropriate contrasts for factors to facilitate re-analysis.
 * **tidying** data.frames: long <--> wide, abbreviations of character string labels, ...
-* **documentation**: The thankless task? No -- considerable effort was made to give detailed descriptions, notes on methods, executable examples, references to original sources and
-analyses, ...
+* **documentation**: The thankless task? No -- considerable effort was made to give detailed descriptions, notes on methods, executable examples, references to original sources and analyses, ...
+* **package maintenance**: Originally, I wrote most of the documentation using `utils::prompt()` ...
 
 
 
@@ -121,7 +121,7 @@ tt(dsets, width = c(.2, .8)) |>
 
 * The [Horsekicks package](https://cran.r-project.org/package=Horsekicks) contains the classic data from von Bortkeiwicz, "Death by the kick of a horse in the Prussian Army", with additional data on
 deaths by falling from a horse and by drowning. A [vignette](https://cran.r-project.org/web/packages/Horsekicks/vignettes/hkdeaths.html) provides some
-analyses.
+analyses. 
 
 * [Rdatasets](https://vincentarelbundock.github.io/Rdatasets/) is a collection of over 2500 datasets
 culled from CRAN packages to make them broadly accessible for teaching and statistical software development.

@@ -29,7 +29,7 @@ Cushny, A. R., and Peebles, A. R. (1905), "The Action of Optical
 Isomers. II: Hyoscines," \emph{Journal of Physiology}, 32, 501-510.
 
 \% Senn, Stephen, Data from Cushny and Peebles,
-\url{http://www.senns.demon.co.uk/Data/Cushny.xls}
+\url{http://www.senns.uk/Data/Cushny.xls}
 }
 \description{
 Cushny and Peebles (1905) studied the effects of hydrobromides related to

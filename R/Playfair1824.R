@@ -33,7 +33,7 @@
 #' @references
 #' Playfair, W. (1824). *Chronology of Public Events and Remarkable Occurrences within the Last Fifty Years; or from 1774 to 1824*, published by W. Lewis, Finch Lane,  London.
 #' 
-#' The original chart can be seen on Wikimedia at: <https://bit.ly/4ihX92a>
+#' The original chart can be seen on Wikimedia at: https://bit.ly/4ihX92a
 #' 
 #' Spence, I., Fenn, C. R., & Klein, S. (2017). Who is buried in Playfairs grave? *Significance*, 14(5), 20–23. \doi{10.1111/j.1740-9713.2017.01071.x}
 #'

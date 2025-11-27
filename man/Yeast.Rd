@@ -69,6 +69,6 @@ xyplot(freq~count|sample, data=Yeast, xlab="Number of Cells", ylab="Frequency",
 \references{
 "Student" (1906) On the error of counting with a haemocytometer.
 Biometrika, \strong{5}, 351-360.
-\url{http://www.medicine.mcgill.ca/epidemiology/hanley/c626/Student_counting.pdf}
+\url{https://jhanley.biostat.mcgill.ca/bios601/Intensity-Rate/Student_counting.pdf}
 }
 \keyword{datasets}

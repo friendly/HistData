@@ -63,7 +63,7 @@ Consequences}. London: Macmillan.
 
 Hanley, J. A. (2004). "Transmuting" Women into Men: Galton's Family Data on
 Human Stature. \emph{The American Statistician}, 58, 237-243. See:
-\url{http://www.medicine.mcgill.ca/epidemiology/hanley/galton/} for source
+\url{https://jhanley.biostat.mcgill.ca/galton/} for source
 materials.
 
 Stigler, S. M. (1986).  \emph{The History of Statistics: The Measurement of

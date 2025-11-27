@@ -21,8 +21,8 @@ following variable, given in time order of data collection
   }
 }
 \source{
-Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-\url{https://www.math.uah.edu/stat/data/Michelson.html}
+Originally from Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
+link no longer works.
 
 Stephen M. Stigler (1977), "Do robust estimators work with \emph{real}
 data?", \emph{Annals of Statistics}, \strong{5}, 1055-1098

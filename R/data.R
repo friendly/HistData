@@ -334,8 +334,10 @@ NULL
 #' 
 #' Brownlee, K. A. (1965). *Statistical theory and methodology in science
 #' and engineering*, NY: Wiley, p. 520.
-#' @source Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-#' <https://www.math.uah.edu/stat/data/Cavendish.html>
+#' 
+#' @source 
+#' Oeiginally from Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
+#' link no longer works.
 #' 
 #' Stephen M. Stigler (1977), "Do robust estimators work with *real*
 #' data?", *Annals of Statistics*, 5, 1055-1098
@@ -680,7 +682,7 @@ NULL
 #' Isomers. II: Hyoscines," *Journal of Physiology*, 32, 501-510.
 #' 
 #' % Senn, Stephen, Data from Cushny and Peebles,
-#' <http://www.senns.demon.co.uk/Data/Cushny.xls>
+#' <http://www.senns.uk/Data/Cushny.xls>
 #' @keywords datasets
 #' @examples
 #' 
@@ -1015,7 +1017,7 @@ NULL
 #' 
 #' Hanley, J. A. (2004). "Transmuting" Women into Men: Galton's Family Data on
 #' Human Stature. *The American Statistician*, 58, 237-243. See:
-#' <http://www.medicine.mcgill.ca/epidemiology/hanley/galton/> for source
+#' <https://jhanley.biostat.mcgill.ca/galton/> for source
 #' materials.
 #' 
 #' Stigler, S. M. (1986).  *The History of Statistics: The Measurement of
@@ -1096,13 +1098,14 @@ NULL
 #' 
 #' Hanley, J. A. (2004). "Transmuting" Women into Men: Galton's Family Data on
 #' Human Stature. *The American Statistician*, 58, 237-243. See:
-#' <http://www.medicine.mcgill.ca/epidemiology/hanley/galton/> for source
+#' <https://jhanley.biostat.mcgill.ca/galton/> for source
 #' materials.
 #' 
 #' Keen, K. J. (2010). *Graphics for Statistics and Data Analysis with R*,
 #' Boca Raton: CRC Press, <https://www.unbc.ca/keen/textbook>.
+#' 
 #' @source Galton's notebook,
-#' <http://www.medicine.mcgill.ca/epidemiology/hanley/galton/notebook/>,
+#' <https://jhanley.biostat.mcgill.ca/galton/galton_heights_197_families.txt>,
 #' transcribed by Beverley Shipley in 2001.
 #' @keywords datasets
 #' @examples
@@ -1208,7 +1211,7 @@ NULL
 #' @references Dray, S. and Jombart, T. (2011). A Revisit Of Guerry's Data:
 #' Introducing Spatial Constraints In Multivariate Analysis.  *The Annals
 #' of Applied Statistics*, Vol. 5, No. 4, 2278-2299.
-#' <http://arxiv.org/pdf/1202.6485>, DOI: 10.1214/10-AOAS356.
+#' <https://arxiv.org/pdf/1202.6485>, DOI: 10.1214/10-AOAS356.
 #' 
 #' Brunsdon, C. and Dykes, J. (2007).  Geographically weighted visualization:
 #' interactive graphics for scale-varying exploratory analysis.  Geographical
@@ -1678,12 +1681,11 @@ NULL
 #' @source Macdonell, W. R. (1902). On Criminal Anthropometry and the
 #' Identification of Criminals. *Biometrika*, 1(2), 177-227.
 #' \doi{10.1093/biomet/1.2.177}
-#' % <http://www.jstor.org/stable/2331487>
 #' 
 #' The data used here were obtained from:
 #' 
 #' Hanley, J. (2008). Macdonell data used by Student.
-#' <http://www.medicine.mcgill.ca/epidemiology/hanley/Student/>
+#' <https://jhanley.biostat.mcgill.ca/Student/>
 #' @keywords datasets
 #' @examples
 #' 
@@ -1693,8 +1695,8 @@ NULL
 #' xtabs(frequency ~ finger+round(height,3), data=Macdonell)
 #' 
 #' ## Some examples by james.hanley@mcgill.ca    October 16, 2011
-#' ## http://www.biostat.mcgill.ca/hanley/
-#' ## See:  http://www.biostat.mcgill.ca/hanley/Student/
+#' ## https://jhanley.biostat.mcgill.ca/
+#' ## See:  https://jhanley.biostat.mcgill.ca/Student/
 #' 
 #' ###############################################
 #' ##  naive contour plots of height and finger ##
@@ -1803,9 +1805,9 @@ NULL
 #' 
 #' # see also the photographs from Student's notebook ('Original small sample data and notes")
 #' # under the link "Gosset' 750 samples of size n=4" 
-#' # on website http://www.biostat.mcgill.ca/hanley/Student/
+#' # on website https://jhanley.biostat.mcgill.ca/Student/
 #' # and while there, look at the cover of the Notebook containing his yeast-cell counts
-#' # http://www.medicine.mcgill.ca/epidemiology/hanley/Student/750samplesOf4/Covers.JPG
+#' # https://jhanley.biostat.mcgill.ca/Student/750samplesOf4
 #' # (Biometrika 1907) and decide for yourself why Gosset, when forced to write under a 
 #' # pen-name, might have taken the name he did!
 #' 
@@ -2023,8 +2025,9 @@ NULL
 #' velocity of light made at the United States Naval Academy, Anapolis".
 #' *Astronomical Papers*, **1**, 109-145, U. S. Nautical Almanac Office.
 #' 
-#' @source Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-#' <https://www.math.uah.edu/stat/data/Michelson.html>
+#' @source 
+#' Originally from Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
+#' link no longer works.
 #' 
 #' Stephen M. Stigler (1977), "Do robust estimators work with *real*
 #' data?", *Annals of Statistics*, **5**, 1055-1098
@@ -2582,8 +2585,9 @@ NULL
 #' Trials", *Journal of the American Statistical Association*, **50**,
 #' 1005-1013.
 #' 
-#' @source Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-#' <https://www.math.uah.edu/stat/data/Polio.html>
+#' @source 
+#' Originally from Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
+#' link no longer works.
 #' 
 #' Thomas Francis, Robert Korn, et al. (1955). "An Evaluation of the 1954
 #' Poliomyelitis Vaccine Trials", *American Journal of Public Health*, **45**,
@@ -3491,7 +3495,7 @@ NULL
 #' 
 #' @references "Student" (1906) On the error of counting with a haemocytometer.
 #' Biometrika, **5**, 351-360.
-#' <http://www.medicine.mcgill.ca/epidemiology/hanley/c626/Student_counting.pdf>
+#' <https://jhanley.biostat.mcgill.ca/bios601/Intensity-Rate/Student_counting.pdf>
 #' 
 #' @source D. J. Hand, F. Daly, D. Lunn, K. McConway and E. Ostrowski (1994).
 #' *A Handbook of Small Data Sets*. London: Chapman & Hall. The data were
