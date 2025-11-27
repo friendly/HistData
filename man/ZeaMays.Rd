@@ -7,11 +7,11 @@
 \format{
 A data frame with 15 observations on the following 4 variables.
 \describe{ 
-\item{\code{pair}}{pair number, a numeric vector}
-\item{\code{pot}}{pot, a factor with levels \code{1} \code{2} \code{3} \code{4}} 
-\item{\code{cross}}{height of cross fertilized plant, a numeric vector} 
-\item{\code{self}}{height of self fertilized plant, a numeric vector} 
-\item{\code{diff}}{\code{cross - self} for each pair} 
+  \item{\code{pair}}{pair number, a numeric vector}
+  \item{\code{pot}}{pot, a factor with levels \code{1} \code{2} \code{3} \code{4}} 
+  \item{\code{cross}}{height of cross fertilized plant, a numeric vector} 
+  \item{\code{self}}{height of self fertilized plant, a numeric vector} 
+  \item{\code{diff}}{\code{cross - self} for each pair} 
 }
 }
 \source{

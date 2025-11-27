@@ -9,7 +9,7 @@
 \code{Michelson}: A data frame with 100 observations on the
 following variable, given in time order of data collection 
 \describe{
-\item{\code{velocity}}{a numeric vector} 
+  \item{\code{velocity}}{a numeric vector} 
 }
 
 \code{MichelsonSets}: A 20 x 5 matrix, with format int [1:20, 1:5] 850 850

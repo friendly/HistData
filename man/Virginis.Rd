@@ -12,12 +12,12 @@ variables giving the measurements of position angle and angular distance
 between the central (brightest) star and its twin, recorded by various
 observers over more than 100 years.  
 \describe{ 
-\item{\code{year}}{year ("epoch") of the observation, a decimal numeric vector}
-\item{\code{posangle}}{recorded position angle between the two stars, a numeric vector} 
-\item{\code{distance}}{separation distance between the two stars, a numeric vector} 
-\item{\code{weight}}{a subjective weight attributed to the accuracy of this observation, a numeric vector}
-\item{\code{notes}}{Herschel's notes on this observation, a character vector} 
-\item{\code{authority}}{A simplified version of the notes giving just the attribution of authority of the observation, a character vector} 
+  \item{\code{year}}{year ("epoch") of the observation, a decimal numeric vector}
+  \item{\code{posangle}}{recorded position angle between the two stars, a numeric vector} 
+  \item{\code{distance}}{separation distance between the two stars, a numeric vector} 
+  \item{\code{weight}}{a subjective weight attributed to the accuracy of this observation, a numeric vector}
+  \item{\code{notes}}{Herschel's notes on this observation, a character vector} 
+  \item{\code{authority}}{A simplified version of the notes giving just the attribution of authority of the observation, a character vector} 
 }
 
 \code{Virgins.interp}: A data frame with 14 observations on the following 4
@@ -25,10 +25,10 @@ variables, giving the position angles and angular distance that Herschel
 interpolated from his smoothed curve.  
 
 \describe{ 
-\item{\code{year}}{year ("epoch") of the observation, a decimal numeric vector}
-\item{\code{posangle}}{recorded position angle between the two stars, a numeric vector} 
-\item{\code{distance}}{separation distance, calculated \eqn{1/sqrt(velocity)}} 
-\item{\code{velocity}}{angular velocity, calculated as the instantaneous slopes of tangents to the smoothed curve, a numeric
+  \item{\code{year}}{year ("epoch") of the observation, a decimal numeric vector}
+  \item{\code{posangle}}{recorded position angle between the two stars, a numeric vector} 
+  \item{\code{distance}}{separation distance, calculated \eqn{1/sqrt(velocity)}} 
+  \item{\code{velocity}}{angular velocity, calculated as the instantaneous slopes of tangents to the smoothed curve, a numeric
 vector} 
 }
 }

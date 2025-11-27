@@ -7,12 +7,12 @@
 \format{
 A data frame with 24 observations on the following 6 variables.
 \describe{ 
-\item{\code{Equation}}{an integer vector, id of the Equation}
-\item{\code{Year}}{an integer vector, year of the observations}
-\item{\code{Y}}{a numeric vector, adjusted measure of the observed longitude of Saturn, in minutes} 
-\item{\code{X1}}{a numeric vector, the rate of change of the mean annual motion of Saturn} 
-\item{\code{X2}}{a numeric vector, the rate of change of the eccentricity of Saturn's orbit}
-\item{\code{X3}}{a numeric vector, a variable compound of the rate of change of Saturn's aphelion minus rates of change of the mean longitude of Saturn in 1750, multiplied by 2 times the mean eccentricity of Saturn} 
+  \item{\code{Equation}}{an integer vector, id of the Equation}
+  \item{\code{Year}}{an integer vector, year of the observations}
+  \item{\code{Y}}{a numeric vector, adjusted measure of the observed longitude of Saturn, in minutes} 
+  \item{\code{X1}}{a numeric vector, the rate of change of the mean annual motion of Saturn} 
+  \item{\code{X2}}{a numeric vector, the rate of change of the eccentricity of Saturn's orbit}
+  \item{\code{X3}}{a numeric vector, a variable compound of the rate of change of Saturn's aphelion minus rates of change of the mean longitude of Saturn in 1750, multiplied by 2 times the mean eccentricity of Saturn} 
 }
 }
 \source{

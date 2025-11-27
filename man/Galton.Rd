@@ -7,8 +7,8 @@
 \format{
 A data frame with 928 observations on the following 2 variables.
 \describe{ 
-\item{\code{parent}}{a numeric vector: height of the mid-parent (average of father and mother)} 
-\item{\code{child}}{a numeric vector: height of the child} 
+  \item{\code{parent}}{a numeric vector: height of the mid-parent (average of father and mother)} 
+  \item{\code{child}}{a numeric vector: height of the child} 
 }
 }
 \source{

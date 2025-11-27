@@ -7,17 +7,17 @@
 \format{
 A data frame with 10 observations on the following 11 variables.
 \describe{
-\item{\code{Fleet}}{designation of the origin of the fleet, a factor with levels \code{Andalucia}, \code{Castilla}, \code{Galeras}, \code{Guipuscua}, \code{Napoles}, \code{Pataches}, \code{Portugal}, \code{Uantiscas}, \code{Vizca}, \code{Vrcas}} 
-\item{\code{ships}}{number of ships, a numeric vector} 
-\item{\code{tons}}{total tons of the ships, a numeric vector} 
-\item{\code{soldiers}}{number of soldiers, a numeric vector} 
-\item{\code{sailors}}{number of sailors, a numeric vector}
-\item{\code{men}}{total of soldiers plus sailors, a numeric vector}
-\item{\code{artillery}}{number of canons, a numeric vector}
-\item{\code{balls}}{number of canonballs, a numeric vector}
-\item{\code{gunpowder}}{amount of gunpowder loaded, a numeric vector}
-\item{\code{lead}}{a numeric vector} 
-\item{\code{rope}}{a numeric vector}
+  \item{\code{Fleet}}{designation of the origin of the fleet, a factor with levels \code{Andalucia}, \code{Castilla}, \code{Galeras}, \code{Guipuscua}, \code{Napoles}, \code{Pataches}, \code{Portugal}, \code{Uantiscas}, \code{Vizca}, \code{Vrcas}} 
+  \item{\code{ships}}{number of ships, a numeric vector} 
+  \item{\code{tons}}{total tons of the ships, a numeric vector} 
+  \item{\code{soldiers}}{number of soldiers, a numeric vector} 
+  \item{\code{sailors}}{number of sailors, a numeric vector}
+  \item{\code{men}}{total of soldiers plus sailors, a numeric vector}
+  \item{\code{artillery}}{number of canons, a numeric vector}
+  \item{\code{balls}}{number of canonballs, a numeric vector}
+  \item{\code{gunpowder}}{amount of gunpowder loaded, a numeric vector}
+  \item{\code{lead}}{a numeric vector} 
+  \item{\code{rope}}{a numeric vector}
 }
 }
 \source{

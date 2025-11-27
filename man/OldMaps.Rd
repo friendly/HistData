@@ -9,12 +9,12 @@ A data frame with 468 observations on the following 6 variables,
 giving the latitude and longitude of 39 points recorded from 12 sources
 (Actual + 11 maps).  
 \describe{ 
-\item{\code{point}}{a numeric vector}
-\item{\code{col}}{Column in the table a numeric vector}
-\item{\code{name}}{Name of the map maker, using \code{Actual} for the true coordinates of the points.  A factor with levels \code{Actual} \code{Arrowsmith} \code{Belin} \code{Cary} \code{Coronelli} \code{D'Anville} \code{Del'Isle} \code{Lattre} \code{Melish} \code{Mitchell} \code{Popple}}
-\item{\code{year}}{Year of the map} 
-\item{\code{lat}}{Latitude}
-\item{\code{long}}{Longitude} 
+  \item{\code{point}}{a numeric vector}
+  \item{\code{col}}{Column in the table a numeric vector}
+  \item{\code{name}}{Name of the map maker, using \code{Actual} for the true coordinates of the points.  A factor with levels \code{Actual} \code{Arrowsmith} \code{Belin} \code{Cary} \code{Coronelli} \code{D'Anville} \code{Del'Isle} \code{Lattre} \code{Melish} \code{Mitchell} \code{Popple}}
+  \item{\code{year}}{Year of the map} 
+  \item{\code{lat}}{Latitude}
+  \item{\code{long}}{Longitude} 
 }
 }
 \source{

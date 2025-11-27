@@ -11,28 +11,28 @@
 \code{Minard.troops}: A data frame with 51 observations on the
 following 5 variables giving the number of surviving troops.  
 \describe{
-\item{\code{long}}{Longitude} 
-\item{\code{lat}}{Latitude}
-\item{\code{survivors}}{Number of surviving troops, a numeric vector}
-\item{\code{direction}}{a factor with levels \code{A} ("Advance") \code{R} ("Retreat")} \item{\code{group}}{a numeric vector} 
+  \item{\code{long}}{Longitude} 
+  \item{\code{lat}}{Latitude}
+  \item{\code{survivors}}{Number of surviving troops, a numeric vector}
+  \item{\code{direction}}{a factor with levels \code{A} ("Advance") \code{R} ("Retreat")} \item{\code{group}}{a numeric vector} 
 }
 
 \code{Minard.cities}: A data frame with 20 observations on the following 3
 variables giving the locations of various places along the path of
 Napoleon's army.  
 \describe{ 
-\item{\code{long}}{Longitude}
-\item{\code{lat}}{Latitude} 
-\item{\code{city}}{City name: a factor with levels \code{Bobr} \code{Chjat} ... \code{Witebsk} \code{Wixma}} }
+  \item{\code{long}}{Longitude}
+  \item{\code{lat}}{Latitude} 
+  \item{\code{city}}{City name: a factor with levels \code{Bobr} \code{Chjat} ... \code{Witebsk} \code{Wixma}} }
 
 \code{Minard.temp}: A data frame with 9 observations on the following 4
 variables, giving the temperature at various places along the march of
 retreat from Moscow.  
 \describe{ 
-\item{\code{long}}{Longitude}
-\item{\code{temp}}{Temperature} 
-\item{\code{days}}{Number of days on the retreat march} 
-\item{\code{date}}{a factor with levels \code{Dec01} \code{Dec06} \code{Dec07} \code{Nov09} \code{Nov14} \code{Nov28} \code{Oct18} \code{Oct24}} 
+  \item{\code{long}}{Longitude}
+  \item{\code{temp}}{Temperature} 
+  \item{\code{days}}{Number of days on the retreat march} 
+  \item{\code{date}}{a factor with levels \code{Dec01} \code{Dec06} \code{Dec07} \code{Nov09} \code{Nov14} \code{Nov28} \code{Oct18} \code{Oct24}} 
 }
 }
 \source{

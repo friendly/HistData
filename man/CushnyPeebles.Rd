@@ -9,19 +9,19 @@
 \code{CushnyPeebles}: A data frame with 11 observations on the
 following 4 variables.  
 \describe{ 
-\item{\code{Control}}{a numeric vector: mean hours of sleep} 
-\item{\code{L_hyoscyamine}}{a numeric vector: mean hours of sleep} 
-\item{\code{L_hyoscine}}{a numeric vector: mean hours of sleep} 
-\item{\code{D_hyoscine}}{a numeric vector: mean hours of sleep} 
+  \item{\code{Control}}{a numeric vector: mean hours of sleep} 
+  \item{\code{L_hyoscyamine}}{a numeric vector: mean hours of sleep} 
+  \item{\code{L_hyoscine}}{a numeric vector: mean hours of sleep} 
+  \item{\code{D_hyoscine}}{a numeric vector: mean hours of sleep} 
 }
 
 \code{CushnyPeeblesN}: A data frame with 11 observations on the following 4
 variables.  
 \describe{ 
-\item{\code{Control}}{a numeric vector: number of observations} 
-\item{\code{L_hyoscyamine}}{a numeric vector: number of observations} 
-\item{\code{L_hyoscine}}{a numeric vector: number of observations} 
-\item{\code{DL_hyoscine}}{a numeric vector: number of observations} 
+  \item{\code{Control}}{a numeric vector: number of observations} 
+  \item{\code{L_hyoscyamine}}{a numeric vector: number of observations} 
+  \item{\code{L_hyoscine}}{a numeric vector: number of observations} 
+  \item{\code{DL_hyoscine}}{a numeric vector: number of observations} 
 }
 }
 \source{

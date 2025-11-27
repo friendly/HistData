@@ -9,9 +9,9 @@
 \code{Yeast}: A frequency data frame with 36 observations on the
 following 3 variables, giving the frequencies of 
 \describe{
-\item{\code{sample}}{Sample identifier, a factor with levels \code{A} \code{B} \code{C} \code{D}} 
-\item{\code{count}}{The number of yeast cells counted in a square} 
-\item{\code{freq}}{The number of squares with the given \code{count}} 
+  \item{\code{sample}}{Sample identifier, a factor with levels \code{A} \code{B} \code{C} \code{D}} 
+  \item{\code{count}}{The number of yeast cells counted in a square} 
+  \item{\code{freq}}{The number of squares with the given \code{count}} 
 }
 
 \code{YeastD.mat}: A 20 x 20 matrix containing the count of yeast cells in

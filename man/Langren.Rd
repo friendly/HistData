@@ -11,23 +11,23 @@
 following 9 variables, giving determinations of the distance in longitude
 between Toledo and Rome, from the 1644 graph.  
 \describe{
-\item{\code{Name}}{The name of the person giving a determination, a factor with levels \code{A. Argelius} ... \code{T. Brahe}}
-\item{\code{Longitude}}{Estimated value of the longitude distance between Toledo and Rome} 
-\item{\code{Year}}{Year associated with this determination} 
-\item{\code{Longname}}{A longer version of the \code{Name}, where appropriate; a factor with levels \code{Andrea Argoli} \code{Christoph Clavius} \code{Tycho Brahe}} 
-\item{\code{City}}{The principal city where this person worked; a factor with levels \code{Alexandria} \code{Amsterdam} \code{Bamberg} \code{Bologna} \code{Frankfurt} \code{Hven} \code{Leuven} \code{Middelburg} \code{Nuremberg} \code{Padua} \code{Paris} \code{Rome}}
-\item{\code{Country}}{The country where this person worked; a factor with levels \code{Belgium} \code{Denmark} \code{Egypt} \code{Flanders} \code{France} \code{Germany} \code{Italy} \code{Italy }}
-\item{\code{Latitude}}{Latitude of this \code{City}; a numeric vector}
-\item{\code{Source}}{Likely source for this determination of Longitude; a factor with levels \code{Astron} \code{Map}} \item{\code{Gap}}{A numeric vector indicating whether the \code{Longitude} value is below or above th median} }
+  \item{\code{Name}}{The name of the person giving a determination, a factor with levels \code{A. Argelius} ... \code{T. Brahe}}
+  \item{\code{Longitude}}{Estimated value of the longitude distance between Toledo and Rome} 
+  \item{\code{Year}}{Year associated with this determination} 
+  \item{\code{Longname}}{A longer version of the \code{Name}, where appropriate; a factor with levels \code{Andrea Argoli} \code{Christoph Clavius} \code{Tycho Brahe}} 
+  \item{\code{City}}{The principal city where this person worked; a factor with levels \code{Alexandria} \code{Amsterdam} \code{Bamberg} \code{Bologna} \code{Frankfurt} \code{Hven} \code{Leuven} \code{Middelburg} \code{Nuremberg} \code{Padua} \code{Paris} \code{Rome}}
+  \item{\code{Country}}{The country where this person worked; a factor with levels \code{Belgium} \code{Denmark} \code{Egypt} \code{Flanders} \code{France} \code{Germany} \code{Italy} \code{Italy }}
+  \item{\code{Latitude}}{Latitude of this \code{City}; a numeric vector}
+  \item{\code{Source}}{Likely source for this determination of Longitude; a factor with levels \code{Astron} \code{Map}} \item{\code{Gap}}{A numeric vector indicating whether the \code{Longitude} value is below or above th median} }
 
 \code{Langren.all}: A data frame with 61 observations on the following 4
 variables, giving determinations of Longitude between Toledo and Rome from
 all known versions of van Langren's graph.  
 \describe{
-\item{\code{Author}}{Author of the graph, a factor with levels \code{Langren} \code{Lelewel}} 
-\item{\code{Year}}{Year of publication}
-\item{\code{Name}}{The name of the person giving a determination, a factor with levels \code{Algunos1} \code{Algunos2} \code{Apianus} ... \code{Schonerus}} 
-\item{\code{Longitude}}{Estimated value of the longitude distance between Toledo and Rome} 
+  \item{\code{Author}}{Author of the graph, a factor with levels \code{Langren} \code{Lelewel}} 
+  \item{\code{Year}}{Year of publication}
+  \item{\code{Name}}{The name of the person giving a determination, a factor with levels \code{Algunos1} \code{Algunos2} \code{Apianus} ... \code{Schonerus}} 
+  \item{\code{Longitude}}{Estimated value of the longitude distance between Toledo and Rome} 
 }
 }
 \source{

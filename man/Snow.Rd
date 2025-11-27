@@ -18,9 +18,9 @@ When many points are associated with a single street address, they are
 visualized. This is how they are displayed on John Snow's original map.  The
 dates of the deaths are not individually recorded in this data set.
 \describe{ 
-\item{\code{case}}{Sequential case number, in some arbitrary, randomized order} 
-\item{\code{x}}{x coordinate} 
-\item{\code{y}}{y coordinate} 
+  \item{\code{case}}{Sequential case number, in some arbitrary, randomized order} 
+  \item{\code{x}}{x coordinate} 
+  \item{\code{y}}{y coordinate} 
 }
 
 \code{Snow.pumps}: A data frame with 13 observations on the following 4
@@ -28,9 +28,9 @@ variables, giving the locations of water pumps within the boundaries of the
 map. 
  
 \describe{ 
-\item{\code{pump}}{pump number} 
-\item{\code{label}}{pump label: \code{Briddle St} \code{Broad St} ... \code{Warwick}}
-\item{\code{x}}{x coordinate} \item{\code{y}}{y coordinate} 
+  \item{\code{pump}}{pump number} 
+  \item{\code{label}}{pump label: \code{Briddle St} \code{Broad St} ... \code{Warwick}}
+  \item{\code{x}}{x coordinate} \item{\code{y}}{y coordinate} 
 }
 
 \code{Snow.streets}: A data frame with 1241 observations on the following 4
@@ -39,10 +39,10 @@ within the boundaries of the map.  The map is created by drawing lines
 connecting the \code{n} points in each street segment.  
 
 \describe{
-\item{\code{street}}{street segment number: \code{1:528}}
-\item{\code{n}}{number of points in this street line segment}
-\item{\code{x}}{x coordinate} 
-\item{\code{y}}{y coordinate} }
+  \item{\code{street}}{street segment number: \code{1:528}}
+  \item{\code{n}}{number of points in this street line segment}
+  \item{\code{x}}{x coordinate} 
+  \item{\code{y}}{y coordinate} }
 
 
 \code{Snow.polygons}: A list of 13 data frames, giving the vertices of
@@ -51,8 +51,8 @@ the area that is closest to each pump relative to all other pumps. They are
 mathematically defined by the perpendicular bisectors of the lines between
 all pumps. Each data frame contains: 
 \describe{ 
-\item{\code{x}}{x coordinate} 
-\item{\code{y}}{y coordinate} 
+  \item{\code{x}}{x coordinate} 
+  \item{\code{y}}{y coordinate} 
 }
 
 \code{Snow.deaths2}: An alternative version of \code{Snow.deaths} correcting

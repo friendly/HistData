@@ -7,9 +7,9 @@
 \format{
 A data frame with 29 observations on the following 3 variables.
 \describe{ 
-\item{\code{density}}{Cavendish's 29 determinations of the mean density of the earth} 
-\item{\code{density2}}{same as \code{density}, with the third value (4.88) replaced by 5.88} 
-\item{\code{density3}}{same as \code{density}, omitting the the first 6 observations} 
+  \item{\code{density}}{Cavendish's 29 determinations of the mean density of the earth} 
+  \item{\code{density2}}{same as \code{density}, with the third value (4.88) replaced by 5.88} 
+  \item{\code{density3}}{same as \code{density}, omitting the the first 6 observations} 
 }
 }
 \source{

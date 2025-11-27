@@ -7,8 +7,8 @@
 \format{
 A data frame with 45 observations on the following 2 variables.
 \describe{
-\item{\code{Year}}{Year, from 1855-1899}
-\item{\code{Value}}{total value of British and Irish exports (millions of Pounds)} 
+  \item{\code{Year}}{Year, from 1855-1899}
+  \item{\code{Value}}{total value of British and Irish exports (millions of Pounds)} 
 }
 }
 \source{

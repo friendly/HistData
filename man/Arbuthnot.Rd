@@ -7,13 +7,13 @@
 \format{
 A data frame with 82 observations on the following 7 variables.
 \describe{ 
-\item{\code{Year}}{a numeric vector, 1629-1710}
-\item{\code{Males}}{a numeric vector, number of male christenings}
-\item{\code{Females}}{a numeric vector, number of female christenings}
-\item{\code{Plague}}{a numeric vector, number of deaths from plague}
-\item{\code{Mortality}}{a numeric vector, total mortality}
-\item{\code{Ratio}}{a numeric vector, ratio of Males/Females}
-\item{\code{Total}}{a numeric vector, total christenings in London (000s)}
+  \item{\code{Year}}{a numeric vector, 1629-1710}
+  \item{\code{Males}}{a numeric vector, number of male christenings}
+  \item{\code{Females}}{a numeric vector, number of female christenings}
+  \item{\code{Plague}}{a numeric vector, number of deaths from plague}
+  \item{\code{Mortality}}{a numeric vector, total mortality}
+  \item{\code{Ratio}}{a numeric vector, ratio of Males/Females}
+  \item{\code{Total}}{a numeric vector, total christenings in London (000s)}
 }
 }
 \source{

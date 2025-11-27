@@ -7,11 +7,11 @@
 \format{
 A data frame with 516 observations on the following 5 variables.
 \describe{ 
-\item{\code{Year}}{a numeric vector} 
-\item{\code{month}}{a factor with levels \code{Apr} \code{Aug} \code{Dec} \code{Feb} \code{Jan} \code{Jul} \code{Jun} \code{Mar} \code{May} \code{Nov} \code{Oct} \code{Sep}} 
-\item{\code{count}}{a numeric vector: number of prostitutes}
-\item{\code{mon}}{a numeric vector: numeric month} 
-\item{\code{date}}{a Date} 
+  \item{\code{Year}}{a numeric vector} 
+  \item{\code{month}}{a factor with levels \code{Apr} \code{Aug} \code{Dec} \code{Feb} \code{Jan} \code{Jul} \code{Jun} \code{Mar} \code{May} \code{Nov} \code{Oct} \code{Sep}} 
+  \item{\code{count}}{a numeric vector: number of prostitutes}
+  \item{\code{mon}}{a numeric vector: numeric month} 
+  \item{\code{date}}{a Date} 
 }
 }
 \source{

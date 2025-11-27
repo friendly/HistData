@@ -7,12 +7,12 @@
 \format{
 A data frame with 27 observations on the following 4 variables.
 \describe{ 
-\item{\code{Equation}}{an integer vector, id of the Equation}
-\item{\code{Y}}{a numeric vector, representing the term \eqn{(h-90)} (see details)} 
-\item{\code{X1}}{a numeric vector, representing \eqn{\beta}}
-\item{\code{X2}}{a numeric vector, representing \eqn{\alpha}}
-\item{\code{X3}}{a numeric vector, representing the term \eqn{\alpha sin\theta}} 
-\item{\code{Group}}{a character vector, representing the Mayer grouping} 
+  \item{\code{Equation}}{an integer vector, id of the Equation}
+  \item{\code{Y}}{a numeric vector, representing the term \eqn{(h-90)} (see details)} 
+  \item{\code{X1}}{a numeric vector, representing \eqn{\beta}}
+  \item{\code{X2}}{a numeric vector, representing \eqn{\alpha}}
+  \item{\code{X3}}{a numeric vector, representing the term \eqn{\alpha sin\theta}} 
+  \item{\code{Group}}{a character vector, representing the Mayer grouping} 
 }
 }
 \source{

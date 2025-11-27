@@ -7,13 +7,13 @@
 \format{
 A data frame with 8 observations on the following 6 variables.
 \describe{ 
-\item{\code{Experiment}}{a factor with levels \code{ObservedControl} \code{RandomizedControl}} 
-\item{\code{Group}}{a factor with levels \code{Controls} \code{Grade2NotInoculated} \code{IncompleteVaccinations} \code{NotInoculated} \code{Placebo}
+  \item{\code{Experiment}}{a factor with levels \code{ObservedControl} \code{RandomizedControl}} 
+  \item{\code{Group}}{a factor with levels \code{Controls} \code{Grade2NotInoculated} \code{IncompleteVaccinations} \code{NotInoculated} \code{Placebo}
 \code{Vaccinated}} 
-\item{\code{Population}}{the size of the population in each group in each experiment} 
-\item{\code{Paralytic}}{the number of cases of paralytic polio observed in that group} 
-\item{\code{NonParalytic}}{the number of cases of paralytic polio observed in that group}
-\item{\code{FalseReports}}{the number of cases initially reported as polio, but later determined not to be polio in that group} 
+  \item{\code{Population}}{the size of the population in each group in each experiment} 
+  \item{\code{Paralytic}}{the number of cases of paralytic polio observed in that group} 
+  \item{\code{NonParalytic}}{the number of cases of paralytic polio observed in that group}
+  \item{\code{FalseReports}}{the number of cases initially reported as polio, but later determined not to be polio in that group} 
 }
 }
 \source{

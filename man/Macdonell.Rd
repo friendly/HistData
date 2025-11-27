@@ -11,16 +11,16 @@
 the following 3 variables giving the bivariate frequency distribution of
 \code{height} and \code{finger}.  
 \describe{ 
-\item{\code{height}}{lower class boundaries of height, in decimal ft.} 
-\item{\code{finger}}{length of the left middle finger, in mm.} 
-\item{\code{frequency}}{frequency of this combination of \code{height} and \code{finger}} 
+  \item{\code{height}}{lower class boundaries of height, in decimal ft.} 
+  \item{\code{finger}}{length of the left middle finger, in mm.} 
+  \item{\code{frequency}}{frequency of this combination of \code{height} and \code{finger}} 
 } 
 
 \code{MacdonellDF}: A data
 frame with 3000 observations on the following 2 variables.  
 \describe{
-\item{\code{height}}{a numeric vector} 
-\item{\code{finger}}{a numeric vector} 
+  \item{\code{height}}{a numeric vector} 
+  \item{\code{finger}}{a numeric vector} 
 }
 }
 \source{

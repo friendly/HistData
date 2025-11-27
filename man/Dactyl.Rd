@@ -7,9 +7,9 @@
 \format{
 A data frame with 60 observations on the following 3 variables.
 \describe{ 
-\item{\code{Foot}}{an ordered factor with levels \code{1} < \code{2} < \code{3} < \code{4}} 
-\item{\code{Lines}}{an ordered factor with levels \code{1:5} < \code{6:10} < \code{11:15} < \code{16:20} < \code{21:25} < \code{26:30} < \code{31:35} < \code{36:40} < \code{41:45} < \code{46:50} < \code{51:55} < \code{56:60} < \code{61:65} < \code{66:70} < \code{71:75}}
-\item{\code{count}}{number of dactyls} 
+  \item{\code{Foot}}{an ordered factor with levels \code{1} < \code{2} < \code{3} < \code{4}} 
+  \item{\code{Lines}}{an ordered factor with levels \code{1:5} < \code{6:10} < \code{11:15} < \code{16:20} < \code{21:25} < \code{26:30} < \code{31:35} < \code{36:40} < \code{41:45} < \code{46:50} < \code{51:55} < \code{56:60} < \code{61:65} < \code{66:70} < \code{71:75}}
+  \item{\code{count}}{number of dactyls} 
 }
 }
 \source{

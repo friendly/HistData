@@ -7,14 +7,14 @@
 \format{
 A data frame with 934 observations on the following 8 variables.
 \describe{ 
-\item{\code{family}}{family ID, a factor with levels \code{001}-\code{204}} 
-\item{\code{father}}{height of father}
-\item{\code{mother}}{height of mother}
-\item{\code{midparentHeight}}{mid-parent height, calculated as \code{(father + 1.08*mother)/2}} 
-\item{\code{children}}{number of children in this family} 
-\item{\code{childNum}}{number of this child within family. Children are listed in decreasing order of height for boys followed by girls} 
-\item{\code{gender}}{child gender, a factor with levels \code{female} \code{male}} 
-\item{\code{childHeight}}{height of child} 
+  \item{\code{family}}{family ID, a factor with levels \code{001}-\code{204}} 
+  \item{\code{father}}{height of father}
+  \item{\code{mother}}{height of mother}
+  \item{\code{midparentHeight}}{mid-parent height, calculated as \code{(father + 1.08*mother)/2}} 
+  \item{\code{children}}{number of children in this family} 
+  \item{\code{childNum}}{number of this child within family. Children are listed in decreasing order of height for boys followed by girls} 
+  \item{\code{gender}}{child gender, a factor with levels \code{female} \code{male}} 
+  \item{\code{childHeight}}{height of child} 
 }
 }
 \source{

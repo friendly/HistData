@@ -7,12 +7,12 @@
 \format{
 A data frame with 730 observations on the following 6 variables.
 \describe{ 
-\item{\code{month}}{a character vector}
-\item{\code{cause_of_death}}{a factor with levels \code{Cholera} \code{Diarrhaea}} 
-\item{\code{day_of_month}}{a character vector}
-\item{\code{deaths}}{a numeric vector} 
-\item{\code{date}}{a Date}
-\item{\code{day_of_week}}{an ordered factor with levels \code{Mon} < \code{Tue} < \code{Wed} < \code{Thu} < \code{Fri} < \code{Sat} < \code{Sun}}
+  \item{\code{month}}{a character vector}
+  \item{\code{cause_of_death}}{a factor with levels \code{Cholera} \code{Diarrhaea}} 
+  \item{\code{day_of_month}}{a character vector}
+  \item{\code{deaths}}{a numeric vector} 
+  \item{\code{date}}{a Date}
+  \item{\code{day_of_week}}{an ordered factor with levels \code{Mon} < \code{Tue} < \code{Wed} < \code{Thu} < \code{Fri} < \code{Sat} < \code{Sun}}
 }
 }
 \source{

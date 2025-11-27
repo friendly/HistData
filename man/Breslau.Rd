@@ -9,14 +9,14 @@ A data frame with 100 observations on the following 8 variables. The
 \code{yearXXXX} variables give the number of deaths for persons of a given
 \code{age} recorded in that year.  
 \describe{ 
-\item{\code{age}}{a numeric vector} 
-\item{\code{year1687}}{a numeric vector} 
-\item{\code{year1688}}{a numeric vector} 
-\item{\code{year1689}}{a numeric vector}
-\item{\code{year1690}}{a numeric vector} 
-\item{\code{year1691}}{a numeric vector} 
-\item{\code{total}}{a numeric vector} 
-\item{\code{average}}{a numeric vector} 
+  \item{\code{age}}{a numeric vector} 
+  \item{\code{year1687}}{a numeric vector} 
+  \item{\code{year1688}}{a numeric vector} 
+  \item{\code{year1689}}{a numeric vector}
+  \item{\code{year1690}}{a numeric vector} 
+  \item{\code{year1691}}{a numeric vector} 
+  \item{\code{total}}{a numeric vector} 
+  \item{\code{average}}{a numeric vector} 
 }
 }
 \source{

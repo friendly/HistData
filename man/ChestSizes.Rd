@@ -9,8 +9,8 @@
 A data frame with 16 observations on the following 2 variables.
 Total count=5738.  
 \describe{ 
-\item{\code{chest}}{Chest size (in inches)}
-\item{\code{count}}{Number of soldiers with this chest size} 
+  \item{\code{chest}}{Chest size (in inches)}
+  \item{\code{count}}{Number of soldiers with this chest size} 
 }
 }
 \source{

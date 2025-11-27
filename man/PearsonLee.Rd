@@ -8,12 +8,12 @@
 A frequency data frame with 746 observations on the following 6
 variables.  
 \describe{ 
-\item{\code{child}}{child height in inches, a numeric vector} 
-\item{\code{parent}}{parent height in inches, a numeric vector} 
-\item{\code{frequency}}{a numeric vector} 
-\item{\code{gp}}{a factor with levels \code{fd} \code{fs} \code{md} \code{ms}}
-\item{\code{par}}{a factor with levels \code{Father} \code{Mother}}
-\item{\code{chl}}{a factor with levels \code{Daughter} \code{Son}} 
+  \item{\code{child}}{child height in inches, a numeric vector} 
+  \item{\code{parent}}{parent height in inches, a numeric vector} 
+  \item{\code{frequency}}{a numeric vector} 
+  \item{\code{gp}}{a factor with levels \code{fd} \code{fs} \code{md} \code{ms}}
+  \item{\code{par}}{a factor with levels \code{Father} \code{Mother}}
+  \item{\code{chl}}{a factor with levels \code{Daughter} \code{Son}} 
 }
 }
 \source{

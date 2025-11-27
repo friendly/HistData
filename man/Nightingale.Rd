@@ -8,15 +8,15 @@
 A data frame with 24 observations on the following 10 variables.
 \describe{ 
    \item{\code{Date}}{a Date, composed as \code{as.Date(paste(Year, Month, 1, sep='-'), "\%Y-\%b-\%d")}}
-\item{\code{Month}}{Month of the Crimean War, an ordered factor} 
-\item{\code{Year}}{Year of the Crimean War}
-\item{\code{Army}}{Estimated average monthly strength of the British army}
-\item{\code{Disease}}{Number of deaths from preventable or mitagable zymotic diseases} 
-\item{\code{Wounds}}{Number of deaths directly from battle wounds} 
-\item{\code{Other}}{Number of deaths from other causes}
-\item{\code{Disease.rate}}{Annual rate of deaths from preventable or mitagable zymotic diseases, per 1000} 
-\item{\code{Wounds.rate}}{Annual rate of deaths directly from battle wounds, per 1000}
-\item{\code{Other.rate}}{Annual rate of deaths from other causes, per 1000}
+  \item{\code{Month}}{Month of the Crimean War, an ordered factor} 
+  \item{\code{Year}}{Year of the Crimean War}
+  \item{\code{Army}}{Estimated average monthly strength of the British army}
+  \item{\code{Disease}}{Number of deaths from preventable or mitagable zymotic diseases} 
+  \item{\code{Wounds}}{Number of deaths directly from battle wounds} 
+  \item{\code{Other}}{Number of deaths from other causes}
+  \item{\code{Disease.rate}}{Annual rate of deaths from preventable or mitagable zymotic diseases, per 1000} 
+  \item{\code{Wounds.rate}}{Annual rate of deaths directly from battle wounds, per 1000}
+  \item{\code{Other.rate}}{Annual rate of deaths from other causes, per 1000}
 }
 }
 \source{

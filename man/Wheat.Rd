@@ -9,18 +9,18 @@
 \code{Wheat}  A data frame with 53 observations on the following 3
 variables.  
 \describe{ 
-\item{\code{Year}}{Year, in intervals of 5 from 1565 to 1821: a numeric vector} 
-\item{\code{Wheat}}{Price of Wheat (Shillings/Quarter bushel): a numeric vector} 
-\item{\code{Wages}}{Weekly wage (Shillings): a numeric vector} 
+  \item{\code{Year}}{Year, in intervals of 5 from 1565 to 1821: a numeric vector} 
+  \item{\code{Wheat}}{Price of Wheat (Shillings/Quarter bushel): a numeric vector} 
+  \item{\code{Wages}}{Weekly wage (Shillings): a numeric vector} 
 }
 
 \code{Wheat.monarchs} A data frame with 12 observations on the following 4
 variables.  
 \describe{ 
-\item{\code{name}}{Reigning monarch, a factor with levels \code{Anne} \code{Charles I} \code{Charles II} \code{Cromwell} \code{Elizabeth} \code{George I} \code{George II} \code{George III} \code{George IV} \code{James I} \code{James II} \code{W&M}}
-\item{\code{start}}{Starting year of reign, a numeric vector}
-\item{\code{end}}{Starting year of reign, a numeric vector}
-\item{\code{commonwealth}}{A binary variable indicating the period of the Commonwealth under Cromwell} 
+  \item{\code{name}}{Reigning monarch, a factor with levels \code{Anne} \code{Charles I} \code{Charles II} \code{Cromwell} \code{Elizabeth} \code{George I} \code{George II} \code{George III} \code{George IV} \code{James I} \code{James II} \code{W&M}}
+  \item{\code{start}}{Starting year of reign, a numeric vector}
+  \item{\code{end}}{Starting year of reign, a numeric vector}
+  \item{\code{commonwealth}}{A binary variable indicating the period of the Commonwealth under Cromwell} 
 }
 }
 \source{
