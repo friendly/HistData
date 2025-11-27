@@ -102,8 +102,7 @@ Wachsmuth, A.W., Wilkinson L., Dallal G.E. (2003).  Galton's
 bend: A previously undiscovered nonlinearity in Galton's family stature
 regression data.  \emph{The American Statistician}, 57, 190-192.
 %\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
-c("\\Sexpr[results=rd]{tools:::Rd_expr_doi(\"#1\")}",
-"10.1198/0003130031874")\Sexpr{tools:::Rd_expr_doi("10.1198/0003130031874")}
+\doi{10.1198/0003130031874}.
 }
 \seealso{
 \code{\link{Galton}}

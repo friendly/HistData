@@ -135,8 +135,8 @@ sets related to Guerry's (1833) \emph{Moral Statistics of France}.
 Rothkopf (1957) on errors in learning Morse code, a classical example for
 MDS.
 
-The \pkg{psych} package, containing Galton's \code{peas} data. %
-\code{\link[psych]{peas}} data. The same data set is contained in \pkg{alr4}
+The \pkg{psychTools} package, containing Galton's \code{peas} data. %
+\code{\link[psychTools]{peas}} data. The same data set is contained in \pkg{alr4}
 as \code{\link[alr4]{galtonpeas}}.
 
 The \pkg{agridat} contains a large number of data sets of agricultural data,

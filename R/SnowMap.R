@@ -102,9 +102,11 @@ SnowMap <- function(xlim=c(3,20), ylim=c(3,20), axis.labels=FALSE,
 }
 
 
-# define some funtions to make the pieces re-usable
+#' define some funtions to make the pieces re-usable
 
-# setup basic Snow map plot
+#' setup basic Snow map plot
+#' @rdname SnowMap
+#' @export 
 Splot <- function(xlim=c(3,20), ylim=c(3,20), 
 				xlab="", ylab="", axis.labels=FALSE,
 				main="Snow's Cholera Map of London") {
@@ -119,6 +121,8 @@ Splot <- function(xlim=c(3,20), ylim=c(3,20),
 }
 
 # draw points for deaths
+#' @rdname SnowMap
+#' @export 
 Sdeaths <- function(col="red", pch=15, cex=0.6) {
   # make CRAN checks happy
   Snow.deaths <- NULL   #immediately replaced on next line
@@ -127,6 +131,8 @@ Sdeaths <- function(col="red", pch=15, cex=0.6) {
 	}
 
 # function to plot and label the pump locations
+#' @rdname SnowMap
+#' @export 
 Spumps <- function(col="blue", pch=17, cex=1.5, cex.lab=0.9)  {
   # make CRAN checks happy
   Snow.pumps <- NULL   #immediately replaced on next line
@@ -136,6 +142,8 @@ Spumps <- function(col="blue", pch=17, cex=1.5, cex.lab=0.9)  {
 }
 
 # function to draw the streets 
+#' @rdname SnowMap
+#' @export 
 Sstreets <- function(col="gray", lwd=1) {
   Snow.streets <- NULL   #immediately replaced on next line
   data(Snow.streets, package = 'HistData', envir = environment())
@@ -144,6 +152,8 @@ Sstreets <- function(col="gray", lwd=1) {
 }
 
 # draw a scale showing distance in meters in upper left
+#' @rdname SnowMap
+#' @export 
 Sscale <- function(xs=3.5, ys=19.7) {
    scale <- matrix(c(0,0, 4,0, NA, NA), nrow=3, ncol=2, byrow=TRUE)
    colnames(scale)<- c("x","y")
@@ -167,6 +177,8 @@ Sscale <- function(xs=3.5, ys=19.7) {
 # 		}
 # }
 
+#' @rdname SnowMap
+#' @export
 Spolygons <- function(col=NA, border="brown", lwd=2, lty=1) {
   #  Snow.polygons2 <- NULL   #immediately replaced on next line
   #  data(Snow.polygons2, package = 'HistData', envir = environment())
@@ -182,6 +194,8 @@ Spolygons <- function(col=NA, border="brown", lwd=2, lty=1) {
 
 
 # Plot a bivariate density estimate of deaths
+#' @rdname SnowMap
+#' @export
 Sdensity <- function(bandwidth=c(0.5,0.5), 
                      col1=rgb(0,1,0,0),    # green
                      col2=rgb(1,0,0,.8)    # red

@@ -259,8 +259,7 @@ NULL
 #' 
 #' @source Bellhouse, D.R. (2011), A new look at Halley's life table.
 #' \emph{Journal of the Royal Statistical Society}: Series A, \bold{174},
-#' 823-832.  c("\\Sexpr[results=rd]{tools:::Rd_expr_doi(\"#1\")}",
-#' "10.1111/j.1467-985X.2010.00684.x")\Sexpr{tools:::Rd_expr_doi("10.1111/j.1467-985X.2010.00684.x")}
+#' 823-832.  \doi{10.1111/j.1467-985X.2010.00684.x}
 #' @keywords datasets
 #' @examples
 #' 
@@ -1027,8 +1026,7 @@ NULL
 #' previously undiscovered nonlinearity in Galton's family stature regression
 #' data.  \emph{The American Statistician}, 57, 190-192.
 #' %\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
-#' c("\\Sexpr[results=rd]{tools:::Rd_expr_doi(\"#1\")}",
-#' "10.1198/0003130031874")\Sexpr{tools:::Rd_expr_doi("10.1198/0003130031874")}
+#' \doi{10.1198/0003130031874}
 #' 
 #' @source Galton, F. (1886). Regression Towards Mediocrity in Hereditary
 #' Stature \emph{Journal of the Anthropological Institute}, 15, 246-263
@@ -1681,8 +1679,7 @@ NULL
 #' 
 #' @source Macdonell, W. R. (1902). On Criminal Anthropometry and the
 #' Identification of Criminals. \emph{Biometrika}, 1(2), 177-227.
-#' c("\\Sexpr[results=rd]{tools:::Rd_expr_doi(\"#1\")}",
-#' "10.1093/biomet/1.2.177")\Sexpr{tools:::Rd_expr_doi("10.1093/biomet/1.2.177")}
+#' \doi{10.1093/biomet/1.2.177}
 #' % \url{http://www.jstor.org/stable/2331487}
 #' 
 #' The data used here were obtained from:
@@ -2456,8 +2453,7 @@ NULL
 #' bend: A previously undiscovered nonlinearity in Galton's family stature
 #' regression data.  \emph{The American Statistician}, 57, 190-192.
 #' %\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
-#' c("\\Sexpr[results=rd]{tools:::Rd_expr_doi(\"#1\")}",
-#' "10.1198/0003130031874")\Sexpr{tools:::Rd_expr_doi("10.1198/0003130031874")}
+#' \doi{10.1198/0003130031874}.
 #' 
 #' @source Pearson, K. and Lee, A. (1896). Mathematical contributions to the
 #' theory of evolution. On telegony in man, etc. \emph{Proceedings of the Royal

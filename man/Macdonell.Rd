@@ -26,8 +26,7 @@ frame with 3000 observations on the following 2 variables.
 \source{
 Macdonell, W. R. (1902). On Criminal Anthropometry and the
 Identification of Criminals. \emph{Biometrika}, 1(2), 177-227.
-c("\\Sexpr[results=rd]{tools:::Rd_expr_doi(\"#1\")}",
-"10.1093/biomet/1.2.177")\Sexpr{tools:::Rd_expr_doi("10.1093/biomet/1.2.177")}
+\doi{10.1093/biomet/1.2.177}
 % \url{http://www.jstor.org/stable/2331487}
 
 The data used here were obtained from:

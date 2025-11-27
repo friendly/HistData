@@ -22,8 +22,7 @@ A data frame with 100 observations on the following 8 variables. The
 \source{
 Bellhouse, D.R. (2011), A new look at Halley's life table.
 \emph{Journal of the Royal Statistical Society}: Series A, \bold{174},
-823-832.  c("\\Sexpr[results=rd]{tools:::Rd_expr_doi(\"#1\")}",
-"10.1111/j.1467-985X.2010.00684.x")\Sexpr{tools:::Rd_expr_doi("10.1111/j.1467-985X.2010.00684.x")}
+823-832.  \doi{10.1111/j.1467-985X.2010.00684.x}
 }
 \description{
 Edmond Halley published his Breslau life table in 1693, which was arguably
