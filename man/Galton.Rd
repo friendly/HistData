@@ -6,9 +6,9 @@
 \title{Galton's data on the heights of parents and their children}
 \format{
 A data frame with 928 observations on the following 2 variables.
-\describe{ 
-  \item{\code{parent}}{a numeric vector: height of the mid-parent (average of father and mother)} 
-  \item{\code{child}}{a numeric vector: height of the child} 
+\describe{
+\item{\code{parent}}{a numeric vector: height of the mid-parent (average of father and mother)}
+\item{\code{child}}{a numeric vector: height of the child}
 }
 }
 \source{
@@ -56,7 +56,7 @@ with(Galton,
 \references{
 Friendly, M. & Denis, D. (2005). The early origins and
 development of the scatterplot.  \emph{Journal of the History of the
-Behavioral Sciences}, 41, 103-130.
+Behavioral Sciences}, \strong{41}, 103-130.
 
 Galton, F. (1869). \emph{Hereditary Genius: An Inquiry into its Laws and
 Consequences}. London: Macmillan.
@@ -72,11 +72,11 @@ Uncertainty before 1900}. Cambridge, MA: Harvard University Press, Table 8.1
 Wachsmuth, A. W., Wilkinson L., Dallal G. E. (2003).  Galton's bend: A
 previously undiscovered nonlinearity in Galton's family stature regression
 data.  \emph{The American Statistician}, 57, 190-192.
-%\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
+\%\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
 \doi{10.1198/0003130031874}
 }
 \seealso{
-\code{link{GaltonFamilies}}, \code{\link{PearsonLee}},
-\code{galton} in the \pkg{psych} % \code{\link[psych]{galton}}
+\code{\link{GaltonFamilies}}, \code{\link{PearsonLee}},
+\code{galton} in the \pkg{psychTools} package, \code{\link[psychTools]{galton}}
 }
 \keyword{datasets}

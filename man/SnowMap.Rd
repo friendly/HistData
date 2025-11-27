@@ -120,13 +120,13 @@ during the 1854 outbreak.
 \details{
 \code{SnowMap()} is a wrapper for the various subfunctions also listed here:
 \itemize{
-  \item \code{Splot} sets up the basic plot 
-  \item \code{Sstreets} draws the streets
-  \item \code{Sdeaths} plots the deaths 
-  \item \code{Sdeaths} plots the pump locations 
-  \item \code{Sscale} draws the scale 
-  \item \code{Spolygons} draws the boundaries of the Voronoi polygons separating the pumps 
-  \item \code{Sdensity} draws and fills contours of the 2D density of deaths
+\item \code{Splot} sets up the basic plot
+\item \code{Sstreets} draws the streets
+\item \code{Sdeaths} plots the deaths
+\item \code{Sdeaths} plots the pump locations
+\item \code{Sscale} draws the scale
+\item \code{Spolygons} draws the boundaries of the Voronoi polygons separating the pumps
+\item \code{Sdensity} draws and fills contours of the 2D density of deaths
 }
 }
 \examples{
@@ -145,12 +145,12 @@ SnowMap(density=TRUE)
 Snow, J. (1885). \emph{On the Mode of Communication of Cholera}.
 London: John Churchill
 
-%John Mackenzie, "GIS Analyses of Dr. Snow's Map", %
-\url{http://www1.udel.edu/johnmack/frec480/cholera/cholera2.html} %describes
+\%John Mackenzie, "GIS Analyses of Dr. Snow's Map", \%
+\url{http://www1.udel.edu/johnmack/frec480/cholera/cholera2.html} \%describes
 some related visualizations using ArcGIS.
 
 Thomas Coleman, "John Snow Research project",
-\code{https://www.hilerun.org/econ/papers/snow/index.html} gives extensive
+\verb{https://www.hilerun.org/econ/papers/snow/index.html} gives extensive
 analyses of Snow's data with R notebooks on Github.
 }
 \seealso{

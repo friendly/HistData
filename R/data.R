@@ -38,26 +38,26 @@
 #' @docType data
 #' @format A data frame with 82 observations on the following 7 variables.
 #' \describe{ 
-#'   \item{\code{Year}}{a numeric vector, 1629-1710}
-#'   \item{\code{Males}}{a numeric vector, number of male christenings}
-#'   \item{\code{Females}}{a numeric vector, number of female christenings}
-#'   \item{\code{Plague}}{a numeric vector, number of deaths from plague}
-#'   \item{\code{Mortality}}{a numeric vector, total mortality}
-#'   \item{\code{Ratio}}{a numeric vector, ratio of Males/Females}
-#'   \item{\code{Total}}{a numeric vector, total christenings in London (000s)}
+#'   \item{`Year`}{a numeric vector, 1629-1710}
+#'   \item{`Males`}{a numeric vector, number of male christenings}
+#'   \item{`Females`}{a numeric vector, number of female christenings}
+#'   \item{`Plague`}{a numeric vector, number of deaths from plague}
+#'   \item{`Mortality`}{a numeric vector, total mortality}
+#'   \item{`Ratio`}{a numeric vector, ratio of Males/Females}
+#'   \item{`Total`}{a numeric vector, total christenings in London (000s)}
 #' }
 #' @references Campbell, R. B., Arbuthnot and the Human Sex Ratio (2001).
-#' \emph{Human Biology}, 73:4, 605-610.
-#' %\url{http://www.math.uni.edu/~campbell/arbuth.html}
+#' *Human Biology*, 73:4, 605-610.
+#' %<http://www.math.uni.edu/~campbell/arbuth.html>
 #' 
 #' Creighton, C. (1965). A History of Epidemics in Britain, 2nd edition, vol. 1
 #' and 2.  NY: Barnes and Noble.
 #' 
-#' S. Zabell (1976). Arbuthnot, Heberden, and the \emph{Bills of Mortality}.
+#' S. Zabell (1976). Arbuthnot, Heberden, and the *Bills of Mortality*.
 #' Technical Report No. 40, Department of Statistics, University of Chicago.
 #' @source Arbuthnot, John (1710). "An argument for Devine Providence, taken
 #' from the constant Regularity observ'd in the Births of both Sexes,"
-#' \emph{Philosophical transactions}, 27, 186-190.  Published in 1711.
+#' *Philosophical transactions*, 27, 186-190.  Published in 1711.
 #' @keywords datasets
 #' @examples
 #' 
@@ -81,7 +81,7 @@ NULL
 #' La Felicisima Armada
 #' 
 #' @description
-#' The Spanish Armada (Spanish: \emph{Grande y Felicisima Armada}, literally
+#' The Spanish Armada (Spanish: *Grande y Felicisima Armada*, literally
 #' "Great and Most Fortunate Navy") was a Spanish fleet of 130 ships that
 #' sailed from La Coruna in August 1588. During its preparation, several
 #' accounts of its formidable strength were circulated to reassure allied
@@ -91,16 +91,16 @@ NULL
 #' control of the Netherlands. However the Armada was not as fortunate as
 #' hoped: it was all destroyed in one week's fighting.
 #' 
-#' de Falguerolles (2008) reports the table given here as \code{Armada} as an
+#' de Falguerolles (2008) reports the table given here as `Armada` as an
 #' early example of data to which multivariate methods might be applied.
 #' 
 #' @details
-#' Note that \code{men = soldiers + sailors}, so this variable is redundant in
+#' Note that `men = soldiers + sailors`, so this variable is redundant in
 #' a multivariate analysis.
 #' 
 #' A complete list of the ships of the Spanish Armada, their types, armaments
 #' and fate can be found at
-#' \url{https://en.wikipedia.org/wiki/List_of_ships_of_the_Spanish_Armada}. An
+#' <https://en.wikipedia.org/wiki/List_of_ships_of_the_Spanish_Armada>. An
 #' enterprising data historian might attempt to square the data given there
 #' with this table.
 #' 
@@ -112,25 +112,25 @@ NULL
 #' @docType data
 #' @format A data frame with 10 observations on the following 11 variables.
 #' \describe{
-#'   \item{\code{Fleet}}{designation of the origin of the fleet, a factor with levels \code{Andalucia}, \code{Castilla}, \code{Galeras}, \code{Guipuscua}, \code{Napoles}, \code{Pataches}, \code{Portugal}, \code{Uantiscas}, \code{Vizca}, \code{Vrcas}} 
-#'   \item{\code{ships}}{number of ships, a numeric vector} 
-#'   \item{\code{tons}}{total tons of the ships, a numeric vector} 
-#'   \item{\code{soldiers}}{number of soldiers, a numeric vector} 
-#'   \item{\code{sailors}}{number of sailors, a numeric vector}
-#'   \item{\code{men}}{total of soldiers plus sailors, a numeric vector}
-#'   \item{\code{artillery}}{number of canons, a numeric vector}
-#'   \item{\code{balls}}{number of canonballs, a numeric vector}
-#'   \item{\code{gunpowder}}{amount of gunpowder loaded, a numeric vector}
-#'   \item{\code{lead}}{a numeric vector} 
-#'   \item{\code{rope}}{a numeric vector}
+#'   \item{`Fleet`}{designation of the origin of the fleet, a factor with levels `Andalucia`, `Castilla`, `Galeras`, `Guipuscua`, `Napoles`, `Pataches`, `Portugal`, `Uantiscas`, `Vizca`, `Vrcas`} 
+#'   \item{`ships`}{number of ships, a numeric vector} 
+#'   \item{`tons`}{total tons of the ships, a numeric vector} 
+#'   \item{`soldiers`}{number of soldiers, a numeric vector} 
+#'   \item{`sailors`}{number of sailors, a numeric vector}
+#'   \item{`men`}{total of soldiers plus sailors, a numeric vector}
+#'   \item{`artillery`}{number of canons, a numeric vector}
+#'   \item{`balls`}{number of canonballs, a numeric vector}
+#'   \item{`gunpowder`}{amount of gunpowder loaded, a numeric vector}
+#'   \item{`lead`}{a numeric vector} 
+#'   \item{`rope`}{a numeric vector}
 #' }
 #' @references Pedro de Paz Salas and Antonio Alvares. La felicisima armada que
 #' elrey Don Felipe nuestro Senor mando juntar enel puerto de la ciudad de
 #' Lisboa enel Reyno de Portugal. Lisbon, 1588.
 #' 
 #' @source de Falguerolles, A. (2008). L'analyse des donnees; before and
-#' around. \emph{Journal Electronique d'Histoire des Probabilites et de la
-#' Statistique}, \bold{4} (2), Link:
+#' around. *Journal Electronique d'Histoire des Probabilites et de la
+#' Statistique*, **4** (2), Link:
 #' https://www.jehps.net/Decembre2008/Falguerolles.pdf
 #' @keywords datasets
 #' @examples
@@ -174,10 +174,10 @@ NULL
 #' @docType data
 #' @format A data frame with 45 observations on the following 2 variables.
 #' \describe{
-#'   \item{\code{Year}}{Year, from 1855-1899}
-#'   \item{\code{Value}}{total value of British and Irish exports (millions of Pounds)} 
+#'   \item{`Year`}{Year, from 1855-1899}
+#'   \item{`Value`}{total value of British and Irish exports (millions of Pounds)} 
 #' }
-#' @source Bowley, A. L. (1901). \emph{Elements of Statistics}. London: P. S.
+#' @source Bowley, A. L. (1901). *Elements of Statistics*. London: P. S.
 #' King and Son, p. 151-154.
 #' 
 #' Digitized from Bowley's graph.
@@ -230,7 +230,7 @@ NULL
 #' 
 #' @details
 #' The dataset here follows Graetzer, and gives the number of deaths at ages
-#' \code{1:100} recorded in each of the years \code{1687:1691}. Halley's
+#' `1:100` recorded in each of the years `1687:1691`. Halley's
 #' analysis was based on the total over those years.
 #' 
 #' This dataset was kindly provided by David Bellhouse.
@@ -238,27 +238,27 @@ NULL
 #' @name Breslau
 #' @docType data
 #' @format A data frame with 100 observations on the following 8 variables. The
-#' \code{yearXXXX} variables give the number of deaths for persons of a given
-#' \code{age} recorded in that year.  
+#' `yearXXXX` variables give the number of deaths for persons of a given
+#' `age` recorded in that year.  
 #' \describe{ 
-#'   \item{\code{age}}{a numeric vector} 
-#'   \item{\code{year1687}}{a numeric vector} 
-#'   \item{\code{year1688}}{a numeric vector} 
-#'   \item{\code{year1689}}{a numeric vector}
-#'   \item{\code{year1690}}{a numeric vector} 
-#'   \item{\code{year1691}}{a numeric vector} 
-#'   \item{\code{total}}{a numeric vector} 
-#'   \item{\code{average}}{a numeric vector} 
+#'   \item{`age`}{a numeric vector} 
+#'   \item{`year1687`}{a numeric vector} 
+#'   \item{`year1688`}{a numeric vector} 
+#'   \item{`year1689`}{a numeric vector}
+#'   \item{`year1690`}{a numeric vector} 
+#'   \item{`year1691`}{a numeric vector} 
+#'   \item{`total`}{a numeric vector} 
+#'   \item{`average`}{a numeric vector} 
 #' }
 #' @seealso \code{\link{Arbuthnot}}, \code{\link{HalleyLifeTable}}
 #' 
 #' @references Halley, E. (1693). An estimate of the degrees of mortality of
 #' mankind, drawn from the curious tables of births and funerals in the City of
 #' Breslaw; with an attempt to ascertain the price of annuities upon lives.
-#' \emph{Phil. Trans.}, \bold{17}, 596-610.
+#' *Phil. Trans.*, **17**, 596-610.
 #' 
 #' @source Bellhouse, D.R. (2011), A new look at Halley's life table.
-#' \emph{Journal of the Royal Statistical Society}: Series A, \bold{174},
+#' *Journal of the Royal Statistical Society*: Series A, **174**,
 #' 823-832.  \doi{10.1111/j.1467-985X.2010.00684.x}
 #' @keywords datasets
 #' @examples
@@ -309,11 +309,11 @@ NULL
 #' as \eqn{G D = 3 g / (4 \pi R)}, where \eqn{g=9.806 m/s^2} is the
 #' acceleration due to gravity; so G is proportional to 1/D.
 #' 
-#' \code{density} contains Cavendish's measurements as analyzed, where he
-#' treated the value 4.88 as if it were 5.88.  \code{density2} corrects this.
+#' `density` contains Cavendish's measurements as analyzed, where he
+#' treated the value 4.88 as if it were 5.88.  `density2` corrects this.
 #' Cavendish also changed his experimental apparatus after the sixth
-#' determination, using a stiffer wire in the torsion balance. \code{density3}
-#' replaces the first 6 values with \code{NA}.
+#' determination, using a stiffer wire in the torsion balance. `density3`
+#' replaces the first 6 values with `NA`.
 #' 
 #' The modern "true" value of D is taken as 5.517.  The gravitational constant
 #' can be expressed as \eqn{G = 6.674 * 10^-11 m^3/kg/s^2}.
@@ -322,23 +322,23 @@ NULL
 #' @docType data
 #' @format A data frame with 29 observations on the following 3 variables.
 #' \describe{ 
-#'   \item{\code{density}}{Cavendish's 29 determinations of the mean density of the earth} 
-#'   \item{\code{density2}}{same as \code{density}, with the third value (4.88) replaced by 5.88} 
-#'   \item{\code{density3}}{same as \code{density}, omitting the the first 6 observations} 
+#'   \item{`density`}{Cavendish's 29 determinations of the mean density of the earth} 
+#'   \item{`density2`}{same as `density`, with the third value (4.88) replaced by 5.88} 
+#'   \item{`density3`}{same as `density`, omitting the the first 6 observations} 
 #' }
 #' 
 #' @references Cavendish, H. (1798). Experiments to determine the density of
-#' the earth. \emph{Philosophical Transactions of the Royal Society of London},
-#' 88 (Part II), 469-527. Reprinted in A. S. Mackenzie (ed.), \emph{The Laws of
-#' Gravitation}, 1900, New York: American.
+#' the earth. *Philosophical Transactions of the Royal Society of London*,
+#' 88 (Part II), 469-527. Reprinted in A. S. Mackenzie (ed.), *The Laws of
+#' Gravitation*, 1900, New York: American.
 #' 
-#' Brownlee, K. A. (1965). \emph{Statistical theory and methodology in science
-#' and engineering}, NY: Wiley, p. 520.
+#' Brownlee, K. A. (1965). *Statistical theory and methodology in science
+#' and engineering*, NY: Wiley, p. 520.
 #' @source Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-#' \url{https://www.math.uah.edu/stat/data/Cavendish.html}
+#' <https://www.math.uah.edu/stat/data/Cavendish.html>
 #' 
-#' Stephen M. Stigler (1977), "Do robust estimators work with \emph{real}
-#' data?", \emph{Annals of Statistics}, 5, 1055-1098
+#' Stephen M. Stigler (1977), "Do robust estimators work with *real*
+#' data?", *Annals of Statistics*, 5, 1055-1098
 #' @keywords datasets
 #' @examples
 #' 
@@ -368,11 +368,11 @@ NULL
 #' @description
 #' Quetelet's data on chest measurements of 5738 Scottish Militiamen. Quetelet
 #' (1846) used this data as a demonstration of the normal distribution of
-#' physical characteristics and the concept of \emph{l'homme moyen}.
+#' physical characteristics and the concept of *l'homme moyen*.
 #' 
 #' Stigler (1986) compared this table to the original 1817 source, and
 #' discovered some transcription errors, which he corrected (p. 208).  These
-#' data are given separately in \code{ChestStigler}. Gallagher (2020) used
+#' data are given separately in `ChestStigler`. Gallagher (2020) used
 #' these data sets to re-consider the question of normality in these
 #' distributions.
 #' 
@@ -383,25 +383,25 @@ NULL
 #' @format A data frame with 16 observations on the following 2 variables.
 #' Total count=5738.  
 #' \describe{ 
-#'   \item{\code{chest}}{Chest size (in inches)}
-#'   \item{\code{count}}{Number of soldiers with this chest size} 
+#'   \item{`chest`}{Chest size (in inches)}
+#'   \item{`count`}{Number of soldiers with this chest size} 
 #' }
 #' 
-#' @references A. Quetelet, \emph{Lettres a S.A.R. le Duc Regnant de
+#' @references A. Quetelet, *Lettres a S.A.R. le Duc Regnant de
 #' Saxe-Cobourg et Gotha, sur la Theorie des Probabilites, Appliquee aux
-#' Sciences Morales et Politiques}. Brussels: M. Hayes, 1846, p. 400.
+#' Sciences Morales et Politiques*. Brussels: M. Hayes, 1846, p. 400.
 #' 
-#' Eugene D. Gallagher (2020). Was Quetelet's Average Man Normal?, \emph{The
-#' American Statistician}, 74:3, 301-306, DOI: 10.1080/00031305.2019.1706635
+#' Eugene D. Gallagher (2020). Was Quetelet's Average Man Normal?, *The
+#' American Statistician*, 74:3, 301-306, DOI: 10.1080/00031305.2019.1706635
 #' 
-#' Stephen M. Stigler (1986). \emph{The History of Statistics: The Measurement
-#' of Uncertainty before 1900}. Cambridge, MA: Harvard University Press, 1986,
+#' Stephen M. Stigler (1986). *The History of Statistics: The Measurement
+#' of Uncertainty before 1900*. Cambridge, MA: Harvard University Press, 1986,
 #' p. 208.
 #' 
-#' @source Velleman, P. F. and Hoaglin, D. C. (1981).  \emph{Applications,
-#' Basics, and Computing of Exploratory Data Analysis}. Belmont. CA: Wadsworth.
+#' @source Velleman, P. F. and Hoaglin, D. C. (1981).  *Applications,
+#' Basics, and Computing of Exploratory Data Analysis*. Belmont. CA: Wadsworth.
 #' Retrieved from Statlib:
-#' \code{https://www.stat.cmu.edu/StatDat/Datafiles/MilitiamenChests.html}
+#' `https://www.stat.cmu.edu/StatDat/Datafiles/MilitiamenChests.html`
 #' @keywords datasets
 #' @examples
 #' 
@@ -444,7 +444,7 @@ NULL
 #' table.
 #' 
 #' @details
-#' The supply of \code{water} was classified as \dQuote{Thames, between
+#' The supply of `water` was classified as \dQuote{Thames, between
 #' Battersea and Waterloo Bridges} (central London), \dQuote{New River, Rivers
 #' Lea and Ravensbourne}, and \dQuote{Thames, at Kew and Hammersmith} (western
 #' London). The factor levels use abbreviations for these.
@@ -455,34 +455,34 @@ NULL
 #' @docType data
 #' @format A data frame with 38 observations on the following 15 variables.
 #' \describe{ 
-#'   \item{\code{district}}{name of the district in London, a character vector} 
-#'   \item{\code{cholera_drate}}{deaths from cholera in 1849 per 10,000 inhabitants, a numeric vector}
-#'   \item{\code{cholera_deaths}}{number of deaths registered from cholera in 1849, a numeric vector} 
-#'   \item{\code{popn}}{population, in the middle of 1849, a numeric vector} 
-#'   \item{\code{elevation}}{elevation, in feet above the high water mark, a numeric vector} 
-#'   \item{\code{region}}{a grouping of the London districts, a factor with levels \code{West} \code{North} \code{Central} \code{South} \code{Kent}} 
-#'   \item{\code{water}}{water supply region, a factor with levels \code{Battersea} \code{New River} \code{Kew}; see Details} 
-#'   \item{\code{annual_deaths}}{annual deaths from all causes, 1838-1844, a numeric vector} 
-#'   \item{\code{pop_dens}}{population density (persons per acre), a numeric vector} 
-#'   \item{\code{persons_house}}{persons per inhabited house, a numeric vector} 
-#'   \item{\code{house_valpp}}{average annual value of house, per person (pounds), a numeric vector}
-#'   \item{\code{poor_rate}}{poor rate precept per pound of house value, a numeric vector} 
-#'   \item{\code{area}}{district area, a numeric vector}
-#'   \item{\code{houses}}{number of houses, a numeric vector}
-#'   \item{\code{house_val}}{total house values, a numeric vector} 
+#'   \item{`district`}{name of the district in London, a character vector} 
+#'   \item{`cholera_drate`}{deaths from cholera in 1849 per 10,000 inhabitants, a numeric vector}
+#'   \item{`cholera_deaths`}{number of deaths registered from cholera in 1849, a numeric vector} 
+#'   \item{`popn`}{population, in the middle of 1849, a numeric vector} 
+#'   \item{`elevation`}{elevation, in feet above the high water mark, a numeric vector} 
+#'   \item{`region`}{a grouping of the London districts, a factor with levels `West` `North` `Central` `South` `Kent`} 
+#'   \item{`water`}{water supply region, a factor with levels `Battersea` `New River` `Kew`; see Details} 
+#'   \item{`annual_deaths`}{annual deaths from all causes, 1838-1844, a numeric vector} 
+#'   \item{`pop_dens`}{population density (persons per acre), a numeric vector} 
+#'   \item{`persons_house`}{persons per inhabited house, a numeric vector} 
+#'   \item{`house_valpp`}{average annual value of house, per person (pounds), a numeric vector}
+#'   \item{`poor_rate`}{poor rate precept per pound of house value, a numeric vector} 
+#'   \item{`area`}{district area, a numeric vector}
+#'   \item{`houses`}{number of houses, a numeric vector}
+#'   \item{`house_val`}{total house values, a numeric vector} 
 #' }
 #' 
 #' @seealso \code{\link{CholeraDeaths1849}}, \code{\link{Snow.deaths}}
-#' @references Registrar-General (1852). \emph{Report on the Mortality of
-#' Cholera in England 1848-49}, W. Clowes and Sons, for Her Majesty's
+#' @references Registrar-General (1852). *Report on the Mortality of
+#' Cholera in England 1848-49*, W. Clowes and Sons, for Her Majesty's
 #' Stationary Office. Written by William Farr.
-#' \url{https://ia600208.us.archive.org/11/items/b24751297/b24751297.pdf} The
+#' <https://ia600208.us.archive.org/11/items/b24751297/b24751297.pdf> The
 #' relevant tables are at pages clii -- clvii.
 #' 
 #' @source Bingham P., Verlander, N. Q., Cheal M. J. (2004). John Snow, William
 #' Farr and the 1849 outbreak of cholera that affected London: a reworking of
-#' the data highlights the importance of the water supply. \emph{Public
-#' Health}, 118(6), 387-394, Table 2. (The data was kindly supplied by Neville
+#' the data highlights the importance of the water supply. *Public
+#' Health*, 118(6), 387-394, Table 2. (The data was kindly supplied by Neville
 #' Verlander, including additional variables not shown in their Table 2.)
 #' @keywords datasets
 #' @examples
@@ -554,14 +554,14 @@ NULL
 #' meteorological phenomena (barometer, wind, rain), to see if he could find
 #' any patterns. This chart is available on the web site for Friendly & Wainer
 #' (2021) as Fig 4.1,
-#' \url{https://friendly.github.io/HistDataVis/figs-web/04_1-cholera-diarrhea.png}.
+#' <https://friendly.github.io/HistDataVis/figs-web/04_1-cholera-diarrhea.png>.
 #' 
 #' James Riley (2023) notes, "Cholera 1849 has special significance --- it is
 #' likely to be one of few modern pandemics that was completely unmitigated."
 #' 
 #' @details
 #' The data set was transcribed by James Riley to a spreadsheet,
-#' \url{https://github.com/jimr1603/1849-cholera}. He notes, "the scan at
+#' <https://github.com/jimr1603/1849-cholera>. He notes, "the scan at
 #' Internet Archive has a fold on day 11. I have derived this column from the
 #' row totals."
 #' 
@@ -569,28 +569,28 @@ NULL
 #' @docType data
 #' @format A data frame with 730 observations on the following 6 variables.
 #' \describe{ 
-#'   \item{\code{month}}{a character vector}
-#'   \item{\code{cause_of_death}}{a factor with levels \code{Cholera} \code{Diarrhaea}} 
-#'   \item{\code{day_of_month}}{a character vector}
-#'   \item{\code{deaths}}{a numeric vector} 
-#'   \item{\code{date}}{a Date}
-#'   \item{\code{day_of_week}}{an ordered factor with levels \code{Mon} < \code{Tue} < \code{Wed} < \code{Thu} < \code{Fri} < \code{Sat} < \code{Sun}}
+#'   \item{`month`}{a character vector}
+#'   \item{`cause_of_death`}{a factor with levels `Cholera` `Diarrhaea`} 
+#'   \item{`day_of_month`}{a character vector}
+#'   \item{`deaths`}{a numeric vector} 
+#'   \item{`date`}{a Date}
+#'   \item{`day_of_week`}{an ordered factor with levels `Mon` < `Tue` < `Wed` < `Thu` < `Fri` < `Sat` < `Sun`}
 #' }
 #' 
 #' @seealso \code{\link{Cholera}}, \code{\link{Snow.deaths}}
 #' 
-#' @references Friendly, M. & Wainer, H. (2021).  \emph{A History of Data
-#' Visualization and Graphic Communication}, Harvard University Press. %
-#' \url{https://www.hup.harvard.edu/catalog.php?isbn=9780674975231}.
+#' @references Friendly, M. & Wainer, H. (2021).  *A History of Data
+#' Visualization and Graphic Communication*, Harvard University Press. %
+#' <https://www.hup.harvard.edu/catalog.php?isbn=9780674975231>.
 #' 
 #' Riley, J. (2023). "Cholera in Victorian England", blog post,
-#' \url{https://openor.blog/2023/07/27/cholera-in-victorian-england/}.
+#' <https://openor.blog/2023/07/27/cholera-in-victorian-england/>.
 #' 
 #' @source The original source is: General Register Office, William Farr
-#' (1852), \emph{Report on the Mortality of Cholera in England, 1848-49}.
+#' (1852), *Report on the Mortality of Cholera in England, 1848-49*.
 #' London: Printed by W. Clowes, for HMSO; scanned by the Internet Archive from
 #' the collection of King's College London and available at
-#' \url{https://archive.org/details/b21308251/page/20/mode/2up}.
+#' <https://archive.org/details/b21308251/page/20/mode/2up>.
 #' @keywords datasets
 #' @examples
 #' 
@@ -617,10 +617,10 @@ NULL
 #' @description
 #' Cushny and Peebles (1905) studied the effects of hydrobromides related to
 #' scopolamine and atropine in producing sleep. The sleep of mental patients
-#' was measured without hypnotic (\code{Control}) and after treatment with one
-#' of three drugs: L. hyoscyamine hydrobromide (\code{L_hyoscyamine}), L.
-#' hyoscine hydrobromide (\code{L_hyoscyine}), and a mixture (racemic) form,
-#' \code{DL_hyoscine}, called atropine.  The L (levo) and D (detro) form of a
+#' was measured without hypnotic (`Control`) and after treatment with one
+#' of three drugs: L. hyoscyamine hydrobromide (`L_hyoscyamine`), L.
+#' hyoscine hydrobromide (`L_hyoscyine`), and a mixture (racemic) form,
+#' `DL_hyoscine`, called atropine.  The L (levo) and D (detro) form of a
 #' given molecule are optical isomers (mirror images).
 #' 
 #' The drugs were given on alternate evenings, and the hours of sleep were
@@ -638,49 +638,49 @@ NULL
 #' But as well, the sample sizes (number of nights) for each mean differed
 #' widely, ranging from 3-9, and this was not taken into account in their
 #' analyses. To allow weighted analyses, the number of observations for each
-#' mean is contained in the data frame \code{CushnyPeeblesN}.
+#' mean is contained in the data frame `CushnyPeeblesN`.
 #' 
 #' @details
-#' The last patient (11) has no \code{Control} observations, and so is often
+#' The last patient (11) has no `Control` observations, and so is often
 #' excluded in analyses or other versions of this data set.
 #' 
 #' @name CushnyPeebles
 #' @aliases CushnyPeebles CushnyPeeblesN
 #' @docType data
-#' @format \code{CushnyPeebles}: A data frame with 11 observations on the
+#' @format `CushnyPeebles`: A data frame with 11 observations on the
 #' following 4 variables.  
 #' \describe{ 
-#'   \item{\code{Control}}{a numeric vector: mean hours of sleep} 
-#'   \item{\code{L_hyoscyamine}}{a numeric vector: mean hours of sleep} 
-#'   \item{\code{L_hyoscine}}{a numeric vector: mean hours of sleep} 
-#'   \item{\code{D_hyoscine}}{a numeric vector: mean hours of sleep} 
+#'   \item{`Control`}{a numeric vector: mean hours of sleep} 
+#'   \item{`L_hyoscyamine`}{a numeric vector: mean hours of sleep} 
+#'   \item{`L_hyoscine`}{a numeric vector: mean hours of sleep} 
+#'   \item{`D_hyoscine`}{a numeric vector: mean hours of sleep} 
 #' }
 #' 
-#' \code{CushnyPeeblesN}: A data frame with 11 observations on the following 4
+#' `CushnyPeeblesN`: A data frame with 11 observations on the following 4
 #' variables.  
 #' \describe{ 
-#'   \item{\code{Control}}{a numeric vector: number of observations} 
-#'   \item{\code{L_hyoscyamine}}{a numeric vector: number of observations} 
-#'   \item{\code{L_hyoscine}}{a numeric vector: number of observations} 
-#'   \item{\code{DL_hyoscine}}{a numeric vector: number of observations} 
+#'   \item{`Control`}{a numeric vector: number of observations} 
+#'   \item{`L_hyoscyamine`}{a numeric vector: number of observations} 
+#'   \item{`L_hyoscine`}{a numeric vector: number of observations} 
+#'   \item{`DL_hyoscine`}{a numeric vector: number of observations} 
 #' }
 #' 
 #' @seealso \code{\link[datasets]{sleep}} for an alternative form of this data
 #' set.
 #' @references
 #' 
-#' Fisher, R. A. (1925), \emph{Statistical Methods for Research Workers},
+#' Fisher, R. A. (1925), *Statistical Methods for Research Workers*,
 #' Edinburgh and London: Oliver & Boyd.
 #' 
-#' Student (1908), "The Probable Error of a Mean," \emph{Biometrika}, 6, 1-25.
+#' Student (1908), "The Probable Error of a Mean," *Biometrika*, 6, 1-25.
 #' 
-#' Senn, S.J. and Richardson, W. (1994), "The first t-test", \emph{Statistics
-#' in Medicine}, 13, 785-803.
+#' Senn, S.J. and Richardson, W. (1994), "The first t-test", *Statistics
+#' in Medicine*, 13, 785-803.
 #' @source Cushny, A. R., and Peebles, A. R. (1905), "The Action of Optical
-#' Isomers. II: Hyoscines," \emph{Journal of Physiology}, 32, 501-510.
+#' Isomers. II: Hyoscines," *Journal of Physiology*, 32, 501-510.
 #' 
 #' % Senn, Stephen, Data from Cushny and Peebles,
-#' \url{http://www.senns.demon.co.uk/Data/Cushny.xls}
+#' <http://www.senns.demon.co.uk/Data/Cushny.xls>
 #' @keywords datasets
 #' @examples
 #' 
@@ -734,12 +734,12 @@ NULL
 #' 
 #' @description
 #' Edgeworth (1885) took the first 75 lines in Book XI of Virgil's
-#' \emph{Aeneid} and classified each of the first four "feet" of the line as a
+#' *Aeneid* and classified each of the first four "feet" of the line as a
 #' dactyl (one long syllable followed by two short ones) or not.
 #' 
 #' Grouping the lines in blocks of five gave a 4 x 25 table of counts,
-#' represented here as a data frame with ordered factors, \code{Foot} and
-#' \code{Lines}. Edgeworth used this table in what was among the first examples
+#' represented here as a data frame with ordered factors, `Foot` and
+#' `Lines`. Edgeworth used this table in what was among the first examples
 #' of analysis of variance applied to a two-way classification.
 #' 
 #' 
@@ -747,16 +747,16 @@ NULL
 #' @docType data
 #' @format A data frame with 60 observations on the following 3 variables.
 #' \describe{ 
-#'   \item{\code{Foot}}{an ordered factor with levels \code{1} < \code{2} < \code{3} < \code{4}} 
-#'   \item{\code{Lines}}{an ordered factor with levels \code{1:5} < \code{6:10} < \code{11:15} < \code{16:20} < \code{21:25} < \code{26:30} < \code{31:35} < \code{36:40} < \code{41:45} < \code{46:50} < \code{51:55} < \code{56:60} < \code{61:65} < \code{66:70} < \code{71:75}}
-#'   \item{\code{count}}{number of dactyls} 
+#'   \item{`Foot`}{an ordered factor with levels `1` < `2` < `3` < `4`} 
+#'   \item{`Lines`}{an ordered factor with levels `1:5` < `6:10` < `11:15` < `16:20` < `21:25` < `26:30` < `31:35` < `36:40` < `41:45` < `46:50` < `51:55` < `56:60` < `61:65` < `66:70` < `71:75`}
+#'   \item{`count`}{number of dactyls} 
 #' }
 #' 
 #' @references Edgeworth, F. Y. (1885). On methods of ascertaining variations
-#' in the rate of births, deaths and marriages. \emph{Journal of the [Royal]
-#' Statistical Society}, 48, 628-649.
+#' in the rate of births, deaths and marriages. *Journal of the Royal
+#' Statistical Society*, 48, 628-649.
 #' 
-#' @source Stigler, S. (1999) \emph{Statistics on the Table} Cambridge, MA:
+#' @source Stigler, S. (1999) *Statistics on the Table* Cambridge, MA:
 #' Harvard University Press, table 5.1.
 #' @keywords datasets
 #' @examples
@@ -802,8 +802,8 @@ NULL
 #' measured.
 #' 
 #' The firestorm that this report set off is well described by Stigler (1999),
-#' Chapter 1.  The data set \code{DrinksWages} is just one of Pearson's many
-#' tables, that he published in a letter to \emph{The Times}, August 10, 1910.
+#' Chapter 1.  The data set `DrinksWages` is just one of Pearson's many
+#' tables, that he published in a letter to *The Times*, August 10, 1910.
 #' 
 #' @details
 #' The data give Karl Pearson's tabulation of the father's trades from an
@@ -817,24 +817,24 @@ NULL
 #' @name DrinksWages
 #' @docType data
 #' @format A data frame with 70 observations on the following 6 variables,
-#' giving the number of non-drinkers (\code{sober}) and drinkers
-#' (\code{drinks}) in various occupational categories (\code{trade}).
+#' giving the number of non-drinkers (`sober`) and drinkers
+#' (`drinks`) in various occupational categories (`trade`).
 #' \describe{ 
-#'   \item{\code{class}}{wage class: a factor with levels \code{A} \code{B} \code{C}} 
-#'   \item{\code{trade}}{a factor with levels \code{baker} \code{barman} \code{billposter} ...  \code{wellsinker} \code{wireworker}}
-#'   \item{\code{sober}}{the number of non-drinkers, a numeric vector}
-#'   \item{\code{drinks}}{the number of drinkers, a numeric vector}
-#'   \item{\code{wage}}{weekly wage (in shillings), a numeric vector}
-#'   \item{\code{n}}{total number, a numeric vector} 
+#'   \item{`class`}{wage class: a factor with levels `A` `B` `C`} 
+#'   \item{`trade`}{a factor with levels `baker` `barman` `billposter` ...  `wellsinker` `wireworker`}
+#'   \item{`sober`}{the number of non-drinkers, a numeric vector}
+#'   \item{`drinks`}{the number of drinkers, a numeric vector}
+#'   \item{`wage`}{weekly wage (in shillings), a numeric vector}
+#'   \item{`n`}{total number, a numeric vector} 
 #' }
 #' 
 #' @references M. E. Elderton & K. Pearson (1910). A first study of the
 #' influence of parental alcoholism on the physique and ability of their
 #' offspring, Eugenics Laboratory Memoirs, 10.
-#' @source Pearson, K. (1910). \emph{The Times}, August 10, 1910.
+#' @source Pearson, K. (1910). *The Times*, August 10, 1910.
 #' 
-#' Stigler, S. M. (1999). \emph{Statistics on the Table: The History of
-#' Statistical Concepts and Methods}.  Harvard University Press, Table 1.1
+#' Stigler, S. M. (1999). *Statistics on the Table: The History of
+#' Statistical Concepts and Methods*.  Harvard University Press, Table 1.1
 #' @keywords datasets
 #' @examples
 #' 
@@ -862,8 +862,8 @@ NULL
 #' Edgeworth's Data on Death Rates in British Counties
 #' 
 #' @description
-#' In 1885, Francis Edgeworth published a paper, \emph{On methods of
-#' ascertaining variations in the rate of births, deaths and marriages}. It
+#' In 1885, Francis Edgeworth published a paper, *On methods of
+#' ascertaining variations in the rate of births, deaths and marriages*. It
 #' contained among the first examples of two-way tables, analyzed to show
 #' variation among row and column factors, in a way that Fisher would later
 #' formulate as the Analysis of Variance.
@@ -877,25 +877,25 @@ NULL
 #' 
 #' @details
 #' Edgeworth's data came from the Registrar General's report for the final
-#' year, 1883. The \code{Freq} variable represents death rates per 1000
+#' year, 1883. The `Freq` variable represents death rates per 1000
 #' population in the six counties listed.
 #' 
 #' @name EdgeworthDeaths
 #' @docType data
 #' @format A data frame with 42 observations on the following 3 variables.
 #' \describe{ 
-#'   \item{\code{County}}{a factor with levels \code{Berks} \code{Herts} \code{Bucks} \code{Oxford} \code{Bedford} \code{Cambridge}}
-#'   \item{\code{year}}{an ordered factor with levels \code{1876} < \code{1877} < \code{1878} < \code{1879} < \code{1880} < \code{1881} < \code{1882}}
-#'   \item{\code{Freq}}{a numeric vector, death rate per 1000 population} 
+#'   \item{`County`}{a factor with levels `Berks` `Herts` `Bucks` `Oxford` `Bedford` `Cambridge`}
+#'   \item{`year`}{an ordered factor with levels `1876` < `1877` < `1878` < `1879` < `1880` < `1881` < `1882`}
+#'   \item{`Freq`}{a numeric vector, death rate per 1000 population} 
 #' }
 #' 
 #' @references Edgeworth, F. Y. (1885). On Methods of Ascertaining Variations
-#' in the Rate of Births, Deaths, and Marriages.  \emph{Journal of the
-#' Statistical Society of London}, 48(4), 628-649. doi:10.2307/2979201
+#' in the Rate of Births, Deaths, and Marriages.  *Journal of the
+#' Statistical Society of London*, 48(4), 628-649. doi:10.2307/2979201
 #' 
 #' @source The data were scanned from Table 5.2 in Stigler, S. M. (1999)
-#' \emph{Statistics on the Table: The History of Statistical Concepts and
-#' Methods}, Harvard University Press.
+#' *Statistics on the Table: The History of Statistical Concepts and
+#' Methods*, Harvard University Press.
 #' @keywords datasets
 #' @examples
 #' 
@@ -932,7 +932,7 @@ NULL
 #' fingerprints, and produced a table of counts for 2000 right hands,
 #' classified by the number of fingers describable as a "whorl", a "small loop"
 #' (or neither). Because each hand contributes five fingers, the number of
-#' \code{Whorls + Loops} cannot exceed 5, so the contingency table is
+#' `Whorls + Loops` cannot exceed 5, so the contingency table is
 #' necessarily triangular.
 #' 
 #' Karl Pearson (1904) introduced the test for independence in contingency
@@ -942,7 +942,7 @@ NULL
 #' referred to as models for quasi-independence.
 #' 
 #' @details
-#' Cells for which \code{Whorls + Loops > 5} have \code{NA} for \code{count}
+#' Cells for which `Whorls + Loops > 5` have `NA` for `count`
 #' 
 #' @name Fingerprints
 #' @docType data
@@ -950,20 +950,20 @@ NULL
 #' variables, representing a 6 x 6 table giving the cross-classification of the
 #' fingers on 2000 right hands as a whorl, small loop or neither.  
 #' \describe{
-#'   \item{\code{Whorls}}{Number of whorls, an ordered factor with levels \code{0} < \code{1} < \code{2} < \dots < \code{5}}
-#'   \item{\code{Loops}}{Number of small loops, an ordered factor with levels \code{0} < \code{1} < \code{2} < \code{3} < \code{4} < \code{5}}
-#'   \item{\code{count}}{Number of hands} 
+#'   \item{`Whorls`}{Number of whorls, an ordered factor with levels `0` < `1` < `2` < \dots < `5`}
+#'   \item{`Loops`}{Number of small loops, an ordered factor with levels `0` < `1` < `2` < `3` < `4` < `5`}
+#'   \item{`count`}{Number of hands} 
 #' }
 #' 
 #' @references Pearson, K. (1904). Mathematical contributions to the theory of
 #' evolution. XIII. On the theory of contingency and its relation to
-#' association and normal correlation. Reprinted in \emph{Karl Pearson's Early
-#' Statistical Papers}, Cambridge: Cambridge University Press, 1948, 443-475.
+#' association and normal correlation. Reprinted in *Karl Pearson's Early
+#' Statistical Papers*, Cambridge: Cambridge University Press, 1948, 443-475.
 #' 
-#' Waite, H. (1915). The analysis of fingerprints, \emph{Biometrika}, 10,
+#' Waite, H. (1915). The analysis of fingerprints, *Biometrika*, 10,
 #' 421-478.
 #' 
-#' @source Stigler, S. M. (1999). \emph{Statistics on the Table}. Cambridge,
+#' @source Stigler, S. M. (1999). *Statistics on the Table*. Cambridge,
 #' MA: Harvard University Press, table 19.4.
 #' @keywords datasets
 #' @examples
@@ -999,36 +999,36 @@ NULL
 #' @docType data
 #' @format A data frame with 928 observations on the following 2 variables.
 #' \describe{ 
-#'   \item{\code{parent}}{a numeric vector: height of the mid-parent (average of father and mother)} 
-#'   \item{\code{child}}{a numeric vector: height of the child} 
+#'   \item{`parent`}{a numeric vector: height of the mid-parent (average of father and mother)} 
+#'   \item{`child`}{a numeric vector: height of the child} 
 #' }
 #' 
-#' @seealso \code{link{GaltonFamilies}}, \code{\link{PearsonLee}},
-#' \code{galton} in the \pkg{psych} % \code{\link[psych]{galton}}
+#' @seealso \code{\link{GaltonFamilies}}, \code{\link{PearsonLee}},
+#' `galton` in the \pkg{psychTools} package, \code{\link[psychTools]{galton}}
 #' 
 #' @references Friendly, M. & Denis, D. (2005). The early origins and
-#' development of the scatterplot.  \emph{Journal of the History of the
-#' Behavioral Sciences}, 41, 103-130.
+#' development of the scatterplot.  *Journal of the History of the
+#' Behavioral Sciences*, **41**, 103-130.
 #' 
-#' Galton, F. (1869). \emph{Hereditary Genius: An Inquiry into its Laws and
-#' Consequences}. London: Macmillan.
+#' Galton, F. (1869). *Hereditary Genius: An Inquiry into its Laws and
+#' Consequences*. London: Macmillan.
 #' 
 #' Hanley, J. A. (2004). "Transmuting" Women into Men: Galton's Family Data on
-#' Human Stature. \emph{The American Statistician}, 58, 237-243. See:
-#' \url{http://www.medicine.mcgill.ca/epidemiology/hanley/galton/} for source
+#' Human Stature. *The American Statistician*, 58, 237-243. See:
+#' <http://www.medicine.mcgill.ca/epidemiology/hanley/galton/> for source
 #' materials.
 #' 
-#' Stigler, S. M. (1986).  \emph{The History of Statistics: The Measurement of
-#' Uncertainty before 1900}. Cambridge, MA: Harvard University Press, Table 8.1
+#' Stigler, S. M. (1986).  *The History of Statistics: The Measurement of
+#' Uncertainty before 1900*. Cambridge, MA: Harvard University Press, Table 8.1
 #' 
 #' Wachsmuth, A. W., Wilkinson L., Dallal G. E. (2003).  Galton's bend: A
 #' previously undiscovered nonlinearity in Galton's family stature regression
-#' data.  \emph{The American Statistician}, 57, 190-192.
-#' %\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
+#' data.  *The American Statistician*, 57, 190-192.
+#' %<http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf>
 #' \doi{10.1198/0003130031874}
 #' 
 #' @source Galton, F. (1886). Regression Towards Mediocrity in Hereditary
-#' Stature \emph{Journal of the Anthropological Institute}, 15, 246-263
+#' Stature *Journal of the Anthropological Institute*, 15, 246-263
 #' @keywords datasets
 #' @examples
 #' 
@@ -1066,7 +1066,7 @@ NULL
 #' their offspring, for which this data is mainly famous, Galton had another
 #' purpose which the data in this form allows to address: Does marriage
 #' selection indicate a relationship between the heights of husbands and wives?,
-#' a topic he called \emph{assortative mating}. Keen [p. 297--298](2010)
+#' a topic he called *assortative mating*. Keen [p. 297--298](2010)
 #' provides a brief discussion of this topic.
 #' 
 #' @details
@@ -1081,29 +1081,29 @@ NULL
 #' @docType data
 #' @format A data frame with 934 observations on the following 8 variables.
 #' \describe{ 
-#'   \item{\code{family}}{family ID, a factor with levels \code{001}-\code{204}} 
-#'   \item{\code{father}}{height of father}
-#'   \item{\code{mother}}{height of mother}
-#'   \item{\code{midparentHeight}}{mid-parent height, calculated as \code{(father + 1.08*mother)/2}} 
-#'   \item{\code{children}}{number of children in this family} 
-#'   \item{\code{childNum}}{number of this child within family. Children are listed in decreasing order of height for boys followed by girls} 
-#'   \item{\code{gender}}{child gender, a factor with levels \code{female} \code{male}} 
-#'   \item{\code{childHeight}}{height of child} 
+#'   \item{`family`}{family ID, a factor with levels `001`-`204`} 
+#'   \item{`father`}{height of father}
+#'   \item{`mother`}{height of mother}
+#'   \item{`midparentHeight`}{mid-parent height, calculated as `(father + 1.08*mother)/2`} 
+#'   \item{`children`}{number of children in this family} 
+#'   \item{`childNum`}{number of this child within family. Children are listed in decreasing order of height for boys followed by girls} 
+#'   \item{`gender`}{child gender, a factor with levels `female` `male`} 
+#'   \item{`childHeight`}{height of child} 
 #' }
 #' @seealso \code{\link{Galton}}, \code{\link{PearsonLee}}
 #' 
 #' @references Galton, F. (1886). Regression Towards Mediocrity in Hereditary
-#' Stature \emph{Journal of the Anthropological Institute}, 15, 246-263
+#' Stature *Journal of the Anthropological Institute*, 15, 246-263
 #' 
 #' Hanley, J. A. (2004). "Transmuting" Women into Men: Galton's Family Data on
-#' Human Stature. \emph{The American Statistician}, 58, 237-243. See:
-#' \url{http://www.medicine.mcgill.ca/epidemiology/hanley/galton/} for source
+#' Human Stature. *The American Statistician*, 58, 237-243. See:
+#' <http://www.medicine.mcgill.ca/epidemiology/hanley/galton/> for source
 #' materials.
 #' 
-#' Keen, K. J. (2010). \emph{Graphics for Statistics and Data Analysis with R},
-#' Boca Raton: CRC Press, \url{https://www.unbc.ca/keen/textbook}.
+#' Keen, K. J. (2010). *Graphics for Statistics and Data Analysis with R*,
+#' Boca Raton: CRC Press, <https://www.unbc.ca/keen/textbook>.
 #' @source Galton's notebook,
-#' \url{http://www.medicine.mcgill.ca/epidemiology/hanley/galton/notebook/},
+#' <http://www.medicine.mcgill.ca/epidemiology/hanley/galton/notebook/>,
 #' transcribed by Beverley Shipley in 2001.
 #' @keywords datasets
 #' @examples
@@ -1157,14 +1157,14 @@ NULL
 #' analyze social data on such things as crime, literacy and suicide with the
 #' view to determining social laws and the relations among these variables.
 #' 
-#' The \code{Guerry} data frame comprises a collection of 'moral variables' on the 86
+#' The `Guerry` data frame comprises a collection of 'moral variables' on the 86
 #' departments of France around 1830.  A few additional variables have been
 #' added from other sources.
 #' 
 #' @details
-#' Note that most of the variables (e.g., \code{Crime_pers}) are scaled so that
+#' Note that most of the variables (e.g., `Crime_pers`) are scaled so that
 #' 'more is better' morally.  
-#' This is done by expressing "bad" numbers as \emph{population per} crime or by using ranks.
+#' This is done by expressing "bad" numbers as *population per* crime or by using ranks.
 #' Thus, in his choropleth maps, he was able to assign darker shading consistently to the departments that were worse.
 #' 
 #' Values for the quantitative variables displayed on Guerry's maps were taken
@@ -1178,38 +1178,38 @@ NULL
 #' @format A data frame with 86 observations (the departments of France) on the
 #' following 23 variables.  
 #' \describe{ 
-#'   \item{\code{dept}}{Department ID: Standard numbers for the departments, except for Corsica (200)}
-#'   \item{\code{Region}}{Region of France ('N'='North', 'S'='South', 'E'='East', 'W'='West', 'C'='Central'). Corsica is coded as NA }
-#'   \item{\code{Department}}{Department name: Departments are named according to usage in 1830, but without accents.  A factor with levels \code{Ain}, \code{Aisne}, \code{Allier}, ..., \code{Vosges}, \code{Yonne}}
-#'   \item{\code{Crime_pers}}{Population per Crime against persons. Source: A2 (Compte general, 1825-1830)} 
-#'   \item{\code{Crime_prop}}{Population per Crime against property. Source: A2 (Compte general, 1825-1830)}
-#'   \item{\code{Literacy}}{Percent Read & Write: Percent of military conscripts who can read and write. Source: A2 } 
-#'   \item{\code{Donations}}{Donations to the poor. Source: A2 (Bulletin des lois)} 
-#'   \item{\code{Infants}}{Population per illegitimate birth. Source: A2 (Bureau des Longitudes, 1817-1821)}
-#'   \item{\code{Suicides}}{Population per suicide. Source: A2 (Compte general, 1827-1830)} 
-#'   \item{\code{MainCity}}{Size of principal city ('1:Sm', '2:Med', '3:Lg'), used as a surrogate for population density. Large refers to the top 10, small to the bottom 10; all the rest are classed Medium. Source: A1. An ordered factor with levels \code{1:Sm} < \code{2:Med} < \code{3:Lg}}
-#'   \item{\code{Wealth}}{Per capita tax on personal property. A ranked index based on taxes on personal and movable property per inhabitant. Source: A1}
-#'   \item{\code{Commerce}}{Commerce and Industry, measured by the rank of the number of patents / population. Source: A1}
-#'   \item{\code{Clergy}}{Distribution of clergy, measured by the rank of the number of Catholic priests in active service / population. Source: A1 (Almanach officiel du clergy, 1829)} 
-#'   \item{\code{Crime_parents}}{Crimes against parents, measured by the rank of the ratio of crimes against parents to all crimes-- Average for the years 1825-1830. Source: A1 (Compte general) } 
-#'   \item{\code{Infanticide}}{Infanticides per capita. A ranked ratio of number of infanticides to population-- Average for the years 1825-1830. Source: A1 (Compte general) } 
-#'   \item{\code{Donation_clergy}}{Donations to the clergy. A ranked ratio of the number of bequests and donations inter vivios to population-- Average for the years 1815-1824. Source: A1 (Bull. des lois, ordunn. d'autorisation) } 
-#'   \item{\code{Lottery}}{Per capita wager on Royal Lottery. Ranked ratio of the proceeds bet on the royal lottery to population--- Average for the years 1822-1826. Source: A1 (Compte rendus par le ministere des finances)} 
-#'   \item{\code{Desertion}}{Military desertion, ratio of the number of young soldiers accused of desertion to the force of the military contingent, minus the deficit produced by the insufficiency of available billets-- Average of the years 1825-1827. Source: A1 (Compte du ministere du guerre, 1829 etat V) } 
-#'   \item{\code{Instruction}}{Instruction. Ranks recorded from Guerry's map of Instruction. Note: this is inversely related to \code{Literacy} (as defined here)}
-#'   \item{\code{Prostitutes}}{Prostitutes in Paris. Number of prostitutes registered in Paris from 1816 to 1834, classified by the department of thei birth Source: Parent-Duchatelet (1836), \emph{De la prostitution en Paris}}
-#'   \item{\code{Distance}}{Distance to Paris (km). Distance of each department centroid to the centroid of the Seine (Paris) Source: calculated from department centroids } 
-#'   \item{\code{Area}}{Area (1000 km^2). Source: Angeville (1836) } 
-#'   \item{\code{Pop1831}}{1831 population. Population in 1831, taken from Angeville (1836), \emph{Essai sur la Statistique de la Population fran?ais}, in 1000s } 
+#'   \item{`dept`}{Department ID: Standard numbers for the departments, except for Corsica (200)}
+#'   \item{`Region`}{Region of France ('N'='North', 'S'='South', 'E'='East', 'W'='West', 'C'='Central'). Corsica is coded as NA }
+#'   \item{`Department`}{Department name: Departments are named according to usage in 1830, but without accents.  A factor with levels `Ain`, `Aisne`, `Allier`, ..., `Vosges`, `Yonne`}
+#'   \item{`Crime_pers`}{Population per Crime against persons. Source: A2 (Compte general, 1825-1830)} 
+#'   \item{`Crime_prop`}{Population per Crime against property. Source: A2 (Compte general, 1825-1830)}
+#'   \item{`Literacy`}{Percent Read & Write: Percent of military conscripts who can read and write. Source: A2 } 
+#'   \item{`Donations`}{Donations to the poor. Source: A2 (Bulletin des lois)} 
+#'   \item{`Infants`}{Population per illegitimate birth. Source: A2 (Bureau des Longitudes, 1817-1821)}
+#'   \item{`Suicides`}{Population per suicide. Source: A2 (Compte general, 1827-1830)} 
+#'   \item{`MainCity`}{Size of principal city ('1:Sm', '2:Med', '3:Lg'), used as a surrogate for population density. Large refers to the top 10, small to the bottom 10; all the rest are classed Medium. Source: A1. An ordered factor with levels `1:Sm` < `2:Med` < `3:Lg`}
+#'   \item{`Wealth`}{Per capita tax on personal property. A ranked index based on taxes on personal and movable property per inhabitant. Source: A1}
+#'   \item{`Commerce`}{Commerce and Industry, measured by the rank of the number of patents / population. Source: A1}
+#'   \item{`Clergy`}{Distribution of clergy, measured by the rank of the number of Catholic priests in active service / population. Source: A1 (Almanach officiel du clergy, 1829)} 
+#'   \item{`Crime_parents`}{Crimes against parents, measured by the rank of the ratio of crimes against parents to all crimes-- Average for the years 1825-1830. Source: A1 (Compte general) } 
+#'   \item{`Infanticide`}{Infanticides per capita. A ranked ratio of number of infanticides to population-- Average for the years 1825-1830. Source: A1 (Compte general) } 
+#'   \item{`Donation_clergy`}{Donations to the clergy. A ranked ratio of the number of bequests and donations inter vivios to population-- Average for the years 1815-1824. Source: A1 (Bull. des lois, ordunn. d'autorisation) } 
+#'   \item{`Lottery`}{Per capita wager on Royal Lottery. Ranked ratio of the proceeds bet on the royal lottery to population--- Average for the years 1822-1826. Source: A1 (Compte rendus par le ministere des finances)} 
+#'   \item{`Desertion`}{Military desertion, ratio of the number of young soldiers accused of desertion to the force of the military contingent, minus the deficit produced by the insufficiency of available billets-- Average of the years 1825-1827. Source: A1 (Compte du ministere du guerre, 1829 etat V) } 
+#'   \item{`Instruction`}{Instruction. Ranks recorded from Guerry's map of Instruction. Note: this is inversely related to `Literacy` (as defined here)}
+#'   \item{`Prostitutes`}{Prostitutes in Paris. Number of prostitutes registered in Paris from 1816 to 1834, classified by the department of thei birth Source: Parent-Duchatelet (1836), *De la prostitution en Paris*}
+#'   \item{`Distance`}{Distance to Paris (km). Distance of each department centroid to the centroid of the Seine (Paris) Source: calculated from department centroids } 
+#'   \item{`Area`}{Area (1000 km^2). Source: Angeville (1836) } 
+#'   \item{`Pop1831`}{1831 population. Population in 1831, taken from Angeville (1836), *Essai sur la Statistique de la Population fran?ais*, in 1000s } 
 #' }
 #' 
 #' @seealso The \pkg{Guerry} package for maps of France:
 #' \code{\link[Guerry]{gfrance}}, related data, creating maps of his data and multivariate spatial analysis.
 #' 
 #' @references Dray, S. and Jombart, T. (2011). A Revisit Of Guerry's Data:
-#' Introducing Spatial Constraints In Multivariate Analysis.  \emph{The Annals
-#' of Applied Statistics}, Vol. 5, No. 4, 2278-2299.
-#' \url{http://arxiv.org/pdf/1202.6485}, DOI: 10.1214/10-AOAS356.
+#' Introducing Spatial Constraints In Multivariate Analysis.  *The Annals
+#' of Applied Statistics*, Vol. 5, No. 4, 2278-2299.
+#' <http://arxiv.org/pdf/1202.6485>, DOI: 10.1214/10-AOAS356.
 #' 
 #' Brunsdon, C. and Dykes, J. (2007).  Geographically weighted visualization:
 #' interactive graphics for scale-varying exploratory analysis.  Geographical
@@ -1217,20 +1217,20 @@ NULL
 #' April, 2007.
 #' 
 #' Friendly, M. (2007). A.-M. Guerry's Moral Statistics of France: Challenges
-#' for Multivariable Spatial Analysis.  \emph{Statistical Science}, 22,
+#' for Multivariable Spatial Analysis.  *Statistical Science*, 22,
 #' 368-399.
 #' 
 #' Friendly, M. (2007). Data from A.-M. Guerry, Essay on the Moral Statistics
-#' of France (1833), \url{http://datavis.ca/gallery/guerry/guerrydat.html}.
-#' @source Angeville, A. (1836). \emph{Essai sur la Statistique de la
-#' Population fran?aise} Paris: F. Doufour.
+#' of France (1833), <http://datavis.ca/gallery/guerry/guerrydat.html>.
+#' @source Angeville, A. (1836). *Essai sur la Statistique de la
+#' Population fran?aise* Paris: F. Doufour.
 #' 
-#' Guerry, A.-M. (1833). \emph{Essai sur la statistique morale de la France}
+#' Guerry, A.-M. (1833). *Essai sur la statistique morale de la France*
 #' Paris: Crochard. English translation: Hugh P. Whitt and Victor W. Reinking,
 #' Lewiston, N.Y. : Edwin Mellen Press, 2002.
 #' 
-#' Parent-Duchatelet, A. (1836). \emph{De la prostitution dans la ville de
-#' Paris}, 3rd ed, 1857, p. 32, 36
+#' Parent-Duchatelet, A. (1836). *De la prostitution dans la ville de
+#' Paris*, 3rd ed, 1857, p. 32, 36
 #' @keywords datasets
 #' @examples
 #' 
@@ -1253,7 +1253,7 @@ NULL
 #' used his table to compute the price of life annuities.
 #' 
 #' @details
-#' Halley's table contained only \code{age} and \code{number}. For people aged
+#' Halley's table contained only `age` and `number`. For people aged
 #' over 84 years, Halley just noted that their total number was 107. This value
 #' is not included in the data set.
 #' 
@@ -1272,23 +1272,23 @@ NULL
 #' @docType data
 #' @format A data frame with 84 observations on the following 4 variables.
 #' \describe{ 
-#'   \item{\code{age}}{a numeric vector} 
-#'   \item{\code{deaths}}{number of deaths, \eqn{D_k}, among people of age k, a numeric vector}
-#'   \item{\code{number}}{size of the population, \eqn{P_k} surviving until this age, a numeric vector} 
-#'   \item{\code{ratio}}{the ratio \eqn{P_{k+1}/P_k}, the conditional probability of surviving until age k + 1 given that one had already reached age k, a numeric vector} 
+#'   \item{`age`}{a numeric vector} 
+#'   \item{`deaths`}{number of deaths, \eqn{D_k}, among people of age k, a numeric vector}
+#'   \item{`number`}{size of the population, \eqn{P_k} surviving until this age, a numeric vector} 
+#'   \item{`ratio`}{the ratio \eqn{P_{k+1}/P_k}, the conditional probability of surviving until age k + 1 given that one had already reached age k, a numeric vector} 
 #' }
 #' @seealso \code{\link{Arbuthnot}}
 #' 
 #' @references Halley, E. (1693). An estimate of the degrees of the mortality
 #' of mankind, drawn from curious tables of the births and funerals at the city
 #' of Breslau; with an attempt to ascertain the price of annuities upon lives.
-#' \emph{Philosophical Transactions of the Royal Society, London}, 17, 596-610.
+#' *Philosophical Transactions of the Royal Society, London*, 17, 596-610.
 #' 
 #' The text of Halley's paper was found at
-#' \url{http://www.pierre-marteau.com/editions/1693-mortality.html}
+#' <http://www.pierre-marteau.com/editions/1693-mortality.html>
 #' 
 #' @source N. Bacaer (2011), "Halley's life table (1693)", Ch 2, pp 5-10. In
-#' \emph{A Short History of Mathematical Population Dynamics}, Springer-Verlag
+#' *A Short History of Mathematical Population Dynamics*, Springer-Verlag
 #' London, DOI 10.1007/978-0-85729-115-8_2.  Data taken from Table 1.
 #' @keywords datasets
 #' @examples
@@ -1316,11 +1316,11 @@ NULL
 #' W. Stanley Jevons' data on Numerical Discrimination
 #' 
 #' @description
-#' In a remarkable brief note in \emph{Nature}, 1871, W. Stanley Jevons
+#' In a remarkable brief note in *Nature*, 1871, W. Stanley Jevons
 #' described the results of an experiment he had conducted on himself to
 #' determine the limits of the number of objects an observer could comprehend
 #' immediately without counting them.  This was an important philosophical
-#' question: \emph{How many objects can the mind embrace at once?}
+#' question: *How many objects can the mind embrace at once?*
 #' 
 #' He carried out 1027 trials in which he tossed an "uncertain number" of
 #' uniform black beans into a box and immediately attempted to estimate the
@@ -1332,26 +1332,26 @@ NULL
 #' 
 #' @details
 #' The original data were presented in a two-way, 13 x 13 frequency table,
-#' \code{estimated} (3:15) x \code{actual} (3:15).
+#' `estimated` (3:15) x `actual` (3:15).
 #' 
 #' @name Jevons
 #' @docType data
 #' @format A frequency data frame with 50 observations on the following 4
 #' variables.  
 #' \describe{ 
-#'   \item{\code{actual}}{Actual number: a numeric vector} 
-#'   \item{\code{estimated}}{Estimated number: a numeric vector}
-#'   \item{\code{frequency}}{Frequency of this combination of (actual, estimated): a numeric vector}
-#'   \item{\code{error}}{\code{actual}-\code{estimated}: a numeric vector} 
+#'   \item{`actual`}{Actual number: a numeric vector} 
+#'   \item{`estimated`}{Estimated number: a numeric vector}
+#'   \item{`frequency`}{Frequency of this combination of (actual, estimated): a numeric vector}
+#'   \item{`error`}{`actual`-`estimated`: a numeric vector} 
 #' }
 #' 
 #' @references Miller, G. A. (1956). The Magical Number Seven, Plus or Minus
 #' Two: Some Limits on Our Capacity for Processing Information,
-#' \emph{Psychological Review}, 63, 81-97,
-#' \url{http://www.musanim.com/miller1956/}
+#' *Psychological Review*, 63, 81-97,
+#' <http://www.musanim.com/miller1956/>
 #' 
 #' @source Jevons, W. S. (1871). The Power of Numerical Discrimination,
-#' \emph{Nature}, 1871, III (281-282)
+#' *Nature*, 1871, III (281-282)
 #' @keywords datasets
 #' @examples
 #' 
@@ -1413,55 +1413,55 @@ NULL
 #' 2010). It provides a compelling example of the notions of statistical
 #' variability and bias.
 #' 
-#' The data frame \code{Langren1644} gives the estimates and other information
+#' The data frame `Langren1644` gives the estimates and other information
 #' derived from the previously known 1644 graph.  It turns out that van Langren
 #' produced other versions of this graph, as early as 1628. The data frame
-#' \code{Langren.all} gives the estimates derived from all known versions of
+#' `Langren.all` gives the estimates derived from all known versions of
 #' this graph.
 #' 
 #' @details
 #' In all the graphs, Toledo is implicitly at the origin and Rome is located
-#' relatively at the value of \code{Longitude}. To judge correspondence with an
+#' relatively at the value of `Longitude`. To judge correspondence with an
 #' actual map, the positions in (lat, long) are
 #' 
-#' \code{ toledo <- c(39.86, -4.03); rome <- c(41.89, 12.5) }
+#' ` toledo <- c(39.86, -4.03); rome <- c(41.89, 12.5) `
 #' 
 #' @name Langren
 #' @aliases Langren Langren1644 Langren.all
 #' @docType data
-#' @format \code{Langren1644}: A data frame with 12 observations on the
+#' @format `Langren1644`: A data frame with 12 observations on the
 #' following 9 variables, giving determinations of the distance in longitude
 #' between Toledo and Rome, from the 1644 graph.  
 #' \describe{
-#'   \item{\code{Name}}{The name of the person giving a determination, a factor with levels \code{A. Argelius} ... \code{T. Brahe}}
-#'   \item{\code{Longitude}}{Estimated value of the longitude distance between Toledo and Rome} 
-#'   \item{\code{Year}}{Year associated with this determination} 
-#'   \item{\code{Longname}}{A longer version of the \code{Name}, where appropriate; a factor with levels \code{Andrea Argoli} \code{Christoph Clavius} \code{Tycho Brahe}} 
-#'   \item{\code{City}}{The principal city where this person worked; a factor with levels \code{Alexandria} \code{Amsterdam} \code{Bamberg} \code{Bologna} \code{Frankfurt} \code{Hven} \code{Leuven} \code{Middelburg} \code{Nuremberg} \code{Padua} \code{Paris} \code{Rome}}
-#'   \item{\code{Country}}{The country where this person worked; a factor with levels \code{Belgium} \code{Denmark} \code{Egypt} \code{Flanders} \code{France} \code{Germany} \code{Italy} \code{Italy }}
-#'   \item{\code{Latitude}}{Latitude of this \code{City}; a numeric vector}
-#'   \item{\code{Source}}{Likely source for this determination of Longitude; a factor with levels \code{Astron} \code{Map}} \item{\code{Gap}}{A numeric vector indicating whether the \code{Longitude} value is below or above th median} }
+#'   \item{`Name`}{The name of the person giving a determination, a factor with levels `A. Argelius` ... `T. Brahe`}
+#'   \item{`Longitude`}{Estimated value of the longitude distance between Toledo and Rome} 
+#'   \item{`Year`}{Year associated with this determination} 
+#'   \item{`Longname`}{A longer version of the `Name`, where appropriate; a factor with levels `Andrea Argoli` `Christoph Clavius` `Tycho Brahe`} 
+#'   \item{`City`}{The principal city where this person worked; a factor with levels `Alexandria` `Amsterdam` `Bamberg` `Bologna` `Frankfurt` `Hven` `Leuven` `Middelburg` `Nuremberg` `Padua` `Paris` `Rome`}
+#'   \item{`Country`}{The country where this person worked; a factor with levels `Belgium` `Denmark` `Egypt` `Flanders` `France` `Germany` `Italy` `Italy `}
+#'   \item{`Latitude`}{Latitude of this `City`; a numeric vector}
+#'   \item{`Source`}{Likely source for this determination of Longitude; a factor with levels `Astron` `Map`} \item{`Gap`}{A numeric vector indicating whether the `Longitude` value is below or above th median} }
 #' 
-#' \code{Langren.all}: A data frame with 61 observations on the following 4
+#' `Langren.all`: A data frame with 61 observations on the following 4
 #' variables, giving determinations of Longitude between Toledo and Rome from
 #' all known versions of van Langren's graph.  
 #' \describe{
-#'   \item{\code{Author}}{Author of the graph, a factor with levels \code{Langren} \code{Lelewel}} 
-#'   \item{\code{Year}}{Year of publication}
-#'   \item{\code{Name}}{The name of the person giving a determination, a factor with levels \code{Algunos1} \code{Algunos2} \code{Apianus} ... \code{Schonerus}} 
-#'   \item{\code{Longitude}}{Estimated value of the longitude distance between Toledo and Rome} 
+#'   \item{`Author`}{Author of the graph, a factor with levels `Langren` `Lelewel`} 
+#'   \item{`Year`}{Year of publication}
+#'   \item{`Name`}{The name of the person giving a determination, a factor with levels `Algunos1` `Algunos2` `Apianus` ... `Schonerus`} 
+#'   \item{`Longitude`}{Estimated value of the longitude distance between Toledo and Rome} 
 #' }
 #' 
 #' @references Friendly, M., Valero-Mora, P. and Ulargui, J. I. (2010). The
 #' First (Known) Statistical Graph: Michael Florent van Langren and the
-#' "Secret" of Longitude. \emph{The American Statistician}, \bold{64} (2),
-#' 185-191.  Supplementary materials: \url{http://datavis.ca/gallery/langren/}.
+#' "Secret" of Longitude. *The American Statistician*, **64** (2),
+#' 185-191.  Supplementary materials: <http://datavis.ca/gallery/langren/>.
 #' 
-#' Langren, M. F. van. (1644).  \emph{La Verdadera Longitud por Mar y Tierra}.
+#' Langren, M. F. van. (1644).  *La Verdadera Longitud por Mar y Tierra*.
 #' Antwerp: (n.p.), 1644. English translation available at
-#' \url{http://datavis.ca/gallery/langren/verdadera.pdf}.
+#' <http://datavis.ca/gallery/langren/verdadera.pdf>.
 #' 
-#' Lelewel, J. (1851). \emph{Geographie du Moyen Age}. Paris: Pilliet, 1851.
+#' Lelewel, J. (1851). *Geographie du Moyen Age*. Paris: Pilliet, 1851.
 #' 
 #' @source The longitude values were digitized from images of the various
 #' graphs, which may be found on the Supplementary materials page for Friendly
@@ -1621,12 +1621,12 @@ NULL
 #' (1908)
 #' 
 #' @description
-#' In the second issue of \emph{Biometrika}, W. R. Macdonell (1902) published
-#' an extensive paper, \emph{On Criminal Anthropometry and the Identification
-#' of Criminals} in which he included numerous tables of physical
+#' In the second issue of *Biometrika*, W. R. Macdonell (1902) published
+#' an extensive paper, *On Criminal Anthropometry and the Identification
+#' of Criminals* in which he included numerous tables of physical
 #' characteristics 3000 non-habitual male criminals serving their sentences in
 #' England and Wales.  His Table III (p. 216) recorded a bivariate frequency
-#' distribution of \code{height} by \code{finger} length. His main purpose was
+#' distribution of `height` by `finger` length. His main purpose was
 #' to show that Scotland Yard could have indexed their material more
 #' efficiently, and find a given profile more quickly.
 #' 
@@ -1640,51 +1640,51 @@ NULL
 #' correlations for each sample.
 #' 
 #' @details
-#' Class intervals for \code{height} in Macdonell's table were given in 1 in.
+#' Class intervals for `height` in Macdonell's table were given in 1 in.
 #' ranges, from (4' 7" 9/16 - 4' 8" 9/16), to (6' 4" 9/16 - 6' 5" 9/16). The
-#' values of \code{height} are taken as the lower class boundaries.
+#' values of `height` are taken as the lower class boundaries.
 #' 
-#' For convenience, the data frame \code{MacdonellDF} presents the same data,
-#' in expanded form, with each combination of \code{height} and \code{finger}
-#' replicated \code{frequency} times.
+#' For convenience, the data frame `MacdonellDF` presents the same data,
+#' in expanded form, with each combination of `height` and `finger`
+#' replicated `frequency` times.
 #' 
 #' @name Macdonell
 #' @aliases Macdonell MacdonellDF
 #' @docType data
-#' @format \code{Macdonell}: A frequency data frame with 924 observations on
+#' @format `Macdonell`: A frequency data frame with 924 observations on
 #' the following 3 variables giving the bivariate frequency distribution of
-#' \code{height} and \code{finger}.  
+#' `height` and `finger`.  
 #' \describe{ 
-#'   \item{\code{height}}{lower class boundaries of height, in decimal ft.} 
-#'   \item{\code{finger}}{length of the left middle finger, in mm.} 
-#'   \item{\code{frequency}}{frequency of this combination of \code{height} and \code{finger}} 
+#'   \item{`height`}{lower class boundaries of height, in decimal ft.} 
+#'   \item{`finger`}{length of the left middle finger, in mm.} 
+#'   \item{`frequency`}{frequency of this combination of `height` and `finger`} 
 #' } 
 #' 
-#' \code{MacdonellDF}: A data
+#' `MacdonellDF`: A data
 #' frame with 3000 observations on the following 2 variables.  
 #' \describe{
-#'   \item{\code{height}}{a numeric vector} 
-#'   \item{\code{finger}}{a numeric vector} 
+#'   \item{`height`}{a numeric vector} 
+#'   \item{`finger`}{a numeric vector} 
 #' }
 #' 
 #' @references Hanley, J. and Julien, M. and Moodie, E. (2008). Student's z, t,
-#' and s: What if Gosset had R? \emph{The American Statistician}, 62(1), 64-69.
+#' and s: What if Gosset had R? *The American Statistician*, 62(1), 64-69.
 #' 
-#' Gosset, W. S. [Student] (1908). Probable error of a mean. \emph{Biometrika},
-#' 6(1), 1-25. \url{https://www.york.ac.uk/depts/maths/histstat/student.pdf}
+#' Gosset, W. S. (Student) (1908). Probable error of a mean. *Biometrika*,
+#' 6(1), 1-25. <https://www.york.ac.uk/depts/maths/histstat/student.pdf>
 #' 
-#' Gosset, W. S. [Student] (1908). Probable error of a correlation coefficient.
-#' \emph{Biometrika}, 6, 302-310.
+#' Gosset, W. S. (Student) (1908). Probable error of a correlation coefficient.
+#' *Biometrika*, 6, 302-310.
 #' 
 #' @source Macdonell, W. R. (1902). On Criminal Anthropometry and the
-#' Identification of Criminals. \emph{Biometrika}, 1(2), 177-227.
+#' Identification of Criminals. *Biometrika*, 1(2), 177-227.
 #' \doi{10.1093/biomet/1.2.177}
-#' % \url{http://www.jstor.org/stable/2331487}
+#' % <http://www.jstor.org/stable/2331487>
 #' 
 #' The data used here were obtained from:
 #' 
 #' Hanley, J. (2008). Macdonell data used by Student.
-#' \url{http://www.medicine.mcgill.ca/epidemiology/hanley/Student/}
+#' <http://www.medicine.mcgill.ca/epidemiology/hanley/Student/>
 #' @keywords datasets
 #' @examples
 #' 
@@ -1929,17 +1929,17 @@ NULL
 #' @docType data
 #' @format A data frame with 27 observations on the following 4 variables.
 #' \describe{ 
-#'   \item{\code{Equation}}{an integer vector, id of the Equation}
-#'   \item{\code{Y}}{a numeric vector, representing the term \eqn{(h-90)} (see details)} 
-#'   \item{\code{X1}}{a numeric vector, representing \eqn{\beta}}
-#'   \item{\code{X2}}{a numeric vector, representing \eqn{\alpha}}
-#'   \item{\code{X3}}{a numeric vector, representing the term \eqn{\alpha sin\theta}} 
-#'   \item{\code{Group}}{a character vector, representing the Mayer grouping} 
+#'   \item{`Equation`}{an integer vector, id of the Equation}
+#'   \item{`Y`}{a numeric vector, representing the term \eqn{(h-90)} (see details)} 
+#'   \item{`X1`}{a numeric vector, representing \eqn{\beta}}
+#'   \item{`X2`}{a numeric vector, representing \eqn{\alpha}}
+#'   \item{`X3`}{a numeric vector, representing the term \eqn{\alpha sin\theta}} 
+#'   \item{`Group`}{a character vector, representing the Mayer grouping} 
 #' }
 #' @author Luiz Fernando Palin Droubi
 #' 
-#' @source Stigler, Stephen M. (1986). \emph{The History of Statistics: The
-#' Measurement of Uncertainty before 1900}. Cambridge, MA: Harvard University
+#' @source Stigler, Stephen M. (1986). *The History of Statistics: The
+#' Measurement of Uncertainty before 1900*. Cambridge, MA: Harvard University
 #' Press, 1986, Table 1.1, p. 22.
 #' @keywords datasets
 #' @examples
@@ -1982,7 +1982,7 @@ NULL
 #' Michelson's Determinations of the Velocity of Light
 #' 
 #' @description
-#' The data frame \code{Michelson} gives Albert Michelson's measurements of the
+#' The data frame `Michelson` gives Albert Michelson's measurements of the
 #' velocity of light in air, made from June 5 to July 2, 1879, reported in
 #' Michelson (1882).  The given values + 299,000 are Michelson's measurements
 #' in km/sec.  The number of cases is 100 and the "true" value on this scale is
@@ -1991,7 +1991,7 @@ NULL
 #' Stigler (1977) used these data to illustrate properties of robust estimators
 #' with real, historical data.  For this purpose, he divided the 100
 #' measurements into 5 sets of 20 each.  These are contained in
-#' \code{MichelsonSets}.
+#' `MichelsonSets`.
 #' 
 #' @details
 #' The "true" value is taken to be 734.5, arrived at by taking the "true" speed
@@ -2004,27 +2004,31 @@ NULL
 #' @name Michelson
 #' @aliases Michelson MichelsonSets
 #' @docType data
-#' @format \code{Michelson}: A data frame with 100 observations on the
+#' @format `Michelson`: A data frame with 100 observations on the
 #' following variable, given in time order of data collection 
 #' \describe{
-#'   \item{\code{velocity}}{a numeric vector} 
+#'   \item{`velocity`}{a numeric vector} 
 #' }
 #' 
-#' \code{MichelsonSets}: A 20 x 5 matrix, with format int [1:20, 1:5] 850 850
-#' 1000 810 960 800 830 830 880 720 ...  - attr(*, "dimnames")=List of 2 ..$ :
-#' NULL ..$ : chr [1:5] "ds12" "ds13" "ds14" "ds15" ...
+#' `MichelsonSets`: A 20 x 5 matrix, with format 
+#' \preformatted{
+#'  int [1:20, 1:5] 850 850 1000 810 960 800 830 830 880 720 ...
+#'  - attr(*, "dimnames")=List of 2
+#'   ..$ : NULL
+#'   ..$ : chr [1:5] "ds12" "ds13" "ds14" "ds15" ...#' 
+#'   }
 #' 
 #' @seealso \code{\link[datasets]{morley}} for these data in another format
 #' 
 #' @references Michelson, A. A. (1882). "Experimental determination of the
 #' velocity of light made at the United States Naval Academy, Anapolis".
-#' \emph{Astronomical Papers}, 1,109-145, U. S. Nautical Almanac Office.
+#' *Astronomical Papers*, **1**, 109-145, U. S. Nautical Almanac Office.
 #' 
 #' @source Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-#' \url{https://www.math.uah.edu/stat/data/Michelson.html}
+#' <https://www.math.uah.edu/stat/data/Michelson.html>
 #' 
-#' Stephen M. Stigler (1977), "Do robust estimators work with \emph{real}
-#' data?", \emph{Annals of Statistics}, 5, 1055-1098
+#' Stephen M. Stigler (1977), "Do robust estimators work with *real*
+#' data?", *Annals of Statistics*, **5**, 1055-1098
 #' @keywords datasets
 #' @examples
 #' 
@@ -2077,46 +2081,46 @@ NULL
 #' this graphic.
 #' 
 #' @details
-#' \code{date} in \code{Minard.temp} should be made a real date in 1815.
+#' `date` in `Minard.temp` should be made a real date in 1815.
 #' 
 #' @name Minard
 #' @aliases Minard Minard.cities Minard.troops Minard.temp
 #' @docType data
-#' @format \code{Minard.troops}: A data frame with 51 observations on the
+#' @format `Minard.troops`: A data frame with 51 observations on the
 #' following 5 variables giving the number of surviving troops.  
 #' \describe{
-#'   \item{\code{long}}{Longitude} 
-#'   \item{\code{lat}}{Latitude}
-#'   \item{\code{survivors}}{Number of surviving troops, a numeric vector}
-#'   \item{\code{direction}}{a factor with levels \code{A} ("Advance") \code{R} ("Retreat")} \item{\code{group}}{a numeric vector} 
+#'   \item{`long`}{Longitude} 
+#'   \item{`lat`}{Latitude}
+#'   \item{`survivors`}{Number of surviving troops, a numeric vector}
+#'   \item{`direction`}{a factor with levels `A` ("Advance") `R` ("Retreat")} \item{`group`}{a numeric vector} 
 #' }
 #' 
-#' \code{Minard.cities}: A data frame with 20 observations on the following 3
+#' `Minard.cities`: A data frame with 20 observations on the following 3
 #' variables giving the locations of various places along the path of
 #' Napoleon's army.  
 #' \describe{ 
-#'   \item{\code{long}}{Longitude}
-#'   \item{\code{lat}}{Latitude} 
-#'   \item{\code{city}}{City name: a factor with levels \code{Bobr} \code{Chjat} ... \code{Witebsk} \code{Wixma}} }
+#'   \item{`long`}{Longitude}
+#'   \item{`lat`}{Latitude} 
+#'   \item{`city`}{City name: a factor with levels `Bobr` `Chjat` ... `Witebsk` `Wixma`} }
 #' 
-#' \code{Minard.temp}: A data frame with 9 observations on the following 4
+#' `Minard.temp`: A data frame with 9 observations on the following 4
 #' variables, giving the temperature at various places along the march of
 #' retreat from Moscow.  
 #' \describe{ 
-#'   \item{\code{long}}{Longitude}
-#'   \item{\code{temp}}{Temperature} 
-#'   \item{\code{days}}{Number of days on the retreat march} 
-#'   \item{\code{date}}{a factor with levels \code{Dec01} \code{Dec06} \code{Dec07} \code{Nov09} \code{Nov14} \code{Nov28} \code{Oct18} \code{Oct24}} 
+#'   \item{`long`}{Longitude}
+#'   \item{`temp`}{Temperature} 
+#'   \item{`days`}{Number of days on the retreat march} 
+#'   \item{`date`}{a factor with levels `Dec01` `Dec06` `Dec07` `Nov09` `Nov14` `Nov28` `Oct18` `Oct24`} 
 #' }
 #' @references Friendly, M. (2002).  Visions and Re-visions of Charles Joseph
-#' Minard, \emph{Journal of Educational and Behavioral Statistics}, 27, No. 1,
+#' Minard, *Journal of Educational and Behavioral Statistics*, **27**, No. 1,
 #' 31-51.
 #' 
 #' Friendly, M. (2003). Re-Visions of Minard.
-#' \url{http://datavis.ca/gallery/re-minard.html}
+#' <http://datavis.ca/gallery/re-minard.html>
 #' 
 #' @source Originally given by Lee Wilkinson, in a text file associated with
-#' \emph{The Grammar of Graphics} (1990). Springer.
+#' *The Grammar of Graphics* (1990). Springer.
 #' @keywords datasets spatial
 #' @examples
 #' 
@@ -2191,7 +2195,7 @@ NULL
 #' deaths in the Crimean from battle compared to disease or preventable causes
 #' that could be reduced by better battlefield nursing care.
 #' 
-#' Her \emph{Diagram of the Causes of Mortality in the Army in the East} showed
+#' Her *Diagram of the Causes of Mortality in the Army in the East* showed
 #' that most of the British soldiers who died during the Crimean War died of
 #' sickness rather than of wounds or other causes. It also showed that the
 #' death rate was higher in the first year of the war, before a Sanitary
@@ -2199,8 +2203,8 @@ NULL
 #' hospitals.
 #' 
 #' @details
-#' For a given cause of death, \code{D}, annual rates per 1000 are calculated
-#' as \code{12 * 1000 * D / Army}, rounded to 1 decimal.
+#' For a given cause of death, `D`, annual rates per 1000 are calculated
+#' as `12 * 1000 * D / Army`, rounded to 1 decimal.
 #' 
 #' The two panels of Nightingale's Coxcomb correspond to dates before and after
 #' March 1855
@@ -2209,35 +2213,35 @@ NULL
 #' @docType data
 #' @format A data frame with 24 observations on the following 10 variables.
 #' \describe{ 
-#'    \item{\code{Date}}{a Date, composed as \code{as.Date(paste(Year, Month, 1, sep='-'), "\%Y-\%b-\%d")}}
-#'   \item{\code{Month}}{Month of the Crimean War, an ordered factor} 
-#'   \item{\code{Year}}{Year of the Crimean War}
-#'   \item{\code{Army}}{Estimated average monthly strength of the British army}
-#'   \item{\code{Disease}}{Number of deaths from preventable or mitagable zymotic diseases} 
-#'   \item{\code{Wounds}}{Number of deaths directly from battle wounds} 
-#'   \item{\code{Other}}{Number of deaths from other causes}
-#'   \item{\code{Disease.rate}}{Annual rate of deaths from preventable or mitagable zymotic diseases, per 1000} 
-#'   \item{\code{Wounds.rate}}{Annual rate of deaths directly from battle wounds, per 1000}
-#'   \item{\code{Other.rate}}{Annual rate of deaths from other causes, per 1000}
+#'    \item{`Date`}{a Date, composed as `as.Date(paste(Year, Month, 1, sep='-'), "\%Y-\%b-\%d")`}
+#'   \item{`Month`}{Month of the Crimean War, an ordered factor} 
+#'   \item{`Year`}{Year of the Crimean War}
+#'   \item{`Army`}{Estimated average monthly strength of the British army}
+#'   \item{`Disease`}{Number of deaths from preventable or mitagable zymotic diseases} 
+#'   \item{`Wounds`}{Number of deaths directly from battle wounds} 
+#'   \item{`Other`}{Number of deaths from other causes}
+#'   \item{`Disease.rate`}{Annual rate of deaths from preventable or mitagable zymotic diseases, per 1000} 
+#'   \item{`Wounds.rate`}{Annual rate of deaths directly from battle wounds, per 1000}
+#'   \item{`Other.rate`}{Annual rate of deaths from other causes, per 1000}
 #' }
-#' @references Nightingale, F. (1858) \emph{Notes on Matters Affecting the
-#' Health, Efficiency, and Hospital Administration of the British Army}
+#' @references Nightingale, F. (1858) *Notes on Matters Affecting the
+#' Health, Efficiency, and Hospital Administration of the British Army*
 #' Harrison and Sons, 1858
 #' 
-#' Nightingale, F. (1859) \emph{A Contribution to the Sanitary History of the
-#' British Army during the Late War with Russia} London: John W. Parker and
+#' Nightingale, F. (1859) *A Contribution to the Sanitary History of the
+#' British Army during the Late War with Russia* London: John W. Parker and
 #' Son.
 #' 
 #' Small, H. (1998) Florence Nightingale's statistical diagrams
-#' \url{http://www.florence-nightingale-avenging-angel.co.uk/GraphicsPaper/Graphics.htm}
+#' <http://www.florence-nightingale-avenging-angel.co.uk/GraphicsPaper/Graphics.htm>
 #' 
 #' Pearson, M. and Short, I. (2008) Nightingale's Rose (flash animation).
-#' \url{http://understandinguncertainty.org/files/animations/Nightingale11/Nightingale1.html}
+#' <http://understandinguncertainty.org/files/animations/Nightingale11/Nightingale1.html>
 #' 
 #' @source The data were obtained from:
 #' 
 #' Pearson, M. and Short, I. (2007). Understanding Uncertainty: Mathematics of
-#' the Coxcomb. \url{http://understandinguncertainty.org/node/214}.
+#' the Coxcomb. <http://understandinguncertainty.org/node/214>.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2388,18 +2392,18 @@ NULL
 #' giving the latitude and longitude of 39 points recorded from 12 sources
 #' (Actual + 11 maps).  
 #' \describe{ 
-#'   \item{\code{point}}{a numeric vector}
-#'   \item{\code{col}}{Column in the table a numeric vector}
-#'   \item{\code{name}}{Name of the map maker, using \code{Actual} for the true coordinates of the points.  A factor with levels \code{Actual} \code{Arrowsmith} \code{Belin} \code{Cary} \code{Coronelli} \code{D'Anville} \code{Del'Isle} \code{Lattre} \code{Melish} \code{Mitchell} \code{Popple}}
-#'   \item{\code{year}}{Year of the map} 
-#'   \item{\code{lat}}{Latitude}
-#'   \item{\code{long}}{Longitude} 
+#'   \item{`point`}{a numeric vector}
+#'   \item{`col`}{Column in the table a numeric vector}
+#'   \item{`name`}{Name of the map maker, using `Actual` for the true coordinates of the points.  A factor with levels `Actual` `Arrowsmith` `Belin` `Cary` `Coronelli` `D'Anville` `Del'Isle` `Lattre` `Melish` `Mitchell` `Popple`}
+#'   \item{`year`}{Year of the map} 
+#'   \item{`lat`}{Latitude}
+#'   \item{`long`}{Longitude} 
 #' }
 #' 
-#' @source Andrews, D. F., and Herzberg, A. M. (1985). \emph{Data: A Collection
-#' of Problems from Many fields for the Student and Research Worker}. New York:
+#' @source Andrews, D. F., and Herzberg, A. M. (1985). *Data: A Collection
+#' of Problems from Many fields for the Student and Research Worker*. New York:
 #' Springer, Table 10.1.  The data were obtained from
-#' \code{http://www.stat.duke.edu/courses/Spring01/sta114/data/Andrews/T10.1}.
+#' `http://www.stat.duke.edu/courses/Spring01/sta114/data/Andrews/T10.1`.
 #' @keywords datasets spatial
 #' @examples
 #' 
@@ -2429,7 +2433,7 @@ NULL
 #' of the parent.
 #' 
 #' @details
-#' The variables \code{gp}, \code{par} and \code{chl} are provided to allow
+#' The variables `gp`, `par` and `chl` are provided to allow
 #' stratifying the data according to the gender of the father/mother and
 #' son/daughter.
 #' 
@@ -2438,28 +2442,29 @@ NULL
 #' @format A frequency data frame with 746 observations on the following 6
 #' variables.  
 #' \describe{ 
-#'   \item{\code{child}}{child height in inches, a numeric vector} 
-#'   \item{\code{parent}}{parent height in inches, a numeric vector} 
-#'   \item{\code{frequency}}{a numeric vector} 
-#'   \item{\code{gp}}{a factor with levels \code{fd} \code{fs} \code{md} \code{ms}}
-#'   \item{\code{par}}{a factor with levels \code{Father} \code{Mother}}
-#'   \item{\code{chl}}{a factor with levels \code{Daughter} \code{Son}} 
+#'   \item{`child`}{child height in inches, a numeric vector} 
+#'   \item{`parent`}{parent height in inches, a numeric vector} 
+#'   \item{`frequency`}{a numeric vector} 
+#'   \item{`gp`}{a factor with levels `fd` `fs` `md` `ms`}
+#'   \item{`par`}{a factor with levels `Father` `Mother`}
+#'   \item{`chl`}{a factor with levels `Daughter` `Son`} 
 #' }
 #' 
 #' @seealso \code{\link{Galton}}
 #' 
 #' @references Wachsmuth, A.W., Wilkinson L., Dallal G.E. (2003).  Galton's
 #' bend: A previously undiscovered nonlinearity in Galton's family stature
-#' regression data.  \emph{The American Statistician}, 57, 190-192.
-#' %\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
+#' regression data.  *The American Statistician*, **57**, 190-192.
+#' %<http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf>
 #' \doi{10.1198/0003130031874}.
 #' 
-#' @source Pearson, K. and Lee, A. (1896). Mathematical contributions to the
-#' theory of evolution. On telegony in man, etc. \emph{Proceedings of the Royal
-#' Society of London}, 60 , 273-283.
+#' @source 
+#' Pearson, K. and Lee, A. (1896). Mathematical contributions to the
+#' theory of evolution. On telegony in man, etc. *Proceedings of the Royal
+#' Society of London*, **60** , 273-283.
 #' 
 #' Pearson, K. and Lee, A. (1903).  On the laws of inheritance in man: I.
-#' Inheritance of physical characters. \emph{Biometrika}, 2(4), 357-462.
+#' Inheritance of physical characters. *Biometrika*, **2**(4), 357-462.
 #' (Tables XXII, p. 415; XXV, p. 417; XXVIII, p. 419 and XXXI, p. 421.)
 #' @keywords datasets
 #' @examples
@@ -2526,38 +2531,38 @@ NULL
 
 #' Polio Field Trials Data
 #' 
-#' The data frame \code{PolioTrials} gives the results of the 1954 field trials
+#' The data frame `PolioTrials` gives the results of the 1954 field trials
 #' to test the Salk polio vaccine (named for the developer, Jonas Salk),
 #' conducted by the National Foundation for Infantile Paralysis (NFIP).  It is
 #' adapted from data in the article by Francis et al. (1955).  There were
 #' actually two clinical trials, corresponding to two statistical designs
-#' (\code{Experiment}), discussed by Brownlee (1955).  The comparison of
+#' (`Experiment`), discussed by Brownlee (1955).  The comparison of
 #' designs and results represented a milestone in the development of randomized
 #' clinical trials.
 #' 
 #' @details
 #' The data frame is in the form of a single table, but actually comprises the
-#' results of two separate field trials, given by \code{Experiment}.  Each
+#' results of two separate field trials, given by `Experiment`.  Each
 #' should be analyzed separately, because the designs differ markedly.
 #' 
-#' The original design (\code{Experiment == "ObservedControl"}) called for
+#' The original design (`Experiment == "ObservedControl"`) called for
 #' vaccination of second-graders at selected schools in selected areas of the
 #' country (with the consent of the children's parents, of course).  The
-#' \code{Vaccinated} second-graders formed the treatment group.  The first and
+#' `Vaccinated` second-graders formed the treatment group.  The first and
 #' third-graders at the schools were not given the vaccination, and formed the
-#' \code{Controls} group.
+#' `Controls` group.
 #' 
-#' In the second design (\code{Experiment == "RandomizedControl"}) children
+#' In the second design (`Experiment == "RandomizedControl"`) children
 #' were selected (again in various schools in various areas), all of whose
 #' parents consented to vaccination.  The sample was randomly divided into
-#' treatment (\code{Group == "Vaccinated"}), given the real polio vaccination,
-#' and control groups (\code{Group == "Placebo"}), a placebo dose that looked
+#' treatment (`Group == "Vaccinated"`), given the real polio vaccination,
+#' and control groups (`Group == "Placebo"`), a placebo dose that looked
 #' just like the real vaccine.  The experiment was also double blind: neither
 #' the parents of a child in the study nor the doctors treating the child knew
 #' which group the child belonged to.
 #' 
-#' In both experiments, \code{NotInnoculated} refers to children who did not
-#' participate in the experiment. \code{IncompleteVaccinations} refers to
+#' In both experiments, `NotInnoculated` refers to children who did not
+#' participate in the experiment. `IncompleteVaccinations` refers to
 #' children who received one or two, but not all three administrations of the
 #' vaccine.
 #' 
@@ -2565,24 +2570,24 @@ NULL
 #' @docType data
 #' @format A data frame with 8 observations on the following 6 variables.
 #' \describe{ 
-#'   \item{\code{Experiment}}{a factor with levels \code{ObservedControl} \code{RandomizedControl}} 
-#'   \item{\code{Group}}{a factor with levels \code{Controls} \code{Grade2NotInoculated} \code{IncompleteVaccinations} \code{NotInoculated} \code{Placebo}
-#' \code{Vaccinated}} 
-#'   \item{\code{Population}}{the size of the population in each group in each experiment} 
-#'   \item{\code{Paralytic}}{the number of cases of paralytic polio observed in that group} 
-#'   \item{\code{NonParalytic}}{the number of cases of paralytic polio observed in that group}
-#'   \item{\code{FalseReports}}{the number of cases initially reported as polio, but later determined not to be polio in that group} 
+#'   \item{`Experiment`}{a factor with levels `ObservedControl` `RandomizedControl`} 
+#'   \item{`Group`}{a factor with levels `Controls` `Grade2NotInoculated` `IncompleteVaccinations` `NotInoculated` `Placebo`
+#' `Vaccinated`} 
+#'   \item{`Population`}{the size of the population in each group in each experiment} 
+#'   \item{`Paralytic`}{the number of cases of paralytic polio observed in that group} 
+#'   \item{`NonParalytic`}{the number of cases of paralytic polio observed in that group}
+#'   \item{`FalseReports`}{the number of cases initially reported as polio, but later determined not to be polio in that group} 
 #' }
 #' 
 #' @references K. A.  Brownlee (1955). "Statistics of the 1954 Polio Vaccine
-#' Trials", \emph{Journal of the American Statistical Association}, 50,
+#' Trials", *Journal of the American Statistical Association*, **50**,
 #' 1005-1013.
 #' 
 #' @source Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-#' \url{https://www.math.uah.edu/stat/data/Polio.html}
+#' <https://www.math.uah.edu/stat/data/Polio.html>
 #' 
 #' Thomas Francis, Robert Korn, et al. (1955). "An Evaluation of the 1954
-#' Poliomyelitis Vaccine Trials", \emph{American Journal of Public Health}, 45,
+#' Poliomyelitis Vaccine Trials", *American Journal of Public Health*, **45**,
 #' (50 page supplement with a 63 page appendix).
 #' 
 #' @keywords datasets
@@ -2623,32 +2628,32 @@ NULL
 #' 
 #' Yihui Xie used this data as an illustration of the \pkg{animate} package,
 #' using \pkg{rgl} to zoom in on the magic word. See the video on
-#' \url{https://vimeo.com/1982725}.
+#' <https://vimeo.com/1982725>.
 #' 
 #' @name Pollen
 #' @docType data
 #' @format A data frame with 3848 observations on the following 5 variables,
 #' representing fictitious measurements of grains of pollen.  
 #' \describe{
-#'   \item{\code{ridge}}{along X, a numeric vector} 
-#'   \item{\code{nub}}{along y, a numeric vector} 
-#'   \item{\code{crack}}{along z, a numeric vector}
-#'   \item{\code{weight}}{weight of pollen grain, a numeric vector}
-#'   \item{\code{density}}{weight of pollen grain, a numeric vector} 
+#'   \item{`ridge`}{along X, a numeric vector} 
+#'   \item{`nub`}{along y, a numeric vector} 
+#'   \item{`crack`}{along z, a numeric vector}
+#'   \item{`weight`}{weight of pollen grain, a numeric vector}
+#'   \item{`density`}{weight of pollen grain, a numeric vector} 
 #' }
 #' 
 #' @references Becker, R.A., Denby, L., McGill, R., and Wilks, A. (1986).
-#' Datacryptanalysis: A Case Study. \emph{Proceedings of the Section on
-#' Statistical Graphics}, 92-97.
+#' Datacryptanalysis: A Case Study. *Proceedings of the Section on
+#' Statistical Graphics*, 92-97.
 #' 
-#' Slomka, M. (1986). The Analysis of a Synthetic Data Set. \emph{Proceedings
-#' of the Section on Statistical Graphics}, 113-116.
+#' Slomka, M. (1986). The Analysis of a Synthetic Data Set. *Proceedings
+#' of the Section on Statistical Graphics*, 113-116.
 #' 
 #' @source The canonical source for this data is the StatLib -- Datasets
-#' Archive \url{https://lib.stat.cmu.edu/datasets/pollen.data} in the
+#' Archive <https://lib.stat.cmu.edu/datasets/pollen.data> in the
 #' inconvenient form of .sh archive.
 #' 
-#' It is also available as \code{data(pollen, package="animate")}.
+#' It is also available as `data(pollen, package="animate")`.
 #' @keywords datasets
 #' @examples
 #' 
@@ -2682,21 +2687,21 @@ NULL
 #' comparing the yearly totals recorded in the table to the row sums of the
 #' scanned data.
 #' 
-#' \code{month} should obviously be made and ordered factor.
+#' `month` should obviously be made and ordered factor.
 #' 
 #' @name Prostitutes
 #' @docType data
 #' @format A data frame with 516 observations on the following 5 variables.
 #' \describe{ 
-#'   \item{\code{Year}}{a numeric vector} 
-#'   \item{\code{month}}{a factor with levels \code{Apr} \code{Aug} \code{Dec} \code{Feb} \code{Jan} \code{Jul} \code{Jun} \code{Mar} \code{May} \code{Nov} \code{Oct} \code{Sep}} 
-#'   \item{\code{count}}{a numeric vector: number of prostitutes}
-#'   \item{\code{mon}}{a numeric vector: numeric month} 
-#'   \item{\code{date}}{a Date} 
+#'   \item{`Year`}{a numeric vector} 
+#'   \item{`month`}{a factor with levels `Apr` `Aug` `Dec` `Feb` `Jan` `Jul` `Jun` `Mar` `May` `Nov` `Oct` `Sep`} 
+#'   \item{`count`}{a numeric vector: number of prostitutes}
+#'   \item{`mon`}{a numeric vector: numeric month} 
+#'   \item{`date`}{a Date} 
 #' }
 #' 
-#' @source Parent-Duchatelet, A. (1857), \emph{De la prostitution dans la ville
-#' de Paris}, 3rd ed, p. 32, 36
+#' @source Parent-Duchatelet, A. (1857), *De la prostitution dans la ville
+#' de Paris*, 3rd ed, p. 32, 36
 #' @keywords datasets
 #' @examples
 #' 
@@ -2723,40 +2728,40 @@ NULL
 #' of the Pyx would be counted, weighed and assayed for content, and the
 #' results would be compared with the standard set for the Royal Mint.
 #' 
-#' The data frame \code{Pyx} gives the results for the year 1848 (Great
+#' The data frame `Pyx` gives the results for the year 1848 (Great
 #' Britain, 1848) in which 10,000 gold sovereigns were assayed. The coins in
 #' each bag were classified according to the deviation from the standard
 #' content of gold for each coin, called the Remedy, R = 123 * (12/5760) =
 #' .25625, in grains, for a single sovereign.
 #' 
 #' @details
-#' \code{Bags} 1-4 were selected as "near to standard", bags 5-7 as below
+#' `Bags` 1-4 were selected as "near to standard", bags 5-7 as below
 #' standard, bags 8-10 as above standard. This classification is reflected in
-#' \code{Group}.
+#' `Group`.
 #' 
 #' @name Pyx
 #' @docType data
 #' @format A frequency data frame with 72 observations on the following 4
 #' variables giving the distribution of 10,000 sovereigns, classified according
-#' to the \code{Bags} in which they were collected and the \code{Deviation}
+#' to the `Bags` in which they were collected and the `Deviation`
 #' from the standard weight.  
 #' \describe{ 
-#'   \item{\code{Bags}}{an ordered factor with levels \code{1 and 2} < \code{3} < \code{4} < \code{5} < \code{6} < \code{7} < \code{8} < \code{9} < \code{10}} 
-#'   \item{\code{Group}}{an ordered factor with levels \code{below std} < \code{near std} < \code{above std}}
-#'   \item{\code{Deviation}}{an ordered factor with levels \code{Below -R} < \code{(-R to -.2)} < \code{(-.2 to -.l)} < \code{(-.1 to 0)} < \code{(0 to
-#' .l)} < \code{(.1 to .2)} < \code{(.2 to R)} < \code{Above R}}
-#'   \item{\code{count}}{number of sovereigns} 
+#'   \item{`Bags`}{an ordered factor with levels `1 and 2` < `3` < `4` < `5` < `6` < `7` < `8` < `9` < `10`} 
+#'   \item{`Group`}{an ordered factor with levels `below std` < `near std` < `above std`}
+#'   \item{`Deviation`}{an ordered factor with levels `Below -R` < `(-R to -.2)` < `(-.2 to -.l)` < `(-.1 to 0)` < `(0 to
+#' .l)` < `(.1 to .2)` < `(.2 to R)` < `Above R`}
+#'   \item{`count`}{number of sovereigns} 
 #' }
 #' 
 #' @references Great Britain (1848). "Report of the Commissioners Appointed to
 #' Inquire into the Constitution, Management and Expense of the Royal Mint." In
-#' Vol 28 of \emph{House Documents for 1849}.
+#' Vol 28 of *House Documents for 1849*.
 #' 
 #' Stigler, S. M. (1997). Eight Centuries of Sampling Inspection: The Trial of
-#' the Pyx \emph{Journal of the American Statistical Association}, 72(359),
+#' the Pyx *Journal of the American Statistical Association*, **72**(359),
 #' 493-500
 #' 
-#' @source Stigler, S. M. (1999). \emph{Statistics on the Table}. Cambridge,
+#' @source Stigler, S. M. (1999). *Statistics on the Table*. Cambridge,
 #' MA: Harvard University Press, table 21.1.
 #' 
 #' @keywords datasets
@@ -2796,7 +2801,7 @@ NULL
 #' Statistics of Deadly Quarrels
 #' 
 #' @description
-#' \emph{The Statistics Of Deadly Quarrels} by Lewis Fry Richardson (1960) is
+#' *The Statistics Of Deadly Quarrels* by Lewis Fry Richardson (1960) is
 #' one of the earlier attempts at quantification of historical conflict
 #' behavior.
 #' 
@@ -2816,117 +2821,117 @@ NULL
 #' 
 #' @details
 #' In the original data set obtained from ICPSR, variables were named
-#' \code{V1}-\code{V84}.  These were renamed to make them more meaningful.
-#' \code{V84}, renamed \code{ID} was moved to the first position, but otherwise
+#' `V1`-`V84`.  These were renamed to make them more meaningful.
+#' `V84`, renamed `ID` was moved to the first position, but otherwise
 #' the order of variables is the same.
 #' 
-#' In many of the \code{factor} variables, \code{0} is used to indicate
+#' In many of the `factor` variables, `0` is used to indicate
 #' "irrelevant to quarrel".  This refers to those relations that Richardson
 #' found absent or irrelevant to the particular quarrel, and did not
 #' subsequently mention.
 #' 
 #' See the original codebook at
-#' \url{http://www.icpsr.umich.edu/cgi-bin/file?comp=none&study=5407&ds=1&file_id=652814}
+#' <http://www.icpsr.umich.edu/cgi-bin/file?comp=none&study=5407&ds=1&file_id=652814>
 #' for details not contained here.
 #' 
 #' @name Quarrels
 #' @docType data
 #' @format A data frame with 779 observations on the following 84 variables.
 #' \describe{ 
-#'   \item{\code{ID }}{V84: Id sequence } 
-#'   \item{\code{year }}{V1: Begin date of quarrel } 
-#'   \item{\code{international}}{V2: Nation vs nation }
-#'   \item{\code{colonial}}{V3: Nation vs colony } 
-#'   \item{\code{revolution }}{V4: Revolution or civil war } 
-#'   \item{\code{nat.grp}}{V5: Nation vs gp in other nation } 
-#'   \item{\code{grp.grpSame }}{V6: Grp vs grp (same nation) }
-#'   \item{\code{grp.grpDif}}{V7: Grp vs grp (between nations) }
-#'   \item{\code{numGroups}}{V8: Number groups against which fighting }
-#'   \item{\code{months}}{V9: Number months fighting } 
-#'   \item{\code{pairs}}{V10: Number pairs in whole matrix } 
-#'   \item{\code{monthsPairs}}{V11: Num mons for all in matrix } 
-#'   \item{\code{logDeaths }}{V12: Log (killed) matrix } 
-#'   \item{\code{deaths }}{V13: Total killed for matrix }
-#'   \item{\code{exchangeGoods }}{V14: Gp sent goods to other }
-#'   \item{\code{obstacleGoods }}{V15: Gp puts obstacles to goods }
-#'   \item{\code{intermarriageOK }}{V16: Present intermarriages }
-#'   \item{\code{intermarriageBan }}{V17: Intermarriages banned }
-#'   \item{\code{simBody }}{V18: Similar body characteristics }
-#'   \item{\code{difBody }}{V19: Difference in body characteristics }
-#'   \item{\code{simDress }}{V20: Similarity of customs (dress) }
-#'   \item{\code{difDress }}{V21: Difference of customs (dress) }
-#'   \item{\code{eqWealth }}{V22: Common level of wealth } 
-#'   \item{\code{difWealth }}{V23: Difference in wealth } 
-#'   \item{\code{simMariagCust }}{V24: Similar marriage customst } 
-#'   \item{\code{difMariagCust }}{V25: Different marriage customs } 
-#'   \item{\code{simRelig }}{V26: Similar religion or philosophy of life } 
-#'   \item{\code{difRelig }}{V27: Religion or philosophy felt different }
-#'   \item{\code{philanthropy }}{V28: General philanthropy }
-#'   \item{\code{restrictMigration }}{V29: Restricted immigrations }
-#'   \item{\code{sameLanguage }}{V30: Common mother tongue }
-#'   \item{\code{difLanguage }}{V31: Different languages } 
-#'   \item{\code{simArtSci }}{V32: Similar science, arts } 
-#'   \item{\code{travel }}{V33: Travel }
-#'   \item{\code{ignorance }}{V34: Ignorant of other/both }
-#'   \item{\code{simPersLiberty }}{V35: Personal liberty similar }
-#'   \item{\code{difPersLiberty }}{V36: More personal liberty }
-#'   \item{\code{sameGov }}{V37: Common government } 
-#'   \item{\code{sameGovYrs }}{V38: Years since common govt established } 
-#'   \item{\code{prevConflict }}{V39: Belligerents fought previously } 
-#'   \item{\code{prevConflictYrs }}{V40: Years since belligerents fought } 
-#'   \item{\code{chronicFighting }}{V41: Chronic fighting between belligerents } 
-#'   \item{\code{persFriendship }}{V42: Autocrats personal friends } 
-#'   \item{\code{persResentment }}{V43: Leaders personal resentment } 
-#'   \item{\code{difLegal }}{V44: Annoyingly different legal systems } 
-#'   \item{\code{nonintervention }}{V45: Policy of nonintervention } 
-#'   \item{\code{thirdParty }}{V46: Led by 3rd group to conflict } 
-#'   \item{\code{supportEnemy }}{V47: Supported others enemy }
-#'   \item{\code{attackAlly }}{V48: Attacked ally of other }
-#'   \item{\code{rivalsLand }}{V49: Rivals territory concess }
-#'   \item{\code{rivalsTrade }}{V50: Rivals trade } 
-#'   \item{\code{churchPower }}{V51: Church civil power } 
-#'   \item{\code{noExtension }}{V52: Policy not extending term } 
-#'   \item{\code{territory }}{V53: Desired territory }
-#'   \item{\code{habitation }}{V54: Wanted habitation } 
-#'   \item{\code{minerals }}{V55: Desired minerals } 
-#'   \item{\code{StrongHold }}{V56: Wanted strategic stronghold } 
-#'   \item{\code{taxation }}{V57: Taxed other } 
-#'   \item{\code{loot }}{V58: Wanted loot } 
-#'   \item{\code{objectedWar }}{V59: Objected to war }
-#'   \item{\code{enjoyFight }}{V60: Enjoyed fighting } 
-#'   \item{\code{pride }}{V61: Elated by strong pride } 
-#'   \item{\code{overpopulated }}{V62: Insufficient land for population } 
-#'   \item{\code{fightForPay }}{V63: Fought only for pay } 
-#'   \item{\code{joinWinner }}{V64: Desired to join winners }
-#'   \item{\code{otherDesiredWar }}{V65: Quarrel desired by other }
-#'   \item{\code{propaganda3rd }}{V66: Issued of propaganda to third parties }
-#'   \item{\code{protection }}{V67: Offered protection } 
-#'   \item{\code{sympathy }}{V68: Sympathized under control }
-#'   \item{\code{debt }}{V69: Owed money to others } 
-#'   \item{\code{prevAllies }}{V70: Had fought as allies }
-#'   \item{\code{yearsAllies }}{V71: Years since fought as allies }
-#'   \item{\code{intermingled }}{V72: Had intermingled on territory }
-#'   \item{\code{interbreeding }}{V73: Interbreeding between groups }
-#'   \item{\code{propadanda }}{V74: Issued propaganda to other group }
-#'   \item{\code{orderedObey }}{V75: Ordered other to obey }
-#'   \item{\code{commerceOther }}{V76: Commercial enterprises }
-#'   \item{\code{feltStronger }}{V77: Felt stronger }
-#'   \item{\code{competeIntellect }}{V78: Competed successfully intellectual occ } 
-#'   \item{\code{insecureGovt }}{V79: Government insecure }
-#'   \item{\code{prepWar }}{V80: Preparations for war }
-#'   \item{\code{RegionalError }}{V81: Regional error measure }
-#'   \item{\code{CasualtyError }}{V82: Casualty error measure }
-#'   \item{\code{Auxiliaries }}{V83: Auxiliaries in service of nation at war } 
+#'   \item{`ID `}{V84: Id sequence } 
+#'   \item{`year `}{V1: Begin date of quarrel } 
+#'   \item{`international`}{V2: Nation vs nation }
+#'   \item{`colonial`}{V3: Nation vs colony } 
+#'   \item{`revolution `}{V4: Revolution or civil war } 
+#'   \item{`nat.grp`}{V5: Nation vs gp in other nation } 
+#'   \item{`grp.grpSame `}{V6: Grp vs grp (same nation) }
+#'   \item{`grp.grpDif`}{V7: Grp vs grp (between nations) }
+#'   \item{`numGroups`}{V8: Number groups against which fighting }
+#'   \item{`months`}{V9: Number months fighting } 
+#'   \item{`pairs`}{V10: Number pairs in whole matrix } 
+#'   \item{`monthsPairs`}{V11: Num mons for all in matrix } 
+#'   \item{`logDeaths `}{V12: Log (killed) matrix } 
+#'   \item{`deaths `}{V13: Total killed for matrix }
+#'   \item{`exchangeGoods `}{V14: Gp sent goods to other }
+#'   \item{`obstacleGoods `}{V15: Gp puts obstacles to goods }
+#'   \item{`intermarriageOK `}{V16: Present intermarriages }
+#'   \item{`intermarriageBan `}{V17: Intermarriages banned }
+#'   \item{`simBody `}{V18: Similar body characteristics }
+#'   \item{`difBody `}{V19: Difference in body characteristics }
+#'   \item{`simDress `}{V20: Similarity of customs (dress) }
+#'   \item{`difDress `}{V21: Difference of customs (dress) }
+#'   \item{`eqWealth `}{V22: Common level of wealth } 
+#'   \item{`difWealth `}{V23: Difference in wealth } 
+#'   \item{`simMariagCust `}{V24: Similar marriage customst } 
+#'   \item{`difMariagCust `}{V25: Different marriage customs } 
+#'   \item{`simRelig `}{V26: Similar religion or philosophy of life } 
+#'   \item{`difRelig `}{V27: Religion or philosophy felt different }
+#'   \item{`philanthropy `}{V28: General philanthropy }
+#'   \item{`restrictMigration `}{V29: Restricted immigrations }
+#'   \item{`sameLanguage `}{V30: Common mother tongue }
+#'   \item{`difLanguage `}{V31: Different languages } 
+#'   \item{`simArtSci `}{V32: Similar science, arts } 
+#'   \item{`travel `}{V33: Travel }
+#'   \item{`ignorance `}{V34: Ignorant of other/both }
+#'   \item{`simPersLiberty `}{V35: Personal liberty similar }
+#'   \item{`difPersLiberty `}{V36: More personal liberty }
+#'   \item{`sameGov `}{V37: Common government } 
+#'   \item{`sameGovYrs `}{V38: Years since common govt established } 
+#'   \item{`prevConflict `}{V39: Belligerents fought previously } 
+#'   \item{`prevConflictYrs `}{V40: Years since belligerents fought } 
+#'   \item{`chronicFighting `}{V41: Chronic fighting between belligerents } 
+#'   \item{`persFriendship `}{V42: Autocrats personal friends } 
+#'   \item{`persResentment `}{V43: Leaders personal resentment } 
+#'   \item{`difLegal `}{V44: Annoyingly different legal systems } 
+#'   \item{`nonintervention `}{V45: Policy of nonintervention } 
+#'   \item{`thirdParty `}{V46: Led by 3rd group to conflict } 
+#'   \item{`supportEnemy `}{V47: Supported others enemy }
+#'   \item{`attackAlly `}{V48: Attacked ally of other }
+#'   \item{`rivalsLand `}{V49: Rivals territory concess }
+#'   \item{`rivalsTrade `}{V50: Rivals trade } 
+#'   \item{`churchPower `}{V51: Church civil power } 
+#'   \item{`noExtension `}{V52: Policy not extending term } 
+#'   \item{`territory `}{V53: Desired territory }
+#'   \item{`habitation `}{V54: Wanted habitation } 
+#'   \item{`minerals `}{V55: Desired minerals } 
+#'   \item{`StrongHold `}{V56: Wanted strategic stronghold } 
+#'   \item{`taxation `}{V57: Taxed other } 
+#'   \item{`loot `}{V58: Wanted loot } 
+#'   \item{`objectedWar `}{V59: Objected to war }
+#'   \item{`enjoyFight `}{V60: Enjoyed fighting } 
+#'   \item{`pride `}{V61: Elated by strong pride } 
+#'   \item{`overpopulated `}{V62: Insufficient land for population } 
+#'   \item{`fightForPay `}{V63: Fought only for pay } 
+#'   \item{`joinWinner `}{V64: Desired to join winners }
+#'   \item{`otherDesiredWar `}{V65: Quarrel desired by other }
+#'   \item{`propaganda3rd `}{V66: Issued of propaganda to third parties }
+#'   \item{`protection `}{V67: Offered protection } 
+#'   \item{`sympathy `}{V68: Sympathized under control }
+#'   \item{`debt `}{V69: Owed money to others } 
+#'   \item{`prevAllies `}{V70: Had fought as allies }
+#'   \item{`yearsAllies `}{V71: Years since fought as allies }
+#'   \item{`intermingled `}{V72: Had intermingled on territory }
+#'   \item{`interbreeding `}{V73: Interbreeding between groups }
+#'   \item{`propadanda `}{V74: Issued propaganda to other group }
+#'   \item{`orderedObey `}{V75: Ordered other to obey }
+#'   \item{`commerceOther `}{V76: Commercial enterprises }
+#'   \item{`feltStronger `}{V77: Felt stronger }
+#'   \item{`competeIntellect `}{V78: Competed successfully intellectual occ } 
+#'   \item{`insecureGovt `}{V79: Government insecure }
+#'   \item{`prepWar `}{V80: Preparations for war }
+#'   \item{`RegionalError `}{V81: Regional error measure }
+#'   \item{`CasualtyError `}{V82: Casualty error measure }
+#'   \item{`Auxiliaries `}{V83: Auxiliaries in service of nation at war } 
 #' }
 #' 
-#' @references Lewis F. Richardson, (1960). \emph{The Statistics Of Deadly
-#' Quarrels}. (Edited by Q. Wright and C. C. Lienau).  Pittsburgh: Boxwood
+#' @references Lewis F. Richardson, (1960). *The Statistics Of Deadly
+#' Quarrels*. (Edited by Q. Wright and C. C. Lienau).  Pittsburgh: Boxwood
 #' Press.
 #' 
 #' Rummel, Rudolph J. (1967), "Dimensions of Dyadic War, 1820-1952."
-#' \emph{Journal of Conflict Resolution}. 11, (2), 176 - 183.
+#' *Journal of Conflict Resolution*. **11**, (2), 176 - 183.
 #' 
-#' @source \url{http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/05407}
+#' @source <http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/05407>
 #' 
 #' @keywords datasets
 #' @examples
@@ -2944,7 +2949,7 @@ NULL
 #' 
 #' @description
 #' With this dataset Laplace (1787) showed that "noticed defects in the then
-#' existing tables of the motions of Jupiter and Saturn" were, \emph{de facto},
+#' existing tables of the motions of Jupiter and Saturn" were, *de facto*,
 #' due to "a very long, 917-year, periodic inequality in the planets' mean
 #' motion, due to their mutual attraction and the coincidence that their times
 #' of revolution about the sun are approximately in the ratio 5:2".
@@ -2976,8 +2981,8 @@ NULL
 #' The problem was an extraordinarily difficult one for the time, and Euler's
 #' attempts to grope for a solution are most revealing. Euler's work was, in
 #' comparison with Mayer's a year later, a statistical failure. After he had
-#' found values for \emph{n} and \emph{u}, Euler had the data needed to produce
-#' seventy-five equations, all linear in \emph{x, y, m, z, a}, and \emph{k}. He
+#' found values for *n* and *u*, Euler had the data needed to produce
+#' seventy-five equations, all linear in *x, y, m, z, a*, and *k*. He
 #' might have added them together in six groups and solved for the unknowns,
 #' but he attempted no such overall combination of the equations.
 #' 
@@ -2992,21 +2997,21 @@ NULL
 #' @docType data
 #' @format A data frame with 24 observations on the following 6 variables.
 #' \describe{ 
-#'   \item{\code{Equation}}{an integer vector, id of the Equation}
-#'   \item{\code{Year}}{an integer vector, year of the observations}
-#'   \item{\code{Y}}{a numeric vector, adjusted measure of the observed longitude of Saturn, in minutes} 
-#'   \item{\code{X1}}{a numeric vector, the rate of change of the mean annual motion of Saturn} 
-#'   \item{\code{X2}}{a numeric vector, the rate of change of the eccentricity of Saturn's orbit}
-#'   \item{\code{X3}}{a numeric vector, a variable compound of the rate of change of Saturn's aphelion minus rates of change of the mean longitude of Saturn in 1750, multiplied by 2 times the mean eccentricity of Saturn} 
+#'   \item{`Equation`}{an integer vector, id of the Equation}
+#'   \item{`Year`}{an integer vector, year of the observations}
+#'   \item{`Y`}{a numeric vector, adjusted measure of the observed longitude of Saturn, in minutes} 
+#'   \item{`X1`}{a numeric vector, the rate of change of the mean annual motion of Saturn} 
+#'   \item{`X2`}{a numeric vector, the rate of change of the eccentricity of Saturn's orbit}
+#'   \item{`X3`}{a numeric vector, a variable compound of the rate of change of Saturn's aphelion minus rates of change of the mean longitude of Saturn in 1750, multiplied by 2 times the mean eccentricity of Saturn} 
 #' }
 #' @author Luiz Fernando Palin Droubi
 #' 
-#' @references Stigler, Stephen M. (1986). \emph{The History of Statistics: The
-#' Measurement of Uncertainty before 1900}. Cambridge, MA: Harvard University
+#' @references Stigler, Stephen M. (1986). *The History of Statistics: The
+#' Measurement of Uncertainty before 1900*. Cambridge, MA: Harvard University
 #' Press, 1986, Table 1.3, p. 34.
 #' 
 #' @source Stigler, Stephen (1975). "Napoleonic statistics: The work of
-#' Laplace", \emph{Biometrika}, 62, 503-517.
+#' Laplace", *Biometrika*, **62**, 503-517.
 #' @keywords datasets
 #' @examples
 #' 
@@ -3032,7 +3037,7 @@ NULL
 #' John Snow's Map and Data on the 1854 London Cholera Outbreak
 #' 
 #' @description
-#' The \code{Snow} data consists of the relevant 1854 London streets, the
+#' The `Snow` data consists of the relevant 1854 London streets, the
 #' location of 578 deaths from cholera, and the position of 13 water pumps
 #' (wells) that can be used to re-create John Snow's map showing deaths from
 #' cholera in the area surrounding Broad Street, London in the 1854 outbreak.
@@ -3052,10 +3057,10 @@ NULL
 #' points to the Broad Street pump as the source of the outbreak.
 #' 
 #' @details
-#' The scale of the source map is approx. 1:2000.  The \code{(x, y)} coordinate
+#' The scale of the source map is approx. 1:2000.  The `(x, y)` coordinate
 #' units are 100 meters, with an arbitrary origin.
 #' 
-#' Of the data in the \code{Snow.dates} table, Snow says, \dQuote{The deaths in
+#' Of the data in the `Snow.dates` table, Snow says, \dQuote{The deaths in
 #' the above table are compiled from the sources mentioned above in describing
 #' the map; but some deaths which were omitted from the map on account of the
 #' number of the house not being known, are included in the table.}
@@ -3070,58 +3075,58 @@ NULL
 #' @aliases Snow Snow.deaths Snow.deaths2 Snow.pumps Snow.streets Snow.polygons
 #' Snow.dates
 #' @docType data
-#' @format \code{Snow.deaths}: A data frame with 578 observations on the
+#' @format `Snow.deaths`: A data frame with 578 observations on the
 #' following 3 variables, giving the address of a person who died from cholera.
 #' When many points are associated with a single street address, they are
 #' "stacked" in a line away from the street so that they are more easily
 #' visualized. This is how they are displayed on John Snow's original map.  The
 #' dates of the deaths are not individually recorded in this data set.
 #' \describe{ 
-#'   \item{\code{case}}{Sequential case number, in some arbitrary, randomized order} 
-#'   \item{\code{x}}{x coordinate} 
-#'   \item{\code{y}}{y coordinate} 
+#'   \item{`case`}{Sequential case number, in some arbitrary, randomized order} 
+#'   \item{`x`}{x coordinate} 
+#'   \item{`y`}{y coordinate} 
 #' }
 #' 
-#' \code{Snow.pumps}: A data frame with 13 observations on the following 4
+#' `Snow.pumps`: A data frame with 13 observations on the following 4
 #' variables, giving the locations of water pumps within the boundaries of the
 #' map. 
 #'  
 #' \describe{ 
-#'   \item{\code{pump}}{pump number} 
-#'   \item{\code{label}}{pump label: \code{Briddle St} \code{Broad St} ... \code{Warwick}}
-#'   \item{\code{x}}{x coordinate} \item{\code{y}}{y coordinate} 
+#'   \item{`pump`}{pump number} 
+#'   \item{`label`}{pump label: `Briddle St` `Broad St` ... `Warwick`}
+#'   \item{`x`}{x coordinate} \item{`y`}{y coordinate} 
 #' }
 #' 
-#' \code{Snow.streets}: A data frame with 1241 observations on the following 4
+#' `Snow.streets`: A data frame with 1241 observations on the following 4
 #' variables, giving coordinates used to draw the 528 street segment lines
 #' within the boundaries of the map.  The map is created by drawing lines
-#' connecting the \code{n} points in each street segment.  
+#' connecting the `n` points in each street segment.  
 #' 
 #' \describe{
-#'   \item{\code{street}}{street segment number: \code{1:528}}
-#'   \item{\code{n}}{number of points in this street line segment}
-#'   \item{\code{x}}{x coordinate} 
-#'   \item{\code{y}}{y coordinate} }
+#'   \item{`street`}{street segment number: `1:528`}
+#'   \item{`n`}{number of points in this street line segment}
+#'   \item{`x`}{x coordinate} 
+#'   \item{`y`}{y coordinate} }
 #' 
 #' 
-#' \code{Snow.polygons}: A list of 13 data frames, giving the vertices of
+#' `Snow.polygons`: A list of 13 data frames, giving the vertices of
 #' Thiessen (Voronoi) polygons containing each pump. Their boundaries define
 #' the area that is closest to each pump relative to all other pumps. They are
 #' mathematically defined by the perpendicular bisectors of the lines between
 #' all pumps. Each data frame contains: 
 #' \describe{ 
-#'   \item{\code{x}}{x coordinate} 
-#'   \item{\code{y}}{y coordinate} 
+#'   \item{`x`}{x coordinate} 
+#'   \item{`y`}{y coordinate} 
 #' }
 #' 
-#' \code{Snow.deaths2}: An alternative version of \code{Snow.deaths} correcting
+#' `Snow.deaths2`: An alternative version of `Snow.deaths` correcting
 #' some possible duplicate and missing cases, as described in
-#' \code{vignette("Snow_deaths-duplicates")}.
+#' `vignette("Snow_deaths-duplicates")`.
 #' 
-#' \code{Snow.dates}: A data frame of 44 observations and 3 variables from
+#' `Snow.dates`: A data frame of 44 observations and 3 variables from
 #' Table 1 of Snow (1855), giving the number of fatal attacks and number of
 #' deaths by date from Aug. 19 -- Sept. 30, 1854.  There are a total of 616
-#' deaths represented in both columns \code{attacks} and \code{deaths}; of
+#' deaths represented in both columns `attacks` and `deaths`; of
 #' these, the date of the attack is unknown for 45 cases.
 #' 
 #' @seealso \code{\link{SnowMap}} for code to draw Snow's map;
@@ -3129,24 +3134,25 @@ NULL
 #' package contains more analytical methods for understanding Snow's cholera
 #' data.
 #' 
-#' @references Koch, T. (2000). \emph{Cartographies of Disease: Maps, Mapping,
-#' and Medicine}. ESRI Press.  ISBN: 9781589481206.
+#' @references Koch, T. (2000). *Cartographies of Disease: Maps, Mapping,
+#' and Medicine*. ESRI Press.  ISBN: 9781589481206.
 #' 
 #' Koch, T. (2004). The Map as Intent: Variations on the Theme of John Snow
-#' \emph{Cartographica}, 39 (4), 1-14.
+#' *Cartographica*, **39** (4), 1-14.
 #' 
 #' Koch, T. and Denike, K. (2009). Crediting his critics' concerns: Remaking
-#' John Snow's map of Broad Street cholera, 1854. \emph{Social Science &
-#' Medicine} 69, 1246-1251.
+#' John Snow's map of Broad Street cholera, 1854. *Social Science &
+#' Medicine* **69**, 1246-1251.
 #' 
-#' Snow, J. (1885). \emph{On the Mode of Communication of Cholera}. London:
+#' Snow, J. (1885). *On the Mode of Communication of Cholera*. London:
 #' John Churchill. Possibly at https://resource.nlm.nih.gov/0050707.
 #' 
-#' Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
+#' Tufte, E. (1997). *Visual Explanations*. Cheshire, CT: Graphics Press.
 #' 
-#' @source Tobler, W. (1994). Snow's Cholera Map,
-#' \code{http://www.ncgia.ucsb.edu/pubs/snow/snow.html}; data files were
-#' obtained from \code{http://ncgia.ucsb.edu/Publications/Software/cholera/},
+#' @source 
+#' Tobler, W. (1994). Snow's Cholera Map,
+#' `http://www.ncgia.ucsb.edu/pubs/snow/snow.html`; data files were
+#' obtained from `http://ncgia.ucsb.edu/Publications/Software/cholera/`,
 #' but these sites seem to be down.
 #' 
 #' The data in these files were first digitized in 1992 by Rusty Dodson of the
@@ -3216,76 +3222,76 @@ NULL
 
 
 #' John F. W. Herschel's Data on the Orbit of the Twin Stars \eqn{\gamma}
-#' \emph{Virginis}
+#' *Virginis*
 #' 
 #' @description
-#' In 1833 J. F. W. Herschel published two papers in the \emph{Memoirs of the
-#' Royal Astronomical Society} detailing his investigations of calculating the
+#' In 1833 J. F. W. Herschel published two papers in the *Memoirs of the
+#' Royal Astronomical Society* detailing his investigations of calculating the
 #' orbits of twin stars from observations of their relative position angle and
 #' angular distance.
 #' 
 #' In the process, he invented the scatterplot, and the use of visual smoothing
 #' to obtain a reliable curve that surpassed the accuracy of individual
 #' observations (Friendly & Denis, 2005). His data on the recordings of the
-#' twin stars \eqn{\gamma} \emph{Virginis} provide an accessible example of his
+#' twin stars \eqn{\gamma} *Virginis* provide an accessible example of his
 #' methods.
 #' 
 #' 
 #' @details
-#' The data in \code{Virginis} come from the table on p. 35 of the
+#' The data in `Virginis` come from the table on p. 35 of the
 #' \dQuote{Micrometrical Measures} paper.
 #' 
-#' The \code{weight} variable was assigned by the package author, reflecting
+#' The `weight` variable was assigned by the package author, reflecting
 #' Herschel's comments and for use in any weighted analysis.
 #' 
-#' In the \code{notes} and \code{authority} variables, \code{"H"} refers to
+#' In the `notes` and `authority` variables, `"H"` refers to
 #' William Herschel (John's farther, the discoverer of the planet Uranus),
-#' \code{"h"} refers to John Herschel himself, and \code{"Sigma"}, rendered
+#' `"h"` refers to John Herschel himself, and `"Sigma"`, rendered
 #' \eqn{\Sigma} in the table on p. 35 refers to Joseph Fraunhofer.
 #' 
-#' The data in \code{Virginis.interp} come from Table 1 on p. 190 of the
+#' The data in `Virginis.interp` come from Table 1 on p. 190 of the
 #' supplementary paper.
 #' 
 #' @name Virginis
 #' @aliases Virginis Virginis.interp
 #' @docType data
-#' @format \code{Virgins}: A data frame with 18 observations on the following 6
+#' @format `Virgins`: A data frame with 18 observations on the following 6
 #' variables giving the measurements of position angle and angular distance
 #' between the central (brightest) star and its twin, recorded by various
 #' observers over more than 100 years.  
 #' \describe{ 
-#'   \item{\code{year}}{year ("epoch") of the observation, a decimal numeric vector}
-#'   \item{\code{posangle}}{recorded position angle between the two stars, a numeric vector} 
-#'   \item{\code{distance}}{separation distance between the two stars, a numeric vector} 
-#'   \item{\code{weight}}{a subjective weight attributed to the accuracy of this observation, a numeric vector}
-#'   \item{\code{notes}}{Herschel's notes on this observation, a character vector} 
-#'   \item{\code{authority}}{A simplified version of the notes giving just the attribution of authority of the observation, a character vector} 
+#'   \item{`year`}{year ("epoch") of the observation, a decimal numeric vector}
+#'   \item{`posangle`}{recorded position angle between the two stars, a numeric vector} 
+#'   \item{`distance`}{separation distance between the two stars, a numeric vector} 
+#'   \item{`weight`}{a subjective weight attributed to the accuracy of this observation, a numeric vector}
+#'   \item{`notes`}{Herschel's notes on this observation, a character vector} 
+#'   \item{`authority`}{A simplified version of the notes giving just the attribution of authority of the observation, a character vector} 
 #' }
 #' 
-#' \code{Virgins.interp}: A data frame with 14 observations on the following 4
+#' `Virgins.interp`: A data frame with 14 observations on the following 4
 #' variables, giving the position angles and angular distance that Herschel
 #' interpolated from his smoothed curve.  
 #' 
 #' \describe{ 
-#'   \item{\code{year}}{year ("epoch") of the observation, a decimal numeric vector}
-#'   \item{\code{posangle}}{recorded position angle between the two stars, a numeric vector} 
-#'   \item{\code{distance}}{separation distance, calculated \eqn{1/sqrt(velocity)}} 
-#'   \item{\code{velocity}}{angular velocity, calculated as the instantaneous slopes of tangents to the smoothed curve, a numeric
+#'   \item{`year`}{year ("epoch") of the observation, a decimal numeric vector}
+#'   \item{`posangle`}{recorded position angle between the two stars, a numeric vector} 
+#'   \item{`distance`}{separation distance, calculated \eqn{1/sqrt(velocity)}} 
+#'   \item{`velocity`}{angular velocity, calculated as the instantaneous slopes of tangents to the smoothed curve, a numeric
 #' vector} 
 #' }
 #' 
 #' @references Friendly, M. & Denis, D.  The early origins and development of
-#' the scatterplot. \emph{Journal of the History of the Behavioral Sciences},
-#' 2005, 41, 103-130.
+#' the scatterplot. *Journal of the History of the Behavioral Sciences*,
+#' 2005, **41**, 103-130.
 #' 
 #' @source Herschel, J. F. W.  III. Micrometrical Measures of 364 Double Stars
 #' with a 7-feet Equatorial Acromatic Telescope, taken at Slough, in the years
-#' 1828, 1829, and 1830 \emph{Memoirs of the Royal Astronomical Society}, 1833,
-#' 5, 13-91.
+#' 1828, 1829, and 1830 *Memoirs of the Royal Astronomical Society*, 1833,
+#' **5**, 13-91.
 #' 
 #' Herschel, J. F. W.  On the Investigation of the Orbits of Revolving Double
 #' Stars: Being a Supplement to a Paper Entitled "Micrometrical Measures of 364
-#' Double Stars" \emph{Memoirs of the Royal Astronomical Society}, 1833, 5,
+#' Double Stars" *Memoirs of the Royal Astronomical Society*, 1833, **5**,
 #' 171-222.
 #' @keywords datasets
 #' @examples
@@ -3325,44 +3331,42 @@ NULL
 #' in some ways better, but both of these ideas were unknown in 1821.
 #' 
 #' In this version, information on the reigns of British monarchs is provided
-#' in a separate data.frame, \code{Wheat.monarch}.
+#' in a separate data.frame, `Wheat.monarch`.
 #' 
 #' 
 #' @name Wheat
 #' @aliases Wheat Wheat.monarchs
 #' @docType data
 #' @format 
-#' \code{Wheat}  A data frame with 53 observations on the following 3
+#' `Wheat`  A data frame with 53 observations on the following 3
 #' variables.  
 #' \describe{ 
-#'   \item{\code{Year}}{Year, in intervals of 5 from 1565 to 1821: a numeric vector} 
-#'   \item{\code{Wheat}}{Price of Wheat (Shillings/Quarter bushel): a numeric vector} 
-#'   \item{\code{Wages}}{Weekly wage (Shillings): a numeric vector} 
+#'   \item{`Year`}{Year, in intervals of 5 from 1565 to 1821: a numeric vector} 
+#'   \item{`Wheat`}{Price of Wheat (Shillings/Quarter bushel): a numeric vector} 
+#'   \item{`Wages`}{Weekly wage (Shillings): a numeric vector} 
 #' }
 #' 
-#' \code{Wheat.monarchs} A data frame with 12 observations on the following 4
+#' `Wheat.monarchs` A data frame with 12 observations on the following 4
 #' variables.  
 #' \describe{ 
-#'   \item{\code{name}}{Reigning monarch, a factor with levels \code{Anne} \code{Charles I} \code{Charles II} \code{Cromwell} \code{Elizabeth} \code{George I} \code{George II} \code{George III} \code{George IV} \code{James I} \code{James II} \code{W&M}}
-#'   \item{\code{start}}{Starting year of reign, a numeric vector}
-#'   \item{\code{end}}{Starting year of reign, a numeric vector}
-#'   \item{\code{commonwealth}}{A binary variable indicating the period of the Commonwealth under Cromwell} 
+#'   \item{`name`}{Reigning monarch, a factor with levels `Anne` `Charles I` `Charles II` `Cromwell` `Elizabeth` `George I` `George II` `George III` `George IV` `James I` `James II` `W&M`}
+#'   \item{`start`}{Starting year of reign, a numeric vector}
+#'   \item{`end`}{Starting year of reign, a numeric vector}
+#'   \item{`commonwealth`}{A binary variable indicating the period of the Commonwealth under Cromwell} 
 #' }
 #' 
 #' @references Friendly, M. & Denis, D. (2005). The early origins and
-#' development of the scatterplot \emph{Journal of the History of the
-#' Behavioral Sciences}, 41, 103-130.
+#' development of the scatterplot *Journal of the History of the
+#' Behavioral Sciences*, **41**, 103-130.
 #' 
-#' @source Playfair, W. (1821). \emph{Letter on our Agricultural Distresses,
-#' Their Causes and Remedies}. London: W. Sams, 1821
+#' @source Playfair, W. (1821). *Letter on our Agricultural Distresses,
+#' Their Causes and Remedies*. London: W. Sams, 1821
 #' 
 #' Data values: originally digitized from
-#' \url{http://datavis.ca/gallery/images/playfair-wheat1.gif} now taken from
-#' \url{http://mbostock.github.io/protovis/ex/wheat.js}
+#' <http://datavis.ca/gallery/images/playfair-wheat1.gif> now taken from
+#' <http://mbostock.github.io/protovis/ex/wheat.js>
 #' @keywords datasets
 #' @examples
-#' 
-#' data(Wheat)
 #' 
 #' data(Wheat)
 #' 
@@ -3458,10 +3462,10 @@ NULL
 #' 
 #' The data in the paper are provided in the form of discrete frequency
 #' distributions for the four samples.  Each shows the frequency distribution
-#' squares containing a \code{count} of 0, 1, 2, ... yeast cells. These are
-#' combined here in \code{Yeast}.  In addition, he gives a table (Table I)
+#' squares containing a `count` of 0, 1, 2, ... yeast cells. These are
+#' combined here in `Yeast`.  In addition, he gives a table (Table I)
 #' showing the actual number of yeast cells counted in the 20 x 20 grid for
-#' sample D, given here as \code{YeastD.mat}.
+#' sample D, given here as `YeastD.mat`.
 #' 
 #' @details
 #' Student considers the distribution of a total of \eqn{Nm} particles
@@ -3475,22 +3479,23 @@ NULL
 #' @name Yeast
 #' @aliases Yeast YeastD.mat
 #' @docType data
-#' @format \code{Yeast}: A frequency data frame with 36 observations on the
+#' @format `Yeast`: A frequency data frame with 36 observations on the
 #' following 3 variables, giving the frequencies of 
 #' \describe{
-#'   \item{\code{sample}}{Sample identifier, a factor with levels \code{A} \code{B} \code{C} \code{D}} 
-#'   \item{\code{count}}{The number of yeast cells counted in a square} 
-#'   \item{\code{freq}}{The number of squares with the given \code{count}} 
+#'   \item{`sample`}{Sample identifier, a factor with levels `A` `B` `C` `D`} 
+#'   \item{`count`}{The number of yeast cells counted in a square} 
+#'   \item{`freq`}{The number of squares with the given `count`} 
 #' }
 #' 
-#' \code{YeastD.mat}: A 20 x 20 matrix containing the count of yeast cells in
+#' `YeastD.mat`: A 20 x 20 matrix containing the count of yeast cells in
 #' each square for sample D.
 #' 
 #' @references "Student" (1906) On the error of counting with a haemocytometer.
-#' Biometrika, 5, 351-360.
-#' \url{http://www.medicine.mcgill.ca/epidemiology/hanley/c626/Student_counting.pdf}
+#' Biometrika, **5**, 351-360.
+#' <http://www.medicine.mcgill.ca/epidemiology/hanley/c626/Student_counting.pdf>
+#' 
 #' @source D. J. Hand, F. Daly, D. Lunn, K. McConway and E. Ostrowski (1994).
-#' \emph{A Handbook of Small Data Sets}. London: Chapman & Hall. The data were
+#' *A Handbook of Small Data Sets*. London: Chapman & Hall. The data were
 #' originally found at:
 #' https://www2.stat.duke.edu/courses/Spring98/sta113/Data/Hand/yeast.dat
 #' @keywords datasets
@@ -3523,9 +3528,9 @@ NULL
 #' data recorded are the final height (inches, to the nearest 1/8th) of the
 #' plants in each pair.
 #' 
-#' In the \emph{Design of Experiments}, Fisher (1935) used these data to
+#' In the *Design of Experiments*, Fisher (1935) used these data to
 #' illustrate a paired t-test (well, a one-sample test on the mean difference,
-#' \code{cross - self}). Later in the book (section 21), he used this data to
+#' `cross - self`). Later in the book (section 21), he used this data to
 #' illustrate an early example of a non-parametric permutation test, treating
 #' each paired difference as having (randomly) either a positive or negative
 #' sign.
@@ -3534,46 +3539,46 @@ NULL
 #' In addition to the standard paired t-test, several types of non-parametric
 #' tests can be contemplated:
 #' 
-#' (a) Permutation test, where the values of, say \code{self} are permuted and
-#' \code{diff=cross - self} is calculated for each permutation.  There are 15!
+#' (a) Permutation test, where the values of, say `self` are permuted and
+#' `diff=cross - self` is calculated for each permutation.  There are 15!
 #' permutations, but a reasonably large number of random permutations would
 #' suffice.  But this doesn't take the paired samples into account.
 #' 
-#' (b) Permutation test based on assigning each \code{abs(diff)} a + or - sign,
+#' (b) Permutation test based on assigning each `abs(diff)` a + or - sign,
 #' and calculating the mean(diff). There are \eqn{2^{15}} such possible values.
 #' This is essentially what Fisher proposed.  The p-value for the test is the
 #' proportion of absolute mean differences under such randomization which
 #' exceed the observed mean difference.
 #' 
 #' (c) Wilcoxon signed rank test: tests the hypothesis that the median signed
-#' rank of the \code{diff} is zero, or that the distribution of \code{diff} is
+#' rank of the `diff` is zero, or that the distribution of `diff` is
 #' symmetric about 0, vs. a location shifted alternative.
 #' 
 #' @name ZeaMays
 #' @docType data
 #' @format A data frame with 15 observations on the following 4 variables.
 #' \describe{ 
-#'   \item{\code{pair}}{pair number, a numeric vector}
-#'   \item{\code{pot}}{pot, a factor with levels \code{1} \code{2} \code{3} \code{4}} 
-#'   \item{\code{cross}}{height of cross fertilized plant, a numeric vector} 
-#'   \item{\code{self}}{height of self fertilized plant, a numeric vector} 
-#'   \item{\code{diff}}{\code{cross - self} for each pair} 
+#'   \item{`pair`}{pair number, a numeric vector}
+#'   \item{`pot`}{pot, a factor with levels `1` `2` `3` `4`} 
+#'   \item{`cross`}{height of cross fertilized plant, a numeric vector} 
+#'   \item{`self`}{height of self fertilized plant, a numeric vector} 
+#'   \item{`diff`}{`cross - self` for each pair} 
 #' }
 #' 
 #' @seealso \code{\link[stats]{wilcox.test}}
 #' 
-#' \code{\link[coin]{independence_test}} in the \code{coin} package, a general
+#' \code{\link[coin]{independence_test}} in the `coin` package, a general
 #' framework for conditional inference procedures (permutation tests)
 #' 
-#' @references Fisher, R. A. (1935). \emph{The Design of Experiments}. London:
+#' @references Fisher, R. A. (1935). *The Design of Experiments*. London:
 #' Oliver & Boyd.
 #' 
-#' @source Darwin, C. (1876). \emph{The Effect of Cross- and Self-fertilization
-#' in the Vegetable Kingdom}, 2nd Ed. London: John Murray.
+#' @source Darwin, C. (1876). *The Effect of Cross- and Self-fertilization
+#' in the Vegetable Kingdom*, 2nd Ed. London: John Murray.
 #' 
-#' Andrews, D. and Herzberg, A. (1985) \emph{Data: a collection of problems
-#' from many fields for the student and research worker}. New York: Springer.
-#' Data retrieved from: \code{https://www.stat.cmu.edu/StatDat/}
+#' Andrews, D. and Herzberg, A. (1985) *Data: a collection of problems
+#' from many fields for the student and research worker*. New York: Springer.
+#' Data retrieved from: `https://www.stat.cmu.edu/StatDat/`
 #' 
 #' @keywords datasets nonparametric
 #' @examples

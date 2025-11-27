@@ -6,14 +6,14 @@
 \title{Arbuthnot's Data on Male and Female Birth Ratios}
 \format{
 A data frame with 82 observations on the following 7 variables.
-\describe{ 
-  \item{\code{Year}}{a numeric vector, 1629-1710}
-  \item{\code{Males}}{a numeric vector, number of male christenings}
-  \item{\code{Females}}{a numeric vector, number of female christenings}
-  \item{\code{Plague}}{a numeric vector, number of deaths from plague}
-  \item{\code{Mortality}}{a numeric vector, total mortality}
-  \item{\code{Ratio}}{a numeric vector, ratio of Males/Females}
-  \item{\code{Total}}{a numeric vector, total christenings in London (000s)}
+\describe{
+\item{\code{Year}}{a numeric vector, 1629-1710}
+\item{\code{Males}}{a numeric vector, number of male christenings}
+\item{\code{Females}}{a numeric vector, number of female christenings}
+\item{\code{Plague}}{a numeric vector, number of deaths from plague}
+\item{\code{Mortality}}{a numeric vector, total mortality}
+\item{\code{Ratio}}{a numeric vector, ratio of Males/Females}
+\item{\code{Total}}{a numeric vector, total christenings in London (000s)}
 }
 }
 \source{
@@ -40,7 +40,7 @@ Sandy Zabell (1976) pointed out several errors and inconsistencies in the
 Arbuthnot data.  In particular, the values for 1674 and 1704 are identical,
 suggesting that the latter were copied erroneously from the former.
 
-Jim Oeppen <joeppen@health.sdu.dk> points out that: "Arbuthnot's data are
+Jim Oeppen \href{mailto:joeppen@health.sdu.dk}{joeppen@health.sdu.dk} points out that: "Arbuthnot's data are
 annual counts of public baptisms, not births. Birth-baptism delay meant that
 infant deaths could occur before baptism.  As male infants are more likely
 to die than females, the sex ratio at baptism might be expected to be lower
@@ -68,7 +68,7 @@ with(Arbuthnot, plot(Year,Total, type='b', ylab="Total Christenings"))
 \references{
 Campbell, R. B., Arbuthnot and the Human Sex Ratio (2001).
 \emph{Human Biology}, 73:4, 605-610.
-%\url{http://www.math.uni.edu/~campbell/arbuth.html}
+\%\url{http://www.math.uni.edu/~campbell/arbuth.html}
 
 Creighton, C. (1965). A History of Epidemics in Britain, 2nd edition, vol. 1
 and 2.  NY: Barnes and Noble.

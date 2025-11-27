@@ -66,3 +66,4 @@ RoxygenNote: 7.3.3
 Encoding: UTF-8
 BugReports: https://github.com/friendly/HistData/issues
 URL: https://friendly.github.io/HistData/
+Roxygen: list(markdown = TRUE)

@@ -6,22 +6,22 @@
 \title{William Farr's Data on Cholera in London, 1849}
 \format{
 A data frame with 38 observations on the following 15 variables.
-\describe{ 
-  \item{\code{district}}{name of the district in London, a character vector} 
-  \item{\code{cholera_drate}}{deaths from cholera in 1849 per 10,000 inhabitants, a numeric vector}
-  \item{\code{cholera_deaths}}{number of deaths registered from cholera in 1849, a numeric vector} 
-  \item{\code{popn}}{population, in the middle of 1849, a numeric vector} 
-  \item{\code{elevation}}{elevation, in feet above the high water mark, a numeric vector} 
-  \item{\code{region}}{a grouping of the London districts, a factor with levels \code{West} \code{North} \code{Central} \code{South} \code{Kent}} 
-  \item{\code{water}}{water supply region, a factor with levels \code{Battersea} \code{New River} \code{Kew}; see Details} 
-  \item{\code{annual_deaths}}{annual deaths from all causes, 1838-1844, a numeric vector} 
-  \item{\code{pop_dens}}{population density (persons per acre), a numeric vector} 
-  \item{\code{persons_house}}{persons per inhabited house, a numeric vector} 
-  \item{\code{house_valpp}}{average annual value of house, per person (pounds), a numeric vector}
-  \item{\code{poor_rate}}{poor rate precept per pound of house value, a numeric vector} 
-  \item{\code{area}}{district area, a numeric vector}
-  \item{\code{houses}}{number of houses, a numeric vector}
-  \item{\code{house_val}}{total house values, a numeric vector} 
+\describe{
+\item{\code{district}}{name of the district in London, a character vector}
+\item{\code{cholera_drate}}{deaths from cholera in 1849 per 10,000 inhabitants, a numeric vector}
+\item{\code{cholera_deaths}}{number of deaths registered from cholera in 1849, a numeric vector}
+\item{\code{popn}}{population, in the middle of 1849, a numeric vector}
+\item{\code{elevation}}{elevation, in feet above the high water mark, a numeric vector}
+\item{\code{region}}{a grouping of the London districts, a factor with levels \code{West} \code{North} \code{Central} \code{South} \code{Kent}}
+\item{\code{water}}{water supply region, a factor with levels \code{Battersea} \verb{New River} \code{Kew}; see Details}
+\item{\code{annual_deaths}}{annual deaths from all causes, 1838-1844, a numeric vector}
+\item{\code{pop_dens}}{population density (persons per acre), a numeric vector}
+\item{\code{persons_house}}{persons per inhabited house, a numeric vector}
+\item{\code{house_valpp}}{average annual value of house, per person (pounds), a numeric vector}
+\item{\code{poor_rate}}{poor rate precept per pound of house value, a numeric vector}
+\item{\code{area}}{district area, a numeric vector}
+\item{\code{houses}}{number of houses, a numeric vector}
+\item{\code{house_val}}{total house values, a numeric vector}
 }
 }
 \source{

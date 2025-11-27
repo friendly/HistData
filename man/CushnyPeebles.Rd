@@ -7,28 +7,28 @@
 \title{Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives}
 \format{
 \code{CushnyPeebles}: A data frame with 11 observations on the
-following 4 variables.  
-\describe{ 
-  \item{\code{Control}}{a numeric vector: mean hours of sleep} 
-  \item{\code{L_hyoscyamine}}{a numeric vector: mean hours of sleep} 
-  \item{\code{L_hyoscine}}{a numeric vector: mean hours of sleep} 
-  \item{\code{D_hyoscine}}{a numeric vector: mean hours of sleep} 
+following 4 variables.
+\describe{
+\item{\code{Control}}{a numeric vector: mean hours of sleep}
+\item{\code{L_hyoscyamine}}{a numeric vector: mean hours of sleep}
+\item{\code{L_hyoscine}}{a numeric vector: mean hours of sleep}
+\item{\code{D_hyoscine}}{a numeric vector: mean hours of sleep}
 }
 
 \code{CushnyPeeblesN}: A data frame with 11 observations on the following 4
-variables.  
-\describe{ 
-  \item{\code{Control}}{a numeric vector: number of observations} 
-  \item{\code{L_hyoscyamine}}{a numeric vector: number of observations} 
-  \item{\code{L_hyoscine}}{a numeric vector: number of observations} 
-  \item{\code{DL_hyoscine}}{a numeric vector: number of observations} 
+variables.
+\describe{
+\item{\code{Control}}{a numeric vector: number of observations}
+\item{\code{L_hyoscyamine}}{a numeric vector: number of observations}
+\item{\code{L_hyoscine}}{a numeric vector: number of observations}
+\item{\code{DL_hyoscine}}{a numeric vector: number of observations}
 }
 }
 \source{
 Cushny, A. R., and Peebles, A. R. (1905), "The Action of Optical
 Isomers. II: Hyoscines," \emph{Journal of Physiology}, 32, 501-510.
 
-% Senn, Stephen, Data from Cushny and Peebles,
+\% Senn, Stephen, Data from Cushny and Peebles,
 \url{http://www.senns.demon.co.uk/Data/Cushny.xls}
 }
 \description{

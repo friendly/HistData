@@ -6,20 +6,20 @@
 
 #' Draw John Snow's Map of Cholera in London
 #' 
-#' The main function \code{SnowMap()} draws versions of John Snow's map of
+#' The main function `SnowMap()` draws versions of John Snow's map of
 #' cholera deaths in the South London area surrounding the Borad Street pump.
 #' during the 1854 outbreak.
 #' 
 #' @details
-#' \code{SnowMap()} is a wrapper for the various subfunctions also listed here:
+#' `SnowMap()` is a wrapper for the various subfunctions also listed here:
 #' \itemize{
-#'   \item \code{Splot} sets up the basic plot 
-#'   \item \code{Sstreets} draws the streets
-#'   \item \code{Sdeaths} plots the deaths 
-#'   \item \code{Sdeaths} plots the pump locations 
-#'   \item \code{Sscale} draws the scale 
-#'   \item \code{Spolygons} draws the boundaries of the Voronoi polygons separating the pumps 
-#'   \item \code{Sdensity} draws and fills contours of the 2D density of deaths
+#'   \item `Splot` sets up the basic plot 
+#'   \item `Sstreets` draws the streets
+#'   \item `Sdeaths` plots the deaths 
+#'   \item `Sdeaths` plots the pump locations 
+#'   \item `Sscale` draws the scale 
+#'   \item `Spolygons` draws the boundaries of the Voronoi polygons separating the pumps 
+#'   \item `Sdensity` draws and fills contours of the 2D density of deaths
 #' }
 #' 
 #' 
@@ -29,43 +29,43 @@
 #' @param axis.labels Logical. Show axis tick mark labels?
 #' @param main Plot title
 #' @param scale Logical; draw a scale (in meters) on the plot
-#' @param polygons Logical; Use \code{Spolygons} to draw the \code{Snow.polygons} on the plot?
-#' @param density Logical; Use \code{Sdensity} to draw the 2D bivariate density of deaths on the plot?
-#' @param streets.args List of arguments passed to \code{Sstreets}
-#' @param deaths.args List of arguments passed to \code{Sdeaths}
-#' @param pumps.args List of arguments passed to \code{Spumps}
-#' @param scale.args List of arguments passed to \code{Sscale}
-#' @param polygons.args List of arguments passed to \code{Spolygons}. Note that \code{col} here now refers to the fill colors, passed to
-#'        \code{\link[graphics]{polygon}}. The \code{col} argument here can be a vector of up to 13 colors, one for each pump region.
-#' @param density.args List of arguments passed to \code{Sdensity}
+#' @param polygons Logical; Use `Spolygons` to draw the `Snow.polygons` on the plot?
+#' @param density Logical; Use `Sdensity` to draw the 2D bivariate density of deaths on the plot?
+#' @param streets.args List of arguments passed to `Sstreets`
+#' @param deaths.args List of arguments passed to `Sdeaths`
+#' @param pumps.args List of arguments passed to `Spumps`
+#' @param scale.args List of arguments passed to `Sscale`
+#' @param polygons.args List of arguments passed to `Spolygons`. Note that `col` here now refers to the fill colors, passed to
+#'        \code{\link[graphics]{polygon}}. The `col` argument here can be a vector of up to 13 colors, one for each pump region.
+#' @param density.args List of arguments passed to `Sdensity`
 #' @param xlab Label for horizontal axis
 #' @param ylab Label for vertical axis
 #' @param col Color of points and lines used by various functions
 #' @param pch Point character used by by various functions
 #' @param cex Character size used by by various functions
-#' @param cex.lab Character size for labels used by \code{Spumps}
+#' @param cex.lab Character size for labels used by `Spumps`
 #' @param lwd Line width used by by various functions
-#' @param border Color of border lines used by \code{Spolygons}
-#' @param xs x location of the scale used by \code{Sscale}
-#' @param ys y location of the scale used by \code{Sscale}
+#' @param border Color of border lines used by `Spolygons`
+#' @param xs x location of the scale used by `Sscale`
+#' @param ys y location of the scale used by `Sscale`
 #' @param lty Line type used by by various functions
-#' @param bandwidth Bandwidth used by \code{\link[KernSmooth]{bkde2D}} in \code{Sdensity}
-#' @param col1 Lower level of color range used by \code{\link[grDevices]{colorRampPalette}} in \code{Sdensity}
-#' @param col2 Upper level of color range used by \code{\link[grDevices]{colorRampPalette}} in \code{Sdensity}
+#' @param bandwidth Bandwidth used by \code{\link[KernSmooth]{bkde2D}} in `Sdensity`
+#' @param col1 Lower level of color range used by \code{\link[grDevices]{colorRampPalette}} in `Sdensity`
+#' @param col2 Upper level of color range used by \code{\link[grDevices]{colorRampPalette}} in `Sdensity`
 #' @return None
 #' @author Michael Friendly
 #' @seealso \code{\link{Snow}} for description of the data sets
 #' 
 #' \code{\link[KernSmooth]{bkde2D}}, \code{\link[grDevices]{colorRampPalette}}
-#' @references Snow, J. (1885). \emph{On the Mode of Communication of Cholera}.
+#' @references Snow, J. (1885). *On the Mode of Communication of Cholera*.
 #' London: John Churchill
 #' 
 #' %John Mackenzie, "GIS Analyses of Dr. Snow's Map", %
-#' \url{http://www1.udel.edu/johnmack/frec480/cholera/cholera2.html} %describes
+#' <http://www1.udel.edu/johnmack/frec480/cholera/cholera2.html> %describes
 #' some related visualizations using ArcGIS.
 #' 
 #' Thomas Coleman, "John Snow Research project",
-#' \code{https://www.hilerun.org/econ/papers/snow/index.html} gives extensive
+#' `https://www.hilerun.org/econ/papers/snow/index.html` gives extensive
 #' analyses of Snow's data with R notebooks on Github.
 #' @keywords hplot
 #' @examples

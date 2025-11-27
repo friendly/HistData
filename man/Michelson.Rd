@@ -7,21 +7,25 @@
 \title{Michelson's Determinations of the Velocity of Light}
 \format{
 \code{Michelson}: A data frame with 100 observations on the
-following variable, given in time order of data collection 
+following variable, given in time order of data collection
 \describe{
-  \item{\code{velocity}}{a numeric vector} 
+\item{\code{velocity}}{a numeric vector}
 }
 
-\code{MichelsonSets}: A 20 x 5 matrix, with format int [1:20, 1:5] 850 850
-1000 810 960 800 830 830 880 720 ...  - attr(*, "dimnames")=List of 2 ..$ :
-NULL ..$ : chr [1:5] "ds12" "ds13" "ds14" "ds15" ...
+\code{MichelsonSets}: A 20 x 5 matrix, with format
+\preformatted{
+ int [1:20, 1:5] 850 850 1000 810 960 800 830 830 880 720 ...
+ - attr(*, "dimnames")=List of 2
+  ..$ : NULL
+  ..$ : chr [1:5] "ds12" "ds13" "ds14" "ds15" ...#' 
+  }
 }
 \source{
 Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
 \url{https://www.math.uah.edu/stat/data/Michelson.html}
 
 Stephen M. Stigler (1977), "Do robust estimators work with \emph{real}
-data?", \emph{Annals of Statistics}, 5, 1055-1098
+data?", \emph{Annals of Statistics}, \strong{5}, 1055-1098
 }
 \description{
 The data frame \code{Michelson} gives Albert Michelson's measurements of the
@@ -81,7 +85,7 @@ points(1:5+.05, tm, pch=16, col="blue")
 \references{
 Michelson, A. A. (1882). "Experimental determination of the
 velocity of light made at the United States Naval Academy, Anapolis".
-\emph{Astronomical Papers}, 1,109-145, U. S. Nautical Almanac Office.
+\emph{Astronomical Papers}, \strong{1}, 109-145, U. S. Nautical Almanac Office.
 }
 \seealso{
 \code{\link[datasets]{morley}} for these data in another format

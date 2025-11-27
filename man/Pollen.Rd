@@ -6,13 +6,13 @@
 \title{Pollen Data Challenge}
 \format{
 A data frame with 3848 observations on the following 5 variables,
-representing fictitious measurements of grains of pollen.  
+representing fictitious measurements of grains of pollen.
 \describe{
-  \item{\code{ridge}}{along X, a numeric vector} 
-  \item{\code{nub}}{along y, a numeric vector} 
-  \item{\code{crack}}{along z, a numeric vector}
-  \item{\code{weight}}{weight of pollen grain, a numeric vector}
-  \item{\code{density}}{weight of pollen grain, a numeric vector} 
+\item{\code{ridge}}{along X, a numeric vector}
+\item{\code{nub}}{along y, a numeric vector}
+\item{\code{crack}}{along z, a numeric vector}
+\item{\code{weight}}{weight of pollen grain, a numeric vector}
+\item{\code{density}}{weight of pollen grain, a numeric vector}
 }
 }
 \source{

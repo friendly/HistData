@@ -9,25 +9,25 @@
 \format{
 \code{Macdonell}: A frequency data frame with 924 observations on
 the following 3 variables giving the bivariate frequency distribution of
-\code{height} and \code{finger}.  
-\describe{ 
-  \item{\code{height}}{lower class boundaries of height, in decimal ft.} 
-  \item{\code{finger}}{length of the left middle finger, in mm.} 
-  \item{\code{frequency}}{frequency of this combination of \code{height} and \code{finger}} 
-} 
+\code{height} and \code{finger}.
+\describe{
+\item{\code{height}}{lower class boundaries of height, in decimal ft.}
+\item{\code{finger}}{length of the left middle finger, in mm.}
+\item{\code{frequency}}{frequency of this combination of \code{height} and \code{finger}}
+}
 
 \code{MacdonellDF}: A data
-frame with 3000 observations on the following 2 variables.  
+frame with 3000 observations on the following 2 variables.
 \describe{
-  \item{\code{height}}{a numeric vector} 
-  \item{\code{finger}}{a numeric vector} 
+\item{\code{height}}{a numeric vector}
+\item{\code{finger}}{a numeric vector}
 }
 }
 \source{
 Macdonell, W. R. (1902). On Criminal Anthropometry and the
 Identification of Criminals. \emph{Biometrika}, 1(2), 177-227.
 \doi{10.1093/biomet/1.2.177}
-% \url{http://www.jstor.org/stable/2331487}
+\% \url{http://www.jstor.org/stable/2331487}
 
 The data used here were obtained from:
 
@@ -238,10 +238,10 @@ abline(a=0, b=1, col="red", lwd=2)
 Hanley, J. and Julien, M. and Moodie, E. (2008). Student's z, t,
 and s: What if Gosset had R? \emph{The American Statistician}, 62(1), 64-69.
 
-Gosset, W. S. [Student] (1908). Probable error of a mean. \emph{Biometrika},
+Gosset, W. S. (Student) (1908). Probable error of a mean. \emph{Biometrika},
 6(1), 1-25. \url{https://www.york.ac.uk/depts/maths/histstat/student.pdf}
 
-Gosset, W. S. [Student] (1908). Probable error of a correlation coefficient.
+Gosset, W. S. (Student) (1908). Probable error of a correlation coefficient.
 \emph{Biometrika}, 6, 302-310.
 }
 \keyword{datasets}

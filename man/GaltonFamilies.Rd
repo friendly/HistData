@@ -6,15 +6,15 @@
 \title{Galton's data on the heights of parents and their children, by child}
 \format{
 A data frame with 934 observations on the following 8 variables.
-\describe{ 
-  \item{\code{family}}{family ID, a factor with levels \code{001}-\code{204}} 
-  \item{\code{father}}{height of father}
-  \item{\code{mother}}{height of mother}
-  \item{\code{midparentHeight}}{mid-parent height, calculated as \code{(father + 1.08*mother)/2}} 
-  \item{\code{children}}{number of children in this family} 
-  \item{\code{childNum}}{number of this child within family. Children are listed in decreasing order of height for boys followed by girls} 
-  \item{\code{gender}}{child gender, a factor with levels \code{female} \code{male}} 
-  \item{\code{childHeight}}{height of child} 
+\describe{
+\item{\code{family}}{family ID, a factor with levels \code{001}-\code{204}}
+\item{\code{father}}{height of father}
+\item{\code{mother}}{height of mother}
+\item{\code{midparentHeight}}{mid-parent height, calculated as \code{(father + 1.08*mother)/2}}
+\item{\code{children}}{number of children in this family}
+\item{\code{childNum}}{number of this child within family. Children are listed in decreasing order of height for boys followed by girls}
+\item{\code{gender}}{child gender, a factor with levels \code{female} \code{male}}
+\item{\code{childHeight}}{height of child}
 }
 }
 \source{
@@ -30,7 +30,7 @@ In addition to the question of the relation between heights of parents and
 their offspring, for which this data is mainly famous, Galton had another
 purpose which the data in this form allows to address: Does marriage
 selection indicate a relationship between the heights of husbands and wives?,
-a topic he called \emph{assortative mating}. Keen [p. 297--298](2010)
+a topic he called \emph{assortative mating}. Keen \href{2010}{p. 297--298}
 provides a brief discussion of this topic.
 }
 \details{

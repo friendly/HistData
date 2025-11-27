@@ -6,23 +6,23 @@
 \title{Pearson and Lee's data on the Heights of Parents and Children by Gender}
 \format{
 A frequency data frame with 746 observations on the following 6
-variables.  
-\describe{ 
-  \item{\code{child}}{child height in inches, a numeric vector} 
-  \item{\code{parent}}{parent height in inches, a numeric vector} 
-  \item{\code{frequency}}{a numeric vector} 
-  \item{\code{gp}}{a factor with levels \code{fd} \code{fs} \code{md} \code{ms}}
-  \item{\code{par}}{a factor with levels \code{Father} \code{Mother}}
-  \item{\code{chl}}{a factor with levels \code{Daughter} \code{Son}} 
+variables.
+\describe{
+\item{\code{child}}{child height in inches, a numeric vector}
+\item{\code{parent}}{parent height in inches, a numeric vector}
+\item{\code{frequency}}{a numeric vector}
+\item{\code{gp}}{a factor with levels \code{fd} \code{fs} \code{md} \code{ms}}
+\item{\code{par}}{a factor with levels \code{Father} \code{Mother}}
+\item{\code{chl}}{a factor with levels \code{Daughter} \code{Son}}
 }
 }
 \source{
 Pearson, K. and Lee, A. (1896). Mathematical contributions to the
 theory of evolution. On telegony in man, etc. \emph{Proceedings of the Royal
-Society of London}, 60 , 273-283.
+Society of London}, \strong{60} , 273-283.
 
 Pearson, K. and Lee, A. (1903).  On the laws of inheritance in man: I.
-Inheritance of physical characters. \emph{Biometrika}, 2(4), 357-462.
+Inheritance of physical characters. \emph{Biometrika}, \strong{2}(4), 357-462.
 (Tables XXII, p. 415; XXV, p. 417; XXVIII, p. 419 and XXXI, p. 421.)
 }
 \description{
@@ -100,8 +100,8 @@ ggplot(PearsonLee, aes(x = child, y = parent, weight=frequency)) +
 \references{
 Wachsmuth, A.W., Wilkinson L., Dallal G.E. (2003).  Galton's
 bend: A previously undiscovered nonlinearity in Galton's family stature
-regression data.  \emph{The American Statistician}, 57, 190-192.
-%\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
+regression data.  \emph{The American Statistician}, \strong{57}, 190-192.
+\%\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
 \doi{10.1198/0003130031874}.
 }
 \seealso{

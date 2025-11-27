@@ -39,43 +39,43 @@ historical use.
 Data sets included in the HistData package are:
 
 \describe{
-  \item{\code{\link{Arbuthnot}}}{Arbuthnot's data on male and female birth ratios in London from 1629-1710}
-  \item{\code{\link{Armada}}}{The Spanish Armada}
-  \item{\code{\link{Bowley}}}{Bowley's data on values of British and Irish trade, 1855-1899}
-  \item{\code{\link{Breslau}}}{Halley's Breslau Life Table}
-  \item{\code{\link{Cavendish}}}{Cavendish's 1798 determinations of the density of the earth}
-  \item{\code{\link{ChestSizes}}}{Quetelet's data on chest measurements of Scottish militiamen}
-  \item{\code{\link{Cholera}}}{William Farr's Data on Cholera in London, 1849}
-  \item{\code{\link{CholeraDeaths1849}}}{Daily Deaths from Cholera and Diarrhaea in England, 1849}
-  \item{\code{\link{CushnyPeebles}}}{Cushny-Peebles data: Soporific effects of scopolamine derivatives}
-  \item{\code{\link{Dactyl}}}{Edgeworth's counts of dactyls in Virgil's Aeneid}
-  \item{\code{\link{DrinksWages}}}{Elderton and Pearson's (1910) data on drinking and wages}
-  \item{\code{\link{EdgeworthDeaths}}}{Edgeworth's Data on Death Rates in British Counties}
-  \item{\code{\link{Fingerprints}}}{Waite's data on Patterns in Fingerprints}
-  \item{\code{\link{Galton}}}{Galton's data on the heights of parents and their children}
-  \item{\code{\link{GaltonFamilies}}}{Galton's data on the heights of parents and their children, by family}
-  \item{\code{\link{Guerry}}}{Data from A.-M. Guerry, "Essay on the Moral Statistics of France"}
-  \item{\code{\link{HalleyLifeTable}}}{Halley's Life Table}
-  \item{\code{\link{Jevons}}}{W. Stanley Jevons' data on numerical discrimination}
-  \item{\code{\link{Langren}}}{van Langren's data on longitude distance between Toledo and Rome}
-  \item{\code{\link{Macdonell}}}{Macdonell's data on height and finger length of criminals, used by Gosset (1908)}
-  \item{\code{\link{Mayer}}}{Mayer's data on the libration of the moon}
-  \item{\code{\link{Michelson}}}{Michelson's 1879 determinations of the velocity of light}
-  \item{\code{\link{Minard}}}{Data from Minard's famous graphic map of Napoleon's march on Moscow}
-  \item{\code{\link{Nightingale}}}{Florence Nightingale's data on deaths from various causes in the Crimean War}
-  \item{\code{\link{OldMaps}}}{Latitudes and Longitudes of 39 Points in 11 Old Maps}
-  \item{\code{\link{PearsonLee}}}{Pearson and Lee's 1896 data on the heights of parents and children classified by gender}
-  \item{\code{\link{PolioTrials}}}{Polio Field Trials Data on the Salk vaccine}
-  \item{\code{\link{Pollen}}}{5D dataset from the 1986 JSM Challenge}
-  \item{\code{\link{Prostitutes}}}{Parent-Duchatelet's time-series data on the number of prostitutes in Paris}
-  \item{\code{\link{Pyx}}}{Trial of the Pyx}
-  \item{\code{\link{Quarrels}}}{Statistics of Deadly Quarrels}
-  \item{\code{\link{Saturn}}}{Laplace's Saturn data}
-  \item{\code{\link{Snow}}}{John Snow's map and data on the 1854 London Cholera outbreak}
-  \item{\code{\link{Virginis}}}{J. F. W. Herschel's data on the orbit of the twin star gamma Virginis}
-  \item{\code{\link{Wheat}}}{Playfair's data on wages and the price of wheat}
-  \item{\code{\link{Yeast}}}{Student's (1906) Yeast Cell Counts}
-  \item{\code{\link{ZeaMays}}}{Darwin's Heights of Cross- and Self-fertilized Zea May Pairs}
+\item{\code{\link{Arbuthnot}}}{Arbuthnot's data on male and female birth ratios in London from 1629-1710}
+\item{\code{\link{Armada}}}{The Spanish Armada}
+\item{\code{\link{Bowley}}}{Bowley's data on values of British and Irish trade, 1855-1899}
+\item{\code{\link{Breslau}}}{Halley's Breslau Life Table}
+\item{\code{\link{Cavendish}}}{Cavendish's 1798 determinations of the density of the earth}
+\item{\code{\link{ChestSizes}}}{Quetelet's data on chest measurements of Scottish militiamen}
+\item{\code{\link{Cholera}}}{William Farr's Data on Cholera in London, 1849}
+\item{\code{\link{CholeraDeaths1849}}}{Daily Deaths from Cholera and Diarrhaea in England, 1849}
+\item{\code{\link{CushnyPeebles}}}{Cushny-Peebles data: Soporific effects of scopolamine derivatives}
+\item{\code{\link{Dactyl}}}{Edgeworth's counts of dactyls in Virgil's Aeneid}
+\item{\code{\link{DrinksWages}}}{Elderton and Pearson's (1910) data on drinking and wages}
+\item{\code{\link{EdgeworthDeaths}}}{Edgeworth's Data on Death Rates in British Counties}
+\item{\code{\link{Fingerprints}}}{Waite's data on Patterns in Fingerprints}
+\item{\code{\link{Galton}}}{Galton's data on the heights of parents and their children}
+\item{\code{\link{GaltonFamilies}}}{Galton's data on the heights of parents and their children, by family}
+\item{\code{\link{Guerry}}}{Data from A.-M. Guerry, "Essay on the Moral Statistics of France"}
+\item{\code{\link{HalleyLifeTable}}}{Halley's Life Table}
+\item{\code{\link{Jevons}}}{W. Stanley Jevons' data on numerical discrimination}
+\item{\code{\link{Langren}}}{van Langren's data on longitude distance between Toledo and Rome}
+\item{\code{\link{Macdonell}}}{Macdonell's data on height and finger length of criminals, used by Gosset (1908)}
+\item{\code{\link{Mayer}}}{Mayer's data on the libration of the moon}
+\item{\code{\link{Michelson}}}{Michelson's 1879 determinations of the velocity of light}
+\item{\code{\link{Minard}}}{Data from Minard's famous graphic map of Napoleon's march on Moscow}
+\item{\code{\link{Nightingale}}}{Florence Nightingale's data on deaths from various causes in the Crimean War}
+\item{\code{\link{OldMaps}}}{Latitudes and Longitudes of 39 Points in 11 Old Maps}
+\item{\code{\link{PearsonLee}}}{Pearson and Lee's 1896 data on the heights of parents and children classified by gender}
+\item{\code{\link{PolioTrials}}}{Polio Field Trials Data on the Salk vaccine}
+\item{\code{\link{Pollen}}}{5D dataset from the 1986 JSM Challenge}
+\item{\code{\link{Prostitutes}}}{Parent-Duchatelet's time-series data on the number of prostitutes in Paris}
+\item{\code{\link{Pyx}}}{Trial of the Pyx}
+\item{\code{\link{Quarrels}}}{Statistics of Deadly Quarrels}
+\item{\code{\link{Saturn}}}{Laplace's Saturn data}
+\item{\code{\link{Snow}}}{John Snow's map and data on the 1854 London Cholera outbreak}
+\item{\code{\link{Virginis}}}{J. F. W. Herschel's data on the orbit of the twin star gamma Virginis}
+\item{\code{\link{Wheat}}}{Playfair's data on wages and the price of wheat}
+\item{\code{\link{Yeast}}}{Student's (1906) Yeast Cell Counts}
+\item{\code{\link{ZeaMays}}}{Darwin's Heights of Cross- and Self-fertilized Zea May Pairs}
 }
 }
 \examples{
@@ -135,7 +135,7 @@ sets related to Guerry's (1833) \emph{Moral Statistics of France}.
 Rothkopf (1957) on errors in learning Morse code, a classical example for
 MDS.
 
-The \pkg{psychTools} package, containing Galton's \code{peas} data. %
+The \pkg{psychTools} package, containing Galton's \code{peas} data. \%
 \code{\link[psychTools]{peas}} data. The same data set is contained in \pkg{alr4}
 as \code{\link[alr4]{galtonpeas}}.
 

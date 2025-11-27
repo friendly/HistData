@@ -11,15 +11,15 @@
 #' @format
 #'  A data frame with 55 observations on the following 9 variables.
 #'  \describe{
-#'    \item{\code{Year}}{numeric, a numeric vector}
-#'    \item{\code{Stocks}}{Price of Stocks (Pounds per 3\% consol bond), a numeric vector}
-#'    \item{\code{Wheat}}{Price of Wheat (Shillings per quarter), a numeric vector}
-#'    \item{\code{Bread}}{Price of Bread (Farthings per quarter-loaf), a numeric vector}
-#'    \item{\code{Debt}}{National debt (Tens of millions of pounds), a numeric vector}
-#'    \item{\code{Exports}}{Exports (Millions of pounds), a numeric vector}
-#'    \item{\code{Imports}}{Imports (Millions of pounds), a numeric vector}
-#'    \item{\code{Expenditure}}{Expenditure (Millions of pounds), a numeric vector}
-#'    \item{\code{Revenue}}{Revenue (Millions of pounds), a numeric vector}
+#'    \item{`Year`}{numeric, a numeric vector}
+#'    \item{`Stocks`}{Price of Stocks (Pounds per 3% consol bond), a numeric vector}
+#'    \item{`Wheat`}{Price of Wheat (Shillings per quarter), a numeric vector}
+#'    \item{`Bread`}{Price of Bread (Farthings per quarter-loaf), a numeric vector}
+#'    \item{`Debt`}{National debt (Tens of millions of pounds), a numeric vector}
+#'    \item{`Exports`}{Exports (Millions of pounds), a numeric vector}
+#'    \item{`Imports`}{Imports (Millions of pounds), a numeric vector}
+#'    \item{`Expenditure`}{Expenditure (Millions of pounds), a numeric vector}
+#'    \item{`Revenue`}{Revenue (Millions of pounds), a numeric vector}
 #'  }
 #'
 #' @details 
@@ -28,14 +28,14 @@
 #' The dataset, extracted from the image by Ivan Lokhov using WebPlotDigitizer,
 #' presents a challenge in trying re-create it, or do better using modern graphics methods.
 #' @source 
-#' Ivan Lokhov, Remaking a 200-year-old chart \url{https://www.datawrapper.de/blog/playfair-chronology-multiple-lines}
+#' Ivan Lokhov, Remaking a 200-year-old chart <https://www.datawrapper.de/blog/playfair-chronology-multiple-lines>
 #' 
 #' @references
-#' Playfair, W. (1824). \emph{Chronology of Public Events and Remarkable Occurrences within the Last Fifty Years; or from 1774 to 1824}, published by W. Lewis, Finch Lane,  London.
+#' Playfair, W. (1824). *Chronology of Public Events and Remarkable Occurrences within the Last Fifty Years; or from 1774 to 1824*, published by W. Lewis, Finch Lane,  London.
 #' 
-#' The original chart can be seen on Wikimedia at: \url{https://bit.ly/4ihX92a}
+#' The original chart can be seen on Wikimedia at: <https://bit.ly/4ihX92a>
 #' 
-#' Spence, I., Fenn, C. R., & Klein, S. (2017). Who is buried in Playfairs grave? \emph{Significance}, 14(5), 20–23. \doi{10.1111/j.1740-9713.2017.01071.x}
+#' Spence, I., Fenn, C. R., & Klein, S. (2017). Who is buried in Playfairs grave? *Significance*, 14(5), 20–23. \doi{10.1111/j.1740-9713.2017.01071.x}
 #'
 #' 
 #' @concept time-series

@@ -7,21 +7,21 @@
 \format{
 A data frame with 468 observations on the following 6 variables,
 giving the latitude and longitude of 39 points recorded from 12 sources
-(Actual + 11 maps).  
-\describe{ 
-  \item{\code{point}}{a numeric vector}
-  \item{\code{col}}{Column in the table a numeric vector}
-  \item{\code{name}}{Name of the map maker, using \code{Actual} for the true coordinates of the points.  A factor with levels \code{Actual} \code{Arrowsmith} \code{Belin} \code{Cary} \code{Coronelli} \code{D'Anville} \code{Del'Isle} \code{Lattre} \code{Melish} \code{Mitchell} \code{Popple}}
-  \item{\code{year}}{Year of the map} 
-  \item{\code{lat}}{Latitude}
-  \item{\code{long}}{Longitude} 
+(Actual + 11 maps).
+\describe{
+\item{\code{point}}{a numeric vector}
+\item{\code{col}}{Column in the table a numeric vector}
+\item{\code{name}}{Name of the map maker, using \code{Actual} for the true coordinates of the points.  A factor with levels \code{Actual} \code{Arrowsmith} \code{Belin} \code{Cary} \code{Coronelli} \verb{D'Anville} \verb{Del'Isle} \code{Lattre} \code{Melish} \code{Mitchell} \code{Popple}}
+\item{\code{year}}{Year of the map}
+\item{\code{lat}}{Latitude}
+\item{\code{long}}{Longitude}
 }
 }
 \source{
 Andrews, D. F., and Herzberg, A. M. (1985). \emph{Data: A Collection
 of Problems from Many fields for the Student and Research Worker}. New York:
 Springer, Table 10.1.  The data were obtained from
-\code{http://www.stat.duke.edu/courses/Spring01/sta114/data/Andrews/T10.1}.
+\verb{http://www.stat.duke.edu/courses/Spring01/sta114/data/Andrews/T10.1}.
 }
 \description{
 The data set is concerned with the problem of aligning the coordinates of

@@ -8,13 +8,13 @@
 A data frame with 70 observations on the following 6 variables,
 giving the number of non-drinkers (\code{sober}) and drinkers
 (\code{drinks}) in various occupational categories (\code{trade}).
-\describe{ 
-  \item{\code{class}}{wage class: a factor with levels \code{A} \code{B} \code{C}} 
-  \item{\code{trade}}{a factor with levels \code{baker} \code{barman} \code{billposter} ...  \code{wellsinker} \code{wireworker}}
-  \item{\code{sober}}{the number of non-drinkers, a numeric vector}
-  \item{\code{drinks}}{the number of drinkers, a numeric vector}
-  \item{\code{wage}}{weekly wage (in shillings), a numeric vector}
-  \item{\code{n}}{total number, a numeric vector} 
+\describe{
+\item{\code{class}}{wage class: a factor with levels \code{A} \code{B} \code{C}}
+\item{\code{trade}}{a factor with levels \code{baker} \code{barman} \code{billposter} ...  \code{wellsinker} \code{wireworker}}
+\item{\code{sober}}{the number of non-drinkers, a numeric vector}
+\item{\code{drinks}}{the number of drinkers, a numeric vector}
+\item{\code{wage}}{weekly wage (in shillings), a numeric vector}
+\item{\code{n}}{total number, a numeric vector}
 }
 }
 \source{

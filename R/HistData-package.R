@@ -10,23 +10,23 @@
 #' analysis. These are meant mainly as simple starters for more extensive re-analysis
 #' or graphical elaboration. Some of these present graphical challenges to
 #' reproduce in R and I'm pleased that some of these have been featured in social media calls
-#' for participation, such as the \emph{30 Day Chart Challenge}, \url{https://github.com/30DayChartChallenge/Edition2025}
+#' for participation, such as the *30 Day Chart Challenge*, <https://github.com/30DayChartChallenge/Edition2025>
 #' 
-#' They are part of a program of research called \emph{statistical
-#' historiography}, meaning the use of statistical methods to study problems
+#' They are part of a program of research called *statistical
+#' historiography*, meaning the use of statistical methods to study problems
 #' and questions in the history of statistics and graphics.  A main aspect of
 #' this is the increased understanding of historical problems in science and
 #' data analysis trough the process of trying to reproduce a graph or analysis
-#' using modern methods. I call this "Re-visioning", meaning to \emph{see
-#' again, hopefully in a new light}.
+#' using modern methods. I call this "Re-visioning", meaning to *see
+#' again, hopefully in a new light*.
 #' 
 #' A number of these are illustrated in our book, Friendly & Wainer (2021),
-#' \emph{A History of Data Visualization and Graphic Communication}, and some
+#' *A History of Data Visualization and Graphic Communication*, and some
 #' are re-produced in R in the companion web site,
-#' \url{https://friendly.github.io/HistDataVis/}.
+#' <https://friendly.github.io/HistDataVis/>.
 #' 
-#' Descriptions of each "DataSet" can be found using \code{help(DataSet)};
-#' \code{example(DataSet)} will likely show applications similar to the
+#' Descriptions of each "DataSet" can be found using `help(DataSet)`;
+#' `example(DataSet)` will likely show applications similar to the
 #' historical use.
 #' 
 #' Data sets included in the HistData package are:
@@ -98,13 +98,13 @@
 #' Other packages containing data sets of historical interest include:
 #' 
 #' The \code{\link[Guerry]{Guerry-package}}, containing maps and other data
-#' sets related to Guerry's (1833) \emph{Moral Statistics of France}.
+#' sets related to Guerry's (1833) *Moral Statistics of France*.
 #' 
-#' \code{morsecodes} from the (defunct) \pkg{xgobi} package for data from
+#' `morsecodes` from the (defunct) \pkg{xgobi} package for data from
 #' Rothkopf (1957) on errors in learning Morse code, a classical example for
 #' MDS.
 #' 
-#' The \pkg{psychTools} package, containing Galton's \code{peas} data. %
+#' The \pkg{psychTools} package, containing Galton's `peas` data. %
 #' \code{\link[psychTools]{peas}} data. The same data set is contained in \pkg{alr4}
 #' as \code{\link[alr4]{galtonpeas}}.
 #' 
@@ -115,26 +115,26 @@
 #' \code{\link[agridat]{minnesota.barley.weather}}.
 #' 
 #' @references Friendly, M. (2007). A Brief History of Data Visualization. In
-#' Chen, C., Hardle, W. & Unwin, A. (eds.)  \emph{Handbook of Computational
-#' Statistics: Data Visualization}, Springer-Verlag, III, Ch. 1, 1-34.
+#' Chen, C., Hardle, W. & Unwin, A. (eds.)  *Handbook of Computational
+#' Statistics: Data Visualization*, Springer-Verlag, III, Ch. 1, 1-34.
 #' 
 #' Friendly, M. & Denis, D. (2001). Milestones in the history of thematic
 #' cartography, statistical graphics, and data visualization.
-#' \url{http://datavis.ca/milestones/}
+#' <http://datavis.ca/milestones/>
 #' 
 #' Friendly, M. & Denis, D. (2005). The early origins and development of the
-#' scatterplot.  \emph{Journal of the History of the Behavioral Sciences}, 41,
+#' scatterplot.  *Journal of the History of the Behavioral Sciences*, 41,
 #' 103-130.
 #' 
 #' Friendly, M. & Sigal, M. & Harnanansingh, D. (2016). "The Milestones
 #' Project: A Database for the History of Data Visualization," In Kostelnick,
-#' C. & Kimball, M. (ed.), \emph{Visible Numbers: The History of Data
-#' Visualization}, Ashgate Press, Chapter 10.
+#' C. & Kimball, M. (ed.), *Visible Numbers: The History of Data
+#' Visualization*, Ashgate Press, Chapter 10.
 #' 
-#' Friendly, M. & Wainer, H. (2021). \emph{A History of Data Visualization and
-#' Graphic Communication}. Harvard University Press. Book:
+#' Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and
+#' Graphic Communication*. Harvard University Press. Book:
 #' https://www.hup.harvard.edu/books/9780674975231, Web site:
-#' \url{https://friendly.github.io/HistDataVis/}.
+#' <https://friendly.github.io/HistDataVis/>.
 #' @keywords package
 #' @keywords hplot aplot multivariate
 #' @importFrom grDevices rgb

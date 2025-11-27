@@ -17,42 +17,41 @@ When many points are associated with a single street address, they are
 "stacked" in a line away from the street so that they are more easily
 visualized. This is how they are displayed on John Snow's original map.  The
 dates of the deaths are not individually recorded in this data set.
-\describe{ 
-  \item{\code{case}}{Sequential case number, in some arbitrary, randomized order} 
-  \item{\code{x}}{x coordinate} 
-  \item{\code{y}}{y coordinate} 
+\describe{
+\item{\code{case}}{Sequential case number, in some arbitrary, randomized order}
+\item{\code{x}}{x coordinate}
+\item{\code{y}}{y coordinate}
 }
 
 \code{Snow.pumps}: A data frame with 13 observations on the following 4
 variables, giving the locations of water pumps within the boundaries of the
-map. 
- 
-\describe{ 
-  \item{\code{pump}}{pump number} 
-  \item{\code{label}}{pump label: \code{Briddle St} \code{Broad St} ... \code{Warwick}}
-  \item{\code{x}}{x coordinate} \item{\code{y}}{y coordinate} 
+map.
+
+\describe{
+\item{\code{pump}}{pump number}
+\item{\code{label}}{pump label: \verb{Briddle St} \verb{Broad St} ... \code{Warwick}}
+\item{\code{x}}{x coordinate} \item{\code{y}}{y coordinate}
 }
 
 \code{Snow.streets}: A data frame with 1241 observations on the following 4
 variables, giving coordinates used to draw the 528 street segment lines
 within the boundaries of the map.  The map is created by drawing lines
-connecting the \code{n} points in each street segment.  
+connecting the \code{n} points in each street segment.
 
 \describe{
-  \item{\code{street}}{street segment number: \code{1:528}}
-  \item{\code{n}}{number of points in this street line segment}
-  \item{\code{x}}{x coordinate} 
-  \item{\code{y}}{y coordinate} }
-
+\item{\code{street}}{street segment number: \code{1:528}}
+\item{\code{n}}{number of points in this street line segment}
+\item{\code{x}}{x coordinate}
+\item{\code{y}}{y coordinate} }
 
 \code{Snow.polygons}: A list of 13 data frames, giving the vertices of
 Thiessen (Voronoi) polygons containing each pump. Their boundaries define
 the area that is closest to each pump relative to all other pumps. They are
 mathematically defined by the perpendicular bisectors of the lines between
-all pumps. Each data frame contains: 
-\describe{ 
-  \item{\code{x}}{x coordinate} 
-  \item{\code{y}}{y coordinate} 
+all pumps. Each data frame contains:
+\describe{
+\item{\code{x}}{x coordinate}
+\item{\code{y}}{y coordinate}
 }
 
 \code{Snow.deaths2}: An alternative version of \code{Snow.deaths} correcting
@@ -67,8 +66,8 @@ these, the date of the attack is unknown for 45 cases.
 }
 \source{
 Tobler, W. (1994). Snow's Cholera Map,
-\code{http://www.ncgia.ucsb.edu/pubs/snow/snow.html}; data files were
-obtained from \code{http://ncgia.ucsb.edu/Publications/Software/cholera/},
+\verb{http://www.ncgia.ucsb.edu/pubs/snow/snow.html}; data files were
+obtained from \verb{http://ncgia.ucsb.edu/Publications/Software/cholera/},
 but these sites seem to be down.
 
 The data in these files were first digitized in 1992 by Rusty Dodson of the
@@ -96,7 +95,7 @@ together with various statistical annotations, is compelling because it
 points to the Broad Street pump as the source of the outbreak.
 }
 \details{
-The scale of the source map is approx. 1:2000.  The \code{(x, y)} coordinate
+The scale of the source map is approx. 1:2000.  The \verb{(x, y)} coordinate
 units are 100 meters, with an arbitrary origin.
 
 Of the data in the \code{Snow.dates} table, Snow says, \dQuote{The deaths in
@@ -172,11 +171,11 @@ Koch, T. (2000). \emph{Cartographies of Disease: Maps, Mapping,
 and Medicine}. ESRI Press.  ISBN: 9781589481206.
 
 Koch, T. (2004). The Map as Intent: Variations on the Theme of John Snow
-\emph{Cartographica}, 39 (4), 1-14.
+\emph{Cartographica}, \strong{39} (4), 1-14.
 
 Koch, T. and Denike, K. (2009). Crediting his critics' concerns: Remaking
 John Snow's map of Broad Street cholera, 1854. \emph{Social Science &
-Medicine} 69, 1246-1251.
+Medicine} \strong{69}, 1246-1251.
 
 Snow, J. (1885). \emph{On the Mode of Communication of Cholera}. London:
 John Churchill. Possibly at https://resource.nlm.nih.gov/0050707.

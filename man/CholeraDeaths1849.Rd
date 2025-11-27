@@ -6,13 +6,13 @@
 \title{Daily Deaths from Cholera and Diarrhaea in England, 1849}
 \format{
 A data frame with 730 observations on the following 6 variables.
-\describe{ 
-  \item{\code{month}}{a character vector}
-  \item{\code{cause_of_death}}{a factor with levels \code{Cholera} \code{Diarrhaea}} 
-  \item{\code{day_of_month}}{a character vector}
-  \item{\code{deaths}}{a numeric vector} 
-  \item{\code{date}}{a Date}
-  \item{\code{day_of_week}}{an ordered factor with levels \code{Mon} < \code{Tue} < \code{Wed} < \code{Thu} < \code{Fri} < \code{Sat} < \code{Sun}}
+\describe{
+\item{\code{month}}{a character vector}
+\item{\code{cause_of_death}}{a factor with levels \code{Cholera} \code{Diarrhaea}}
+\item{\code{day_of_month}}{a character vector}
+\item{\code{deaths}}{a numeric vector}
+\item{\code{date}}{a Date}
+\item{\code{day_of_week}}{an ordered factor with levels \code{Mon} < \code{Tue} < \code{Wed} < \code{Thu} < \code{Fri} < \code{Sat} < \code{Sun}}
 }
 }
 \source{
@@ -59,7 +59,7 @@ CholeraDeaths1849  |>
 }
 \references{
 Friendly, M. & Wainer, H. (2021).  \emph{A History of Data
-Visualization and Graphic Communication}, Harvard University Press. %
+Visualization and Graphic Communication}, Harvard University Press. \%
 \url{https://www.hup.harvard.edu/catalog.php?isbn=9780674975231}.
 
 Riley, J. (2023). "Cholera in Victorian England", blog post,

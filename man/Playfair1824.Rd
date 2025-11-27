@@ -6,17 +6,17 @@
 \title{Playfair's Linear Chronology}
 \format{
 A data frame with 55 observations on the following 9 variables.
- \describe{
-   \item{\code{Year}}{numeric, a numeric vector}
-   \item{\code{Stocks}}{Price of Stocks (Pounds per 3\% consol bond), a numeric vector}
-   \item{\code{Wheat}}{Price of Wheat (Shillings per quarter), a numeric vector}
-   \item{\code{Bread}}{Price of Bread (Farthings per quarter-loaf), a numeric vector}
-   \item{\code{Debt}}{National debt (Tens of millions of pounds), a numeric vector}
-   \item{\code{Exports}}{Exports (Millions of pounds), a numeric vector}
-   \item{\code{Imports}}{Imports (Millions of pounds), a numeric vector}
-   \item{\code{Expenditure}}{Expenditure (Millions of pounds), a numeric vector}
-   \item{\code{Revenue}}{Revenue (Millions of pounds), a numeric vector}
- }
+\describe{
+\item{\code{Year}}{numeric, a numeric vector}
+\item{\code{Stocks}}{Price of Stocks (Pounds per 3\% consol bond), a numeric vector}
+\item{\code{Wheat}}{Price of Wheat (Shillings per quarter), a numeric vector}
+\item{\code{Bread}}{Price of Bread (Farthings per quarter-loaf), a numeric vector}
+\item{\code{Debt}}{National debt (Tens of millions of pounds), a numeric vector}
+\item{\code{Exports}}{Exports (Millions of pounds), a numeric vector}
+\item{\code{Imports}}{Imports (Millions of pounds), a numeric vector}
+\item{\code{Expenditure}}{Expenditure (Millions of pounds), a numeric vector}
+\item{\code{Revenue}}{Revenue (Millions of pounds), a numeric vector}
+}
 }
 \source{
 Ivan Lokhov, Remaking a 200-year-old chart \url{https://www.datawrapper.de/blog/playfair-chronology-multiple-lines}
@@ -28,7 +28,7 @@ data("Playfair1824")
 Data from William Playfair's (1824) last graph, titled "Linear Chronology, Exhibiting the Revenues, Expenditure, Debt, Price of Stocks and Bread, from 1770 to 1824".  The chart tracks multiple economic variables, including national debt, exports, imports, revenue, expenditure, the price of stocks, and the price of bread over a 154 year time span.
 }
 \details{
-Playfair's 1824 chart is a pivotal work in the history of data visualization because it uses a 
+Playfair's 1824 chart is a pivotal work in the history of data visualization because it uses a
 multiple line graphs showing time series of economic indicators over time, with a fine appreciation of the complexity and directly labeled curves.
 The dataset, extracted from the image by Ivan Lokhov using WebPlotDigitizer,
 presents a challenge in trying re-create it, or do better using modern graphics methods.

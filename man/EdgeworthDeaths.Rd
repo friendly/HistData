@@ -6,10 +6,10 @@
 \title{Edgeworth's Data on Death Rates in British Counties}
 \format{
 A data frame with 42 observations on the following 3 variables.
-\describe{ 
-  \item{\code{County}}{a factor with levels \code{Berks} \code{Herts} \code{Bucks} \code{Oxford} \code{Bedford} \code{Cambridge}}
-  \item{\code{year}}{an ordered factor with levels \code{1876} < \code{1877} < \code{1878} < \code{1879} < \code{1880} < \code{1881} < \code{1882}}
-  \item{\code{Freq}}{a numeric vector, death rate per 1000 population} 
+\describe{
+\item{\code{County}}{a factor with levels \code{Berks} \code{Herts} \code{Bucks} \code{Oxford} \code{Bedford} \code{Cambridge}}
+\item{\code{year}}{an ordered factor with levels \code{1876} < \code{1877} < \code{1878} < \code{1879} < \code{1880} < \code{1881} < \code{1882}}
+\item{\code{Freq}}{a numeric vector, death rate per 1000 population}
 }
 }
 \source{

@@ -6,14 +6,14 @@
 \title{Polio Field Trials Data}
 \format{
 A data frame with 8 observations on the following 6 variables.
-\describe{ 
-  \item{\code{Experiment}}{a factor with levels \code{ObservedControl} \code{RandomizedControl}} 
-  \item{\code{Group}}{a factor with levels \code{Controls} \code{Grade2NotInoculated} \code{IncompleteVaccinations} \code{NotInoculated} \code{Placebo}
-\code{Vaccinated}} 
-  \item{\code{Population}}{the size of the population in each group in each experiment} 
-  \item{\code{Paralytic}}{the number of cases of paralytic polio observed in that group} 
-  \item{\code{NonParalytic}}{the number of cases of paralytic polio observed in that group}
-  \item{\code{FalseReports}}{the number of cases initially reported as polio, but later determined not to be polio in that group} 
+\describe{
+\item{\code{Experiment}}{a factor with levels \code{ObservedControl} \code{RandomizedControl}}
+\item{\code{Group}}{a factor with levels \code{Controls} \code{Grade2NotInoculated} \code{IncompleteVaccinations} \code{NotInoculated} \code{Placebo}
+\code{Vaccinated}}
+\item{\code{Population}}{the size of the population in each group in each experiment}
+\item{\code{Paralytic}}{the number of cases of paralytic polio observed in that group}
+\item{\code{NonParalytic}}{the number of cases of paralytic polio observed in that group}
+\item{\code{FalseReports}}{the number of cases initially reported as polio, but later determined not to be polio in that group}
 }
 }
 \source{
@@ -21,7 +21,7 @@ Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
 \url{https://www.math.uah.edu/stat/data/Polio.html}
 
 Thomas Francis, Robert Korn, et al. (1955). "An Evaluation of the 1954
-Poliomyelitis Vaccine Trials", \emph{American Journal of Public Health}, 45,
+Poliomyelitis Vaccine Trials", \emph{American Journal of Public Health}, \strong{45},
 (50 page supplement with a 63 page appendix).
 }
 \description{
@@ -68,7 +68,7 @@ data(PolioTrials)
 }
 \references{
 K. A.  Brownlee (1955). "Statistics of the 1954 Polio Vaccine
-Trials", \emph{Journal of the American Statistical Association}, 50,
+Trials", \emph{Journal of the American Statistical Association}, \strong{50},
 1005-1013.
 }
 \keyword{datasets}

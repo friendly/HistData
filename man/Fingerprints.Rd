@@ -7,11 +7,11 @@
 \format{
 A frequency data frame with 36 observations on the following 3
 variables, representing a 6 x 6 table giving the cross-classification of the
-fingers on 2000 right hands as a whorl, small loop or neither.  
+fingers on 2000 right hands as a whorl, small loop or neither.
 \describe{
-  \item{\code{Whorls}}{Number of whorls, an ordered factor with levels \code{0} < \code{1} < \code{2} < \dots < \code{5}}
-  \item{\code{Loops}}{Number of small loops, an ordered factor with levels \code{0} < \code{1} < \code{2} < \code{3} < \code{4} < \code{5}}
-  \item{\code{count}}{Number of hands} 
+\item{\code{Whorls}}{Number of whorls, an ordered factor with levels \code{0} < \code{1} < \code{2} < \dots < \code{5}}
+\item{\code{Loops}}{Number of small loops, an ordered factor with levels \code{0} < \code{1} < \code{2} < \code{3} < \code{4} < \code{5}}
+\item{\code{count}}{Number of hands}
 }
 }
 \source{

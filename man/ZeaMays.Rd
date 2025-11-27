@@ -6,12 +6,12 @@
 \title{Darwin's Heights of Cross- and Self-fertilized Zea May Pairs}
 \format{
 A data frame with 15 observations on the following 4 variables.
-\describe{ 
-  \item{\code{pair}}{pair number, a numeric vector}
-  \item{\code{pot}}{pot, a factor with levels \code{1} \code{2} \code{3} \code{4}} 
-  \item{\code{cross}}{height of cross fertilized plant, a numeric vector} 
-  \item{\code{self}}{height of self fertilized plant, a numeric vector} 
-  \item{\code{diff}}{\code{cross - self} for each pair} 
+\describe{
+\item{\code{pair}}{pair number, a numeric vector}
+\item{\code{pot}}{pot, a factor with levels \code{1} \code{2} \code{3} \code{4}}
+\item{\code{cross}}{height of cross fertilized plant, a numeric vector}
+\item{\code{self}}{height of self fertilized plant, a numeric vector}
+\item{\code{diff}}{\code{cross - self} for each pair}
 }
 }
 \source{
@@ -20,7 +20,7 @@ in the Vegetable Kingdom}, 2nd Ed. London: John Murray.
 
 Andrews, D. and Herzberg, A. (1985) \emph{Data: a collection of problems
 from many fields for the student and research worker}. New York: Springer.
-Data retrieved from: \code{https://www.stat.cmu.edu/StatDat/}
+Data retrieved from: \verb{https://www.stat.cmu.edu/StatDat/}
 }
 \description{
 Darwin (1876) studied the growth of pairs of zea may (aka corn) seedlings,

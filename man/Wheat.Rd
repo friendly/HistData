@@ -7,20 +7,20 @@
 \title{Playfair's Data on Wages and the Price of Wheat}
 \format{
 \code{Wheat}  A data frame with 53 observations on the following 3
-variables.  
-\describe{ 
-  \item{\code{Year}}{Year, in intervals of 5 from 1565 to 1821: a numeric vector} 
-  \item{\code{Wheat}}{Price of Wheat (Shillings/Quarter bushel): a numeric vector} 
-  \item{\code{Wages}}{Weekly wage (Shillings): a numeric vector} 
+variables.
+\describe{
+\item{\code{Year}}{Year, in intervals of 5 from 1565 to 1821: a numeric vector}
+\item{\code{Wheat}}{Price of Wheat (Shillings/Quarter bushel): a numeric vector}
+\item{\code{Wages}}{Weekly wage (Shillings): a numeric vector}
 }
 
 \code{Wheat.monarchs} A data frame with 12 observations on the following 4
-variables.  
-\describe{ 
-  \item{\code{name}}{Reigning monarch, a factor with levels \code{Anne} \code{Charles I} \code{Charles II} \code{Cromwell} \code{Elizabeth} \code{George I} \code{George II} \code{George III} \code{George IV} \code{James I} \code{James II} \code{W&M}}
-  \item{\code{start}}{Starting year of reign, a numeric vector}
-  \item{\code{end}}{Starting year of reign, a numeric vector}
-  \item{\code{commonwealth}}{A binary variable indicating the period of the Commonwealth under Cromwell} 
+variables.
+\describe{
+\item{\code{name}}{Reigning monarch, a factor with levels \code{Anne} \verb{Charles I} \verb{Charles II} \code{Cromwell} \code{Elizabeth} \verb{George I} \verb{George II} \verb{George III} \verb{George IV} \verb{James I} \verb{James II} \code{W&M}}
+\item{\code{start}}{Starting year of reign, a numeric vector}
+\item{\code{end}}{Starting year of reign, a numeric vector}
+\item{\code{commonwealth}}{A binary variable indicating the period of the Commonwealth under Cromwell}
 }
 }
 \source{
@@ -46,8 +46,6 @@ In this version, information on the reigns of British monarchs is provided
 in a separate data.frame, \code{Wheat.monarch}.
 }
 \examples{
-
-data(Wheat)
 
 data(Wheat)
 
@@ -126,6 +124,6 @@ with(Wheat.monarchs, {
 \references{
 Friendly, M. & Denis, D. (2005). The early origins and
 development of the scatterplot \emph{Journal of the History of the
-Behavioral Sciences}, 41, 103-130.
+Behavioral Sciences}, \strong{41}, 103-130.
 }
 \keyword{datasets}

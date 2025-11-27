@@ -7,17 +7,17 @@
 \title{Chest measurements of Scottish Militiamen}
 \format{
 A data frame with 16 observations on the following 2 variables.
-Total count=5738.  
-\describe{ 
-  \item{\code{chest}}{Chest size (in inches)}
-  \item{\code{count}}{Number of soldiers with this chest size} 
+Total count=5738.
+\describe{
+\item{\code{chest}}{Chest size (in inches)}
+\item{\code{count}}{Number of soldiers with this chest size}
 }
 }
 \source{
 Velleman, P. F. and Hoaglin, D. C. (1981).  \emph{Applications,
 Basics, and Computing of Exploratory Data Analysis}. Belmont. CA: Wadsworth.
 Retrieved from Statlib:
-\code{https://www.stat.cmu.edu/StatDat/Datafiles/MilitiamenChests.html}
+\verb{https://www.stat.cmu.edu/StatDat/Datafiles/MilitiamenChests.html}
 }
 \description{
 Quetelet's data on chest measurements of 5738 Scottish Militiamen. Quetelet

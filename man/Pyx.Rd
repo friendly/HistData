@@ -8,13 +8,12 @@
 A frequency data frame with 72 observations on the following 4
 variables giving the distribution of 10,000 sovereigns, classified according
 to the \code{Bags} in which they were collected and the \code{Deviation}
-from the standard weight.  
-\describe{ 
-  \item{\code{Bags}}{an ordered factor with levels \code{1 and 2} < \code{3} < \code{4} < \code{5} < \code{6} < \code{7} < \code{8} < \code{9} < \code{10}} 
-  \item{\code{Group}}{an ordered factor with levels \code{below std} < \code{near std} < \code{above std}}
-  \item{\code{Deviation}}{an ordered factor with levels \code{Below -R} < \code{(-R to -.2)} < \code{(-.2 to -.l)} < \code{(-.1 to 0)} < \code{(0 to
-.l)} < \code{(.1 to .2)} < \code{(.2 to R)} < \code{Above R}}
-  \item{\code{count}}{number of sovereigns} 
+from the standard weight.
+\describe{
+\item{\code{Bags}}{an ordered factor with levels \verb{1 and 2} < \code{3} < \code{4} < \code{5} < \code{6} < \code{7} < \code{8} < \code{9} < \code{10}}
+\item{\code{Group}}{an ordered factor with levels \verb{below std} < \verb{near std} < \verb{above std}}
+\item{\code{Deviation}}{an ordered factor with levels \code{Below -R} < \verb{(-R to -.2)} < \verb{(-.2 to -.l)} < \verb{(-.1 to 0)} < \verb{(0 to .l)} < \verb{(.1 to .2)} < \verb{(.2 to R)} < \verb{Above R}}
+\item{\code{count}}{number of sovereigns}
 }
 }
 \source{
@@ -78,7 +77,7 @@ Inquire into the Constitution, Management and Expense of the Royal Mint." In
 Vol 28 of \emph{House Documents for 1849}.
 
 Stigler, S. M. (1997). Eight Centuries of Sampling Inspection: The Trial of
-the Pyx \emph{Journal of the American Statistical Association}, 72(359),
+the Pyx \emph{Journal of the American Statistical Association}, \strong{72}(359),
 493-500
 }
 \keyword{datasets}

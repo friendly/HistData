@@ -6,12 +6,12 @@
 \title{W. Stanley Jevons' data on Numerical Discrimination}
 \format{
 A frequency data frame with 50 observations on the following 4
-variables.  
-\describe{ 
-  \item{\code{actual}}{Actual number: a numeric vector} 
-  \item{\code{estimated}}{Estimated number: a numeric vector}
-  \item{\code{frequency}}{Frequency of this combination of (actual, estimated): a numeric vector}
-  \item{\code{error}}{\code{actual}-\code{estimated}: a numeric vector} 
+variables.
+\describe{
+\item{\code{actual}}{Actual number: a numeric vector}
+\item{\code{estimated}}{Estimated number: a numeric vector}
+\item{\code{frequency}}{Frequency of this combination of (actual, estimated): a numeric vector}
+\item{\code{error}}{\code{actual}-\code{estimated}: a numeric vector}
 }
 }
 \source{

@@ -6,11 +6,11 @@
 \title{Halley's Life Table}
 \format{
 A data frame with 84 observations on the following 4 variables.
-\describe{ 
-  \item{\code{age}}{a numeric vector} 
-  \item{\code{deaths}}{number of deaths, \eqn{D_k}, among people of age k, a numeric vector}
-  \item{\code{number}}{size of the population, \eqn{P_k} surviving until this age, a numeric vector} 
-  \item{\code{ratio}}{the ratio \eqn{P_{k+1}/P_k}, the conditional probability of surviving until age k + 1 given that one had already reached age k, a numeric vector} 
+\describe{
+\item{\code{age}}{a numeric vector}
+\item{\code{deaths}}{number of deaths, \eqn{D_k}, among people of age k, a numeric vector}
+\item{\code{number}}{size of the population, \eqn{P_k} surviving until this age, a numeric vector}
+\item{\code{ratio}}{the ratio \eqn{P_{k+1}/P_k}, the conditional probability of surviving until age k + 1 given that one had already reached age k, a numeric vector}
 }
 }
 \source{
