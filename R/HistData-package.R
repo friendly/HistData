@@ -72,8 +72,7 @@
 #' }
 #' 
 #' @name HistData-package
-#' @aliases HistData-package HistData
-#' @docType package
+#' @aliases HistData-package HistData _PACKAGE
 #' @author Michael Friendly
 #' 
 #' Maintainer: Michael Friendly 
@@ -137,6 +136,10 @@
 #' https://www.hup.harvard.edu/books/9780674975231, Web site:
 #' \url{https://friendly.github.io/HistDataVis/}.
 #' @keywords package
+#' @keywords hplot aplot multivariate
+#' @importFrom grDevices rgb
+#' @importFrom graphics lines plot points polygon text
+#' @importFrom utils data
 #' @examples
 #' 
 #' # see examples for the separate data sets, e.g., with ?Dataset or example(Dataset)

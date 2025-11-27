@@ -6,37 +6,37 @@
 
 #' Draw John Snow's Map of Cholera in London
 #' 
-#' The main function \code{SnowMap} draws versions of John Snow's map of
+#' The main function \code{SnowMap()} draws versions of John Snow's map of
 #' cholera deaths in the South London area surrounding the Borad Street pump.
 #' during the 1854 outbreak.
 #' 
-#' It is a wrapper for the various subfunctions also listed here:\cr
-#' \code{Splot} sets up the basic plot\cr \code{Sstreets} draws the streets\cr
-#' \code{Sdeaths} plots the deaths\cr \code{Sdeaths} plots the pump
-#' locations\cr \code{Sscale} draws the scale\cr \code{Spolygons} draws the
-#' boundaries of the Voronoi polygons separating the pumps\cr \code{Sdensity}
-#' draws and fills contours of the 2D density of deaths
+#' @details
+#' \code{SnowMap()} is a wrapper for the various subfunctions also listed here:
+#' \itemize{
+#'   \item \code{Splot} sets up the basic plot 
+#'   \item \code{Sstreets} draws the streets
+#'   \item \code{Sdeaths} plots the deaths 
+#'   \item \code{Sdeaths} plots the pump locations 
+#'   \item \code{Sscale} draws the scale 
+#'   \item \code{Spolygons} draws the boundaries of the Voronoi polygons separating the pumps 
+#'   \item \code{Sdensity} draws and fills contours of the 2D density of deaths
+#' }
 #' 
 #' 
 #' @aliases SnowMap Splot Sdeaths Spumps Sstreets Sscale Spolygons Sdensity
-#' @param xlim Limit for the horizontal axis.  Specify ranges smaller than the
-#' defaults to zoom the plot.
+#' @param xlim Limit for the horizontal axis.  Specify ranges smaller than the defaults to zoom the plot.
 #' @param ylim Limit for the vertical axis.
 #' @param axis.labels Logical. Show axis tick mark labels?
 #' @param main Plot title
 #' @param scale Logical; draw a scale (in meters) on the plot
-#' @param polygons Logical; Use \code{Spolygons} to draw the
-#' \code{Snow.polygons} on the plot?
-#' @param density Logical; Use \code{Sdensity} to draw the 2D bivariate density
-#' of deaths on the plot?
+#' @param polygons Logical; Use \code{Spolygons} to draw the \code{Snow.polygons} on the plot?
+#' @param density Logical; Use \code{Sdensity} to draw the 2D bivariate density of deaths on the plot?
 #' @param streets.args List of arguments passed to \code{Sstreets}
 #' @param deaths.args List of arguments passed to \code{Sdeaths}
 #' @param pumps.args List of arguments passed to \code{Spumps}
 #' @param scale.args List of arguments passed to \code{Sscale}
-#' @param polygons.args List of arguments passed to \code{Spolygons}. Note that
-#' \code{col} here now refers to the fill colors, passed to
-#' \code{\link[graphics]{polygon}}. The \code{col} argument here can be a
-#' vector of up to 13 colors, one for each pump region.
+#' @param polygons.args List of arguments passed to \code{Spolygons}. Note that \code{col} here now refers to the fill colors, passed to
+#'        \code{\link[graphics]{polygon}}. The \code{col} argument here can be a vector of up to 13 colors, one for each pump region.
 #' @param density.args List of arguments passed to \code{Sdensity}
 #' @param xlab Label for horizontal axis
 #' @param ylab Label for vertical axis
@@ -49,12 +49,9 @@
 #' @param xs x location of the scale used by \code{Sscale}
 #' @param ys y location of the scale used by \code{Sscale}
 #' @param lty Line type used by by various functions
-#' @param bandwidth Bandwidth used by \code{\link[KernSmooth]{bkde2D}} in
-#' \code{Sdensity}
-#' @param col1 Lower level of color range used by
-#' \code{\link[grDevices]{colorRampPalette}} in \code{Sdensity}
-#' @param col2 Upper level of color range used by
-#' \code{\link[grDevices]{colorRampPalette}} in \code{Sdensity}
+#' @param bandwidth Bandwidth used by \code{\link[KernSmooth]{bkde2D}} in \code{Sdensity}
+#' @param col1 Lower level of color range used by \code{\link[grDevices]{colorRampPalette}} in \code{Sdensity}
+#' @param col2 Upper level of color range used by \code{\link[grDevices]{colorRampPalette}} in \code{Sdensity}
 #' @return None
 #' @author Michael Friendly
 #' @seealso \code{\link{Snow}} for description of the data sets
@@ -82,7 +79,7 @@
 #' SnowMap(density=TRUE)
 #' 
 #' 
-#' @export SnowMap
+#' @export 
 SnowMap <- function(xlim=c(3,20), ylim=c(3,20), axis.labels=FALSE, 
                     main="Snow's Cholera Map of London",
                     scale=TRUE, polygons=FALSE, density=FALSE,

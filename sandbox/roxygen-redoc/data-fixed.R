@@ -2109,8 +2109,8 @@ NULL
 #' \describe{ 
 #' \item{\code{long}}{Longitude}
 #' \item{\code{temp}}{Temperature} 
-#' \item{\code{days}}{Number of days on the retreat march} 
-#' \item{\code{date}}{a factor with levels \code{Dec01} \code{Dec06} \code{Dec07} \code{Nov09} \code{Nov14} \code{Nov28} \code{Oct18} \code{Oct24}} 
+#' \item{\code{days}}{Number of days on the retreat march} \item{\code{date}}{a factor with levels \code{Dec01}
+#' \code{Dec06} \code{Dec07} \code{Nov09} \code{Nov14} \code{Nov28} \code{Oct18} \code{Oct24}} 
 #' }
 #' @references Friendly, M. (2002).  Visions and Re-visions of Charles Joseph
 #' Minard, \emph{Journal of Educational and Behavioral Statistics}, 27, No. 1,
@@ -2213,7 +2213,7 @@ NULL
 #' @docType data
 #' @format A data frame with 24 observations on the following 10 variables.
 #' \describe{ 
-#'    \item{\code{Date}}{a Date, composed as \code{as.Date(paste(Year, Month, 1, sep='-'), "\%Y-\%b-\%d")}}
+#' \item{\code{Date}}{a Date, composed as \code{as.Date(paste(Year, Month, 1, sep='-'), "%Y-%b-%d")}} 
 #' \item{\code{Month}}{Month of the Crimean War, an ordered factor} 
 #' \item{\code{Year}}{Year of the Crimean War}
 #' \item{\code{Army}}{Estimated average monthly strength of the British army}
@@ -3189,7 +3189,7 @@ NULL
 #' 
 #' 
 #' ## re-do this the sp way... [thx: Stephane Dray]
-#' \dontrun{
+#' %\dontrun{
 #' library(sp)
 #' 
 #' # streets
@@ -3212,7 +3212,6 @@ NULL
 #'      col='blue', pch=17, cex=1.5)
 #' text(Snow.pumps[,c("x","y")], 
 #'      labels=Snow.pumps$label, pos=1, cex=0.8)
-#' }
 #' 
 NULL
 

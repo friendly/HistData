@@ -1,0 +1,7 @@
+# This package exports only SnowMap (it uses lazydata)
+export(SnowMap)
+export(Splot,Sdeaths,Spumps,Sstreets,Sscale,Spolygons,Sdensity)
+
+importFrom("grDevices", "rgb")
+importFrom("graphics", "lines", "plot", "points", "polygon", "text")
+importFrom("utils", "data")
