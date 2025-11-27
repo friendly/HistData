@@ -682,7 +682,7 @@ NULL
 #' Isomers. II: Hyoscines," *Journal of Physiology*, 32, 501-510.
 #' 
 #' % Senn, Stephen, Data from Cushny and Peebles,
-#' <http://www.senns.uk/Data/Cushny.xls>
+#' <https://www.senns.uk/Data/Cushny.xls>
 #' @keywords datasets
 #' @examples
 #' 
