@@ -145,10 +145,6 @@ SnowMap(density=TRUE)
 Snow, J. (1885). \emph{On the Mode of Communication of Cholera}.
 London: John Churchill
 
-\%John Mackenzie, "GIS Analyses of Dr. Snow's Map", \%
-\% \url{http://www1.udel.edu/johnmack/frec480/cholera/cholera2.html}
-\% some related visualizations using ArcGIS.
-
 Thomas Coleman, "John Snow Research project",
 \verb{https://www.hilerun.org/econ/papers/snow/index.html} gives extensive
 analyses of Snow's data with R notebooks on Github.

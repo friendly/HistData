@@ -228,6 +228,5 @@ Data Visualization*, Ashgate Press, Chapter 10.
 [Preprint](https://www.datavis.ca/papers/MilestonesProject.pdf)
 
 Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and
-Graphic Communication*,
-<https://www.hup.harvard.edu/books/9780674975231>, Harvard University
-Press. Companion [web site](https://friendly.github.io/HistDataVis/)
+Graphic Communication*, Harvard University Press, ISBN 9780674975231.
+Companion [web site](https://friendly.github.io/HistDataVis/)

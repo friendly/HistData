@@ -161,7 +161,6 @@ Friendly, M. & Sigal, M. & Harnanansingh, D. (2016).
 "The Milestones Project: A Database for the History of Data Visualization,"
 In Kostelnick, C. & Kimball, M. (ed.), *Visible Numbers: The History of Data Visualization*, Ashgate Press, Chapter 10. [Preprint](https://www.datavis.ca/papers/MilestonesProject.pdf)
 
-Friendly, M. & Wainer, H. (2021). _A History of Data Visualization and Graphic Communication_,
-https://www.hup.harvard.edu/books/9780674975231,
-Harvard University Press. Companion [web site](https://friendly.github.io/HistDataVis/)
+Friendly, M. & Wainer, H. (2021). _A History of Data Visualization and Graphic Communication_, Harvard University Press,
+ISBN 9780674975231. Companion [web site](https://friendly.github.io/HistDataVis/)
 
