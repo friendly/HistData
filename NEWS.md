@@ -7,6 +7,7 @@ This is a major release of the package, reorganizing and reformatting the docume
 * Some contributors made authors
 * Extended package description
 * Ran `roxygen2md(scope="simple")` to use markdown in docs
+* Fixed broken URLs
 
 ## Version 0.9.4
 
