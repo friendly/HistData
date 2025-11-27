@@ -66,10 +66,11 @@ datasets](https://vincentarelbundock.github.io/Rdatasets/articles/data.html).
 
 There is another R aspect that should be noted here: A great deal of
 “data sciency” work was involved in constructing this package, alas (for
-teaching) not captured in the resulting CRAN-friendly package.
+teaching what’s involved in this) not captured in the resulting
+CRAN-friendly package.
 
 - In some cases, data had to be **extracted** from historical documents,
-  using a variety of techniques (web scraping, OCR of PDS files followed
+  using a variety of techniques (web scraping, OCR of PDF files followed
   by conversion to a data set), each problem with its own toolbox, in R
   or outside. In many cases, transcription errors had to be corrected
   with code or manually;
@@ -87,6 +88,8 @@ teaching) not captured in the resulting CRAN-friendly package.
 - **documentation**: The thankless task? No – considerable effort was
   made to give detailed descriptions, notes on methods, executable
   examples, references to original sources and analyses, …
+- **package maintenance**: Originally, I wrote most of the documentation
+  using `utils::prompt()` …
 
 ## Installation
 
