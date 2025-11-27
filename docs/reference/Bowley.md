@@ -8,12 +8,6 @@ supplemented by overlaid line graphs of 3-, 5- and 10-year moving
 averages. His goal was to show that while the initial series showed wide
 variability, moving averages made the series progressively smoother.
 
-## Usage
-
-``` r
-data(Bowley)
-```
-
 ## Format
 
 A data frame with 45 observations on the following 2 variables.
@@ -49,9 +43,9 @@ running <- function(x, width = 5){
   as.vector(stats::filter(x, rep(1 / width, width), sides = 2))
   }
 
-mav3<-running(Bowley$Value, width=3)
-mav5<-running(Bowley$Value, width=5)
-mav9<-running(Bowley$Value, width=9)
+mav3 <- running(Bowley$Value, width=3)
+mav5 <- running(Bowley$Value, width=5)
+mav9 <- running(Bowley$Value, width=9)
 lines(Bowley$Year, mav3, col='blue', lty=2)
 lines(Bowley$Year, mav5, col='green3', lty=3)
 lines(Bowley$Year, mav9, col='brown', lty=4)
@@ -66,4 +60,5 @@ library(ggplot2)
 ggplot(aes(x=Year, y=Value), data=Bowley) +
   geom_point() +
   geom_smooth(method="loess", formula=y~x)
+
 ```

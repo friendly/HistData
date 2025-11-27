@@ -1024,7 +1024,6 @@ NULL
 #' Wachsmuth, A. W., Wilkinson L., Dallal G. E. (2003).  Galton's bend: A
 #' previously undiscovered nonlinearity in Galton's family stature regression
 #' data.  *The American Statistician*, 57, 190-192.
-#' %<http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf>
 #' \doi{10.1198/0003130031874}
 #' 
 #' @source Galton, F. (1886). Regression Towards Mediocrity in Hereditary

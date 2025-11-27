@@ -71,7 +71,7 @@ trying re-create it, or do better using modern graphics methods.
 
 Playfair, W. (1824). *Chronology of Public Events and Remarkable
 Occurrences within the Last Fifty Years; or from 1774 to 1824*,
-published in London.
+published by W. Lewis, Finch Lane, London.
 
 The original chart can be seen on Wikimedia at: <https://bit.ly/4ihX92a>
 

@@ -218,7 +218,7 @@ Press. Companion [web site](https://friendly.github.io/HistDataVis/)
 ## All functions
 
 - [`Arbuthnot`](https://friendly.github.io/HistData/reference/Arbuthnot.md)
-  : Arbuthnot's data on male and female birth ratios
+  : Arbuthnot's Data on Male and Female Birth Ratios
 
 - [`Armada`](https://friendly.github.io/HistData/reference/Armada.md) :
   La Felicisima Armada
@@ -233,6 +233,7 @@ Press. Companion [web site](https://friendly.github.io/HistDataVis/)
   : Cavendish's Determinations of the Density of the Earth
 
 - [`ChestSizes`](https://friendly.github.io/HistData/reference/ChestSizes.md)
+  [`ChestStigler`](https://friendly.github.io/HistData/reference/ChestSizes.md)
   : Chest measurements of Scottish Militiamen
 
 - [`Cholera`](https://friendly.github.io/HistData/reference/Cholera.md)
@@ -271,12 +272,14 @@ Press. Companion [web site](https://friendly.github.io/HistDataVis/)
 
 - [`HistData-package`](https://friendly.github.io/HistData/reference/HistData-package.md)
   [`HistData`](https://friendly.github.io/HistData/reference/HistData-package.md)
+  [`_PACKAGE`](https://friendly.github.io/HistData/reference/HistData-package.md)
   : Data sets from the History of Statistics and Data Visualization
 
 - [`Jevons`](https://friendly.github.io/HistData/reference/Jevons.md)
-  : W. Stanley Jevons' data on numerical discrimination
+  : W. Stanley Jevons' data on Numerical Discrimination
 
-- [`Langren1644`](https://friendly.github.io/HistData/reference/Langren.md)
+- [`Langren`](https://friendly.github.io/HistData/reference/Langren.md)
+  [`Langren1644`](https://friendly.github.io/HistData/reference/Langren.md)
   [`Langren.all`](https://friendly.github.io/HistData/reference/Langren.md)
   : van Langren's Data on Longitude Distance between Toledo and Rome
 
@@ -292,21 +295,21 @@ Press. Companion [web site](https://friendly.github.io/HistDataVis/)
   [`MichelsonSets`](https://friendly.github.io/HistData/reference/Michelson.md)
   : Michelson's Determinations of the Velocity of Light
 
-- [`Minard.troops`](https://friendly.github.io/HistData/reference/Minard.md)
+- [`Minard`](https://friendly.github.io/HistData/reference/Minard.md)
   [`Minard.cities`](https://friendly.github.io/HistData/reference/Minard.md)
+  [`Minard.troops`](https://friendly.github.io/HistData/reference/Minard.md)
   [`Minard.temp`](https://friendly.github.io/HistData/reference/Minard.md)
   : Data from Minard's famous graphic map of Napoleon's march on Moscow
 
 - [`Nightingale`](https://friendly.github.io/HistData/reference/Nightingale.md)
-  : Florence Nightingale's data on deaths from various causes in the
-  Crimean War
+  : Florence Nightingale's data on deaths in the Crimean War
 
 - [`OldMaps`](https://friendly.github.io/HistData/reference/OldMaps.md)
   : Latitudes and Longitudes of 39 Points in 11 Old Maps
 
 - [`PearsonLee`](https://friendly.github.io/HistData/reference/PearsonLee.md)
-  : Pearson and Lee's data on the heights of parents and children
-  classified by gender
+  : Pearson and Lee's data on the Heights of Parents and Children by
+  Gender
 
 - [`Playfair1824`](https://friendly.github.io/HistData/reference/Playfair1824.md)
   : Playfair's Linear Chronology
@@ -330,7 +333,9 @@ Press. Companion [web site](https://friendly.github.io/HistDataVis/)
 - [`Saturn`](https://friendly.github.io/HistData/reference/Saturn.md) :
   Laplace's Saturn data.
 
-- [`Snow.deaths`](https://friendly.github.io/HistData/reference/Snow.md)
+- [`Snow`](https://friendly.github.io/HistData/reference/Snow.md)
+  [`Snow.deaths`](https://friendly.github.io/HistData/reference/Snow.md)
+  [`Snow.deaths2`](https://friendly.github.io/HistData/reference/Snow.md)
   [`Snow.pumps`](https://friendly.github.io/HistData/reference/Snow.md)
   [`Snow.streets`](https://friendly.github.io/HistData/reference/Snow.md)
   [`Snow.polygons`](https://friendly.github.io/HistData/reference/Snow.md)

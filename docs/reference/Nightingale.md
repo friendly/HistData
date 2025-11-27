@@ -1,4 +1,4 @@
-# Florence Nightingale's data on deaths from various causes in the Crimean War
+# Florence Nightingale's data on deaths in the Crimean War
 
 In the history of data visualization, Florence Nightingale is best
 remembered for her role as a social activist and her view that
@@ -19,12 +19,6 @@ the death rate was higher in the first year of the war, before a
 Sanitary Commissioners arrived in March 1855 to improve hygiene in the
 camps and hospitals.
 
-## Usage
-
-``` r
-data(Nightingale)
-```
-
 ## Format
 
 A data frame with 24 observations on the following 10 variables.
@@ -32,7 +26,7 @@ A data frame with 24 observations on the following 10 variables.
 - `Date`:
 
   a Date, composed as
-  `as.Date(paste(Year, Month, 1, sep='-'), "%Y-%b-%d")`
+  `as.Date(paste(Year, Month, 1, sep='-'), "\%Y-\%b-\%d")`
 
 - `Month`:
 
@@ -71,6 +65,13 @@ A data frame with 24 observations on the following 10 variables.
 
   Annual rate of deaths from other causes, per 1000
 
+## Source
+
+The data were obtained from:
+
+Pearson, M. and Short, I. (2007). Understanding Uncertainty: Mathematics
+of the Coxcomb. <http://understandinguncertainty.org/node/214>.
+
 ## Details
 
 For a given cause of death, `D`, annual rates per 1000 are calculated as
@@ -78,13 +79,6 @@ For a given cause of death, `D`, annual rates per 1000 are calculated as
 
 The two panels of Nightingale's Coxcomb correspond to dates before and
 after March 1855
-
-## Source
-
-The data were obtained from:
-
-Pearson, M. and Short, I. (2007). Understanding Uncertainty: Mathematics
-of the Coxcomb. <http://understandinguncertainty.org/node/214>.
 
 ## References
 
@@ -216,5 +210,6 @@ with(Nightingale, {
 axis.Date(1, at=seq(as.Date("1854/4/1"), as.Date("1856/3/1"), "3 months"), format="%b %Y")
 legend(as.Date("1854/8/20"), 60, c("Preventable disease", "Wounds and injuries", "Other"),
   col=colors, fill=colors, title="Cause", cex=1.25)
+
 
 ```

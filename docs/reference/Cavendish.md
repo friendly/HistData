@@ -11,12 +11,6 @@ estimators with real, historical data. For these data sets, he found
 that trimmed means performed as well or better than more elaborate
 robust estimators.
 
-## Usage
-
-``` r
-data(Cavendish)
-```
-
 ## Format
 
 A data frame with 29 observations on the following 3 variables.
@@ -33,6 +27,14 @@ A data frame with 29 observations on the following 3 variables.
 
   same as `density`, omitting the the first 6 observations
 
+## Source
+
+Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
+<https://www.math.uah.edu/stat/data/Cavendish.html>
+
+Stephen M. Stigler (1977), "Do robust estimators work with *real*
+data?", *Annals of Statistics*, 5, 1055-1098
+
 ## Details
 
 Density values (D) of the earth are given as relative to that of water.
@@ -48,14 +50,6 @@ replaces the first 6 values with `NA`.
 
 The modern "true" value of D is taken as 5.517. The gravitational
 constant can be expressed as \\G = 6.674 \* 10^-11 m^3/kg/s^2\\.
-
-## Source
-
-Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-<https://www.math.uah.edu/stat/data/Cavendish.html>
-
-Stephen M. Stigler (1977), "Do robust estimators work with *real*
-data?", *Annals of Statistics*, 5, 1055-1098
 
 ## References
 
@@ -94,5 +88,6 @@ G <- function(D, g=9.806, R=6371) 3*g / (4 * pi * R * D)
  
 boxplot(10^5 * G(Cavendish), ylab='~ Gravitational constant (G)', xlab='Data set')
 abline(h=10^5 * G(5.517), col="red", lwd=2)
+
 
 ```

@@ -25,13 +25,6 @@ widely, ranging from 3-9, and this was not taken into account in their
 analyses. To allow weighted analyses, the number of observations for
 each mean is contained in the data frame `CushnyPeeblesN`.
 
-## Usage
-
-``` r
-data(CushnyPeebles)
-data(CushnyPeeblesN)
-```
-
 ## Format
 
 `CushnyPeebles`: A data frame with 11 observations on the following 4
@@ -72,15 +65,18 @@ variables.
 
   a numeric vector: number of observations
 
-## Details
-
-The last patient (11) has no `Control` observations, and so is often
-excluded in analyses or other versions of this data set.
-
 ## Source
 
 Cushny, A. R., and Peebles, A. R. (1905), "The Action of Optical
 Isomers. II: Hyoscines," *Journal of Physiology*, 32, 501-510.
+
+% Senn, Stephen, Data from Cushny and Peebles,
+<http://www.senns.demon.co.uk/Data/Cushny.xls>
+
+## Details
+
+The last patient (11) has no `Control` observations, and so is often
+excluded in analyses or other versions of this data set.
 
 ## References
 
@@ -211,4 +207,5 @@ str(CPlong)
 #>  $ treatment: Factor w/ 4 levels "Control","L_hyoscyamine",..: 1 1 1 1 1 1 1 1 1 1 ...
 #>  $ sleep    : num  0.6 3 4.7 5.5 6.2 3.2 2.5 2.8 1.1 2.9 ...
 #>  $ n        : int  9 9 8 9 9 8 8 7 8 9 ...
+
 ```

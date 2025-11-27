@@ -13,12 +13,6 @@ hoped: it was all destroyed in one week's fighting.
 de Falguerolles (2008) reports the table given here as `Armada` as an
 early example of data to which multivariate methods might be applied.
 
-## Usage
-
-``` r
-data("Armada")
-```
-
 ## Format
 
 A data frame with 10 observations on the following 11 variables.
@@ -69,6 +63,12 @@ A data frame with 10 observations on the following 11 variables.
 
   a numeric vector
 
+## Source
+
+de Falguerolles, A. (2008). L'analyse des donnees; before and around.
+*Journal Electronique d'Histoire des Probabilites et de la Statistique*,
+**4** (2), Link: https://www.jehps.net/Decembre2008/Falguerolles.pdf
+
 ## Details
 
 Note that `men = soldiers + sailors`, so this variable is redundant in a
@@ -83,12 +83,6 @@ with this table.
 The fleet of Portugal, under the command of Alonso Pérez de Guzmán, 7th
 Duke of Medina Sidonia was largely in control of the attempted invasion
 of England.
-
-## Source
-
-de Falguerolles, A. (2008). L'analyse des donnees; before and around.
-*Journal Electronique d'Histoire des Probabilites et de la Statistique*,
-**4** (2), Link: https://www.jehps.net/Decembre2008/Falguerolles.pdf
 
 ## References
 
@@ -125,4 +119,5 @@ plot(armada.pca, type="lines", pch=16, cex=2)
 biplot(armada.pca, xlabs = fleet,
   xlab = "PC1 (Fleet size)",
   ylab = "PC2 (Fleet configuration)")
+
 ```

@@ -13,12 +13,6 @@ tables," such as the triangular table analyzed by Waite. The general
 formulation of such tests for association in restricted tables is now
 referred to as models for quasi-independence.
 
-## Usage
-
-``` r
-data(Fingerprints)
-```
-
 ## Format
 
 A frequency data frame with 36 observations on the following 3
@@ -28,7 +22,7 @@ the fingers on 2000 right hands as a whorl, small loop or neither.
 - `Whorls`:
 
   Number of whorls, an ordered factor with levels `0` \< `1` \< `2` \<
-  `3` \< `4` \< `5`
+  ... \< `5`
 
 - `Loops`:
 
@@ -39,14 +33,14 @@ the fingers on 2000 right hands as a whorl, small loop or neither.
 
   Number of hands
 
-## Details
-
-Cells for which `Whorls + Loops>5` have `NA` for `count`
-
 ## Source
 
 Stigler, S. M. (1999). *Statistics on the Table*. Cambridge, MA: Harvard
 University Press, table 19.4.
+
+## Details
+
+Cells for which `Whorls + Loops > 5` have `NA` for `count`
 
 ## References
 

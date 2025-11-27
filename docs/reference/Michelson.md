@@ -11,13 +11,6 @@ estimators with real, historical data. For this purpose, he divided the
 100 measurements into 5 sets of 20 each. These are contained in
 `MichelsonSets`.
 
-## Usage
-
-``` r
-data(Michelson)
-data(MichelsonSets)
-```
-
 ## Format
 
 `Michelson`: A data frame with 100 observations on the following
@@ -27,9 +20,21 @@ variable, given in time order of data collection
 
   a numeric vector
 
-`MichelsonSets`: A 20 x 5 matrix, with format int \[1:20, 1:5\] 850 850
-1000 810 960 800 830 830 880 720 ... - attr(\*, "dimnames")=List of 2
-..\$ : NULL ..\$ : chr \[1:5\] "ds12" "ds13" "ds14" "ds15" ...
+`MichelsonSets`: A 20 x 5 matrix, with format
+
+     int [1:20, 1:5] 850 850 1000 810 960 800 830 830 880 720 ...
+     - attr(*, "dimnames")=List of 2
+      ..$ : NULL
+      ..$ : chr [1:5] "ds12" "ds13" "ds14" "ds15" ...#'
+      
+
+## Source
+
+Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
+<https://www.math.uah.edu/stat/data/Michelson.html>
+
+Stephen M. Stigler (1977), "Do robust estimators work with *real*
+data?", *Annals of Statistics*, **5**, 1055-1098
 
 ## Details
 
@@ -40,19 +45,11 @@ velocity in air.
 The data values are recorded in order, and so may also be taken as a
 time series.
 
-## Source
-
-Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-<https://www.math.uah.edu/stat/data/Michelson.html>
-
-Stephen M. Stigler (1977), "Do robust estimators work with *real*
-data?", *Annals of Statistics*, 5, 1055-1098
-
 ## References
 
 Michelson, A. A. (1882). "Experimental determination of the velocity of
 light made at the United States Naval Academy, Anapolis". *Astronomical
-Papers*, 1,109-145, U. S. Nautical Almanac Office.
+Papers*, **1**, 109-145, U. S. Nautical Almanac Office.
 
 ## See also
 
@@ -99,5 +96,6 @@ abline(h=734.5, col="red", lwd=2)
 #> 853.125 859.375 854.375 856.250 837.500 
 points(1:5, mn)
 points(1:5+.05, tm, pch=16, col="blue")
+
 
 ```

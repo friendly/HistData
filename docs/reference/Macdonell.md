@@ -18,13 +18,6 @@ shuffled the 3000 observations from Macdonell's table, and then grouped
 them into samples of size 4, 8, ..., calculating the sample means,
 standard deviations and correlations for each sample.
 
-## Usage
-
-``` r
-data(Macdonell)
-data(MacdonellDF)
-```
-
 ## Format
 
 `Macdonell`: A frequency data frame with 924 observations on the
@@ -54,6 +47,18 @@ variables.
 
   a numeric vector
 
+## Source
+
+Macdonell, W. R. (1902). On Criminal Anthropometry and the
+Identification of Criminals. *Biometrika*, 1(2), 177-227.
+[doi:10.1093/biomet/1.2.177](https://doi.org/10.1093/biomet/1.2.177) %
+<http://www.jstor.org/stable/2331487>
+
+The data used here were obtained from:
+
+Hanley, J. (2008). Macdonell data used by Student.
+<http://www.medicine.mcgill.ca/epidemiology/hanley/Student/>
+
 ## Details
 
 Class intervals for `height` in Macdonell's table were given in 1 in.
@@ -64,27 +69,15 @@ For convenience, the data frame `MacdonellDF` presents the same data, in
 expanded form, with each combination of `height` and `finger` replicated
 `frequency` times.
 
-## Source
-
-Macdonell, W. R. (1902). On Criminal Anthropometry and the
-Identification of Criminals. *Biometrika*, 1(2), 177-227.
-[doi:10.1093/biomet/1.2.177](https://doi.org/10.1093/biomet/1.2.177)
-
-The data used here were obtained from:
-
-Hanley, J. (2008). Macdonell data used by Student.
-<http://www.medicine.mcgill.ca/epidemiology/hanley/Student/>
-
 ## References
 
 Hanley, J. and Julien, M. and Moodie, E. (2008). Student's z, t, and s:
 What if Gosset had R? *The American Statistician*, 62(1), 64-69.
 
-Gosset, W. S. \[Student\] (1908). Probable error of a mean.
-*Biometrika*, 6(1), 1-25.
-<https://www.york.ac.uk/depts/maths/histstat/student.pdf>
+Gosset, W. S. (Student) (1908). Probable error of a mean. *Biometrika*,
+6(1), 1-25. <https://www.york.ac.uk/depts/maths/histstat/student.pdf>
 
-Gosset, W. S. \[Student\] (1908). Probable error of a correlation
+Gosset, W. S. (Student) (1908). Probable error of a correlation
 coefficient. *Biometrika*, 6, 302-310.
 
 ## Examples
@@ -347,6 +340,7 @@ Dsq <- mahalanobis(MacdonellDF, mu, sigma)
 Q <- qchisq(1:3000/3000, 2)
 plot(Q, sort(Dsq), xlab="Chisquare (2) quantile", ylab="Squared distance")
 abline(a=0, b=1, col="red", lwd=2)
+
 
 
 ```

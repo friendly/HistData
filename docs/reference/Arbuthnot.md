@@ -1,4 +1,4 @@
-# Arbuthnot's data on male and female birth ratios
+# Arbuthnot's Data on Male and Female Birth Ratios
 
 John Arbuthnot (1710) used these time series data on the ratios of male
 to female christenings in London from 1629-1710 to carry out the first
@@ -13,12 +13,6 @@ argue that a nearly constant birth ratio \> 1 could be interpreted to
 show the guiding hand of a devine being. The data set adds variables of
 deaths from the plague and total mortality obtained by Campbell and from
 Creighton (1965).
-
-## Usage
-
-``` r
-data(Arbuthnot)
-```
 
 ## Format
 
@@ -52,6 +46,12 @@ A data frame with 82 observations on the following 7 variables.
 
   a numeric vector, total christenings in London (000s)
 
+## Source
+
+Arbuthnot, John (1710). "An argument for Devine Providence, taken from
+the constant Regularity observ'd in the Births of both Sexes,"
+*Philosophical transactions*, 27, 186-190. Published in 1711.
+
 ## Details
 
 Sandy Zabell (1976) pointed out several errors and inconsistencies in
@@ -59,7 +59,7 @@ the Arbuthnot data. In particular, the values for 1674 and 1704 are
 identical, suggesting that the latter were copied erroneously from the
 former.
 
-Jim Oeppen \<joeppen@health.sdu.dk\> points out that: "Arbuthnot's data
+Jim Oeppen <joeppen@health.sdu.dk> points out that: "Arbuthnot's data
 are annual counts of public baptisms, not births. Birth-baptism delay
 meant that infant deaths could occur before baptism. As male infants are
 more likely to die than females, the sex ratio at baptism might be
@@ -70,16 +70,11 @@ English Civil War and Commonwealth period 1642-1660 is thought to have
 been a period of both under-registration and lower fertility, but it is
 not clear whether these had sex-specific effects."
 
-## Source
-
-Arbuthnot, John (1710). "An argument for Devine Providence, taken from
-the constant Regularity observ'd in the Births of both Sexes,"
-*Philosophical transactions*, 27, 186-190. Published in 1711.
-
 ## References
 
 Campbell, R. B., Arbuthnot and the Human Sex Ratio (2001). *Human
 Biology*, 73:4, 605-610.
+%[http://www.math.uni.edu/~campbell/arbuth.html](http://www.math.uni.edu/~campbell/arbuth.md)
 
 Creighton, C. (1965). A History of Epidemics in Britain, 2nd edition,
 vol. 1 and 2. NY: Barnes and Noble.
@@ -102,4 +97,5 @@ lines(Arb.smooth$x, Arb.smooth$y, col="blue", lwd=2)
 
 # plot the total christenings to observe the anomalie in 1704
 with(Arbuthnot, plot(Year,Total, type='b', ylab="Total Christenings"))
+
 ```

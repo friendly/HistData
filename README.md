@@ -1,5 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
 <!-- badges: start -->
 
 [![Lifecycle:
@@ -19,7 +20,7 @@ Commit](https://img.shields.io/github/last-commit/friendly/HistData)](https://gi
 
 **Data Sets from the History of Statistics and Data Visualization**
 
-Dev. Version: 0.9-4
+Dev. Version: 1.0.0
 
 The `HistData` package provides a collection of small data sets that are
 interesting and important in the history of statistics and data
@@ -29,13 +30,17 @@ historical research (extending or criticizing a previous analysis). Some
 of these present interesting challenges, or opportunities to “show off”,
 with graphics or analysis in R.
 
-Many of the data sets have examples which reproduce an historical graph
-or analysis. These are meant mainly as starters for more extensive
-re-analysis or graphical elaboration. If you are interested in any of
-these problems or data sets, I’ve purposely left lots of room to do
-better!
+Many of the data sets contained here have examples which reproduce an
+historical graph or analysis. These are meant mainly as simple starters
+for more extensive re-analysis or graphical elaboration. If you are
+interested in any of these problems or data sets, there is lots of room
+to do better!
 
-They are part of a program of research called *statistical
+Some of these been featured in social media calls for participation,
+such as the [30 Day Chart
+Challenge](https://github.com/30DayChartChallenge/Edition2025)
+
+This is part of a program of research called *statistical
 historiography* (Friendly, 2007; Friendly & Denis, 2001; Friendly et-al,
 2016) meaning the use of statistical methods to study problems and
 questions in the history of statistics and graphics. A main aspect of
@@ -152,6 +157,7 @@ tt(dsets, width = c(.2, .8)) |>
 | [Nightingale](https://friendly.github.io/HistData/reference/Nightingale.html) | Florence Nightingale’s data on deaths from various causes in the Crimean War |
 | [OldMaps](https://friendly.github.io/HistData/reference/OldMaps.html) | Latitudes and Longitudes of 39 Points in 11 Old Maps |
 | [PearsonLee](https://friendly.github.io/HistData/reference/PearsonLee.html) | Pearson and Lee’s data on the heights of parents and children classified by gender |
+| [Playfair1824](https://friendly.github.io/HistData/reference/Playfair1824.html) | Playfair’s Linear Chronology |
 | [PolioTrials](https://friendly.github.io/HistData/reference/PolioTrials.html) | Polio Field Trials Data |
 | [Pollen](https://friendly.github.io/HistData/reference/Pollen.html) | Pollen Data Challenge |
 | [Prostitutes](https://friendly.github.io/HistData/reference/Prostitutes.html) | Parent-Duchatelet’s time-series data on the number of prostitutes in Paris |

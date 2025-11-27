@@ -8,14 +8,6 @@ Challenge: to reproduce it using modern statistical or graphic software,
 in a way that showed the elegance of some computer language to both
 describe and produce this graphic.
 
-## Usage
-
-``` r
-data(Minard.troops)
-data(Minard.cities)
-data(Minard.temp)
-```
-
 ## Format
 
 `Minard.troops`: A data frame with 51 observations on the following 5
@@ -78,19 +70,20 @@ retreat from Moscow.
   a factor with levels `Dec01` `Dec06` `Dec07` `Nov09` `Nov14` `Nov28`
   `Oct18` `Oct24`
 
-## Details
-
-`date` in `Minard.temp` should be made a real date in 1815.
-
 ## Source
 
 Originally given by Lee Wilkinson, in a text file associated with *The
 Grammar of Graphics* (1990). Springer.
 
+## Details
+
+`date` in `Minard.temp` should be made a real date in 1815.
+
 ## References
 
 Friendly, M. (2002). Visions and Re-visions of Charles Joseph Minard,
-*Journal of Educational and Behavioral Statistics*, 27, No. 1, 31-51.
+*Journal of Educational and Behavioral Statistics*, **27**, No. 1,
+31-51.
 
 Friendly, M. (2003). Re-Visions of Minard.
 [http://datavis.ca/gallery/re-minard.html](http://datavis.ca/gallery/re-minard.md)
@@ -158,5 +151,6 @@ plot_temp <- ggplot(Minard.temp, aes(long, temp)) +
 grid.arrange(plot_minard, plot_temp, nrow=2, heights=c(3,1))
 #> Warning: Removed 1 row containing missing values or values outside the scale range
 #> (`geom_text()`).
+
 
 ```

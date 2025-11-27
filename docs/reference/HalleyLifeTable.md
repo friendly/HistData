@@ -6,12 +6,6 @@ the Royal Society by Caspar Neumann. He produced a life table showing
 the number of people surviving to any age from a cohort born the same
 year. He also used his table to compute the price of life annuities.
 
-## Usage
-
-``` r
-data("HalleyLifeTable")
-```
-
 ## Format
 
 A data frame with 84 observations on the following 4 variables.
@@ -35,6 +29,12 @@ A data frame with 84 observations on the following 4 variables.
   until age k + 1 given that one had already reached age k, a numeric
   vector
 
+## Source
+
+N. Bacaer (2011), "Halley's life table (1693)", Ch 2, pp 5-10. In *A
+Short History of Mathematical Population Dynamics*, Springer-Verlag
+London, DOI 10.1007/978-0-85729-115-8_2. Data taken from Table 1.
+
 ## Details
 
 Halley's table contained only `age` and `number`. For people aged over
@@ -51,12 +51,6 @@ he calculated the number \\P\_{k+1}\\ surviving one more year,
 This method had the great advantage of not requiring a general census
 but only knowledge of the number of births and deaths and of the age at
 which people died during a few years.
-
-## Source
-
-N. Bacaer (2011), "Halley's life table (1693)", Ch 2, pp 5-10. In *A
-Short History of Mathematical Population Dynamics*, Springer-Verlag
-London, DOI 10.1007/978-0-85729-115-8_2. Data taken from Table 1.
 
 ## References
 
@@ -92,6 +86,7 @@ with(HalleyLifeTable, segments(0, age, number, age, lwd=2))
 
 # conditional probability of survival, one more year
 plot(ratio ~ age, data=HalleyLifeTable, ylab="Probability survive one more year")
+
 
 
 ```

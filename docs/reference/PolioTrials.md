@@ -9,12 +9,6 @@ actually two clinical trials, corresponding to two statistical designs
 and results represented a milestone in the development of randomized
 clinical trials.
 
-## Usage
-
-``` r
-data(PolioTrials)
-```
-
 ## Format
 
 A data frame with 8 observations on the following 6 variables.
@@ -45,6 +39,15 @@ A data frame with 8 observations on the following 6 variables.
   the number of cases initially reported as polio, but later determined
   not to be polio in that group
 
+## Source
+
+Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
+<https://www.math.uah.edu/stat/data/Polio.html>
+
+Thomas Francis, Robert Korn, et al. (1955). "An Evaluation of the 1954
+Poliomyelitis Vaccine Trials", *American Journal of Public Health*,
+**45**, (50 page supplement with a 63 page appendix).
+
 ## Details
 
 The data frame is in the form of a single table, but actually comprises
@@ -72,19 +75,10 @@ participate in the experiment. `IncompleteVaccinations` refers to
 children who received one or two, but not all three administrations of
 the vaccine.
 
-## Source
-
-Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-<https://www.math.uah.edu/stat/data/Polio.html>
-
-Thomas Francis, Robert Korn, et al. (1955). "An Evaluation of the 1954
-Poliomyelitis Vaccine Trials", *American Journal of Public Health*, 45,
-(50 page supplement with a 63 page appendix).
-
 ## References
 
 K. A. Brownlee (1955). "Statistics of the 1954 Polio Vaccine Trials",
-*Journal of the American Statistical Association*, 50, 1005-1013.
+*Journal of the American Statistical Association*, **50**, 1005-1013.
 
 ## Examples
 

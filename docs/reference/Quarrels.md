@@ -19,12 +19,6 @@ For each quarrel, the nominal variables include the type of quarrel, as
 well as political, cultural, and economic similarities and
 dissimilarities between the pair of combatants.
 
-## Usage
-
-``` r
-data(Quarrels)
-```
-
 ## Format
 
 A data frame with 779 observations on the following 84 variables.
@@ -37,11 +31,11 @@ A data frame with 779 observations on the following 84 variables.
 
   V1: Begin date of quarrel
 
-- `international `:
+- `international`:
 
   V2: Nation vs nation
 
-- `colonial `:
+- `colonial`:
 
   V3: Nation vs colony
 
@@ -49,7 +43,7 @@ A data frame with 779 observations on the following 84 variables.
 
   V4: Revolution or civil war
 
-- `nat.grp `:
+- `nat.grp`:
 
   V5: Nation vs gp in other nation
 
@@ -57,23 +51,23 @@ A data frame with 779 observations on the following 84 variables.
 
   V6: Grp vs grp (same nation)
 
-- `grp.grpDif `:
+- `grp.grpDif`:
 
   V7: Grp vs grp (between nations)
 
-- `numGroups `:
+- `numGroups`:
 
   V8: Number groups against which fighting
 
-- `months `:
+- `months`:
 
   V9: Number months fighting
 
-- `pairs `:
+- `pairs`:
 
   V10: Number pairs in whole matrix
 
-- `monthsPairs `:
+- `monthsPairs`:
 
   V11: Num mons for all in matrix
 
@@ -127,7 +121,7 @@ A data frame with 779 observations on the following 84 variables.
 
 - `simMariagCust `:
 
-  V24: Similar marriage cusomst
+  V24: Similar marriage customst
 
 - `difMariagCust `:
 
@@ -365,6 +359,10 @@ A data frame with 779 observations on the following 84 variables.
 
   V83: Auxiliaries in service of nation at war
 
+## Source
+
+<http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/05407>
+
 ## Details
 
 In the original data set obtained from ICPSR, variables were named
@@ -381,17 +379,13 @@ See the original codebook at
 <http://www.icpsr.umich.edu/cgi-bin/file?comp=none&study=5407&ds=1&file_id=652814>
 for details not contained here.
 
-## Source
-
-<http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/05407>
-
 ## References
 
 Lewis F. Richardson, (1960). *The Statistics Of Deadly Quarrels*.
 (Edited by Q. Wright and C. C. Lienau). Pittsburgh: Boxwood Press.
 
 Rummel, Rudolph J. (1967), "Dimensions of Dyadic War, 1820-1952."
-*Journal of Conflict Resolution*. 11, (2), 176 - 183.
+*Journal of Conflict Resolution*. **11**, (2), 176 - 183.
 
 ## Examples
 

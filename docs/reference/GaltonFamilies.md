@@ -7,14 +7,9 @@ In addition to the question of the relation between heights of parents
 and their offspring, for which this data is mainly famous, Galton had
 another purpose which the data in this form allows to address: Does
 marriage selection indicate a relationship between the heights of
-husbands and wives, a topic he called *assortative mating*? Keen \[p.
-297-298\](2010) provides a brief discussion of this topic.
-
-## Usage
-
-``` r
-data(GaltonFamilies)
-```
+husbands and wives?, a topic he called *assortative mating*. Keen [p.
+297–298](https://friendly.github.io/HistData/reference/2010) provides a
+brief discussion of this topic.
 
 ## Format
 
@@ -53,6 +48,12 @@ A data frame with 934 observations on the following 8 variables.
 
   height of child
 
+## Source
+
+Galton's notebook,
+<http://www.medicine.mcgill.ca/epidemiology/hanley/galton/notebook/>,
+transcribed by Beverley Shipley in 2001.
+
 ## Details
 
 Galton's notebook lists 963 children in 205 families ranging from 1-15
@@ -61,12 +62,6 @@ and are not included here.
 
 Families are largely listed in descending order of fathers and mothers
 height.
-
-## Source
-
-Galton's notebook,
-<http://www.medicine.mcgill.ca/epidemiology/hanley/galton/notebook/>,
-transcribed by Beverley Shipley in 2001.
 
 ## References
 
@@ -171,5 +166,6 @@ with(Parents, {
   abline(lm(father ~ mother), col="red", lwd=2)
   }
   )
+
 
 ```

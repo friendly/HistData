@@ -14,12 +14,6 @@ this data to illustrate an early example of a non-parametric permutation
 test, treating each paired difference as having (randomly) either a
 positive or negative sign.
 
-## Usage
-
-``` r
-data(ZeaMays)
-```
-
 ## Format
 
 A data frame with 15 observations on the following 4 variables.
@@ -44,6 +38,15 @@ A data frame with 15 observations on the following 4 variables.
 
   `cross - self` for each pair
 
+## Source
+
+Darwin, C. (1876). *The Effect of Cross- and Self-fertilization in the
+Vegetable Kingdom*, 2nd Ed. London: John Murray.
+
+Andrews, D. and Herzberg, A. (1985) *Data: a collection of problems from
+many fields for the student and research worker*. New York: Springer.
+Data retrieved from: `https://www.stat.cmu.edu/StatDat/`
+
 ## Details
 
 In addition to the standard paired t-test, several types of
@@ -63,15 +66,6 @@ randomization which exceed the observed mean difference.
 \(c\) Wilcoxon signed rank test: tests the hypothesis that the median
 signed rank of the `diff` is zero, or that the distribution of `diff` is
 symmetric about 0, vs. a location shifted alternative.
-
-## Source
-
-Darwin, C. (1876). *The Effect of Cross- and Self-fertilization in the
-Vegetable Kingdom*, 2nd Ed. London: John Murray.
-
-Andrews, D. and Herzberg, A. (1985) *Data: a collection of problems from
-many fields for the student and research worker*. New York: Springer.
-Data retrieved from: `https://www.stat.cmu.edu/StatDat/`
 
 ## References
 
@@ -187,6 +181,7 @@ abline(v=c(1, -1)*mean(ZeaMays$diff), col="red", lwd=2, lty=1:2)
 plot(density(allmeans), xlab="Mean difference, cross-self",
   main="Density plot of all mean differences")
 abline(v=c(1, -1)*mean(ZeaMays$diff), col="red", lwd=2, lty=1:2)
+
 
 
 ```

@@ -11,12 +11,6 @@ data are given separately in `ChestStigler`. Gallagher (2020) used these
 data sets to re-consider the question of normality in these
 distributions.
 
-## Usage
-
-``` r
-data(ChestSizes)
-```
-
 ## Format
 
 A data frame with 16 observations on the following 2 variables. Total
@@ -70,5 +64,6 @@ std   <- with(ChestSizes, sd(rep(chest, count)))
 
 expected <- 
 with(ChestSizes, diff(pnorm(c(32, chest) + .5, xbar, std)) * sum(count))
+
 
 ```

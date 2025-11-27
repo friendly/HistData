@@ -9,12 +9,6 @@ represented here as a data frame with ordered factors, `Foot` and
 `Lines`. Edgeworth used this table in what was among the first examples
 of analysis of variance applied to a two-way classification.
 
-## Usage
-
-``` r
-data(Dactyl)
-```
-
 ## Format
 
 A data frame with 60 observations on the following 3 variables.
@@ -41,8 +35,8 @@ University Press, table 5.1.
 ## References
 
 Edgeworth, F. Y. (1885). On methods of ascertaining variations in the
-rate of births, deaths and marriages. *Journal of the \[Royal\]
-Statistical Society*, 48, 628-649.
+rate of births, deaths and marriages. *Journal of the Royal Statistical
+Society*, 48, 628-649.
 
 ## Examples
 
@@ -84,4 +78,5 @@ par(op)
 
 # show table as a simple mosaicplot
 mosaicplot(xtabs(count ~ Foot+Lines, data=Dactyl), shade=TRUE)
+
 ```

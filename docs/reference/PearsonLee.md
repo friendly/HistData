@@ -1,4 +1,4 @@
-# Pearson and Lee's data on the heights of parents and children classified by gender
+# Pearson and Lee's data on the Heights of Parents and Children by Gender
 
 Wachsmuth et. al (2003) noticed that a loess smooth through Galton's
 data on heights of mid-parents and their offspring exhibited a slightly
@@ -10,12 +10,6 @@ To answer this question, they used analogous data from English families
 at about the same time, tabulated by Karl Pearson and Alice Lee (1896,
 1903), but where the heights of parents and children were each
 classified by gender of the parent.
-
-## Usage
-
-``` r
-data(PearsonLee)
-```
 
 ## Format
 
@@ -46,27 +40,28 @@ variables.
 
   a factor with levels `Daughter` `Son`
 
+## Source
+
+Pearson, K. and Lee, A. (1896). Mathematical contributions to the theory
+of evolution. On telegony in man, etc. *Proceedings of the Royal Society
+of London*, **60** , 273-283.
+
+Pearson, K. and Lee, A. (1903). On the laws of inheritance in man: I.
+Inheritance of physical characters. *Biometrika*, **2**(4), 357-462.
+(Tables XXII, p. 415; XXV, p. 417; XXVIII, p. 419 and XXXI, p. 421.)
+
 ## Details
 
 The variables `gp`, `par` and `chl` are provided to allow stratifying
 the data according to the gender of the father/mother and son/daughter.
 
-## Source
-
-Pearson, K. and Lee, A. (1896). Mathematical contributions to the theory
-of evolution. On telegony in man, etc. *Proceedings of the Royal Society
-of London*, 60 , 273-283.
-
-Pearson, K. and Lee, A. (1903). On the laws of inheritance in man: I.
-Inheritance of physical characters. *Biometrika*, 2(4), 357-462. (Tables
-XXII, p. 415; XXV, p. 417; XXVIII, p. 419 and XXXI, p. 421.)
-
 ## References
 
 Wachsmuth, A.W., Wilkinson L., Dallal G.E. (2003). Galton's bend: A
 previously undiscovered nonlinearity in Galton's family stature
-regression data. *The American Statistician*, 57, 190-192.
-[doi:10.1198/0003130031874](https://doi.org/10.1198/0003130031874)
+regression data. *The American Statistician*, **57**, 190-192.
+%<http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf>
+[doi:10.1198/0003130031874](https://doi.org/10.1198/0003130031874) .
 
 ## See also
 
@@ -147,5 +142,6 @@ ggplot(PearsonLee, aes(x = child, y = parent, weight=frequency)) +
 #> ℹ Use `frequency` instead.
 #> `geom_smooth()` using formula = 'y ~ x'
 #> `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+
 
 ```

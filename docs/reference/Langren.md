@@ -6,28 +6,6 @@ Spain, and who worked on one of the most significant problems of his
 time— the accurate determination of longitude, particularly for
 navigation at sea.
 
-In order to convince the Spanish court of the seriousness of the problem
-(often resulting in great losses through ship wrecks), he prepared a
-1-dimensional line graph, showing all the available estimates of the
-distance in longitude between Toledo and Rome, which showed large
-errors, for even this modest distance. This 1D line graph, from Langren
-(1644), is believed to be the first known graph of statistical data
-(Friendly etal., 2010). It provides a compelling example of the notions
-of statistical variability and bias.
-
-The data frame `Langren1644` gives the estimates and other information
-derived from the previously known 1644 graph. It turns out that van
-Langren produced other versions of this graph, as early as 1628. The
-data frame `Langren.all` gives the estimates derived from all known
-versions of this graph.
-
-## Usage
-
-``` r
-data(Langren1644)
-  data(Langren.all)
-```
-
 ## Format
 
 `Langren1644`: A data frame with 12 observations on the following 9
@@ -75,7 +53,7 @@ Toledo and Rome, from the 1644 graph.
 - `Gap`:
 
   A numeric vector indicating whether the `Longitude` value is below or
-  above the median
+  above th median
 
 `Langren.all`: A data frame with 61 observations on the following 4
 variables, giving determinations of Longitude between Toledo and Rome
@@ -98,19 +76,34 @@ from all known versions of van Langren's graph.
 
   Estimated value of the longitude distance between Toledo and Rome
 
-## Details
-
-In all the graphs, Toledo is implicitly at the origin and Rome is
-located relatively at the value of `Longitude` To judge correspondence
-with an actual map, the positions in (lat, long) are
-
-` toledo <- c(39.86, -4.03); rome <- c(41.89, 12.5) `
-
 ## Source
 
 The longitude values were digitized from images of the various graphs,
 which may be found on the Supplementary materials page for Friendly
 etal. (2009).
+
+## Details
+
+In order to convince the Spanish court of the seriousness of the problem
+(often resulting in great losses through ship wrecks), he prepared a
+1-dimensional line graph, showing all the available estimates of the
+distance in longitude between Toledo and Rome, which showed large
+errors, for even this modest distance. This 1D line graph, from Langren
+(1644), is believed to be the first known graph of statistical data
+(Friendly etal., 2010). It provides a compelling example of the notions
+of statistical variability and bias.
+
+The data frame `Langren1644` gives the estimates and other information
+derived from the previously known 1644 graph. It turns out that van
+Langren produced other versions of this graph, as early as 1628. The
+data frame `Langren.all` gives the estimates derived from all known
+versions of this graph.
+
+In all the graphs, Toledo is implicitly at the origin and Rome is
+located relatively at the value of `Longitude`. To judge correspondence
+with an actual map, the positions in (lat, long) are
+
+`toledo <- c(39.86, -4.03); rome <- c(41.89, 12.5)`
 
 ## References
 
@@ -287,5 +280,6 @@ anova(gap.mod, test="Chisq")
 #> Latitude  1   4.9213         8     6.7104  0.02653 *
 #> ---
 #> Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
 
 ```

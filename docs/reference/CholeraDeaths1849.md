@@ -14,12 +14,6 @@ James Riley (2023) notes, "Cholera 1849 has special significance — it is
 likely to be one of few modern pandemics that was completely
 unmitigated."
 
-## Usage
-
-``` r
-data("CholeraDeaths1849")
-```
-
 ## Format
 
 A data frame with 730 observations on the following 6 variables.
@@ -49,13 +43,6 @@ A data frame with 730 observations on the following 6 variables.
   an ordered factor with levels `Mon` \< `Tue` \< `Wed` \< `Thu` \<
   `Fri` \< `Sat` \< `Sun`
 
-## Details
-
-The data set was transcribed by James Riley to a spreadsheet,
-<https://github.com/jimr1603/1849-cholera>. He notes, "the scan at
-Internet Archive has a fold on day 11. I have derived this column from
-the row totals."
-
 ## Source
 
 The original source is: General Register Office, William Farr (1852),
@@ -64,18 +51,26 @@ Printed by W. Clowes, for HMSO; scanned by the Internet Archive from the
 collection of King's College London and available at
 <https://archive.org/details/b21308251/page/20/mode/2up>.
 
-## See also
+## Details
 
-[`Cholera`](https://friendly.github.io/HistData/reference/Cholera.md),
-[`Snow.deaths`](https://friendly.github.io/HistData/reference/Snow.md)
+The data set was transcribed by James Riley to a spreadsheet,
+<https://github.com/jimr1603/1849-cholera>. He notes, "the scan at
+Internet Archive has a fold on day 11. I have derived this column from
+the row totals."
 
 ## References
 
 Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and
-Graphic Communication*, Harvard University Press.
+Graphic Communication*, Harvard University Press. %
+<https://www.hup.harvard.edu/catalog.php?isbn=9780674975231>.
 
 Riley, J. (2023). "Cholera in Victorian England", blog post,
 <https://openor.blog/2023/07/27/cholera-in-victorian-england/>.
+
+## See also
+
+[`Cholera`](https://friendly.github.io/HistData/reference/Cholera.md),
+[`Snow.deaths`](https://friendly.github.io/HistData/reference/Snow.md)
 
 ## Examples
 
@@ -97,5 +92,6 @@ CholeraDeaths1849  |>
   geom_line(linewidth = 1.2) +
   theme_bw(base_size = 14) +
   theme(legend.position = "top")
+
 
 ```

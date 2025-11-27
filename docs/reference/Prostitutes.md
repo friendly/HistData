@@ -4,12 +4,6 @@ A table indicating month by month, for the years 1812-1854, the number
 of prostitutes on the registers of the administration of the city of
 Paris.
 
-## Usage
-
-``` r
-data(Prostitutes)
-```
-
 ## Format
 
 A data frame with 516 observations on the following 5 variables.
@@ -35,16 +29,18 @@ A data frame with 516 observations on the following 5 variables.
 
   a Date
 
+## Source
+
+Parent-Duchatelet, A. (1857), *De la prostitution dans la ville de
+Paris*, 3rd ed, p. 32, 36
+
 ## Details
 
 The data table was digitally scanned with OCR, and errors were corrected
 by comparing the yearly totals recorded in the table to the row sums of
 the scanned data.
 
-## Source
-
-Parent-Duchatelet, A. (1857), *De la prostitution dans la ville de
-Paris*, 3rd ed, p. 32, 36
+`month` should obviously be made and ordered factor.
 
 ## Examples
 

@@ -13,12 +13,6 @@ well.
 Treated as frequencies, the data is also a good example of a case where
 the independence model fits reasonably well.
 
-## Usage
-
-``` r
-data("EdgeworthDeaths")
-```
-
 ## Format
 
 A data frame with 42 observations on the following 3 variables.
@@ -37,17 +31,17 @@ A data frame with 42 observations on the following 3 variables.
 
   a numeric vector, death rate per 1000 population
 
-## Details
-
-Edgeworth's data came from the Registrar General's report for the final
-year, 1883. The `Freq` variable represents death rates per 1000
-population in the six counties listed.
-
 ## Source
 
 The data were scanned from Table 5.2 in Stigler, S. M. (1999)
 *Statistics on the Table: The History of Statistical Concepts and
 Methods*, Harvard University Press.
+
+## Details
+
+Edgeworth's data came from the Registrar General's report for the final
+year, 1883. The `Freq` variable represents death rates per 1000
+population in the six counties listed.
 
 ## References
 
@@ -105,6 +99,7 @@ loglm( Freq ~ County + year, data=EdgeworthDeaths)
 mosaic( ~ County + year, data=EdgeworthDeaths, 
   shade=TRUE, legend=FALSE, labeling=labeling_values, 
   gp=shading_Friendly)
+
 
 
 ```

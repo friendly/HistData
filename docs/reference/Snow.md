@@ -4,9 +4,11 @@ The `Snow` data consists of the relevant 1854 London streets, the
 location of 578 deaths from cholera, and the position of 13 water pumps
 (wells) that can be used to re-create John Snow's map showing deaths
 from cholera in the area surrounding Broad Street, London in the 1854
-outbreak. Another data frame provides boundaries of a tessellation of
-the map into Thiessen (Voronoi) regions which include all cholera deaths
-nearer to a given pump than to any other.
+outbreak.
+
+Another data frame provides boundaries of a tessellation of the map into
+Thiessen (Voronoi) regions which include all cholera deaths nearer to a
+given pump than to any other.
 
 The apocryphal story of the significance of Snow's map is that, by
 closing the Broad Street pump (by removing its handle), Dr. Snow stopped
@@ -18,16 +20,6 @@ part is that the epidemic ended when the pump handle was removed.) At
 any rate, the map, together with various statistical annotations, is
 compelling because it points to the Broad Street pump as the source of
 the outbreak.
-
-## Usage
-
-``` r
-data(Snow.deaths)
-  data(Snow.pumps)
-  data(Snow.streets)
-  data(Snow.polygons)
-  data(Snow.dates)
-```
 
 ## Format
 
@@ -115,6 +107,17 @@ deaths by date from Aug. 19 – Sept. 30, 1854. There are a total of 616
 deaths represented in both columns `attacks` and `deaths`; of these, the
 date of the attack is unknown for 45 cases.
 
+## Source
+
+Tobler, W. (1994). Snow's Cholera Map,
+`http://www.ncgia.ucsb.edu/pubs/snow/snow.html`; data files were
+obtained from `http://ncgia.ucsb.edu/Publications/Software/cholera/`,
+but these sites seem to be down.
+
+The data in these files were first digitized in 1992 by Rusty Dodson of
+the NCGIA, Santa Barbara, from the map included in the book by John
+Snow: "Snow on Cholera...", London, Oxford University Press, 1936.
+
 ## Details
 
 The scale of the source map is approx. 1:2000. The `(x, y)` coordinate
@@ -131,28 +134,17 @@ denominator to allow for a comparison of mortality rates in the Broad
 Street pump area as opposed to others. See Koch (2000), Koch (2004),
 Koch & Denike (2009) and Tufte (1999), p. 27-37, for further discussion.
 
-## Source
-
-Tobler, W. (1994). Snow's Cholera Map,
-`http://www.ncgia.ucsb.edu/pubs/snow/snow.html`; data files were
-obtained from `http://ncgia.ucsb.edu/Publications/Software/cholera/`,
-but these sites seem to be down.
-
-The data in these files were first digitized in 1992 by Rusty Dodson of
-the NCGIA, Santa Barbara, from the map included in the book by John
-Snow: "Snow on Cholera...", London, Oxford University Press, 1936.
-
 ## References
 
 Koch, T. (2000). *Cartographies of Disease: Maps, Mapping, and
 Medicine*. ESRI Press. ISBN: 9781589481206.
 
 Koch, T. (2004). The Map as Intent: Variations on the Theme of John Snow
-*Cartographica*, 39 (4), 1-14.
+*Cartographica*, **39** (4), 1-14.
 
 Koch, T. and Denike, K. (2009). Crediting his critics' concerns:
 Remaking John Snow's map of Broad Street cholera, 1854. *Social Science
-& Medicine* 69, 1246-1251.
+& Medicine* **69**, 1246-1251.
 
 Snow, J. (1885). *On the Mode of Communication of Cholera*. London: John
 Churchill. Possibly at https://resource.nlm.nih.gov/0050707.
@@ -212,7 +204,7 @@ SnowMap(xlim=c(7.5,16.5), ylim=c(7,16), polygons=TRUE, density=TRUE,
 
 
 ## re-do this the sp way... [thx: Stephane Dray]
-
+if (FALSE) { # \dontrun{
 library(sp)
 
 # streets
@@ -225,12 +217,15 @@ title(main="Snow's Cholera Map of London (sp)")
 
 # deaths
 Snow.deaths.sp = SpatialPoints(Snow.deaths[,c("x","y")])
-plot(Snow.deaths.sp, add=TRUE, col ='red', pch=15, cex=0.6)
+plot(Snow.deaths.sp, add=TRUE, 
+     col ='red', pch=15, cex=0.6)
 
 # pumps
 spp <- SpatialPoints(Snow.pumps[,c("x","y")])
 Snow.pumps.sp <- SpatialPointsDataFrame(spp,Snow.pumps[,c("x","y")])
-plot(Snow.pumps.sp, add=TRUE, col='blue', pch=17, cex=1.5)
-text(Snow.pumps[,c("x","y")], labels=Snow.pumps$label, pos=1, cex=0.8)
-
+plot(Snow.pumps.sp, add=TRUE, 
+     col='blue', pch=17, cex=1.5)
+text(Snow.pumps[,c("x","y")], 
+     labels=Snow.pumps$label, pos=1, cex=0.8)
+} # }
 ```

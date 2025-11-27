@@ -7,16 +7,6 @@ collected by Caspar Neumann in the city of Breslau (now called Wroclaw),
 and then reconstructed in the 1880s by Jonas Graetzer, the medical
 officer in Breslau at that time.
 
-The dataset here follows Graetzer, and gives the number of deaths at
-ages `1:100` recorded in each of the years `1687:1691`. Halley's
-analysis was based on the total over those years.
-
-## Usage
-
-``` r
-data("Breslau")
-```
-
 ## Format
 
 A data frame with 100 observations on the following 8 variables. The
@@ -55,15 +45,19 @@ A data frame with 100 observations on the following 8 variables. The
 
   a numeric vector
 
-## Details
-
-This dataset was kindly provided by David Bellhouse.
-
 ## Source
 
 Bellhouse, D.R. (2011), A new look at Halley's life table. *Journal of
 the Royal Statistical Society*: Series A, **174**, 823-832.
 [doi:10.1111/j.1467-985X.2010.00684.x](https://doi.org/10.1111/j.1467-985X.2010.00684.x)
+
+## Details
+
+The dataset here follows Graetzer, and gives the number of deaths at
+ages `1:100` recorded in each of the years `1687:1691`. Halley's
+analysis was based on the total over those years.
+
+This dataset was kindly provided by David Bellhouse.
 
 ## References
 
@@ -103,5 +97,6 @@ ggplot(Breslau5, aes(x=age, y=total), size=1.5) +
 #> ✖ Problematic argument:
 #> • size = 1.5
 #> ℹ Did you misspell an argument name?
+
 
 ```

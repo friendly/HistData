@@ -1,39 +1,37 @@
 # Draw John Snow's Map of Cholera in London
 
-The main function `SnowMap` draws versions of John Snow's map of cholera
-deaths in the South London area surrounding the Borad Street pump.
-during the 1854 outbreak.
-
-It is a wrapper for the various subfunctions also listed here:  
-`Splot` sets up the basic plot  
-`Sstreets` draws the streets  
-`Sdeaths` plots the deaths  
-`Sdeaths` plots the pump locations  
-`Sscale` draws the scale  
-`Spolygons` draws the boundaries of the Voronoi polygons separating the
-pumps  
-`Sdensity` draws and fills contours of the 2D density of deaths
+The main function `SnowMap()` draws versions of John Snow's map of
+cholera deaths in the South London area surrounding the Borad Street
+pump. during the 1854 outbreak.
 
 ## Usage
 
 ``` r
-SnowMap(xlim = c(3, 20), ylim = c(3, 20), 
-        axis.labels = FALSE, main = "Snow's Cholera Map of London", 
-        scale = TRUE, polygons = FALSE, density=FALSE,
-        streets.args = list(col = "grey", lwd = 1), 
-        deaths.args = list(col = "red", pch = 15, cex = 0.6), 
-        pumps.args = list(col = "blue", pch = 17, cex = 1.5, cex.lab = 0.9), 
-        scale.args = list(xs = 3.5, ys = 19.7), 
-        polygons.args = list(col=NA, border="brown", lwd=2, lty=1),
-        density.args=list(bandwidth=c(0.5,0.5), 
-                  col1=rgb(0,1,0,0),
-                  col2=rgb(1,0,0,.8))
+SnowMap(
+  xlim = c(3, 20),
+  ylim = c(3, 20),
+  axis.labels = FALSE,
+  main = "Snow's Cholera Map of London",
+  scale = TRUE,
+  polygons = FALSE,
+  density = FALSE,
+  streets.args = list(col = "grey", lwd = 1),
+  deaths.args = list(col = "red", pch = 15, cex = 0.6),
+  pumps.args = list(col = "blue", pch = 17, cex = 1.5, cex.lab = 0.9),
+  scale.args = list(xs = 3.5, ys = 19.7),
+  polygons.args = list(col = NA, border = "brown", lwd = 2, lty = 1),
+  density.args = list(bandwidth = c(0.5, 0.5), col1 = rgb(0, 1, 0, 0), col2 = rgb(1, 0,
+    0, 0.8))
 )
 
-Splot(xlim = c(3, 20), ylim = c(3, 20), 
-      xlab = "", ylab = "", 
-      axis.labels = FALSE, 
-      main = "Snow's Cholera Map of London")
+Splot(
+  xlim = c(3, 20),
+  ylim = c(3, 20),
+  xlab = "",
+  ylab = "",
+  axis.labels = FALSE,
+  main = "Snow's Cholera Map of London"
+)
 
 Sdeaths(col = "red", pch = 15, cex = 0.6)
 
@@ -43,9 +41,13 @@ Sstreets(col = "gray", lwd = 1)
 
 Sscale(xs = 3.5, ys = 19.7)
 
-Spolygons(col=NA, border="brown", lwd=2, lty=1)
+Spolygons(col = NA, border = "brown", lwd = 2, lty = 1)
 
-Sdensity(bandwidth = c(0.5, 0.5), col1 = rgb(0, 1, 0, 0), col2 = rgb(1, 0, 0, 0.8))
+Sdensity(
+  bandwidth = c(0.5, 0.5),
+  col1 = rgb(0, 1, 0, 0),
+  col2 = rgb(1, 0, 0, 0.8)
+)
 ```
 
 ## Arguments
@@ -136,10 +138,6 @@ Sdensity(bandwidth = c(0.5, 0.5), col1 = rgb(0, 1, 0, 0), col2 = rgb(1, 0, 0, 0.
 
   Line width used by by various functions
 
-- border:
-
-  Color of border lines used by `Spolygons`
-
 - xs:
 
   x location of the scale used by `Sscale`
@@ -147,6 +145,10 @@ Sdensity(bandwidth = c(0.5, 0.5), col1 = rgb(0, 1, 0, 0), col2 = rgb(1, 0, 0, 0.
 - ys:
 
   y location of the scale used by `Sscale`
+
+- border:
+
+  Color of border lines used by `Spolygons`
 
 - lty:
 
@@ -174,18 +176,37 @@ Sdensity(bandwidth = c(0.5, 0.5), col1 = rgb(0, 1, 0, 0), col2 = rgb(1, 0, 0, 0.
 
 None
 
+## Details
+
+`SnowMap()` is a wrapper for the various subfunctions also listed here:
+
+- `Splot` sets up the basic plot
+
+- `Sstreets` draws the streets
+
+- `Sdeaths` plots the deaths
+
+- `Sdeaths` plots the pump locations
+
+- `Sscale` draws the scale
+
+- `Spolygons` draws the boundaries of the Voronoi polygons separating
+  the pumps
+
+- `Sdensity` draws and fills contours of the 2D density of deaths
+
 ## References
 
 Snow, J. (1885). *On the Mode of Communication of Cholera*. London: John
 Churchill
 
+%John Mackenzie, "GIS Analyses of Dr. Snow's Map", %
+[http://www1.udel.edu/johnmack/frec480/cholera/cholera2.html](http://www1.udel.edu/johnmack/frec480/cholera/cholera2.md)
+%describes some related visualizations using ArcGIS.
+
 Thomas Coleman, "John Snow Research project",
 `https://www.hilerun.org/econ/papers/snow/index.html` gives extensive
 analyses of Snow's data with R notebooks on Github.
-
-## Author
-
-Michael Friendly
 
 ## See also
 
@@ -194,6 +215,10 @@ description of the data sets
 
 [`bkde2D`](https://rdrr.io/pkg/KernSmooth/man/bkde2D.html),
 [`colorRampPalette`](https://rdrr.io/r/grDevices/colorRamp.html)
+
+## Author
+
+Michael Friendly
 
 ## Examples
 
@@ -209,5 +234,6 @@ SnowMap(polygons=TRUE, main="Snow's Cholera Map with Pump Polygons")
 
 
 SnowMap(density=TRUE)
+
 
 ```

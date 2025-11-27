@@ -7,11 +7,8 @@ planets' mean motion, due to their mutual attraction and the coincidence
 that their times of revolution about the sun are approximately in the
 ratio 5:2".
 
-## Usage
-
-``` r
-data(Saturn)
-```
+The data are of interest for their role in the development of
+statistical methods to determine the orbits of planets.
 
 ## Format
 
@@ -46,9 +43,14 @@ A data frame with 24 observations on the following 6 variables.
   Saturn's aphelion minus rates of change of the mean longitude of
   Saturn in 1750, multiplied by 2 times the mean eccentricity of Saturn
 
+## Source
+
+Stigler, Stephen (1975). "Napoleonic statistics: The work of Laplace",
+*Biometrika*, **62**, 503-517.
+
 ## Details
 
-Stigler (1986, pp. 25-39):
+Stigler (1986, pp. 25-39) says:
 
 "In 1676 Halley had verified an earlier suspicion of Horrocks that the
 motions of Jupiter and Saturn were subject to slight, apparently
@@ -88,20 +90,15 @@ provided some of the accuracy expected from least squares, with much
 less labor. Because the multipliers were all -1, 0, or 1, no
 multiplication, only addition, was required."
 
-## Source
-
-Stigler, Stephen (1975). "Napoleonic statistics: The work of Laplace",
-*Biometrika*, 62, 503-517.
-
-## Author
-
-Luiz Fernando Palin Droubi
-
 ## References
 
 Stigler, Stephen M. (1986). *The History of Statistics: The Measurement
 of Uncertainty before 1900*. Cambridge, MA: Harvard University Press,
 1986, Table 1.3, p. 34.
+
+## Author
+
+Luiz Fernando Palin Droubi
 
 ## Examples
 

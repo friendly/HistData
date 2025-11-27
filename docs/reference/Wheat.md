@@ -13,13 +13,6 @@ are in some ways better, but both of these ideas were unknown in 1821.
 In this version, information on the reigns of British monarchs is
 provided in a separate data.frame, `Wheat.monarch`.
 
-## Usage
-
-``` r
-data(Wheat)
-data(Wheat.monarchs)
-```
-
 ## Format
 
 `Wheat` A data frame with 53 observations on the following 3 variables.
@@ -70,14 +63,12 @@ Data values: originally digitized from
 ## References
 
 Friendly, M. & Denis, D. (2005). The early origins and development of
-the scatterplot *Journal of the History of the Behavioral Sciences*, 41,
-103-130.
+the scatterplot *Journal of the History of the Behavioral Sciences*,
+**41**, 103-130.
 
 ## Examples
 
 ``` r
-data(Wheat)
-
 data(Wheat)
 
 # ------------------------------------
@@ -151,4 +142,5 @@ with(Wheat.monarchs, {
   segments(start, y, end, y, col=ifelse(commonwealth, "white", NA), lwd=4, lend=1)
   text((start+end)/2, y-0.2, name, cex=0.5)
   })
+
 ```

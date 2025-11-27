@@ -7,12 +7,6 @@ bivariate frequency distribution and showed that the contours formed
 concentric and similar ellipses, thus setting the stage for correlation,
 regression and the bivariate normal distribution.
 
-## Usage
-
-``` r
-data(Galton)
-```
-
 ## Format
 
 A data frame with 928 observations on the following 2 variables.
@@ -26,6 +20,11 @@ A data frame with 928 observations on the following 2 variables.
 
   a numeric vector: height of the child
 
+## Source
+
+Galton, F. (1886). Regression Towards Mediocrity in Hereditary Stature
+*Journal of the Anthropological Institute*, 15, 246-263
+
 ## Details
 
 The data are recorded in class intervals of width 1.0 in. He used
@@ -37,16 +36,11 @@ tabulation to compensate for sex differences. See Hanley (2004) for a
 reanalysis of Galton's raw data questioning whether this was
 appropriate.
 
-## Source
-
-Galton, F. (1886). Regression Towards Mediocrity in Hereditary Stature
-*Journal of the Anthropological Institute*, 15, 246-263
-
 ## References
 
 Friendly, M. & Denis, D. (2005). The early origins and development of
 the scatterplot. *Journal of the History of the Behavioral Sciences*,
-41, 103-130.
+**41**, 103-130.
 
 Galton, F. (1869). *Hereditary Genius: An Inquiry into its Laws and
 Consequences*. London: Macmillan.
@@ -67,9 +61,10 @@ regression data. *The American Statistician*, 57, 190-192.
 
 ## See also
 
-`link{GaltonFamilies}`,
+[`GaltonFamilies`](https://friendly.github.io/HistData/reference/GaltonFamilies.md),
 [`PearsonLee`](https://friendly.github.io/HistData/reference/PearsonLee.md),
-`galton` in the psych
+`galton` in the psychTools package,
+[`galton`](https://rdrr.io/pkg/psychTools/man/galton.html)
 
 ## Examples
 
@@ -90,5 +85,6 @@ with(Galton,
   dataEllipse(parent,child, xlim=c(62,74), ylim=c(62,74), plot.points=FALSE)
     }
   })
+
 
 ```

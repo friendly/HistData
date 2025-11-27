@@ -19,12 +19,6 @@ bag were classified according to the deviation from the standard content
 of gold for each coin, called the Remedy, R = 123 \* (12/5760) = .25625,
 in grains, for a single sovereign.
 
-## Usage
-
-``` r
-data(Pyx)
-```
-
 ## Format
 
 A frequency data frame with 72 observations on the following 4 variables
@@ -51,16 +45,16 @@ standard weight.
 
   number of sovereigns
 
+## Source
+
+Stigler, S. M. (1999). *Statistics on the Table*. Cambridge, MA: Harvard
+University Press, table 21.1.
+
 ## Details
 
 `Bags` 1-4 were selected as "near to standard", bags 5-7 as below
 standard, bags 8-10 as above standard. This classification is reflected
 in `Group`.
-
-## Source
-
-Stigler, S. M. (1999). *Statistics on the Table*. Cambridge, MA: Harvard
-University Press, table 21.1.
 
 ## References
 
@@ -69,8 +63,8 @@ into the Constitution, Management and Expense of the Royal Mint." In Vol
 28 of *House Documents for 1849*.
 
 Stigler, S. M. (1997). Eight Centuries of Sampling Inspection: The Trial
-of the Pyx *Journal of the American Statistical Association*, 72(359),
-493-500
+of the Pyx *Journal of the American Statistical Association*,
+**72**(359), 493-500
 
 ## Examples
 
@@ -120,5 +114,6 @@ Pyx |>
        y="Percentage of an individual bag",
        title="Trial of the Pyx (1848)",
        fill="")
+
 
 ```

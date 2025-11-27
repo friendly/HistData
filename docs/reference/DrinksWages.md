@@ -21,12 +21,6 @@ The firestorm that this report set off is well described by Stigler
 many tables, that he published in a letter to *The Times*, August 10,
 1910.
 
-## Usage
-
-``` r
-data(DrinksWages)
-```
-
 ## Format
 
 A data frame with 70 observations on the following 6 variables, giving
@@ -58,6 +52,13 @@ occupational categories (`trade`).
 
   total number, a numeric vector
 
+## Source
+
+Pearson, K. (1910). *The Times*, August 10, 1910.
+
+Stigler, S. M. (1999). *Statistics on the Table: The History of
+Statistical Concepts and Methods*. Harvard University Press, Table 1.1
+
 ## Details
 
 The data give Karl Pearson's tabulation of the father's trades from an
@@ -67,13 +68,6 @@ giving average weekly wage.
 The wages are averages of the individuals' nominal wages. Class A is
 those with wages under 2.5s.; B: those with wages 2.5s. to 30s.; C:
 wages over 30s.
-
-## Source
-
-Pearson, K. (1910). *The Times*, August 10, 1910.
-
-Stigler, S. M. (1999). *Statistics on the Table: The History of
-Statistical Concepts and Methods*. Harvard University Press, Table 1.1
 
 ## References
 

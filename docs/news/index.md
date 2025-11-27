@@ -1,11 +1,22 @@
 # Changelog
 
+## Version 1.0.0
+
+This is a major release of the package, reorganizing and reformatting
+the documentation and adding one new dataset
+
+- Add `Playfair1824` data \[Thx: Ivan Lokhov\]
+- Convert documentation from Rd to roxygen (painfully!), but also make
+  edits to dataset descriptions, references, …
+- Some contributors made authors
+- Extended package description
+- Ran `roxygen2md(scope="simple")` to use markdown in docs
+
 ## Version 0.9.4
 
 - Switch to recommended versioning
 - Add example graphs from John Russell to `sandbox/`
 - Add link to Horsekicks package
-- Add Playfair1824 data \[Thx: Ivan Lokhov\]
 
 ## Version 0.9-3
 

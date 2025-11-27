@@ -16,12 +16,6 @@ One challenge from these data is to produce useful analyses and
 graphical displays that relate to these characteristics or to other
 aspects of the data.
 
-## Usage
-
-``` r
-data(OldMaps)
-```
-
 ## Format
 
 A data frame with 468 observations on the following 6 variables, giving
@@ -40,7 +34,7 @@ the latitude and longitude of 39 points recorded from 12 sources
 
   Name of the map maker, using `Actual` for the true coordinates of the
   points. A factor with levels `Actual` `Arrowsmith` `Belin` `Cary`
-  `Coronelli` `D'Anville} \code{Del'Isle` `Lattre` `Melish` `Mitchell`
+  `Coronelli` `D'Anville` `Del'Isle` `Lattre` `Melish` `Mitchell`
   `Popple`
 
 - `year`:
@@ -55,19 +49,19 @@ the latitude and longitude of 39 points recorded from 12 sources
 
   Longitude
 
-## Details
-
-Some of the latitude and longitude values are inexplicably negative. It
-is probable that this is an error in type setting, because the table
-footnote says "\* denotes that interpolation accuracy is not good," yet
-no "\*"s appear in the body of the table.
-
 ## Source
 
 Andrews, D. F., and Herzberg, A. M. (1985). *Data: A Collection of
 Problems from Many fields for the Student and Research Worker*. New
 York: Springer, Table 10.1. The data were obtained from
 `http://www.stat.duke.edu/courses/Spring01/sta114/data/Andrews/T10.1`.
+
+## Details
+
+Some of the latitude and longitude values are inexplicably negative. It
+is probable that this is an error in type setting, because the table
+footnote says "\* denotes that interpolation accuracy is not good," yet
+no "\*"s appear in the body of the table.
 
 ## Examples
 
@@ -76,4 +70,5 @@ data(OldMaps)
 ## maybe str(OldMaps) ; plot(OldMaps) ...
 
 with(OldMaps, plot(abs(long),abs(lat), pch=col, col=colors()[point]))
+
 ```

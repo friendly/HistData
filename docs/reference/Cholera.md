@@ -12,12 +12,6 @@ some tables from Farr's report to examine the prevalence of death from
 cholera in the districts of London in relation to the available
 predictors from Farr's table.
 
-## Usage
-
-``` r
-data("Cholera")
-```
-
 ## Format
 
 A data frame with 38 observations on the following 15 variables.
@@ -84,6 +78,15 @@ A data frame with 38 observations on the following 15 variables.
 
   total house values, a numeric vector
 
+## Source
+
+Bingham P., Verlander, N. Q., Cheal M. J. (2004). John Snow, William
+Farr and the 1849 outbreak of cholera that affected London: a reworking
+of the data highlights the importance of the water supply. *Public
+Health*, 118(6), 387-394, Table 2. (The data was kindly supplied by
+Neville Verlander, including additional variables not shown in their
+Table 2.)
+
 ## Details
 
 The supply of `water` was classified as “Thames, between Battersea and
@@ -93,15 +96,6 @@ The factor levels use abbreviations for these.
 
 The data frame is sorted by increasing elevation above the high water
 mark.
-
-## Source
-
-Bingham P., Verlander, N. Q., Cheal M. J. (2004). John Snow, William
-Farr and the 1849 outbreak of cholera that affected London: a reworking
-of the data highlights the importance of the water supply. *Public
-Health*, 118(6), 387-394, Table 2. (The data was kindly supplied by
-Neville Verlander, including additional variables not shown in their
-Table 2.)
 
 ## References
 
@@ -218,5 +212,6 @@ if (require(effects)) {
 #> Loading required package: effects
 #> lattice theme set by effectsTheme()
 #> See ?effectsTheme for details.
+
 
 ```

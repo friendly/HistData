@@ -5,16 +5,17 @@
 - **Michael Friendly**. Author, maintainer.
   [](https://orcid.org/0000-0002-3237-0941)
 
-- **Stephane Dray**. Contributor.
-  [](https://orcid.org/0000-0003-0153-1105)
+- **Stephane Dray**. Author. [](https://orcid.org/0000-0003-0153-1105)
+
+- **Peter Li**. Author.
+
+- **David Bellhouse**. Author.
 
 - **Hadley Wickham**. Contributor.
 
 - **James Hanley**. Contributor.
 
 - **Dennis Murphy**. Contributor.
-
-- **Peter Li**. Contributor.
 
 - **Luiz Droubi**. Contributor.
 
@@ -30,8 +31,6 @@
 
 - **Jim Oeppen**. Contributor.
 
-- **David Bellhouse**. Contributor.
-
 - **Ivan Lokhov**. Contributor.
 
 ## Citation
@@ -39,14 +38,14 @@
 Source:
 [`DESCRIPTION`](https://github.com/friendly/HistData/blob/HEAD/DESCRIPTION)
 
-Friendly M (2025). *HistData: Data Sets from the History of Statistics
-and Data Visualization*. R package version 0.9.4,
-<https://friendly.github.io/HistData/>.
+Friendly M, Dray S, Li P, Bellhouse D (2025). *HistData: Data Sets from
+the History of Statistics and Data Visualization*. R package version
+1.0.0, <https://friendly.github.io/HistData/>.
 
     @Manual{,
       title = {HistData: Data Sets from the History of Statistics and Data Visualization},
-      author = {Michael Friendly},
+      author = {Michael Friendly and Stephane Dray and Peter Li and David Bellhouse},
       year = {2025},
-      note = {R package version 0.9.4},
+      note = {R package version 1.0.0},
       url = {https://friendly.github.io/HistData/},
     }

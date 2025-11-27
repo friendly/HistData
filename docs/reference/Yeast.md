@@ -17,13 +17,6 @@ These are combined here in `Yeast`. In addition, he gives a table (Table
 I) showing the actual number of yeast cells counted in the 20 x 20 grid
 for sample D, given here as `YeastD.mat`.
 
-## Usage
-
-``` r
-data(Yeast)
-  data(YeastD.mat)
-```
-
 ## Format
 
 `Yeast`: A frequency data frame with 36 observations on the following 3
@@ -44,6 +37,13 @@ variables, giving the frequencies of
 `YeastD.mat`: A 20 x 20 matrix containing the count of yeast cells in
 each square for sample D.
 
+## Source
+
+D. J. Hand, F. Daly, D. Lunn, K. McConway and E. Ostrowski (1994). *A
+Handbook of Small Data Sets*. London: Chapman & Hall. The data were
+originally found at:
+https://www2.stat.duke.edu/courses/Spring98/sta113/Data/Hand/yeast.dat
+
 ## Details
 
 Student considers the distribution of a total of \\Nm\\ particles
@@ -54,17 +54,10 @@ is \\q = 1 - 1/N\\. He derives the probability distribution of 0, 1, 2,
 3, ... particles on a single unit area from the binomial expansion of
 \\(p + q)^{mN}\\.
 
-## Source
-
-D. J. Hand, F. Daly, D. Lunn, K. McConway and E. Ostrowski (1994). *A
-Handbook of Small Data Sets*. London: Chapman & Hall. The data were
-originally found at:
-https://www2.stat.duke.edu/courses/Spring98/sta113/Data/Hand/yeast.dat
-
 ## References
 
 "Student" (1906) On the error of counting with a haemocytometer.
-Biometrika, 5, 351-360.
+Biometrika, **5**, 351-360.
 <http://www.medicine.mcgill.ca/epidemiology/hanley/c626/Student_counting.pdf>
 
 ## Examples
@@ -84,4 +77,5 @@ barchart(freq~count|sample, data=Yeast, xlab="Number of Cells", ylab="Frequency"
 # same, using xyplot
 xyplot(freq~count|sample, data=Yeast, xlab="Number of Cells", ylab="Frequency",
   horizontal=FALSE, origin=0, type="h", lwd=10)
+
 ```

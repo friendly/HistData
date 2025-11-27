@@ -72,7 +72,6 @@ Uncertainty before 1900}. Cambridge, MA: Harvard University Press, Table 8.1
 Wachsmuth, A. W., Wilkinson L., Dallal G. E. (2003).  Galton's bend: A
 previously undiscovered nonlinearity in Galton's family stature regression
 data.  \emph{The American Statistician}, 57, 190-192.
-\%\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
 \doi{10.1198/0003130031874}
 }
 \seealso{

@@ -11,13 +11,6 @@ individual observations (Friendly & Denis, 2005). His data on the
 recordings of the twin stars \\\gamma\\ *Virginis* provide an accessible
 example of his methods.
 
-## Usage
-
-``` r
-data("Virginis")
-  data("Virginis.interp")
-```
-
 ## Format
 
 `Virgins`: A data frame with 18 observations on the following 6
@@ -72,6 +65,18 @@ interpolated from his smoothed curve.
   angular velocity, calculated as the instantaneous slopes of tangents
   to the smoothed curve, a numeric vector
 
+## Source
+
+Herschel, J. F. W. III. Micrometrical Measures of 364 Double Stars with
+a 7-feet Equatorial Acromatic Telescope, taken at Slough, in the years
+1828, 1829, and 1830 *Memoirs of the Royal Astronomical Society*, 1833,
+**5**, 13-91.
+
+Herschel, J. F. W. On the Investigation of the Orbits of Revolving
+Double Stars: Being a Supplement to a Paper Entitled "Micrometrical
+Measures of 364 Double Stars" *Memoirs of the Royal Astronomical
+Society*, 1833, **5**, 171-222.
+
 ## Details
 
 The data in `Virginis` come from the table on p. 35 of the
@@ -88,23 +93,11 @@ the table on p. 35 refers to Joseph Fraunhofer.
 The data in `Virginis.interp` come from Table 1 on p. 190 of the
 supplementary paper.
 
-## Source
-
-Herschel, J. F. W. III. Micrometrical Measures of 364 Double Stars with
-a 7-feet Equatorial Acromatic Telescope, taken at Slough, in the years
-1828, 1829, and 1830 *Memoirs of the Royal Astronomical Society*, 1833,
-5, 13-91.
-
-Herschel, J. F. W. On the Investigation of the Orbits of Revolving
-Double Stars: Being a Supplement to a Paper Entitled "Micrometrical
-Measures of 364 Double Stars" *Memoirs of the Royal Astronomical
-Society*, 1833, 5, 171-222.
-
 ## References
 
 Friendly, M. & Denis, D. The early origins and development of the
 scatterplot. *Journal of the History of the Behavioral Sciences*, 2005,
-41, 103-130.
+**41**, 103-130.
 
 ## Examples
 
@@ -122,5 +115,6 @@ plot(posangle ~ year, data=Virginis.interp,
 # The data points, and indication of their uncertainty
 points(posangle ~ year, data=Virginis, pch=16)
 points(posangle ~ year, data=Virginis, cex=weight/2)
+
 
 ```

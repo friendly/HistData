@@ -1,10 +1,10 @@
-# W. Stanley Jevons' data on numerical discrimination
+# W. Stanley Jevons' data on Numerical Discrimination
 
 In a remarkable brief note in *Nature*, 1871, W. Stanley Jevons
 described the results of an experiment he had conducted on himself to
 determine the limits of the number of objects an observer could
 comprehend immediately without counting them. This was an important
-philosophical question: How many objects can the mind embrace at once?
+philosophical question: *How many objects can the mind embrace at once?*
 
 He carried out 1027 trials in which he tossed an "uncertain number" of
 uniform black beans into a box and immediately attempted to estimate the
@@ -13,12 +13,6 @@ analysis anticipated by 75 years one of the most influential papers in
 modern cognitive psychology by George Miller (1956), "The magical number
 7 plus or minus 2: Some limits on ..." For Jevons, the magical number
 was 4.5, representing an empirical law of complete accuracy.
-
-## Usage
-
-``` r
-data(Jevons)
-```
 
 ## Format
 
@@ -41,15 +35,15 @@ variables.
 
   `actual`-`estimated`: a numeric vector
 
-## Details
-
-The original data were presented in a two-way, 13 x 13 frequency table,
-`estimated` (3:15) x `actual` (3:15).
-
 ## Source
 
 Jevons, W. S. (1871). The Power of Numerical Discrimination, *Nature*,
 1871, III (281-282)
+
+## Details
+
+The original data were presented in a two-way, 13 x 13 frequency table,
+`estimated` (3:15) x `actual` (3:15).
 
 ## References
 
@@ -152,5 +146,6 @@ abline(h=0)
 #> 
 #>     arrange, count, desc, failwith, id, mutate, rename, summarise,
 #>     summarize
+
 
 ```
