@@ -582,8 +582,8 @@ NULL
 #' @seealso \code{\link{Cholera}}, \code{\link{Snow.deaths}}
 #' 
 #' @references Friendly, M. & Wainer, H. (2021).  *A History of Data
-#' Visualization and Graphic Communication*, Harvard University Press. %
-#' <https://www.hup.harvard.edu/catalog.php?isbn=9780674975231>.
+#' Visualization and Graphic Communication*, Harvard University Press. 
+#' ISBN 9780674975231.
 #' 
 #' Riley, J. (2023). "Cholera in Victorian England", blog post,
 #' <https://openor.blog/2023/07/27/cholera-in-victorian-england/>.

@@ -50,9 +50,8 @@ analysis using modern methods. I call this “Re-visioning”, meaning *to
 see again, hopefully in a new light*.
 
 They are also used in our book, (Friendly & Wainer, 2021), *A History of
-Data Visualization & Graphic Communication*,
-<https://www.hup.harvard.edu/books/9780674975231>. See also the
-[companion website for this
+Data Visualization & Graphic Communication*, Harvard University Press,
+ISBN 9780674975231. See also the [companion website for this
 book](https://friendly.github.io/HistDataVis/).
 
 If you are looking more widely for datasets to use for examples,
@@ -187,9 +186,8 @@ tt(dsets, width = c(.2, .8)) |>
   package](https://cran.r-project.org/package=Horsekicks) contains the
   classic data from von Bortkeiwicz, “Death by the kick of a horse in
   the Prussian Army”, with additional data on deaths by falling from a
-  horse and by drowning. A
-  [vignette](https://cran.r-project.org/web/packages/Horsekicks/vignettes/hkdeaths.html)
-  provides some analyses.
+  horse and by drowning.
+  <!-- A [vignette](https://cran.r-project.org/web/packages/Horsekicks/vignettes/hkdeaths.html) provides some analyses.  -->
 
 - [Rdatasets](https://vincentarelbundock.github.io/Rdatasets/) is a
   collection of over 2500 datasets culled from CRAN packages to make
