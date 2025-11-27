@@ -33,7 +33,7 @@ library(HistData)
 # HistData  <img src="man/figures/logo.png" align="right" height="200px" />
 **Data Sets from the History of Statistics and Data Visualization**
 
-Dev. Version: 0.9-4
+Dev. Version: 1.0.0
 
 The `HistData` package provides a collection of small data sets
 that are interesting and important in the history of statistics and data
@@ -43,12 +43,15 @@ instructional use (as examples, problem sets or projects) and for historical res
 Some of these present interesting challenges, or opportunities to "show off",
 with graphics or analysis in R. 
 
-Many of the data sets have examples which reproduce an historical graph or analysis.
-These are meant mainly as starters for more extensive re-analysis or graphical
-elaboration. If you are interested in any of these problems or data sets, I've purposely left
+Many of the data sets contained here have examples which reproduce an historical graph or analysis.
+These are meant mainly as simple starters for more extensive re-analysis or graphical
+elaboration.  If you are interested in any of these problems or data sets, there is
 lots of room to do better!
 
-They are part of a program of research called *statistical historiography*
+Some of these  been featured in social media calls for participation, such as the [30 Day Chart Challenge](https://github.com/30DayChartChallenge/Edition2025)
+
+
+This is part of a program of research called *statistical historiography*
 (Friendly, 2007; Friendly & Denis, 2001; Friendly et-al, 2016)
 meaning the use of statistical methods to study problems and questions in the
 history of statistics and graphics. A main aspect of this is the increased

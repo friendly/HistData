@@ -29,8 +29,9 @@
 #' presents a challenge in trying re-create it, or do better using modern graphics methods.
 #' @source 
 #' Ivan Lokhov, Remaking a 200-year-old chart \url{https://www.datawrapper.de/blog/playfair-chronology-multiple-lines}
+#' 
 #' @references
-#' Playfair, W. (1824). \emph{Chronology of Public Events and Remarkable Occurrences within the Last Fifty Years; or from 1774 to 1824}, published in London.
+#' Playfair, W. (1824). \emph{Chronology of Public Events and Remarkable Occurrences within the Last Fifty Years; or from 1774 to 1824}, published by W. Lewis, Finch Lane,  London.
 #' 
 #' The original chart can be seen on Wikimedia at: \url{https://bit.ly/4ihX92a}
 #' 

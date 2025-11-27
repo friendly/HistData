@@ -2,6 +2,84 @@
 # of Snow's cholera data possible
 
 # draw the map with the pieces
+
+
+#' Draw John Snow's Map of Cholera in London
+#' 
+#' The main function \code{SnowMap()} draws versions of John Snow's map of
+#' cholera deaths in the South London area surrounding the Borad Street pump.
+#' during the 1854 outbreak.
+#' 
+#' @details
+#' \code{SnowMap()} is a wrapper for the various subfunctions also listed here:
+#' \itemize{
+#'   \item \code{Splot} sets up the basic plot 
+#'   \item \code{Sstreets} draws the streets
+#'   \item \code{Sdeaths} plots the deaths 
+#'   \item \code{Sdeaths} plots the pump locations 
+#'   \item \code{Sscale} draws the scale 
+#'   \item \code{Spolygons} draws the boundaries of the Voronoi polygons separating the pumps 
+#'   \item \code{Sdensity} draws and fills contours of the 2D density of deaths
+#' }
+#' 
+#' 
+#' @aliases SnowMap Splot Sdeaths Spumps Sstreets Sscale Spolygons Sdensity
+#' @param xlim Limit for the horizontal axis.  Specify ranges smaller than the defaults to zoom the plot.
+#' @param ylim Limit for the vertical axis.
+#' @param axis.labels Logical. Show axis tick mark labels?
+#' @param main Plot title
+#' @param scale Logical; draw a scale (in meters) on the plot
+#' @param polygons Logical; Use \code{Spolygons} to draw the \code{Snow.polygons} on the plot?
+#' @param density Logical; Use \code{Sdensity} to draw the 2D bivariate density of deaths on the plot?
+#' @param streets.args List of arguments passed to \code{Sstreets}
+#' @param deaths.args List of arguments passed to \code{Sdeaths}
+#' @param pumps.args List of arguments passed to \code{Spumps}
+#' @param scale.args List of arguments passed to \code{Sscale}
+#' @param polygons.args List of arguments passed to \code{Spolygons}. Note that \code{col} here now refers to the fill colors, passed to
+#'        \code{\link[graphics]{polygon}}. The \code{col} argument here can be a vector of up to 13 colors, one for each pump region.
+#' @param density.args List of arguments passed to \code{Sdensity}
+#' @param xlab Label for horizontal axis
+#' @param ylab Label for vertical axis
+#' @param col Color of points and lines used by various functions
+#' @param pch Point character used by by various functions
+#' @param cex Character size used by by various functions
+#' @param cex.lab Character size for labels used by \code{Spumps}
+#' @param lwd Line width used by by various functions
+#' @param border Color of border lines used by \code{Spolygons}
+#' @param xs x location of the scale used by \code{Sscale}
+#' @param ys y location of the scale used by \code{Sscale}
+#' @param lty Line type used by by various functions
+#' @param bandwidth Bandwidth used by \code{\link[KernSmooth]{bkde2D}} in \code{Sdensity}
+#' @param col1 Lower level of color range used by \code{\link[grDevices]{colorRampPalette}} in \code{Sdensity}
+#' @param col2 Upper level of color range used by \code{\link[grDevices]{colorRampPalette}} in \code{Sdensity}
+#' @return None
+#' @author Michael Friendly
+#' @seealso \code{\link{Snow}} for description of the data sets
+#' 
+#' \code{\link[KernSmooth]{bkde2D}}, \code{\link[grDevices]{colorRampPalette}}
+#' @references Snow, J. (1885). \emph{On the Mode of Communication of Cholera}.
+#' London: John Churchill
+#' 
+#' %John Mackenzie, "GIS Analyses of Dr. Snow's Map", %
+#' \url{http://www1.udel.edu/johnmack/frec480/cholera/cholera2.html} %describes
+#' some related visualizations using ArcGIS.
+#' 
+#' Thomas Coleman, "John Snow Research project",
+#' \code{https://www.hilerun.org/econ/papers/snow/index.html} gives extensive
+#' analyses of Snow's data with R notebooks on Github.
+#' @keywords hplot
+#' @examples
+#' 
+#' SnowMap()
+#' SnowMap(axis.labels=TRUE)
+#' SnowMap(deaths.args=list(col="darkgreen"))
+#' 
+#' SnowMap(polygons=TRUE, main="Snow's Cholera Map with Pump Polygons")
+#' 
+#' SnowMap(density=TRUE)
+#' 
+#' 
+#' @export 
 SnowMap <- function(xlim=c(3,20), ylim=c(3,20), axis.labels=FALSE, 
                     main="Snow's Cholera Map of London",
                     scale=TRUE, polygons=FALSE, density=FALSE,
@@ -24,9 +102,11 @@ SnowMap <- function(xlim=c(3,20), ylim=c(3,20), axis.labels=FALSE,
 }
 
 
-# define some funtions to make the pieces re-usable
+#' define some funtions to make the pieces re-usable
 
-# setup basic Snow map plot
+#' setup basic Snow map plot
+#' @rdname SnowMap
+#' @export 
 Splot <- function(xlim=c(3,20), ylim=c(3,20), 
 				xlab="", ylab="", axis.labels=FALSE,
 				main="Snow's Cholera Map of London") {
@@ -41,6 +121,8 @@ Splot <- function(xlim=c(3,20), ylim=c(3,20),
 }
 
 # draw points for deaths
+#' @rdname SnowMap
+#' @export 
 Sdeaths <- function(col="red", pch=15, cex=0.6) {
   # make CRAN checks happy
   Snow.deaths <- NULL   #immediately replaced on next line
@@ -49,6 +131,8 @@ Sdeaths <- function(col="red", pch=15, cex=0.6) {
 	}
 
 # function to plot and label the pump locations
+#' @rdname SnowMap
+#' @export 
 Spumps <- function(col="blue", pch=17, cex=1.5, cex.lab=0.9)  {
   # make CRAN checks happy
   Snow.pumps <- NULL   #immediately replaced on next line
@@ -58,6 +142,8 @@ Spumps <- function(col="blue", pch=17, cex=1.5, cex.lab=0.9)  {
 }
 
 # function to draw the streets 
+#' @rdname SnowMap
+#' @export 
 Sstreets <- function(col="gray", lwd=1) {
   Snow.streets <- NULL   #immediately replaced on next line
   data(Snow.streets, package = 'HistData', envir = environment())
@@ -66,6 +152,8 @@ Sstreets <- function(col="gray", lwd=1) {
 }
 
 # draw a scale showing distance in meters in upper left
+#' @rdname SnowMap
+#' @export 
 Sscale <- function(xs=3.5, ys=19.7) {
    scale <- matrix(c(0,0, 4,0, NA, NA), nrow=3, ncol=2, byrow=TRUE)
    colnames(scale)<- c("x","y")
@@ -89,6 +177,8 @@ Sscale <- function(xs=3.5, ys=19.7) {
 # 		}
 # }
 
+#' @rdname SnowMap
+#' @export
 Spolygons <- function(col=NA, border="brown", lwd=2, lty=1) {
   #  Snow.polygons2 <- NULL   #immediately replaced on next line
   #  data(Snow.polygons2, package = 'HistData', envir = environment())
@@ -104,6 +194,8 @@ Spolygons <- function(col=NA, border="brown", lwd=2, lty=1) {
 
 
 # Plot a bivariate density estimate of deaths
+#' @rdname SnowMap
+#' @export
 Sdensity <- function(bandwidth=c(0.5,0.5), 
                      col1=rgb(0,1,0,0),    # green
                      col2=rgb(1,0,0,.8)    # red

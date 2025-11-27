@@ -65,7 +65,7 @@ with(events, {
 
 }
 \references{
-Playfair, W. (1824). \emph{Chronology of Public Events and Remarkable Occurrences within the Last Fifty Years; or from 1774 to 1824}, published in London.
+Playfair, W. (1824). \emph{Chronology of Public Events and Remarkable Occurrences within the Last Fifty Years; or from 1774 to 1824}, published by W. Lewis, Finch Lane,  London.
 
 The original chart can be seen on Wikimedia at: \url{https://bit.ly/4ihX92a}
 
