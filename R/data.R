@@ -56,7 +56,7 @@
 #' S. Zabell (1976). Arbuthnot, Heberden, and the *Bills of Mortality*.
 #' Technical Report No. 40, Department of Statistics, University of Chicago.
 #' 
-#' See the example by John Russell posted at <https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge03.R>
+#' See the example by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge03.R)
 #' 
 #' @source Arbuthnot, John (1710). "An argument for Devine Providence, taken
 #' from the constant Regularity observ'd in the Births of both Sexes,"
