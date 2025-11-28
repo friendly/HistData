@@ -73,6 +73,8 @@ Wachsmuth, A. W., Wilkinson L., Dallal G. E. (2003).  Galton's bend: A
 previously undiscovered nonlinearity in Galton's family stature regression
 data.  \emph{The American Statistician}, 57, 190-192.
 \doi{10.1198/0003130031874}
+
+See the example by John Russell posted at \url{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge02.R}
 }
 \seealso{
 \code{\link{GaltonFamilies}}, \code{\link{PearsonLee}},

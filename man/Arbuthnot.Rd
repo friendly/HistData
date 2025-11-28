@@ -68,12 +68,14 @@ with(Arbuthnot, plot(Year,Total, type='b', ylab="Total Christenings"))
 \references{
 Campbell, R. B., Arbuthnot and the Human Sex Ratio (2001).
 \emph{Human Biology}, 73:4, 605-610.
-\%\url{http://www.math.uni.edu/~campbell/arbuth.html}
+\url{https://www.math.uni.edu/~campbell/arbuth.html}
 
 Creighton, C. (1965). A History of Epidemics in Britain, 2nd edition, vol. 1
 and 2.  NY: Barnes and Noble.
 
 S. Zabell (1976). Arbuthnot, Heberden, and the \emph{Bills of Mortality}.
 Technical Report No. 40, Department of Statistics, University of Chicago.
+
+See the example by John Russell posted at \url{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge03.R}
 }
 \keyword{datasets}

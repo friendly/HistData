@@ -48,13 +48,16 @@
 #' }
 #' @references Campbell, R. B., Arbuthnot and the Human Sex Ratio (2001).
 #' *Human Biology*, 73:4, 605-610.
-#' %<http://www.math.uni.edu/~campbell/arbuth.html>
+#' <https://www.math.uni.edu/~campbell/arbuth.html>
 #' 
 #' Creighton, C. (1965). A History of Epidemics in Britain, 2nd edition, vol. 1
 #' and 2.  NY: Barnes and Noble.
 #' 
 #' S. Zabell (1976). Arbuthnot, Heberden, and the *Bills of Mortality*.
 #' Technical Report No. 40, Department of Statistics, University of Chicago.
+#' 
+#' See the example by John Russell posted at <https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge03.R>
+#' 
 #' @source Arbuthnot, John (1710). "An argument for Devine Providence, taken
 #' from the constant Regularity observ'd in the Births of both Sexes,"
 #' *Philosophical transactions*, 27, 186-190.  Published in 1711.
@@ -480,6 +483,8 @@ NULL
 #' Stationary Office. Written by William Farr.
 #' <https://ia600208.us.archive.org/11/items/b24751297/b24751297.pdf> The
 #' relevant tables are at pages clii -- clvii.
+#' 
+#' See the example by John Russell posted at <https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge01.R>
 #' 
 #' @source Bingham P., Verlander, N. Q., Cheal M. J. (2004). John Snow, William
 #' Farr and the 1849 outbreak of cholera that affected London: a reworking of
@@ -1028,6 +1033,8 @@ NULL
 #' data.  *The American Statistician*, 57, 190-192.
 #' \doi{10.1198/0003130031874}
 #' 
+#' See the example by John Russell posted at <https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge02.R>
+#'
 #' @source Galton, F. (1886). Regression Towards Mediocrity in Hereditary
 #' Stature *Journal of the Anthropological Institute*, 15, 246-263
 #' @keywords datasets
@@ -2407,6 +2414,10 @@ NULL
 #' of Problems from Many fields for the Student and Research Worker*. New York:
 #' Springer, Table 10.1.  The data were obtained from
 #' `http://www.stat.duke.edu/courses/Spring01/sta114/data/Andrews/T10.1`.
+#' 
+#' @references 
+#' See the example by John Russell posted at <https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge10.R>
+#' 
 #' @keywords datasets spatial
 #' @examples
 #' 
@@ -2460,6 +2471,8 @@ NULL
 #' regression data.  *The American Statistician*, **57**, 190-192.
 #' %<http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf>
 #' \doi{10.1198/0003130031874}.
+#' 
+#' See the example by John Russell posted at <https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge02.R>
 #' 
 #' @source 
 #' Pearson, K. and Lee, A. (1896). Mathematical contributions to the

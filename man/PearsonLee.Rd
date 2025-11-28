@@ -103,6 +103,8 @@ bend: A previously undiscovered nonlinearity in Galton's family stature
 regression data.  \emph{The American Statistician}, \strong{57}, 190-192.
 \%\url{http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf}
 \doi{10.1198/0003130031874}.
+
+See the example by John Russell posted at \url{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge02.R}
 }
 \seealso{
 \code{\link{Galton}}
