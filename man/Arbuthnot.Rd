@@ -76,6 +76,6 @@ and 2.  NY: Barnes and Noble.
 S. Zabell (1976). Arbuthnot, Heberden, and the \emph{Bills of Mortality}.
 Technical Report No. 40, Department of Statistics, University of Chicago.
 
-See the example by John Russell posted at \url{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge03.R}
+See the example by John Russell for the \href{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge03.R}{30DayChartChallenge}
 }
 \keyword{datasets}
