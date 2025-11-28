@@ -30,7 +30,7 @@ In addition to the question of the relation between heights of parents and
 their offspring, for which this data is mainly famous, Galton had another
 purpose which the data in this form allows to address: Does marriage
 selection indicate a relationship between the heights of husbands and wives?,
-a topic he called \emph{assortative mating}. Keen \href{2010}{p. 297--298}
+a topic he called \emph{assortative mating}. Keen (2010, p. 297--298)
 provides a brief discussion of this topic.
 }
 \details{

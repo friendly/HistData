@@ -1067,7 +1067,7 @@ NULL
 #' their offspring, for which this data is mainly famous, Galton had another
 #' purpose which the data in this form allows to address: Does marriage
 #' selection indicate a relationship between the heights of husbands and wives?,
-#' a topic he called *assortative mating*. Keen [p. 297--298](2010)
+#' a topic he called *assortative mating*. Keen (2010, p. 297--298)
 #' provides a brief discussion of this topic.
 #' 
 #' @details
@@ -1093,7 +1093,8 @@ NULL
 #' }
 #' @seealso \code{\link{Galton}}, \code{\link{PearsonLee}}
 #' 
-#' @references Galton, F. (1886). Regression Towards Mediocrity in Hereditary
+#' @references 
+#' Galton, F. (1886). Regression Towards Mediocrity in Hereditary
 #' Stature *Journal of the Anthropological Institute*, 15, 246-263
 #' 
 #' Hanley, J. A. (2004). "Transmuting" Women into Men: Galton's Family Data on
