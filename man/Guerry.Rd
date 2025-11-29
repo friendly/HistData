@@ -27,7 +27,7 @@ following 23 variables.
 \item{\code{Lottery}}{Per capita wager on Royal Lottery. Ranked ratio of the proceeds bet on the royal lottery to population--- Average for the years 1822-1826. Source: A1 (Compte rendus par le ministere des finances)}
 \item{\code{Desertion}}{Military desertion, ratio of the number of young soldiers accused of desertion to the force of the military contingent, minus the deficit produced by the insufficiency of available billets-- Average of the years 1825-1827. Source: A1 (Compte du ministere du guerre, 1829 etat V) }
 \item{\code{Instruction}}{Instruction. Ranks recorded from Guerry's map of Instruction. Note: this is inversely related to \code{Literacy} (as defined here)}
-\item{\code{Prostitutes}}{Prostitutes in Paris. Number of prostitutes registered in Paris from 1816 to 1834, classified by the department of thei birth Source: Parent-Duchatelet (1836), \emph{De la prostitution en Paris}}
+\item{\code{Prostitutes}}{Prostitutes in Paris. Number of prostitutes registered in Paris from 1816 to 1834, classified by the department of their birth Source: Parent-Duchatelet (1836), \emph{De la prostitution en Paris}}
 \item{\code{Distance}}{Distance to Paris (km). Distance of each department centroid to the centroid of the Seine (Paris) Source: calculated from department centroids }
 \item{\code{Area}}{Area (1000 km^2). Source: Angeville (1836) }
 \item{\code{Pop1831}}{1831 population. Population in 1831, taken from Angeville (1836), \emph{Essai sur la Statistique de la Population fran?ais}, in 1000s }

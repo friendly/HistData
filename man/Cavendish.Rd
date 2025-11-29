@@ -13,7 +13,7 @@ A data frame with 29 observations on the following 3 variables.
 }
 }
 \source{
-Oeiginally from Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
+Originally from Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
 link no longer works.
 
 Stephen M. Stigler (1977), "Do robust estimators work with \emph{real}

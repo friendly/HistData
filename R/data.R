@@ -339,7 +339,7 @@ NULL
 #' and engineering*, NY: Wiley, p. 520.
 #' 
 #' @source 
-#' Oeiginally from Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
+#' Originally from Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
 #' link no longer works.
 #' 
 #' Stephen M. Stigler (1977), "Do robust estimators work with *real*
@@ -1207,7 +1207,7 @@ NULL
 #'   \item{`Lottery`}{Per capita wager on Royal Lottery. Ranked ratio of the proceeds bet on the royal lottery to population--- Average for the years 1822-1826. Source: A1 (Compte rendus par le ministere des finances)} 
 #'   \item{`Desertion`}{Military desertion, ratio of the number of young soldiers accused of desertion to the force of the military contingent, minus the deficit produced by the insufficiency of available billets-- Average of the years 1825-1827. Source: A1 (Compte du ministere du guerre, 1829 etat V) } 
 #'   \item{`Instruction`}{Instruction. Ranks recorded from Guerry's map of Instruction. Note: this is inversely related to `Literacy` (as defined here)}
-#'   \item{`Prostitutes`}{Prostitutes in Paris. Number of prostitutes registered in Paris from 1816 to 1834, classified by the department of thei birth Source: Parent-Duchatelet (1836), *De la prostitution en Paris*}
+#'   \item{`Prostitutes`}{Prostitutes in Paris. Number of prostitutes registered in Paris from 1816 to 1834, classified by the department of their birth Source: Parent-Duchatelet (1836), *De la prostitution en Paris*}
 #'   \item{`Distance`}{Distance to Paris (km). Distance of each department centroid to the centroid of the Seine (Paris) Source: calculated from department centroids } 
 #'   \item{`Area`}{Area (1000 km^2). Source: Angeville (1836) } 
 #'   \item{`Pop1831`}{1831 population. Population in 1831, taken from Angeville (1836), *Essai sur la Statistique de la Population fran?ais*, in 1000s } 
