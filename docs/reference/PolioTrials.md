@@ -41,8 +41,8 @@ A data frame with 8 observations on the following 6 variables.
 
 ## Source
 
-Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-<https://www.math.uah.edu/stat/data/Polio.html>
+Originally from Kyle Siegrist, "Virtual Laboratories in Probability and
+Statistics", link no longer works.
 
 Thomas Francis, Robert Korn, et al. (1955). "An Evaluation of the 1954
 Poliomyelitis Vaccine Trials", *American Journal of Public Health*,

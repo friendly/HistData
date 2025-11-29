@@ -7,7 +7,7 @@
 
 - **Stephane Dray**. Author. [](https://orcid.org/0000-0003-0153-1105)
 
-- **Peter Li**. Author.
+- **Peter Li**. Author. [](https://orcid.org/0000-0001-9602-9550)
 
 - **David Bellhouse**. Author.
 

@@ -51,13 +51,12 @@ variables.
 
 Macdonell, W. R. (1902). On Criminal Anthropometry and the
 Identification of Criminals. *Biometrika*, 1(2), 177-227.
-[doi:10.1093/biomet/1.2.177](https://doi.org/10.1093/biomet/1.2.177) %
-<http://www.jstor.org/stable/2331487>
+[doi:10.1093/biomet/1.2.177](https://doi.org/10.1093/biomet/1.2.177)
 
 The data used here were obtained from:
 
 Hanley, J. (2008). Macdonell data used by Student.
-<http://www.medicine.mcgill.ca/epidemiology/hanley/Student/>
+<https://jhanley.biostat.mcgill.ca/Student/>
 
 ## Details
 
@@ -177,8 +176,8 @@ xtabs(frequency ~ finger+round(height,3), data=Macdonell)
 #>   13.5     0     0    0     0     1    0     0     0    0
 
 ## Some examples by james.hanley@mcgill.ca    October 16, 2011
-## http://www.biostat.mcgill.ca/hanley/
-## See:  http://www.biostat.mcgill.ca/hanley/Student/
+## https://jhanley.biostat.mcgill.ca/
+## See:  https://jhanley.biostat.mcgill.ca/Student/
 
 ###############################################
 ##  naive contour plots of height and finger ##
@@ -291,9 +290,9 @@ c(mu,sigma)
 
 # see also the photographs from Student's notebook ('Original small sample data and notes")
 # under the link "Gosset' 750 samples of size n=4" 
-# on website http://www.biostat.mcgill.ca/hanley/Student/
+# on website https://jhanley.biostat.mcgill.ca/Student/
 # and while there, look at the cover of the Notebook containing his yeast-cell counts
-# http://www.medicine.mcgill.ca/epidemiology/hanley/Student/750samplesOf4/Covers.JPG
+# https://jhanley.biostat.mcgill.ca/Student/750samplesOf4
 # (Biometrika 1907) and decide for yourself why Gosset, when forced to write under a 
 # pen-name, might have taken the name he did!
 

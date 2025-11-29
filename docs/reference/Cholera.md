@@ -105,6 +105,9 @@ Written by William Farr.
 <https://ia600208.us.archive.org/11/items/b24751297/b24751297.pdf> The
 relevant tables are at pages clii – clvii.
 
+See the example by by John Russell for the
+[30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge01.R)
+
 ## See also
 
 [`CholeraDeaths1849`](https://friendly.github.io/HistData/reference/CholeraDeaths1849.md),

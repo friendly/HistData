@@ -63,6 +63,11 @@ is probable that this is an error in type setting, because the table
 footnote says "\* denotes that interpolation accuracy is not good," yet
 no "\*"s appear in the body of the table.
 
+## References
+
+See the example by John Russell for the
+[30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge10.R)
+
 ## Examples
 
 ``` r

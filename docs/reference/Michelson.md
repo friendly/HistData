@@ -30,8 +30,8 @@ variable, given in time order of data collection
 
 ## Source
 
-Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-<https://www.math.uah.edu/stat/data/Michelson.html>
+Originally from Kyle Siegrist, "Virtual Laboratories in Probability and
+Statistics", link no longer works.
 
 Stephen M. Stigler (1977), "Do robust estimators work with *real*
 data?", *Annals of Statistics*, **5**, 1055-1098

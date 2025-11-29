@@ -99,6 +99,9 @@ Friendly, M. & Denis, D. The early origins and development of the
 scatterplot. *Journal of the History of the Behavioral Sciences*, 2005,
 **41**, 103-130.
 
+See the example by John Russell for the
+[30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge22.R)
+
 ## Examples
 
 ``` r

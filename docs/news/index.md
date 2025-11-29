@@ -11,6 +11,9 @@ the documentation and adding one new dataset
 - Some contributors made authors
 - Extended package description
 - Ran `roxygen2md(scope="simple")` to use markdown in docs
+- Fixed broken URLs
+- Add [@references](https://github.com/references) to nice examples of
+  the use of these datasets
 
 ## Version 0.9.4
 

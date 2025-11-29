@@ -29,8 +29,8 @@ A data frame with 29 observations on the following 3 variables.
 
 ## Source
 
-Kyle Siegrist, "Virtual Laboratories in Probability and Statistics",
-<https://www.math.uah.edu/stat/data/Cavendish.html>
+Oeiginally from Kyle Siegrist, "Virtual Laboratories in Probability and
+Statistics", link no longer works.
 
 Stephen M. Stigler (1977), "Do robust estimators work with *real*
 data?", *Annals of Statistics*, 5, 1055-1098

@@ -90,24 +90,16 @@ presents a challenge in trying re-create it, or do better using modern graphics 
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
     <p>Playfair, W. (1824). <em>Chronology of Public Events and Remarkable Occurrences within the Last Fifty Years; or from 1774 to 1824</em>, published by W. Lewis, Finch Lane,  London.</p>
-<p>The original chart can be seen on Wikimedia at: <a href="https://bit.ly/4ihX92a" class="external-link">https://bit.ly/4ihX92a</a></p>
+<p>The original chart can be seen on Wikimedia at: https://bit.ly/4ihX92a</p>
 <p>Spence, I., Fenn, C. R., &amp; Klein, S. (2017). Who is buried in Playfairs grave? <em>Significance</em>, 14(5), 20–23. <a href="https://doi.org/10.1111/j.1740-9713.2017.01071.x" class="external-link">doi:10.1111/j.1740-9713.2017.01071.x</a></p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">Playfair1824</span><span class="op">)</span></span></span>
+<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>data set 'Playfair1824' not found</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">Playfair1824</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 'data.frame':	55 obs. of  9 variables:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Year       : num  1770 1771 1772 1773 1774 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Stocks     : num  79.6 76.3 78.7 75.8 77.2 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Wheat      : num  NA NA NA NA NA NA NA NA NA NA ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Bread      : num  23.5 24.1 25.6 25.9 26.2 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Debt       : num  14 14 13.7 13.7 13.7 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Exports    : num  11.6 12.2 11.3 11 12.2 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Imports    : num  NA NA NA NA NA NA NA NA NA NA ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Expenditure: num  9.21 9.21 9.22 9.22 9.23 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Revenue    : num  7.72 8.03 8.03 7.74 8.04 ...</span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'Playfair1824' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Plot multiple time series with matplot()</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/matplot.html" class="external-link">matplot</a></span><span class="op">(</span><span class="va">Playfair1824</span><span class="op">$</span><span class="va">Year</span>, <span class="va">Playfair1824</span><span class="op">[</span>, <span class="op">-</span><span class="fl">1</span><span class="op">]</span>,</span></span>
@@ -117,6 +109,7 @@ presents a challenge in trying re-create it, or do better using modern graphics 
 <span class="r-in"><span>        ylab <span class="op">=</span> <span class="st">"value"</span>,</span></span>
 <span class="r-in"><span>        ylim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">140</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>        main <span class="op">=</span> <span class="st">"Linear Chronology, Exhibiting the Revenues, Expenditure, ... from 1770 to 1824"</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'Playfair1824' not found</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># main events</span></span></span>
 <span class="r-in"><span><span class="va">events</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span></span>
@@ -133,7 +126,7 @@ presents a challenge in trying re-create it, or do better using modern graphics 
 <span class="r-in"><span>         angle <span class="op">=</span> <span class="fl">90</span>, length <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/graphics/text.html" class="external-link">text</a></span><span class="op">(</span><span class="op">(</span><span class="va">start</span><span class="op">+</span><span class="va">end</span><span class="op">)</span><span class="op">/</span><span class="fl">2</span>, <span class="fl">132</span>, <span class="va">event</span>, pos <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="Playfair1824-1.png" alt="" width="700" height="433"></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in arrows(x0 = start, x1 = end, y0 = 130, y1 = 130, lwd = 3, code = 3,     angle = 90, length = 0.05):</span> plot.new has not been called yet</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>

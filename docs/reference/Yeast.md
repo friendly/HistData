@@ -58,7 +58,10 @@ is \\q = 1 - 1/N\\. He derives the probability distribution of 0, 1, 2,
 
 "Student" (1906) On the error of counting with a haemocytometer.
 Biometrika, **5**, 351-360.
-<http://www.medicine.mcgill.ca/epidemiology/hanley/c626/Student_counting.pdf>
+<https://jhanley.biostat.mcgill.ca/bios601/Intensity-Rate/Student_counting.pdf>
+
+See the example by John Russell for the
+[30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge28.R)
 
 ## Examples
 

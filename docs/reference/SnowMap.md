@@ -200,10 +200,6 @@ None
 Snow, J. (1885). *On the Mode of Communication of Cholera*. London: John
 Churchill
 
-%John Mackenzie, "GIS Analyses of Dr. Snow's Map", %
-[http://www1.udel.edu/johnmack/frec480/cholera/cholera2.html](http://www1.udel.edu/johnmack/frec480/cholera/cholera2.md)
-%describes some related visualizations using ArcGIS.
-
 Thomas Coleman, "John Snow Research project",
 `https://www.hilerun.org/econ/papers/snow/index.html` gives extensive
 analyses of Snow's data with R notebooks on Github.

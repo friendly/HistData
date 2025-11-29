@@ -151,6 +151,9 @@ Reinking, Lewiston, N.Y. : Edwin Mellen Press, 2002.
 Parent-Duchatelet, A. (1836). *De la prostitution dans la ville de
 Paris*, 3rd ed, 1857, p. 32, 36
 
+See the example by John Russell for the
+[30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge22.R)
+
 ## Details
 
 Note that most of the variables (e.g., `Crime_pers`) are scaled so that
@@ -169,8 +172,8 @@ the minimum by rank 86.
 
 Dray, S. and Jombart, T. (2011). A Revisit Of Guerry's Data: Introducing
 Spatial Constraints In Multivariate Analysis. *The Annals of Applied
-Statistics*, Vol. 5, No. 4, 2278-2299. <http://arxiv.org/pdf/1202.6485>,
-DOI: 10.1214/10-AOAS356.
+Statistics*, Vol. 5, No. 4, 2278-2299.
+<https://arxiv.org/pdf/1202.6485>, DOI: 10.1214/10-AOAS356.
 
 Brunsdon, C. and Dykes, J. (2007). Geographically weighted
 visualization: interactive graphics for scale-varying exploratory

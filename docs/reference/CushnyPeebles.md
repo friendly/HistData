@@ -71,7 +71,7 @@ Cushny, A. R., and Peebles, A. R. (1905), "The Action of Optical
 Isomers. II: Hyoscines," *Journal of Physiology*, 32, 501-510.
 
 % Senn, Stephen, Data from Cushny and Peebles,
-<http://www.senns.demon.co.uk/Data/Cushny.xls>
+<https://www.senns.uk/Data/Cushny.xls>
 
 ## Details
 

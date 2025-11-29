@@ -1,9 +1,9 @@
-pandoc: 3.6.3
+pandoc: '3.4'
 pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   Snow_deaths-duplicates: Snow_deaths-duplicates.html
-last_built: 2025-11-27T19:05Z
+last_built: 2025-11-29T01:17Z
 urls:
   reference: https://friendly.github.io/HistData/reference
   article: https://friendly.github.io/HistData/articles

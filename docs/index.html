@@ -74,14 +74,14 @@
 <p>Many of the data sets contained here have examples which reproduce an historical graph or analysis. These are meant mainly as simple starters for more extensive re-analysis or graphical elaboration. If you are interested in any of these problems or data sets, there is lots of room to do better!</p>
 <p>Some of these been featured in social media calls for participation, such as the <a href="https://github.com/30DayChartChallenge/Edition2025" class="external-link">30 Day Chart Challenge</a></p>
 <p>This is part of a program of research called <em>statistical historiography</em> (Friendly, 2007; Friendly &amp; Denis, 2001; Friendly et-al, 2016) meaning the use of statistical methods to study problems and questions in the history of statistics and graphics. A main aspect of this is the increased understanding of historical problems in science and data analysis trough the process of trying to reproduce a graph or analysis using modern methods. I call this “Re-visioning”, meaning <em>to see again, hopefully in a new light</em>.</p>
-<p>They are also used in our book, (Friendly &amp; Wainer, 2021), <em>A History of Data Visualization &amp; Graphic Communication</em>, <a href="https://www.hup.harvard.edu/books/9780674975231" class="external-link uri">https://www.hup.harvard.edu/books/9780674975231</a>. See also the <a href="https://friendly.github.io/HistDataVis/">companion website for this book</a>.</p>
+<p>They are also used in our book, (Friendly &amp; Wainer, 2021), <em>A History of Data Visualization &amp; Graphic Communication</em>, Harvard University Press, ISBN 9780674975231. See also the <a href="https://friendly.github.io/HistDataVis/">companion website for this book</a>.</p>
 <p>If you are looking more widely for datasets to use for examples, teaching or research, check out Vincent Arel-Bundock’s <a href="https://vincentarelbundock.github.io/Rdatasets/" class="external-link">Rdatasets</a> package, with over 2500 datasets from various R packages, with this list of <a href="https://vincentarelbundock.github.io/Rdatasets/articles/data.html" class="external-link">Available datasets</a>.</p>
 <div class="section level3">
 <h3 id="data-science">Data science<a class="anchor" aria-label="anchor" href="#data-science"></a>
 </h3>
-<p>There is another R aspect that should be noted here: A great deal of “data sciency” work was involved in constructing this package, alas (for teaching) not captured in the resulting CRAN-friendly package.</p>
+<p>There is another R aspect that should be noted here: A great deal of “data sciency” work was involved in constructing this package, alas (for teaching what’s involved in this) not captured in the resulting CRAN-friendly package.</p>
 <ul>
-<li>In some cases, data had to be <strong>extracted</strong> from historical documents, using a variety of techniques (web scraping, OCR of PDS files followed by conversion to a data set), each problem with its own toolbox, in R or outside. In many cases, transcription errors had to be corrected with code or manually;</li>
+<li>In some cases, data had to be <strong>extracted</strong> from historical documents, using a variety of techniques (web scraping, OCR of PDF files followed by conversion to a data set), each problem with its own toolbox, in R or outside. In many cases, transcription errors had to be corrected with code or manually;</li>
 <li>
 <strong>digitization</strong> of data from an image;</li>
 <li>
@@ -93,6 +93,8 @@
 <strong>tidying</strong> data.frames: long &lt;–&gt; wide, abbreviations of character string labels, …</li>
 <li>
 <strong>documentation</strong>: The thankless task? No – considerable effort was made to give detailed descriptions, notes on methods, executable examples, references to original sources and analyses, …</li>
+<li>
+<strong>package maintenance</strong>: Originally, I wrote most of the documentation using <code><a href="https://rdrr.io/r/utils/prompt.html" class="external-link">utils::prompt()</a></code> …</li>
 </ul>
 </div>
 <div class="section level2">
@@ -354,7 +356,7 @@
 <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a>
 </h2>
 <ul>
-<li><p>The <a href="https://cran.r-project.org/package=Horsekicks" class="external-link">Horsekicks package</a> contains the classic data from von Bortkeiwicz, “Death by the kick of a horse in the Prussian Army”, with additional data on deaths by falling from a horse and by drowning. A <a href="https://cran.r-project.org/web/packages/Horsekicks/vignettes/hkdeaths.html" class="external-link">vignette</a> provides some analyses.</p></li>
+<li><p>The <a href="https://cran.r-project.org/package=Horsekicks" class="external-link">Horsekicks package</a> contains the classic data from von Bortkeiwicz, “Death by the kick of a horse in the Prussian Army”, with additional data on deaths by falling from a horse and by drowning. <!-- A [vignette](https://cran.r-project.org/web/packages/Horsekicks/vignettes/hkdeaths.html) provides some analyses.  --></p></li>
 <li><p><a href="https://vincentarelbundock.github.io/Rdatasets/" class="external-link">Rdatasets</a> is a collection of over 2500 datasets culled from CRAN packages to make them broadly accessible for teaching and statistical software development.</p></li>
 </ul>
 </div>
@@ -371,7 +373,7 @@
 <p>Friendly, M. (2007). A Brief History of Data Visualization. In Chen, C., Hardle, W. &amp; Unwin, A. (eds.)<br><em>Handbook of Computational Statistics: Data Visualization</em>, Springer-Verlag, III, Ch. 1, 1-34. <a href="http://datavis.ca/papers/hbook.pdf" class="external-link">Preprint</a></p>
 <p>Friendly, M. &amp; Denis, D. (2001). Milestones in the history of thematic cartography, statistical graphics, and data visualization. Web stite: <a href="http://datavis.ca/milestones/" class="external-link uri">http://datavis.ca/milestones/</a></p>
 <p>Friendly, M. &amp; Sigal, M. &amp; Harnanansingh, D. (2016). “The Milestones Project: A Database for the History of Data Visualization,” In Kostelnick, C. &amp; Kimball, M. (ed.), <em>Visible Numbers: The History of Data Visualization</em>, Ashgate Press, Chapter 10. <a href="https://www.datavis.ca/papers/MilestonesProject.pdf" class="external-link">Preprint</a></p>
-<p>Friendly, M. &amp; Wainer, H. (2021). <em>A History of Data Visualization and Graphic Communication</em>, <a href="https://www.hup.harvard.edu/books/9780674975231" class="external-link uri">https://www.hup.harvard.edu/books/9780674975231</a>, Harvard University Press. Companion <a href="https://friendly.github.io/HistDataVis/">web site</a></p>
+<p>Friendly, M. &amp; Wainer, H. (2021). <em>A History of Data Visualization and Graphic Communication</em>, Harvard University Press, ISBN 9780674975231. Companion <a href="https://friendly.github.io/HistDataVis/">web site</a></p>
 </div>
 </div>
 
@@ -410,7 +412,7 @@
 <ul class="list-unstyled">
 <li>Michael Friendly <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-3237-0941" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
 <li>Stephane Dray <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0003-0153-1105" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
-<li>Peter Li <br><small class="roles"> Author </small>   </li>
+<li>Peter Li <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0001-9602-9550" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
 <li>David Bellhouse <br><small class="roles"> Author </small>   </li>
 <li><a href="authors.html">More about authors...</a></li>
 </ul>

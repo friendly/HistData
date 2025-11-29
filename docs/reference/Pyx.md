@@ -64,7 +64,10 @@ into the Constitution, Management and Expense of the Royal Mint." In Vol
 
 Stigler, S. M. (1997). Eight Centuries of Sampling Inspection: The Trial
 of the Pyx *Journal of the American Statistical Association*,
-**72**(359), 493-500
+**72**(359), 493-500.
+
+See the example by John Russell for the
+[30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge08.R)
 
 ## Examples
 

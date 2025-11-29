@@ -7,9 +7,8 @@ In addition to the question of the relation between heights of parents
 and their offspring, for which this data is mainly famous, Galton had
 another purpose which the data in this form allows to address: Does
 marriage selection indicate a relationship between the heights of
-husbands and wives?, a topic he called *assortative mating*. Keen [p.
-297–298](https://friendly.github.io/HistData/reference/2010) provides a
-brief discussion of this topic.
+husbands and wives?, a topic he called *assortative mating*. Keen (2010,
+p. 297–298) provides a brief discussion of this topic.
 
 ## Format
 
@@ -51,7 +50,7 @@ A data frame with 934 observations on the following 8 variables.
 ## Source
 
 Galton's notebook,
-<http://www.medicine.mcgill.ca/epidemiology/hanley/galton/notebook/>,
+<https://jhanley.biostat.mcgill.ca/galton/galton_heights_197_families.txt>,
 transcribed by Beverley Shipley in 2001.
 
 ## Details
@@ -70,8 +69,7 @@ Galton, F. (1886). Regression Towards Mediocrity in Hereditary Stature
 
 Hanley, J. A. (2004). "Transmuting" Women into Men: Galton's Family Data
 on Human Stature. *The American Statistician*, 58, 237-243. See:
-<http://www.medicine.mcgill.ca/epidemiology/hanley/galton/> for source
-materials.
+<https://jhanley.biostat.mcgill.ca/galton/> for source materials.
 
 Keen, K. J. (2010). *Graphics for Statistics and Data Analysis with R*,
 Boca Raton: CRC Press, <https://www.unbc.ca/keen/textbook>.

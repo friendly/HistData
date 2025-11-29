@@ -2,7 +2,7 @@
 
 **Data Sets from the History of Statistics and Data Visualization**
 
-Dev. Version: 0.9-4
+Dev. Version: 1.0.0
 
 The `HistData` package provides a collection of small data sets that are
 interesting and important in the history of statistics and data
@@ -12,13 +12,17 @@ historical research (extending or criticizing a previous analysis). Some
 of these present interesting challenges, or opportunities to “show off”,
 with graphics or analysis in R.
 
-Many of the data sets have examples which reproduce an historical graph
-or analysis. These are meant mainly as starters for more extensive
-re-analysis or graphical elaboration. If you are interested in any of
-these problems or data sets, I’ve purposely left lots of room to do
-better!
+Many of the data sets contained here have examples which reproduce an
+historical graph or analysis. These are meant mainly as simple starters
+for more extensive re-analysis or graphical elaboration. If you are
+interested in any of these problems or data sets, there is lots of room
+to do better!
 
-They are part of a program of research called *statistical
+Some of these been featured in social media calls for participation,
+such as the [30 Day Chart
+Challenge](https://github.com/30DayChartChallenge/Edition2025)
+
+This is part of a program of research called *statistical
 historiography* (Friendly, 2007; Friendly & Denis, 2001; Friendly et-al,
 2016) meaning the use of statistical methods to study problems and
 questions in the history of statistics and graphics. A main aspect of
@@ -28,9 +32,8 @@ analysis using modern methods. I call this “Re-visioning”, meaning *to
 see again, hopefully in a new light*.
 
 They are also used in our book, (Friendly & Wainer, 2021), *A History of
-Data Visualization & Graphic Communication*,
-<https://www.hup.harvard.edu/books/9780674975231>. See also the
-[companion website for this
+Data Visualization & Graphic Communication*, Harvard University Press,
+ISBN 9780674975231. See also the [companion website for this
 book](https://friendly.github.io/HistDataVis/).
 
 If you are looking more widely for datasets to use for examples,
@@ -44,10 +47,11 @@ datasets](https://vincentarelbundock.github.io/Rdatasets/articles/data.html).
 
 There is another R aspect that should be noted here: A great deal of
 “data sciency” work was involved in constructing this package, alas (for
-teaching) not captured in the resulting CRAN-friendly package.
+teaching what’s involved in this) not captured in the resulting
+CRAN-friendly package.
 
 - In some cases, data had to be **extracted** from historical documents,
-  using a variety of techniques (web scraping, OCR of PDS files followed
+  using a variety of techniques (web scraping, OCR of PDF files followed
   by conversion to a data set), each problem with its own toolbox, in R
   or outside. In many cases, transcription errors had to be corrected
   with code or manually;
@@ -66,6 +70,8 @@ teaching) not captured in the resulting CRAN-friendly package.
 - **documentation**: The thankless task? No – considerable effort was
   made to give detailed descriptions, notes on methods, executable
   examples, references to original sources and analyses, …
+- **package maintenance**: Originally, I wrote most of the documentation
+  using [`utils::prompt()`](https://rdrr.io/r/utils/prompt.html) …
 
 ## Installation
 
@@ -140,6 +146,7 @@ tt(dsets, width = c(.2, .8)) |>
 | [Nightingale](https://friendly.github.io/HistData/reference/Nightingale.html) | Florence Nightingale’s data on deaths from various causes in the Crimean War |
 | [OldMaps](https://friendly.github.io/HistData/reference/OldMaps.html) | Latitudes and Longitudes of 39 Points in 11 Old Maps |
 | [PearsonLee](https://friendly.github.io/HistData/reference/PearsonLee.html) | Pearson and Lee’s data on the heights of parents and children classified by gender |
+| [Playfair1824](https://friendly.github.io/HistData/reference/Playfair1824.html) | Playfair’s Linear Chronology |
 | [PolioTrials](https://friendly.github.io/HistData/reference/PolioTrials.html) | Polio Field Trials Data |
 | [Pollen](https://friendly.github.io/HistData/reference/Pollen.html) | Pollen Data Challenge |
 | [Prostitutes](https://friendly.github.io/HistData/reference/Prostitutes.html) | Parent-Duchatelet’s time-series data on the number of prostitutes in Paris |
@@ -166,9 +173,7 @@ tt(dsets, width = c(.2, .8)) |>
   package](https://cran.r-project.org/package=Horsekicks) contains the
   classic data from von Bortkeiwicz, “Death by the kick of a horse in
   the Prussian Army”, with additional data on deaths by falling from a
-  horse and by drowning. A
-  [vignette](https://cran.r-project.org/web/packages/Horsekicks/vignettes/hkdeaths.html)
-  provides some analyses.
+  horse and by drowning.
 
 - [Rdatasets](https://vincentarelbundock.github.io/Rdatasets/) is a
   collection of over 2500 datasets culled from CRAN packages to make
@@ -209,6 +214,5 @@ Data Visualization*, Ashgate Press, Chapter 10.
 [Preprint](https://www.datavis.ca/papers/MilestonesProject.pdf)
 
 Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and
-Graphic Communication*,
-<https://www.hup.harvard.edu/books/9780674975231>, Harvard University
-Press. Companion [web site](https://friendly.github.io/HistDataVis/)
+Graphic Communication*, Harvard University Press, ISBN 9780674975231.
+Companion [web site](https://friendly.github.io/HistDataVis/)
