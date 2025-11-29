@@ -55,7 +55,7 @@ with(OldMaps, plot(abs(long),abs(lat), pch=col, col=colors()[point]))
 
 }
 \references{
-See the example by John Russell posted at \url{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge10.R}
+See the example by John Russell for the \href{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge10.R}{30DayChartChallenge}
 }
 \keyword{datasets}
 \keyword{spatial}

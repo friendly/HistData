@@ -92,5 +92,7 @@ points(posangle ~ year, data=Virginis, cex=weight/2)
 Friendly, M. & Denis, D.  The early origins and development of
 the scatterplot. \emph{Journal of the History of the Behavioral Sciences},
 2005, \strong{41}, 103-130.
+
+See the example by John Russell for the \href{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge22.R}{30DayChartChallenge}
 }
 \keyword{datasets}

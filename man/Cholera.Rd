@@ -112,7 +112,7 @@ Stationary Office. Written by William Farr.
 \url{https://ia600208.us.archive.org/11/items/b24751297/b24751297.pdf} The
 relevant tables are at pages clii -- clvii.
 
-See the example by John Russell posted at \url{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge01.R}
+See the example by by John Russell for the \href{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge01.R}{30DayChartChallenge}
 }
 \seealso{
 \code{\link{CholeraDeaths1849}}, \code{\link{Snow.deaths}}

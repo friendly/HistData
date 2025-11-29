@@ -43,6 +43,8 @@ Lewiston, N.Y. : Edwin Mellen Press, 2002.
 
 Parent-Duchatelet, A. (1836). \emph{De la prostitution dans la ville de
 Paris}, 3rd ed, 1857, p. 32, 36
+
+See the example by John Russell for the \href{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge22.R}{30DayChartChallenge}
 }
 \description{
 Andre-Michel Guerry (1833) was the first to systematically collect and

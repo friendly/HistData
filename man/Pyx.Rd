@@ -78,6 +78,8 @@ Vol 28 of \emph{House Documents for 1849}.
 
 Stigler, S. M. (1997). Eight Centuries of Sampling Inspection: The Trial of
 the Pyx \emph{Journal of the American Statistical Association}, \strong{72}(359),
-493-500
+493-500.
+
+See the example by John Russell for the \href{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge08.R}{30DayChartChallenge}
 }
 \keyword{datasets}

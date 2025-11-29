@@ -70,5 +70,7 @@ xyplot(freq~count|sample, data=Yeast, xlab="Number of Cells", ylab="Frequency",
 "Student" (1906) On the error of counting with a haemocytometer.
 Biometrika, \strong{5}, 351-360.
 \url{https://jhanley.biostat.mcgill.ca/bios601/Intensity-Rate/Student_counting.pdf}
+
+See the example by John Russell for the \href{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge28.R}{30DayChartChallenge}
 }
 \keyword{datasets}

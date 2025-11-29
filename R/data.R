@@ -484,7 +484,7 @@ NULL
 #' <https://ia600208.us.archive.org/11/items/b24751297/b24751297.pdf> The
 #' relevant tables are at pages clii -- clvii.
 #' 
-#' See the example by John Russell posted at <https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge01.R>
+#' See the example by by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge01.R)
 #' 
 #' @source Bingham P., Verlander, N. Q., Cheal M. J. (2004). John Snow, William
 #' Farr and the 1849 outbreak of cholera that affected London: a reworking of
@@ -1033,7 +1033,7 @@ NULL
 #' data.  *The American Statistician*, 57, 190-192.
 #' \doi{10.1198/0003130031874}
 #' 
-#' See the example by John Russell posted at <https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge02.R>
+#' See the example by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge02.R)
 #'
 #' @source Galton, F. (1886). Regression Towards Mediocrity in Hereditary
 #' Stature *Journal of the Anthropological Institute*, 15, 246-263
@@ -1241,6 +1241,9 @@ NULL
 #' 
 #' Parent-Duchatelet, A. (1836). *De la prostitution dans la ville de
 #' Paris*, 3rd ed, 1857, p. 32, 36
+#' 
+#' See the example by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge22.R)
+#' 
 #' @keywords datasets
 #' @examples
 #' 
@@ -2416,7 +2419,7 @@ NULL
 #' `http://www.stat.duke.edu/courses/Spring01/sta114/data/Andrews/T10.1`.
 #' 
 #' @references 
-#' See the example by John Russell posted at <https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge10.R>
+#' See the example by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge10.R)
 #' 
 #' @keywords datasets spatial
 #' @examples
@@ -2472,7 +2475,7 @@ NULL
 #' %<http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf>
 #' \doi{10.1198/0003130031874}.
 #' 
-#' See the example by John Russell posted at <https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge02.R>
+#' See the example by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge02.R)
 #' 
 #' @source 
 #' Pearson, K. and Lee, A. (1896). Mathematical contributions to the
@@ -2776,7 +2779,9 @@ NULL
 #' 
 #' Stigler, S. M. (1997). Eight Centuries of Sampling Inspection: The Trial of
 #' the Pyx *Journal of the American Statistical Association*, **72**(359),
-#' 493-500
+#' 493-500.
+#'
+#' See the example by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge08.R)
 #' 
 #' @source Stigler, S. M. (1999). *Statistics on the Table*. Cambridge,
 #' MA: Harvard University Press, table 21.1.
@@ -3301,6 +3306,9 @@ NULL
 #' the scatterplot. *Journal of the History of the Behavioral Sciences*,
 #' 2005, **41**, 103-130.
 #' 
+#' See the example by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge22.R)
+#' 
+#' 
 #' @source Herschel, J. F. W.  III. Micrometrical Measures of 364 Double Stars
 #' with a 7-feet Equatorial Acromatic Telescope, taken at Slough, in the years
 #' 1828, 1829, and 1830 *Memoirs of the Royal Astronomical Society*, 1833,
@@ -3510,6 +3518,8 @@ NULL
 #' @references "Student" (1906) On the error of counting with a haemocytometer.
 #' Biometrika, **5**, 351-360.
 #' <https://jhanley.biostat.mcgill.ca/bios601/Intensity-Rate/Student_counting.pdf>
+#' 
+#' See the example by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge28.R)
 #' 
 #' @source D. J. Hand, F. Daly, D. Lunn, K. McConway and E. Ostrowski (1994).
 #' *A Handbook of Small Data Sets*. London: Chapman & Hall. The data were
