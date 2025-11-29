@@ -70,20 +70,40 @@ R packages, with this list of [Available datasets](https://vincentarelbundock.gi
 
 ### Data science
 
-There is another R aspect that should be noted here: 
-A great deal of "data sciency" work was involved in constructing this package,
-alas (for teaching what's involved in this) not captured in the resulting CRAN-friendly package.
+There is another R aspect of the HistData project that should be noted here:
 
-* In some cases, data had to be **extracted** from historical documents, using a variety of techniques (web scraping, OCR of PDF files followed by conversion to a data set), each problem with its own toolbox, in R or outside. In many cases, transcription errors had to be corrected 
-with code or manually;
-* **digitization** of data from an image;
-* **conversion** of text-based data sets to a CSV file and then to an `.RData` file with proper column names. Ever seen a Unix `.shar` (shell archive) file? Well, I have.
-* **cleaning** variable names, e.g., using `janitor::clean_names()`, or, in some cases, manually editing an excel file.
-* Applying **type-conversion**, e.g., `chr` to `factor` or `ordered`; constructing appropriate contrasts for factors to facilitate re-analysis.
-* **tidying** data.frames: long <--> wide, abbreviations of character string labels, ...
-* **documentation**: The thankless task? No -- considerable effort was made to give detailed descriptions, notes on methods, executable examples, references to original sources and analyses, ...
-* **package maintenance**: Originally, I wrote most of the documentation using `utils::prompt()` ...
+A great deal of "data sciency" work was involved in constructing this package. 
+This may not be evident in what you see in the resulting `HistData` package you see, but for those interested in this form of 
+_History Data Mining_, here are some of the aspects involved:
 
+* In some cases, data had to be **extracted** from dusty historical documents, 
+using a variety of techniques (web scraping, OCR of PDF files followed by conversion to a data set). Each problem had its own toolbox, inside R or outside. In many cases, _transcription errors_ had to be corrected  with code or manually. This is much simpler today with many tools, and the possibility to enlist an AI companion. But, whatever you use, you'd better _check the work_. Some of the more interesting stories of statistical historiography involve uncovering transcription errors.
+
+* **Digitization** of data from an image. When the data is only available in an image, you can extract it with more modern tools than were available when I started this in 2007.  Among the newer ones: [WebPlotDigitizer](https://automeris.io/), [PlotDigitizer](https://plotdigitizer.com/). But, where accuracy is important, you should think about the reliability
+and valitity of what you got from an image (Drevon etal. (2016)).
+
+* **Conversion** of text-based data sets to a CSV file and then to an `.RData` file with proper column names. Ever you seen a Unix `.shar` (shell archive) file? Well, I have. What about an old codebook prepared for a survey? Modern R packages can read
+data in a much wider variety of formats today, but older material still presents challenges.
+
+* **Cleaning** variable names: Some of this can now be done using e.g.,`janitor::clean_names()`, or, in some cases, manually editing an excel file you got. What to do about `very_long_variable_names` or those abbrvd 2 shrt?
+
+* Applying **Type-conversion**, e.g., `chr` to `factor` or `ordered` required thinking about what a variable represented.
+In some cases, appropriate contrasts for factors were constructed to facilitate re-analysis. Pay attention to `StringsAsFactors`.
+
+* **Tidying** data.frames: Initially, most of this was done in base R, but as they came along `tidyverse` tools made these tasks much easier, e.g.,
+conversion of long <--> wide, separating implicit columns, like "1800-1850", abbreviations of character string labels, ...
+
+* **Documentation**: The thankless task? No -- considerable effort was made to give detailed descriptions, notes on methods, executable examples, references to original sources and analyses, ...
+
+* **Dataset documentation**: Originally, I wrote most of the documentation for datasets using `utils::prompt(dataset)`. There isn't anything like this to generate roxygen documentation for a dataset, so I wrote something [use_data_doc.R](https://gist.github.com/friendly/14f3ee1464213bb0b9fbcb489468383b) to do this.
+
+* **Documentation style**:  In this release, all the documentation was converted first from manually written `.Rd` files, to `roxygen` format using [Rd2roxygen](https://cran.r-project.org/package=Rd2roxygen). This package does a reasonable job, but gets a few things wrong. E.g., one that required a complicated regex to convert `\item{list("VarName")}` to the correct format 
+`\item{\code{VarName}}`. But documentation is even easier to edit and maintain using markdown format,
+as converted again by [roxygen2md](https://cran.r-project.org/package=roxygen2md).
+
+* **Ask AI**: A few tasks were aided by Claude Sonnet 4.5. I wanted to add `@concept` descriptors to datasets reflecting 
+the statistical and graphical concepts that each dataset can be used to illustrate. It made a list, which I heavily edited,
+and also an R script to add these to the documentation.
 
 
 ## Installation
@@ -148,6 +168,8 @@ Neville Verlander,
 Hadley Wickham. 
 
 ## References
+
+Drevon, D., Fursa, S. R., & Malcolm, A. L. (2016). Intercoder Reliability and Validity of WebPlotDigitizer in Extracting Graphed Data. *Behavior Modification*, **41**(2), 323–339. https://doi.org/10.1177/0145445516673998
 
 Friendly, M. (2007). A Brief History of Data Visualization.
 In Chen, C., Hardle, W. & Unwin, A. (eds.)  

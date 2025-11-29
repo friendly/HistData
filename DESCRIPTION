@@ -25,7 +25,8 @@ Authors@R: c(person(given = "Michael", family = "Friendly",
             person(given = "Neville", family = "Verlander", role="ctb", email="Neville.Verlander@phe.gov.uk"),
             person(given = "Brian", family = "Clair", role="ctb"),
             person(given = "Jim", family = "Oeppen", role="ctb", email = "joeppen@health.sdu.dk"),
-            person(given = "Ivan", family = "Lokhov", role="ctb", email="ivan@datawrapper.de")
+            person(given = "Ivan", family = "Lokhov", role="ctb", email="ivan@datawrapper.de"),
+            person(given = "John", family = "Russell", role="ctb", email="")
             )
 Maintainer: Michael Friendly <friendly@yorku.ca>
 Description: The 'HistData' package provides a collection of small data sets

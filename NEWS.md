@@ -8,7 +8,8 @@ This is a major release of the package, reorganizing and reformatting the docume
 * Extended package description
 * Ran `roxygen2md(scope="simple")` to use markdown in docs
 * Fixed broken URLs
-* Add @references to nice examples of the use of these datasets
+* Add @references to nice examples of the use of these datasets [Thx: John Russell]
+* Added @concept tags to all datasets giving the associated statistical or graphic ideas one might want to search for [Thx: Claude]
 
 ## Version 0.9.4
 

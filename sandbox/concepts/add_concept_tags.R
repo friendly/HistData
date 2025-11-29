@@ -67,6 +67,7 @@ add_all_concepts <- function(csv_file, input_file, output_file) {
   # Process each dataset
   for (i in 1:nrow(concepts_df)) {
     dataset <- concepts_df$Dataset[i]
+    # cat(paste("processing", dataset, "\n"))
     
     # Get non-empty concepts for this dataset
     concepts <- concepts_df[i, -1]  # All columns except Dataset
@@ -122,3 +123,9 @@ if (interactive()) {
   cat("\nExample:\n")
   cat("  add_all_concepts('dataset-concepts.csv', 'data.R', 'data-with-concepts.R')\n")
 }
+
+csv_file <- here::here("sandbox", "concepts", 'dataset-concepts.csv')
+data_file <- here::here("R", "data.R")
+out_file <- here::here("R", "data-concepts.R")
+
+add_all_concepts(csv_file, data_file, out_file)
