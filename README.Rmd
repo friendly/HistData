@@ -160,12 +160,15 @@ Luiz Droubi,
 Antoine de Falguerolles,
 Monique Graf,
 James Hanley, 
+Ivan Lokhovm
 Peter Li, 
 Dennis Murphy, 
 Jim Oeppen,
 James Riley,
+John Russell,
 Neville Verlander, 
 Hadley Wickham. 
+
 
 ## References
 

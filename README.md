@@ -22,7 +22,7 @@ Commit](https://img.shields.io/github/last-commit/friendly/HistData)](https://gi
 
 <!-- Dev. Version: 1.0.0 -->
 
-Version 0.9.4
+Version 1.0.0
 
 The `HistData` package provides a collection of small data sets that are
 interesting and important in the history of statistics and data
@@ -132,7 +132,7 @@ package. This may not be evident in what you see in the resulting
   `\item{list("VarName")}` to the correct format
   `\item{\code{VarName}}`. But documentation is even easier to edit and
   maintain using markdown format, as converted again by
-  [roxygen2md]()<https://cran.r-project.org/package=roxygen2md>.
+  [roxygen2md](https://cran.r-project.org/package=roxygen2md).
 
 - **Ask AI**: A few tasks were aided by Claude Sonnet 4.5. I wanted to
   add `@concept` descriptors to datasets reflecting the statistical and
@@ -176,7 +176,7 @@ tt(dsets, width = c(.2, .8)) |>
 
 | Item | Title |
 |----|----|
-| [Arbuthnot](https://friendly.github.io/HistData/reference/Arbuthnot.html) | Arbuthnot’s data on male and female birth ratios |
+| [Arbuthnot](https://friendly.github.io/HistData/reference/Arbuthnot.html) | Arbuthnot’s Data on Male and Female Birth Ratios |
 | [Armada](https://friendly.github.io/HistData/reference/Armada.html) | La Felicisima Armada |
 | [Bowley](https://friendly.github.io/HistData/reference/Bowley.html) | Bowley’s data on values of British and Irish trade, 1855-1899 |
 | [Breslau](https://friendly.github.io/HistData/reference/Breslau.html) | Halley’s Breslau Life Table |
@@ -195,7 +195,7 @@ tt(dsets, width = c(.2, .8)) |>
 | [GaltonFamilies](https://friendly.github.io/HistData/reference/GaltonFamilies.html) | Galton’s data on the heights of parents and their children, by child |
 | [Guerry](https://friendly.github.io/HistData/reference/Guerry.html) | Data from A.-M. Guerry, “Essay on the Moral Statistics of France” |
 | [HalleyLifeTable](https://friendly.github.io/HistData/reference/HalleyLifeTable.html) | Halley’s Life Table |
-| [Jevons](https://friendly.github.io/HistData/reference/Jevons.html) | W. Stanley Jevons’ data on numerical discrimination |
+| [Jevons](https://friendly.github.io/HistData/reference/Jevons.html) | W. Stanley Jevons’ data on Numerical Discrimination |
 | [Langren.all](https://friendly.github.io/HistData/reference/Langren.all.html) | van Langren’s Data on Longitude Distance between Toledo and Rome |
 | [Langren1644](https://friendly.github.io/HistData/reference/Langren1644.html) | van Langren’s Data on Longitude Distance between Toledo and Rome |
 | [Macdonell](https://friendly.github.io/HistData/reference/Macdonell.html) | Macdonell’s Data on Height and Finger Length of Criminals, used by Gosset (1908) |
@@ -206,9 +206,9 @@ tt(dsets, width = c(.2, .8)) |>
 | [Minard.cities](https://friendly.github.io/HistData/reference/Minard.cities.html) | Data from Minard’s famous graphic map of Napoleon’s march on Moscow |
 | [Minard.temp](https://friendly.github.io/HistData/reference/Minard.temp.html) | Data from Minard’s famous graphic map of Napoleon’s march on Moscow |
 | [Minard.troops](https://friendly.github.io/HistData/reference/Minard.troops.html) | Data from Minard’s famous graphic map of Napoleon’s march on Moscow |
-| [Nightingale](https://friendly.github.io/HistData/reference/Nightingale.html) | Florence Nightingale’s data on deaths from various causes in the Crimean War |
+| [Nightingale](https://friendly.github.io/HistData/reference/Nightingale.html) | Florence Nightingale’s data on deaths in the Crimean War |
 | [OldMaps](https://friendly.github.io/HistData/reference/OldMaps.html) | Latitudes and Longitudes of 39 Points in 11 Old Maps |
-| [PearsonLee](https://friendly.github.io/HistData/reference/PearsonLee.html) | Pearson and Lee’s data on the heights of parents and children classified by gender |
+| [PearsonLee](https://friendly.github.io/HistData/reference/PearsonLee.html) | Pearson and Lee’s data on the Heights of Parents and Children by Gender |
 | [Playfair1824](https://friendly.github.io/HistData/reference/Playfair1824.html) | Playfair’s Linear Chronology |
 | [PolioTrials](https://friendly.github.io/HistData/reference/PolioTrials.html) | Polio Field Trials Data |
 | [Pollen](https://friendly.github.io/HistData/reference/Pollen.html) | Pollen Data Challenge |
@@ -256,8 +256,9 @@ corrections, suggestions, or documentation examples. They are
 appreciatively listed below:
 
 David Bellhouse, Brian Clair, Stephane Dray, Luiz Droubi, Antoine de
-Falguerolles, Monique Graf, James Hanley, Peter Li, Dennis Murphy, Jim
-Oeppen, James Riley, Neville Verlander, Hadley Wickham.
+Falguerolles, Monique Graf, James Hanley, Ivan Lokhovm Peter Li, Dennis
+Murphy, Jim Oeppen, James Riley, John Russell, Neville Verlander, Hadley
+Wickham.
 
 ## References
 
