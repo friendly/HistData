@@ -151,6 +151,11 @@ Churchill. Possibly at https://resource.nlm.nih.gov/0050707.
 
 Tufte, E. (1997). *Visual Explanations*. Cheshire, CT: Graphics Press.
 
+See the example from Nicola Rennie's
+[data-viz-projects](https://friendly.github.io/HistData/reference/nrennie.rbind.io/data-viz-projects/),
+a tour-de-force: [John Snow's Cholera
+Maps](https://github.com/nrennie/data-viz-projects/tree/main/John%20Snow%20Cholera%20Maps)
+
 ## See also
 
 [`SnowMap`](https://friendly.github.io/HistData/reference/SnowMap.md)

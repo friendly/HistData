@@ -1,6 +1,12 @@
 # Changelog
 
+## Version 1.0.1
+
+- Add link to N. Rennie’s Snow Maps
+
 ## Version 1.0.0
+
+CRAN release: 2025-11-30
 
 This is a major release of the package, reorganizing and reformatting
 the documentation and adding one new dataset
