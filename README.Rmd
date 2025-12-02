@@ -34,7 +34,7 @@ library(HistData)
 **Data Sets from the History of Statistics and Data Visualization**
 
 <!-- Dev. Version: 1.0.0 -->
-Version `r getNamespaceVersion("HistData")`
+Version `r getNamespaceVersion("HistData")` (`r Sys.Date()`)
 
 The `HistData` package provides a collection of small data sets
 that are interesting and important in the history of statistics and data

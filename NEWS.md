@@ -1,3 +1,7 @@
+## Version 1.0.1
+
+* Add link to N. Rennie's Snow Maps
+
 ## Version 1.0.0
 
 This is a major release of the package, reorganizing and reformatting the documentation and adding one new dataset
