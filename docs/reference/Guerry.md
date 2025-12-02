@@ -121,7 +121,7 @@ following 23 variables.
 - `Prostitutes`:
 
   Prostitutes in Paris. Number of prostitutes registered in Paris from
-  1816 to 1834, classified by the department of thei birth Source:
+  1816 to 1834, classified by the department of their birth Source:
   Parent-Duchatelet (1836), *De la prostitution en Paris*
 
 - `Distance`:

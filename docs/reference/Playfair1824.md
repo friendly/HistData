@@ -83,9 +83,17 @@ grave? *Significance*, 14(5), 20–23.
 
 ``` r
 data(Playfair1824)
-#> Warning: data set 'Playfair1824' not found
 str(Playfair1824)
-#> Error: object 'Playfair1824' not found
+#> 'data.frame':    55 obs. of  9 variables:
+#>  $ Year       : num  1770 1771 1772 1773 1774 ...
+#>  $ Stocks     : num  79.6 76.3 78.7 75.8 77.2 ...
+#>  $ Wheat      : num  NA NA NA NA NA NA NA NA NA NA ...
+#>  $ Bread      : num  23.5 24.1 25.6 25.9 26.2 ...
+#>  $ Debt       : num  14 14 13.7 13.7 13.7 ...
+#>  $ Exports    : num  11.6 12.2 11.3 11 12.2 ...
+#>  $ Imports    : num  NA NA NA NA NA NA NA NA NA NA ...
+#>  $ Expenditure: num  9.21 9.21 9.22 9.22 9.23 ...
+#>  $ Revenue    : num  7.72 8.03 8.03 7.74 8.04 ...
 
 # Plot multiple time series with matplot()
 matplot(Playfair1824$Year, Playfair1824[, -1],
@@ -95,7 +103,6 @@ matplot(Playfair1824$Year, Playfair1824[, -1],
         ylab = "value",
         ylim = c(0, 140),
         main = "Linear Chronology, Exhibiting the Revenues, Expenditure, ... from 1770 to 1824")
-#> Error: object 'Playfair1824' not found
 
 # main events
 events <- data.frame(
@@ -112,6 +119,6 @@ with(events, {
          angle = 90, length = 0.05)
   text((start+end)/2, 132, event, pos = 3)
 })
-#> Error in arrows(x0 = start, x1 = end, y0 = 130, y1 = 130, lwd = 3, code = 3,     angle = 90, length = 0.05): plot.new has not been called yet
+
 
 ```

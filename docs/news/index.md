@@ -13,7 +13,10 @@ the documentation and adding one new dataset
 - Ran `roxygen2md(scope="simple")` to use markdown in docs
 - Fixed broken URLs
 - Add [@references](https://github.com/references) to nice examples of
-  the use of these datasets
+  the use of these datasets \[Thx: John Russell\]
+- Added [@concept](https://github.com/concept) tags to all datasets
+  giving the associated statistical or graphic ideas one might want to
+  search for \[Thx: Claude\]
 
 ## Version 0.9.4
 

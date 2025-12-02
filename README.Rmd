@@ -147,6 +147,11 @@ deaths by falling from a horse and by drowning.
 * [Rdatasets](https://vincentarelbundock.github.io/Rdatasets/) is a collection of over 2500 datasets
 culled from CRAN packages to make them broadly accessible for teaching and statistical software development.
 
+* The [lattice package](https://lattice.r-forge.r-project.org/) contains the Minnesota `barley` data used by Cleveland (1993)
+in developing Trellis graphics and ideas behind conditioning (faceted) plots.
+Wright (2013) reanalysed this and extended the datasets in the [agridat package](https://kwstat.github.io/agridat/),
+which also contains a wide variety other datasets from agricultural experiments, some of historical interest.
+
 ## Contributors
 Please note that the `HistData` project is released with a [Contributor Code of Conduct](https://friendly.github.io/HistData/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 
@@ -172,6 +177,8 @@ Hadley Wickham.
 
 ## References
 
+Cleveland, William S. (1993) *Visualizing Data*. Hobart Press, Summit, New Jersey.
+
 Drevon, D., Fursa, S. R., & Malcolm, A. L. (2016). Intercoder Reliability and Validity of WebPlotDigitizer in Extracting Graphed Data. *Behavior Modification*, **41**(2), 323–339. https://doi.org/10.1177/0145445516673998
 
 Friendly, M. (2007). A Brief History of Data Visualization.
@@ -190,3 +197,4 @@ In Kostelnick, C. & Kimball, M. (ed.), *Visible Numbers: The History of Data Vis
 Friendly, M. & Wainer, H. (2021). _A History of Data Visualization and Graphic Communication_, Harvard University Press,
 ISBN 9780674975231. Companion [web site](https://friendly.github.io/HistDataVis/)
 
+Wright, K. (2013). Revisiting Immer's Barley Data. _The American Statistician_, **67**(3), 129–133

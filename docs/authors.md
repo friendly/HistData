@@ -33,6 +33,8 @@
 
 - **Ivan Lokhov**. Contributor.
 
+- **John Russell**. Contributor.
+
 ## Citation
 
 Source:
