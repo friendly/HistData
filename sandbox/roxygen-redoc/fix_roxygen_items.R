@@ -1,7 +1,10 @@
 #!/usr/bin/env Rscript
 
-# Fix roxygen2 \item formatting
-# Changes \item{list("VarName")} to \item{\code{VarName}}
+# Functions to fix one of the awful things that `Rd2roxygen::Rd2roxygen()` does when it tries to convert 
+# a package to use roxygen documentation
+#
+# * Fixes roxygen2 \item formatting used in \describe{} blocks to document arguments and elements of returned results
+# * Changes \item{list("VarName")} to \item{\code{VarName}}
 # 
 # Usage:
 #   From R: source("fix_roxygen_items.R"); fix_roxygen_items("R/data.R")
