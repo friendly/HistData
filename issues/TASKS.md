@@ -1,0 +1,93 @@
+# HistData — development tasks
+
+Broken out from the cross-package working list in `C:\Users\friendly\Dropbox\R\TASKS-all.md`
+(2026-08-04). Update here as items are finished; sync back to the main list only if it's useful
+to see HistData status at a glance across packages.
+
+No `dev/`/`extra/` folder — `sandbox/` is the example-graphs equivalent, now cleaned up to hold
+only that (2026-08-04): dev-scratch that had drifted in there (tooling for already-shipped doc
+features) moved to this `issues/` folder, matching the convention used by the other packages.
+Also had the same pre-roxygen `man-old/`/`NAMESPACE-old` leftover pattern seen elsewhere — already
+removed. v1.0.0 (shipped 2025-11-29, per `NEWS.md`) converted docs Rd→roxygen, added `@concept`
+tags to all 34 datasets, and added `@references` links to John Russell's
+[30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge) recreations.
+
+## TODOs
+
+Two raw-data drops in `data-raw/` with no corresponding shipped dataset, i.e. real unfinished
+work rather than clean-up:
+
+- [ ] **New dataset: Perozzo survivorship contours** — `data-raw/perozzo-tidy.csv` (tidy
+  Year/Age/Survivors table, Swedish census-era data) and `data-raw/perozzo-contours.json`
+  (pre-computed contour levels/points, year × age) sit in `data-raw/` with no import script and no
+  matching dataset in `data/`/`R/`. Named for Luigi Perozzo, the 19th-c. Italian statistician
+  famous for an early 3D population-pyramid stereogram — thematically a strong fit for HistData.
+  The contour JSON represents real prior work (someone already fit/computed the contours), not
+  just raw import. (Filenames were originally misspelled "porozzo" — fixed 2026-08-04, commit
+  `a68f615`.)
+  Files: `data-raw/perozzo-tidy.csv`, `data-raw/perozzo-contours.json`
+
+- [ ] **New dataset: Ebbinghaus forgetting-curve replication** —
+  `data-raw/Ebbinghaus Replication Schema and Results.xlsx` (26 sheets: schema tables, Mathematica
+  curve fits, several sheets explicitly marked "not used"/"old"). Messier and further from
+  dataset-ready than the Perozzo files — would need real triage of which sheets are the actual
+  data vs. superseded drafts. Thematically connects to `WordPools` (memory-research datasets).
+  Moved from `sandbox/` to `data-raw/` 2026-08-04 (commit `db5b137`), alongside the other
+  not-yet-imported raw data.
+  File: `data-raw/Ebbinghaus Replication Schema and Results.xlsx`
+
+## Reference material (not TODO, not clean-up)
+
+- `sandbox/*.R` (14 loose scripts: `Arbuthnot-PieGlyph.R`, `Cholera-plots.R`,
+  `Galton-PearsonLee.R`, `Guerry-map.R`, `Langren-graph.R`, `Mcdonnell-density.R`,
+  `Nightingale-graph.R`, `OldMaps-plot-map.R`, `Pollen-ex.R`, `Pyx-ggbump.R`, `Pyx-histogram.R`,
+  `Snow-density.R`, `Virginis-plot.R`, `Yeast.R`) — per `NEWS.md` v0.9.4 ("Add example graphs from
+  John Russell to `sandbox/`"), these are the local copies behind the `@references` links to
+  Russell's 30DayChartChallenge already shipped in `R/data-concepts.R`. Job already done; kept as
+  reference.
+
+- `sandbox/john-snow-cholera-maps-nrennie.R` (+ `nrennie0.R`, `.png`) — a fuller recreation of
+  Snow's cholera map in Nicola Rennie's style, referencing external data files not present in the
+  repo (`John Snow Cholera Maps/data/...`). This was incorporated: commit `c62c843` ("add link to
+  N Rennie Snow Maps; bump ver") added an `@references` link to Rennie's
+  [data-viz-projects](https://github.com/nrennie/data-viz-projects/tree/main/John%20Snow%20Cholera%20Maps)
+  in `man/Snow.Rd`/`R/data-concepts.R`. So this is reference material for already-shipped work,
+  same bucket as the Russell scripts above.
+
+- `sandbox/HistData-downloads.R`, `sandbox/mypkg-downloads.R` — standalone fun/promotional
+  CRAN-download-stats plots (one HistData-specific "true hist-ogram" pun graph, one comparing
+  download counts across all of the author's packages). Unrelated to package content; left in
+  `sandbox/` (doesn't cleanly fit "example graphs of this package's data", but not worth a special
+  location either).
+
+## Clean-up log
+
+Both `@concept`/roxygen-item fixes confirmed superseded — fully shipped per `NEWS.md` v1.0.0;
+moved rather than deleted, since they're legitimate dev-scratch history, just filed in the wrong
+folder:
+
+- [X] `issues/concepts/` (6 files: `CONCEPTS-README.md`, `HistData-concepts.zip`,
+  `add_concept_tags.R`, `dataset-concepts.md`, `dataset-concepts-structured.md`,
+  `dataset-concepts.csv`) — the `@concept`-tag generation workflow. Confirmed applied: 140
+  `@concept` tags present in shipped `R/data-concepts.R` (commit `7edb4f8`, "add concept tags ->
+  data-concepts.R"). Moved `sandbox/concepts/` → `issues/concepts/` 2026-08-04 (commit `db5b137`).
+
+- [X] `issues/roxygen-redoc/` (8 files: `README.md`, `data.R`, `data-fixed.R`,
+  `download_and_fix_data.R`, `fix-describe-claude.md`, `fix_items.sh`, `fix_roxygen_items.R`,
+  `roxygen_item_fix.md`, `HistData-fixifiles2.zip`) — fixes `rd2roxygen`'s malformed
+  `\item{list("X")}` → `\item{\code{X}}` output. Confirmed applied: zero `\item{list(` patterns
+  remain in shipped `R/data-concepts.R`. Moved `sandbox/roxygen-redoc/` → `issues/roxygen-redoc/`
+  2026-08-04 (commit `db5b137`).
+
+- [X] `issues/test-tt.qmd`, `issues/test-tt.html` — prototype of a `tinytable` dataset-index
+  table linking to pkgdown reference pages. Confirmed applied: `README.Rmd` already has its own
+  `tt(dsets, width = c(.2, .8)) |> ...` table (line 137) built the same way. Moved from `sandbox/`
+  2026-08-04 (commit `db5b137`).
+
+- [X] `man-old/` (40 `.Rd` files, exact 1:1 name match with current `man/`) + `NAMESPACE-old` —
+  pre-roxygen leftovers, superseded by the v1.0.0 Rd→roxygen conversion. Same pattern as the other
+  packages' `man-old/`/`NAMESPACE-old` folders. Deleted 2026-08-04 (commit `f6be948`), also removed
+  the now-dangling `.Rbuildignore` entries for both paths. NEWS.md entry added (commit `30228f7`).
+
+`issues/` also added to `.Rbuildignore` (`^issues$`, 2026-08-04, commit `db5b137`), matching the
+other packages.
