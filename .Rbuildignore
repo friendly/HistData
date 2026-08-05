@@ -15,5 +15,3 @@ data-raw/
 ^pkgdown$
 ^CODE_OF_CONDUCT\.md$
 sandbox/
-^man-old/$
-^NAMESPACE-old$
