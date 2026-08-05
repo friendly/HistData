@@ -121,7 +121,7 @@ The development version can be installed to your R library directly from github 
 Here are the data sets in the package, with links to their documentation. Some topics are represented by two or more
 data sets.
 
-```{r datasets, results='asis'}
+```{r datasets, results='asis', message=FALSE}
 # link dataset to pkgdown doc
 refurl <- "https://friendly.github.io/HistData/reference/"
 

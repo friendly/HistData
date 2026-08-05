@@ -12,6 +12,24 @@ removed. v1.0.0 (shipped 2025-11-29, per `NEWS.md`) converted docs Rd→roxygen,
 tags to all 34 datasets, and added `@references` links to John Russell's
 [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge) recreations.
 
+## Workflow: rebuilding pkgdown (2026-08-05)
+
+Before running `pkgdown::build_site()`, check both of these — a stale one silently produces a
+site that doesn't reflect the current source:
+
+1. **Installed version matches `DESCRIPTION`** — `pkgdown` builds against the *installed* package,
+   not the source tree. Compare `packageVersion("HistData")` to `DESCRIPTION`'s `Version:`; if they
+   differ, `devtools::install(dependencies = FALSE, upgrade = FALSE)` first. Caught this 2026-08-05:
+   installed was still 1.0.0 (pre-`Perozzo`) while `DESCRIPTION` was already at 1.0.1, so the
+   homepage dataset table was silently missing `Perozzo` until reinstalling.
+2. **`README.md` is freshly re-knit from `README.Rmd`** — pkgdown's homepage reads `README.md`
+   directly; it does not know about `README.Rmd`. Run `devtools::build_readme()` (which reinstalls-
+   and-renders against the *current* source, unlike a stale committed `README.md`) and check the
+   diff before building the site. Also caught 2026-08-05: re-knitting surfaced a stray
+   `vcdExtra`/`vcd` S3-override startup message leaking into the rendered dataset-table chunk output
+   (chunk had no `message=FALSE`); fixed by adding `message=FALSE` to the `datasets` chunk in
+   `README.Rmd`.
+
 ## TODOs
 
 Two raw-data drops in `data-raw/` with no corresponding shipped dataset, i.e. real unfinished

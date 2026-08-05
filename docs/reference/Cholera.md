@@ -213,6 +213,9 @@ if (require(effects)) {
   plot(eff)
 }
 #> Loading required package: effects
+#> Registered S3 method overwritten by 'lme4':
+#>   method           from
+#>   na.action.merMod car 
 #> lattice theme set by effectsTheme()
 #> See ?effectsTheme for details.
 

@@ -96,6 +96,9 @@
   : Pearson and Lee's data on the Heights of Parents and Children by
   Gender
 
+- [`Perozzo`](https://friendly.github.io/HistData/reference/Perozzo.md)
+  : Perozzo's Swedish Population Survivorship Data
+
 - [`Playfair1824`](https://friendly.github.io/HistData/reference/Playfair1824.md)
   : Playfair's Linear Chronology
 

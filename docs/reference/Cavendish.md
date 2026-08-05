@@ -73,7 +73,7 @@ summary(Cavendish)
 #>  Mean   :5.448   Mean   :5.482   Mean   :5.483  
 #>  3rd Qu.:5.610   3rd Qu.:5.620   3rd Qu.:5.625  
 #>  Max.   :5.850   Max.   :5.880   Max.   :5.850  
-#>                                  NA's   :6      
+#>                                  NAs    :6      
 boxplot(Cavendish, ylab='Density', xlab='Data set')
 abline(h=5.517, col="red", lwd=2)
 

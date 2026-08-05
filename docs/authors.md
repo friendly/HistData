@@ -40,14 +40,14 @@
 Source:
 [`DESCRIPTION`](https://github.com/friendly/HistData/blob/HEAD/DESCRIPTION)
 
-Friendly M, Dray S, Li P, Bellhouse D (2025). *HistData: Data Sets from
+Friendly M, Dray S, Li P, Bellhouse D (2026). *HistData: Data Sets from
 the History of Statistics and Data Visualization*. R package version
 1.0.1, <https://friendly.github.io/HistData/>.
 
     @Manual{,
       title = {HistData: Data Sets from the History of Statistics and Data Visualization},
       author = {Michael Friendly and Stephane Dray and Peter Li and David Bellhouse},
-      year = {2025},
+      year = {2026},
       note = {R package version 1.0.1},
       url = {https://friendly.github.io/HistData/},
     }

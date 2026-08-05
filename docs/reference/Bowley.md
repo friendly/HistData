@@ -56,7 +56,6 @@ lines(lowess(Bowley), col='red', lwd=2)
 
 # Initial version, using ggplot
 library(ggplot2)
-#> Warning: package 'ggplot2' was built under R version 4.5.2
 ggplot(aes(x=Year, y=Value), data=Bowley) +
   geom_point() +
   geom_smooth(method="loess", formula=y~x)

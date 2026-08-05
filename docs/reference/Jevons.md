@@ -102,6 +102,15 @@ with(Jevons, balloonplot(actual, error, frequency, xlab="actual", ylab="error",
 }
 #> Loading required package: gplots
 #> 
+#> ---------------------
+#> gplots 3.3.0 loaded:
+#>   * Use citation('gplots') for citation info.
+#>   * Homepage: https://talgalili.github.io/gplots/
+#>   * Report issues: https://github.com/talgalili/gplots/issues
+#>   * Ask questions: https://stackoverflow.com/questions/tagged/gplots
+#>   * Suppress this message with: suppressPackageStartupMessages(library(gplots))
+#> ---------------------
+#> 
 #> Attaching package: 'gplots'
 #> The following object is masked from 'package:stats':
 #> 
@@ -144,8 +153,7 @@ abline(h=0)
 #>     rename, round_any
 #> The following objects are masked from 'package:dplyr':
 #> 
-#>     arrange, count, desc, failwith, id, mutate, rename, summarise,
-#>     summarize
+#>     arrange, count, desc, mutate, rename, summarise, summarize
 
 
 ```

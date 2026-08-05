@@ -3,6 +3,10 @@
 ## Version 1.0.1
 
 - Add link to N. Rennie’s Snow Maps
+- Package cleanup: get rid of `man-old`, reorganize `sandbox/`
+- Add `Perozzo` data (Swedish census survivorship grid underlying
+  Perozzo’s 1880/1881 stereogram). This also poses another HistData
+  challenge re-create his graphic, or do something better or different.
 
 ## Version 1.0.0
 
