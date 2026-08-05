@@ -32,7 +32,13 @@
 #' hand-drawn graphic. The simple image from `graphics::persp` show here is a very coarse approximation.
 #' It remains a `HistData` challenge to do this (a) closer to Perozzo's graphic or (b) better in someway.
 #' 
-#' For example: Perozzo showed the trace lines for `age`
+#' For example: Perozzo showed the trace lines for `age` receding into the image, with major lines for
+#' `year` shown in red at 25 year intervals. The trace lines for `year` at fixed `age` were also highlighted
+#' at 25 year intervals. 
+#' 
+#' More importantly, for demography, he realized that diagonal lines for combinations of `age` and `year`
+#' reflected a **cohort** and these could be used to compare the life survivorship of people born in
+#' various years.
 #'
 #' @source
 #' Digitized from Perozzo's original stereogram (source of the digitization itself not yet

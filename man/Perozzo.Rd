@@ -39,7 +39,13 @@ Perozzo's 3D graphic was remarkable in its' time and still is today, for attenti
 hand-drawn graphic. The simple image from \code{graphics::persp} show here is a very coarse approximation.
 It remains a \code{HistData} challenge to do this (a) closer to Perozzo's graphic or (b) better in someway.
 
-For example: Perozzo showed the trace lines for \code{age}
+For example: Perozzo showed the trace lines for \code{age} receding into the image, with major lines for
+\code{year} shown in red at 25 year intervals. The trace lines for \code{year} at fixed \code{age} were also highlighted
+at 25 year intervals.
+
+More importantly, for demography, he realized that diagonal lines for combinations of \code{age} and \code{year}
+reflected a \strong{cohort} and these could be used to compare the life survivorship of people born in
+various years.
 }
 \examples{
 data(Perozzo)
