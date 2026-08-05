@@ -1,6 +1,7 @@
 ## Version 1.0.1
 
 * Add link to N. Rennie's Snow Maps
+* Package cleanup: get rid of `man-old`, reorganize `sandbox/`
 
 ## Version 1.0.0
 
