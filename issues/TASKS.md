@@ -17,15 +17,24 @@ tags to all 34 datasets, and added `@references` links to John Russell's
 Two raw-data drops in `data-raw/` with no corresponding shipped dataset, i.e. real unfinished
 work rather than clean-up:
 
-- [ ] **New dataset: Perozzo survivorship contours** — `data-raw/perozzo-tidy.csv` (tidy
-  Year/Age/Survivors table, Swedish census-era data) and `data-raw/perozzo-contours.json`
-  (pre-computed contour levels/points, year × age) sit in `data-raw/` with no import script and no
-  matching dataset in `data/`/`R/`. Named for Luigi Perozzo, the 19th-c. Italian statistician
-  famous for an early 3D population-pyramid stereogram — thematically a strong fit for HistData.
-  The contour JSON represents real prior work (someone already fit/computed the contours), not
-  just raw import. (Filenames were originally misspelled "porozzo" — fixed 2026-08-04, commit
-  `a68f615`.)
-  Files: `data-raw/perozzo-tidy.csv`, `data-raw/perozzo-contours.json`
+- [X] **New dataset: `Perozzo`** — shipped 2026-08-05. `data-raw/Perozzo-import.R` reads the tidy
+  `data-raw/perozzo-tidy.csv` grid (Year × Age × Survivors, Swedish census-era data, 1750-1875) into
+  `data/Perozzo.RData`, documented in `R/Perozzo.R`. Named for Luigi Perozzo, the 19th-c. Italian
+  statistician famous for an early 3D population-pyramid stereogram — thematically a strong fit for
+  HistData. Citation confirmed against `timeref.bib`: Perozzo (1880), *Annali di Statistica* 12,
+  1-16 (also see the follow-up Perozzo 1881, vol. 22).
+
+  - [ ] **TODO: identify the digitization source** — who/where this tidy grid was originally
+    digitized from is unknown (lost track of it). Noted in `R/Perozzo.R`'s `@details`.
+  - [X] **Resolved: `data-raw/perozzo-contours.json` is redundant, not shipping it** — compared
+    against `contourLines()` recomputed straight from the `Perozzo` grid at the same 29 levels
+    (`data-raw/Perozzo-contours-compare.R`, output `.png`/`.csv` alongside it). Exact match: 0
+    mean/max absolute age difference at every level, 34 segments either way. So the JSON isn't
+    independently-digitized or specially-fit data — it was generated (by base R's `contourLines()`
+    or an equivalent marching-squares implementation) from this exact grid, making it fully
+    reproducible from `Perozzo` alone. Confirms the earlier deferral was right; not worth shipping
+    as a second dataset. Kept in `data-raw/` as a cross-check, not a TODO.
+  (Filenames were originally misspelled "porozzo" — fixed 2026-08-04, commit `a68f615`.)
 
 - [ ] **New dataset: Ebbinghaus forgetting-curve replication** —
   `data-raw/Ebbinghaus Replication Schema and Results.xlsx` (26 sheets: schema tables, Mathematica

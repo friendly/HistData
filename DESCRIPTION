@@ -2,7 +2,7 @@ Package: HistData
 Type: Package
 Title: Data Sets from the History of Statistics and Data Visualization
 Version: 1.0.1
-Date: 2025-12-01
+Date: 2026-08-05
 Authors@R: c(person(given = "Michael", family = "Friendly", 
                     role=c("aut", "cre"), 
                     comment = c(ORCID = "0000-0002-3237-0941"),
@@ -65,8 +65,8 @@ LazyLoad: yes
 LazyData: yes
 VignetteBuilder: knitr
 Language: en-US
-RoxygenNote: 7.3.3
 Encoding: UTF-8
 BugReports: https://github.com/friendly/HistData/issues
 URL: https://friendly.github.io/HistData/
 Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.0.0
