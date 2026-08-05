@@ -27,6 +27,12 @@
 #'
 #' The digitization source for this tidy grid is currently unknown; see `issues/TASKS.md` in the GitHub repo
 #' for the open item to track it down.
+#' 
+#' Perozzo's 3D graphic was remarkable in its' time and still is today, for attention to detail in his
+#' hand-drawn graphic. The simple image from `graphics::persp` show here is a very coarse approximation.
+#' It remains a `HistData` challenge to do this (a) closer to Perozzo's graphic or (b) better in someway.
+#' 
+#' For example: Perozzo showed the trace lines for `age`
 #'
 #' @source
 #' Digitized from Perozzo's original stereogram (source of the digitization itself not yet
@@ -53,10 +59,15 @@
 #' ages  <- as.numeric(colnames(Pmat))
 #'
 #' # perspective plot: Year horizontal (1750 -> 1875, left to right), Age receding
-#' # in depth (0 in front -> 100 at the back), as in Perozzo's original stereogram
-#' persp(years, ages, Pmat,
+#' # in depth (100 in front -> 0 at the back), as in Perozzo's original stereogram.
+#' # persp() requires ascending x/y, so the front-to-back flip is done by negating
+#' # and reversing Age (and matching the matrix columns to it), not by relabeling.
+#' ages_rev <- -rev(ages)
+#' Pmat_rev <- Pmat[, rev(seq_along(ages))]
+#' persp(years, ages_rev, Pmat_rev,
 #'       xlab = "Year", ylab = "Age", zlab = "Survivors",
-#'       theta = 0, phi = 25, expand = 0.6, col = "lightblue", shade = 0.5)
+#'       theta = 0, phi = 25, expand = 0.6,
+#'       col = adjustcolor("lightblue", alpha.f = 0.5), shade = 0.5)
 #'
 #' # contour plot of the same surface
 #' contour(years, ages, Pmat, xlab = "Year", ylab = "Age")

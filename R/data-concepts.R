@@ -3223,8 +3223,7 @@ NULL
 #' and Tufte (1999), p. 27-37, for further discussion.
 #' 
 #' @name Snow
-#' @aliases Snow Snow.deaths Snow.deaths2 Snow.pumps Snow.streets Snow.polygons
-#' Snow.dates
+#' @aliases Snow Snow.deaths Snow.deaths2 Snow.pumps Snow.streets Snow.polygons Snow.dates
 #' @docType data
 #' @format `Snow.deaths`: A data frame with 578 observations on the
 #' following 3 variables, giving the address of a person who died from cholera.
