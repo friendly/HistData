@@ -1,0 +1,351 @@
+---
+title: "The HistData Challenge: Re-Visioning Historical Graphics"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    df_print: kable
+---
+
+<!--
+WORKING DRAFT -- not a package vignette yet.
+
+Lives in issues/vignettes/ deliberately, not vignettes/: pkgdown scans and publishes everything
+under vignettes/ on every `pkgdown::build_site()`, so a half-finished draft there would go live
+by accident. issues/ is already .Rbuildignore'd and outside pkgdown's scan path.
+
+When this is ready to ship:
+  1. Add a proper vignette YAML header (rmarkdown::html_vignette + %\VignetteIndexEntry etc.)
+  2. Add a references.bib and switch citations below to [@key] form
+  3. git mv issues/vignettes/histdata-challenge-draft.Rmd vignettes/histdata-challenge.Rmd
+  4. devtools::document(); devtools::check(); NEWS.md entry; rebuild pkgdown
+     (see issues/TASKS.md's "Workflow: rebuilding pkgdown" checklist)
+
+See issues/vignettes/histdata-challenge.md for the full planning/rationale behind every
+decision below -- this file is the draft prose+code, that one is the working notes.
+-->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "##",
+  warning = FALSE,
+  message = FALSE,
+  fig.width = 7,
+  fig.height = 5
+)
+library(HistData)
+library(ggplot2)
+```
+
+> RE-VISION *n.* ri-'vizh-en (ca. 1611) 1. To see again, possibly from a new perspective; *syn:*
+> review, reconsideration, reexamination, retrospection. 2. An act of revising; *syn:* rewrite,
+> alteration, transformation. (Merriam-Webster, 2002, quoted in Friendly, 2002)
+
+## Introduction
+
+The `HistData` package collects data behind some of the most important graphics in the history
+of statistics and data visualization. Some of these present graphical challenges to reproduce in
+R, and this collection is part of a program of research called *statistical historiography*: the
+use of statistical methods to study problems and questions in the history of statistics and
+graphics. A main aspect of this is the increased understanding of historical problems in science
+and data analysis through the process of trying to reproduce a graph or analysis using modern
+methods. We call this "re-visioning" -- meaning to *see again, hopefully in a new light*.
+
+This idea first took shape in Friendly (2002), "Visions and Re-Visions of Charles Joseph
+Minard," which reviewed decades of attempts -- by many different people, in many different tools
+-- to reproduce and extend Minard's famous graphic of Napoleon's Russian campaign. That paper,
+and the gallery of re-visions that grew out of it, is the model for this vignette: a catalog of
+*kinds* of re-vision, applied not just to Minard but to any dataset in this package, plus a
+running inventory of what's already been attempted (in `sandbox/`, by outside contributors, in
+companion projects) and what's still open.
+
+## A small motivating example: `Arbuthnot`
+
+Before anything as ambitious as Minard, a small example makes the point concretely. John
+Arbuthnot's data on christenings in London (1629-1710) look, on a first read, like a straightforward
+annual count. But Sandy Zabell (1976) found that the values for 1674 and 1704 are identical --
+not approximately close, *identical*, down to a ratio computed to three decimal places -- strongly
+suggesting one year's entry was copied from the other, whether by Arbuthnot himself or a later
+transcriber.
+
+```{r arbuthnot-duplicate}
+data(Arbuthnot)
+Arbuthnot[Arbuthnot$Year %in% c(1674, 1704), c("Year", "Males", "Females", "Ratio")]
+```
+
+`Males`, `Females`, and the derived `Ratio` match exactly; only `Plague` and `Mortality` (not
+shown) differ. A table alone makes this easy to miss among 82 rows. Plotting the series makes it
+harder to miss -- the two points sit at *exactly* the same height, 30 years apart, in a series
+that otherwise wanders:
+
+```{r arbuthnot-plot}
+ggplot(Arbuthnot, aes(x = Year, y = Ratio)) +
+  geom_line(color = "grey50") +
+  geom_point(color = "grey50") +
+  geom_point(
+    data = subset(Arbuthnot, Year %in% c(1674, 1704)),
+    color = "firebrick", size = 3
+  ) +
+  labs(
+    title = "Arbuthnot's sex ratio at christening, 1629-1710",
+    subtitle = "1674 and 1704 (red) are identical -- likely a copying error",
+    y = "Male / female ratio"
+  ) +
+  theme_minimal()
+```
+
+That's re-visioning in miniature: looking again at old data, graphically, surfaces something
+tabulation alone hides. See Zabell (1976) and Zabell & Wainer (2002) for the fuller story --
+`?Arbuthnot` for the original citation, and `issues/TASKS.md` for a note on tracking down DOIs
+for both.
+
+## What is re-visioning?
+
+*(Expand this section with more of the framing from Friendly (2002) and `?HistData` -- draft
+placeholder for now; the Introduction above already covers the core definition.)*
+
+## A taxonomy of re-visions
+
+The gallery accompanying Friendly (2002), <https://www.datavis.ca/gallery/re-minard.php>,
+catalogs about 15 different re-visions of the Minard graphic. Read as a checklist rather than a
+one-off catalog, they sort into six recognizable *kinds* of re-vision -- a rubric that applies to
+any HistData dataset, not just Minard's.
+
+### Software/language ports
+
+The same graphic, redrawn in a different tool: Mathematica, a formal Grammar-of-Graphics
+specification, ggplot2, SAS/IML, Protovis. The content doesn't change; what changes is what the
+choice of tool reveals about the graphic's underlying structure -- a grammar-of-graphics port, for
+instance, forces you to name the mapping from data to visual channel explicitly, in a way the
+original hand-drawn version never had to.
+
+### Design variations
+
+Same content, same tool family, different design decisions: legibility fixes, a graphic
+designer's redraw, an alternate visual metaphor (Minard's gallery includes a pictograph version
+emphasizing human cost over cartographic accuracy). This is the category where taste and
+communication goals do the most work.
+
+### Interactive/web-based
+
+Tooltips, drill-down, linked views, map overlays -- re-visions that trade the fixed, printed page
+for something a reader can query. The Minard gallery includes an image map with linked text and a
+drill-down SAS GMAP; this is also the natural home for the `plotly` version of `Perozzo` below.
+
+### Temporal/animated
+
+A step-by-step reveal, a third axis given over to time, a narrated video. Minard's original
+already compresses time into distance along the march route; an animated re-vision instead lets
+time *play out*, trading the compression for a different kind of legibility. (See "Open
+invitations" below for the deferred `gganimate` idea for `Perozzo`.)
+
+### Alternative representations
+
+A genuinely different chart type for the same underlying data -- not a redraw, a rethink. The
+`Snow-density.R` case study below (density contours instead of point symbols for cholera deaths)
+is this category in miniature.
+
+### Data packaged for reuse
+
+The original figures plus the underlying data, released in a form someone else can build on. This
+is, quite literally, what the `HistData` package itself does for all 34 of its datasets --
+arguably the least glamorous but most consequential category, since every other kind of re-vision
+in this list depends on it having happened first.
+
+*(TODO: pull a representative thumbnail image from the datavis.ca gallery for each category above
+once hosting/licensing for third-party images is sorted out -- see `issues/vignettes/histdata-challenge.md`.)*
+
+## Challenges already named in HistData
+
+Several datasets in this package already carry an explicit "go recreate or improve this" note in
+their documentation:
+
+| Dataset | Nature of the challenge |
+|---|---|
+| [`Minard`](../reference/Minard.html) | "Minard's Challenge": reproduce the March on Moscow graphic with modern tools (Friendly, 2002). |
+| [`Guerry`](../reference/Guerry.html) | Friendly (2007): "Challenges for Multivariable Spatial Analysis." |
+| [`Playfair1824`](../reference/Playfair1824.html) | Re-create Playfair's last chart, or do better, using modern graphics. |
+| [`Perozzo`](../reference/Perozzo.html) | Get closer to Perozzo's hand-drawn stereogram, or do better in some way -- the case study below. |
+| [`Pollen`](../reference/Pollen.html) | The original 1986 ASA JSM "Data Challenge" -- a synthetic 5D dataset with several deliberately hidden features. |
+| [`OldMaps`](../reference/OldMaps.html) | Open call to relate map accuracy to other characteristics of each map. |
+
+This first draft works two of these (`Minard`, `Perozzo`) in depth, plus one further example from
+outside the package's own docs (`Snow`, via John Russell's 30DayChartChallenge). The rest stay
+listed here, cited, and open -- see "Open invitations."
+
+## Case study: `Minard`
+
+*(Draft placeholder. Per the plan: point to a couple of gallery entries from
+<https://www.datavis.ca/gallery/re-minard.php>, one per taxonomy category above, as illustration
+-- not a full reproduction. E.g. the ggplot2 port for "software/language ports," the pictograph
+for "design variations," the animated GIF for "temporal/animated.")*
+
+## Case study: `Perozzo`
+
+Perozzo's 1880/1881 stereogram plots survivor counts as a surface over `Year` x `Age`. The
+package ships a base-R version already:
+
+```{r perozzo-setup}
+data(Perozzo)
+Pmat <- xtabs(Survivors ~ Year + Age, data = Perozzo)
+years <- as.numeric(rownames(Pmat))
+ages  <- as.numeric(colnames(Pmat))
+```
+
+```{r perozzo-base, fig.height = 5}
+ages_rev <- -rev(ages)
+Pmat_rev <- Pmat[, rev(seq_along(ages))]
+persp(years, ages_rev, Pmat_rev,
+      xlab = "Year", ylab = "Age", zlab = "Survivors",
+      theta = 0, phi = 25, expand = 0.6,
+      col = adjustcolor("lightblue", alpha.f = 0.5), shade = 0.5)
+```
+
+### Re-vision 1: ggplot2 raster + contour
+
+A straightforward "alternative representation" re-vision: give up the 3D illusion entirely in
+favor of a 2D heatmap with isolines, which trades the stereogram's dramatic silhouette for exact,
+directly-comparable values.
+
+```{r perozzo-ggplot-contour}
+ggplot(Perozzo, aes(x = Year, y = Age, z = Survivors)) +
+  geom_raster(aes(fill = Survivors)) +
+  geom_contour(color = "white", alpha = 0.6) +
+  scale_fill_distiller(palette = "Blues", direction = 1) +
+  scale_y_reverse() +
+  labs(title = "Perozzo's survivorship grid, as a heatmap") +
+  theme_minimal()
+```
+
+### Re-vision 2: a fake-3D isometric shear
+
+A "design variation": keep the 3D *look* Perozzo was after, but build it as an ordinary 2D ggplot
+via a manual isometric shear (offsetting each `Age` slice horizontally and vertically as a
+function of `Age`), rather than `persp()`'s true 3D projection. Unlike `persp()`, this gets full
+access to ggplot's color scales, legends, and layering.
+
+```{r perozzo-isometric}
+shear <- 0.6   # horizontal points per year of age; tune to taste
+lift  <- 400   # vertical Survivors-units per year of age
+
+Perozzo_iso <- transform(Perozzo,
+  x_iso = Year + shear * Age,
+  y_iso = Survivors + lift * Age
+)
+
+ggplot(Perozzo_iso, aes(x = x_iso, y = y_iso, group = Age, color = Age)) +
+  geom_line() +
+  scale_color_distiller(palette = "Blues", direction = 1) +
+  labs(
+    title = "Perozzo's stereogram as a 2D isometric shear",
+    x = "Year (sheared by Age)", y = "Survivors (lifted by Age)"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_blank(), axis.text.y = element_blank())
+```
+
+*(Rough first pass -- the shear/lift constants above are not tuned, and this doesn't yet attempt
+Perozzo's actual oblique axis convention. Revisit before shipping.)*
+
+### Re-vision 3: an interactive `plotly` surface
+
+An "interactive/web-based" re-vision, and arguably the most direct modern analogue of a physical
+stereogram: something a reader can actually rotate, rather than a single fixed viewing angle.
+
+```{r perozzo-plotly}
+library(plotly)
+plot_ly(x = ~years, y = ~ages, z = ~Pmat, type = "surface") |>
+  layout(scene = list(
+    xaxis = list(title = "Year"),
+    yaxis = list(title = "Age"),
+    zaxis = list(title = "Survivors")
+  ))
+```
+
+### Still open
+
+The trace-line coloring Perozzo himself used -- highlighting `age` and `year` cross-sections in
+red at 25-year intervals (see `R/Perozzo.R`'s `@details`) -- was deferred earlier and isn't
+attempted in any of the three re-visions above. Left as an open invitation (below) rather than
+solved in this draft.
+
+## Case study: `Snow`, via John Russell's 30DayChartChallenge
+
+Of the `sandbox/` scripts recreating Russell's [30DayChartChallenge
+2025](https://github.com/drjohnrussell/30DayChartChallenge) entries, `Snow-density.R` was picked
+for this draft because it needs no dependencies beyond `ggplot2` (see
+`issues/vignettes/histdata-challenge.md` for the full dependency audit of every candidate script),
+and because it's a genuine "alternative representation" of one of the package's most iconic
+datasets: density contours instead of point symbols for cholera deaths, layered over Snow's
+original street map.
+
+```{r snow-density}
+data(Snow.deaths); data(Snow.pumps); data(Snow.streets)
+
+ggplot(Snow.deaths, aes(x = x, y = y)) +
+  geom_line(data = Snow.streets, aes(x = x, y = y, group = street),
+            color = "black", linewidth = 0.5) +
+  geom_point(alpha = 0.6) +
+  geom_density_2d_filled(bins = 4, show.legend = FALSE) +
+  geom_density_2d(bins = 4, color = "black", alpha = 0.6) +
+  scale_fill_manual(values = c("#FFFFFF00", "#F0808030", "#FF000030", "#8B000080")) +
+  geom_label(data = Snow.pumps, aes(x = x, y = y, label = label),
+             size = 3, color = "blue", alpha = 0.8) +
+  theme_void() +
+  labs(
+    title = "John Snow's Cholera Map",
+    subtitle = "With contour lines showing densities of death",
+    caption = "Data: HistData::Snow.deaths / Snow.pumps / Snow.streets"
+  )
+```
+
+Adapted from `sandbox/Snow-density.R` (originally: John Russell,
+[Challenge11.R](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge11.R)).
+
+## Open invitations
+
+Not attempted in this draft -- a literal "here's what's left" list:
+
+- **`Minard`, `Guerry`, `Playfair1824`, `Pollen`, `OldMaps`** -- named and cited above, not worked
+  through in depth in this first draft.
+- **`Perozzo`'s red trace-line coloring** -- see "Still open" above.
+- **`Perozzo` animated (`gganimate`)** -- held for a later draft; would add `gganimate` (+ a
+  renderer) to `Suggests`.
+- **Every other dormant `sandbox/` script** not chosen for the live case study above --
+  `Galton-PearsonLee.R`, `Mcdonnell-density.R`, `Pyx-ggbump.R`, `Virginis-plot.R`,
+  `Arbuthnot-PieGlyph.R`, `Cholera-plots.R`, `Nightingale-graph.R`, `Guerry-map.R`,
+  `OldMaps-plot-map.R` -- each linked from its dataset's docs but never executed/shown; see the
+  planning doc for what each would need beyond current `Suggests`.
+- **`Ebbinghaus`** -- a not-yet-imported dataset (`issues/TASKS.md`), unrelated to any graphic
+  challenge but still genuinely unfinished package work.
+- **Rennie's fuller Snow map recreation** -- needs external data files not present in this repo;
+  linked from `Snow.Rd` but can't be re-run here.
+- **`Langren1644`** -- a *third* independent re-vision exists in [this
+  blog post](https://friendly.github.io/blog/posts/2026-07-van-langren/)'s "Bonus: Reproducing
+  Langren's 1644 Graph" section, alongside the package's own long-standing ggplot2 example and
+  `sandbox/Langren-graph.R`. Worth a short paragraph on the design trade-offs between the three,
+  not developed here yet.
+
+## Going further
+
+- Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and Graphic Communication*.
+  Harvard University Press.
+- Companion site: <https://friendly.github.io/HistDataVis/> -- R code "reconstructions of
+  historical graphs" tied to each book chapter.
+- Gallery of Data Visualization (GDV), referenced in Friendly (2002).
+- <https://www.datavis.ca/gallery/re-minard.php> -- the re-visions gallery this vignette's
+  taxonomy is drawn from.
+
+## References
+
+*(Plain-text for now; convert to a `references.bib` + `[@key]` citations before this ships -- see
+the note at the top of this file.)*
+
+- Friendly, M. (2002). Visions and Re-Visions of Charles Joseph Minard. *Journal of Educational
+  and Behavioral Statistics*, 27(1), 31-51.
+- Friendly, M. (2007). A.-M. Guerry's Moral Statistics of France: Challenges for Multivariable
+  Spatial Analysis. *Statistical Science*, 22, 368-399.
+- Zabell, S. (1976). Arbuthnot, Heberden and the Bills of Mortality (Technical Report No. 40).
+  Department of Statistics: The University of Chicago.
+- Zabell, S., & Wainer, H. (2002). A Small Hurrah for the Black Death. *Chance*, 15(4), 58-60.

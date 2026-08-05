@@ -278,17 +278,37 @@ add the `NEWS.md` entry, and rebuild pkgdown — same checklist as any other fea
 `issues/` is already `.Rbuildignore`d and not scanned by pkgdown, so nothing there gets published
 regardless of how unfinished it is.
 
+## Decisions, round 2 (2026-08-05)
+
+- **Draft location**: `issues/vignettes/` (new folder), not `issues/` directly. This planning
+  doc moved here (`git mv`); the actual draft lives alongside it as
+  `issues/vignettes/histdata-challenge-draft.Rmd`. Will need a `references.bib` eventually
+  (citations are plain-text in the draft for now) — not addressed yet, per instruction to focus
+  on getting a working draft first.
+- **`plotly` added to `Suggests`** (was already installed locally, confirmed working). The
+  rotatable-surface re-vision is built in the draft. `gganimate` held for later — not added,
+  described as an open invitation instead.
+- **`Snow-density.R` confirmed** for section 6.3, live-executed in the draft.
+
+First working draft exists as of 2026-08-05: intro, Arbuthnot motivating example (real code +
+plot), taxonomy (6 subsections, prose only — image TODOs left for later), challenges table,
+`Perozzo` case study (3 built re-visions: ggplot2 raster+contour, isometric-shear, plotly
+surface — the red-trace-line idea explicitly left open, not attempted), `Snow` case study
+(live `Snow-density.R`), open invitations, going further, plain-text references. Rendered
+end-to-end with `rmarkdown::render()`, no errors. Still placeholder/thin: the "What is
+re-visioning" section (mostly covered by the intro already) and the `Minard` case study
+(structure only, no content yet).
+
 ## Still open
 
-- **Confirm the draft location above** — `issues/histdata-challenge-draft.Rmd`, moved to
-  `vignettes/` only when ready? Or a different scheme (e.g. a dedicated `vignettes-wip/` folder,
-  or just working on a git branch and not merging until done)?
-- **Approve (or defer) adding `plotly` and/or `gganimate` to `Suggests`** for the `Perozzo`
-  case study's optional interactive/animated versions (section 6.2)? Everything else in the
-  vignette plan needs zero new dependencies.
-- **Confirm `Snow-density.R` (or `Yeast.R`) for section 6.3** — both are zero-new-dependency; do
-  either of these sound right, or is there a different `sandbox/` script you'd rather feature?
 - **Should `sandbox/` scripts actually be sourced/run live** in the vignette (turning "reference
   material" into "executed examples"), or just described/linked with static images — for the
   scripts *not* chosen for 6.3, some depend on packages not in `Suggests` (`sf`, `ggbump`,
-  `waffle`, etc. — see the refined inventory above).
+  `waffle`, etc. — see the refined inventory above). Still relevant for any future case studies
+  beyond the two now drafted.
+- **Fill in the `Minard` case study** — currently a placeholder pointing at the gallery, per the
+  "point to a couple of gallery entries, don't reproduce them all" plan; needs the actual prose
+  and links written.
+- **The isometric-shear `Perozzo` re-vision's `shear`/`lift` constants are untuned** — a rough
+  first pass, noted inline in the draft.
+- **`references.bib`** — deferred; draft currently cites everything as plain text.

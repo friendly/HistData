@@ -59,7 +59,8 @@ Suggests:
     gridExtra,
     vcd,
     MASS,
-    forcats
+    forcats,
+    plotly
 License: GPL
 LazyLoad: yes
 LazyData: yes
