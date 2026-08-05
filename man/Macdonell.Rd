@@ -242,6 +242,8 @@ Gosset, W. S. (Student) (1908). Probable error of a mean. \emph{Biometrika},
 
 Gosset, W. S. (Student) (1908). Probable error of a correlation coefficient.
 \emph{Biometrika}, 6, 302-310.
+
+See the example by John Russell for the \href{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge04.R}{30DayChartChallenge}
 }
 \concept{bivariate distribution}
 \concept{contour plot}

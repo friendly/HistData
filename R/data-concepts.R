@@ -1771,7 +1771,9 @@ NULL
 #' 
 #' Gosset, W. S. (Student) (1908). Probable error of a correlation coefficient.
 #' *Biometrika*, 6, 302-310.
-#' 
+#'
+#' See the example by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge04.R)
+#'
 #' @source Macdonell, W. R. (1902). On Criminal Anthropometry and the
 #' Identification of Criminals. *Biometrika*, 1(2), 177-227.
 #' \doi{10.1093/biomet/1.2.177}
@@ -2348,7 +2350,9 @@ NULL
 #' 
 #' Pearson, M. and Short, I. (2008) Nightingale's Rose (flash animation).
 #' <http://understandinguncertainty.org/files/animations/Nightingale11/Nightingale1.html>
-#' 
+#'
+#' See the example by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge06.R)
+#'
 #' @source The data were obtained from:
 #' 
 #' Pearson, M. and Short, I. (2007). Understanding Uncertainty: Mathematics of
@@ -3307,8 +3311,10 @@ NULL
 #' 
 #' See the example from Nicola Rennie's [data-viz-projects](nrennie.rbind.io/data-viz-projects/), a tour-de-force:
 #' [John Snow's Cholera Maps](https://github.com/nrennie/data-viz-projects/tree/main/John%20Snow%20Cholera%20Maps)
-#' 
-#' @source 
+#'
+#' See also the example by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge11.R)
+#'
+#' @source
 #' Tobler, W. (1994). Snow's Cholera Map,
 #' `http://www.ncgia.ucsb.edu/pubs/snow/snow.html`; data files were
 #' obtained from `http://ncgia.ucsb.edu/Publications/Software/cholera/`,

@@ -184,6 +184,8 @@ Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
 
 See the example from Nicola Rennie's \href{nrennie.rbind.io/data-viz-projects/}{data-viz-projects}, a tour-de-force:
 \href{https://github.com/nrennie/data-viz-projects/tree/main/John\%20Snow\%20Cholera\%20Maps}{John Snow's Cholera Maps}
+
+See also the example by John Russell for the \href{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge11.R}{30DayChartChallenge}
 }
 \seealso{
 \code{\link{SnowMap}} for code to draw Snow's map;

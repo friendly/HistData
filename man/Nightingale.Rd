@@ -178,6 +178,8 @@ Small, H. (1998) Florence Nightingale's statistical diagrams
 
 Pearson, M. and Short, I. (2008) Nightingale's Rose (flash animation).
 \url{http://understandinguncertainty.org/files/animations/Nightingale11/Nightingale1.html}
+
+See the example by John Russell for the \href{https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge06.R}{30DayChartChallenge}
 }
 \concept{before-after comparison}
 \concept{coxcomb plot}

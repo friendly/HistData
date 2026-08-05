@@ -70,8 +70,14 @@ work rather than clean-up:
   `Nightingale-graph.R`, `OldMaps-plot-map.R`, `Pollen-ex.R`, `Pyx-ggbump.R`, `Pyx-histogram.R`,
   `Snow-density.R`, `Virginis-plot.R`, `Yeast.R`) — per `NEWS.md` v0.9.4 ("Add example graphs from
   John Russell to `sandbox/`"), these are the local copies behind the `@references` links to
-  Russell's 30DayChartChallenge already shipped in `R/data-concepts.R`. Job already done; kept as
-  reference.
+  Russell's 30DayChartChallenge in `R/data-concepts.R`. Job already done; kept as reference.
+
+  - [X] **Fixed 2026-08-05: 3 of the 14 scripts had no `@references` link at all** — found while
+    prepping `issues/histdata-challenge.md` (a vignette idea) and cross-checking `sandbox/` against
+    `grep -n "Russell" R/data-concepts.R`. `Mcdonnell-density.R` (→ `Macdonell`, Challenge04),
+    `Nightingale-graph.R` (→ `Nightingale`, Challenge06), and `Snow-density.R` (→ `Snow`,
+    Challenge11) were undocumented gaps, not "already done" as previously logged here. Added the
+    missing `@references` lines to their `R/data-concepts.R` blocks, matching the existing pattern.
 
 - `sandbox/john-snow-cholera-maps-nrennie.R` (+ `nrennie0.R`, `.png`) — a fuller recreation of
   Snow's cholera map in Nicola Rennie's style, referencing external data files not present in the
