@@ -27,6 +27,24 @@ as-is:
 The paper's second half, "Re-Visions of Minard's Other Graphics," is the template: take a
 canonical historical graphic and re-examine/re-create it with modern tools and eyes.
 
+### A small motivating example for the intro: Zabell's find in `Arbuthnot`
+
+Before the vignette gets to anything as ambitious as Minard, it's worth opening with something
+small and concrete: `R/data-concepts.R`'s own `@details` for `Arbuthnot` already records that
+Sandy Zabell (1976) found the data contain an error — the values for 1674 and 1704 are identical,
+suggesting one was miscopied from the other — a discrepancy that surfaces once you actually plot
+the series rather than just tabulate it. That's re-visioning in miniature: looking again at old
+data with a graph turns up something a table alone hides. Citations (the second isn't currently
+used anywhere else in the package):
+
+- Zabell, S. (1976). Arbuthnot, Heberden and the Bills of Mortality (Technical Report No. 40).
+  Department of Statistics: The University of Chicago. (Already cited in `Arbuthnot`'s
+  `@references`.)
+- Zabell, S., & Wainer, H. (2002). A Small Hurrah for the Black Death. *Chance*, 15(4), 58-60.
+
+DOIs for both (and a pass over the vignette's other references) are deferred — see
+`issues/TASKS.md`.
+
 ### A ready-made taxonomy of re-visions
 
 The gallery accompanying the paper, <https://www.datavis.ca/gallery/re-minard.php>, catalogs
@@ -44,15 +62,16 @@ HistData dataset, not just Minard's:
 6. **Data packaged for reuse** — the original figures plus machine-readable data in multiple
    formats (this is literally what the HistData package itself does)
 
-### Companion resources (link out, don't duplicate)
+This taxonomy *is* the vignette's value-add, not just background: rather than a flat list of
+"here's a challenge, go do something," each of the 6 categories above should become its own `###`
+subsection with real description — what that kind of re-vision asks of you, why it's a distinct
+mode of "seeing again" rather than a cosmetic variant of another category, and (where the
+datavis.ca gallery has one) an illustrative image pulled from
+<https://www.datavis.ca/gallery/re-minard.php>. See section "A taxonomy of re-visions, fleshed
+out" in the proposed structure below.
 
-- Book: Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and Graphic
-  Communication*. Harvard University Press.
-- Companion site: <https://friendly.github.io/HistDataVis/> — R code "reconstructions of
-  historical graphs" tied to each book chapter. The vignette should position itself as the
-  *package-specific*, practitioner-facing entry point, distinct from this book-length treatment —
-  cross-link rather than repeat.
-- Gallery of Data Visualization (GDV), referenced in the Minard paper.
+(Companion resources — the book, the HistDataVis site, the GDV gallery — moved to a "Going
+Further" section at the end, per the proposed structure below, rather than sitting in the intro.)
 
 ## Named "challenges" already flagged inside HistData's own docs
 
@@ -70,11 +89,11 @@ vignette, each already has a citation in place:
 
 ## `sandbox/` inventory: what's done vs. not yet linked
 
-14 loose scripts. Cross-checking which ones are actually linked from the docs (`grep -n
-"Russell" R/data-concepts.R`) turned up a real gap:
+14 loose scripts, **all now cross-referenced** via `@references` to John Russell's
+[30DayChartChallenge 2025](https://github.com/drjohnrussell/30DayChartChallenge) edition:
 
-**Already cross-referenced** via `@references` to John Russell's [30DayChartChallenge
-2025](https://github.com/drjohnrussell/30DayChartChallenge) edition:
+MF: I think that some of these are already used as examples or referenced someway in the package.
+  Refine the list to see what remains.
 
 - `Arbuthnot-PieGlyph.R` → `Arbuthnot` (Challenge03)
 - `Cholera-plots.R` → `Cholera` (Challenge01)
@@ -84,23 +103,32 @@ vignette, each already has a citation in place:
 - `Pyx-ggbump.R` / `Pyx-histogram.R` → `Pyx` (Challenge08)
 - `Virginis-plot.R` → `Virginis` (Challenge22)
 - `Yeast.R` → `Yeast` (Challenge28)
+- `Mcdonnell-density.R` → `Macdonell` (Challenge04)
+- `Nightingale-graph.R` → `Nightingale` (Challenge06)
+- `Snow-density.R` → `Snow` (Challenge11)
 
-**NOT yet cross-referenced** — the scripts exist in `sandbox/` but nothing in `R/data-concepts.R`
-points to them. A real gap worth a small separate TASKS.md fix, independent of the vignette:
-
-- `Mcdonnell-density.R` → `Macdonell` — no `@references` link
-- `Nightingale-graph.R` → `Nightingale` — no `@references` link
-- `Snow-density.R` → `Snow` — no `@references` link
+**Resolved 2026-08-05** (commit `0ab187a`): the last 3 above (Macdonell/Nightingale/Snow) were a
+real gap — found while doing this inventory, they had no `@references` link at all despite having
+a `sandbox/` script. Fixed before drafting, per the decision below, so this inventory is now
+accurate rather than something the vignette needs to caveat.
 
 **Pre-existing, not from Russell/30DayChallenge:**
 
 - `Langren-graph.R` → `Langren1644` (NEWS v0.5, original ggplot2 example)
+  * MF: Link to blog post, [van Lengren's Secret](https://friendly.github.io/blog/posts/2026-07-van-langren/)
+    Perhaps this could be used somewhere to talk about the design/implementation choices one makes in
+    reproducing an historical graph. For example, my plots in the van Langren post (generated by Claude! -- but
+    dont mention this) were more complex than that done by John Russell in `Langren-graph.R`. Also, is fonts
+    were better, but the total code could have been better tweaked to position the title better.
+  
 - `Pollen-ex.R` → `Pollen`
+  * MF: This was just a scratch file to test something. Can be safely ignored, or even deleted.
 
 **Not package-content, exclude or mention only in passing:**
 
 - `HistData-downloads.R`, `mypkg-downloads.R` — CRAN download-stats fun plots, unrelated to any
-  dataset's historical content
+  dataset's historical content [MF: Ignore this stuff]
+  
 - `john-snow-cholera-maps-nrennie.R` (+ `nrennie0.R`, `.png`) — Nicola Rennie's fuller Snow map
   recreation, already linked via `@references` in `Snow.Rd`, but depends on external data files
   not present in the repo, so it can't actually be re-run. Vignette could show the static `.png`
@@ -125,26 +153,64 @@ vignette's own demo or as additional listed open challenges:
 - The still-open piece named in `R/Perozzo.R` itself: color the fixed-year age trace lines red
   (deferred mid-session on 2026-08-05 as "a subsequent step" — see git history). This could
   literally *be* one of the vignette's demonstrated solutions.
+  
+  MF: Some of these could be worked out, or just described for further challenges in the Case Studies section.
+  The ggplot2 one is a prime example. Could also do the plotly one, if this doesn't cause excessive new
+  dependencies or code pain.
 
-## Proposed vignette structure (draft)
+## Proposed vignette structure (draft, revised 2026-08-05)
 
 1. **Title/intro** — "The HistData Challenge: Re-Visioning Historical Graphics" (working title).
    Open with the Merriam-Webster "RE-VISION" epigraph.
-2. **What is re-visioning / statistical historiography** — adapted from `HistData-package.R` +
+   MF: Good working title
+   
+2. **A small motivating example: `Arbuthnot`** — Zabell's 1674/1704 find (see above). Concrete
+   and quick before anything as big as Minard — the point is that *looking again, graphically*
+   surfaces things tabulation hides. One short paragraph, one plot, done.
+   
+3. **What is re-visioning / statistical historiography** — adapted from `HistData-package.R` +
    the Minard paper's framing.
-3. **A taxonomy of re-visions** — the 6-category rubric above; this becomes the vignette's
-   organizing frame for everything that follows.
-4. **Challenges already named in HistData** — the table above (Minard, Guerry, Playfair1824,
-   Perozzo, Pollen, OldMaps), each with its citation.
-5. **Gallery of existing re-visions in `sandbox/`** — the Russell 30DayChartChallenge scripts +
-   Rennie's Snow map, organized by the taxonomy in (3), with code + plot for a few standouts.
-6. **Case study walkthrough: `Perozzo`** — newest, most-documented example. Show the shipped
-   base-R version, then live-demo 1-2 of the ggplot2/plotly re-visions above.
-7. **Open invitations** — the not-yet-attempted pieces: the 3 unlinked sandbox scripts, the
-   `Ebbinghaus` dataset (per `issues/TASKS.md`), the red-gridline Perozzo idea, Rennie's Snow map
-   needing external data. A literal "how to contribute" list.
-8. **Closing** — links to companion resources (book, HistDataVis site, GDV gallery, datavis.ca
-   Minard gallery).
+4. **A taxonomy of re-visions, fleshed out** — the real payoff of the vignette, not just
+   background. Each of the 6 categories gets its own `###` subsection:
+   - 4.1 Software/language ports
+   - 4.2 Design variations
+   - 4.3 Interactive/web-based
+   - 4.4 Temporal/animated
+   - 4.5 Alternative representations
+   - 4.6 Data packaged for reuse
+
+   Each subsection: what that mode of re-vision actually asks of you, why it counts as a
+   *distinct* way of "seeing again" rather than a cosmetic variant of another category, one
+   illustrative image pulled from <https://www.datavis.ca/gallery/re-minard.php> where available,
+   and a forward-pointer to which of the worked/gallery examples below fits that category.
+   
+5. **Challenges already named in HistData** — the table above (Minard, Guerry, Playfair1824,
+   Perozzo, Pollen, OldMaps), each with its citation. Per the scope decision below, only
+   `Minard` and `Perozzo` get full worked treatment in this first draft; the rest are named,
+   cited, and cross-linked to section 7 ("Open invitations") rather than drafted in depth.
+   
+6. **Case study walkthroughs** (the two/three examples chosen for depth, per Decisions below):
+   - 6.1 **`Minard`** — the original re-vision case; point to a couple of gallery entries per
+     taxonomy category from section 4 as illustration, rather than reproducing them all.
+   - 6.2 **`Perozzo`** — newest, most-documented example. Show the shipped base-R version, then
+     live-demo 1-2 of the ggplot2/plotly re-visions listed above.
+   - 6.3 **One Russell 30DayChartChallenge example** — pick a single `sandbox/` script (not yet
+     chosen) and walk it end to end as the "here's what a finished re-vision from `sandbox/`
+     looks like" demonstration.
+     
+7. **Open invitations** — the not-yet-attempted pieces: the challenges from section 5 that didn't
+   get full treatment, the `Ebbinghaus` dataset (per `issues/TASKS.md`), the red-gridline Perozzo
+   idea, Rennie's Snow map needing external data. A literal "how to contribute" list.
+   
+8. **Going Further** — companion resources, moved here from the intro rather than front-loaded:
+   - Book: Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and Graphic
+     Communication*. Harvard University Press.
+   - Companion site: <https://friendly.github.io/HistDataVis/> — R code "reconstructions of
+     historical graphs" tied to each book chapter. This vignette is the *package-specific*,
+     practitioner-facing entry point; cross-link rather than repeat its content.
+   - Gallery of Data Visualization (GDV), referenced in the Minard paper.
+   - <https://www.datavis.ca/gallery/re-minard.php> (already linked throughout section 4, but
+     worth a final pointer here too).
 
 ## Decisions (2026-08-05)
 

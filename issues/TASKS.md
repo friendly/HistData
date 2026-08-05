@@ -12,6 +12,22 @@ removed. v1.0.0 (shipped 2025-11-29, per `NEWS.md`) converted docs Rd→roxygen,
 tags to all 34 datasets, and added `@references` links to John Russell's
 [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge) recreations.
 
+## TODO: find DOIs for histdata-challenge vignette references
+
+While fleshing out `issues/histdata-challenge.md`, added a motivating example (Zabell's discovery
+of an inconsistency in the `Arbuthnot` data — identical 1674/1704 values, already noted in
+`R/data-concepts.R`'s `@details` for `Arbuthnot`) citing:
+
+- Zabell, S. (1976). Arbuthnot, Heberden and the Bills of Mortality (Technical Report No. 40).
+  Department of Statistics: The University of Chicago. (Also already in `R/data-concepts.R`'s
+  `@references` for `Arbuthnot`, without a DOI — it's a technical report, may not have one.)
+- Zabell, S., & Wainer, H. (2002). A Small Hurrah for the Black Death. *Chance*, 15(4), 58-60.
+  (Not currently cited anywhere else in the package.)
+
+No DOI found yet for either (confirmed absent from `timeref.bib` too). Deferred — look these up
+(CrossRef/tandfonline) before the vignette actually ships, and spot-check other references pulled
+into the vignette at the same time rather than one at a time.
+
 ## Workflow: rebuilding pkgdown (2026-08-05)
 
 Before running `pkgdown::build_site()`, check both of these — a stale one silently produces a
