@@ -105,6 +105,12 @@ for both.
 *(Expand this section with more of the framing from Friendly (2002) and `?HistData` -- draft
 placeholder for now; the Introduction above already covers the core definition.)*
 
+Historians of statistics have long practiced "re-visioning" before I coined this term.
+- Stephan Stigler (cite a few examples)
+- David Bellhouse (& student) on Halley's determinations of magnetic declination
+- perhaps mention some work by James Henley, McGill from email of Fri 2025-11-07 3:07 PM and his work on Student
+
+
 ## A taxonomy of re-visions
 
 The gallery accompanying Friendly (2002), <https://www.datavis.ca/gallery/re-minard.php>,
@@ -151,7 +157,7 @@ is this category in miniature.
 The original figures plus the underlying data, released in a form someone else can build on. This
 is, quite literally, what the `HistData` package itself does for all 34 of its datasets --
 arguably the least glamorous but most consequential category, since every other kind of re-vision
-in this list depends on it having happened first.
+in this list depends on having data to play with first.
 
 *(TODO: pull a representative thumbnail image from the datavis.ca gallery for each category above
 once hosting/licensing for third-party images is sorted out -- see `issues/vignettes/histdata-challenge.md`.)*
