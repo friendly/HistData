@@ -87,48 +87,68 @@ vignette, each already has a citation in place:
 | `Pollen` | `data-concepts.R` ~2741 | The original 1986 ASA JSM "Data Challenge" — a synthetic 5D dataset with several deliberately hidden "features" to find. |
 | `OldMaps` | `data-concepts.R` ~2490 | Open call: "produce useful analyses and graphical displays" relating map accuracy to other characteristics. |
 
-## `sandbox/` inventory: what's done vs. not yet linked
+## `sandbox/` inventory, refined: what's actually done vs. dormant-but-linked
 
-14 loose scripts, **all now cross-referenced** via `@references` to John Russell's
-[30DayChartChallenge 2025](https://github.com/drjohnrussell/30DayChartChallenge) edition:
+First pass (above) only checked whether a `@references` link exists. Re-checked more carefully —
+every one of these datasets already had *its own* example plot in `@examples` before Russell's
+2025 contribution (unsurprising: they're mature, long-shipped datasets). What actually
+distinguishes them is whether *Russell's specific recreation* is executed/shown anywhere, or
+just sits as a dormant file with a link pointing at it. Only one script clears that bar. Also
+checked each dormant script's `library()` calls against `DESCRIPTION`'s `Suggests:` — relevant
+for choosing a low-friction live demo (see "Decisions" below):
 
-MF: I think that some of these are already used as examples or referenced someway in the package.
-  Refine the list to see what remains.
+**Fully embedded & executed** — Russell's own code lives directly in the package's `@examples`,
+using only packages already in `Suggests` (`ggplot2`, `dplyr`, `forcats`):
 
-- `Arbuthnot-PieGlyph.R` → `Arbuthnot` (Challenge03)
-- `Cholera-plots.R` → `Cholera` (Challenge01)
-- `Galton-PearsonLee.R` → `Galton` & `PearsonLee` (Challenge02)
-- `Guerry-map.R` → `Guerry` (Challenge22)
-- `OldMaps-plot-map.R` → `OldMaps` (Challenge10)
-- `Pyx-ggbump.R` / `Pyx-histogram.R` → `Pyx` (Challenge08)
-- `Virginis-plot.R` → `Virginis` (Challenge22)
-- `Yeast.R` → `Yeast` (Challenge28)
-- `Mcdonnell-density.R` → `Macdonell` (Challenge04)
-- `Nightingale-graph.R` → `Nightingale` (Challenge06)
-- `Snow-density.R` → `Snow` (Challenge11)
+- `Pyx-histogram.R` → `Pyx` (Challenge08, `data-concepts.R:2923`). Note this is distinct from
+  `Pyx-ggbump.R` (below), which is a second, still-dormant Russell recreation of the same dataset.
 
-**Resolved 2026-08-05** (commit `0ab187a`): the last 3 above (Macdonell/Nightingale/Snow) were a
-real gap — found while doing this inventory, they had no `@references` link at all despite having
-a `sandbox/` script. Fixed before drafting, per the decision below, so this inventory is now
-accurate rather than something the vignette needs to caveat.
+**Linked via `@references`, but dormant** — the script exists, the link exists, but the code has
+never been run/shown in the package. Each already coexists with the dataset's own separate
+(usually simpler, base-R) example. Extra packages needed beyond current `Suggests`
+(`ggplot2`/`dplyr`/`forcats`/`lubridate` already covered) in parens:
+
+- `Yeast.R` → `Yeast` (Challenge28) — **no extra deps** (just `tidyverse`'s `ggplot2`/`dplyr`;
+  one `tibble()` call, trivially swappable for `data.frame()`)
+- `Snow-density.R` → `Snow` (Challenge11) — **no extra deps**, same reasoning
+- `Galton-PearsonLee.R` → `Galton` & `PearsonLee` (Challenge02) — `RColorBrewer` (lightweight)
+- `Mcdonnell-density.R` → `Macdonell` (Challenge04) — `RColorBrewer`, `ggExtra`
+- `Pyx-ggbump.R` → `Pyx` (Challenge08, the *other* Pyx script) — `RColorBrewer`, `ggbump`
+- `Virginis-plot.R` → `Virginis` (Challenge22) — `ggrepel`
+- `Arbuthnot-PieGlyph.R` → `Arbuthnot` (Challenge03) — `PieGlyph` (niche)
+- `Cholera-plots.R` → `Cholera` (Challenge01) — `waffle`, `emojifont`, `RColorBrewer`
+- `Nightingale-graph.R` → `Nightingale` (Challenge06) — `RColorBrewer`, `showtext`. Package's own
+  `@examples` already has a *different*, older coxcomb/rose-diagram `ggplot2` example
+  (`data-concepts.R` ~2390-2410); Russell's is a distinct `coord_radial()` take. A genuinely nice
+  "two re-visions, two taxonomy categories, same data" pairing if this gets picked for section 6.
+- `Guerry-map.R` → `Guerry` (Challenge22) — `sf`, `patchwork`
+- `OldMaps-plot-map.R` → `OldMaps` (Challenge10) — `geosphere`, `rnaturalearth`, `sf`, `metR`
+  (heaviest of the set)
+
+**Best low-friction candidates for a live-executed case study (section 6.3)**: `Yeast.R` or
+`Snow-density.R` — zero new `Suggests`. `Snow-density.R` is the more thematically appealing pick
+(iconic dataset, ties into the existing `SnowMap()` function, fits the "alternative
+representation"/density-contour taxonomy category cleanly).
 
 **Pre-existing, not from Russell/30DayChallenge:**
 
-- `Langren-graph.R` → `Langren1644` (NEWS v0.5, original ggplot2 example)
-  * MF: Link to blog post, [van Lengren's Secret](https://friendly.github.io/blog/posts/2026-07-van-langren/)
-    Perhaps this could be used somewhere to talk about the design/implementation choices one makes in
-    reproducing an historical graph. For example, my plots in the van Langren post (generated by Claude! -- but
-    dont mention this) were more complex than that done by John Russell in `Langren-graph.R`. Also, is fonts
-    were better, but the total code could have been better tweaked to position the title better.
-  
-- `Pollen-ex.R` → `Pollen`
-  * MF: This was just a scratch file to test something. Can be safely ignored, or even deleted.
+- `Langren-graph.R` → `Langren1644` (NEWS v0.5, original ggplot2 example). Related: the blog post
+  [Van Langren's Secret, Finally Told](https://friendly.github.io/blog/posts/2026-07-van-langren/)
+  has its own "Bonus: Reproducing Langren's 1644 Graph" section — a *third* independent re-vision
+  of the same graphic, with period-appropriate fonts. Good material for a short aside on the
+  design/implementation trade-offs different re-visions make (the blog version trades simplicity
+  for historical-authenticity touches the sandbox script doesn't attempt) — without needing to
+  build out a full third case study.
+
+**Safe to delete, not vignette material:**
+
+- `Pollen-ex.R` — scratch file for testing something, not a real example. Candidate for deletion
+  rather than inclusion; flag in `issues/TASKS.md` separately from the vignette.
+- `HistData-downloads.R`, `mypkg-downloads.R` — CRAN download-stats fun plots. Out of scope,
+  ignore for vignette purposes.
 
 **Not package-content, exclude or mention only in passing:**
 
-- `HistData-downloads.R`, `mypkg-downloads.R` — CRAN download-stats fun plots, unrelated to any
-  dataset's historical content [MF: Ignore this stuff]
-  
 - `john-snow-cholera-maps-nrennie.R` (+ `nrennie0.R`, `.png`) — Nicola Rennie's fuller Snow map
   recreation, already linked via `@references` in `Snow.Rd`, but depends on external data files
   not present in the repo, so it can't actually be re-run. Vignette could show the static `.png`
@@ -137,33 +157,41 @@ accurate rather than something the vignette needs to caveat.
 ## `Perozzo` as the newest worked example — ggplot2 angles
 
 Currently ships base-R-only examples (`persp()`/`contour()`/`contourLines()`, see `R/Perozzo.R`).
-Candidate "how would you do this in ggplot2 (or beyond)" ideas — good seeds either for the
-vignette's own demo or as additional listed open challenges:
+Candidate "how would you do this in ggplot2 (or beyond)" ideas, now split by whether they're
+worth actually *building* for the case study (section 6.2) vs. just *describing* as a further
+open challenge — driven mainly by dependency cost, since `ggplot2`/`dplyr` are already in
+`Suggests` but `gganimate`/`plotly` are not:
 
-- `geom_raster()`/`geom_tile()` + `geom_contour()` — a straightforward 2D heatmap-plus-isolines
-  version.
+**Build for real, in the vignette:**
+
+- `geom_raster()`/`geom_tile()` + `geom_contour()` — straightforward 2D heatmap-plus-isolines
+  version. No new dependencies.
 - Fake the oblique/receding 3D look with a manual isometric/shear coordinate transform (shift
   `Age` into `x`/`y` before plotting in ordinary 2D ggplot) — the classic "fake 3D" trick, and
-  unlike `persp()` it gets full access to ggplot's color scales, legends, and layering.
-- `gganimate`: animate across `Year`, revealing each birth cohort's survivorship curve as it
-  "arrives" — a direct visualization of the cohort-diagonal insight already described in
-  `R/Perozzo.R`'s `@details`.
-- `plotly::plot_ly(type = "surface")` — a genuinely rotatable interactive 3D version, arguably
-  the truest modern analogue of a physical stereogram you can walk around.
+  unlike `persp()` it gets full access to ggplot's color scales, legends, and layering. No new
+  dependencies.
 - The still-open piece named in `R/Perozzo.R` itself: color the fixed-year age trace lines red
   (deferred mid-session on 2026-08-05 as "a subsequent step" — see git history). This could
-  literally *be* one of the vignette's demonstrated solutions.
-  
-  MF: Some of these could be worked out, or just described for further challenges in the Case Studies section.
-  The ggplot2 one is a prime example. Could also do the plotly one, if this doesn't cause excessive new
-  dependencies or code pain.
+  literally *be* one of the vignette's demonstrated solutions, and is base-R/`persp()` — no new
+  dependencies either.
+
+**Describe as an open challenge, unless dependency cost turns out acceptable:**
+
+- `gganimate`: animate across `Year`, revealing each birth cohort's survivorship curve as it
+  "arrives" — a direct visualization of the cohort-diagonal insight already described in
+  `R/Perozzo.R`'s `@details`. Would add `gganimate` (+ a renderer like `gifski`) to `Suggests`.
+- `plotly::plot_ly(type = "surface")` — a genuinely rotatable interactive 3D version, arguably
+  the truest modern analogue of a physical stereogram you can walk around. Would add `plotly` to
+  `Suggests`; also the one idea here that's genuinely hard to show statically in a PDF/CRAN-check
+  context (needs an HTML vignette, which this already is, so that part's fine) — worth trying if
+  the dependency is acceptable, since it's arguably the most compelling single demo in the whole
+  vignette.
 
 ## Proposed vignette structure (draft, revised 2026-08-05)
 
-1. **Title/intro** — "The HistData Challenge: Re-Visioning Historical Graphics" (working title).
-   Open with the Merriam-Webster "RE-VISION" epigraph.
-   MF: Good working title
-   
+1. **Title/intro** — "The HistData Challenge: Re-Visioning Historical Graphics" (working title,
+   confirmed). Open with the Merriam-Webster "RE-VISION" epigraph.
+
 2. **A small motivating example: `Arbuthnot`** — Zabell's 1674/1704 find (see above). Concrete
    and quick before anything as big as Minard — the point is that *looking again, graphically*
    surfaces things tabulation hides. One short paragraph, one plot, done.
@@ -189,18 +217,26 @@ vignette's own demo or as additional listed open challenges:
    `Minard` and `Perozzo` get full worked treatment in this first draft; the rest are named,
    cited, and cross-linked to section 7 ("Open invitations") rather than drafted in depth.
    
-6. **Case study walkthroughs** (the two/three examples chosen for depth, per Decisions below):
+6. **Case study walkthroughs** (the examples chosen for depth, per Decisions below):
    - 6.1 **`Minard`** — the original re-vision case; point to a couple of gallery entries per
      taxonomy category from section 4 as illustration, rather than reproducing them all.
    - 6.2 **`Perozzo`** — newest, most-documented example. Show the shipped base-R version, then
-     live-demo 1-2 of the ggplot2/plotly re-visions listed above.
-   - 6.3 **One Russell 30DayChartChallenge example** — pick a single `sandbox/` script (not yet
-     chosen) and walk it end to end as the "here's what a finished re-vision from `sandbox/`
-     looks like" demonstration.
-     
+     build out (not just describe) the ggplot2 raster+contour version, the isometric-shear fake-3D
+     version, and the red-trace-line fix — all zero-new-dependency. `gganimate`/`plotly` versions
+     built too if the dependency addition is approved (see "Still open" below), else described as
+     open invitations instead.
+   - 6.3 **One Russell 30DayChartChallenge example, live-executed** — candidate: `Snow-density.R`
+     (zero new dependencies, iconic dataset, pairs naturally with the existing `SnowMap()`
+     function) or `Yeast.R` (also zero new dependencies). See the refined `sandbox/` inventory
+     above for the full dependency breakdown of every candidate. A short aside on `Langren1644`
+     (the sandbox script vs. the blog post's independent reproduction) can sit here too, without
+     needing to become a full fourth case study.
+
 7. **Open invitations** — the not-yet-attempted pieces: the challenges from section 5 that didn't
-   get full treatment, the `Ebbinghaus` dataset (per `issues/TASKS.md`), the red-gridline Perozzo
-   idea, Rennie's Snow map needing external data. A literal "how to contribute" list.
+   get full treatment, every dormant (linked-but-never-run) `sandbox/` script not chosen for 6.3,
+   the `Ebbinghaus` dataset (per `issues/TASKS.md`), the deferred Perozzo `gganimate`/`plotly`
+   versions if not built, Rennie's Snow map needing external data. A literal "how to contribute"
+   list.
    
 8. **Going Further** — companion resources, moved here from the intro rather than front-loaded:
    - Book: Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and Graphic
@@ -223,8 +259,36 @@ vignette's own demo or as additional listed open challenges:
   drafting, so the vignette's "already done" inventory is accurate from the start. (Done
   2026-08-05 — see `issues/TASKS.md`.)
 
+## Where to draft this (2026-08-05)
+
+Dropping a `.Rmd` directly into `vignettes/` is risky while it's a work-in-progress: pkgdown's
+"Building articles" step scans everything in `vignettes/` and publishes it on the next
+`pkgdown::build_site()` (confirmed — that's exactly how `Snow_deaths-duplicates.Rmd` gets built
+today), so a half-finished draft there would go live on the GitHub Pages site the next time
+anyone rebuilds the site, deliberately or not.
+
+**Recommendation**: draft in `issues/` instead — e.g. `issues/histdata-challenge-draft.Rmd` —
+mirroring the `dev/`-folder workflow already documented in the global `TASKS-all.md` ("Workflow:
+resolving a `dev/` TODO with Claude"), adapted to this package's actual convention of using
+`issues/` in place of `dev/`/`extra/` (per this file's own earlier notes). Preview locally with
+`rmarkdown::render()` or the RStudio knit button as you go; only `git mv` it into `vignettes/`
+once it's actually ready to ship (at which point run `devtools::document()`, `devtools::check()`,
+add the `NEWS.md` entry, and rebuild pkgdown — same checklist as any other feature landing).
+
+`issues/` is already `.Rbuildignore`d and not scanned by pkgdown, so nothing there gets published
+regardless of how unfinished it is.
+
 ## Still open
 
+- **Confirm the draft location above** — `issues/histdata-challenge-draft.Rmd`, moved to
+  `vignettes/` only when ready? Or a different scheme (e.g. a dedicated `vignettes-wip/` folder,
+  or just working on a git branch and not merging until done)?
+- **Approve (or defer) adding `plotly` and/or `gganimate` to `Suggests`** for the `Perozzo`
+  case study's optional interactive/animated versions (section 6.2)? Everything else in the
+  vignette plan needs zero new dependencies.
+- **Confirm `Snow-density.R` (or `Yeast.R`) for section 6.3** — both are zero-new-dependency; do
+  either of these sound right, or is there a different `sandbox/` script you'd rather feature?
 - **Should `sandbox/` scripts actually be sourced/run live** in the vignette (turning "reference
-  material" into "executed examples"), or just described/linked with static images — some depend
-  on packages not in `Suggests` (`sp`, `ggbump`, etc.)?
+  material" into "executed examples"), or just described/linked with static images — for the
+  scripts *not* chosen for 6.3, some depend on packages not in `Suggests` (`sf`, `ggbump`,
+  `waffle`, etc. — see the refined inventory above).
