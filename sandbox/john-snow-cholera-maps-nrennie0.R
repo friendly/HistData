@@ -1,4 +1,3 @@
-# from: https://github.com/nrennie/data-viz-projects/blob/main/John%20Snow%20Cholera%20Maps/john-snow-cholera-maps.R
 # Load packages -----------------------------------------------------------
 
 library(readxl)
@@ -13,7 +12,6 @@ library(ggtext)
 library(nrBrand)
 library(ggnewscale)
 library(showtext)
-library(HistData)
 
 
 # Load fonts --------------------------------------------------------------
@@ -25,10 +23,7 @@ showtext_auto()
 
 # Load data ---------------------------------------------------------------
 
-cases <- HistData::Snow.deaths
-
-# Data downloaded from https://johnsnowsociety.org/jss_mapcompetition/
-# cases <- read_xlsx("John Snow Cholera Maps/data/John_Snow_1854_cases.xlsx")
+cases <- read_xlsx("John Snow Cholera Maps/data/John_Snow_1854_cases.xlsx")
 pumps <- read_sf("John Snow Cholera Maps/data/SnowGIS/Pumps.shp")
 deaths <- read_sf("John Snow Cholera Maps/data/SnowGIS/Cholera_Deaths.shp")
 OSMap <- rast("John Snow Cholera Maps/data/SnowGIS/OSMap_Grayscale.tif")
@@ -149,7 +144,7 @@ smooth_map <- bg_map +
   geom_spatraster(data = plot_rast,
                   mapping = aes(alpha = after_stat(value)),
                   interpolate = TRUE,
-  ) +
+                  ) +
   scale_alpha(guide = "none", range = c(0.5, 1), na.value = 0.5) +
   scale_fill_distiller(palette = "YlOrBr",
                        direction = 1,
@@ -207,7 +202,6 @@ pumps_map +
           family = "quattrocento",
           margin = margin(l = 8, r = 5, t = 15, b = 5),
         ),
-        legend.ticks = element_blank(),
         plot.margin = margin(t = -26))
 
 

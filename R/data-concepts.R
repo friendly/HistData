@@ -3306,6 +3306,9 @@ NULL
 #' 
 #' Tufte, E. (1997). *Visual Explanations*. Cheshire, CT: Graphics Press.
 #' 
+#' See the example from Nicola Rennie's [data-viz-projects](nrennie.rbind.io/data-viz-projects/), a tour-de-force:
+#' [John Snow's Cholera Maps](https://github.com/nrennie/data-viz-projects/tree/main/John%20Snow%20Cholera%20Maps)
+#' 
 #' @source 
 #' Tobler, W. (1994). Snow's Cholera Map,
 #' `http://www.ncgia.ucsb.edu/pubs/snow/snow.html`; data files were

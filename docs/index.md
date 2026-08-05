@@ -2,7 +2,7 @@
 
 **Data Sets from the History of Statistics and Data Visualization**
 
-Version 1.0.0
+Version 1.0.1 (2025-12-01)
 
 The `HistData` package provides a collection of small data sets that are
 interesting and important in the history of statistics and data
@@ -227,6 +227,14 @@ tt(dsets, width = c(.2, .8)) |>
   them broadly accessible for teaching and statistical software
   development.
 
+- The [lattice package](https://lattice.r-forge.r-project.org/) contains
+  the Minnesota `barley` data used by Cleveland (1993) in developing
+  Trellis graphics and ideas behind conditioning (faceted) plots.
+  Wright (2013) reanalysed this and extended the datasets in the
+  [agridat package](https://kwstat.github.io/agridat/), which also
+  contains a wide variety other datasets from agricultural experiments,
+  some of historical interest.
+
 ## Contributors
 
 Please note that the `HistData` project is released with a [Contributor
@@ -244,6 +252,9 @@ Murphy, Jim Oeppen, James Riley, John Russell, Neville Verlander, Hadley
 Wickham.
 
 ## References
+
+Cleveland, William S. (1993) *Visualizing Data*. Hobart Press, Summit,
+New Jersey.
 
 Drevon, D., Fursa, S. R., & Malcolm, A. L. (2016). Intercoder
 Reliability and Validity of WebPlotDigitizer in Extracting Graphed Data.
@@ -269,3 +280,6 @@ Data Visualization*, Ashgate Press, Chapter 10.
 Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and
 Graphic Communication*, Harvard University Press, ISBN 9780674975231.
 Companion [web site](https://friendly.github.io/HistDataVis/)
+
+Wright, K. (2013). Revisiting Immer’s Barley Data. *The American
+Statistician*, **67**(3), 129–133

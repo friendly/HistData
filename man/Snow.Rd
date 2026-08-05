@@ -181,6 +181,9 @@ Snow, J. (1885). \emph{On the Mode of Communication of Cholera}. London:
 John Churchill. Possibly at https://resource.nlm.nih.gov/0050707.
 
 Tufte, E. (1997). \emph{Visual Explanations}. Cheshire, CT: Graphics Press.
+
+See the example from Nicola Rennie's \href{nrennie.rbind.io/data-viz-projects/}{data-viz-projects}, a tour-de-force:
+\href{https://github.com/nrennie/data-viz-projects/tree/main/John\%20Snow\%20Cholera\%20Maps}{John Snow's Cholera Maps}
 }
 \seealso{
 \code{\link{SnowMap}} for code to draw Snow's map;
