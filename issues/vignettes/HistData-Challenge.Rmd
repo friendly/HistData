@@ -15,10 +15,13 @@ under vignettes/ on every `pkgdown::build_site()`, so a half-finished draft ther
 by accident. issues/ is already .Rbuildignore'd and outside pkgdown's scan path.
 
 When this is ready to ship:
-  1. Add a proper vignette YAML header (rmarkdown::html_vignette + %\VignetteIndexEntry etc.)
-  2. Add a references.bib and switch citations below to [@key] form
-  3. git mv issues/vignettes/histdata-challenge-draft.Rmd vignettes/histdata-challenge.Rmd
-  4. devtools::document(); devtools::check(); NEWS.md entry; rebuild pkgdown
+  1. Add a proper vignette YAML header (rmarkdown::html_vignette + %\VignetteIndexEntry etc.),
+     including `bibliography: histdata.bib` -- the file already exists
+     (issues/vignettes/histdata.bib, verified with pandoc --citeproc) and switch citations below
+     to [@key] form
+  2. git mv issues/vignettes/HistData-Challenge.Rmd vignettes/HistData-Challenge.Rmd (bring
+     histdata.bib along too)
+  3. devtools::document(); devtools::check(); NEWS.md entry; rebuild pkgdown
      (see issues/TASKS.md's "Workflow: rebuilding pkgdown" checklist)
 
 See issues/vignettes/histdata-challenge.md for the full planning/rationale behind every
