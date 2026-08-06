@@ -210,25 +210,19 @@ painstaking case: Murray & Bellhouse (2017) work out how Edmond Halley actually 
 1701 map of magnetic declination -- a map, not a table -- using only the methods and instruments
 available to Halley at the time.
 
-*(TODO: a paragraph on James Hanley's (McGill) work on `Student`/Gosset, pending the email
-content referenced in an earlier note.)*
+[James Hanley](https://jhanley.biostat.mcgill.ca) (McGill) has made a research program out of
+exactly this kind of return-to-the-source work, publishing detailed re-analyses and re-created
+datasets that go well beyond what the original publications contained. Two examples tie directly
+into `HistData`:
 
-[James Hanley](https://jhanley.biostat.mcgill.ca) has been a constant contributor to this line of inquiry, publishing detailed datasets and inquiries that go well beyond what was contained in an original work.
-TODO: fill in here, from stuff below
-
-TODO: Hanley materials, not all to be used here-- but the first one is what I meant in my note, and the Gosset one is also worth mentioning.
-
-https://jhanley.biostat.mcgill.ca/Student/ - Height and finger-length data, gathered by Macdonell (1901), and used by Student (1908), published in: Hanley, J. and Julien, M. and Moodie, E. (2008). Student's z, t, and s: What if Gosset had R? The American Statistician, 62(1), 64-69.
-This is reflected in `HistData::Macdonell
-
-https://jhanley.biostat.mcgill.ca/Gosset/ - Re-enactment of Gosset's counting of yeast cells
-as described in the 1907 Biometrika article
-This is reflected in `HistData:Yeast`, also used by John Russel in `sandbox/Yeast.R`
-
-vcdExtra::Draft 1970 dataset 
-  https://jhanley.biostat.mcgill.ca/Reprints/LestWeForgetUSSelectiveServiceLotteries1917-2019.pdf
-  https://jhanley.biostat.mcgill.ca/DraftLotteries/ - US Selective Service Lotteries 1917-1975: Datasets
-  - Don't use this here. But make a note that this should be cited and described for `vcdExtra::Draft1970`
+- Hanley, Julien & Moodie (2008), "Student's z, t, and s: What if Gosset had R?," traces the
+  height and finger-length data originally gathered by Macdonell (1901) and used by "Student"
+  (Gosset, 1908) to introduce the *t*-distribution -- the same data shipped here as
+  `HistData::Macdonell`.
+- Hanley's [re-enactment of Gosset's yeast-cell counting](https://jhanley.biostat.mcgill.ca/Gosset/),
+  following the method described in Gosset's 1907 *Biometrika* article, connects directly to
+  `HistData::Yeast` -- also the subject of John Russell's `sandbox/Yeast.R` recreation, picked up
+  again in the case studies below.
 
 
 ## A taxonomy of re-visions
@@ -612,3 +606,5 @@ the note at the top of this file.)*
   Methods in Medical Research*, 6(2), 103-114.
 - Murray, L. L., & Bellhouse, D. R. (2017). How Was Edmond Halley's Map of Magnetic Declination
   (1701) Constructed? *Imago Mundi*, 69(1), 72-84.
+- Hanley, J., Julien, M., & Moodie, E. (2008). Student's z, t, and s: What if Gosset had R? *The
+  American Statistician*, 62(1), 64-69.

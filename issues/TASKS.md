@@ -28,6 +28,18 @@ No DOI found yet for either (confirmed absent from `timeref.bib` too). Deferred 
 (CrossRef/tandfonline) before the vignette actually ships, and spot-check other references pulled
 into the vignette at the same time rather than one at a time.
 
+## TODO (belongs to vcdExtra, not HistData): cite James Hanley's Draft 1970 re-creation
+
+Found while gathering material on James Hanley (McGill) for `issues/vignettes/HistData-Challenge.Rmd`'s
+"What is re-visioning?" section (2026-08-06) — not used there per instruction, but shouldn't be
+lost. `vcdExtra::Draft1970` (US Selective Service lottery data) has a matching re-creation/analysis
+by Hanley that should be cited and described in *vcdExtra*'s own docs, not here:
+
+- <https://jhanley.biostat.mcgill.ca/Reprints/LestWeForgetUSSelectiveServiceLotteries1917-2019.pdf>
+- <https://jhanley.biostat.mcgill.ca/DraftLotteries/> — "US Selective Service Lotteries 1917-1975: Datasets"
+
+Move this note to `vcdExtra`'s own `issues/TASKS.md` next time working in that package.
+
 ## Workflow: rebuilding pkgdown (2026-08-05)
 
 Before running `pkgdown::build_site()`, check both of these — a stale one silently produces a
