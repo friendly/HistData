@@ -85,7 +85,7 @@ ggplot(Arbuthnot, aes(x = Year, y = Ratio)) +
   geom_point(color = "grey50") +
   geom_point(
     data = subset(Arbuthnot, Year %in% c(1674, 1704)),
-    color = "firebrick", size = 3
+    color = "firebrick", size = 6
   ) +
   labs(
     title = "Arbuthnot's sex ratio at christening, 1629-1710",
@@ -423,7 +423,7 @@ ggplot(Snow.deaths, aes(x = x, y = y)) +
   geom_density_2d(bins = 4, color = "black", alpha = 0.6) +
   scale_fill_manual(values = c("#FFFFFF00", "#F0808030", "#FF000030", "#8B000080")) +
   geom_label(data = Snow.pumps, aes(x = x, y = y, label = label),
-             size = 3, color = "blue", alpha = 0.8) +
+             size = 3, color = "grey20", fill = "lightblue", alpha = 0.9) +
   theme_void() +
   labs(
     title = "John Snow's Cholera Map",
