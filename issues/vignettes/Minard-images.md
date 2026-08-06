@@ -3,6 +3,8 @@
 **PROBLEM**: The <https://www.datavis.ca/gallery/re-minard.php> page does not expose the filenames of
 all of the actual graphics used. Also, a number of them are of quite low resolution.
 
+  * **SOLVED**: All the materials for the <https://datavis.ca> Gallery site are available on GitHub:   <https://github.com/friendly/datavis/tree/master/gallery>. In particular, the Minard images are in <https://github.com/friendly/datavis/tree/master/gallery/minard>
+
 ## Found: the Gallery of Data Vis folder
 
 `C:\Users\friendly\Dropbox\Documents\milestones\images\Gallery\` -- confirmed via a filename
