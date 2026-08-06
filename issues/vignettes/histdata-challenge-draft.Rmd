@@ -118,7 +118,7 @@ catalogs about 15 different re-visions of the Minard graphic. Read as a checklis
 one-off catalog, they sort into six recognizable *kinds* of re-vision -- a rubric that applies to
 any HistData dataset, not just Minard's.
 
-### Software/language ports
+### 1. Software/language ports
 
 The same graphic, redrawn in a different tool: Mathematica, a formal Grammar-of-Graphics
 specification, ggplot2, SAS/IML, Protovis. The content doesn't change; what changes is what the
@@ -126,33 +126,48 @@ choice of tool reveals about the graphic's underlying structure -- a grammar-of-
 instance, forces you to name the mapping from data to visual channel explicitly, in a way the
 original hand-drawn version never had to.
 
-### Design variations
+A software port is only as easy as the data behind it lets it be, and `HistData` deliberately
+pre-parses some of its more complex graphics into separate, composable pieces rather than one
+monolithic table -- the same decomposition the original artist implicitly made when laying out
+the figure. Snow's cholera map is really five aligned layers (`Snow.deaths`, `Snow.pumps`,
+`Snow.streets`, `Snow.polygons`, `Snow.dates`), and Minard's march is three (`Minard.cities`,
+`Minard.troops`, `Minard.temp`: places, the flow band itself, and the temperature graph beneath
+it). Porting the graphic to a new tool becomes a matter of re-mapping each existing piece onto
+that tool's own layer/channel model, rather than re-deriving the decomposition from scratch --
+see the `Minard` case study below, built directly from these three data frames.
+
+### 2. Design variations
 
 Same content, same tool family, different design decisions: legibility fixes, a graphic
 designer's redraw, an alternate visual metaphor (Minard's gallery includes a pictograph version
 emphasizing human cost over cartographic accuracy). This is the category where taste and
 communication goals do the most work.
 
-### Interactive/web-based
+### 3. Interactive/web-based
 
 Tooltips, drill-down, linked views, map overlays -- re-visions that trade the fixed, printed page
 for something a reader can query. The Minard gallery includes an image map with linked text and a
 drill-down SAS GMAP; this is also the natural home for the `plotly` version of `Perozzo` below.
 
-### Temporal/animated
+### 4. Temporal/animated
 
 A step-by-step reveal, a third axis given over to time, a narrated video. Minard's original
 already compresses time into distance along the march route; an animated re-vision instead lets
 time *play out*, trading the compression for a different kind of legibility. (See "Open
 invitations" below for the deferred `gganimate` idea for `Perozzo`.)
 
-### Alternative representations
+A concrete example: Ron Kennett's "moving bubble" animated re-vision, which replaces Minard's
+static flow band with a single traveling bubble sized to the army's current strength, sweeping
+along the march route as time advances. *(Image on file, `Kennet-moving-bubble.gif`; embedding
+pending the general image-hosting/licensing decision noted above.)*
+
+### 5. Alternative representations
 
 A genuinely different chart type for the same underlying data -- not a redraw, a rethink. The
 `Snow-density.R` case study below (density contours instead of point symbols for cholera deaths)
 is this category in miniature.
 
-### Data packaged for reuse
+### 6. Data packaged for reuse
 
 The original figures plus the underlying data, released in a form someone else can build on. This
 is, quite literally, what the `HistData` package itself does for all 34 of its datasets --
@@ -182,15 +197,66 @@ listed here, cited, and open -- see "Open invitations."
 
 ## Case study: `Minard`
 
-*(Draft placeholder. Per the plan: point to a couple of gallery entries from
-<https://www.datavis.ca/gallery/re-minard.php>, one per taxonomy category above, as illustration
--- not a full reproduction. E.g. the ggplot2 port for "software/language ports," the pictograph
-for "design variations," the animated GIF for "temporal/animated.")*
+Minard drew his 1869 original by hand, in ink, as a single sheet: a tapering flow band tracing
+the army's size and location, paired with a temperature graph along the same horizontal axis.
+Friendly (2002) catalogs around 15 later re-visions of it, spanning every category in the
+taxonomy above; this section builds one of them directly (a software/language port), then
+points to gallery entries for a few more.
+
+### A software/language port, built from `Minard.cities`/`Minard.troops`/`Minard.temp`
+
+As noted in "Software/language ports" above, the march itself decomposes into `Minard.cities`
+(places), `Minard.troops` (the flow band -- each row a vertex, `survivors` giving the band's
+width, `direction` its color, `group` which sub-path it belongs to), and `Minard.temp` (the
+temperature series, not used in this panel). Porting to ggplot2 is then mostly a matter of
+mapping `survivors` to `linewidth` and `direction` to `colour`:
+
+```{r minard-ggplot}
+data(Minard.cities); data(Minard.troops)
+
+ggplot(Minard.troops, aes(x = long, y = lat)) +
+  geom_path(aes(linewidth = survivors, colour = direction, group = group),
+            lineend = "round") +
+  scale_linewidth(range = c(0.5, 15), guide = "none") +
+  scale_colour_manual(values = c(A = "grey50", R = "firebrick"), guide = "none") +
+  geom_point(data = Minard.cities, size = 1.2) +
+  geom_text(data = Minard.cities, aes(label = city), vjust = 1.5, hjust = 0.5, size = 3) +
+  labs(title = "Napoleon's Russian campaign of 1812", x = NULL, y = NULL) +
+  theme_minimal() +
+  theme(axis.text = element_blank(), panel.grid = element_blank())
+```
+
+Grey is the advance on Moscow, red the retreat; band width still carries troop strength, exactly
+as in the 1869 original, with none of `HistData`'s decomposition into separate data frames
+lost in translation.
+
+### A few more, from the gallery
+
+The rest of Friendly (2002)'s catalog isn't reproduced here (some entries are third-party work
+with licensing not yet sorted out for redistribution -- see `issues/vignettes/Minard-images.md`),
+but is worth naming by taxonomy category, all viewable at
+<https://www.datavis.ca/gallery/re-minard.php>:
+
+- **Design variation**: Gene Zelazny's pictograph redesign -- soldier silhouettes standing in for
+  the flow band, a Napoleon portrait and Moscow's onion domes flanking the numbers, thermometer
+  icons instead of a temperature line. Same data, a completely different set of design decisions
+  about what to foreground.
+- **Interactive/web-based**: a Protovis port overlaying the flow band directly on a pannable,
+  zoomable Google Map of the actual terrain -- the natural next step past a static basemap, and
+  in the same category as the `plotly` version of `Perozzo` above.
+- **Temporal/animated**: Ron Kennett's moving-bubble re-vision, already named in the taxonomy
+  section above.
 
 ## Case study: `Perozzo`
 
-Perozzo's 1880/1881 stereogram plots survivor counts as a surface over `Year` x `Age`. The
-package ships a base-R version already:
+Perozzo's 1880/1881 stereogram plots survivor counts as a surface over `Year` x `Age`, and does
+it by hand, in ink, with its own four-way legend ("Sistema d'Assi"): black for the age
+cross-sections, red for the census-year cross-sections, dashed lines for isodemic (equal-
+population) contours, and violet for the cohort-survivorship diagonals themselves.
+
+![Perozzo's original 1880/1881 stereogram (Wikimedia Commons, public domain)](figures/perozzo-original.jpg){width=90%}
+
+The package ships a base-R version already:
 
 ```{r perozzo-setup}
 data(Perozzo)
@@ -198,6 +264,10 @@ Pmat <- xtabs(Survivors ~ Year + Age, data = Perozzo)
 years <- as.numeric(rownames(Pmat))
 ages  <- as.numeric(colnames(Pmat))
 ```
+
+The most basic example, from the documentation, shows a simple perspective plot (`graphics::persp()`) of the 3D surface. Some fiddling was necessary to get the orientation approximately right. 
+
+  
 
 ```{r perozzo-base, fig.height = 5}
 ages_rev <- -rev(ages)
@@ -207,6 +277,63 @@ persp(years, ages_rev, Pmat_rev,
       theta = 0, phi = 25, expand = 0.6,
       col = adjustcolor("lightblue", alpha.f = 0.5), shade = 0.5)
 ```
+
+That base plot loses most of what makes Perozzo's original worth looking at: no sense of the
+steep "wall" of large numbers at `Age = 0`, no highlighted reference lines, and no cohort
+diagonals at all. All four are answerable directly with `persp()`, without leaving base R -- it
+returns a 4x4 projection matrix from each call, and `trans3d()` + `lines()` can then draw more
+3D-located lines onto the same plot after the fact:
+
+```{r perozzo-enhanced, fig.height = 6}
+colnames(Pmat_rev) <- as.character(ages_rev)  # match column names to ages_rev's sign flip
+
+# re-angled to bring the Age = 0 "wall" of large young-survivor counts forward
+pmat <- persp(years, ages_rev, Pmat_rev,
+      xlab = "Year", ylab = "Age", zlab = "Survivors",
+      theta = -30, phi = 20, expand = 0.6, r = 4,
+      col = adjustcolor("lightblue", alpha.f = 0.4), shade = 0.5)
+
+# red: highlight both cross-section families -- Survivors-by-Age at each Year,
+# and Survivors-by-Year at each Age -- every 25 years/years-of-age
+hi_years <- years[years %% 25 == 0]
+for (yr in hi_years) {
+  z <- Pmat_rev[as.character(yr), ]
+  lines(trans3d(rep(yr, length(ages_rev)), ages_rev, z, pmat), col = "red", lwd = 2)
+}
+hi_ages <- ages[ages %% 25 == 0]
+for (ag in hi_ages) {
+  z <- Pmat_rev[, as.character(-ag)]
+  lines(trans3d(years, rep(-ag, length(years)), z, pmat), col = "red", lwd = 2)
+}
+
+# blue: birth-cohort diagonals -- Year = birth year + Age -- every 25 years,
+# starting from the Age = 0 edge (cohorts born during the observation window)
+# and the Year = 1750 edge (cohorts already alive when it starts)
+cohort_starts <- rbind(
+  data.frame(year0 = years[years %% 25 == 0], age0 = 0),
+  data.frame(year0 = 1750, age0 = ages[ages %% 25 == 0 & ages > 0])
+)
+for (i in seq_len(nrow(cohort_starts))) {
+  b  <- cohort_starts$year0[i]
+  a0 <- cohort_starts$age0[i]
+  k  <- 0:((100 - a0) / 5)
+  Y  <- b + 5 * k
+  A  <- a0 + 5 * k
+  keep <- Y >= min(years) & Y <= max(years) & A <= 100
+  Y <- Y[keep]; A <- A[keep]
+  if (length(Y) < 2) next
+  z <- mapply(function(y, a) Pmat[as.character(y), as.character(a)], Y, A)
+  lines(trans3d(Y, -A, z, pmat), col = "blue", lwd = 2)
+}
+```
+
+Red isn't an arbitrary choice: it's Perozzo's own color for the census-year cross-sections (see
+the original image above). Blue is a substitute for his violet, used here for the
+cohort-survivorship diagonals instead, since violet on top of the light-blue surface shading was
+too easily lost. Those diagonals are the real payoff: each blue line is a single Swedish birth
+cohort, and you can read its survivorship directly off the line's height as it recedes into the
+surface, generation by generation -- the "crucially" bit that a same-year cross-section alone
+can't show.
 
 ### Re-vision 1: ggplot2 raster + contour
 
@@ -271,10 +398,9 @@ plot_ly(x = ~years, y = ~ages, z = ~Pmat, type = "surface") |>
 
 ### Still open
 
-The trace-line coloring Perozzo himself used -- highlighting `age` and `year` cross-sections in
-red at 25-year intervals (see `R/Perozzo.R`'s `@details`) -- was deferred earlier and isn't
-attempted in any of the three re-visions above. Left as an open invitation (below) rather than
-solved in this draft.
+The one Perozzo idea from `R/Perozzo.R`'s `@details` not attempted anywhere above is animating
+across `Year`, letting each birth cohort's diagonal "arrive" in sequence rather than showing all
+of them at once (the `gganimate` idea in "Open invitations" below).
 
 ## Case study: `Snow`, via John Russell's 30DayChartChallenge
 
@@ -313,11 +439,10 @@ Adapted from `sandbox/Snow-density.R` (originally: John Russell,
 
 Not attempted in this draft -- a literal "here's what's left" list:
 
-- **`Minard`, `Guerry`, `Playfair1824`, `Pollen`, `OldMaps`** -- named and cited above, not worked
+- **`Guerry`, `Playfair1824`, `Pollen`, `OldMaps`** -- named and cited above, not worked
   through in depth in this first draft.
-- **`Perozzo`'s red trace-line coloring** -- see "Still open" above.
 - **`Perozzo` animated (`gganimate`)** -- held for a later draft; would add `gganimate` (+ a
-  renderer) to `Suggests`.
+  renderer) to `Suggests`. See "Still open" above.
 - **Every other dormant `sandbox/` script** not chosen for the live case study above --
   `Galton-PearsonLee.R`, `Mcdonnell-density.R`, `Pyx-ggbump.R`, `Virginis-plot.R`,
   `Arbuthnot-PieGlyph.R`, `Cholera-plots.R`, `Nightingale-graph.R`, `Guerry-map.R`,

@@ -70,6 +70,8 @@ datavis.ca gallery has one) an illustrative image pulled from
 <https://www.datavis.ca/gallery/re-minard.php>. See section "A taxonomy of re-visions, fleshed
 out" in the proposed structure below.
 
+
+
 (Companion resources — the book, the HistDataVis site, the GDV gallery — moved to a "Going
 Further" section at the end, per the proposed structure below, rather than sitting in the intro.)
 
@@ -299,16 +301,57 @@ end-to-end with `rmarkdown::render()`, no errors. Still placeholder/thin: the "W
 re-visioning" section (mostly covered by the intro already) and the `Minard` case study
 (structure only, no content yet).
 
+## Progress update (2026-08-05, second pass)
+
+MF added inline `TODO`s to the draft plus a dedicated `Minard-images.md`; worked through all of
+them:
+
+- **Taxonomy sections numbered** (1-6), per MF request.
+- **Software/language ports**: the data-decomposition `TODO` (Snow's 5 layers, Minard's 3) is now
+  real prose, and cross-links to the new `Minard` case study below.
+- **Temporal/animated**: added a concrete example (Ron Kennett's moving-bubble re-vision),
+  described in prose; actual `.gif` embedding still pending the general image-hosting/licensing
+  question.
+- **`Perozzo` case study**:
+  - The original is now actually shown — downloaded locally (`figures/perozzo-original.jpg`,
+    hotlinking to Wikimedia broke pandoc's `--embed-resources` step, which sends no User-Agent and
+    gets a 403). Confirmed public domain on the file's Commons page.
+  - Reading the original's own legend ("Sistema d'Assi") corrected an earlier assumption here:
+    Perozzo used **red** for census-year cross-sections and **violet** for cohort-survivorship
+    diagonals (not the "green isolines / blue cohorts" an earlier web-search summary suggested).
+    Fixed in both this doc's history (implicitly, via the vignette) and the vignette prose.
+  - Built the enhanced `persp()` plot MF's `TODO` asked for: re-angled to bring the `Age = 0`
+    "wall" forward, red-highlighted cross-sections at 25-year intervals (matching Perozzo's own
+    color), and blue cohort diagonals (standing in for his violet, which got lost against the
+    surface shading). All base R — `persp()`'s returned projection matrix plus `trans3d()`/
+    `lines()`, no new dependencies. This resolves what the "Still open" note below used to flag as
+    deferred.
+- **`Minard` case study**: no longer a placeholder. Built a real, working ggplot2 port directly
+  from `Minard.cities`/`Minard.troops`/`Minard.temp` (the "software/language ports" example the
+  taxonomy section points to), then named — in prose, not embedded — one gallery example per
+  remaining category (Zelazny's pictograph for design variation, a Protovis/Google-Maps port for
+  interactive, Kennett's bubble map for animated), each attributed and linked to the gallery page
+  rather than reproduced raw, since licensing on the third-party ones isn't sorted out.
+- **`Minard-images.md`**: found the actual "Gallery of Data Vis" folder (search for `*gallery*`
+  under `Documents`, not `Documents/milestones/images/minard/` — it's a sibling,
+  `Documents/milestones/images/Gallery/`) and curated one representative image per taxonomy
+  category with resolutions checked. Full table and licensing notes in that file.
+- Whole document re-rendered end-to-end with `rmarkdown::render()` after each change — clean, no
+  warnings, on the final pass.
+
 ## Still open
 
-- **Should `sandbox/` scripts actually be sourced/run live** in the vignette (turning "reference
-  material" into "executed examples"), or just described/linked with static images — for the
-  scripts *not* chosen for 6.3, some depend on packages not in `Suggests` (`sf`, `ggbump`,
-  `waffle`, etc. — see the refined inventory above). Still relevant for any future case studies
-  beyond the two now drafted.
-- **Fill in the `Minard` case study** — currently a placeholder pointing at the gallery, per the
-  "point to a couple of gallery entries, don't reproduce them all" plan; needs the actual prose
-  and links written.
+- **Licensing on the third-party Minard gallery images** — see `Minard-images.md`'s "Still
+  unresolved" section. Nothing embedded yet; case study is prose + one self-contained ggplot2 plot
+  only.
+- **`1812-2.jpg`'s authorship** — sitting in MF's own folder but not confirmed original; worth
+  checking before using it as "the original" the way the confirmed-public-domain Perozzo image is
+  used.
 - **The isometric-shear `Perozzo` re-vision's `shear`/`lift` constants are untuned** — a rough
   first pass, noted inline in the draft.
 - **`references.bib`** — deferred; draft currently cites everything as plain text.
+- **"What is re-visioning?" section** — still a placeholder list (Stigler, Bellhouse, the Henley/
+  McGill email) with no prose written yet.
+- **Taxonomy category thumbnails** — the general "pull a representative image from the datavis.ca
+  gallery for each of the 6 categories" `TODO` (distinct from the Minard-specific curation above)
+  is still open, same licensing question.
