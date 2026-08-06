@@ -45,25 +45,107 @@ library(ggplot2)
 ## Introduction
 
 The `HistData` package collects data behind some of the most important graphics in the history
-of statistics and data visualization. Some of these present graphical challenges to reproduce in
-R, and this collection is part of a program of research called *statistical historiography*: the
-use of statistical methods to study problems and questions in the history of statistics and
-graphics. A main aspect of this is the increased understanding of historical problems in science
-and data analysis through the process of trying to reproduce a graph or analysis using modern
-methods. We call this "re-visioning" -- meaning to *see again, hopefully in a new light*.
+of statistics and data visualization. Some of these still have stories to tell, and lessons
+for historians, graphic designers and software developers.
 
-This idea first took shape in Friendly (2002), "Visions and Re-Visions of Charles Joseph
-Minard," which reviewed decades of attempts -- by many different people, in many different tools
+I consider the package as a concrete, usable contribution to a program of research I call *statistical historiography*: The
+use of modern statistical and graphic methods as tools to study problems and questions in the history of statistics and
+and data visualization. A main goal of this is a better understanding of historical problems in science
+and data analysis through the _process_ of trying to reproduce a graph or analysis using modern
+methods. 
+
+You are led to ask--- and _think_ about--- important questions of statistical historiography:
+
+* _What was he thinking?_: How and why Charles Joseph Minard, Luigi Perozzo, John Snow, Michael Florent van Langren and other heroes in data visualization history chose some graphic form to tell their story.
+
+* _How did he do it?_: The contributions of the past were mostly hand-drawn, but with incredible attention to _detail_: text labels on lines, curves, regions; drawn numbers to show the data; annotations to add sense to scales or convey the message more directly to the viewer.
+
+* _Why was the resulting graphic considered so beautiful and important?_: Each of these datasets and their associated graphics solved, or contributed to, an important problem of their time. But they did so in a way that attracted attention and admiration
+
+I call the process "re-visioning" -- meaning to *see again, hopefully in a new light*.
+As such, they provide opportunities, and this **HistData Challenge** to reproduce them in R.
+
+### Challenges
+
+This idea first took shape the **Minard Challenge** that stemmed from my paper Friendly (2002), "Visions and Re-Visions of Charles Joseph
+Minard". This reviewed decades of attempts -- by many different people, in many different tools
 -- to reproduce and extend Minard's famous graphic of Napoleon's Russian campaign. That paper,
 and the gallery of re-visions that grew out of it, is the model for this vignette: a catalog of
 *kinds* of re-vision, applied not just to Minard but to any dataset in this package, plus a
 running inventory of what's already been attempted (in `sandbox/`, by outside contributors, in
 companion projects) and what's still open.
 
-## A small motivating example: `Arbuthnot`
+I should mention that the idea of a data visualization "Challenge" is an important one in this age
+of online communication. Typically, they present a dataset, or a content theme, or just an image,
+and invite participants to participate; sometimes prizes are awarded. 
 
-Before anything as ambitious as Minard, a small example makes the point concretely. John
-Arbuthnot's data on christenings in London (1629-1710) look, on a first read, like a straightforward
+Some examples illustrate the range of possibilities from such endeavors:
+
+* **ASA Statistical Graphics Expositions**: starting in the early 1980s -- the well-known 1983
+  Data Exposition (Donoho & Ramos's cars/mpg dataset) is often cited as the first, though a 1982
+  precursor is also mentioned in some accounts -- the [Section on Statistical
+  Graphics](https://community.amstat.org/jointscsg-section/home) of the American Statistical
+  Association began a series of poster/paper sessions at the Joint Statistical Meetings organized
+  around analysis of a single curated dataset, intended as an opportunity to share perspectives,
+  approaches to the problem, and highlight developments in software. Some notable examples are
+  the [`HistData::Pollen` data](../reference/Pollen.html) contained here and the baseball
+  salary/performance data from the [1988 Exposition](https://rdrr.io/cran/vcd/man/Baseball.html)
+  (based on the 1986 season), now shipped in the `vcd` package as `vcd::Baseball`.
+  
+* **Hotelling Society**: I was teaching a graduate course, [Psychology 6140: Multivariate Data Analysis](http://friendly.apps01.yorku.ca/psy6140/)
+  at the time, and I had the idea to use the baseball data again to challenge my students to 
+  "strut their stuff" and show off what they had learned in the course in a mock-conference setting
+  I called the "Society for Exploration of Multivariate Data", or, in honor of Harold Hotelling, the
+  ["Hotelling Society"](http://friendly.apps01.yorku.ca/psy6140/bb/basecall.htm). I used the 
+  [Baseball dataset](http://friendly.apps01.yorku.ca/psy6140/bb/basedata.htm) for this, with data
+  provided in SAS and SPSS format.
+  
+  But students were encouraged to extend the scope with other baseball-related datasets or questions.
+  Students dressed the part, a "7th inning stretch" included beer and pizza, and a fictitious 
+  guest speaker, Izzy A. Ringer, presented conclusive proof that Shoeless Joe Jackson did NOT throw
+  the 1919 World Series -- the Black Sox Scandal, in which Jackson and seven Chicago White Sox
+  teammates were accused of intentionally losing to the Cincinnati Reds. The upshot was that we
+  all had fun with this, and it contributed
+  to understanding of use of methods of the course and conveying results for a conference presentation.
+
+  The baseball data itself outlived the course: working with it for the Hotelling Society is what
+  led, eventually, to devloping the [`Lahman`](https://github.com/cdalzell/Lahman) R package,
+  which packages Sean Lahman's baseball database directly for R users -- itself a small case of
+  one challenge (teach a course, make the data usable) turning into a durable, reusable piece of data 
+  for baseball research. This is the same trajectory `HistData` itself follows on a larger scale.
+
+* **[Kaggle Competitions](https://www.kaggle.com/competitions)**: machine-learning contests run
+  on the Kaggle data science platform, from beginner "Getting Started" competitions like
+  [*Titanic: Machine Learning from Disaster*](https://www.kaggle.com/c/titanic) (predict who
+  survived, from passenger data) to prize-money contests sponsored by companies and research
+  groups. Not about historical re-visioning specifically, but the same competitive/participatory
+  spirit -- a public dataset, a shared task, and a leaderboard of attempts to compare against.
+
+* **[30DayChartChallenge](https://github.com/30DayChartChallenge/Edition2025)**: one chart a day
+  for the month of April, each day keyed to a themed prompt (e.g. "part-to-whole," "historical,"
+  "3D"). Started in 2021 by Cédric Scherer and Dominic Royé as a follow-on to the
+  #30DayMapChallenge. John Russell's recreations of several `HistData` datasets, used throughout
+  this vignette, came from the 2025 edition -- see the `sandbox/` inventory below.
+
+* **[TidyTuesday](https://github.com/rfordatascience/tidytuesday)**: a weekly data project run by
+  the R4DS ("R for Data Science") online learning community since 2018 -- a new real-world
+  dataset posted every Monday, participants share their own wrangling/visualization of it. Less
+  about re-visioning one specific historical graphic and more about practicing data skills on
+  whatever dataset comes up that week.
+
+* **[#DuBoisChallenge](https://github.com/ajstarks/dubois-data-portraits)**: launched in 2021 by
+  Allen Hillery, Anthony Starks, and Sekou Tyler specifically to recreate W. E. B. Du Bois's
+  hand-drawn data visualizations from the 1900 Paris Exposition using modern tools. Closest in
+  spirit to this vignette's own framing of all the challenges above -- explicitly about
+  revisiting one historical body of graphic work, not a general prompt-of-the-day format.
+
+
+### A tiny motivating example: `Arbuthnot`
+
+Before anything as ambitious as tackling Minard or John Snow, a simple example makes a small point of statistical
+historiography concretely. 
+John Arbuthnot's data on the sex ratios of males to females in the
+christenings in London (1629-1710) look, on a first read, like a straightforward
 annual count. But Sandy Zabell (1976) found that the values for 1674 and 1704 are identical --
 not approximately close, *identical*, down to a ratio computed to three decimal places -- strongly
 suggesting one year's entry was copied from the other, whether by Arbuthnot himself or a later
@@ -96,25 +178,63 @@ ggplot(Arbuthnot, aes(x = Year, y = Ratio)) +
 ```
 
 That's re-visioning in miniature: looking again at old data, graphically, surfaces something
-tabulation alone hides. See Zabell (1976) and Zabell & Wainer (2002) for the fuller story --
-`?Arbuthnot` for the original citation, and `issues/TASKS.md` for a note on tracking down DOIs
-for both.
+tabulation alone hides. Wainer & Spence (2005) give the fuller account and push the point
+further. The scale of the anomaly is worth stating plainly: 1704 falls about 4,000 christenings
+short of what its neighbors predict, and the true figure -- 15,895 (8,153 boys, 7,742 girls) --
+sits comfortably between 1703 and 1705, exactly where a corrected value should. Had Arbuthnot
+ever plotted his own data, they argue, the error would have stood out "like a sore thumb" --
+that he apparently never did is itself the historiographic finding, not a personal failing: it's
+evidence that graphing data simply wasn't yet part of a statistician's toolbox in 1710.
+Re-visioning the graph doesn't just fix a 300-year-old data error; it exposes a working
+assumption of Arbuthnot's era that no longer holds today.
 
-## What is re-visioning?
+See Zabell (1976) for the original discovery, and Zabell & Wainer (2002) and Wainer & Spence
+(2005) for the fuller story.
 
-*(Expand this section with more of the framing from Friendly (2002) and `?HistData` -- draft
-placeholder for now; the Introduction above already covers the core definition.)*
+### What is re-visioning?
 
-Historians of statistics have long practiced "re-visioning" before I coined this term.
-- Stephan Stigler (cite a few examples)
-- David Bellhouse (& student) on Halley's determinations of magnetic declination
-- perhaps mention some work by James Henley, McGill from email of Fri 2025-11-07 3:07 PM and his work on Student
+Historians of statistics have practiced "re-visioning" long before this vignette put a name to
+it -- going back to an original historical graphic or dataset itself, not just its published
+conclusions, to understand it on its own terms, in its own time. Some examples here follow the same pattern as
+`Arbuthnot` above, at a larger scale.
+
+Stephen Stigler does this throughout *The History of Statistics* (1986) and in papers devoted
+specifically to it: "Francis Galton's Account of the Invention of Correlation" (1989)
+re-examines Galton's own scatter diagram of parent/child heights to work out how Galton actually
+arrived at correlation, and "Regression Towards the Mean, Historically Considered" (1997) does
+the same for Galton's geometric argument for regression -- reconstructing the reasoning behind a
+graphic, not just restating its result.
+
+David Bellhouse (with Laura Murray) does something similar for a much earlier and more
+painstaking case: Murray & Bellhouse (2017) work out how Edmond Halley actually constructed his
+1701 map of magnetic declination -- a map, not a table -- using only the methods and instruments
+available to Halley at the time.
+
+*(TODO: a paragraph on James Hanley's (McGill) work on `Student`/Gosset, pending the email
+content referenced in an earlier note.)*
+
+[James Hanley](https://jhanley.biostat.mcgill.ca) has been a constant contributor to this line of inquiry, publishing detailed datasets and inquiries that go well beyond what was contained in an original work.
+TODO: fill in here, from stuff below
+
+TODO: Hanley materials, not all to be used here-- but the first one is what I meant in my note, and the Gosset one is also worth mentioning.
+
+https://jhanley.biostat.mcgill.ca/Student/ - Height and finger-length data, gathered by Macdonell (1901), and used by Student (1908), published in: Hanley, J. and Julien, M. and Moodie, E. (2008). Student's z, t, and s: What if Gosset had R? The American Statistician, 62(1), 64-69.
+This is reflected in `HistData::Macdonell
+
+https://jhanley.biostat.mcgill.ca/Gosset/ - Re-enactment of Gosset's counting of yeast cells
+as described in the 1907 Biometrika article
+This is reflected in `HistData:Yeast`, also used by John Russel in `sandbox/Yeast.R`
+
+vcdExtra::Draft 1970 dataset 
+  https://jhanley.biostat.mcgill.ca/Reprints/LestWeForgetUSSelectiveServiceLotteries1917-2019.pdf
+  https://jhanley.biostat.mcgill.ca/DraftLotteries/ - US Selective Service Lotteries 1917-1975: Datasets
+  - Don't use this here. But make a note that this should be cited and described for `vcdExtra::Draft1970`
 
 
 ## A taxonomy of re-visions
 
 The gallery accompanying Friendly (2002), <https://www.datavis.ca/gallery/re-minard.php>,
-catalogs about 15 different re-visions of the Minard graphic. Read as a checklist rather than a
+catalogs about 15 different re-visions of the Minard graphic. This can be read as a checklist rather than a
 one-off catalog, they sort into six recognizable *kinds* of re-vision -- a rubric that applies to
 any HistData dataset, not just Minard's.
 
@@ -254,9 +374,9 @@ it by hand, in ink, with its own four-way legend ("Sistema d'Assi"): black for t
 cross-sections, red for the census-year cross-sections, dashed lines for isodemic (equal-
 population) contours, and violet for the cohort-survivorship diagonals themselves.
 
-![Perozzo's original 1880/1881 stereogram (Wikimedia Commons, public domain)](figures/perozzo-original.jpg){width=90%}
+![Perozzo's original 1880/1881 stereogram (Wikimedia Commons, public domain)](figures/perozzo-original.jpg){width=70%}
 
-The package ships a base-R version already:
+The package supplies a simple base-R version already:
 
 ```{r perozzo-setup}
 data(Perozzo)
@@ -280,9 +400,11 @@ persp(years, ages_rev, Pmat_rev,
 
 That base plot loses most of what makes Perozzo's original worth looking at: no sense of the
 steep "wall" of large numbers at `Age = 0`, no highlighted reference lines, and no cohort
-diagonals at all. All four are answerable directly with `persp()`, without leaving base R -- it
+diagonals at all. 
+
+All four are answerable directly with `persp()`, without leaving base R -- it
 returns a 4x4 projection matrix from each call, and `trans3d()` + `lines()` can then draw more
-3D-located lines onto the same plot after the fact:
+3D-located lines onto the same plot after the fact.
 
 ```{r perozzo-enhanced, fig.height = 6}
 colnames(Pmat_rev) <- as.character(ages_rev)  # match column names to ages_rev's sign flip
@@ -480,3 +602,13 @@ the note at the top of this file.)*
 - Zabell, S. (1976). Arbuthnot, Heberden and the Bills of Mortality (Technical Report No. 40).
   Department of Statistics: The University of Chicago.
 - Zabell, S., & Wainer, H. (2002). A Small Hurrah for the Black Death. *Chance*, 15(4), 58-60.
+- Wainer, H., & Spence, I. (2005). Graphical Presentation of Longitudinal Data. In *Encyclopedia
+  of Statistics in Behavioral Science*. Wiley.
+- Stigler, S. M. (1986). *The History of Statistics: The Measurement of Uncertainty before 1900*.
+  Harvard University Press.
+- Stigler, S. M. (1989). Francis Galton's Account of the Invention of Correlation. *Statistical
+  Science*, 4(2), 73-79.
+- Stigler, S. M. (1997). Regression towards the mean, historically considered. *Statistical
+  Methods in Medical Research*, 6(2), 103-114.
+- Murray, L. L., & Bellhouse, D. R. (2017). How Was Edmond Halley's Map of Magnetic Declination
+  (1701) Constructed? *Imago Mundi*, 69(1), 72-84.
