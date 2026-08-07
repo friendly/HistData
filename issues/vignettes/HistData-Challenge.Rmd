@@ -534,6 +534,10 @@ of them at once (the `gganimate` idea in "Open invitations" below).
 
 ## Case study: `Snow`, via John Russell's 30DayChartChallenge
 
+TODO: Not sure this is worth it. I did a better job of showing the 2D densities; but not sure
+  where to find the code/image for this. A version of this is available somewhere in
+  C:\Dropbox\Twitter\twitter-archive-2022-11-06\data\tweets_media
+
 Of the `sandbox/` scripts recreating Russell's [30DayChartChallenge
 2025](https://github.com/drjohnrussell/30DayChartChallenge) entries, `Snow-density.R` was picked
 for this draft because it needs no dependencies beyond `ggplot2` (see
