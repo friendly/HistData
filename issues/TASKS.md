@@ -70,16 +70,26 @@ work rather than clean-up:
   HistData. Citation confirmed against `timeref.bib`: Perozzo (1880), *Annali di Statistica* 12,
   1-16 (also see the follow-up Perozzo 1881, vol. 22).
 
-  - [ ] **TODO: identify the digitization source** — who/where this tidy grid was originally
-    digitized from is unknown (lost track of it). Noted in `R/Perozzo.R`'s `@details`.
-  - [X] **Resolved: `data-raw/perozzo-contours.json` is redundant, not shipping it** — compared
-    against `contourLines()` recomputed straight from the `Perozzo` grid at the same 29 levels
-    (`data-raw/Perozzo-contours-compare.R`, output `.png`/`.csv` alongside it). Exact match: 0
-    mean/max absolute age difference at every level, 34 segments either way. So the JSON isn't
-    independently-digitized or specially-fit data — it was generated (by base R's `contourLines()`
-    or an equivalent marching-squares implementation) from this exact grid, making it fully
-    reproducible from `Perozzo` alone. Confirms the earlier deferral was right; not worth shipping
-    as a second dataset. Kept in `data-raw/` as a cross-check, not a TODO.
+  - [ ] **TODO: identify the digitization source, or verify against the original image directly**
+    — who/where this tidy grid was originally digitized from is unknown (lost track of it). Noted
+    in `R/Perozzo.R`'s `@details`. **Still open as of 2026-08-07** — the "Resolved" item just
+    below does *not* close this: it only checks the grid against itself, not against Perozzo's
+    1880 lithograph. See `issues/vignettes/verifying-perozzo.md` for a methodology (gridline
+    plausibility check, label-anchored spot checks, rigorous re-digitization via the chart's own
+    axonometric projection) and for the current, informal state of each check.
+  - [X] **Resolved (narrowly): `data-raw/perozzo-contours.json` is redundant, not shipping it** —
+    compared against `contourLines()` recomputed straight from the `Perozzo` grid at the same 29
+    levels (`data-raw/Perozzo-contours-compare.R`, output `.png`/`.csv` alongside it). Exact
+    match: 0 mean/max absolute age difference at every level, 34 segments either way. So the JSON
+    isn't independently-digitized or specially-fit data — it was generated (by base R's
+    `contourLines()` or an equivalent marching-squares implementation) from this exact grid,
+    making it fully reproducible from `Perozzo` alone. Confirms the earlier deferral was right;
+    not worth shipping as a second dataset. Kept in `data-raw/` as a cross-check, not a TODO.
+    **Caveat added 2026-08-07**: this only establishes that the JSON and the grid are mutually
+    consistent — an exact match here is actually the tell that they share an undocumented common
+    ancestor, not independent evidence that either one is faithful to the original lithograph. Do
+    not read this item as validating `Perozzo` against the source image; the TODO above is the one
+    that would do that, and it's still open. See `issues/vignettes/verifying-perozzo.md`.
   (Filenames were originally misspelled "porozzo" — fixed 2026-08-04, commit `a68f615`.)
 
 - [ ] **New dataset: Ebbinghaus forgetting-curve replication** —

@@ -7,7 +7,9 @@
 #' @description
 #' Data underlying Luigi Perozzo's (1880, 1881) "stereogram" -- an early three-dimensional
 #' population pyramid -- showing the number of survivors, by age, of Swedish birth cohorts
-#' followed forward through successive census years, 1750-1875.
+#' followed forward through successive census years, 1750-1875. Friendly & Wainer (2021, Sec. 8.4)
+#' consider this the first true 3D statistical graphic, using an
+#' axionometric projection of a 3D surface.
 #'
 #' @usage data("Perozzo")
 #' @format
@@ -46,6 +48,10 @@
 #' <https://commons.wikimedia.org/wiki/File:Stereogram_(three-dimensional_population_pyramid)_modeled_on_actual_data_(Swedish_census,_1750-1875).jpg>
 #'
 #' @references
+#' 
+#' Friendly, M., & Wainer, H. (2021). A History of Data Visualization and Graphic Communication. 
+#' Harvard University Press. https://doi.org/10.4159/9780674259034
+#' 
 #' Perozzo, L. (1880). Della Rappresentazione Graphica di una Collettivita di Individuinella
 #' Successione del Tempo. *Annali di Statistica*, 12, 1-16.
 #'

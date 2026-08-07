@@ -371,7 +371,18 @@ it by hand, in ink, with its own four-way legend ("Sistema d'Assi"): black for t
 cross-sections, red for the census-year cross-sections, dashed lines for isodemic (equal-
 population) contours, and violet for the cohort-survivorship diagonals themselves.
 
-![Perozzo's original 1880/1881 stereogram (Wikimedia Commons, public domain)](figures/perozzo-original.jpg){width=70%}
+TODO: Mention the pecuilar drop off / Cite Friendly, Wainer \S 8.4
+A peculiar feature in this graph is the dip in younger people from about 1850–1870—it looks like
+someone chipped off a large chunk of the mountain. What could be the reason? Several demographer
+friends speculated: perhaps a war or an outbreak of disease? It turns out that the probable explanation is
+less dramatic: Sweden had large outmigration in the period.
+
+<!--
+![Perozzo's original 1880/1881 (Wikimedia Commons, public domain)](figures/perozzo-original.jpg){width=70%}
+-->
+
+![Perozzo's 1881 stereogram](figures/Perozzo-600dpi.jpg){width=70%}
+
 
 The package supplies a simple base-R version already:
 
