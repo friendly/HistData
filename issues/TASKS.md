@@ -70,13 +70,22 @@ work rather than clean-up:
   HistData. Citation confirmed against `timeref.bib`: Perozzo (1880), *Annali di Statistica* 12,
   1-16 (also see the follow-up Perozzo 1881, vol. 22).
 
-  - [ ] **TODO: identify the digitization source, or verify against the original image directly**
-    — who/where this tidy grid was originally digitized from is unknown (lost track of it). Noted
-    in `R/Perozzo.R`'s `@details`. **Still open as of 2026-08-07** — the "Resolved" item just
-    below does *not* close this: it only checks the grid against itself, not against Perozzo's
-    1880 lithograph. See `issues/vignettes/verifying-perozzo.md` for a methodology (gridline
-    plausibility check, label-anchored spot checks, rigorous re-digitization via the chart's own
-    axonometric projection) and for the current, informal state of each check.
+  - [X] **Partially resolved 2026-08-07: immediate source traced** — MF traced
+    `data-raw/perozzo-tidy.csv` to RJ Andrews' `old-charts` GitHub repo
+    (<https://github.com/infowetrust/old-charts/tree/main/src/components/PerozzoSweden/data>,
+    posted at <https://charts.infowetrust.com/>): confirmed byte-identical (after normalizing
+    line endings) to that repo's `porozzo-tidy.csv`. Explains the original "porozzo" misspelling
+    (commit `a68f615`) — it's the upstream filename. Full trace, plus what the repo's `.tsx`
+    rendering code reveals, in `issues/vignettes/verifying-perozzo.md`.
+  - [ ] **TODO: still open — original digitization from Perozzo's 1880/1881 plate is unknown**
+    — `old-charts` is itself a from-scratch redraw built from this same grid; nothing in that repo
+    (code comments, README) documents how its numbers were originally read off the plate, so
+    tracing the immediate source doesn't close this. Noted in `R/Perozzo.R`'s `@details`/`@source`.
+    See `issues/vignettes/verifying-perozzo.md` for a methodology (gridline plausibility check,
+    label-anchored spot checks, rigorous re-digitization via the chart's own axonometric
+    projection) and for the current, informal state of each check — including the still-unbuilt
+    "does `Perozzo`, plotted, actually reproduce the look of the original lithograph" comparison,
+    which is the real target here, not just provenance-chasing.
   - [X] **Resolved (narrowly): `data-raw/perozzo-contours.json` is redundant, not shipping it** —
     compared against `contourLines()` recomputed straight from the `Perozzo` grid at the same 29
     levels (`data-raw/Perozzo-contours-compare.R`, output `.png`/`.csv` alongside it). Exact

@@ -27,9 +27,14 @@
 #' year) and diagonal cohort lines (survivorship of a single birth cohort as it ages) from
 #' one figure -- widely cited as one of the earliest true 3D statistical graphics.
 #'
-#' The digitization source for this tidy grid is currently unknown; see `issues/TASKS.md` in the GitHub repo
-#' for the open item to track it down.
-#' 
+#' The immediate source of this tidy grid was traced 2026-08-07 to RJ Andrews' `old-charts`
+#' GitHub repo (`infowetrust/old-charts`, component `PerozzoSweden`) -- confirmed byte-identical
+#' to that repo's `porozzo-tidy.csv`. That repo is itself a from-scratch React/D3-style redraw of
+#' Perozzo's stereogram, built from this same grid; it documents no further provenance for the
+#' numbers themselves, so how they were originally read off Perozzo's 1880/1881 plate is still
+#' unknown. See `issues/vignettes/verifying-perozzo.md` for the full trace and for a methodology
+#' to verify the grid against the original image directly.
+#'
 #' Perozzo's 3D graphic was remarkable in its' time and still is today, for attention to detail in his
 #' hand-drawn graphic. The simple image from `graphics::persp` show here is a very coarse approximation.
 #' It remains a `HistData` challenge to do this (a) closer to Perozzo's graphic or (b) better in someway.
@@ -43,8 +48,12 @@
 #' various years.
 #'
 #' @source
-#' Digitized from Perozzo's original stereogram (source of the digitization itself not yet
-#' identified -- see Details). The original is held by Wikimedia Commons:
+#' This package's copy matches, byte-for-byte, `porozzo-tidy.csv` in RJ Andrews' `old-charts`
+#' GitHub repo: <https://github.com/infowetrust/old-charts/tree/main/src/components/PerozzoSweden/data>
+#' (see also <https://charts.infowetrust.com/>). That's the immediate source of this dataset, but
+#' not the original digitization -- `old-charts` doesn't document how those values were derived
+#' from Perozzo's plate either (see Details). The original stereogram is held by Wikimedia
+#' Commons:
 #' <https://commons.wikimedia.org/wiki/File:Stereogram_(three-dimensional_population_pyramid)_modeled_on_actual_data_(Swedish_census,_1750-1875).jpg>
 #'
 #' @references
