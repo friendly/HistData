@@ -5,6 +5,8 @@ output:
     toc: true
     toc_float: true
     df_print: kable
+bibliography: histdata.bib
+csl: apa.csl
 ---
 
 <!--
@@ -14,13 +16,15 @@ Lives in issues/vignettes/ deliberately, not vignettes/: pkgdown scans and publi
 under vignettes/ on every `pkgdown::build_site()`, so a half-finished draft there would go live
 by accident. issues/ is already .Rbuildignore'd and outside pkgdown's scan path.
 
+Citations now use [@key] form, resolved against histdata.bib (apa.csl copied from vcdExtra's
+vignettes/ for consistent APA-style formatting/citation-linking across packages).
+
 When this is ready to ship:
-  1. Add a proper vignette YAML header (rmarkdown::html_vignette + %\VignetteIndexEntry etc.),
-     including `bibliography: histdata.bib` -- the file already exists
-     (issues/vignettes/histdata.bib, verified with pandoc --citeproc) and switch citations below
-     to [@key] form
+  1. Switch to a proper vignette YAML header (rmarkdown::html_vignette + %\VignetteIndexEntry
+     etc.) -- bibliography/csl wiring above can stay as-is, html_vignette respects the same
+     fields.
   2. git mv issues/vignettes/HistData-Challenge.Rmd vignettes/HistData-Challenge.Rmd (bring
-     histdata.bib along too)
+     histdata.bib and apa.csl along too)
   3. devtools::document(); devtools::check(); NEWS.md entry; rebuild pkgdown
      (see issues/TASKS.md's "Workflow: rebuilding pkgdown" checklist)
 
@@ -70,7 +74,7 @@ As such, they provide opportunities, and this **HistData Challenge** to reproduc
 
 ### Challenges
 
-This idea first took shape the **Minard Challenge** that stemmed from my paper Friendly (2002), "Visions and Re-Visions of Charles Joseph
+This idea first took shape the **Minard Challenge** that stemmed from my paper [@Friendly:2002], "Visions and Re-Visions of Charles Joseph
 Minard". This reviewed decades of attempts -- by many different people, in many different tools
 -- to reproduce and extend Minard's famous graphic of Napoleon's Russian campaign. That paper,
 and the gallery of re-visions that grew out of it, is the model for this vignette: a catalog of
@@ -149,7 +153,7 @@ Before anything as ambitious as tackling Minard or John Snow, a simple example m
 historiography concretely. 
 John Arbuthnot's data on the sex ratios of males to females in the
 christenings in London (1629-1710) look, on a first read, like a straightforward
-annual count. But Sandy Zabell (1976) found that the values for 1674 and 1704 are identical --
+annual count. But Sandy Zabell [-@Zabell:1976] found that the values for 1674 and 1704 are identical --
 not approximately close, *identical*, down to a ratio computed to three decimal places -- strongly
 suggesting one year's entry was copied from the other, whether by Arbuthnot himself or a later
 transcriber.
@@ -181,7 +185,7 @@ ggplot(Arbuthnot, aes(x = Year, y = Ratio)) +
 ```
 
 That's re-visioning in miniature: looking again at old data, graphically, surfaces something
-tabulation alone hides. Wainer & Spence (2005) give the fuller account and push the point
+tabulation alone hides. Wainer and Spence [-@WainerSpence:2005:longitudinal] give the fuller account and push the point
 further. The scale of the anomaly is worth stating plainly: 1704 falls about 4,000 christenings
 short of what its neighbors predict, and the true figure -- 15,895 (8,153 boys, 7,742 girls) --
 sits comfortably between 1703 and 1705, exactly where a corrected value should. Had Arbuthnot
@@ -191,8 +195,9 @@ evidence that graphing data simply wasn't yet part of a statistician's toolbox i
 Re-visioning the graph doesn't just fix a 300-year-old data error; it exposes a working
 assumption of Arbuthnot's era that no longer holds today.
 
-See Zabell (1976) for the original discovery, and Zabell & Wainer (2002) and Wainer & Spence
-(2005) for the fuller story.
+See Zabell [-@Zabell:1976] for the original discovery, and Zabell and Wainer
+[-@ZabellWainer:2002] and Wainer and Spence [-@WainerSpence:2005:longitudinal] for the fuller
+story.
 
 ### What is re-visioning?
 
@@ -201,15 +206,15 @@ it -- going back to an original historical graphic or dataset itself, not just i
 conclusions, to understand it on its own terms, in its own time. Some examples here follow the same pattern as
 `Arbuthnot` above, at a larger scale.
 
-Stephen Stigler does this throughout *The History of Statistics* (1986) and in papers devoted
-specifically to it: "Francis Galton's Account of the Invention of Correlation" (1989)
-re-examines Galton's own scatter diagram of parent/child heights to work out how Galton actually
-arrived at correlation, and "Regression Towards the Mean, Historically Considered" (1997) does
-the same for Galton's geometric argument for regression -- reconstructing the reasoning behind a
-graphic, not just restating its result.
+Stephen Stigler does this throughout *The History of Statistics* [-@Stigler:1986] and in papers
+devoted specifically to it: "Francis Galton's Account of the Invention of Correlation"
+[-@Stigler:1989] re-examines Galton's own scatter diagram of parent/child heights to work out how
+Galton actually arrived at correlation, and "Regression Towards the Mean, Historically
+Considered" [-@Stigler:1997] does the same for Galton's geometric argument for regression --
+reconstructing the reasoning behind a graphic, not just restating its result.
 
 David Bellhouse (with Laura Murray) does something similar for a much earlier and more
-painstaking case: Murray & Bellhouse (2017) work out how Edmond Halley actually constructed his
+painstaking case: Murray and Bellhouse [-@MurrayBellhouse:2017] work out how Edmond Halley actually constructed his
 1701 map of magnetic declination -- a map, not a table -- using only the methods and instruments
 available to Halley at the time.
 
@@ -218,7 +223,7 @@ exactly this kind of return-to-the-source work, publishing detailed re-analyses 
 datasets that go well beyond what the original publications contained. Two examples tie directly
 into `HistData`:
 
-- Hanley, Julien & Moodie (2008), "Student's z, t, and s: What if Gosset had R?," traces the
+- Hanley, Julien, and Moodie [-@Hanley:2008], "Student's z, t, and s: What if Gosset had R?," traces the
   height and finger-length data originally gathered by Macdonell (1901) and used by "Student"
   (Gosset, 1908) to introduce the *t*-distribution -- the same data shipped here as
   `HistData::Macdonell`.
@@ -230,7 +235,7 @@ into `HistData`:
 
 ## A taxonomy of re-visions
 
-The gallery accompanying Friendly (2002), <https://www.datavis.ca/gallery/re-minard.php>,
+The gallery accompanying Friendly [-@Friendly:2002], <https://www.datavis.ca/gallery/re-minard.php>,
 catalogs about 15 different re-visions of the Minard graphic. This can be read as a checklist rather than a
 one-off catalog, they sort into six recognizable *kinds* of re-vision -- a rubric that applies to
 any HistData dataset, not just Minard's.
@@ -275,8 +280,9 @@ invitations" below for the deferred `gganimate` idea for `Perozzo`.)
 
 A concrete example: Ron Kennett's "moving bubble" animated re-vision, which replaces Minard's
 static flow band with a single traveling bubble sized to the army's current strength, sweeping
-along the march route as time advances. *(Image on file, `Kennet-moving-bubble.gif`; embedding
-pending the general image-hosting/licensing decision noted above.)*
+along the march route as time advances.
+
+![Ron Kennett's moving-bubble re-vision of Minard's march](figures/Kennet-moving-bubble.gif){width=90%}
 
 ### 5. Alternative representations
 
@@ -302,7 +308,7 @@ their documentation:
 | Dataset | Nature of the challenge |
 |---|---|
 | [`Minard`](../reference/Minard.html) | "Minard's Challenge": reproduce the March on Moscow graphic with modern tools (Friendly, 2002). |
-| [`Guerry`](../reference/Guerry.html) | Friendly (2007): "Challenges for Multivariable Spatial Analysis." |
+| [`Guerry`](../reference/Guerry.html) | Friendly [-@Friendly:2007:guerry]: "Challenges for Multivariable Spatial Analysis." |
 | [`Playfair1824`](../reference/Playfair1824.html) | Re-create Playfair's last chart, or do better, using modern graphics. |
 | [`Perozzo`](../reference/Perozzo.html) | Get closer to Perozzo's hand-drawn stereogram, or do better in some way -- the case study below. |
 | [`Pollen`](../reference/Pollen.html) | The original 1986 ASA JSM "Data Challenge" -- a synthetic 5D dataset with several deliberately hidden features. |
@@ -316,7 +322,7 @@ listed here, cited, and open -- see "Open invitations."
 
 Minard drew his 1869 original by hand, in ink, as a single sheet: a tapering flow band tracing
 the army's size and location, paired with a temperature graph along the same horizontal axis.
-Friendly (2002) catalogs around 15 later re-visions of it, spanning every category in the
+Friendly [-@Friendly:2002] catalogs around 15 later re-visions of it, spanning every category in the
 taxonomy above; this section builds one of them directly (a software/language port), then
 points to gallery entries for a few more.
 
@@ -349,7 +355,7 @@ lost in translation.
 
 ### A few more, from the gallery
 
-The rest of Friendly (2002)'s catalog isn't reproduced here (some entries are third-party work
+The rest of Friendly's [-@Friendly:2002] catalog isn't reproduced here (some entries are third-party work
 with licensing not yet sorted out for redistribution -- see `issues/vignettes/Minard-images.md`),
 but is worth naming by taxonomy category, all viewable at
 <https://www.datavis.ca/gallery/re-minard.php>:
@@ -381,7 +387,7 @@ less dramatic: Sweden had large outmigration in the period.
 ![Perozzo's original 1880/1881 (Wikimedia Commons, public domain)](figures/perozzo-original.jpg){width=70%}
 -->
 
-![Perozzo's 1881 stereogram](figures/Perozzo-600dpi.jpg){width=70%}
+![Perozzo's 1881 stereogram](figures/Perozzo-600dpi.jpg){width=60%}
 
 
 The package supplies a simple base-R version already:
@@ -598,31 +604,13 @@ Not attempted in this draft -- a literal "here's what's left" list:
   Harvard University Press.
 - Companion site: <https://friendly.github.io/HistDataVis/> -- R code "reconstructions of
   historical graphs" tied to each book chapter.
-- Gallery of Data Visualization (GDV), referenced in Friendly (2002).
+- Gallery of Data Visualization (GDV), referenced in Friendly [-@Friendly:2002].
 - <https://www.datavis.ca/gallery/re-minard.php> -- the re-visions gallery this vignette's
   taxonomy is drawn from.
 
 ## References
 
-*(Plain-text for now; convert to a `references.bib` + `[@key]` citations before this ships -- see
-the note at the top of this file.)*
+Generated automatically from `histdata.bib` (APA style, via `apa.csl`) for every `[@key]`
+citation used above.
 
-- Friendly, M. (2002). Visions and Re-Visions of Charles Joseph Minard. *Journal of Educational
-  and Behavioral Statistics*, 27(1), 31-51.
-- Friendly, M. (2007). A.-M. Guerry's Moral Statistics of France: Challenges for Multivariable
-  Spatial Analysis. *Statistical Science*, 22, 368-399.
-- Zabell, S. (1976). Arbuthnot, Heberden and the Bills of Mortality (Technical Report No. 40).
-  Department of Statistics: The University of Chicago.
-- Zabell, S., & Wainer, H. (2002). A Small Hurrah for the Black Death. *Chance*, 15(4), 58-60.
-- Wainer, H., & Spence, I. (2005). Graphical Presentation of Longitudinal Data. In *Encyclopedia
-  of Statistics in Behavioral Science*. Wiley.
-- Stigler, S. M. (1986). *The History of Statistics: The Measurement of Uncertainty before 1900*.
-  Harvard University Press.
-- Stigler, S. M. (1989). Francis Galton's Account of the Invention of Correlation. *Statistical
-  Science*, 4(2), 73-79.
-- Stigler, S. M. (1997). Regression towards the mean, historically considered. *Statistical
-  Methods in Medical Research*, 6(2), 103-114.
-- Murray, L. L., & Bellhouse, D. R. (2017). How Was Edmond Halley's Map of Magnetic Declination
-  (1701) Constructed? *Imago Mundi*, 69(1), 72-84.
-- Hanley, J., Julien, M., & Moodie, E. (2008). Student's z, t, and s: What if Gosset had R? *The
-  American Statistician*, 62(1), 64-69.
+<div id="refs"></div>
