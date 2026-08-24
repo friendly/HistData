@@ -3,3 +3,7 @@ inst/doc
 HistData.Rproj
 .Rhistory
 revdep/
+.positai
+issues/vignettes/*.html
+issues/vignettes/*.knit.md
+issues/vignettes/*_files/

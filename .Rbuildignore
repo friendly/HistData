@@ -16,3 +16,5 @@ data-raw/
 ^CODE_OF_CONDUCT\.md$
 sandbox/
 ^issues$
+^\.positai$
+^\.claude$

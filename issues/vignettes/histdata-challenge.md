@@ -347,11 +347,35 @@ them:
 - **`1812-2.jpg`'s authorship** — sitting in MF's own folder but not confirmed original; worth
   checking before using it as "the original" the way the confirmed-public-domain Perozzo image is
   used.
-- **The isometric-shear `Perozzo` re-vision's `shear`/`lift` constants are untuned** — a rough
-  first pass, noted inline in the draft.
 - **`references.bib`** — deferred; draft currently cites everything as plain text.
-- **"What is re-visioning?" section** — still a placeholder list (Stigler, Bellhouse, the Henley/
-  McGill email) with no prose written yet.
 - **Taxonomy category thumbnails** — the general "pull a representative image from the datavis.ca
   gallery for each of the 6 categories" `TODO` (distinct from the Minard-specific curation above)
   is still open, same licensing question.
+
+## Progress update (2026-08-24, third pass)
+
+Resolved the remaining actionable inline `TODO`s (scope: finish the draft's content, not a full
+ship — bibliography conversion and the move to `vignettes/` stay deferred per the file's own
+header):
+
+- **Perozzo's 1850-1870 dip**: was a bare `TODO: cite Friendly, Wainer §8.4` next to prose that
+  already explained the emigration finding. Cited properly (Friendly & Wainer 2021, added to the
+  plain-text References list too) and tightened the prose.
+- **`Snow` case study**: dropped a speculative `TODO` musing about a better 2D-density version MF
+  recalled making, possibly somewhere in a Twitter-archive media dump under
+  `C:\Dropbox\Twitter\twitter-archive-2022-11-06\data\tweets_media` (thousands of untitled images,
+  no code found alongside it — not worth chasing for this pass). The shipped `Snow-density.R`
+  case study is fine as-is and stays.
+- **Isometric-shear `Perozzo` re-vision**: tried a few `shear`/`lift` combinations as a scratch
+  comparison (not committed) — the original `0.6`/`400` pair already gives the most legible
+  "mountain" silhouette of the ones tried. Reworded the inline caveat from "revisit before
+  shipping" to an accurate description (stylized fake-3D, not a fit to Perozzo's own oblique axis
+  convention) rather than tuning further.
+- **`.gitignore`**: added `issues/vignettes/*.html` (+ `.knit.md`, `*_files/`) — the knitted HTML
+  was showing up as an untracked stray file every time the draft gets rendered locally.
+- Re-rendered end-to-end with `rmarkdown::render()` (all 23 chunks, including `plotly`) — clean,
+  no errors.
+
+**"What is re-visioning?" section** turns out to have been already fully written (not a
+placeholder) as of the second-pass update above; the earlier "Still open" line claiming otherwise
+was stale, removed.
