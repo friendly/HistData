@@ -379,3 +379,14 @@ header):
 **"What is re-visioning?" section** turns out to have been already fully written (not a
 placeholder) as of the second-pass update above; the earlier "Still open" line claiming otherwise
 was stale, removed.
+
+## Shipped 2026-08-24: moved to `vignettes/`
+
+`HistData-Challenge.Rmd` and `histdata.bib` moved (`git mv`) from `issues/vignettes/` to
+`vignettes/`; `figures/Perozzo-600dpi.jpg` copied alongside (not moved -- the original stays in
+`issues/vignettes/figures/` since `verifying-perozzo.md` and this file still reference it there).
+This planning doc, `Zabell-Wainer-note.md`, `verifying-perozzo.md`, and `Minard-images.md` all
+stay in `issues/vignettes/` as working notes -- only the finished prose+code shipped.
+
+Remaining before the next release: `devtools::document()`, `devtools::check()`, a `NEWS.md`
+entry, and a pkgdown rebuild (`issues/TASKS.md`'s "Workflow: rebuilding pkgdown" checklist).

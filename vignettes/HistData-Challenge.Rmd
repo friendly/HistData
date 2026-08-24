@@ -13,21 +13,17 @@ vignette: >
 ---
 
 <!--
-WORKING DRAFT -- not a package vignette yet.
+Moved here from issues/vignettes/ (2026-08-24), where it was drafted as a work-in-progress to
+avoid pkgdown publishing a half-finished draft on every `pkgdown::build_site()`. histdata.bib and
+the figures/ it needs came along in the same move. Citations resolve via [@key]/histdata.bib.
 
-Lives in issues/vignettes/ deliberately, not vignettes/: pkgdown scans and publishes everything
-under vignettes/ on every `pkgdown::build_site()`, so a half-finished draft there would go live
-by accident. issues/ is already .Rbuildignore'd and outside pkgdown's scan path.
+Still to do before the next release: devtools::document(); devtools::check(); NEWS.md entry;
+rebuild pkgdown (see issues/TASKS.md's "Workflow: rebuilding pkgdown" checklist).
 
-Citations now resolve via [@key]/histdata.bib (as of 2026-08-24) -- the vignette YAML header
-above and the bibliography wiring are done. Still to do before this ships:
-  1. git mv issues/vignettes/HistData-Challenge.Rmd vignettes/HistData-Challenge.Rmd (bring
-     histdata.bib along too)
-  2. devtools::document(); devtools::check(); NEWS.md entry; rebuild pkgdown
-     (see issues/TASKS.md's "Workflow: rebuilding pkgdown" checklist)
-
-See issues/vignettes/histdata-challenge.md for the full planning/rationale behind every
-decision below -- this file is the draft prose+code, that one is the working notes.
+See issues/vignettes/histdata-challenge.md for the full planning/rationale behind every decision
+below, and issues/vignettes/Zabell-Wainer-note.md and verifying-perozzo.md for source-verification
+notes on two of the citations/figures used here -- those working notes stay in issues/, only the
+finished prose+code moved.
 -->
 
 ```{r setup, include = FALSE}
