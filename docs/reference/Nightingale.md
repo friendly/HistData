@@ -96,6 +96,9 @@ Small, H. (1998) Florence Nightingale's statistical diagrams
 Pearson, M. and Short, I. (2008) Nightingale's Rose (flash animation).
 [http://understandinguncertainty.org/files/animations/Nightingale11/Nightingale1.html](http://understandinguncertainty.org/files/animations/Nightingale11/Nightingale1.md)
 
+See the example by John Russell for the
+[30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge06.R)
+
 ## Examples
 
 ``` r

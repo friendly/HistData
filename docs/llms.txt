@@ -2,7 +2,7 @@
 
 **Data Sets from the History of Statistics and Data Visualization**
 
-Version 1.0.1 (2026-08-05)
+Version 1.0.1 (2026-08-24)
 
 The `HistData` package provides a collection of small data sets that are
 interesting and important in the history of statistics and data
@@ -449,5 +449,7 @@ Statistician*, **67**(3), 129–133
 
 ### All vignettes
 
+- [The HistData Challenge: Re-Visioning Historical
+  Graphics](https://friendly.github.io/HistData/articles/HistData-Challenge.md):
 - [Duplicate and Missing Cases in
   Snow.deaths](https://friendly.github.io/HistData/articles/Snow_deaths-duplicates.md):

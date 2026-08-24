@@ -156,6 +156,9 @@ See the example from Nicola Rennie's
 a tour-de-force: [John Snow's Cholera
 Maps](https://github.com/nrennie/data-viz-projects/tree/main/John%20Snow%20Cholera%20Maps)
 
+See also the example by John Russell for the
+[30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge11.R)
+
 ## See also
 
 [`SnowMap`](https://friendly.github.io/HistData/reference/SnowMap.md)
