@@ -403,7 +403,7 @@ width, `direction` its color, `group` which sub-path it belongs to), and `Minard
 temperature series, not used in this panel). Porting to ggplot2 is then mostly a matter of
 mapping `survivors` to `linewidth` and `direction` to `colour`:
 
-```{r minard-ggplot}
+```{r minard-ggplot, fig.height = 3.5}
 data(Minard.cities); data(Minard.troops)
 
 ggplot(Minard.troops, aes(x = long, y = lat)) +
