@@ -175,8 +175,8 @@ Arbuthnot[Arbuthnot$Year %in% c(1674, 1704),
 `Mortality` (not shown) differ. A table alone makes this easy to miss among 82 rows. Plotting
 `Christenings` by `Year` makes it much harder to miss: the series climbs steadily over these 80
 years, nearly doubling, so a value perfectly ordinary for the 1670s becomes a jarring plunge when
-it recurs, unchanged, thirty years later. The dotted line marks the shared level and -- following
-Zabell & Wainer's own Figure 2 [-@ZabellWainer:2002] -- shows it passing through only these two
+it recurs, unchanged, thirty years later. The horizontal line marks the shared level. And, following
+Zabell & Wainer's Figure 2 [-@ZabellWainer:2002], shows it passing through only these two
 points:
 
 ```{r arbuthnot-plot}
@@ -187,8 +187,8 @@ ggplot(Arbuthnot, aes(x = Year, y = Christenings)) +
   geom_point(color = "grey50") +
   geom_hline(yintercept = copy_level, linetype = "dotted", color = "black") +
   annotate(
-    "segment", x = 1675, xend = 1703, y = copy_level, yend = copy_level,
-    color = "darkred", linewidth = 1.5,
+    "segment", x = 1677, xend = 1701, y = copy_level, yend = copy_level,
+    color = "darkred", linewidth = 1.3,
     arrow = arrow(length = unit(0.3, "cm"), type = "closed")
   ) +
   geom_point(
@@ -217,14 +217,41 @@ plainly: 1704 has about 4,000 fewer christenings than its neighbors predict, and
 figure -- 15,895 (8,153 boys, 7,742 girls) -- sits comfortably between 1703 and 1705, exactly
 where a corrected value should. Arbuthnot, they argue, would surely have caught and fixed so
 glaring an error had he ever plotted his own data: graphed, it stands out "literally, like a sore
-thumb." That he apparently never did is itself the historiographic finding, not a personal
+thumb." 
+
+That he apparently never did is itself a historiographic finding, not a personal
 failing: it's evidence that graphing data simply wasn't yet part of a statistician's toolbox in
-1710. Re-visioning the graph doesn't just fix a 300-year-old data error; it exposes a working
+1710, before Playfair invented the line graph in his _Commercial and Political Atlas_
+[-@Playfair:1786].
+Re-visioning the graph doesn't just fix a 300-year-old data error; it exposes a working
 assumption of Arbuthnot's era that no longer holds today.
 
 See Zabell [-@Zabell:1976] for the original discovery and an earlier version of this graph,
 Zabell & Wainer [-@ZabellWainer:2002] for the fuller published account excerpted above, and
 Wainer & Spence [-@WainerSpence:2005:longitudinal] for a further retelling.
+
+The graph above could be improved to tell a richer historical story -- 1704 is far from the only
+irregularity in it, just the only one without an obvious explanation. Zabell & Wainer's own
+Figure 1 [-@ZabellWainer:2002] labels several other anomalies directly on the plot:
+
+- **1643-1660**: `Christenings` falls from about 10,400 in 1642 to a low of 5,612 in 1650 --
+  nearly halved -- coinciding with the English Civil War (1642-1651) and the execution of
+  Charles I in 1649. Timing alone doesn't fully explain it, though: the war ended in 1651, yet
+  the series doesn't climb back past 10,000 until 1662, over a decade into the Interregnum and
+  Restoration. Zabell & Wainer note that Graunt himself offered a more complex account: Anglican
+  ministers, in this politically fraught stretch, likely declined to register children born to
+  Catholics or Protestant dissenters. Civil war explains the drop's onset better than its
+  decade-long persistence.
+- **1665-1666**: a sharper, shorter dip -- from 11,722 in 1664 down to 9,972 in 1665 and 8,997 in
+  1666, before rebounding to 10,938 in 1667 -- lines up with the Great Plague of London (1665,
+  which killed roughly a fifth of the city's population) immediately followed by the Great Fire
+  of London (September 1666). Unlike the Civil War's decade of depressed numbers, this one snaps
+  back within a year or two once the immediate crises passed.
+
+Neither needed a Zabell-style detective plot to explain -- they're visible, dateable historical
+events, which is exactly why Zabell & Wainer's Figure 1 labels them directly rather than treating
+them as mysteries. 1704 stood out precisely because it *didn't* have an obvious explanation like
+these -- until the plot revealed it wasn't a historical event at all, just a clerical error.
 
 ### What is re-visioning?
 
@@ -239,6 +266,22 @@ devoted specifically to it: "Francis Galton's Account of the Invention of Correl
 Galton actually arrived at correlation, and "Regression Towards the Mean, Historically Considered"
 [-@Stigler:1997] does the same for Galton's geometric argument for regression -- reconstructing
 the reasoning behind a graphic, not just restating its result.
+
+Stigler has also made the case for *why* this kind of return-to-the-source work matters, not just
+demonstrated it. "Data Have a Limited Shelf Life" [-@Stigler:2019:shelflife] traces three
+textbook-famous datasets -- Quetelet's Scottish soldiers' chest measurements, von Bortkiewicz's
+Prussian horse-kick deaths, and the Cushny-Peebles sleep data behind Gosset's first published
+*t*-test -- back to their original sources, and finds each one, after decades of uncritical
+reuse, had drifted away from the messy, selective, error-ridden reality of its collection into
+something merely "ornamental": a fixed textbook prop, its provenance and caveats long forgotten
+(Gosset's own data, for instance, reached Fisher's textbook with two columns mislabeled as the
+wrong drugs entirely, an error nobody caught for 27 years). Old, dead data aren't worthless, he's
+careful to add -- like museum pieces, their value is just a different kind from a live dataset
+still doing scientific work -- but he warns that "big data" is no less susceptible to going
+"ornamental," and may be harder to catch: "dead data do not represent the worst case; zombie data
+may be even worse for scientific use." Re-visioning, in this vignette's sense, is exactly the
+antidote he's calling for: asking where a dataset actually came from is what keeps it from going
+ornamental in the first place.
 
 David Bellhouse (with Laura Murray) does something similar for a much earlier and more
 painstaking case: Murray & Bellhouse [-@MurrayBellhouse:2017] work out how Edmond Halley actually constructed his
