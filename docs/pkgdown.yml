@@ -2,8 +2,9 @@ pandoc: 3.1.2
 pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
+  HistData-Challenge: HistData-Challenge.html
   Snow_deaths-duplicates: Snow_deaths-duplicates.html
-last_built: 2026-08-05T17:07Z
+last_built: 2026-08-24T22:16Z
 urls:
   reference: https://friendly.github.io/HistData/reference
   article: https://friendly.github.io/HistData/articles

@@ -3,6 +3,7 @@
 * Add link to N. Rennie's Snow Maps
 * Package cleanup: get rid of `man-old`, reorganize `sandbox/`
 * Add `Perozzo` data (Swedish census survivorship grid underlying Perozzo's 1880/1881 stereogram). This also poses another HistData challenge re-create his graphic, or do something better or different.
+* Add `HistData-Challenge` vignette: "re-visioning" historical graphics as a form of statistical historiography, with a taxonomy of ways to re-create or extend a graphic and worked case studies for `Arbuthnot`, `Minard`, `Perozzo`, and `Snow`
 
 ## Version 1.0.0
 

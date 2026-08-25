@@ -79,6 +79,9 @@ Gosset, W. S. (Student) (1908). Probable error of a mean. *Biometrika*,
 Gosset, W. S. (Student) (1908). Probable error of a correlation
 coefficient. *Biometrika*, 6, 302-310.
 
+See the example by John Russell for the
+[30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge04.R)
+
 ## Examples
 
 ``` r

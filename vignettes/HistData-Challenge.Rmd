@@ -1,35 +1,29 @@
 ---
 title: "The HistData Challenge: Re-Visioning Historical Graphics"
 output:
-  html_document:
+  rmarkdown::html_vignette:
     toc: true
-    toc_float: true
     df_print: kable
 bibliography: histdata.bib
-csl: apa.csl
+link-citations: true
+vignette: >
+  %\VignetteIndexEntry{The HistData Challenge: Re-Visioning Historical Graphics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 <!--
-WORKING DRAFT -- not a package vignette yet.
+Moved here from issues/vignettes/ (2026-08-24), where it was drafted as a work-in-progress to
+avoid pkgdown publishing a half-finished draft on every `pkgdown::build_site()`. histdata.bib and
+the figures/ it needs came along in the same move. Citations resolve via [@key]/histdata.bib.
 
-Lives in issues/vignettes/ deliberately, not vignettes/: pkgdown scans and publishes everything
-under vignettes/ on every `pkgdown::build_site()`, so a half-finished draft there would go live
-by accident. issues/ is already .Rbuildignore'd and outside pkgdown's scan path.
+Still to do before the next release: devtools::document(); devtools::check(); NEWS.md entry;
+rebuild pkgdown (see issues/TASKS.md's "Workflow: rebuilding pkgdown" checklist).
 
-Citations now use [@key] form, resolved against histdata.bib (apa.csl copied from vcdExtra's
-vignettes/ for consistent APA-style formatting/citation-linking across packages).
-
-When this is ready to ship:
-  1. Switch to a proper vignette YAML header (rmarkdown::html_vignette + %\VignetteIndexEntry
-     etc.) -- bibliography/csl wiring above can stay as-is, html_vignette respects the same
-     fields.
-  2. git mv issues/vignettes/HistData-Challenge.Rmd vignettes/HistData-Challenge.Rmd (bring
-     histdata.bib and apa.csl along too)
-  3. devtools::document(); devtools::check(); NEWS.md entry; rebuild pkgdown
-     (see issues/TASKS.md's "Workflow: rebuilding pkgdown" checklist)
-
-See issues/vignettes/histdata-challenge.md for the full planning/rationale behind every
-decision below -- this file is the draft prose+code, that one is the working notes.
+See issues/vignettes/histdata-challenge.md for the full planning/rationale behind every decision
+below, and issues/vignettes/Zabell-Wainer-note.md and verifying-perozzo.md for source-verification
+notes on two of the citations/figures used here -- those working notes stay in issues/, only the
+finished prose+code moved.
 -->
 
 ```{r setup, include = FALSE}
@@ -74,8 +68,8 @@ As such, they provide opportunities, and this **HistData Challenge** to reproduc
 
 ### Challenges
 
-This idea first took shape the **Minard Challenge** that stemmed from my paper [@Friendly:2002], "Visions and Re-Visions of Charles Joseph
-Minard". This reviewed decades of attempts -- by many different people, in many different tools
+This idea first took shape the **Minard Challenge** that stemmed from my paper Friendly [-@Friendly:2002], "Visions and Re-Visions of Charles Joseph
+Minard". This reviewed decades of attempts -- by many different people, using many different tools
 -- to reproduce and extend Minard's famous graphic of Napoleon's Russian campaign. That paper,
 and the gallery of re-visions that grew out of it, is the model for this vignette: a catalog of
 *kinds* of re-vision, applied not just to Minard but to any dataset in this package, plus a
@@ -128,6 +122,15 @@ Some examples illustrate the range of possibilities from such endeavors:
   groups. Not about historical re-visioning specifically, but the same competitive/participatory
   spirit -- a public dataset, a shared task, and a leaderboard of attempts to compare against.
 
+* **[MakeoverMonday](https://makeovermonday.vercel.app/)**: probably the closest in spirit to this
+  vignette's own idea of re-visioning. Started in 2016 by Andy Kriebel and Eva Murray, a new
+  dataset -- almost always one already published somewhere as a chart, often a mediocre one -- is
+  posted every Sunday, and participants are asked "to work with a given data set and create
+  better, more effective visualizations and help us make information more accessible." Where
+  30DayChartChallenge and TidyTuesday hand you a bare dataset, MakeoverMonday hands you an
+  existing graphic *and* asks you to improve on it -- the same path this vignette takes with
+  Minard, Perozzo, and Snow, just aimed at recent charts instead of historical ones.
+
 * **[30DayChartChallenge](https://github.com/30DayChartChallenge/Edition2025)**: one chart a day
   for the month of April, each day keyed to a themed prompt (e.g. "part-to-whole," "historical,"
   "3D"). Started in 2021 by Cédric Scherer and Dominic Royé as a follow-on to the
@@ -151,53 +154,100 @@ Some examples illustrate the range of possibilities from such endeavors:
 
 Before anything as ambitious as tackling Minard or John Snow, a simple example makes a small point of statistical
 historiography concretely. 
-John Arbuthnot's data on the sex ratios of males to females in the
-christenings in London (1629-1710) look, on a first read, like a straightforward
-annual count. But Sandy Zabell [-@Zabell:1976] found that the values for 1674 and 1704 are identical --
-not approximately close, *identical*, down to a ratio computed to three decimal places -- strongly
-suggesting one year's entry was copied from the other, whether by Arbuthnot himself or a later
-transcriber.
+John Arbuthnot's 1710 table of annual christenings in London (1629-1710) looks, on a first read,
+like a straightforward count. But Sandy Zabell [-@Zabell:1976] found that the total number of
+christenings (`Males` + `Females`) for 1674 and 1704 are identical -- not approximately close,
+*identical*, down to the last birth -- strongly suggesting one year's entry was copied from the
+other, whether by Arbuthnot himself or a later transcriber.
 
 ```{r arbuthnot-duplicate}
 data(Arbuthnot)
-Arbuthnot[Arbuthnot$Year %in% c(1674, 1704), c("Year", "Males", "Females", "Ratio")]
+Arbuthnot$Christenings <- Arbuthnot$Males + Arbuthnot$Females
+Arbuthnot[Arbuthnot$Year %in% c(1674, 1704),
+          c("Year", "Males", "Females", "Christenings", "Ratio")]
 ```
 
-`Males`, `Females`, and the derived `Ratio` match exactly; only `Plague` and `Mortality` (not
-shown) differ. A table alone makes this easy to miss among 82 rows. Plotting the series makes it
-harder to miss -- the two points sit at *exactly* the same height, 30 years apart, in a series
-that otherwise wanders:
+`Males`, `Females`, `Christenings`, and the derived `Ratio` all match exactly; only `Plague` and
+`Mortality` (not shown) differ. A table alone makes this easy to miss among 82 rows. Plotting
+`Christenings` by `Year` makes it much harder to miss: the series climbs steadily over these 80
+years, nearly doubling, so a value perfectly ordinary for the 1670s becomes a jarring plunge when
+it recurs, unchanged, thirty years later. The horizontal line marks the shared level. And, following
+Zabell & Wainer's Figure 2 [-@ZabellWainer:2002], shows it passing through only these two
+points:
 
 ```{r arbuthnot-plot}
-ggplot(Arbuthnot, aes(x = Year, y = Ratio)) +
+copy_level <- Arbuthnot$Christenings[Arbuthnot$Year == 1704]
+
+ggplot(Arbuthnot, aes(x = Year, y = Christenings)) +
   geom_line(color = "grey50") +
   geom_point(color = "grey50") +
+  geom_hline(yintercept = copy_level, linetype = "dotted", color = "black") +
+  annotate(
+    "segment", x = 1677, xend = 1701, y = copy_level, yend = copy_level,
+    color = "darkred", linewidth = 1.3,
+    arrow = arrow(length = unit(0.3, "cm"), type = "closed")
+  ) +
   geom_point(
     data = subset(Arbuthnot, Year %in% c(1674, 1704)),
-    color = "firebrick", size = 6
+    color = "firebrick", size = 4
   ) +
   labs(
-    title = "Arbuthnot's sex ratio at christening, 1629-1710",
+    title = "Arbuthnot's annual christenings in London, 1629-1710",
     subtitle = "1674 and 1704 (red) are identical -- likely a copying error",
-    y = "Male / female ratio"
+    y = "Christenings (Males + Females)"
   ) +
   theme_minimal()
 ```
 
-That's re-visioning in miniature: looking again at old data, graphically, surfaces something
-tabulation alone hides. Wainer and Spence [-@WainerSpence:2005:longitudinal] give the fuller account and push the point
-further. The scale of the anomaly is worth stating plainly: 1704 falls about 4,000 christenings
-short of what its neighbors predict, and the true figure -- 15,895 (8,153 boys, 7,742 girls) --
-sits comfortably between 1703 and 1705, exactly where a corrected value should. Had Arbuthnot
-ever plotted his own data, they argue, the error would have stood out "like a sore thumb" --
-that he apparently never did is itself the historiographic finding, not a personal failing: it's
-evidence that graphing data simply wasn't yet part of a statistician's toolbox in 1710.
+`Christenings`, not the sex `Ratio` (`Males`/`Females`), is the quantity that makes the anomaly
+visible, even though `Ratio` also matches exactly between the two years. Since `Males` and
+`Females` were copied together, their *ratio* just reproduces 1674's perfectly ordinary value --
+nothing in the `Ratio` series flags 1704 as unusual. (The one genuinely striking `Ratio` value in
+this stretch, 1703's record low of 1.011, is unrelated noise, no part of this story.) It's
+`Christenings`, because it climbs steadily across the whole span, that turns a copying error into
+a visible outlier -- exactly the quantity Zabell & Wainer's Figure 1 plots [-@ZabellWainer:2002].
+
+That's re-visioning in miniature: looking again at old data, graphically, shows something
+tabulation alone hides. Zabell & Wainer [-@ZabellWainer:2002] state the scale of the anomaly
+plainly: 1704 has about 4,000 fewer christenings than its neighbors predict, and the correct
+figure -- 15,895 (8,153 boys, 7,742 girls) -- sits comfortably between 1703 and 1705, exactly
+where a corrected value should. Arbuthnot, they argue, would surely have caught and fixed so
+glaring an error had he ever plotted his own data: graphed, it stands out "literally, like a sore
+thumb." 
+
+That he apparently never did is itself a historiographic finding, not a personal
+failing: it's evidence that graphing data simply wasn't yet part of a statistician's toolbox in
+1710, before Playfair invented the line graph in his _Commercial and Political Atlas_
+[-@Playfair:1786].
 Re-visioning the graph doesn't just fix a 300-year-old data error; it exposes a working
 assumption of Arbuthnot's era that no longer holds today.
 
-See Zabell [-@Zabell:1976] for the original discovery, and Zabell and Wainer
-[-@ZabellWainer:2002] and Wainer and Spence [-@WainerSpence:2005:longitudinal] for the fuller
-story.
+See Zabell [-@Zabell:1976] for the original discovery and an earlier version of this graph,
+Zabell & Wainer [-@ZabellWainer:2002] for the fuller published account excerpted above, and
+Wainer & Spence [-@WainerSpence:2005:longitudinal] for a further retelling.
+
+The graph above could be improved to tell a richer historical story -- 1704 is far from the only
+irregularity in it, just the only one without an obvious explanation. Zabell & Wainer's own
+Figure 1 [-@ZabellWainer:2002] labels several other anomalies directly on the plot:
+
+- **1643-1660**: `Christenings` falls from about 10,400 in 1642 to a low of 5,612 in 1650 --
+  nearly halved -- coinciding with the English Civil War (1642-1651) and the execution of
+  Charles I in 1649. Timing alone doesn't fully explain it, though: the war ended in 1651, yet
+  the series doesn't climb back past 10,000 until 1662, over a decade into the Interregnum and
+  Restoration. Zabell & Wainer note that Graunt himself offered a more complex account: Anglican
+  ministers, in this politically fraught stretch, likely declined to register children born to
+  Catholics or Protestant dissenters. Civil war explains the drop's onset better than its
+  decade-long persistence.
+- **1665-1666**: a sharper, shorter dip -- from 11,722 in 1664 down to 9,972 in 1665 and 8,997 in
+  1666, before rebounding to 10,938 in 1667 -- lines up with the Great Plague of London (1665,
+  which killed roughly a fifth of the city's population) immediately followed by the Great Fire
+  of London (September 1666). Unlike the Civil War's decade of depressed numbers, this one snaps
+  back within a year or two once the immediate crises passed.
+
+Neither needed a Zabell-style detective plot to explain -- they're visible, dateable historical
+events, which is exactly why Zabell & Wainer's Figure 1 labels them directly rather than treating
+them as mysteries. 1704 stood out precisely because it *didn't* have an obvious explanation like
+these -- until the plot revealed it wasn't a historical event at all, just a clerical error.
 
 ### What is re-visioning?
 
@@ -209,12 +259,28 @@ conclusions, to understand it on its own terms, in its own time. Some examples h
 Stephen Stigler does this throughout *The History of Statistics* [-@Stigler:1986] and in papers
 devoted specifically to it: "Francis Galton's Account of the Invention of Correlation"
 [-@Stigler:1989] re-examines Galton's own scatter diagram of parent/child heights to work out how
-Galton actually arrived at correlation, and "Regression Towards the Mean, Historically
-Considered" [-@Stigler:1997] does the same for Galton's geometric argument for regression --
-reconstructing the reasoning behind a graphic, not just restating its result.
+Galton actually arrived at correlation, and "Regression Towards the Mean, Historically Considered"
+[-@Stigler:1997] does the same for Galton's geometric argument for regression -- reconstructing
+the reasoning behind a graphic, not just restating its result.
+
+Stigler has also made the case for *why* this kind of return-to-the-source work matters, not just
+demonstrated it. "Data Have a Limited Shelf Life" [-@Stigler:2019:shelflife] traces three
+textbook-famous datasets -- Quetelet's Scottish soldiers' chest measurements, von Bortkiewicz's
+Prussian horse-kick deaths, and the Cushny-Peebles sleep data behind Gosset's first published
+*t*-test -- back to their original sources, and finds each one, after decades of uncritical
+reuse, had drifted away from the messy, selective, error-ridden reality of its collection into
+something merely "ornamental": a fixed textbook prop, its provenance and caveats long forgotten
+(Gosset's own data, for instance, reached Fisher's textbook with two columns mislabeled as the
+wrong drugs entirely, an error nobody caught for 27 years). Old, dead data aren't worthless, he's
+careful to add -- like museum pieces, their value is just a different kind from a live dataset
+still doing scientific work -- but he warns that "big data" is no less susceptible to going
+"ornamental," and may be harder to catch: "dead data do not represent the worst case; zombie data
+may be even worse for scientific use." Re-visioning, in this vignette's sense, is exactly the
+antidote he's calling for: asking where a dataset actually came from is what keeps it from going
+ornamental in the first place.
 
 David Bellhouse (with Laura Murray) does something similar for a much earlier and more
-painstaking case: Murray and Bellhouse [-@MurrayBellhouse:2017] work out how Edmond Halley actually constructed his
+painstaking case: Murray & Bellhouse [-@MurrayBellhouse:2017] work out how Edmond Halley actually constructed his
 1701 map of magnetic declination -- a map, not a table -- using only the methods and instruments
 available to Halley at the time.
 
@@ -223,7 +289,7 @@ exactly this kind of return-to-the-source work, publishing detailed re-analyses 
 datasets that go well beyond what the original publications contained. Two examples tie directly
 into `HistData`:
 
-- Hanley, Julien, and Moodie [-@Hanley:2008], "Student's z, t, and s: What if Gosset had R?," traces the
+- Hanley, Julien & Moodie [-@Hanley:2008], "Student's z, t, and s: What if Gosset had R?," traces the
   height and finger-length data originally gathered by Macdonell (1901) and used by "Student"
   (Gosset, 1908) to introduce the *t*-distribution -- the same data shipped here as
   `HistData::Macdonell`.
@@ -280,9 +346,8 @@ invitations" below for the deferred `gganimate` idea for `Perozzo`.)
 
 A concrete example: Ron Kennett's "moving bubble" animated re-vision, which replaces Minard's
 static flow band with a single traveling bubble sized to the army's current strength, sweeping
-along the march route as time advances.
-
-![Ron Kennett's moving-bubble re-vision of Minard's march](figures/Kennet-moving-bubble.gif){width=90%}
+along the march route as time advances. *(Image on file, `Kennet-moving-bubble.gif`; embedding
+pending the general image-hosting/licensing decision noted above.)*
 
 ### 5. Alternative representations
 
@@ -307,7 +372,7 @@ their documentation:
 
 | Dataset | Nature of the challenge |
 |---|---|
-| [`Minard`](../reference/Minard.html) | "Minard's Challenge": reproduce the March on Moscow graphic with modern tools (Friendly, 2002). |
+| [`Minard`](../reference/Minard.html) | "Minard's Challenge": reproduce the March on Moscow graphic with modern tools [@Friendly:2002]. |
 | [`Guerry`](../reference/Guerry.html) | Friendly [-@Friendly:2007:guerry]: "Challenges for Multivariable Spatial Analysis." |
 | [`Playfair1824`](../reference/Playfair1824.html) | Re-create Playfair's last chart, or do better, using modern graphics. |
 | [`Perozzo`](../reference/Perozzo.html) | Get closer to Perozzo's hand-drawn stereogram, or do better in some way -- the case study below. |
@@ -334,7 +399,7 @@ width, `direction` its color, `group` which sub-path it belongs to), and `Minard
 temperature series, not used in this panel). Porting to ggplot2 is then mostly a matter of
 mapping `survivors` to `linewidth` and `direction` to `colour`:
 
-```{r minard-ggplot}
+```{r minard-ggplot, fig.height = 3.5}
 data(Minard.cities); data(Minard.troops)
 
 ggplot(Minard.troops, aes(x = long, y = lat)) +
@@ -355,7 +420,7 @@ lost in translation.
 
 ### A few more, from the gallery
 
-The rest of Friendly's [-@Friendly:2002] catalog isn't reproduced here (some entries are third-party work
+The rest of Friendly [-@Friendly:2002]'s catalog isn't reproduced here (some entries are third-party work
 with licensing not yet sorted out for redistribution -- see `issues/vignettes/Minard-images.md`),
 but is worth naming by taxonomy category, all viewable at
 <https://www.datavis.ca/gallery/re-minard.php>:
@@ -377,17 +442,18 @@ it by hand, in ink, with its own four-way legend ("Sistema d'Assi"): black for t
 cross-sections, red for the census-year cross-sections, dashed lines for isodemic (equal-
 population) contours, and violet for the cohort-survivorship diagonals themselves.
 
-TODO: Mention the pecuilar drop off / Cite Friendly, Wainer \S 8.4
-A peculiar feature in this graph is the dip in younger people from about 1850–1870—it looks like
-someone chipped off a large chunk of the mountain. What could be the reason? Several demographer
-friends speculated: perhaps a war or an outbreak of disease? It turns out that the probable explanation is
-less dramatic: Sweden had large outmigration in the period.
+A peculiar feature in this graph is the dip in younger people from about 1850-1870 -- it looks
+like someone chipped off a large chunk of the mountain. What could be the reason? Several
+demographer friends speculated: perhaps a war, or an outbreak of disease? It turns out that the
+probable explanation is less dramatic: Sweden saw large-scale emigration (much of it to North
+America) over this period, thinning out exactly the young-adult cohorts that show the dip.
+Friendly & Wainer [-@FriendlyWainer:2021:TOGS] (\S 8.4) discuss this feature of the stereogram directly.
 
 <!--
 ![Perozzo's original 1880/1881 (Wikimedia Commons, public domain)](figures/perozzo-original.jpg){width=70%}
 -->
 
-![Perozzo's 1881 stereogram](figures/Perozzo-600dpi.jpg){width=60%}
+![Perozzo's 1881 stereogram](figures/Perozzo-600dpi.jpg){width=70%}
 
 
 The package supplies a simple base-R version already:
@@ -514,8 +580,9 @@ ggplot(Perozzo_iso, aes(x = x_iso, y = y_iso, group = Age, color = Age)) +
   theme(axis.text.x = element_blank(), axis.text.y = element_blank())
 ```
 
-*(Rough first pass -- the shear/lift constants above are not tuned, and this doesn't yet attempt
-Perozzo's actual oblique axis convention. Revisit before shipping.)*
+The `shear`/`lift` constants are chosen by eye for a legible "mountain" silhouette, not fit to
+Perozzo's own oblique axis convention -- a stylized fake-3D, not a literal reproduction of his
+projection geometry.
 
 ### Re-vision 3: an interactive `plotly` surface
 
@@ -539,10 +606,6 @@ across `Year`, letting each birth cohort's diagonal "arrive" in sequence rather 
 of them at once (the `gganimate` idea in "Open invitations" below).
 
 ## Case study: `Snow`, via John Russell's 30DayChartChallenge
-
-TODO: Not sure this is worth it. I did a better job of showing the 2D densities; but not sure
-  where to find the code/image for this. A version of this is available somewhere in
-  C:\Dropbox\Twitter\twitter-archive-2022-11-06\data\tweets_media
 
 Of the `sandbox/` scripts recreating Russell's [30DayChartChallenge
 2025](https://github.com/drjohnrussell/30DayChartChallenge) entries, `Snow-density.R` was picked
@@ -600,8 +663,8 @@ Not attempted in this draft -- a literal "here's what's left" list:
 
 ## Going further
 
-- Friendly, M. & Wainer, H. (2021). *A History of Data Visualization and Graphic Communication*.
-  Harvard University Press.
+- Friendly & Wainer [-@FriendlyWainer:2021:TOGS], *A History of Data Visualization and Graphic
+  Communication*.
 - Companion site: <https://friendly.github.io/HistDataVis/> -- R code "reconstructions of
   historical graphs" tied to each book chapter.
 - Gallery of Data Visualization (GDV), referenced in Friendly [-@Friendly:2002].
@@ -609,8 +672,5 @@ Not attempted in this draft -- a literal "here's what's left" list:
   taxonomy is drawn from.
 
 ## References
-
-Generated automatically from `histdata.bib` (APA style, via `apa.csl`) for every `[@key]`
-citation used above.
 
 <div id="refs"></div>
