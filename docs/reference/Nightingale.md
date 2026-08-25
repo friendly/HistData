@@ -102,6 +102,7 @@ See the example by John Russell for the
 ## Examples
 
 ``` r
+
 data(Nightingale)
 
 # For some graphs, it is more convenient to reshape death rates to long format

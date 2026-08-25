@@ -72,6 +72,7 @@ See the example by John Russell for the
 ## Examples
 
 ``` r
+
 data(Pyx)
 # display as table
 xtabs(count ~ Bags+Deviation, data=Pyx)

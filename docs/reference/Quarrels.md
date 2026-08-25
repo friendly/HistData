@@ -390,6 +390,7 @@ Rummel, Rudolph J. (1967), "Dimensions of Dyadic War, 1820-1952."
 ## Examples
 
 ``` r
+
 data(Quarrels)
 str(Quarrels)
 #> 'data.frame':    779 obs. of  84 variables:
