@@ -3309,7 +3309,7 @@ NULL
 #' 
 #' Tufte, E. (1997). *Visual Explanations*. Cheshire, CT: Graphics Press.
 #' 
-#' See the example from Nicola Rennie's [data-viz-projects](nrennie.rbind.io/data-viz-projects/), a tour-de-force:
+#' See the example from Nicola Rennie's [data-viz-projects](https://nrennie.rbind.io/data-viz-projects/), a tour-de-force:
 #' [John Snow's Cholera Maps](https://github.com/nrennie/data-viz-projects/tree/main/John%20Snow%20Cholera%20Maps)
 #'
 #' See also the example by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge11.R)
