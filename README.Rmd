@@ -85,7 +85,11 @@ and valitity of what you got from an image (Drevon etal. (2016)).
 * **Conversion** of text-based data sets to a CSV file and then to an `.RData` file with proper column names. Ever you seen a Unix `.shar` (shell archive) file? Well, I have. What about an old codebook prepared for a survey? Modern R packages can read
 data in a much wider variety of formats today, but older material still presents challenges.
 
-* **Cleaning** variable names: Some of this can now be done using e.g.,`janitor::clean_names()`, or, in some cases, manually editing an excel file you got. What to do about `very_long_variable_names` or those abbrvd 2 shrt?
+* **NameCleaning** for variable names: Some of this can now be done using e.g.,`janitor::clean_names()`, or, in some cases, manually editing an excel file you got. What to do about `very_long_variable_names` or those "abbrvd 2 shrt"? But you should also adopt a consistent naming convention across your datasets in a project: `camelCase`, `snake_case`, `PascalCase`, `kebob-case`; hopefully never `SCREAMING_SNAKE_CASE`, unless for a constant like `MAX_ITER`. 
+
+Some similar considerations apply to the **values* of character or factor variables in a dataset, and also how these will be ordered in tabular or graphic displays. As one example, levels of education, with values
+`"Low"`, `"Medium"`, `"High"` will be sorted H, L, M by default. You can recode or assign levels
+`c("1:Low", "2:Medium", "3:High")` or create them as `ordered()` factors.
 
 * Applying **Type-conversion**, e.g., `chr` to `factor` or `ordered` required thinking about what a variable represented.
 In some cases, appropriate contrasts for factors were constructed to facilitate re-analysis. Pay attention to `StringsAsFactors`.
@@ -101,9 +105,10 @@ conversion of long <--> wide, separating implicit columns, like "1800-1850", abb
 `\item{\code{VarName}}`. But documentation is even easier to edit and maintain using markdown format,
 as converted again by [roxygen2md](https://cran.r-project.org/package=roxygen2md).
 
-* **Ask AI**: A few tasks were aided by Claude Sonnet 4.5. I wanted to add `@concept` descriptors to datasets reflecting 
-the statistical and graphical concepts that each dataset can be used to illustrate. It made a list, which I heavily edited,
-and also an R script to add these to the documentation.
+* **Ask AI**: A few tasks were aided by Claude Sonnet 4.5 and bros. 
+  + I wanted to add `@concept` descriptors to datasets reflecting the statistical and graphical concepts that each dataset can be used to illustrate. It made a list, which I heavily edited, and also an [R script](issues/concepts/add_concept_tags.R) to add these to the documentation. 
+  
+  + In a couple of recent additions like [`Federalist`](https://friendly.github.io/HistData/reference/Federalist.html) I used Claude as a skillful research assistant. We worked together to access the [`Gutenberg`](https://www.gutenberg.org/ebooks/18) text using the [`gutenbergr`](https://cran.r-project.org/package=gutenbergr) package, devise a schema for datasets that would be useful for analysis or graphs, and then incorporate into the package. All this recorded and described in the [`Federalist.R` script](data-raw/Federalist.R) used to import the data and create the R datasets.
 
 
 ## Installation
