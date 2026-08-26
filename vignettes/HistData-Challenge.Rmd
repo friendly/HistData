@@ -640,26 +640,44 @@ Adapted from `sandbox/Snow-density.R` (originally: John Russell,
 
 ## Open invitations
 
-Not attempted in this draft -- a literal "here's what's left" list:
+Several `HistData` datasets and graphics are still waiting for their re-vision -- pick one up:
 
-- **`Guerry`, `Playfair1824`, `Pollen`, `OldMaps`** -- named and cited above, not worked
-  through in depth in this first draft.
-- **`Perozzo` animated (`gganimate`)** -- held for a later draft; would add `gganimate` (+ a
-  renderer) to `Suggests`. See "Still open" above.
-- **Every other dormant `sandbox/` script** not chosen for the live case study above --
-  `Galton-PearsonLee.R`, `Mcdonnell-density.R`, `Pyx-ggbump.R`, `Virginis-plot.R`,
-  `Arbuthnot-PieGlyph.R`, `Cholera-plots.R`, `Nightingale-graph.R`, `Guerry-map.R`,
-  `OldMaps-plot-map.R` -- each linked from its dataset's docs but never executed/shown; see the
-  planning doc for what each would need beyond current `Suggests`.
-- **`Ebbinghaus`** -- a not-yet-imported dataset (`issues/TASKS.md`), unrelated to any graphic
-  challenge but still genuinely unfinished package work.
-- **Rennie's fuller Snow map recreation** -- needs external data files not present in this repo;
-  linked from `Snow.Rd` but can't be re-run here.
-- **`Langren1644`** -- a *third* independent re-vision exists in [this
-  blog post](https://friendly.github.io/blog/posts/2026-07-van-langren/)'s "Bonus: Reproducing
-  Langren's 1644 Graph" section, alongside the package's own long-standing ggplot2 example and
-  `sandbox/Langren-graph.R`. Worth a short paragraph on the design trade-offs between the three,
-  not developed here yet.
+- **`Guerry`, `Playfair1824`, `Pollen`, `OldMaps`** -- named and cited above, but not yet
+  worked through as a full case study; any one of them could be the next one.
+  
+- **Animate `Perozzo`** -- with `gganimate`, let each birth-cohort diagonal "arrive" in
+  sequence across `Year` rather than showing all of them at once (see "Still open" above).
+  
+- **More re-visions waiting in [`sandbox/`](https://github.com/friendly/HistData/tree/master/sandbox)**
+  -- scripts already exist for several other datasets but haven't been turned into a case study
+  here: [`Galton-PearsonLee.R`](https://github.com/friendly/HistData/blob/master/sandbox/Galton-PearsonLee.R),
+  [`Mcdonnell-density.R`](https://github.com/friendly/HistData/blob/master/sandbox/Mcdonnell-density.R),
+  [`Pyx-ggbump.R`](https://github.com/friendly/HistData/blob/master/sandbox/Pyx-ggbump.R),
+  [`Virginis-plot.R`](https://github.com/friendly/HistData/blob/master/sandbox/Virginis-plot.R),
+  [`Arbuthnot-PieGlyph.R`](https://github.com/friendly/HistData/blob/master/sandbox/Arbuthnot-PieGlyph.R),
+  [`Cholera-plots.R`](https://github.com/friendly/HistData/blob/master/sandbox/Cholera-plots.R),
+  [`Nightingale-graph.R`](https://github.com/friendly/HistData/blob/master/sandbox/Nightingale-graph.R),
+  [`Guerry-map.R`](https://github.com/friendly/HistData/blob/master/sandbox/Guerry-map.R),
+  [`OldMaps-plot-map.R`](https://github.com/friendly/HistData/blob/master/sandbox/OldMaps-plot-map.R).
+  Finish one and it could become the vignette's next case study.
+
+- **Rennie's fuller `Snow` map recreation** -- needs external data files not shipped with this
+  package (linked from
+  [`man/Snow.Rd`](https://github.com/friendly/HistData/blob/master/man/Snow.Rd)); track them
+  down and complete the reproduction.
+
+- **`Langren1644`** -- three independent re-visions of van Langren's 1644 graph now exist: the
+  package's own long-standing `ggplot2` example,
+  [`sandbox/Langren-graph.R`](https://github.com/friendly/HistData/blob/master/sandbox/Langren-graph.R),
+  and a [blog post](https://friendly.github.io/blog/posts/2026-07-van-langren/) version
+  ("Bonus: Reproducing Langren's 1644 Graph"). Compare them and work out the design
+  trade-offs for yourself.
+
+<!-- Not a reader invitation, just unfinished package work -- leave out until it's imported:
+- **`Ebbinghaus`** -- a not-yet-imported dataset
+  ([`issues/TASKS.md`](https://github.com/friendly/HistData/blob/master/issues/TASKS.md)),
+  unrelated to any graphic challenge but still genuinely unfinished package work.
+-->
 
 ## Going further
 

@@ -169,6 +169,7 @@ suggesting one year’s entry was copied from the other, whether by
 Arbuthnot himself or a later transcriber.
 
 ``` r
+
 data(Arbuthnot)
 Arbuthnot$Christenings <- Arbuthnot$Males + Arbuthnot$Females
 Arbuthnot[Arbuthnot$Year %in% c(1674, 1704),
@@ -189,6 +190,7 @@ Wainer’s Figure 2 ([2002](#ref-ZabellWainer:2002)), shows it passing
 through only these two points:
 
 ``` r
+
 copy_level <- Arbuthnot$Christenings[Arbuthnot$Year == 1704]
 
 ggplot(Arbuthnot, aes(x = Year, y = Christenings)) +
@@ -432,14 +434,14 @@ images is sorted out – see `issues/vignettes/histdata-challenge.md`.)*
 Several datasets in this package already carry an explicit “go recreate
 or improve this” note in their documentation:
 
-| Dataset                                                                         | Nature of the challenge                                                                                              |
-|---------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| [`Minard`](https://friendly.github.io/HistData/reference/Minard.md)             | “Minard’s Challenge”: reproduce the March on Moscow graphic with modern tools ([Friendly 2002](#ref-Friendly:2002)). |
-| [`Guerry`](https://friendly.github.io/HistData/reference/Guerry.md)             | Friendly ([2007](#ref-Friendly:2007:guerry)): “Challenges for Multivariable Spatial Analysis.”                       |
-| [`Playfair1824`](https://friendly.github.io/HistData/reference/Playfair1824.md) | Re-create Playfair’s last chart, or do better, using modern graphics.                                                |
-| [`Perozzo`](https://friendly.github.io/HistData/reference/Perozzo.md)           | Get closer to Perozzo’s hand-drawn stereogram, or do better in some way – the case study below.                      |
-| [`Pollen`](https://friendly.github.io/HistData/reference/Pollen.md)             | The original 1986 ASA JSM “Data Challenge” – a synthetic 5D dataset with several deliberately hidden features.       |
-| [`OldMaps`](https://friendly.github.io/HistData/reference/OldMaps.md)           | Open call to relate map accuracy to other characteristics of each map.                                               |
+| Dataset | Nature of the challenge |
+|----|----|
+| [`Minard`](https://friendly.github.io/HistData/reference/Minard.md) | “Minard’s Challenge”: reproduce the March on Moscow graphic with modern tools ([Friendly 2002](#ref-Friendly:2002)). |
+| [`Guerry`](https://friendly.github.io/HistData/reference/Guerry.md) | Friendly ([2007](#ref-Friendly:2007:guerry)): “Challenges for Multivariable Spatial Analysis.” |
+| [`Playfair1824`](https://friendly.github.io/HistData/reference/Playfair1824.md) | Re-create Playfair’s last chart, or do better, using modern graphics. |
+| [`Perozzo`](https://friendly.github.io/HistData/reference/Perozzo.md) | Get closer to Perozzo’s hand-drawn stereogram, or do better in some way – the case study below. |
+| [`Pollen`](https://friendly.github.io/HistData/reference/Pollen.md) | The original 1986 ASA JSM “Data Challenge” – a synthetic 5D dataset with several deliberately hidden features. |
+| [`OldMaps`](https://friendly.github.io/HistData/reference/OldMaps.md) | Open call to relate map accuracy to other characteristics of each map. |
 
 This first draft works two of these (`Minard`, `Perozzo`) in depth, plus
 one further example from outside the package’s own docs (`Snow`, via
@@ -467,6 +469,7 @@ mostly a matter of mapping `survivors` to `linewidth` and `direction` to
 `colour`:
 
 ``` r
+
 data(Minard.cities); data(Minard.troops)
 
 ggplot(Minard.troops, aes(x = long, y = lat)) +
@@ -535,6 +538,7 @@ Perozzo’s 1881 stereogram
 The package supplies a simple base-R version already:
 
 ``` r
+
 data(Perozzo)
 Pmat <- xtabs(Survivors ~ Year + Age, data = Perozzo)
 years <- as.numeric(rownames(Pmat))
@@ -548,6 +552,7 @@ surface. Some fiddling was necessary to get the orientation
 approximately right.
 
 ``` r
+
 ages_rev <- -rev(ages)
 Pmat_rev <- Pmat[, rev(seq_along(ages))]
 persp(years, ages_rev, Pmat_rev,
@@ -570,6 +575,7 @@ R – it returns a 4x4 projection matrix from each call, and
 3D-located lines onto the same plot after the fact.
 
 ``` r
+
 colnames(Pmat_rev) <- as.character(ages_rev)  # match column names to ages_rev's sign flip
 
 # re-angled to bring the Age = 0 "wall" of large young-survivor counts forward
@@ -632,6 +638,7 @@ the stereogram’s dramatic silhouette for exact, directly-comparable
 values.
 
 ``` r
+
 ggplot(Perozzo, aes(x = Year, y = Age, z = Survivors)) +
   geom_raster(aes(fill = Survivors)) +
   geom_contour(color = "white", alpha = 0.6) +
@@ -653,6 +660,7 @@ projection. Unlike [`persp()`](https://rdrr.io/r/graphics/persp.html),
 this gets full access to ggplot’s color scales, legends, and layering.
 
 ``` r
+
 shear <- 0.6   # horizontal points per year of age; tune to taste
 lift  <- 400   # vertical Survivors-units per year of age
 
@@ -685,6 +693,7 @@ modern analogue of a physical stereogram: something a reader can
 actually rotate, rather than a single fixed viewing angle.
 
 ``` r
+
 library(plotly)
 plot_ly(x = ~years, y = ~ages, z = ~Pmat, type = "surface") |>
   layout(scene = list(
@@ -714,6 +723,7 @@ contours instead of point symbols for cholera deaths, layered over
 Snow’s original street map.
 
 ``` r
+
 data(Snow.deaths); data(Snow.pumps); data(Snow.streets)
 
 ggplot(Snow.deaths, aes(x = x, y = y)) +
@@ -740,32 +750,44 @@ Adapted from `sandbox/Snow-density.R` (originally: John Russell,
 
 ## Open invitations
 
-Not attempted in this draft – a literal “here’s what’s left” list:
+Several `HistData` datasets and graphics are still waiting for their
+re-vision – pick one up:
 
 - **`Guerry`, `Playfair1824`, `Pollen`, `OldMaps`** – named and cited
-  above, not worked through in depth in this first draft.
-- **`Perozzo` animated (`gganimate`)** – held for a later draft; would
-  add `gganimate` (+ a renderer) to `Suggests`. See “Still open” above.
-- **Every other dormant `sandbox/` script** not chosen for the live case
-  study above – `Galton-PearsonLee.R`, `Mcdonnell-density.R`,
-  `Pyx-ggbump.R`, `Virginis-plot.R`, `Arbuthnot-PieGlyph.R`,
-  `Cholera-plots.R`, `Nightingale-graph.R`, `Guerry-map.R`,
-  `OldMaps-plot-map.R` – each linked from its dataset’s docs but never
-  executed/shown; see the planning doc for what each would need beyond
-  current `Suggests`.
-- **`Ebbinghaus`** – a not-yet-imported dataset (`issues/TASKS.md`),
-  unrelated to any graphic challenge but still genuinely unfinished
-  package work.
-- **Rennie’s fuller Snow map recreation** – needs external data files
-  not present in this repo; linked from `Snow.Rd` but can’t be re-run
-  here.
-- **`Langren1644`** – a *third* independent re-vision exists in [this
-  blog
-  post](https://friendly.github.io/blog/posts/2026-07-van-langren/)’s
-  “Bonus: Reproducing Langren’s 1644 Graph” section, alongside the
-  package’s own long-standing ggplot2 example and
-  `sandbox/Langren-graph.R`. Worth a short paragraph on the design
-  trade-offs between the three, not developed here yet.
+  above, but not yet worked through as a full case study; any one of
+  them could be the next one.
+
+- **Animate `Perozzo`** – with `gganimate`, let each birth-cohort
+  diagonal “arrive” in sequence across `Year` rather than showing all of
+  them at once (see “Still open” above).
+
+- **More re-visions waiting in
+  [`sandbox/`](https://github.com/friendly/HistData/tree/master/sandbox)**
+  – scripts already exist for several other datasets but haven’t been
+  turned into a case study here:
+  [`Galton-PearsonLee.R`](https://github.com/friendly/HistData/blob/master/sandbox/Galton-PearsonLee.R),
+  [`Mcdonnell-density.R`](https://github.com/friendly/HistData/blob/master/sandbox/Mcdonnell-density.R),
+  [`Pyx-ggbump.R`](https://github.com/friendly/HistData/blob/master/sandbox/Pyx-ggbump.R),
+  [`Virginis-plot.R`](https://github.com/friendly/HistData/blob/master/sandbox/Virginis-plot.R),
+  [`Arbuthnot-PieGlyph.R`](https://github.com/friendly/HistData/blob/master/sandbox/Arbuthnot-PieGlyph.R),
+  [`Cholera-plots.R`](https://github.com/friendly/HistData/blob/master/sandbox/Cholera-plots.R),
+  [`Nightingale-graph.R`](https://github.com/friendly/HistData/blob/master/sandbox/Nightingale-graph.R),
+  [`Guerry-map.R`](https://github.com/friendly/HistData/blob/master/sandbox/Guerry-map.R),
+  [`OldMaps-plot-map.R`](https://github.com/friendly/HistData/blob/master/sandbox/OldMaps-plot-map.R).
+  Finish one and it could become the vignette’s next case study.
+
+- **Rennie’s fuller `Snow` map recreation** – needs external data files
+  not shipped with this package (linked from
+  [`man/Snow.Rd`](https://github.com/friendly/HistData/blob/master/man/Snow.Rd));
+  track them down and complete the reproduction.
+
+- **`Langren1644`** – three independent re-visions of van Langren’s 1644
+  graph now exist: the package’s own long-standing `ggplot2` example,
+  [`sandbox/Langren-graph.R`](https://github.com/friendly/HistData/blob/master/sandbox/Langren-graph.R),
+  and a [blog
+  post](https://friendly.github.io/blog/posts/2026-07-van-langren/)
+  version (“Bonus: Reproducing Langren’s 1644 Graph”). Compare them and
+  work out the design trade-offs for yourself.
 
 ## Going further
 
@@ -784,13 +806,13 @@ Friendly, Michael. 2002. “Visions and Re-Visions of Charles Joseph
 Minard.” *Journal of Educational and Behavioral Statistics* 27 (1):
 31–52. <https://doi.org/10.3102/10769986027001031>.
 
-———. 2007. “A.-M. Guerry’s Moral Statistics of France: Challenges for
-Multivariable Spatial Analysis.” *Statistical Science* 22 (3): 368–99.
-<https://doi.org/10.1214/07-STS241>.
+Friendly, Michael. 2007. “A.-M. Guerry’s Moral Statistics of France:
+Challenges for Multivariable Spatial Analysis.” *Statistical Science* 22
+(3): 368–99. <https://doi.org/10.1214/07-STS241>.
 
 Friendly, Michael, and Howard Wainer. 2021. *A History of Data
-Visualization and Graphic Communication*. Cambridge, MA: Harvard
-University Press. <https://doi.org/10.4159/9780674259034>.
+Visualization and Graphic Communication*. Harvard University Press.
+<https://doi.org/10.4159/9780674259034>.
 
 Hanley, James A., Marielle Julien, and Erica E. M. Moodie. 2008.
 “Student’s z, t, and s: What If Gosset Had R?” *The American
@@ -803,27 +825,27 @@ Map of Magnetic Declination (1701) Constructed?” *Imago Mundi* 69 (1):
 Playfair, William. 1786. *Commercial and Political Atlas: Representing,
 by Copper-Plate Charts, the Progress of the Commerce, Revenues,
 Expenditure, and Debts of England, During the Whole of the Eighteenth
-Century*. London: Debrett; Robinson;; Sewell.
+Century*. Debrett; Robinson;; Sewell.
 
 Stigler, Stephen M. 1986. *The History of Statistics: The Measurement of
-Uncertainty Before 1900*. Cambridge, MA: Harvard University Press.
+Uncertainty Before 1900*. Harvard University Press.
 
-———. 1989. “Francis Galton’s Account of the Invention of Correlation.”
-*Statistical Science* 4 (2): 73–79.
+Stigler, Stephen M. 1989. “Francis Galton’s Account of the Invention of
+Correlation.” *Statistical Science* 4 (2): 73–79.
 <https://doi.org/10.1214/ss/1177012580>.
 
-———. 1997. “Regression Towards the Mean, Historically Considered.”
-*Statistical Methods in Medical Research* 6 (2): 103–14.
+Stigler, Stephen M. 1997. “Regression Towards the Mean, Historically
+Considered.” *Statistical Methods in Medical Research* 6 (2): 103–14.
 
-———. 2019. “Data Have a Limited Shelf Life.” *Harvard Data Science
-Review* 1 (2). <https://doi.org/10.1162/99608f92.f9a1e510>.
+Stigler, Stephen M. 2019. “Data Have a Limited Shelf Life.” *Harvard
+Data Science Review* 1 (2). <https://doi.org/10.1162/99608f92.f9a1e510>.
 
 Wainer, Howard, and Ian Spence. 2005. “Graphical Presentation of
 Longitudinal Data.” In *Encyclopedia of Statistics in Behavioral
 Science*. John Wiley & Sons.
 
-Zabell, S. 1976. “Arbuthnot, Heberden and the Bills of Mortality.”
-Technical Report 40. Department of Statistics: The University of
+Zabell, S. 1976. *Arbuthnot, Heberden and the Bills of Mortality*.
+Technical Report No. 40. Department of Statistics: The University of
 Chicago.
 
 Zabell, Sandy, and Howard Wainer. 2002. “Visual Revelations: A Small

@@ -43,16 +43,19 @@ entry. Quoting directly rather than paraphrasing, since this is the text to actu
   the top, then revealing the path from right to left of the retreat on the bottom," using
   "divided pictogram bars" for troops alive vs. deceased (thermometer bars present but not
   calibrated to actual values).
+  
 - **Meschini** (`minard-MarcoMeschini.png`): "Meschini built a video lesson based on Minard's
   graph, with some historical insight about the fate of Napoleon's russian campaign. The movie
   builds the graphic over time and reinforces some key-points with images and info in a mixed
   text and iconic mode." Source: "Marco Meschini's *La campagna di Russia di Napoleone nel 1812*,
   a 6 minute movie and lecture (in Italian)."
+  
 - **Protovis** (`protovis-minard.jpg` on the page -- note the shortlisted local copy is
   `.png`, same image): "Protovis is a graphical toolkit for visualization by Michael Bostock and
   Jeffrey Heer from the Stanford vis group. ... This version uses the Google Maps API to overlay
   Minard's graphic on a Google map of the region." Credit line: "Thanks to Antonio Saade for
   bringing this to my attention."
+  
 - **Schneider / `1812-2.jpg`**, heading "Best online image": "the largest and most detailed
   re-creation of Minard's graphic I have found on the Web," from John Schneider's "Napoleonic
   Literature" page. Resolves the earlier "authorship unclear" note -- it's a credited find, not
