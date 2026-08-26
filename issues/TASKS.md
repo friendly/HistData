@@ -40,6 +40,16 @@ by Hanley that should be cited and described in *vcdExtra*'s own docs, not here:
 
 Move this note to `vcdExtra`'s own `issues/TASKS.md` next time working in that package.
 
+## Workflow: whenever `DESCRIPTION`'s `Version:` changes (2026-08-26)
+
+Reinstall (`devtools::install(dependencies = FALSE, upgrade = FALSE)`) and re-knit README
+(`devtools::build_readme()`) right after bumping the version — don't wait until the next pkgdown
+rebuild. README.md's version line reads from the *installed* package, so it silently goes stale
+the moment `DESCRIPTION` changes, independent of whether/when pkgdown gets rebuilt next. Caught
+2026-08-26: bumped to 1.1.0 in one commit, README.md still said 1.0.1 until reinstalling+re-knitting
+in a follow-up commit. This is the same underlying issue as item 1 below, just triggered by the
+version bump itself rather than by pkgdown-build time.
+
 ## Workflow: rebuilding pkgdown (2026-08-05)
 
 Before running `pkgdown::build_site()`, check both of these — a stale one silently produces a
