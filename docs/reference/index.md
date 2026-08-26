@@ -40,6 +40,12 @@
 - [`EdgeworthDeaths`](https://friendly.github.io/HistData/reference/EdgeworthDeaths.md)
   : Edgeworth's Data on Death Rates in British Counties
 
+- [`Federalist`](https://friendly.github.io/HistData/reference/Federalist.md)
+  [`Federalist_corpus`](https://friendly.github.io/HistData/reference/Federalist.md)
+  [`Federalist_markers`](https://friendly.github.io/HistData/reference/Federalist.md)
+  [`Federalist_text`](https://friendly.github.io/HistData/reference/Federalist.md)
+  : The Federalist Papers: corpus metadata, marker-word counts, and text
+
 - [`Fingerprints`](https://friendly.github.io/HistData/reference/Fingerprints.md)
   : Waite's data on Patterns in Fingerprints
 

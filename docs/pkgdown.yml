@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   HistData-Challenge: HistData-Challenge.html
   Snow_deaths-duplicates: Snow_deaths-duplicates.html
-last_built: 2026-08-25T02:27Z
+last_built: 2026-08-26T17:11Z
 urls:
   reference: https://friendly.github.io/HistData/reference
   article: https://friendly.github.io/HistData/articles

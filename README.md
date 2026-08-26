@@ -39,7 +39,8 @@ to do better!
 
 Some of these been featured in social media calls for participation,
 such as the [30 Day Chart
-Challenge](https://github.com/30DayChartChallenge/Edition2025)
+Challenge](https://github.com/30DayChartChallenge/Edition2025). A new
+vignette describes this more generally as a [HistData Challenge]().
 
 This is part of a program of research called *statistical
 historiography* (Friendly, 2007; Friendly & Denis, 2001; Friendly et-al,
@@ -106,12 +107,13 @@ package. This may not be evident in what you see in the resulting
   hopefully never `SCREAMING_SNAKE_CASE`, unless for a constant like
   `MAX_ITER`.
 
-Some similar considerations apply to the \*\*values\* of character or
-factor variables in a dataset, and also how these will be ordered in
-tabular or graphic displays. As one example, levels of education, with
-values `"Low"`, `"Medium"`, `"High"` will be sorted H, L, M by default.
-You can recode or assign levels `c("1:Low", "2:Medium", "3:High")` or
-create them as `ordered()` factors.
+  Some similar considerations apply to the **values** of character or
+  factor variables in a dataset, and also how these will be ordered in
+  tabular or graphic displays. As one example, levels of education, with
+  values `"Low"`, `"Medium"`, `"High"` will be sorted “H, L, M” by
+  default. You can recode or assign levels
+  `c("1:Low", "2:Medium", "3:High")` or create them as `ordered()`
+  factors.
 
 - Applying **Type-conversion**, e.g., `chr` to `factor` or `ordered`
   required thinking about what a variable represented. In some cases,

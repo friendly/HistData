@@ -2,7 +2,7 @@
 
 **Data Sets from the History of Statistics and Data Visualization**
 
-Version 1.0.1 (2026-08-24)
+Version 1.0.1 (2026-08-26)
 
 The `HistData` package provides a collection of small data sets that are
 interesting and important in the history of statistics and data
@@ -78,10 +78,23 @@ package. This may not be evident in what you see in the resulting
   variety of formats today, but older material still presents
   challenges.
 
-- **Cleaning** variable names: Some of this can now be done using
+- **NameCleaning** for variable names: Some of this can now be done
+  using
   e.g.,[`janitor::clean_names()`](https://sfirke.github.io/janitor/reference/clean_names.html),
   or, in some cases, manually editing an excel file you got. What to do
-  about `very_long_variable_names` or those abbrvd 2 shrt?
+  about `very_long_variable_names` or those “abbrvd 2 shrt”? But you
+  should also adopt a consistent naming convention across your datasets
+  in a project: `camelCase`, `snake_case`, `PascalCase`, `kebob-case`;
+  hopefully never `SCREAMING_SNAKE_CASE`, unless for a constant like
+  `MAX_ITER`.
+
+Some similar considerations apply to the \*\*values\* of character or
+factor variables in a dataset, and also how these will be ordered in
+tabular or graphic displays. As one example, levels of education, with
+values `"Low"`, `"Medium"`, `"High"` will be sorted H, L, M by default.
+You can recode or assign levels `c("1:Low", "2:Medium", "3:High")` or
+create them as [`ordered()`](https://rdrr.io/r/base/factor.html)
+factors.
 
 - Applying **Type-conversion**, e.g., `chr` to `factor` or `ordered`
   required thinking about what a variable represented. In some cases,
@@ -114,11 +127,25 @@ package. This may not be evident in what you see in the resulting
   maintain using markdown format, as converted again by
   [roxygen2md](https://cran.r-project.org/package=roxygen2md).
 
-- **Ask AI**: A few tasks were aided by Claude Sonnet 4.5. I wanted to
-  add `@concept` descriptors to datasets reflecting the statistical and
-  graphical concepts that each dataset can be used to illustrate. It
-  made a list, which I heavily edited, and also an R script to add these
-  to the documentation.
+- **Ask AI**: A few tasks were aided by Claude Sonnet 4.5 and bros.
+
+  - I wanted to add `@concept` descriptors to datasets reflecting the
+    statistical and graphical concepts that each dataset can be used to
+    illustrate. It made a list, which I heavily edited, and also an [R
+    script](https://friendly.github.io/HistData/issues/concepts/add_concept_tags.R)
+    to add these to the documentation.
+
+  - In a couple of recent additions like
+    [`Federalist`](https://friendly.github.io/HistData/reference/Federalist.html)
+    I used Claude as a skillful research assistant. We worked together
+    to access the [`Gutenberg`](https://www.gutenberg.org/ebooks/18)
+    text using the
+    [`gutenbergr`](https://cran.r-project.org/package=gutenbergr)
+    package, devise a schema for datasets that would be useful for
+    analysis or graphs, and then incorporate into the package. All this
+    recorded and described in the [`Federalist.R`
+    script](https://friendly.github.io/HistData/data-raw/Federalist.R)
+    used to import the data and create the R datasets.
 
 ## Installation
 
@@ -175,6 +202,9 @@ tt(dsets, width = c(.2, .8)) |>
 | [Dactyl](https://friendly.github.io/HistData/reference/Dactyl.html) | Edgeworth’s counts of dactyls in Virgil’s Aeneid |
 | [DrinksWages](https://friendly.github.io/HistData/reference/DrinksWages.html) | Elderton and Pearson’s (1910) data on drinking and wages |
 | [EdgeworthDeaths](https://friendly.github.io/HistData/reference/EdgeworthDeaths.html) | Edgeworth’s Data on Death Rates in British Counties |
+| [Federalist_corpus](https://friendly.github.io/HistData/reference/Federalist_corpus.html) | The Federalist Papers: corpus metadata, marker-word counts, and text |
+| [Federalist_markers](https://friendly.github.io/HistData/reference/Federalist_markers.html) | The Federalist Papers: corpus metadata, marker-word counts, and text |
+| [Federalist_text](https://friendly.github.io/HistData/reference/Federalist_text.html) | The Federalist Papers: corpus metadata, marker-word counts, and text |
 | [Fingerprints](https://friendly.github.io/HistData/reference/Fingerprints.html) | Waite’s data on Patterns in Fingerprints |
 | [Galton](https://friendly.github.io/HistData/reference/Galton.html) | Galton’s data on the heights of parents and their children |
 | [GaltonFamilies](https://friendly.github.io/HistData/reference/GaltonFamilies.html) | Galton’s data on the heights of parents and their children, by child |
