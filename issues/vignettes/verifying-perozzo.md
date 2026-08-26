@@ -4,7 +4,7 @@ Working notes for a possible blog post or package vignette: "Verifying Perozzo" 
 quant-historian actually has to do to check a digitized dataset against the historical graphic it
 claims to represent. Grew out of a 2026-08-07 conversation asking, essentially, "how do you know
 `HistData::Perozzo` is faithful to the 1880 stereogram?" -- and finding that the package's own
-existing "check" doesn't answer that question at all. That finding is the hook for the piece:
+existing "check" doesn't answer that question at all. That finding is the hook for a related story:
 verification is harder than it looks, and it's easy to build a check that reassures you without
 actually testing anything.
 

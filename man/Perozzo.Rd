@@ -43,8 +43,9 @@ GitHub repo (\code{infowetrust/old-charts}, component \code{PerozzoSweden}) -- c
 to that repo's \code{porozzo-tidy.csv}. That repo is itself a from-scratch React/D3-style redraw of
 Perozzo's stereogram, built from this same grid; it documents no further provenance for the
 numbers themselves, so how they were originally read off Perozzo's 1880/1881 plate is still
-unknown. See \code{issues/vignettes/verifying-perozzo.md} for the full trace and for a methodology
-to verify the grid against the original image directly.
+unknown. See \href{https://github.com/friendly/HistData/blob/master/issues/vignettes/verifying-perozzo.md}{issues/vignettes/verifying-perozzo.md}
+(on GitHub -- \verb{issues/} is dev-only and not included in the installed package) for the full
+trace and for a methodology to verify the grid against the original image directly.
 
 Perozzo's 3D graphic was remarkable in its' time and still is today, for attention to detail in his
 hand-drawn graphic. The simple image from \code{graphics::persp} show here is a very coarse approximation.

@@ -87,6 +87,7 @@ work rather than clean-up:
     line endings) to that repo's `porozzo-tidy.csv`. Explains the original "porozzo" misspelling
     (commit `a68f615`) — it's the upstream filename. Full trace, plus what the repo's `.tsx`
     rendering code reveals, in `issues/vignettes/verifying-perozzo.md`.
+    
   - [ ] **TODO: still open — original digitization from Perozzo's 1880/1881 plate is unknown**
     — `old-charts` is itself a from-scratch redraw built from this same grid; nothing in that repo
     (code comments, README) documents how its numbers were originally read off the plate, so
@@ -96,6 +97,7 @@ work rather than clean-up:
     projection) and for the current, informal state of each check — including the still-unbuilt
     "does `Perozzo`, plotted, actually reproduce the look of the original lithograph" comparison,
     which is the real target here, not just provenance-chasing.
+    
   - [X] **Resolved (narrowly): `data-raw/perozzo-contours.json` is redundant, not shipping it** —
     compared against `contourLines()` recomputed straight from the `Perozzo` grid at the same 29
     levels (`data-raw/Perozzo-contours-compare.R`, output `.png`/`.csv` alongside it). Exact
@@ -124,24 +126,29 @@ work rather than clean-up:
     request, not transferable to `HistData`. Kaggle/DataCamp copies are downstream of the same
     release, riding on nobody's explicit permission. **Do not build this from that CSV or from
     `riskCommunicator`'s data** without HistData getting its own NHLBI approval first.
+    
   - **Better-fitting route, no licensing issue**: build from the small *published summary tables*
     in the two landmark papers instead — publicly published numbers, transcribable and citable the
     same way `Guerry`/`Playfair1824`/`Perozzo` already are, and a better thematic fit for
     "history of statistics" than a generic modeling dataset:
+    
     - Kannel, Dawber, Kagan, Revotskie & Stokes (1961). "Factors of Risk in the Development of
       Coronary Heart Disease — Six Year Follow-up Experience." *Annals of Internal Medicine*,
       55(1), 33-50. Coined the term "risk factor" itself; small cross-tabulated risk tables
       (BP x cholesterol x ECG combinations vs. CHD incidence).
+      
     - Truett, Cornfield & Kannel (1967). "A multivariate analysis of the risk of coronary heart
       disease in Framingham." *Journal of Chronic Diseases*, 20(7), 511-524. First multiple
       logistic risk function in epidemiology (age, cholesterol, weight, ECG abnormality,
       hemoglobin, cigarettes, systolic BP) — replaced the unwieldy multi-way cross-tab tables from
       1961 with a single fitted model. The more "statistically historic" of the two.
+      
   - **Not yet found**: an iconic, crisply-dated Framingham *graphic* the way Minard/Playfair/Snow
     each have one — the well-known risk-score nomogram/point-chart is a 1990s derivative (Wilson et
     al.), not an original-era graphic. Worth another look once the table data is in hand; may just
     not exist for this one, and that's fine (`Federalist` and `Arbuthnot`'s motivating example
     aren't built around a single iconic graphic either).
+    
   - **Next concrete step**: track down the actual 1961/1967 tables (JSTOR/journal archives) and
     transcribe them into `data-raw/`, following the `Federalist.R` pattern (cached raw source,
     documented quirks, `@references`/`@source`/prior-work section in the roxygen doc). Not started.
