@@ -21,7 +21,7 @@ Commit](https://img.shields.io/github/last-commit/friendly/HistData)](https://gi
 
 <!-- Dev. Version: 1.0.0 -->
 
-Version 1.0.1 (2026-08-26)
+Version 1.1.0 (2026-08-26)
 
 The `HistData` package provides a collection of small data sets that are
 interesting and important in the history of statistics and data
