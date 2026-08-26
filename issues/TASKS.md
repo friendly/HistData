@@ -113,45 +113,10 @@ work rather than clean-up:
     that would do that, and it's still open. See `issues/vignettes/verifying-perozzo.md`.
   (Filenames were originally misspelled "porozzo" — fixed 2026-08-04, commit `a68f615`.)
 
-- [ ] **New dataset: Framingham Heart Study** — planning stage (2026-08-26), no `data-raw/` yet.
-  MF wants a Framingham dataset next, after `Federalist`. Researched licensing/sourcing before
-  starting, since this one has a real trap:
-
-  - **The obvious route is a dead end.** The famous "framingham.csv" (~4,238 rows) that's
-    everywhere on Kaggle/DataCamp/textbooks is an NHLBI BioLINCC "Teaching Dataset" release, not
-    freely redistributable — BioLINCC's own terms say it needs a per-project data-use request, and
-    explicitly "not appropriate for publication purposes." The one CRAN package that ships
-    Framingham microdata, `riskCommunicator` (11,627 rows, 39 vars), does so under its own specific
-    NHLBI approval (request #7161, approved 2019-03-11) — that permission is tied to that package's
-    request, not transferable to `HistData`. Kaggle/DataCamp copies are downstream of the same
-    release, riding on nobody's explicit permission. **Do not build this from that CSV or from
-    `riskCommunicator`'s data** without HistData getting its own NHLBI approval first.
-    
-  - **Better-fitting route, no licensing issue**: build from the small *published summary tables*
-    in the two landmark papers instead — publicly published numbers, transcribable and citable the
-    same way `Guerry`/`Playfair1824`/`Perozzo` already are, and a better thematic fit for
-    "history of statistics" than a generic modeling dataset:
-    
-    - Kannel, Dawber, Kagan, Revotskie & Stokes (1961). "Factors of Risk in the Development of
-      Coronary Heart Disease — Six Year Follow-up Experience." *Annals of Internal Medicine*,
-      55(1), 33-50. Coined the term "risk factor" itself; small cross-tabulated risk tables
-      (BP x cholesterol x ECG combinations vs. CHD incidence).
-      
-    - Truett, Cornfield & Kannel (1967). "A multivariate analysis of the risk of coronary heart
-      disease in Framingham." *Journal of Chronic Diseases*, 20(7), 511-524. First multiple
-      logistic risk function in epidemiology (age, cholesterol, weight, ECG abnormality,
-      hemoglobin, cigarettes, systolic BP) — replaced the unwieldy multi-way cross-tab tables from
-      1961 with a single fitted model. The more "statistically historic" of the two.
-      
-  - **Not yet found**: an iconic, crisply-dated Framingham *graphic* the way Minard/Playfair/Snow
-    each have one — the well-known risk-score nomogram/point-chart is a 1990s derivative (Wilson et
-    al.), not an original-era graphic. Worth another look once the table data is in hand; may just
-    not exist for this one, and that's fine (`Federalist` and `Arbuthnot`'s motivating example
-    aren't built around a single iconic graphic either).
-    
-  - **Next concrete step**: track down the actual 1961/1967 tables (JSTOR/journal archives) and
-    transcribe them into `data-raw/`, following the `Federalist.R` pattern (cached raw source,
-    documented quirks, `@references`/`@source`/prior-work section in the roxygen doc). Not started.
+- [ ] **New dataset: Framingham Heart Study** — planning stage, no `data-raw/` yet. Full plan
+  (licensing trap around the popular "framingham.csv," DOIs/free-PDF links for the 1961/1967
+  source papers, `framingham.csv`'s actual variable list, next steps) broken out to its own file,
+  `issues/Framingham-task.md`, 2026-08-27.
 
 - [ ] **New dataset: Ebbinghaus forgetting-curve replication** —
   `data-raw/Ebbinghaus Replication Schema and Results.xlsx` (26 sheets: schema tables, Mathematica
