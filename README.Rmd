@@ -104,6 +104,13 @@ conversion of long <--> wide, separating implicit columns, like "1800-1850", abb
 `\item{\code{VarName}}`. But documentation is even easier to edit and maintain using markdown format,
 as converted again by [roxygen2md](https://cran.r-project.org/package=roxygen2md).
 
+* **Provenance**: Where possible, a dataset's documentation traces a clear path from its original
+source to the version shipped here -- not just "digitized from X," but *how*, and what's still
+unverified. `Perozzo` is a case in point: its immediate source (a GitHub redraw of the stereogram)
+was traced and confirmed byte-identical, but the actual digitization from Perozzo's 1880/1881
+plate remains unknown -- and the documentation says so, rather than implying more confidence than
+the data warrants.
+
 * **Ask AI**: A few tasks were aided by Claude Sonnet 4.5 and bros. 
   + I wanted to add `@concept` descriptors to datasets reflecting the statistical and graphical concepts that each dataset can be used to illustrate. It made a list, which I heavily edited, and also an [R script](issues/concepts/add_concept_tags.R) to add these to the documentation. 
   
