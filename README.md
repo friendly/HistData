@@ -146,14 +146,14 @@ package. This may not be evident in what you see in the resulting
   maintain using markdown format, as converted again by
   [roxygen2md](https://cran.r-project.org/package=roxygen2md).
 
-- **Provenance**: Where possible, a dataset’s documentation traces a
-  clear path from its original source to the version shipped here – not
-  just “digitized from X,” but *how*, and what’s still unverified.
-  `Perozzo` is a case in point: its immediate source (a GitHub redraw of
-  the stereogram) was traced and confirmed byte-identical, but the
-  actual digitization from Perozzo’s 1880/1881 plate remains unknown –
-  and the documentation says so, rather than implying more confidence
-  than the data warrants.
+- **Provenance**: Where possible, a dataset’s documentation should trace
+  a clear path from its original source to the version included here:
+  that’s the Historian’s Hat. Not just “digitized from X,” but *how*,
+  and what’s still unverified or questionable. `Perozzo` is a case in
+  point: its immediate source (a GitHub redraw of the stereogram) was
+  traced and confirmed byte-identical, but the actual digitization from
+  Perozzo’s 1880/1881 plate remains unknown. The current documentation
+  says so, rather than implying more confidence than the data warrants.
 
 - **Ask AI**: A few tasks were aided by Claude Sonnet 4.5 and bros.
 
