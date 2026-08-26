@@ -1,4 +1,4 @@
-## Version 1.0.1
+## Version 1.1.0
 
 * Add `Federalist` data: `Federalist_corpus`, `Federalist_markers`, and `Federalist_text`, built from the 85 Federalist Papers (Project Gutenberg #18) for Mosteller & Wallace-style authorship-attribution and text analysis
 * Add link to N. Rennie's Snow Maps
