@@ -2346,7 +2346,7 @@ NULL
 #' Son.
 #' 
 #' Small, H. (1998) Florence Nightingale's statistical diagrams
-#' <http://www.florence-nightingale-avenging-angel.co.uk/GraphicsPaper/Graphics.htm>
+#' <https://www.florence-nightingale-avenging-angel.co.uk/GraphicsPaper/Graphics.htm>
 #' 
 #' Pearson, M. and Short, I. (2008) Nightingale's Rose (flash animation).
 #' <http://understandinguncertainty.org/files/animations/Nightingale11/Nightingale1.html>
@@ -2979,7 +2979,7 @@ NULL
 #' subsequently mention.
 #' 
 #' See the original codebook at
-#' <http://www.icpsr.umich.edu/cgi-bin/file?comp=none&study=5407&ds=1&file_id=652814>
+#' <https://www.icpsr.umich.edu/cgi-bin/file?comp=none&study=5407&ds=1&file_id=652814>
 #' for details not contained here.
 #' 
 #' @name Quarrels

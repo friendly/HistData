@@ -127,7 +127,7 @@ found absent or irrelevant to the particular quarrel, and did not
 subsequently mention.
 
 See the original codebook at
-\url{http://www.icpsr.umich.edu/cgi-bin/file?comp=none&study=5407&ds=1&file_id=652814}
+\url{https://www.icpsr.umich.edu/cgi-bin/file?comp=none&study=5407&ds=1&file_id=652814}
 for details not contained here.
 }
 \examples{
