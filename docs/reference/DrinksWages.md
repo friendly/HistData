@@ -78,7 +78,6 @@ Eugenics Laboratory Memoirs, 10.
 ## Examples
 
 ``` r
-
 data(DrinksWages)
 plot(DrinksWages) 
 

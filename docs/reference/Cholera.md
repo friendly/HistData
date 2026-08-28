@@ -116,7 +116,6 @@ See the example by by John Russell for the
 ## Examples
 
 ``` r
-
 data(Cholera)
 
 # plot cholera deaths vs. elevation

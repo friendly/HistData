@@ -89,7 +89,6 @@ See the example by John Russell for the
 ## Examples
 
 ``` r
-
 data(Arbuthnot)
 # plot the sex ratios
 with(Arbuthnot, plot(Year,Ratio, type='b', ylim=c(1, 1.20), ylab="Sex Ratio (M/F)"))

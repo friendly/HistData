@@ -45,7 +45,6 @@ the scanned data.
 ## Examples
 
 ``` r
-
 data(Prostitutes)
 ## maybe str(Prostitutes) ; plot(Prostitutes) ...
 ```

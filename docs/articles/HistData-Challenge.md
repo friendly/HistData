@@ -169,7 +169,6 @@ suggesting one year’s entry was copied from the other, whether by
 Arbuthnot himself or a later transcriber.
 
 ``` r
-
 data(Arbuthnot)
 Arbuthnot$Christenings <- Arbuthnot$Males + Arbuthnot$Females
 Arbuthnot[Arbuthnot$Year %in% c(1674, 1704),
@@ -190,7 +189,6 @@ Wainer’s Figure 2 ([2002](#ref-ZabellWainer:2002)), shows it passing
 through only these two points:
 
 ``` r
-
 copy_level <- Arbuthnot$Christenings[Arbuthnot$Year == 1704]
 
 ggplot(Arbuthnot, aes(x = Year, y = Christenings)) +
@@ -348,36 +346,68 @@ directly into `HistData`:
   – also the subject of John Russell’s `sandbox/Yeast.R` recreation,
   picked up again in the case studies below.
 
+### Digital history
+
+Martin Grandjean’s “The Digital Historian’s Craft”
+([2026](#ref-Grandjean:2026:craft)) makes the case at the level of the
+whole discipline: digital methods are new tools in the historian’s kit,
+to be appreciated for what they bring to telling the story. Using them
+well remains a modern, personal craft at the crossroads of technical
+mastery and the older skills of source criticism, interpretation, and
+synthesis. Re-visioning, as practiced in this vignette, is one small
+corner of that same craft.
+
 ## A taxonomy of re-visions
 
 The gallery accompanying Friendly ([2002](#ref-Friendly:2002)),
 <https://www.datavis.ca/gallery/re-minard.php>, catalogs about 15
-different re-visions of the Minard graphic. This can be read as a
-checklist rather than a one-off catalog, they sort into six recognizable
-*kinds* of re-vision – a rubric that applies to any HistData dataset,
-not just Minard’s.
+different re-visions of the Minard graphic. I simply collected them as
+found and wrote some words about them to say why they were interesting.
+But this can be read as a checklist of features, rather than a one-off
+catalog. Together, they sort into six recognizable *kinds* of re-vision
+– a rubric that applies to any HistData dataset, not just Minard’s.
 
 ### 1. Software/language ports
 
-The same graphic, redrawn in a different tool: Mathematica, a formal
-Grammar-of-Graphics specification, ggplot2, SAS/IML, Protovis. The
-content doesn’t change; what changes is what the choice of tool reveals
-about the graphic’s underlying structure – a grammar-of-graphics port,
-for instance, forces you to name the mapping from data to visual channel
-explicitly, in a way the original hand-drawn version never had to.
+The same graphic, redrawn with different tools, each an opportunity and
+challenge to express the drawing in software. The Minard Gallery
+included examples using:
 
-A software port is only as easy as the data behind it lets it be, and
-`HistData` deliberately pre-parses some of its more complex graphics
-into separate, composable pieces rather than one monolithic table – the
-same decomposition the original artist implicitly made when laying out
-the figure. Snow’s cholera map is really five aligned layers
+- [Mathematica](https://www.wolfram.com/mathematica/),
+- a formal Grammar-of-Graphics specification (see below), `ggplot2`,
+- [SAS/IML](https://www.datavis.ca/gallery/minard/Minard-IML.gif) (Rick
+  Wicklin’s version – see his own answer to *What was he thinking?* in
+  [“What They Were
+  Thinking”](https://www.datavis.ca/gallery/minard/IML-thinking.html)),
+- [Protovis](https://mbostock.github.io/protovis/), by Mike Bostock,
+  superseded by D3.js, whose modern home is
+  [Observable](https://observablehq.com/)).
+
+The content doesn’t change; what changes is what the choice of tool
+reveals about the graphic’s underlying structure and how you think about
+doing it in that language environment. A grammar-of-graphics
+implementation, for instance, forces you to name the mapping from data
+to mapping into visual channels explicitly, in a way the original
+hand-drawn version never had to.
+
+#### Data structures
+
+A software port is only as easy as the data behind it allows, and
+`HistData` deliberately pre-parses some of its more complex datasets /
+graphics into separate, composable pieces rather than one monolithic
+table or Excel file, with with multiple sheets or tables. In a way, this
+is the same decomposition the original artist implicitly made when
+laying out the figure, but without the need to think about how a
+computer could understand it.
+
+For example, Snow’s cholera map is really five aligned layers
 (`Snow.deaths`, `Snow.pumps`, `Snow.streets`, `Snow.polygons`,
 `Snow.dates`), and Minard’s march is three (`Minard.cities`,
 `Minard.troops`, `Minard.temp`: places, the flow band itself, and the
 temperature graph beneath it). Porting the graphic to a new tool becomes
 a matter of re-mapping each existing piece onto that tool’s own
 layer/channel model, rather than re-deriving the decomposition from
-scratch – see the `Minard` case study below, built directly from these
+scratch. See the `Minard` case study below, built directly from these
 three data frames.
 
 ### 2. Design variations
@@ -390,11 +420,11 @@ communication goals do the most work.
 
 ### 3. Interactive/web-based
 
-Tooltips, drill-down, linked views, map overlays – re-visions that trade
-the fixed, printed page for something a reader can query. The Minard
-gallery includes an image map with linked text and a drill-down SAS
-GMAP; this is also the natural home for the `plotly` version of
-`Perozzo` below.
+Tooltips, drill-down, linked views, map overlays: these are re-visions
+that trade the fixed, printed page for something a reader can query,
+interact with and explore. The Minard gallery includes an image map with
+linked text and a drill-down SAS GMAP; this is also illustrated for the
+`plotly` version of the `Perozzo` data described below.
 
 ### 4. Temporal/animated
 
@@ -412,10 +442,10 @@ pending the general image-hosting/licensing decision noted above.)*
 
 ### 5. Alternative representations
 
-A genuinely different chart type for the same underlying data – not a
-redraw, a rethink. The `Snow-density.R` case study below (density
-contours instead of point symbols for cholera deaths) is this category
-in miniature.
+A genuinely different chart type for the same underlying data: not a
+redraw, a rethink– “How could I do this better?”. The `Snow-density.R`
+case study below (density contours instead of point symbols for cholera
+deaths) is this category in a small example.
 
 ### 6. Data packaged for reuse
 
@@ -425,28 +455,24 @@ package itself does for all 34 of its datasets – arguably the least
 glamorous but most consequential category, since every other kind of
 re-vision in this list depends on having data to play with first.
 
-*(TODO: pull a representative thumbnail image from the datavis.ca
-gallery for each category above once hosting/licensing for third-party
-images is sorted out – see `issues/vignettes/histdata-challenge.md`.)*
-
 ## Challenges already named in HistData
 
 Several datasets in this package already carry an explicit “go recreate
 or improve this” note in their documentation:
 
-| Dataset | Nature of the challenge |
-|----|----|
-| [`Minard`](https://friendly.github.io/HistData/reference/Minard.md) | “Minard’s Challenge”: reproduce the March on Moscow graphic with modern tools ([Friendly 2002](#ref-Friendly:2002)). |
-| [`Guerry`](https://friendly.github.io/HistData/reference/Guerry.md) | Friendly ([2007](#ref-Friendly:2007:guerry)): “Challenges for Multivariable Spatial Analysis.” |
-| [`Playfair1824`](https://friendly.github.io/HistData/reference/Playfair1824.md) | Re-create Playfair’s last chart, or do better, using modern graphics. |
-| [`Perozzo`](https://friendly.github.io/HistData/reference/Perozzo.md) | Get closer to Perozzo’s hand-drawn stereogram, or do better in some way – the case study below. |
-| [`Pollen`](https://friendly.github.io/HistData/reference/Pollen.md) | The original 1986 ASA JSM “Data Challenge” – a synthetic 5D dataset with several deliberately hidden features. |
-| [`OldMaps`](https://friendly.github.io/HistData/reference/OldMaps.md) | Open call to relate map accuracy to other characteristics of each map. |
+| Dataset                                                                         | Nature of the challenge                                                                                              |
+|---------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| [`Minard`](https://friendly.github.io/HistData/reference/Minard.md)             | “Minard’s Challenge”: reproduce the March on Moscow graphic with modern tools ([Friendly 2002](#ref-Friendly:2002)). |
+| [`Guerry`](https://friendly.github.io/HistData/reference/Guerry.md)             | Friendly ([2007](#ref-Friendly:2007:guerry)): “Challenges for Multivariable Spatial Analysis.”                       |
+| [`Playfair1824`](https://friendly.github.io/HistData/reference/Playfair1824.md) | Re-create Playfair’s last chart, or do better, using modern graphics.                                                |
+| [`Perozzo`](https://friendly.github.io/HistData/reference/Perozzo.md)           | Get closer to Perozzo’s hand-drawn stereogram, or do better in some way – the case study below.                      |
+| [`Pollen`](https://friendly.github.io/HistData/reference/Pollen.md)             | The original 1986 ASA JSM “Data Challenge” – a synthetic 5D dataset with several deliberately hidden features.       |
+| [`OldMaps`](https://friendly.github.io/HistData/reference/OldMaps.md)           | Open call to relate map accuracy to other characteristics of each map.                                               |
 
-This first draft works two of these (`Minard`, `Perozzo`) in depth, plus
+This vignette works two of these (`Minard`, `Perozzo`) in depth, plus
 one further example from outside the package’s own docs (`Snow`, via
 John Russell’s 30DayChartChallenge). The rest stay listed here, cited,
-and open – see “Open invitations.”
+and open to think about; see “Open invitations.”
 
 ## Case study: `Minard`
 
@@ -469,7 +495,6 @@ mostly a matter of mapping `survivors` to `linewidth` and `direction` to
 `colour`:
 
 ``` r
-
 data(Minard.cities); data(Minard.troops)
 
 ggplot(Minard.troops, aes(x = long, y = lat)) +
@@ -487,9 +512,68 @@ ggplot(Minard.troops, aes(x = long, y = lat)) +
 ![](HistData-Challenge_files/figure-html/minard-ggplot-1.png)
 
 Grey is the advance on Moscow, red the retreat; band width still carries
-troop strength, exactly as in the 1869 original, with none of
-`HistData`’s decomposition into separate data frames lost in
-translation.
+troop strength, exactly as in the 1869 original. Not shown here is the
+separate graph of the decline in temperature Napoleon’s troops suffered
+on the retreat, contained in
+[`HistData::Minard.temp`](https://friendly.github.io/HistData/reference/Minard.md).
+The help file
+[`?Minard`](https://friendly.github.io/HistData/reference/Minard.md)
+shows `ggplot2` steps for both together, and for combining these into a
+single graphic.
+
+### Wilkinson’s GoG specification
+
+Minard’s graphic has a more important claim to fame beyond the many
+re-visions described here: Leland Wilkinson used it as a capstone
+illustration of *The Grammar of Graphics*
+([1999](#ref-Wilkinson:1999:GoG)): Proof that a formal grammar could
+specify a graphic this intricate (a tapering, bidirectional flow band
+keyed to two variables at once, sharing its horizontal axis with an
+aligned temperature series) compactly enough to state once, and
+precisely enough for a computer to draw it unassisted.
+
+He used this version as cover image for the book. He was saying, “HELLO
+WORLD: I can do this!!”. See ([Friendly
+2022](#ref-Friendly:2022:wilkinson)) for an account of my conversation
+(*Colorless Green Graphs Sleep Furiously*) with Lee about the thinking
+that went into his work on the grammar of graphics.
+
+![Wilkinson’s rendering of Minard’s map (Wilkinson, 1999, Fig.
+15.1)](figures/gogfig15_1.jpg)
+
+Wilkinson’s rendering of Minard’s map (Wilkinson, 1999, Fig. 15.1)
+
+His code for this comprised `dplyr`-like `TRANS`formation steps,
+followed by two `FRAME`s for the flow portion and the subscripted line
+graph of temperature on the retreat.
+
+    TRANS: date = miss(date, lont, "linear")
+    TRANS: ldate = lag(date, -1)
+    TRANS: days = diff(date, ldate)
+
+    FRAME: lonc*latc
+    GRAPH: point(label(city), size(0))
+    GRAPH: path(position(lonp*latp), size(survivors), color(direction),
+                split(group))
+    GUIDE: legend(color(direction))
+
+    FRAME: lonc*temp
+    COORD: stretch(dim1, dim2, 1, .2)
+    COORD: translate(dim1, dim2, 0, -.5)
+    GRAPH: path(position(lont*temp), label(date), texture.granularity(days),
+                color.brightness(.5))
+    GUIDE: axis1(label("Longitude"))
+    GUIDE: axis2(label("Temperature"))
+
+Set next to the `ggplot2` call above, the correspondence is nearly
+line-for-line:
+`GRAPH: path(position(lonp*latp), size(survivors), color(direction), split(group))`
+*is*
+`geom_path(aes(x = long, y = lat, linewidth = survivors, colour = direction, group = group))`
+– the same data-to-channel mapping (position, size, color, grouping),
+just spelled in a different grammar’s syntax. `ggplot2`, as a direct
+implementation of Wilkinson’s grammar, doesn’t just resemble this
+specification; it *is* a runnable version of it, decades on.
 
 ### A few more, from the gallery
 
@@ -538,7 +622,6 @@ Perozzo’s 1881 stereogram
 The package supplies a simple base-R version already:
 
 ``` r
-
 data(Perozzo)
 Pmat <- xtabs(Survivors ~ Year + Age, data = Perozzo)
 years <- as.numeric(rownames(Pmat))
@@ -552,7 +635,6 @@ surface. Some fiddling was necessary to get the orientation
 approximately right.
 
 ``` r
-
 ages_rev <- -rev(ages)
 Pmat_rev <- Pmat[, rev(seq_along(ages))]
 persp(years, ages_rev, Pmat_rev,
@@ -575,7 +657,6 @@ R – it returns a 4x4 projection matrix from each call, and
 3D-located lines onto the same plot after the fact.
 
 ``` r
-
 colnames(Pmat_rev) <- as.character(ages_rev)  # match column names to ages_rev's sign flip
 
 # re-angled to bring the Age = 0 "wall" of large young-survivor counts forward
@@ -638,7 +719,6 @@ the stereogram’s dramatic silhouette for exact, directly-comparable
 values.
 
 ``` r
-
 ggplot(Perozzo, aes(x = Year, y = Age, z = Survivors)) +
   geom_raster(aes(fill = Survivors)) +
   geom_contour(color = "white", alpha = 0.6) +
@@ -660,7 +740,6 @@ projection. Unlike [`persp()`](https://rdrr.io/r/graphics/persp.html),
 this gets full access to ggplot’s color scales, legends, and layering.
 
 ``` r
-
 shear <- 0.6   # horizontal points per year of age; tune to taste
 lift  <- 400   # vertical Survivors-units per year of age
 
@@ -693,7 +772,6 @@ modern analogue of a physical stereogram: something a reader can
 actually rotate, rather than a single fixed viewing angle.
 
 ``` r
-
 library(plotly)
 plot_ly(x = ~years, y = ~ages, z = ~Pmat, type = "surface") |>
   layout(scene = list(
@@ -723,7 +801,6 @@ contours instead of point symbols for cholera deaths, layered over
 Snow’s original street map.
 
 ``` r
-
 data(Snow.deaths); data(Snow.pumps); data(Snow.streets)
 
 ggplot(Snow.deaths, aes(x = x, y = y)) +
@@ -806,13 +883,22 @@ Friendly, Michael. 2002. “Visions and Re-Visions of Charles Joseph
 Minard.” *Journal of Educational and Behavioral Statistics* 27 (1):
 31–52. <https://doi.org/10.3102/10769986027001031>.
 
-Friendly, Michael. 2007. “A.-M. Guerry’s Moral Statistics of France:
-Challenges for Multivariable Spatial Analysis.” *Statistical Science* 22
-(3): 368–99. <https://doi.org/10.1214/07-STS241>.
+———. 2007. “A.-M. Guerry’s Moral Statistics of France: Challenges for
+Multivariable Spatial Analysis.” *Statistical Science* 22 (3): 368–99.
+<https://doi.org/10.1214/07-STS241>.
+
+———. 2022. “Colorless Green Graphs Sleep Furiously: A Conversation with
+Leland Wilkinson.” Online, March 15, 2022.
+<https://nightingaledvs.com/colorless-green-graphs-sleep-furiously-a-conversation-with-leland-wilkinson/>.
 
 Friendly, Michael, and Howard Wainer. 2021. *A History of Data
-Visualization and Graphic Communication*. Harvard University Press.
-<https://doi.org/10.4159/9780674259034>.
+Visualization and Graphic Communication*. Cambridge, MA: Harvard
+University Press. <https://doi.org/10.4159/9780674259034>.
+
+Grandjean, Martin. 2026. “The Digital Historian’s Craft.” In *Handbook
+of Digital and Computational Research Methods*, edited by Anders Koed
+Madsen and Anders Kristian Munk, 32–47. Edward Elgar Publishing.
+<https://doi.org/10.4337/9781802208993.00009>.
 
 Hanley, James A., Marielle Julien, and Erica E. M. Moodie. 2008.
 “Student’s z, t, and s: What If Gosset Had R?” *The American
@@ -825,27 +911,29 @@ Map of Magnetic Declination (1701) Constructed?” *Imago Mundi* 69 (1):
 Playfair, William. 1786. *Commercial and Political Atlas: Representing,
 by Copper-Plate Charts, the Progress of the Commerce, Revenues,
 Expenditure, and Debts of England, During the Whole of the Eighteenth
-Century*. Debrett; Robinson;; Sewell.
+Century*. London: Debrett; Robinson;; Sewell.
 
 Stigler, Stephen M. 1986. *The History of Statistics: The Measurement of
-Uncertainty Before 1900*. Harvard University Press.
+Uncertainty Before 1900*. Cambridge, MA: Harvard University Press.
 
-Stigler, Stephen M. 1989. “Francis Galton’s Account of the Invention of
-Correlation.” *Statistical Science* 4 (2): 73–79.
+———. 1989. “Francis Galton’s Account of the Invention of Correlation.”
+*Statistical Science* 4 (2): 73–79.
 <https://doi.org/10.1214/ss/1177012580>.
 
-Stigler, Stephen M. 1997. “Regression Towards the Mean, Historically
-Considered.” *Statistical Methods in Medical Research* 6 (2): 103–14.
+———. 1997. “Regression Towards the Mean, Historically Considered.”
+*Statistical Methods in Medical Research* 6 (2): 103–14.
 
-Stigler, Stephen M. 2019. “Data Have a Limited Shelf Life.” *Harvard
-Data Science Review* 1 (2). <https://doi.org/10.1162/99608f92.f9a1e510>.
+———. 2019. “Data Have a Limited Shelf Life.” *Harvard Data Science
+Review* 1 (2). <https://doi.org/10.1162/99608f92.f9a1e510>.
 
 Wainer, Howard, and Ian Spence. 2005. “Graphical Presentation of
 Longitudinal Data.” In *Encyclopedia of Statistics in Behavioral
 Science*. John Wiley & Sons.
 
-Zabell, S. 1976. *Arbuthnot, Heberden and the Bills of Mortality*.
-Technical Report No. 40. Department of Statistics: The University of
+Wilkinson, Leland. 1999. *The Grammar of Graphics*. New York: Springer.
+
+Zabell, S. 1976. “Arbuthnot, Heberden and the Bills of Mortality.”
+Technical Report 40. Department of Statistics: The University of
 Chicago.
 
 Zabell, Sandy, and Howard Wainer. 2002. “Visual Revelations: A Small

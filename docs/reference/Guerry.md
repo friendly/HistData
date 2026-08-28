@@ -197,7 +197,6 @@ creating maps of his data and multivariate spatial analysis.
 ## Examples
 
 ``` r
-
 data(Guerry)
 ## maybe str(Guerry) ; plot(Guerry) ...
 ```

@@ -54,7 +54,6 @@ Review*, 63, 81-97, <http://www.musanim.com/miller1956/>
 ## Examples
 
 ``` r
-
 data(Jevons)
 # show as tables
 xtabs(frequency ~ estimated+actual, data=Jevons)

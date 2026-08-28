@@ -82,7 +82,6 @@ Boca Raton: CRC Press, <https://www.unbc.ca/keen/textbook>.
 ## Examples
 
 ``` r
-
 data(GaltonFamilies)
 str(GaltonFamilies)
 #> 'data.frame':    934 obs. of  8 variables:

@@ -1,5 +1,7 @@
 ## Version 1.1.0
 
+This is a modest release of the package, adding three new data sets and a vignette
+
 * Add `Federalist` data: `Federalist_corpus`, `Federalist_markers`, and `Federalist_text`, built from the 85 Federalist Papers (Project Gutenberg #18) for Mosteller & Wallace-style authorship-attribution and text analysis
 * Add link to N. Rennie's Snow Maps
 * Package cleanup: get rid of `man-old`, reorganize `sandbox/`

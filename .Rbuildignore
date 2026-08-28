@@ -18,3 +18,5 @@ sandbox/
 ^issues$
 ^\.positai$
 ^\.claude$
+^\.github$
+^dev$
