@@ -40,7 +40,8 @@ to do better!
 Some of these been featured in social media calls for participation,
 such as the [30 Day Chart
 Challenge](https://github.com/30DayChartChallenge/Edition2025). A new
-vignette describes this more generally as a [HistData Challenge]().
+vignette describes this more generally as a [HistData
+Challenge](https://friendly.github.io/HistData/articles/HistData-Challenge.html).
 
 This is part of a program of research called *statistical
 historiography* (Friendly, 2007; Friendly & Denis, 2001; Friendly et-al,
