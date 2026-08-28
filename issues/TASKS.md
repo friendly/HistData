@@ -1,5 +1,57 @@
 # HistData — development tasks
 
+## Release checklist: HistData 1.1.0 CRAN submission (2026-08-28)
+
+Session progress toward the next CRAN release. `DESCRIPTION` is already at 1.1.0 with a `NEWS.md`
+entry (edited directly by MF at the end of this session, not by Claude). Commits this session:
+`6afafaa` (vignette content + CRAN cleanup + pkgdown rebuild), `ea010a8` and `4492ad5` (URL fixes
+caught by `urlchecker::url_check()`), all pushed to `origin/master`.
+
+**Done:**
+
+- `devtools::document()` — no changes needed, docs already current.
+- `devtools::check()` — clean: 0 errors, 0 warnings, 0 notes, after:
+  - Adding `.github/` and `dev/` to `.Rbuildignore` (were generating NOTEs).
+  - Resaving `Federalist_text.RData`, `Pollen.RData`, `Quarrels.RData` with better compression
+    (`tools::resaveRdaFiles()`) — was a WARNING. Note: this re-serializes *every* `.RData` file if
+    run over the whole `data/` dir, mostly as byte-level noise (same size, different bytes); only
+    keep the diff for files that actually shrank, `git checkout --` the rest.
+- `pkgdown::build_site()` rebuilt and pushed (as of commit `6afafaa`; **not** re-run after the two
+  follow-up URL-fix commits below, so the live site's Nightingale/Quarrels reference pages still
+  show the old http:// links — cosmetic only, rebuild before final submission).
+- `urlchecker::url_check()` run — flagged and fixed:
+  - Empty link `[HistData Challenge]()` in `README.Rmd` → now points at the vignette's pkgdown
+    article page.
+  - `man/Nightingale.Rd` and one URL in `man/Quarrels.Rd`: http→https (page unchanged, safe swap).
+  - **Left open**: a second `Quarrels.Rd` URL (`icpsrweb/ICPSR/studies/05407`) redirects to
+    ICPSR's generic homepage, not an https version of the same study page — real link rot, not a
+    protocol bump. Needs someone to find the study's current ICPSR URL (search their site for
+    study 5407) rather than a mechanical fix.
+  - **Left open**: `man/Cholera.Rd`'s `archive.org` PDF link timed out during the check (5s
+    timeout) — likely transient, but worth re-running `url_check()` to confirm it's not actually
+    dead.
+- `spelling::spell_check_package()` run — no new problems beyond expected proper
+  nouns/foreign-language terms/dataset names. One unrelated pre-existing typo noticed but *not*
+  fixed (out of scope for today): "devloping" → "developing",
+  `vignettes/HistData-Challenge.Rmd:112` (Hotelling Society paragraph).
+
+**Still open before actually submitting to CRAN:**
+
+- [ ] Re-run `pkgdown::build_site()` to pick up the two post-`6afafaa` URL-fix commits.
+- [ ] `cran-comments.md` is stale — currently mixes a Nov-2025 win-builder run (R-devel,
+  pre-1.1.0) with leftover 1.0.0/0.9.4 release-note boilerplate that doesn't belong there. Needs a
+  clean rewrite for 1.1.0: fresh `devtools::check_win_devel()` and/or R-hub run, current R CMD
+  check summary, current `revdepcheck::revdep_check()` results.
+- [ ] `revdepcheck::revdep_check()` against reverse dependencies (`cholera`, `statsr`, `UsingR`)
+  for 1.1.0 — last run was for a prior version per `cran-comments.md`.
+- [ ] `DESCRIPTION`'s `Date:` field (currently 2026-08-26) — bump to the actual submission date
+  right before submitting.
+- [ ] Resolve the two left-open `urlchecker` items above.
+- `vignettes/figures/Minard-GoG-specs.jpeg` is intentionally kept on disk, untracked (MF: "keep
+  the Minard-GoG-specs image for now") — unused in the vignette (the code spec was reproduced as a
+  text chunk instead), not committed. Leave as-is unless MF says otherwise.
+
+
 Broken out from the cross-package working list in `C:\Users\friendly\Dropbox\R\TASKS-all.md`
 (2026-08-04). Update here as items are finished; sync back to the main list only if it's useful
 to see HistData status at a glance across packages.
