@@ -87,12 +87,18 @@
 #' Ebbinghaus$savings <- with(Ebbinghaus, (learning - relearning) / learning)
 #'
 #' if (require("ggplot2")) {
+#'   # Ebbinghaus' own curve drawn 2.5x as thick as the replications' (default
+#'   # linewidth 0.5 -> 1.25), to set his original data apart from the others
 #'   ggplot(Ebbinghaus, aes(x = time, y = savings, colour = subject)) +
-#'     geom_line() +
+#'     geom_line(data = subset(Ebbinghaus, subject != "Ebbinghaus"), linewidth = 0.5) +
+#'     geom_line(data = subset(Ebbinghaus, subject == "Ebbinghaus"), linewidth = 1.25) +
 #'     geom_point() +
 #'     scale_x_log10() +
 #'     labs(x = "Retention interval (min, log scale)", y = "Savings",
-#'          title = "Ebbinghaus' Forgetting Curve and Three Replications")
+#'          title = "Ebbinghaus' Forgetting Curve and Three Replications") +
+#'     theme(legend.position = "inside",
+#'           legend.position.inside = c(0.05, 0.05),
+#'           legend.justification = c(0, 0))
 #' }
 #'
 #' @keywords datasets

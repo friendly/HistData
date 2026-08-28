@@ -57,8 +57,10 @@ Andrews' `old-charts` GitHub repo (`infowetrust/old-charts`, component
 redraw of Perozzo's stereogram, built from this same grid; it documents
 no further provenance for the numbers themselves, so how they were
 originally read off Perozzo's 1880/1881 plate is still unknown. See
-`issues/vignettes/verifying-perozzo.md` for the full trace and for a
-methodology to verify the grid against the original image directly.
+[issues/vignettes/verifying-perozzo.md](https://github.com/friendly/HistData/blob/master/issues/vignettes/verifying-perozzo.md)
+(on GitHub – `issues/` is dev-only and not included in the installed
+package) for the full trace and for a methodology to verify the grid
+against the original image directly.
 
 Perozzo's 3D graphic was remarkable in its' time and still is today, for
 attention to detail in his hand-drawn graphic. The simple image from

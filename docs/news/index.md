@@ -1,6 +1,6 @@
 # Changelog
 
-## Version 1.0.1
+## Version 1.1.0
 
 - Add `Federalist` data: `Federalist_corpus`, `Federalist_markers`, and
   `Federalist_text`, built from the 85 Federalist Papers (Project
@@ -15,6 +15,9 @@
   as a form of statistical historiography, with a taxonomy of ways to
   re-create or extend a graphic and worked case studies for `Arbuthnot`,
   `Minard`, `Perozzo`, and `Snow`
+- Add `Ebbinghaus` data: learning/relearning repetition counts for
+  Ebbinghaus’ (1885) forgetting-curve experiment and two replications
+  (Heller, Mack & Seitz 1991; Murre & Dros 2015) \[Thx: Jaap Murre\]
 
 ## Version 1.0.0
 

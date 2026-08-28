@@ -37,6 +37,9 @@
 - [`DrinksWages`](https://friendly.github.io/HistData/reference/DrinksWages.md)
   : Elderton and Pearson's (1910) data on drinking and wages
 
+- [`Ebbinghaus`](https://friendly.github.io/HistData/reference/Ebbinghaus.md)
+  : Ebbinghaus' Forgetting Curve and Three Replications
+
 - [`EdgeworthDeaths`](https://friendly.github.io/HistData/reference/EdgeworthDeaths.md)
   : Edgeworth's Data on Death Rates in British Counties
 

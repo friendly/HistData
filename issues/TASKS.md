@@ -153,14 +153,16 @@ work rather than clean-up:
     transcribe them into `data-raw/`, following the `Federalist.R` pattern (cached raw source,
     documented quirks, `@references`/`@source`/prior-work section in the roxygen doc). Not started.
 
-- [ ] **New dataset: Ebbinghaus forgetting-curve replication** —
-  `data-raw/Ebbinghaus Replication Schema and Results.xlsx` (26 sheets: schema tables, Mathematica
-  curve fits, several sheets explicitly marked "not used"/"old"). Messier and further from
-  dataset-ready than the Perozzo files — would need real triage of which sheets are the actual
-  data vs. superseded drafts. Thematically connects to `WordPools` (memory-research datasets).
-  Moved from `sandbox/` to `data-raw/` 2026-08-04 (commit `db5b137`), alongside the other
-  not-yet-imported raw data.
-  File: `data-raw/Ebbinghaus Replication Schema and Results.xlsx`
+- [X] **DONE 2026-08-27: New dataset: Ebbinghaus forgetting-curve replication** —
+  Triaged `data-raw/Ebbinghaus Replication Schema and Results.xlsx` (26 sheets: schema tables,
+  Mathematica curve fits, several sheets explicitly marked "not used"/"old") down to the
+  "Ebbinghaus, Mack, Seitz" sheet's learning/relearning repetition counts, plus Dros' own
+  numbers from the published paper's Table 1. Added as `Ebbinghaus` (commits `5bdb624`,
+  `f2f3a6a`): `R/Ebbinghaus.R`, `data/Ebbinghaus.RData`, `man/Ebbinghaus.Rd`, source materials
+  and import script kept in `data-raw/Ebbinghaus/`. Citation confirmed against the published
+  PLOS ONE version (Murre & Dros, 2015); Jaap Murre added as a `ctb` in `DESCRIPTION`.
+  Thematically connects to `WordPools` (memory-research datasets).
+  File: `data-raw/Ebbinghaus/Ebbinghaus Replication Schema and Results.xlsx`
 
 ## Reference material (not TODO, not clean-up)
 

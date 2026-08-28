@@ -35,6 +35,8 @@
 
 - **John Russell**. Contributor.
 
+- **Jaap Murre**. Contributor.
+
 ## Citation
 
 Source:
@@ -42,12 +44,12 @@ Source:
 
 Friendly M, Dray S, Li P, Bellhouse D (2026). *HistData: Data Sets from
 the History of Statistics and Data Visualization*. R package version
-1.0.1, <https://friendly.github.io/HistData/>.
+1.1.0, <https://friendly.github.io/HistData/>.
 
     @Manual{,
       title = {HistData: Data Sets from the History of Statistics and Data Visualization},
       author = {Michael Friendly and Stephane Dray and Peter Li and David Bellhouse},
       year = {2026},
-      note = {R package version 1.0.1},
+      note = {R package version 1.1.0},
       url = {https://friendly.github.io/HistData/},
     }
