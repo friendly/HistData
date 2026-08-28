@@ -83,6 +83,7 @@ procedures (permutation tests)
 ## Examples
 
 ``` r
+
 data(ZeaMays)
 
 ##################################

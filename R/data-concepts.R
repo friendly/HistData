@@ -511,7 +511,7 @@ NULL
 #' @references Registrar-General (1852). *Report on the Mortality of
 #' Cholera in England 1848-49*, W. Clowes and Sons, for Her Majesty's
 #' Stationary Office. Written by William Farr.
-#' <https://ia600208.us.archive.org/11/items/b24751297/b24751297.pdf> The
+#' <https://archive.org/download/b24751297/b24751297.pdf> The
 #' relevant tables are at pages clii -- clvii.
 #' 
 #' See the example by by John Russell for the [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge01.R)
@@ -2978,9 +2978,8 @@ NULL
 #' found absent or irrelevant to the particular quarrel, and did not
 #' subsequently mention.
 #' 
-#' See the original codebook at
-#' <https://www.icpsr.umich.edu/cgi-bin/file?comp=none&study=5407&ds=1&file_id=652814>
-#' for details not contained here.
+#' See the original codebook, linked from the study page at
+#' <https://doi.org/10.3886/ICPSR05407.v1>, for details not contained here.
 #' 
 #' @name Quarrels
 #' @docType data
@@ -3083,7 +3082,7 @@ NULL
 #' Rummel, Rudolph J. (1967), "Dimensions of Dyadic War, 1820-1952."
 #' *Journal of Conflict Resolution*. **11**, (2), 176 - 183.
 #' 
-#' @source <http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/05407>
+#' @source <https://doi.org/10.3886/ICPSR05407.v1>
 #' 
 #' @keywords datasets
 #' @examples

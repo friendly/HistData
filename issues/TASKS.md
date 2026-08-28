@@ -35,9 +35,35 @@ caught by `urlchecker::url_check()`), all pushed to `origin/master`.
   fixed (out of scope for today): "devloping" → "developing",
   `vignettes/HistData-Challenge.Rmd:112` (Hotelling Society paragraph).
 
+**2026-08-28 follow-up (Claude), triggered by a win-builder run of the pre-`4492ad5` tarball:**
+MF ran `devtools::check_win_devel()` and got back 4 NOTEs. Checked each against current source:
+`Nightingale.Rd` and the Quarrels `file_id` URL were already https in the repo (`4492ad5`) — the
+win-builder result was just stale, built before that commit. The other two were the genuinely
+left-open items above, now resolved:
+- `man/Cholera.Rd`'s archive.org PDF: the item-specific `ia600208.us.archive.org` node URL is
+  confirmed still down (21s timeout, not transient — same failure via direct `curl`). Swapped for
+  archive.org's stable load-balanced alias, `https://archive.org/download/{item}/{file}.pdf`
+  (fast, 200, doesn't pin to one storage node).
+- `man/Quarrels.Rd`'s `icpsrweb/ICPSR/studies/05407` URL: ICPSR's site blocks bot/curl requests
+  outright (403) so the new URL couldn't be content-verified directly, but its DOI
+  (`10.3886/ICPSR05407.v1`, found via a working `doi.org` redirect) resolves to
+  `.../studies/5407/versions/V1` — same numeric study ID as the broken URL, confirming it's the
+  same study. Used the DOI form (`https://doi.org/10.3886/ICPSR05407.v1`) instead of a path, since
+  DOIs survive site reorganizations that plain paths don't (this is the *second* ICPSR URL scheme
+  change for this study).
+- Re-running `url_check()` after the above two fixes surfaced two more real issues, now also
+  fixed: `man/Quarrels.Rd`'s other ICPSR URL (`cgi-bin/file?...file_id=652814`, the codebook link)
+  came back `300 Multiple Choices` — same bot-protection flakiness as the study-page URL — swapped
+  to point at the same DOI-resolved study page instead; `vignettes/histdata.bib`'s `tandfonline.com`
+  URL was still http, fixed to https.
+- `urlchecker::url_check()` now reports **all URLs correct** — the `datavis.ca` timeouts seen in
+  one run didn't recur on a second run (confirmed manually via `curl` too: 200 OK, ~5s), so those
+  were transient network latency against `url_check()`'s aggressive default timeout, not real
+  breakage — no fix needed there.
+- `pkgdown::build_site()` re-run to pick up all of the above.
+
 **Still open before actually submitting to CRAN:**
 
-- [ ] Re-run `pkgdown::build_site()` to pick up the two post-`6afafaa` URL-fix commits.
 - [ ] `cran-comments.md` is stale — currently mixes a Nov-2025 win-builder run (R-devel,
   pre-1.1.0) with leftover 1.0.0/0.9.4 release-note boilerplate that doesn't belong there. Needs a
   clean rewrite for 1.1.0: fresh `devtools::check_win_devel()` and/or R-hub run, current R CMD
@@ -46,7 +72,7 @@ caught by `urlchecker::url_check()`), all pushed to `origin/master`.
   for 1.1.0 — last run was for a prior version per `cran-comments.md`.
 - [ ] `DESCRIPTION`'s `Date:` field (currently 2026-08-26) — bump to the actual submission date
   right before submitting.
-- [ ] Resolve the two left-open `urlchecker` items above.
+- [X] Resolve the two left-open `urlchecker` items above — done 2026-08-28, see follow-up note.
 - `vignettes/figures/Minard-GoG-specs.jpeg` is intentionally kept on disk, untracked (MF: "keep
   the Minard-GoG-specs image for now") — unused in the vignette (the code spec was reproduced as a
   text chunk instead), not committed. Leave as-is unless MF says otherwise.

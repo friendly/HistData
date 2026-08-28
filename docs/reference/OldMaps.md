@@ -71,6 +71,7 @@ See the example by John Russell for the
 ## Examples
 
 ``` r
+
 data(OldMaps)
 ## maybe str(OldMaps) ; plot(OldMaps) ...
 

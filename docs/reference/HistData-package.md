@@ -285,5 +285,6 @@ Maintainer: Michael Friendly
 ## Examples
 
 ``` r
+
 # see examples for the separate data sets, e.g., with ?Dataset or example(Dataset)
 ```

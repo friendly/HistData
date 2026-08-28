@@ -70,6 +70,7 @@ The text of Halley's paper was found at
 ## Examples
 
 ``` r
+
 data(HalleyLifeTable)
 # what was the estimated population of Breslau?
 sum(HalleyLifeTable$number)

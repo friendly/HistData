@@ -169,6 +169,7 @@ suggesting one year’s entry was copied from the other, whether by
 Arbuthnot himself or a later transcriber.
 
 ``` r
+
 data(Arbuthnot)
 Arbuthnot$Christenings <- Arbuthnot$Males + Arbuthnot$Females
 Arbuthnot[Arbuthnot$Year %in% c(1674, 1704),
@@ -189,6 +190,7 @@ Wainer’s Figure 2 ([2002](#ref-ZabellWainer:2002)), shows it passing
 through only these two points:
 
 ``` r
+
 copy_level <- Arbuthnot$Christenings[Arbuthnot$Year == 1704]
 
 ggplot(Arbuthnot, aes(x = Year, y = Christenings)) +
@@ -460,14 +462,14 @@ re-vision in this list depends on having data to play with first.
 Several datasets in this package already carry an explicit “go recreate
 or improve this” note in their documentation:
 
-| Dataset                                                                         | Nature of the challenge                                                                                              |
-|---------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| [`Minard`](https://friendly.github.io/HistData/reference/Minard.md)             | “Minard’s Challenge”: reproduce the March on Moscow graphic with modern tools ([Friendly 2002](#ref-Friendly:2002)). |
-| [`Guerry`](https://friendly.github.io/HistData/reference/Guerry.md)             | Friendly ([2007](#ref-Friendly:2007:guerry)): “Challenges for Multivariable Spatial Analysis.”                       |
-| [`Playfair1824`](https://friendly.github.io/HistData/reference/Playfair1824.md) | Re-create Playfair’s last chart, or do better, using modern graphics.                                                |
-| [`Perozzo`](https://friendly.github.io/HistData/reference/Perozzo.md)           | Get closer to Perozzo’s hand-drawn stereogram, or do better in some way – the case study below.                      |
-| [`Pollen`](https://friendly.github.io/HistData/reference/Pollen.md)             | The original 1986 ASA JSM “Data Challenge” – a synthetic 5D dataset with several deliberately hidden features.       |
-| [`OldMaps`](https://friendly.github.io/HistData/reference/OldMaps.md)           | Open call to relate map accuracy to other characteristics of each map.                                               |
+| Dataset | Nature of the challenge |
+|----|----|
+| [`Minard`](https://friendly.github.io/HistData/reference/Minard.md) | “Minard’s Challenge”: reproduce the March on Moscow graphic with modern tools ([Friendly 2002](#ref-Friendly:2002)). |
+| [`Guerry`](https://friendly.github.io/HistData/reference/Guerry.md) | Friendly ([2007](#ref-Friendly:2007:guerry)): “Challenges for Multivariable Spatial Analysis.” |
+| [`Playfair1824`](https://friendly.github.io/HistData/reference/Playfair1824.md) | Re-create Playfair’s last chart, or do better, using modern graphics. |
+| [`Perozzo`](https://friendly.github.io/HistData/reference/Perozzo.md) | Get closer to Perozzo’s hand-drawn stereogram, or do better in some way – the case study below. |
+| [`Pollen`](https://friendly.github.io/HistData/reference/Pollen.md) | The original 1986 ASA JSM “Data Challenge” – a synthetic 5D dataset with several deliberately hidden features. |
+| [`OldMaps`](https://friendly.github.io/HistData/reference/OldMaps.md) | Open call to relate map accuracy to other characteristics of each map. |
 
 This vignette works two of these (`Minard`, `Perozzo`) in depth, plus
 one further example from outside the package’s own docs (`Snow`, via
@@ -495,6 +497,7 @@ mostly a matter of mapping `survivors` to `linewidth` and `direction` to
 `colour`:
 
 ``` r
+
 data(Minard.cities); data(Minard.troops)
 
 ggplot(Minard.troops, aes(x = long, y = lat)) +
@@ -622,6 +625,7 @@ Perozzo’s 1881 stereogram
 The package supplies a simple base-R version already:
 
 ``` r
+
 data(Perozzo)
 Pmat <- xtabs(Survivors ~ Year + Age, data = Perozzo)
 years <- as.numeric(rownames(Pmat))
@@ -635,6 +639,7 @@ surface. Some fiddling was necessary to get the orientation
 approximately right.
 
 ``` r
+
 ages_rev <- -rev(ages)
 Pmat_rev <- Pmat[, rev(seq_along(ages))]
 persp(years, ages_rev, Pmat_rev,
@@ -657,6 +662,7 @@ R – it returns a 4x4 projection matrix from each call, and
 3D-located lines onto the same plot after the fact.
 
 ``` r
+
 colnames(Pmat_rev) <- as.character(ages_rev)  # match column names to ages_rev's sign flip
 
 # re-angled to bring the Age = 0 "wall" of large young-survivor counts forward
@@ -719,6 +725,7 @@ the stereogram’s dramatic silhouette for exact, directly-comparable
 values.
 
 ``` r
+
 ggplot(Perozzo, aes(x = Year, y = Age, z = Survivors)) +
   geom_raster(aes(fill = Survivors)) +
   geom_contour(color = "white", alpha = 0.6) +
@@ -740,6 +747,7 @@ projection. Unlike [`persp()`](https://rdrr.io/r/graphics/persp.html),
 this gets full access to ggplot’s color scales, legends, and layering.
 
 ``` r
+
 shear <- 0.6   # horizontal points per year of age; tune to taste
 lift  <- 400   # vertical Survivors-units per year of age
 
@@ -772,6 +780,7 @@ modern analogue of a physical stereogram: something a reader can
 actually rotate, rather than a single fixed viewing angle.
 
 ``` r
+
 library(plotly)
 plot_ly(x = ~years, y = ~ages, z = ~Pmat, type = "surface") |>
   layout(scene = list(
@@ -801,6 +810,7 @@ contours instead of point symbols for cholera deaths, layered over
 Snow’s original street map.
 
 ``` r
+
 data(Snow.deaths); data(Snow.pumps); data(Snow.streets)
 
 ggplot(Snow.deaths, aes(x = x, y = y)) +
@@ -883,21 +893,21 @@ Friendly, Michael. 2002. “Visions and Re-Visions of Charles Joseph
 Minard.” *Journal of Educational and Behavioral Statistics* 27 (1):
 31–52. <https://doi.org/10.3102/10769986027001031>.
 
-———. 2007. “A.-M. Guerry’s Moral Statistics of France: Challenges for
-Multivariable Spatial Analysis.” *Statistical Science* 22 (3): 368–99.
-<https://doi.org/10.1214/07-STS241>.
+Friendly, Michael. 2007. “A.-M. Guerry’s Moral Statistics of France:
+Challenges for Multivariable Spatial Analysis.” *Statistical Science* 22
+(3): 368–99. <https://doi.org/10.1214/07-STS241>.
 
-———. 2022. “Colorless Green Graphs Sleep Furiously: A Conversation with
-Leland Wilkinson.” Online, March 15, 2022.
+Friendly, Michael. 2022. *Colorless Green Graphs Sleep Furiously: A
+Conversation with Leland Wilkinson*. Online, March 15, 2022.
 <https://nightingaledvs.com/colorless-green-graphs-sleep-furiously-a-conversation-with-leland-wilkinson/>.
 
 Friendly, Michael, and Howard Wainer. 2021. *A History of Data
-Visualization and Graphic Communication*. Cambridge, MA: Harvard
-University Press. <https://doi.org/10.4159/9780674259034>.
+Visualization and Graphic Communication*. Harvard University Press.
+<https://doi.org/10.4159/9780674259034>.
 
 Grandjean, Martin. 2026. “The Digital Historian’s Craft.” In *Handbook
 of Digital and Computational Research Methods*, edited by Anders Koed
-Madsen and Anders Kristian Munk, 32–47. Edward Elgar Publishing.
+Madsen and Anders Kristian Munk. Edward Elgar Publishing.
 <https://doi.org/10.4337/9781802208993.00009>.
 
 Hanley, James A., Marielle Julien, and Erica E. M. Moodie. 2008.
@@ -911,29 +921,29 @@ Map of Magnetic Declination (1701) Constructed?” *Imago Mundi* 69 (1):
 Playfair, William. 1786. *Commercial and Political Atlas: Representing,
 by Copper-Plate Charts, the Progress of the Commerce, Revenues,
 Expenditure, and Debts of England, During the Whole of the Eighteenth
-Century*. London: Debrett; Robinson;; Sewell.
+Century*. Debrett; Robinson;; Sewell.
 
 Stigler, Stephen M. 1986. *The History of Statistics: The Measurement of
-Uncertainty Before 1900*. Cambridge, MA: Harvard University Press.
+Uncertainty Before 1900*. Harvard University Press.
 
-———. 1989. “Francis Galton’s Account of the Invention of Correlation.”
-*Statistical Science* 4 (2): 73–79.
+Stigler, Stephen M. 1989. “Francis Galton’s Account of the Invention of
+Correlation.” *Statistical Science* 4 (2): 73–79.
 <https://doi.org/10.1214/ss/1177012580>.
 
-———. 1997. “Regression Towards the Mean, Historically Considered.”
-*Statistical Methods in Medical Research* 6 (2): 103–14.
+Stigler, Stephen M. 1997. “Regression Towards the Mean, Historically
+Considered.” *Statistical Methods in Medical Research* 6 (2): 103–14.
 
-———. 2019. “Data Have a Limited Shelf Life.” *Harvard Data Science
-Review* 1 (2). <https://doi.org/10.1162/99608f92.f9a1e510>.
+Stigler, Stephen M. 2019. “Data Have a Limited Shelf Life.” *Harvard
+Data Science Review* 1 (2). <https://doi.org/10.1162/99608f92.f9a1e510>.
 
 Wainer, Howard, and Ian Spence. 2005. “Graphical Presentation of
 Longitudinal Data.” In *Encyclopedia of Statistics in Behavioral
 Science*. John Wiley & Sons.
 
-Wilkinson, Leland. 1999. *The Grammar of Graphics*. New York: Springer.
+Wilkinson, Leland. 1999. *The Grammar of Graphics*. Springer.
 
-Zabell, S. 1976. “Arbuthnot, Heberden and the Bills of Mortality.”
-Technical Report 40. Department of Statistics: The University of
+Zabell, S. 1976. *Arbuthnot, Heberden and the Bills of Mortality*.
+Technical Report No. 40. Department of Statistics: The University of
 Chicago.
 
 Zabell, Sandy, and Howard Wainer. 2002. “Visual Revelations: A Small

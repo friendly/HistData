@@ -102,8 +102,8 @@ mark.
 Registrar-General (1852). *Report on the Mortality of Cholera in England
 1848-49*, W. Clowes and Sons, for Her Majesty's Stationary Office.
 Written by William Farr.
-<https://ia600208.us.archive.org/11/items/b24751297/b24751297.pdf> The
-relevant tables are at pages clii – clvii.
+<https://archive.org/download/b24751297/b24751297.pdf> The relevant
+tables are at pages clii – clvii.
 
 See the example by by John Russell for the
 [30DayChartChallenge](https://github.com/drjohnrussell/30DayChartChallenge/blob/main/2025/Challenge01.R)
@@ -116,6 +116,7 @@ See the example by by John Russell for the
 ## Examples
 
 ``` r
+
 data(Cholera)
 
 # plot cholera deaths vs. elevation

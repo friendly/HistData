@@ -170,6 +170,7 @@ analytical methods for understanding Snow's cholera data.
 ## Examples
 
 ``` r
+
 data(Snow.deaths)
 data(Snow.pumps)
 data(Snow.streets)

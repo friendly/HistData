@@ -91,6 +91,7 @@ Friendly, M. (2003). Re-Visions of Minard.
 ## Examples
 
 ``` r
+
 data(Minard.troops)
 data(Minard.cities)
 data(Minard.temp)

@@ -182,6 +182,7 @@ from CRAN 2023-05-20).
 ## Examples
 
 ``` r
+
 data(Federalist_corpus)
 str(Federalist_corpus)
 #> 'data.frame':    85 obs. of  10 variables:
