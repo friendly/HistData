@@ -110,7 +110,7 @@ Some examples illustrate the range of possibilities from such endeavors:
   to understanding of use of methods of the course and conveying results for a conference presentation.
 
   The baseball data itself outlived the course: working with it for the Hotelling Society is what
-  led, eventually, to devloping the [`Lahman`](https://github.com/cdalzell/Lahman) R package,
+  led, eventually, to developing the [`Lahman`](https://github.com/cdalzell/Lahman) R package,
   which packages Sean Lahman's baseball database directly for R users -- itself a small case of
   one challenge (teach a course, make the data usable) turning into a durable, reusable piece of data 
   for baseball research. This is the same trajectory `HistData` itself follows on a larger scale.

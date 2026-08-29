@@ -61,15 +61,27 @@ left-open items above, now resolved:
   were transient network latency against `url_check()`'s aggressive default timeout, not real
   breakage — no fix needed there.
 - `pkgdown::build_site()` re-run to pick up all of the above.
+- Fixed the "devloping" → "developing" typo (`vignettes/HistData-Challenge.Rmd:113`) noticed
+  during the 2026-08-27 spelling check but deferred as out of scope at the time — trivial enough
+  to just fix while back in this file.
+
+**2026-08-28, later same day: local check + revdep + cran-comments.md, while MF's
+`check_win_devel()` run was in flight:**
+
+- `devtools::check()` (`release_check()`) — clean: 0 errors, 0 warnings, 0 notes. (One INFO during
+  the run, installed size 9.9Mb mostly `doc/` — not a NOTE in the final result, not blocking.)
+- `revdepcheck::revdep_check()` (`release_revdep()`) — clean: `cholera`, `statsr`, `UsingR` all
+  0/0/0 against both CRAN and dev HistData. 0 new problems.
+- `release_cran_comments()` — rewrote `cran-comments.md` from scratch using the above plus the
+  NEWS.md entries since the CRAN version (1.0.0), replacing the stale one that mixed a Nov-2025
+  pre-1.1.0 win-builder run with 1.0.0/0.9.4 release-note leftovers. The win-builder test-environment
+  line is a generic placeholder (script doesn't know the actual run's R-devel date/version) — worth
+  filling in once MF's `check_win_devel()` results email arrives.
 
 **Still open before actually submitting to CRAN:**
 
-- [ ] `cran-comments.md` is stale — currently mixes a Nov-2025 win-builder run (R-devel,
-  pre-1.1.0) with leftover 1.0.0/0.9.4 release-note boilerplate that doesn't belong there. Needs a
-  clean rewrite for 1.1.0: fresh `devtools::check_win_devel()` and/or R-hub run, current R CMD
-  check summary, current `revdepcheck::revdep_check()` results.
-- [ ] `revdepcheck::revdep_check()` against reverse dependencies (`cholera`, `statsr`, `UsingR`)
-  for 1.1.0 — last run was for a prior version per `cran-comments.md`.
+- [ ] MF's `check_win_devel()` run (started 2026-08-28) — waiting on the results email; if clean,
+  update `cran-comments.md`'s win-builder line with the actual R-devel version/date from the report.
 - [ ] `DESCRIPTION`'s `Date:` field (currently 2026-08-26) — bump to the actual submission date
   right before submitting.
 - [X] Resolve the two left-open `urlchecker` items above — done 2026-08-28, see follow-up note.
