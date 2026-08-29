@@ -2,7 +2,7 @@
 
 **Data Sets from the History of Statistics and Data Visualization**
 
-Version 1.0.1 (2026-08-26)
+Version 1.1.0 (2026-08-28)
 
 The `HistData` package provides a collection of small data sets that are
 interesting and important in the history of statistics and data
@@ -20,7 +20,9 @@ to do better!
 
 Some of these been featured in social media calls for participation,
 such as the [30 Day Chart
-Challenge](https://github.com/30DayChartChallenge/Edition2025)
+Challenge](https://github.com/30DayChartChallenge/Edition2025). A new
+vignette describes this more generally as a [HistData
+Challenge](https://friendly.github.io/HistData/articles/HistData-Challenge.html).
 
 This is part of a program of research called *statistical
 historiography* (Friendly, 2007; Friendly & Denis, 2001; Friendly et-al,
@@ -88,13 +90,13 @@ package. This may not be evident in what you see in the resulting
   hopefully never `SCREAMING_SNAKE_CASE`, unless for a constant like
   `MAX_ITER`.
 
-Some similar considerations apply to the \*\*values\* of character or
-factor variables in a dataset, and also how these will be ordered in
-tabular or graphic displays. As one example, levels of education, with
-values `"Low"`, `"Medium"`, `"High"` will be sorted H, L, M by default.
-You can recode or assign levels `c("1:Low", "2:Medium", "3:High")` or
-create them as [`ordered()`](https://rdrr.io/r/base/factor.html)
-factors.
+  Some similar considerations apply to the **values** of character or
+  factor variables in a dataset, and also how these will be ordered in
+  tabular or graphic displays. As one example, levels of education, with
+  values `"Low"`, `"Medium"`, `"High"` will be sorted “H, L, M” by
+  default. You can recode or assign levels
+  `c("1:Low", "2:Medium", "3:High")` or create them as
+  [`ordered()`](https://rdrr.io/r/base/factor.html) factors.
 
 - Applying **Type-conversion**, e.g., `chr` to `factor` or `ordered`
   required thinking about what a variable represented. In some cases,
@@ -126,6 +128,15 @@ factors.
   `\item{\code{VarName}}`. But documentation is even easier to edit and
   maintain using markdown format, as converted again by
   [roxygen2md](https://cran.r-project.org/package=roxygen2md).
+
+- **Provenance**: Where possible, a dataset’s documentation traces a
+  clear path from its original source to the version shipped here – not
+  just “digitized from X,” but *how*, and what’s still unverified.
+  `Perozzo` is a case in point: its immediate source (a GitHub redraw of
+  the stereogram) was traced and confirmed byte-identical, but the
+  actual digitization from Perozzo’s 1880/1881 plate remains unknown –
+  and the documentation says so, rather than implying more confidence
+  than the data warrants.
 
 - **Ask AI**: A few tasks were aided by Claude Sonnet 4.5 and bros.
 
@@ -201,6 +212,7 @@ tt(dsets, width = c(.2, .8)) |>
 | [CushnyPeeblesN](https://friendly.github.io/HistData/reference/CushnyPeeblesN.html) | Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives |
 | [Dactyl](https://friendly.github.io/HistData/reference/Dactyl.html) | Edgeworth’s counts of dactyls in Virgil’s Aeneid |
 | [DrinksWages](https://friendly.github.io/HistData/reference/DrinksWages.html) | Elderton and Pearson’s (1910) data on drinking and wages |
+| [Ebbinghaus](https://friendly.github.io/HistData/reference/Ebbinghaus.html) | Ebbinghaus’ Forgetting Curve and Three Replications |
 | [EdgeworthDeaths](https://friendly.github.io/HistData/reference/EdgeworthDeaths.html) | Edgeworth’s Data on Death Rates in British Counties |
 | [Federalist_corpus](https://friendly.github.io/HistData/reference/Federalist_corpus.html) | The Federalist Papers: corpus metadata, marker-word counts, and text |
 | [Federalist_markers](https://friendly.github.io/HistData/reference/Federalist_markers.html) | The Federalist Papers: corpus metadata, marker-word counts, and text |
@@ -354,6 +366,9 @@ Statistician*, **67**(3), 129–133
 
 - [`DrinksWages`](https://friendly.github.io/HistData/reference/DrinksWages.md)
   : Elderton and Pearson's (1910) data on drinking and wages
+
+- [`Ebbinghaus`](https://friendly.github.io/HistData/reference/Ebbinghaus.md)
+  : Ebbinghaus' Forgetting Curve and Three Replications
 
 - [`EdgeworthDeaths`](https://friendly.github.io/HistData/reference/EdgeworthDeaths.md)
   : Edgeworth's Data on Death Rates in British Counties

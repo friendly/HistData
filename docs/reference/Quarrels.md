@@ -361,7 +361,7 @@ A data frame with 779 observations on the following 84 variables.
 
 ## Source
 
-<http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/05407>
+[doi:10.3886/ICPSR05407.v1](https://doi.org/10.3886/ICPSR05407.v1)
 
 ## Details
 
@@ -375,9 +375,9 @@ to quarrel". This refers to those relations that Richardson found absent
 or irrelevant to the particular quarrel, and did not subsequently
 mention.
 
-See the original codebook at
-<http://www.icpsr.umich.edu/cgi-bin/file?comp=none&study=5407&ds=1&file_id=652814>
-for details not contained here.
+See the original codebook, linked from the study page at
+[doi:10.3886/ICPSR05407.v1](https://doi.org/10.3886/ICPSR05407.v1) , for
+details not contained here.
 
 ## References
 

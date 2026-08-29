@@ -28,7 +28,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">HistData</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -181,7 +181,7 @@ intentionally losing to the Cincinnati Reds. The upshot was that we all
 had fun with this, and it contributed to understanding of use of methods
 of the course and conveying results for a conference presentation.</p>
 <p>The baseball data itself outlived the course: working with it for the
-Hotelling Society is what led, eventually, to devloping the <a href="https://github.com/cdalzell/Lahman" class="external-link"><code>Lahman</code></a> R
+Hotelling Society is what led, eventually, to developing the <a href="https://github.com/cdalzell/Lahman" class="external-link"><code>Lahman</code></a> R
 package, which packages Sean Lahman’s baseball database directly for R
 users – itself a small case of one challenge (teach a course, make the
 data usable) turning into a durable, reusable piece of data for baseball
@@ -413,29 +413,65 @@ Gosset’s 1907 <em>Biometrika</em> article, connects directly to
 studies below.</li>
 </ul>
 </div>
+<div class="section level3">
+<h3 id="digital-history">Digital history<a class="anchor" aria-label="anchor" href="#digital-history"></a>
+</h3>
+<p>Martin Grandjean’s “The Digital Historian’s Craft” <span class="citation">(<a href="#ref-Grandjean:2026:craft">2026</a>)</span>
+makes the case at the level of the whole discipline: digital methods are
+new tools in the historian’s kit, to be appreciated for what they bring
+to telling the story. Using them well remains a modern, personal craft
+at the crossroads of technical mastery and the older skills of source
+criticism, interpretation, and synthesis. Re-visioning, as practiced in
+this vignette, is one small corner of that same craft.</p>
+</div>
 </div>
 <div class="section level2">
 <h2 id="a-taxonomy-of-re-visions">A taxonomy of re-visions<a class="anchor" aria-label="anchor" href="#a-taxonomy-of-re-visions"></a>
 </h2>
 <p>The gallery accompanying Friendly <span class="citation">(<a href="#ref-Friendly:2002">2002</a>)</span>, <a href="https://www.datavis.ca/gallery/re-minard.php" class="external-link uri">https://www.datavis.ca/gallery/re-minard.php</a>, catalogs
-about 15 different re-visions of the Minard graphic. This can be read as
-a checklist rather than a one-off catalog, they sort into six
-recognizable <em>kinds</em> of re-vision – a rubric that applies to any
-HistData dataset, not just Minard’s.</p>
+about 15 different re-visions of the Minard graphic. I simply collected
+them as found and wrote some words about them to say why they were
+interesting. But this can be read as a checklist of features, rather
+than a one-off catalog. Together, they sort into six recognizable
+<em>kinds</em> of re-vision – a rubric that applies to any HistData
+dataset, not just Minard’s.</p>
 <div class="section level3">
 <h3 id="softwarelanguage-ports">1. Software/language ports<a class="anchor" aria-label="anchor" href="#softwarelanguage-ports"></a>
 </h3>
-<p>The same graphic, redrawn in a different tool: Mathematica, a formal
-Grammar-of-Graphics specification, ggplot2, SAS/IML, Protovis. The
-content doesn’t change; what changes is what the choice of tool reveals
-about the graphic’s underlying structure – a grammar-of-graphics port,
-for instance, forces you to name the mapping from data to visual channel
-explicitly, in a way the original hand-drawn version never had to.</p>
-<p>A software port is only as easy as the data behind it lets it be, and
+<p>The same graphic, redrawn with different tools, each an opportunity
+and challenge to express the drawing in software. The Minard Gallery
+included examples using:</p>
+<ul>
+<li>
+<a href="https://www.wolfram.com/mathematica/" class="external-link">Mathematica</a>,</li>
+<li>a formal Grammar-of-Graphics specification (see below),
+<code>ggplot2</code>,</li>
+<li>
+<a href="https://www.datavis.ca/gallery/minard/Minard-IML.gif" class="external-link">SAS/IML</a>
+(Rick Wicklin’s version – see his own answer to <em>What was he
+thinking?</em> in <a href="https://www.datavis.ca/gallery/minard/IML-thinking.html" class="external-link">“What
+They Were Thinking”</a>),</li>
+<li>
+<a href="https://mbostock.github.io/protovis/" class="external-link">Protovis</a>, by Mike
+Bostock, superseded by D3.js, whose modern home is <a href="https://observablehq.com/" class="external-link">Observable</a>).</li>
+</ul>
+<p>The content doesn’t change; what changes is what the choice of tool
+reveals about the graphic’s underlying structure and how you think about
+doing it in that language environment. A grammar-of-graphics
+implementation, for instance, forces you to name the mapping from data
+to mapping into visual channels explicitly, in a way the original
+hand-drawn version never had to.</p>
+<div class="section level4">
+<h4 id="data-structures">Data structures<a class="anchor" aria-label="anchor" href="#data-structures"></a>
+</h4>
+<p>A software port is only as easy as the data behind it allows, and
 <code>HistData</code> deliberately pre-parses some of its more complex
-graphics into separate, composable pieces rather than one monolithic
-table – the same decomposition the original artist implicitly made when
-laying out the figure. Snow’s cholera map is really five aligned layers
+datasets / graphics into separate, composable pieces rather than one
+monolithic table or Excel file, with with multiple sheets or tables. In
+a way, this is the same decomposition the original artist implicitly
+made when laying out the figure, but without the need to think about how
+a computer could understand it.</p>
+<p>For example, Snow’s cholera map is really five aligned layers
 (<code>Snow.deaths</code>, <code>Snow.pumps</code>,
 <code>Snow.streets</code>, <code>Snow.polygons</code>,
 <code>Snow.dates</code>), and Minard’s march is three
@@ -444,8 +480,9 @@ laying out the figure. Snow’s cholera map is really five aligned layers
 temperature graph beneath it). Porting the graphic to a new tool becomes
 a matter of re-mapping each existing piece onto that tool’s own
 layer/channel model, rather than re-deriving the decomposition from
-scratch – see the <code>Minard</code> case study below, built directly
+scratch. See the <code>Minard</code> case study below, built directly
 from these three data frames.</p>
+</div>
 </div>
 <div class="section level3">
 <h3 id="design-variations">2. Design variations<a class="anchor" aria-label="anchor" href="#design-variations"></a>
@@ -459,11 +496,13 @@ and communication goals do the most work.</p>
 <div class="section level3">
 <h3 id="interactiveweb-based">3. Interactive/web-based<a class="anchor" aria-label="anchor" href="#interactiveweb-based"></a>
 </h3>
-<p>Tooltips, drill-down, linked views, map overlays – re-visions that
-trade the fixed, printed page for something a reader can query. The
-Minard gallery includes an image map with linked text and a drill-down
-SAS GMAP; this is also the natural home for the <code>plotly</code>
-version of <code>Perozzo</code> below.</p>
+<!-- TODO-IGNORE: can we link one or more of these? -->
+<p>Tooltips, drill-down, linked views, map overlays: these are
+re-visions that trade the fixed, printed page for something a reader can
+query, interact with and explore. The Minard gallery includes an image
+map with linked text and a drill-down SAS GMAP; this is also illustrated
+for the <code>plotly</code> version of the <code>Perozzo</code> data
+described below.</p>
 </div>
 <div class="section level3">
 <h3 id="temporalanimated">4. Temporal/animated<a class="anchor" aria-label="anchor" href="#temporalanimated"></a>
@@ -484,10 +523,11 @@ image-hosting/licensing decision noted above.)</em></p>
 <div class="section level3">
 <h3 id="alternative-representations">5. Alternative representations<a class="anchor" aria-label="anchor" href="#alternative-representations"></a>
 </h3>
-<p>A genuinely different chart type for the same underlying data – not a
-redraw, a rethink. The <code>Snow-density.R</code> case study below
-(density contours instead of point symbols for cholera deaths) is this
-category in miniature.</p>
+<p>A genuinely different chart type for the same underlying data: not a
+redraw, a rethink– “How could I do this better?”. The
+<code>Snow-density.R</code> case study below (density contours instead
+of point symbols for cholera deaths) is this category in a small
+example.</p>
 </div>
 <div class="section level3">
 <h3 id="data-packaged-for-reuse">6. Data packaged for reuse<a class="anchor" aria-label="anchor" href="#data-packaged-for-reuse"></a>
@@ -498,10 +538,10 @@ someone else can build on. This is, quite literally, what the
 arguably the least glamorous but most consequential category, since
 every other kind of re-vision in this list depends on having data to
 play with first.</p>
-<p><em>(TODO: pull a representative thumbnail image from the datavis.ca
-gallery for each category above once hosting/licensing for third-party
-images is sorted out – see
-<code>issues/vignettes/histdata-challenge.md</code>.)</em></p>
+<!--
+TODO-IGNORE: pull a representative thumbnail image from the datavis.ca gallery for each category above
+once hosting/licensing for third-party images is sorted out -- see `issues/vignettes/histdata-challenge.md`.
+-->
 </div>
 </div>
 <div class="section level2">
@@ -551,11 +591,11 @@ map.</td>
 </tr>
 </tbody>
 </table>
-<p>This first draft works two of these (<code>Minard</code>,
+<p>This vignette works two of these (<code>Minard</code>,
 <code>Perozzo</code>) in depth, plus one further example from outside
 the package’s own docs (<code>Snow</code>, via John Russell’s
-30DayChartChallenge). The rest stay listed here, cited, and open – see
-“Open invitations.”</p>
+30DayChartChallenge). The rest stay listed here, cited, and open to
+think about; see “Open invitations.”</p>
 </div>
 <div class="section level2">
 <h2 id="case-study-minard">Case study: <code>Minard</code><a class="anchor" aria-label="anchor" href="#case-study-minard"></a>
@@ -595,9 +635,63 @@ panel). Porting to ggplot2 is then mostly a matter of mapping
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>axis.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span>, panel.grid <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="HistData-Challenge_files/figure-html/minard-ggplot-1.png" class="r-plt" alt="" width="672"></p>
 <p>Grey is the advance on Moscow, red the retreat; band width still
-carries troop strength, exactly as in the 1869 original, with none of
-<code>HistData</code>’s decomposition into separate data frames lost in
-translation.</p>
+carries troop strength, exactly as in the 1869 original. Not shown here
+is the separate graph of the decline in temperature Napoleon’s troops
+suffered on the retreat, contained in
+<code><a href="../reference/Minard.html">HistData::Minard.temp</a></code>. The help file <a href="../reference/Minard.html"><code>?Minard</code></a> shows
+<code>ggplot2</code> steps for both together, and for combining these
+into a single graphic.</p>
+</div>
+<div class="section level3">
+<h3 id="wilkinsons-gog-specification">Wilkinson’s GoG specification<a class="anchor" aria-label="anchor" href="#wilkinsons-gog-specification"></a>
+</h3>
+<p>Minard’s graphic has a more important claim to fame beyond the many
+re-visions described here: Leland Wilkinson used it as a capstone
+illustration of <em>The Grammar of Graphics</em> <span class="citation">(<a href="#ref-Wilkinson:1999:GoG">1999</a>)</span>:
+Proof that a formal grammar could specify a graphic this intricate (a
+tapering, bidirectional flow band keyed to two variables at once,
+sharing its horizontal axis with an aligned temperature series)
+compactly enough to state once, and precisely enough for a computer to
+draw it unassisted.</p>
+<p>He used this version as cover image for the book. He was saying,
+“HELLO WORLD: I can do this!!”. See <span class="citation">(<a href="#ref-Friendly:2022:wilkinson">Friendly 2022</a>)</span> for an
+account of my conversation (<em>Colorless Green Graphs Sleep
+Furiously</em>) with Lee about the thinking that went into his work on
+the grammar of graphics.</p>
+<div class="float">
+<img src="figures/gogfig15_1.jpg" style="width:70.0%" alt="Wilkinson’s rendering of Minard’s map (Wilkinson, 1999, Fig. 15.1)"><div class="figcaption">Wilkinson’s rendering of Minard’s map
+(Wilkinson, 1999, Fig. 15.1)</div>
+</div>
+<p>His code for this comprised <code>dplyr</code>-like
+<code>TRANS</code>formation steps, followed by two <code>FRAME</code>s
+for the flow portion and the subscripted line graph of temperature on
+the retreat.</p>
+<pre><code><span><span class="va">TRANS</span><span class="op">:</span> <span class="va">date</span> <span class="op">=</span> <span class="fu">miss</span><span class="op">(</span><span class="va">date</span>, <span class="va">lont</span>, <span class="st">"linear"</span><span class="op">)</span></span>
+<span><span class="va">TRANS</span><span class="op">:</span> <span class="va">ldate</span> <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html" class="external-link">lag</a></span><span class="op">(</span><span class="va">date</span>, <span class="op">-</span><span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">TRANS</span><span class="op">:</span> <span class="va">days</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/diff.html" class="external-link">diff</a></span><span class="op">(</span><span class="va">date</span>, <span class="va">ldate</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">FRAME</span><span class="op">:</span> <span class="va">lonc</span><span class="op">*</span><span class="va">latc</span></span>
+<span><span class="va">GRAPH</span><span class="op">:</span> <span class="fu">point</span><span class="op">(</span><span class="fu">label</span><span class="op">(</span><span class="va">city</span><span class="op">)</span>, <span class="fu">size</span><span class="op">(</span><span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">GRAPH</span><span class="op">:</span> <span class="fu">path</span><span class="op">(</span><span class="fu">position</span><span class="op">(</span><span class="va">lonp</span><span class="op">*</span><span class="va">latp</span><span class="op">)</span>, <span class="fu">size</span><span class="op">(</span><span class="va">survivors</span><span class="op">)</span>, <span class="fu">color</span><span class="op">(</span><span class="va">direction</span><span class="op">)</span>,</span>
+<span>            <span class="fu"><a href="https://rdrr.io/r/base/split.html" class="external-link">split</a></span><span class="op">(</span><span class="va">group</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">GUIDE</span><span class="op">:</span> <span class="fu"><a href="https://rdrr.io/r/graphics/legend.html" class="external-link">legend</a></span><span class="op">(</span><span class="fu">color</span><span class="op">(</span><span class="va">direction</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">FRAME</span><span class="op">:</span> <span class="va">lonc</span><span class="op">*</span><span class="va">temp</span></span>
+<span><span class="va">COORD</span><span class="op">:</span> <span class="fu">stretch</span><span class="op">(</span><span class="va">dim1</span>, <span class="va">dim2</span>, <span class="fl">1</span>, <span class="fl">.2</span><span class="op">)</span></span>
+<span><span class="va">COORD</span><span class="op">:</span> <span class="fu">translate</span><span class="op">(</span><span class="va">dim1</span>, <span class="va">dim2</span>, <span class="fl">0</span>, <span class="op">-</span><span class="fl">.5</span><span class="op">)</span></span>
+<span><span class="va">GRAPH</span><span class="op">:</span> <span class="fu">path</span><span class="op">(</span><span class="fu">position</span><span class="op">(</span><span class="va">lont</span><span class="op">*</span><span class="va">temp</span><span class="op">)</span>, <span class="fu">label</span><span class="op">(</span><span class="va">date</span><span class="op">)</span>, <span class="fu">texture.granularity</span><span class="op">(</span><span class="va">days</span><span class="op">)</span>,</span>
+<span>            <span class="fu">color.brightness</span><span class="op">(</span><span class="fl">.5</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">GUIDE</span><span class="op">:</span> <span class="fu">axis1</span><span class="op">(</span><span class="fu">label</span><span class="op">(</span><span class="st">"Longitude"</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">GUIDE</span><span class="op">:</span> <span class="fu">axis2</span><span class="op">(</span><span class="fu">label</span><span class="op">(</span><span class="st">"Temperature"</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+<p>Set next to the <code>ggplot2</code> call above, the correspondence
+is nearly line-for-line:
+<code>GRAPH: path(position(lonp*latp), size(survivors), color(direction), split(group))</code>
+<em>is</em>
+<code>geom_path(aes(x = long, y = lat, linewidth = survivors, colour = direction, group = group))</code>
+– the same data-to-channel mapping (position, size, color, grouping),
+just spelled in a different grammar’s syntax. <code>ggplot2</code>, as a
+direct implementation of Wilkinson’s grammar, doesn’t just resemble this
+specification; it <em>is</em> a runnable version of it, decades on.</p>
 </div>
 <div class="section level3">
 <h3 id="a-few-more-from-the-gallery">A few more, from the gallery<a class="anchor" aria-label="anchor" href="#a-few-more-from-the-gallery"></a>
@@ -645,13 +739,15 @@ exactly the young-adult cohorts that show the dip. Friendly &amp; Wainer
 <span class="citation">(<a href="#ref-FriendlyWainer:2021:TOGS">2021</a>)</span> (8.4) discuss this
 feature of the stereogram directly.</p>
 <!--
+NOTE: The Wikimedia version is completely public, I'm using a better version,
+but without attribution.
 ![Perozzo's original 1880/1881 (Wikimedia Commons, public domain)](figures/perozzo-original.jpg){width=70%}
 -->
 <div class="float">
 <img src="figures/Perozzo-600dpi.jpg" style="width:70.0%" alt="Perozzo’s 1881 stereogram"><div class="figcaption">Perozzo’s 1881 stereogram</div>
 </div>
 <p>The package supplies a simple base-R version already:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">Perozzo</span><span class="op">)</span></span>
 <span><span class="va">Pmat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/xtabs.html" class="external-link">xtabs</a></span><span class="op">(</span><span class="va">Survivors</span> <span class="op">~</span> <span class="va">Year</span> <span class="op">+</span> <span class="va">Age</span>, data <span class="op">=</span> <span class="va">Perozzo</span><span class="op">)</span></span>
 <span><span class="va">years</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">Pmat</span><span class="op">)</span><span class="op">)</span></span>
@@ -660,7 +756,7 @@ feature of the stereogram directly.</p>
 perspective plot (<code><a href="https://rdrr.io/r/graphics/persp.html" class="external-link">graphics::persp()</a></code>) of the 3D surface.
 Some fiddling was necessary to get the orientation approximately
 right.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">ages_rev</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="va">ages</span><span class="op">)</span></span>
 <span><span class="va">Pmat_rev</span> <span class="op">&lt;-</span> <span class="va">Pmat</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_along</a></span><span class="op">(</span><span class="va">ages</span><span class="op">)</span><span class="op">)</span><span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/persp.html" class="external-link">persp</a></span><span class="op">(</span><span class="va">years</span>, <span class="va">ages_rev</span>, <span class="va">Pmat_rev</span>,</span>
@@ -676,7 +772,7 @@ diagonals at all.</p>
 leaving base R – it returns a 4x4 projection matrix from each call, and
 <code><a href="https://rdrr.io/r/grDevices/trans3d.html" class="external-link">trans3d()</a></code> + <code><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines()</a></code> can then draw more
 3D-located lines onto the same plot after the fact.</p>
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">Pmat_rev</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">as.character</a></span><span class="op">(</span><span class="va">ages_rev</span><span class="op">)</span>  <span class="co"># match column names to ages_rev's sign flip</span></span>
 <span></span>
 <span><span class="co"># re-angled to bring the Age = 0 "wall" of large young-survivor counts forward</span></span>
@@ -734,7 +830,7 @@ cross-section alone can’t show.</p>
 3D illusion entirely in favor of a 2D heatmap with isolines, which
 trades the stereogram’s dramatic silhouette for exact,
 directly-comparable values.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">Perozzo</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Year</span>, y <span class="op">=</span> <span class="va">Age</span>, z <span class="op">=</span> <span class="va">Survivors</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html" class="external-link">geom_raster</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">Survivors</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_contour.html" class="external-link">geom_contour</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"white"</span>, alpha <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span> <span class="op">+</span></span>
@@ -753,7 +849,7 @@ but build it as an ordinary 2D ggplot via a manual isometric shear
 function of <code>Age</code>), rather than <code><a href="https://rdrr.io/r/graphics/persp.html" class="external-link">persp()</a></code>’s true
 3D projection. Unlike <code><a href="https://rdrr.io/r/graphics/persp.html" class="external-link">persp()</a></code>, this gets full access to
 ggplot’s color scales, legends, and layering.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">shear</span> <span class="op">&lt;-</span> <span class="fl">0.6</span>   <span class="co"># horizontal points per year of age; tune to taste</span></span>
 <span><span class="va">lift</span>  <span class="op">&lt;-</span> <span class="fl">400</span>   <span class="co"># vertical Survivors-units per year of age</span></span>
 <span></span>
@@ -783,7 +879,7 @@ projection geometry.</p>
 <p>An “interactive/web-based” re-vision, and arguably the most direct
 modern analogue of a physical stereogram: something a reader can
 actually rotate, rather than a single fixed viewing angle.</p>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://plotly-r.com" class="external-link">plotly</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/plotly/man/plot_ly.html" class="external-link">plot_ly</a></span><span class="op">(</span>x <span class="op">=</span> <span class="op">~</span><span class="va">years</span>, y <span class="op">=</span> <span class="op">~</span><span class="va">ages</span>, z <span class="op">=</span> <span class="op">~</span><span class="va">Pmat</span>, type <span class="op">=</span> <span class="st">"surface"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu">layout</span><span class="op">(</span>scene <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span></span>
@@ -792,7 +888,7 @@ actually rotate, rather than a single fixed viewing angle.</p>
 <span>    zaxis <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Survivors"</span><span class="op">)</span></span>
 <span>  <span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <div class="plotly html-widget html-fill-item" id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:672px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"visdat":{"9d3418313072":["function () ","plotlyVisDat"]},"cur_data":"9d3418313072","attrs":{"9d3418313072":{"x":{},"y":{},"z":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"surface"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":"Year"},"yaxis":{"title":"Age"},"zaxis":{"title":"Survivors"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"Pmat","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":true,"x":[1750,1755,1760,1765,1770,1775,1780,1785,1790,1795,1800,1805,1810,1815,1820,1825,1830,1835,1840,1845,1850,1855,1860,1865,1870,1875],"y":[0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100],"z":[[163000,121058,95158,96272,88069,81661,75809,76029,69453,63405,59966,53395,44139,35227,26143,17469,7516,3934,1171,193,0],[173012,127655,102524,101471,95266,89317,84986,80511,71493,66180,61476,57601,47040,38475,28438,19933,10459,4347,1088,206,0],[166233,128780,100863,101798,91281,90380,83095,77208,73738,68358,63534,54173,45418,37409,23140,18765,10235,3831,1193,211,0],[172982,129509,103120,99596,93332,91777,81365,81078,74122,70212,65510,51589,46413,38737,28246,18975,9520,4207,1182,221,0],[173367,129943,95825,99816,92500,84598,82625,79980,73292,68416,63298,53463,45089,30505,27577,17889,10106,4170,1281,255,0],[161235,129480,104722,98742,93759,90272,84496,82885,77270,71170,65206,52758,46135,32215,28973,18880,10688,4869,1482,317,0],[183061,145501,110773,105854,98017,93456,87187,84298,77776,71107,64723,53361,45892,33223,29684,19612,11045,5012,1417,316,0],[173186,141482,108641,102890,96609,92915,87245,86129,79933,73390,67056,54349,47324,32863,29971,20250,11194,5502,1618,319,0],[179381,143614,109888,103940,96874,95109,90495,89146,82562,75836,68058,53679,46054,32951,29896,19617,11303,5217,1500,335,0],[193888,154745,120955,114248,105850,104479,100731,98876,91533,82624,74179,56670,47962,35002,31325,20460,11578,5505,1756,373,0],[195141,156703,125027,117564,109422,106922,103739,99581,92198,83003,74072,56840,48041,35656,31745,20385,11625,5584,1693,381,0],[190939,155532,121375,116028,108592,107034,102447,98982,90277,80760,71960,55419,45278,33878,29787,19257,11189,5543,1797,381,0],[187840,152249,120147,113322,105654,103102,99667,96369,87487,77304,68857,51345,42930,30641,25680,16173,9487,4584,1528,316,0],[203773,167565,131257,124016,115793,113099,108802,105124,95956,84504,75045,55247,45562,32228,27268,17398,10715,5397,1776,366,0],[204945,170155,135005,127667,118632,114889,109525,105734,96927,84896,74842,55510,45496,32582,26976,17396,10862,5714,1945,377,0],[204639,171679,134796,127997,118266,114963,109222,105136,97068,84680,74085,55111,45324,32477,26779,16784,10219,5321,1819,361,0],[214217,179706,142319,134928,124268,119885,113518,108591,99451,85983,75323,55910,45779,33456,27425,17447,10093,5283,1837,400,0],[222473,187759,151608,143963,132976,127171,120460,114680,105487,90308,79196,60091,49577,35912,28919,18143,11102,6290,2220,432,0],[219711,185435,149954,141768,130819,123998,116990,111007,102236,87257,76013,56901,46482,33186,26472,16736,10083,5444,2034,422,0],[245986,209292,169782,160481,147232,139933,131545,125225,114944,96870,84243,63270,51441,37098,29154,18212,11129,6272,2400,481,0],[259423,222953,185178,175894,160357,153412,143183,135539,124900,105439,90635,68211,55917,40353,31495,19364,11748,6360,2513,501,0],[269423,233884,190328,180814,165634,158044,147004,138003,126718,107111,92293,69779,56880,41313,31770,19875,12280,6866,2734,521,0],[297648,261187,212159,201464,184656,175573,162426,152087,139866,117950,99628,74845,61383,44505,33892,21009,12237,7012,2765,518,0],[297644,263532,214046,203603,186924,177972,164559,153600,141465,118714,99457,73851,59627,43038,32412,19877,11958,6696,2793,517,0],[292643,260683,213100,203241,187134,177410,164273,153169,139504,115882,97114,71371,56581,40596,30001,18805,11810,7016,2600,507,0],[286079,256214,210281,200331,182711,173119,158838,144578,133232,110254,91429,67932,52362,37087,26370,16558,10418,6286,2402,485,0]],"type":"surface","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"visdat":{"71681a722fc4":["function () ","plotlyVisDat"]},"cur_data":"71681a722fc4","attrs":{"71681a722fc4":{"x":{},"y":{},"z":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"surface"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":"Year"},"yaxis":{"title":"Age"},"zaxis":{"title":"Survivors"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"Pmat","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[["0","rgba(68,1,84,1)"],["0.0416666666666667","rgba(70,19,97,1)"],["0.0833333333333333","rgba(72,32,111,1)"],["0.125","rgba(71,45,122,1)"],["0.166666666666667","rgba(68,58,128,1)"],["0.208333333333333","rgba(64,70,135,1)"],["0.25","rgba(60,82,138,1)"],["0.291666666666667","rgba(56,93,140,1)"],["0.333333333333333","rgba(49,104,142,1)"],["0.375","rgba(46,114,142,1)"],["0.416666666666667","rgba(42,123,142,1)"],["0.458333333333333","rgba(38,133,141,1)"],["0.5","rgba(37,144,140,1)"],["0.541666666666667","rgba(33,154,138,1)"],["0.583333333333333","rgba(39,164,133,1)"],["0.625","rgba(47,174,127,1)"],["0.666666666666667","rgba(53,183,121,1)"],["0.708333333333333","rgba(79,191,110,1)"],["0.75","rgba(98,199,98,1)"],["0.791666666666667","rgba(119,207,85,1)"],["0.833333333333333","rgba(147,214,70,1)"],["0.875","rgba(172,220,52,1)"],["0.916666666666667","rgba(199,225,42,1)"],["0.958333333333333","rgba(226,228,40,1)"],["1","rgba(253,231,37,1)"]],"showscale":true,"x":[1750,1755,1760,1765,1770,1775,1780,1785,1790,1795,1800,1805,1810,1815,1820,1825,1830,1835,1840,1845,1850,1855,1860,1865,1870,1875],"y":[0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100],"z":[[163000,121058,95158,96272,88069,81661,75809,76029,69453,63405,59966,53395,44139,35227,26143,17469,7516,3934,1171,193,0],[173012,127655,102524,101471,95266,89317,84986,80511,71493,66180,61476,57601,47040,38475,28438,19933,10459,4347,1088,206,0],[166233,128780,100863,101798,91281,90380,83095,77208,73738,68358,63534,54173,45418,37409,23140,18765,10235,3831,1193,211,0],[172982,129509,103120,99596,93332,91777,81365,81078,74122,70212,65510,51589,46413,38737,28246,18975,9520,4207,1182,221,0],[173367,129943,95825,99816,92500,84598,82625,79980,73292,68416,63298,53463,45089,30505,27577,17889,10106,4170,1281,255,0],[161235,129480,104722,98742,93759,90272,84496,82885,77270,71170,65206,52758,46135,32215,28973,18880,10688,4869,1482,317,0],[183061,145501,110773,105854,98017,93456,87187,84298,77776,71107,64723,53361,45892,33223,29684,19612,11045,5012,1417,316,0],[173186,141482,108641,102890,96609,92915,87245,86129,79933,73390,67056,54349,47324,32863,29971,20250,11194,5502,1618,319,0],[179381,143614,109888,103940,96874,95109,90495,89146,82562,75836,68058,53679,46054,32951,29896,19617,11303,5217,1500,335,0],[193888,154745,120955,114248,105850,104479,100731,98876,91533,82624,74179,56670,47962,35002,31325,20460,11578,5505,1756,373,0],[195141,156703,125027,117564,109422,106922,103739,99581,92198,83003,74072,56840,48041,35656,31745,20385,11625,5584,1693,381,0],[190939,155532,121375,116028,108592,107034,102447,98982,90277,80760,71960,55419,45278,33878,29787,19257,11189,5543,1797,381,0],[187840,152249,120147,113322,105654,103102,99667,96369,87487,77304,68857,51345,42930,30641,25680,16173,9487,4584,1528,316,0],[203773,167565,131257,124016,115793,113099,108802,105124,95956,84504,75045,55247,45562,32228,27268,17398,10715,5397,1776,366,0],[204945,170155,135005,127667,118632,114889,109525,105734,96927,84896,74842,55510,45496,32582,26976,17396,10862,5714,1945,377,0],[204639,171679,134796,127997,118266,114963,109222,105136,97068,84680,74085,55111,45324,32477,26779,16784,10219,5321,1819,361,0],[214217,179706,142319,134928,124268,119885,113518,108591,99451,85983,75323,55910,45779,33456,27425,17447,10093,5283,1837,400,0],[222473,187759,151608,143963,132976,127171,120460,114680,105487,90308,79196,60091,49577,35912,28919,18143,11102,6290,2220,432,0],[219711,185435,149954,141768,130819,123998,116990,111007,102236,87257,76013,56901,46482,33186,26472,16736,10083,5444,2034,422,0],[245986,209292,169782,160481,147232,139933,131545,125225,114944,96870,84243,63270,51441,37098,29154,18212,11129,6272,2400,481,0],[259423,222953,185178,175894,160357,153412,143183,135539,124900,105439,90635,68211,55917,40353,31495,19364,11748,6360,2513,501,0],[269423,233884,190328,180814,165634,158044,147004,138003,126718,107111,92293,69779,56880,41313,31770,19875,12280,6866,2734,521,0],[297648,261187,212159,201464,184656,175573,162426,152087,139866,117950,99628,74845,61383,44505,33892,21009,12237,7012,2765,518,0],[297644,263532,214046,203603,186924,177972,164559,153600,141465,118714,99457,73851,59627,43038,32412,19877,11958,6696,2793,517,0],[292643,260683,213100,203241,187134,177410,164273,153169,139504,115882,97114,71371,56581,40596,30001,18805,11810,7016,2600,507,0],[286079,256214,210281,200331,182711,173119,158838,144578,133232,110254,91429,67932,52362,37087,26370,16558,10418,6286,2402,485,0]],"type":"surface","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 <div class="section level3">
 <h3 id="still-open">Still open<a class="anchor" aria-label="anchor" href="#still-open"></a>
@@ -816,7 +912,7 @@ dependency audit of every candidate script), and because it’s a genuine
 “alternative representation” of one of the package’s most iconic
 datasets: density contours instead of point symbols for cholera deaths,
 layered over Snow’s original street map.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">Snow.deaths</span><span class="op">)</span>; <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">Snow.pumps</span><span class="op">)</span>; <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">Snow.streets</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">Snow.deaths</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
@@ -909,10 +1005,20 @@ Friendly, Michael. 2007. <span>“<span class="nocase">A.-M. Guerry’s
 Moral Statistics of France</span>: Challenges for Multivariable Spatial
 Analysis.”</span> <em>Statistical Science</em> 22 (3): 368–99. <a href="https://doi.org/10.1214/07-STS241" class="external-link">https://doi.org/10.1214/07-STS241</a>.
 </div>
+<div id="ref-Friendly:2022:wilkinson" class="csl-entry">
+Friendly, Michael. 2022. <em>Colorless Green Graphs Sleep Furiously: A
+Conversation with Leland Wilkinson</em>. Online, March 15, 2022. <a href="https://nightingaledvs.com/colorless-green-graphs-sleep-furiously-a-conversation-with-leland-wilkinson/" class="external-link">https://nightingaledvs.com/colorless-green-graphs-sleep-furiously-a-conversation-with-leland-wilkinson/</a>.
+</div>
 <div id="ref-FriendlyWainer:2021:TOGS" class="csl-entry">
 Friendly, Michael, and Howard Wainer. 2021. <em>A History of Data
 Visualization and Graphic Communication</em>. Harvard University Press.
 <a href="https://doi.org/10.4159/9780674259034" class="external-link">https://doi.org/10.4159/9780674259034</a>.
+</div>
+<div id="ref-Grandjean:2026:craft" class="csl-entry">
+Grandjean, Martin. 2026. <span>“The Digital Historian’s Craft.”</span>
+In <em>Handbook of Digital and Computational Research Methods</em>,
+edited by Anders Koed Madsen and Anders Kristian Munk. Edward Elgar
+Publishing. <a href="https://doi.org/10.4337/9781802208993.00009" class="external-link">https://doi.org/10.4337/9781802208993.00009</a>.
 </div>
 <div id="ref-Hanley:2008" class="csl-entry">
 Hanley, James A., Marielle Julien, and Erica E. M. Moodie. 2008.
@@ -952,6 +1058,9 @@ Stigler, Stephen M. 2019. <span>“Data Have a Limited Shelf Life.”</span>
 Wainer, Howard, and Ian Spence. 2005. <span>“Graphical Presentation of
 Longitudinal Data.”</span> In <em>Encyclopedia of Statistics in
 Behavioral Science</em>. John Wiley &amp; Sons.
+</div>
+<div id="ref-Wilkinson:1999:GoG" class="csl-entry">
+Wilkinson, Leland. 1999. <em>The Grammar of Graphics</em>. Springer.
 </div>
 <div id="ref-Zabell:1976" class="csl-entry">
 Zabell, S. 1976. <em>Arbuthnot, Heberden and the Bills of

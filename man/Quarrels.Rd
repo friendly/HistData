@@ -94,7 +94,7 @@ A data frame with 779 observations on the following 84 variables.
 }
 }
 \source{
-\url{http://www.icpsr.umich.edu/icpsrweb/ICPSR/studies/05407}
+\doi{10.3886/ICPSR05407.v1}
 }
 \description{
 \emph{The Statistics Of Deadly Quarrels} by Lewis Fry Richardson (1960) is
@@ -126,9 +126,8 @@ In many of the \code{factor} variables, \code{0} is used to indicate
 found absent or irrelevant to the particular quarrel, and did not
 subsequently mention.
 
-See the original codebook at
-\url{http://www.icpsr.umich.edu/cgi-bin/file?comp=none&study=5407&ds=1&file_id=652814}
-for details not contained here.
+See the original codebook, linked from the study page at
+\doi{10.3886/ICPSR05407.v1}, for details not contained here.
 }
 \examples{
 

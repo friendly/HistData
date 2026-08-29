@@ -50,7 +50,7 @@ elaboration.  If you are interested in any of these problems or data sets, there
 lots of room to do better!
 
 Some of these  been featured in social media calls for participation, such as the [30 Day Chart Challenge](https://github.com/30DayChartChallenge/Edition2025). A new vignette describes
-this more generally as a [HistData Challenge]().
+this more generally as a [HistData Challenge](https://friendly.github.io/HistData/articles/HistData-Challenge.html).
 
 
 This is part of a program of research called *statistical historiography*

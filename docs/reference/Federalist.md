@@ -184,37 +184,58 @@ from CRAN 2023-05-20).
 ``` r
 
 data(Federalist_corpus)
-#> Warning: data set 'Federalist_corpus' not found
 str(Federalist_corpus)
-#> Error: object 'Federalist_corpus' not found
+#> 'data.frame':    85 obs. of  10 variables:
+#>  $ essay         : int  1 2 3 4 5 6 7 8 9 10 ...
+#>  $ title         : chr  "General Introduction" "Concerning Dangers from Foreign Force and Influence" "The Same Subject Continued (Concerning Dangers From Foreign Force and Influence)" "The Same Subject Continued (Concerning Dangers From Foreign Force and Influence)" ...
+#>  $ venue         : chr  "Independent Journal" "Independent Journal" "Independent Journal" "Independent Journal" ...
+#>  $ date          : Date, format: NA NA ...
+#>  $ byline        : Factor w/ 5 levels "Hamilton","Madison",..: 1 3 3 3 3 1 1 1 1 2 ...
+#>  $ n_words       : int  1597 1672 1448 1644 1346 2144 2264 1998 1985 3007 ...
+#>  $ word_length   : num  4.74 4.9 4.89 4.77 5 ...
+#>  $ word_length_sd: num  2.82 2.77 2.75 2.64 2.67 ...
+#>  $ n_para        : int  12 15 19 18 13 21 11 14 18 24 ...
+#>  $ author        : Factor w/ 4 levels "Hamilton","Madison",..: 1 3 3 3 3 1 1 1 1 2 ...
 table(Federalist_corpus$author)
-#> Error: object 'Federalist_corpus' not found
+#> 
+#> Hamilton  Madison      Jay Disputed 
+#>       51       17        5       12 
 
 # byline vs. author disagree only for essay 58
 subset(Federalist_corpus, byline != "Hamilton or Madison" &
                            byline != "Hamilton and Madison" &
                            author == "Disputed")
-#> Error: object 'Federalist_corpus' not found
+#>    essay
+#> 58    58
+#>                                                                                                          title
+#> 58 Objection That The Number of Members Will Not Be Augmented as the Progress of Population Demands Considered
+#>    venue date  byline n_words word_length word_length_sd n_para   author
+#> 58  <NA> <NA> Madison    2089       4.938          3.027      3 Disputed
 
 data(Federalist_markers)
-#> Warning: data set 'Federalist_markers' not found
 str(Federalist_markers)
-#> Error: object 'Federalist_markers' not found
+#> 'data.frame':    1020 obs. of  3 variables:
+#>  $ essay: int  1 1 1 1 1 1 1 1 1 1 ...
+#>  $ word : Factor w/ 12 levels "upon","enough",..: 1 2 3 4 5 6 7 8 9 10 ...
+#>  $ n    : int  6 1 0 0 14 9 71 14 2 6 ...
 
 # reproduce the classic "upon" rate-per-1000-words comparison
 upon <- subset(Federalist_markers, word == "upon")
-#> Error: object 'Federalist_markers' not found
 upon <- merge(upon, Federalist_corpus[c("essay", "author", "n_words")])
-#> Error: object 'upon' not found
 upon$rate_1000 <- 1000 * upon$n / upon$n_words
-#> Error: object 'upon' not found
 aggregate(rate_1000 ~ author, data = subset(upon, author != "Jay"), mean)
-#> Error in eval(m$data, parent.frame()): object 'upon' not found
+#>     author rate_1000
+#> 1 Hamilton 3.2783802
+#> 2  Madison 0.2012173
+#> 3 Disputed 0.1582006
 
 data(Federalist_text)
-#> Warning: data set 'Federalist_text' not found
 str(Federalist_text)
-#> Error: object 'Federalist_text' not found
+#> 'data.frame':    1091 obs. of  3 variables:
+#>  $ essay    : int  1 1 1 1 1 1 1 1 1 1 ...
+#>  $ paragraph: int  1 2 3 4 5 6 7 8 9 10 ...
+#>  $ text     : chr  "To the People of the State of New York:" "After an unequivocal experience of the inefficacy of the subsisting federal government, you are called upon to "| __truncated__ "This idea will add the inducements of philanthropy to those of patriotism, to heighten the solicitude which all"| __truncated__ "Among the most formidable of the obstacles which the new Constitution will have to encounter may readily be dis"| __truncated__ ...
 subset(Federalist_text, essay == 1 & paragraph == 1)
-#> Error: object 'Federalist_text' not found
+#>   essay paragraph                                    text
+#> 1     1         1 To the People of the State of New York:
 ```

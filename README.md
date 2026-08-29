@@ -21,7 +21,7 @@ Commit](https://img.shields.io/github/last-commit/friendly/HistData)](https://gi
 
 <!-- Dev. Version: 1.0.0 -->
 
-Version 1.1.0 (2026-08-26)
+Version 1.1.0 (2026-08-28)
 
 The `HistData` package provides a collection of small data sets that are
 interesting and important in the history of statistics and data
@@ -40,7 +40,8 @@ to do better!
 Some of these been featured in social media calls for participation,
 such as the [30 Day Chart
 Challenge](https://github.com/30DayChartChallenge/Edition2025). A new
-vignette describes this more generally as a [HistData Challenge]().
+vignette describes this more generally as a [HistData
+Challenge](https://friendly.github.io/HistData/articles/HistData-Challenge.html).
 
 This is part of a program of research called *statistical
 historiography* (Friendly, 2007; Friendly & Denis, 2001; Friendly et-al,
@@ -224,6 +225,7 @@ tt(dsets, width = c(.2, .8)) |>
 | [CushnyPeeblesN](https://friendly.github.io/HistData/reference/CushnyPeeblesN.html)         | Cushny-Peebles Data: Soporific Effects of Scopolamine Derivatives                |
 | [Dactyl](https://friendly.github.io/HistData/reference/Dactyl.html)                         | Edgeworth’s counts of dactyls in Virgil’s Aeneid                                 |
 | [DrinksWages](https://friendly.github.io/HistData/reference/DrinksWages.html)               | Elderton and Pearson’s (1910) data on drinking and wages                         |
+| [Ebbinghaus](https://friendly.github.io/HistData/reference/Ebbinghaus.html)                 | Ebbinghaus’ Forgetting Curve and Three Replications                              |
 | [EdgeworthDeaths](https://friendly.github.io/HistData/reference/EdgeworthDeaths.html)       | Edgeworth’s Data on Death Rates in British Counties                              |
 | [Federalist_corpus](https://friendly.github.io/HistData/reference/Federalist_corpus.html)   | The Federalist Papers: corpus metadata, marker-word counts, and text             |
 | [Federalist_markers](https://friendly.github.io/HistData/reference/Federalist_markers.html) | The Federalist Papers: corpus metadata, marker-word counts, and text             |

@@ -1,45 +1,31 @@
 ## Test environments
-* local Windows 10 install, 4.5.1 (2025-06-13 ucrt)
-* win-builder: R Under development (unstable) (2025-11-27 r89071 ucrt)
+* local Windows 10 x64 install, R version 4.6.1 (2026-06-24 ucrt)
+* win-builder R Under development (unstable) (2026-08-27 r90452 ucrt)
 
 ## R CMD check results
-There were no ERRORs, WARNINGs or NOTEs 
-  
-## Comments
+0 error(s) | 0 warning(s) | 0 note(s)
 
-## Version 1.0.0
 
-This is a major release of the package, reorganizing and reformatting the documentation and adding one new dataset
 
-* Add `Playfair1824` data [Thx: Ivan Lokhov]
-* Convert documentation from Rd to roxygen (painfully!), but also make edits to dataset descriptions, references, ...
-* Some contributors made authors
-* Extended package description
-* Ran `roxygen2md(scope="simple")` to use markdown in docs
-* Fixed broken URLs
-* Add @references to nice examples of the use of these datasets
-* Added @concept tags to all datasets giving the associated statistical or graphic ideas one might want to search for [Thx: Claude]
+## Reverse dependencies checks
 
-## Version 0.9.4
-
-* Switch to recommended versioning
-* Add example graphs from John Russell to `sandbox/`
-* Add link to Horsekicks package
-
-## Reverse dependencies
-
-> devtools::revdep()
-[1] "cholera" "statsr"  "UsingR" 
-
-## revdepcheck results
-
-> revdepcheck::revdep_check(num_workers = 4, bioc=FALSE)
-
-## revdepcheck results
 
 We checked 3 reverse dependencies, comparing R CMD check results across CRAN and dev versions of this package.
 
- * We saw 0 new problems
- * We failed to check 0 packages
+* We saw 0 new problems
+* We failed to check 0 packages
 
+
+## Comments
+
+## Version 1.1.0
+
+This is a modest release of the package, adding three new data sets and a vignette
+
+* Add `Federalist` data: `Federalist_corpus`, `Federalist_markers`, and `Federalist_text`, built from the 85 Federalist Papers (Project Gutenberg #18) for Mosteller & Wallace-style authorship-attribution and text analysis
+* Add link to N. Rennie's Snow Maps
+* Package cleanup: get rid of `man-old`, reorganize `sandbox/`
+* Add `Perozzo` data (Swedish census survivorship grid underlying Perozzo's 1880/1881 stereogram). This also poses another HistData challenge re-create his graphic, or do something better or different.
+* Add `HistData-Challenge` vignette: "re-visioning" historical graphics as a form of statistical historiography, with a taxonomy of ways to re-create or extend a graphic and worked case studies for `Arbuthnot`, `Minard`, `Perozzo`, and `Snow`
+* Add `Ebbinghaus` data: learning/relearning repetition counts for Ebbinghaus' (1885) forgetting-curve experiment and two replications (Heller, Mack & Seitz 1991; Murre & Dros 2015) [Thx: Jaap Murre]
 

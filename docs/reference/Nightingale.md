@@ -91,7 +91,7 @@ British Army during the Late War with Russia* London: John W. Parker and
 Son.
 
 Small, H. (1998) Florence Nightingale's statistical diagrams
-<http://www.florence-nightingale-avenging-angel.co.uk/GraphicsPaper/Graphics.htm>
+<https://www.florence-nightingale-avenging-angel.co.uk/GraphicsPaper/Graphics.htm>
 
 Pearson, M. and Short, I. (2008) Nightingale's Rose (flash animation).
 [http://understandinguncertainty.org/files/animations/Nightingale11/Nightingale1.html](http://understandinguncertainty.org/files/animations/Nightingale11/Nightingale1.md)

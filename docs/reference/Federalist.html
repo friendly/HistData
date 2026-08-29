@@ -15,7 +15,7 @@ authorship between Hamilton and Madison.'><meta property="og:image" content="htt
 
     <a class="navbar-brand me-2" href="../index.html">HistData</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.1.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -205,39 +205,60 @@ strongest discriminators.)</p>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">Federalist_corpus</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>data set 'Federalist_corpus' not found</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">Federalist_corpus</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'Federalist_corpus' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 'data.frame':	85 obs. of  10 variables:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ essay         : int  1 2 3 4 5 6 7 8 9 10 ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ title         : chr  "General Introduction" "Concerning Dangers from Foreign Force and Influence" "The Same Subject Continued (Concerning Dangers From Foreign Force and Influence)" "The Same Subject Continued (Concerning Dangers From Foreign Force and Influence)" ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ venue         : chr  "Independent Journal" "Independent Journal" "Independent Journal" "Independent Journal" ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ date          : Date, format: NA NA ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ byline        : Factor w/ 5 levels "Hamilton","Madison",..: 1 3 3 3 3 1 1 1 1 2 ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ n_words       : int  1597 1672 1448 1644 1346 2144 2264 1998 1985 3007 ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ word_length   : num  4.74 4.9 4.89 4.77 5 ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ word_length_sd: num  2.82 2.77 2.75 2.64 2.67 ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ n_para        : int  12 15 19 18 13 21 11 14 18 24 ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ author        : Factor w/ 4 levels "Hamilton","Madison",..: 1 3 3 3 3 1 1 1 1 2 ...</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="va">Federalist_corpus</span><span class="op">$</span><span class="va">author</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'Federalist_corpus' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> Hamilton  Madison      Jay Disputed </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>       51       17        5       12 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># byline vs. author disagree only for essay 58</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">Federalist_corpus</span>, <span class="va">byline</span> <span class="op">!=</span> <span class="st">"Hamilton or Madison"</span> <span class="op">&amp;</span></span></span>
 <span class="r-in"><span>                           <span class="va">byline</span> <span class="op">!=</span> <span class="st">"Hamilton and Madison"</span> <span class="op">&amp;</span></span></span>
 <span class="r-in"><span>                           <span class="va">author</span> <span class="op">==</span> <span class="st">"Disputed"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'Federalist_corpus' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    essay</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58    58</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                          title</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58 Objection That The Number of Members Will Not Be Augmented as the Progress of Population Demands Considered</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    venue date  byline n_words word_length word_length_sd n_para   author</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 58  &lt;NA&gt; &lt;NA&gt; Madison    2089       4.938          3.027      3 Disputed</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">Federalist_markers</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>data set 'Federalist_markers' not found</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">Federalist_markers</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'Federalist_markers' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 'data.frame':	1020 obs. of  3 variables:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ essay: int  1 1 1 1 1 1 1 1 1 1 ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ word : Factor w/ 12 levels "upon","enough",..: 1 2 3 4 5 6 7 8 9 10 ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ n    : int  6 1 0 0 14 9 71 14 2 6 ...</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># reproduce the classic "upon" rate-per-1000-words comparison</span></span></span>
 <span class="r-in"><span><span class="va">upon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">Federalist_markers</span>, <span class="va">word</span> <span class="op">==</span> <span class="st">"upon"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'Federalist_markers' not found</span>
 <span class="r-in"><span><span class="va">upon</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/merge.html" class="external-link">merge</a></span><span class="op">(</span><span class="va">upon</span>, <span class="va">Federalist_corpus</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"essay"</span>, <span class="st">"author"</span>, <span class="st">"n_words"</span><span class="op">)</span><span class="op">]</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'upon' not found</span>
 <span class="r-in"><span><span class="va">upon</span><span class="op">$</span><span class="va">rate_1000</span> <span class="op">&lt;-</span> <span class="fl">1000</span> <span class="op">*</span> <span class="va">upon</span><span class="op">$</span><span class="va">n</span> <span class="op">/</span> <span class="va">upon</span><span class="op">$</span><span class="va">n_words</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'upon' not found</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/aggregate.html" class="external-link">aggregate</a></span><span class="op">(</span><span class="va">rate_1000</span> <span class="op">~</span> <span class="va">author</span>, data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">upon</span>, <span class="va">author</span> <span class="op">!=</span> <span class="st">"Jay"</span><span class="op">)</span>, <span class="va">mean</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in eval(m$data, parent.frame()):</span> object 'upon' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>     author rate_1000</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Hamilton 3.2783802</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Madison 0.2012173</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 Disputed 0.1582006</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">Federalist_text</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>data set 'Federalist_text' not found</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">Federalist_text</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'Federalist_text' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 'data.frame':	1091 obs. of  3 variables:</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ essay    : int  1 1 1 1 1 1 1 1 1 1 ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ paragraph: int  1 2 3 4 5 6 7 8 9 10 ...</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>  $ text     : chr  "To the People of the State of New York:" "After an unequivocal experience of the inefficacy of the subsisting federal government, you are called upon to "| __truncated__ "This idea will add the inducements of philanthropy to those of patriotism, to heighten the solicitude which all"| __truncated__ "Among the most formidable of the obstacles which the new Constitution will have to encounter may readily be dis"| __truncated__ ...</span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">Federalist_text</span>, <span class="va">essay</span> <span class="op">==</span> <span class="fl">1</span> <span class="op">&amp;</span> <span class="va">paragraph</span> <span class="op">==</span> <span class="fl">1</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'Federalist_text' not found</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   essay paragraph                                    text</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1     1         1 To the People of the State of New York:</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

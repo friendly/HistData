@@ -1,5 +1,95 @@
 # HistData — development tasks
 
+## Release checklist: HistData 1.1.0 CRAN submission (2026-08-28)
+
+Session progress toward the next CRAN release. `DESCRIPTION` is already at 1.1.0 with a `NEWS.md`
+entry (edited directly by MF at the end of this session, not by Claude). Commits this session:
+`6afafaa` (vignette content + CRAN cleanup + pkgdown rebuild), `ea010a8` and `4492ad5` (URL fixes
+caught by `urlchecker::url_check()`), all pushed to `origin/master`.
+
+**Done:**
+
+- `devtools::document()` — no changes needed, docs already current.
+- `devtools::check()` — clean: 0 errors, 0 warnings, 0 notes, after:
+  - Adding `.github/` and `dev/` to `.Rbuildignore` (were generating NOTEs).
+  - Resaving `Federalist_text.RData`, `Pollen.RData`, `Quarrels.RData` with better compression
+    (`tools::resaveRdaFiles()`) — was a WARNING. Note: this re-serializes *every* `.RData` file if
+    run over the whole `data/` dir, mostly as byte-level noise (same size, different bytes); only
+    keep the diff for files that actually shrank, `git checkout --` the rest.
+- `pkgdown::build_site()` rebuilt and pushed (as of commit `6afafaa`; **not** re-run after the two
+  follow-up URL-fix commits below, so the live site's Nightingale/Quarrels reference pages still
+  show the old http:// links — cosmetic only, rebuild before final submission).
+- `urlchecker::url_check()` run — flagged and fixed:
+  - Empty link `[HistData Challenge]()` in `README.Rmd` → now points at the vignette's pkgdown
+    article page.
+  - `man/Nightingale.Rd` and one URL in `man/Quarrels.Rd`: http→https (page unchanged, safe swap).
+  - **Left open**: a second `Quarrels.Rd` URL (`icpsrweb/ICPSR/studies/05407`) redirects to
+    ICPSR's generic homepage, not an https version of the same study page — real link rot, not a
+    protocol bump. Needs someone to find the study's current ICPSR URL (search their site for
+    study 5407) rather than a mechanical fix.
+  - **Left open**: `man/Cholera.Rd`'s `archive.org` PDF link timed out during the check (5s
+    timeout) — likely transient, but worth re-running `url_check()` to confirm it's not actually
+    dead.
+- `spelling::spell_check_package()` run — no new problems beyond expected proper
+  nouns/foreign-language terms/dataset names. One unrelated pre-existing typo noticed but *not*
+  fixed (out of scope for today): "devloping" → "developing",
+  `vignettes/HistData-Challenge.Rmd:112` (Hotelling Society paragraph).
+
+**2026-08-28 follow-up (Claude), triggered by a win-builder run of the pre-`4492ad5` tarball:**
+MF ran `devtools::check_win_devel()` and got back 4 NOTEs. Checked each against current source:
+`Nightingale.Rd` and the Quarrels `file_id` URL were already https in the repo (`4492ad5`) — the
+win-builder result was just stale, built before that commit. The other two were the genuinely
+left-open items above, now resolved:
+- `man/Cholera.Rd`'s archive.org PDF: the item-specific `ia600208.us.archive.org` node URL is
+  confirmed still down (21s timeout, not transient — same failure via direct `curl`). Swapped for
+  archive.org's stable load-balanced alias, `https://archive.org/download/{item}/{file}.pdf`
+  (fast, 200, doesn't pin to one storage node).
+- `man/Quarrels.Rd`'s `icpsrweb/ICPSR/studies/05407` URL: ICPSR's site blocks bot/curl requests
+  outright (403) so the new URL couldn't be content-verified directly, but its DOI
+  (`10.3886/ICPSR05407.v1`, found via a working `doi.org` redirect) resolves to
+  `.../studies/5407/versions/V1` — same numeric study ID as the broken URL, confirming it's the
+  same study. Used the DOI form (`https://doi.org/10.3886/ICPSR05407.v1`) instead of a path, since
+  DOIs survive site reorganizations that plain paths don't (this is the *second* ICPSR URL scheme
+  change for this study).
+- Re-running `url_check()` after the above two fixes surfaced two more real issues, now also
+  fixed: `man/Quarrels.Rd`'s other ICPSR URL (`cgi-bin/file?...file_id=652814`, the codebook link)
+  came back `300 Multiple Choices` — same bot-protection flakiness as the study-page URL — swapped
+  to point at the same DOI-resolved study page instead; `vignettes/histdata.bib`'s `tandfonline.com`
+  URL was still http, fixed to https.
+- `urlchecker::url_check()` now reports **all URLs correct** — the `datavis.ca` timeouts seen in
+  one run didn't recur on a second run (confirmed manually via `curl` too: 200 OK, ~5s), so those
+  were transient network latency against `url_check()`'s aggressive default timeout, not real
+  breakage — no fix needed there.
+- `pkgdown::build_site()` re-run to pick up all of the above.
+- Fixed the "devloping" → "developing" typo (`vignettes/HistData-Challenge.Rmd:113`) noticed
+  during the 2026-08-27 spelling check but deferred as out of scope at the time — trivial enough
+  to just fix while back in this file.
+
+**2026-08-28, later same day: local check + revdep + cran-comments.md, while MF's
+`check_win_devel()` run was in flight:**
+
+- `devtools::check()` (`release_check()`) — clean: 0 errors, 0 warnings, 0 notes. (One INFO during
+  the run, installed size 9.9Mb mostly `doc/` — not a NOTE in the final result, not blocking.)
+- `revdepcheck::revdep_check()` (`release_revdep()`) — clean: `cholera`, `statsr`, `UsingR` all
+  0/0/0 against both CRAN and dev HistData. 0 new problems.
+- `release_cran_comments()` — rewrote `cran-comments.md` from scratch using the above plus the
+  NEWS.md entries since the CRAN version (1.0.0), replacing the stale one that mixed a Nov-2025
+  pre-1.1.0 win-builder run with 1.0.0/0.9.4 release-note leftovers. The win-builder test-environment
+  line is a generic placeholder (script doesn't know the actual run's R-devel date/version) — worth
+  filling in once MF's `check_win_devel()` results email arrives.
+
+**Still open before actually submitting to CRAN:**
+
+- [ ] MF's `check_win_devel()` run (started 2026-08-28) — waiting on the results email; if clean,
+  update `cran-comments.md`'s win-builder line with the actual R-devel version/date from the report.
+- [ ] `DESCRIPTION`'s `Date:` field (currently 2026-08-26) — bump to the actual submission date
+  right before submitting.
+- [X] Resolve the two left-open `urlchecker` items above — done 2026-08-28, see follow-up note.
+- `vignettes/figures/Minard-GoG-specs.jpeg` is intentionally kept on disk, untracked (MF: "keep
+  the Minard-GoG-specs image for now") — unused in the vignette (the code spec was reproduced as a
+  text chunk instead), not committed. Leave as-is unless MF says otherwise.
+
+
 Broken out from the cross-package working list in `C:\Users\friendly\Dropbox\R\TASKS-all.md`
 (2026-08-04). Update here as items are finished; sync back to the main list only if it's useful
 to see HistData status at a glance across packages.
@@ -118,14 +208,16 @@ work rather than clean-up:
   source papers, `framingham.csv`'s actual variable list, next steps) broken out to its own file,
   `issues/Framingham-task.md`, 2026-08-27.
 
-- [ ] **New dataset: Ebbinghaus forgetting-curve replication** —
-  `data-raw/Ebbinghaus Replication Schema and Results.xlsx` (26 sheets: schema tables, Mathematica
-  curve fits, several sheets explicitly marked "not used"/"old"). Messier and further from
-  dataset-ready than the Perozzo files — would need real triage of which sheets are the actual
-  data vs. superseded drafts. Thematically connects to `WordPools` (memory-research datasets).
-  Moved from `sandbox/` to `data-raw/` 2026-08-04 (commit `db5b137`), alongside the other
-  not-yet-imported raw data.
-  File: `data-raw/Ebbinghaus Replication Schema and Results.xlsx`
+- [X] **DONE 2026-08-27: New dataset: Ebbinghaus forgetting-curve replication** —
+  Triaged `data-raw/Ebbinghaus Replication Schema and Results.xlsx` (26 sheets: schema tables,
+  Mathematica curve fits, several sheets explicitly marked "not used"/"old") down to the
+  "Ebbinghaus, Mack, Seitz" sheet's learning/relearning repetition counts, plus Dros' own
+  numbers from the published paper's Table 1. Added as `Ebbinghaus` (commits `5bdb624`,
+  `f2f3a6a`): `R/Ebbinghaus.R`, `data/Ebbinghaus.RData`, `man/Ebbinghaus.Rd`, source materials
+  and import script kept in `data-raw/Ebbinghaus/`. Citation confirmed against the published
+  PLOS ONE version (Murre & Dros, 2015); Jaap Murre added as a `ctb` in `DESCRIPTION`.
+  Thematically connects to `WordPools` (memory-research datasets).
+  File: `data-raw/Ebbinghaus/Ebbinghaus Replication Schema and Results.xlsx`
 
 ## Reference material (not TODO, not clean-up)
 
