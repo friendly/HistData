@@ -2979,7 +2979,7 @@ NULL
 #' subsequently mention.
 #' 
 #' See the original codebook, linked from the study page at
-#' <https://doi.org/10.3886/ICPSR05407.v1>, for details not contained here.
+#' \doi{10.3886/ICPSR05407.v1}, for details not contained here.
 #' 
 #' @name Quarrels
 #' @docType data
@@ -3082,7 +3082,7 @@ NULL
 #' Rummel, Rudolph J. (1967), "Dimensions of Dyadic War, 1820-1952."
 #' *Journal of Conflict Resolution*. **11**, (2), 176 - 183.
 #' 
-#' @source <https://doi.org/10.3886/ICPSR05407.v1>
+#' @source \doi{10.3886/ICPSR05407.v1}
 #' 
 #' @keywords datasets
 #' @examples

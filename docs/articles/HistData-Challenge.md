@@ -103,7 +103,7 @@ Some examples illustrate the range of possibilities from such endeavors:
   presentation.
 
   The baseball data itself outlived the course: working with it for the
-  Hotelling Society is what led, eventually, to devloping the
+  Hotelling Society is what led, eventually, to developing the
   [`Lahman`](https://github.com/cdalzell/Lahman) R package, which
   packages Sean Lahman’s baseball database directly for R users – itself
   a small case of one challenge (teach a course, make the data usable)

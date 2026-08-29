@@ -20,3 +20,4 @@ sandbox/
 ^\.claude$
 ^\.github$
 ^dev$
+^\.release_check_result\.rds$

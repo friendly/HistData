@@ -10,3 +10,4 @@ issues/vignettes/*_files/
 vignettes/*.html
 vignettes/*.knit.md
 vignettes/*_files/
+.release_check_result.rds

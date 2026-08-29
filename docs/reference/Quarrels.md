@@ -361,7 +361,7 @@ A data frame with 779 observations on the following 84 variables.
 
 ## Source
 
-<https://doi.org/10.3886/ICPSR05407.v1>
+[doi:10.3886/ICPSR05407.v1](https://doi.org/10.3886/ICPSR05407.v1)
 
 ## Details
 
@@ -376,7 +376,8 @@ or irrelevant to the particular quarrel, and did not subsequently
 mention.
 
 See the original codebook, linked from the study page at
-<https://doi.org/10.3886/ICPSR05407.v1>, for details not contained here.
+[doi:10.3886/ICPSR05407.v1](https://doi.org/10.3886/ICPSR05407.v1) , for
+details not contained here.
 
 ## References
 
