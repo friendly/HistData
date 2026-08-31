@@ -1,3 +1,7 @@
+## Version 1.1.1
+
+* Document `Perozzo`'s full provenance chain to the original 1880 printed table [Thx: RJ Andrews]
+
 ## Version 1.1.0
 
 This is a modest release of the package, adding three new data sets and a vignette
