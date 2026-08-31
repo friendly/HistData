@@ -14,12 +14,15 @@ A data frame with 546 observations on the following 3 variables, forming a
 }
 }
 \source{
-This package's copy matches, byte-for-byte, \code{porozzo-tidy.csv} in RJ Andrews' \code{old-charts}
-GitHub repo: \url{https://github.com/infowetrust/old-charts/tree/main/src/components/PerozzoSweden/data}
-(see also \url{https://charts.infowetrust.com/}). That's the immediate source of this dataset, but
-not the original digitization -- \code{old-charts} doesn't document how those values were derived
-from Perozzo's plate either (see Details). The original stereogram is held by Wikimedia
-Commons:
+Traced to the original printed table in Perozzo's own 1880 paper, \emph{Annali di Statistica}
+ser. 2, v. 11-12 (1880), scanned by HathiTrust:
+\url{https://babel.hathitrust.org/cgi/pt?id=mdp.39015033949978&seq=226}. RJ Andrews OCR'd and
+corrected that table, then transformed it into this \code{Year} x \code{Age} grid (see Details).
+His result was posted, byte-identical to this package's copy, as \code{porozzo-tidy.csv} in
+his \code{old-charts} GitHub repo:
+\url{https://github.com/infowetrust/old-charts/tree/main/src/components/PerozzoSweden/data}
+(see also \url{https://charts.infowetrust.com/}). The original stereogram -- Perozzo's
+graphic built from this same table -- is held by Wikimedia Commons:
 \url{https://commons.wikimedia.org/wiki/File:Stereogram_(three-dimensional_population_pyramid)_modeled_on_actual_data_(Swedish_census,_1750-1875).jpg}
 }
 \usage{
@@ -38,14 +41,22 @@ letting a viewer read off both cross-sections (the age distribution in a given c
 year) and diagonal cohort lines (survivorship of a single birth cohort as it ages) from
 one figure -- widely cited as one of the earliest true 3D statistical graphics.
 
-The immediate source of this tidy grid was traced 2026-08-07 to RJ Andrews' \code{old-charts}
-GitHub repo (\code{infowetrust/old-charts}, component \code{PerozzoSweden}) -- confirmed byte-identical
-to that repo's \code{porozzo-tidy.csv}. That repo is itself a from-scratch React/D3-style redraw of
-Perozzo's stereogram, built from this same grid; it documents no further provenance for the
-numbers themselves, so how they were originally read off Perozzo's 1880/1881 plate is still
-unknown. See \href{https://github.com/friendly/HistData/blob/master/issues/vignettes/verifying-perozzo.md}{issues/vignettes/verifying-perozzo.md}
-(on GitHub -- \verb{issues/} is dev-only and not included in the installed package) for the full
-trace and for a methodology to verify the grid against the original image directly.
+The original numbers were published as a printed table in Perozzo's own 1880 paper (see
+\verb{@source}), not read off the stereogram image itself. That table is organized by
+birth-year cohort (\verb{Anni di nascita}, in 5-year bands) crossed with age at observation --
+not by census year x age directly. The \code{Year} column here (census year) comes from a
+\code{birth_year + Age} transform applied after digitizing the table, not from the original
+table's own layout.
+
+The full chain is now documented: RJ Andrews OCR'd the printed table from a HathiTrust
+scan, hand-corrected several OCR misreads, transformed the birth-cohort table into this
+\code{Year} x \code{Age} grid, and tidied it to long format (confirmed directly with him,
+2026-08-31). That result was posted, byte-identical to the copy shipped here, as
+\code{porozzo-tidy.csv} in his \code{old-charts} GitHub repo -- the route this package's copy was
+traced through as of 2026-08-07, before the fuller upstream story was confirmed with him
+directly. See \href{https://github.com/friendly/HistData/blob/master/issues/vignettes/verifying-perozzo.md}{issues/vignettes/verifying-perozzo.md}
+(on GitHub -- \verb{issues/} is dev-only and not included in the installed package) for the
+full trace.
 
 Perozzo's 3D graphic was remarkable in its' time and still is today, for attention to detail in his
 hand-drawn graphic. The simple image from \code{graphics::persp} show here is a very coarse approximation.

@@ -178,15 +178,23 @@ work rather than clean-up:
     (commit `a68f615`) — it's the upstream filename. Full trace, plus what the repo's `.tsx`
     rendering code reveals, in `issues/vignettes/verifying-perozzo.md`.
     
-  - [ ] **TODO: still open — original digitization from Perozzo's 1880/1881 plate is unknown**
-    — `old-charts` is itself a from-scratch redraw built from this same grid; nothing in that repo
-    (code comments, README) documents how its numbers were originally read off the plate, so
-    tracing the immediate source doesn't close this. Noted in `R/Perozzo.R`'s `@details`/`@source`.
-    See `issues/vignettes/verifying-perozzo.md` for a methodology (gridline plausibility check,
-    label-anchored spot checks, rigorous re-digitization via the chart's own axonometric
-    projection) and for the current, informal state of each check — including the still-unbuilt
-    "does `Perozzo`, plotted, actually reproduce the look of the original lithograph" comparison,
-    which is the real target here, not just provenance-chasing.
+  - [X] **Resolved 2026-08-31: original digitization source now known** — MF emailed RJ Andrews
+    directly asking where `porozzo-tidy.csv`'s numbers originally came from; he replied with a
+    Google Sheet (`data-raw/Perozzo-Sweden.xlsx` locally, gitignored — not public, pending his
+    permission) tracing the full chain: the numbers come from **OCR of the printed table** in
+    Perozzo's own 1880 paper (*Annali di Statistica* ser. 2, v.11-12), scanned by HathiTrust
+    (<https://babel.hathitrust.org/cgi/pt?id=mdp.39015033949978&seq=226>) — not from reading pixel
+    positions off the stereogram image. That table is organized by birth-year cohort x age at
+    observation, not census-year x age; the shipped `Year` (census year) comes from a
+    `birth_year + Age` transform applied after OCR. RJ hand-corrected visible OCR misreads (e.g.
+    `1.072` → `1072`, `6,71S` → likely `6713`) before the transform. Confirmed his tidied result
+    matches `HistData::Perozzo` exactly. `R/Perozzo.R`'s `@details`/`@source` rewritten to describe
+    this (2026-08-31).
+    
+    **Still separately open**: the "does `Perozzo`, plotted, actually reproduce the *look* of the
+    original lithograph" visual comparison from `issues/vignettes/verifying-perozzo.md` — unaffected
+    by this resolution, since that's about the graphic's rendering, not the underlying numbers'
+    provenance. Still unbuilt.
     
   - [X] **Resolved (narrowly): `data-raw/perozzo-contours.json` is redundant, not shipping it** —
     compared against `contourLines()` recomputed straight from the `Perozzo` grid at the same 29

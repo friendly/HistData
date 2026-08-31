@@ -99,6 +99,33 @@ So the chain is now: **Perozzo (1880/1881 plate) &rarr; ??? &rarr; `infowetrust/
 `porozzo-tidy.csv` &rarr; `HistData::Perozzo`.** The `???` is still open -- closing it fully would
 mean asking RJ Andrews directly, or finding whatever *they* worked from.
 
+**Update 2026-08-31: the `???` is closed.** MF emailed RJ Andrews asking exactly that question; he
+replied with a Google Sheet tracing his own process (kept locally as `data-raw/Perozzo-Sweden.xlsx`,
+gitignored -- not public pending his permission). It has five tabs: `source`, `OCR`, `corrected-wide`,
+`plotMe-wide`, `plotMe-tidy`.
+
+- `source`: a HathiTrust scan of the actual page, *Annali di Statistica* ser. 2, v.11-12 (1880):
+  <https://babel.hathitrust.org/cgi/pt?id=mdp.39015033949978&seq=226>. So the numbers trace to
+  Perozzo's own **printed table**, not to reading pixel positions off the stereogram lithograph --
+  a materially better provenance than what this note's methodology section (below) was written to
+  handle, which assumed image-digitization was the only path.
+- `OCR`: the raw OCR pass over that table, with visible misreads left in (e.g. `1.072`, `7.073`,
+  `21.319`, `6,71S`) -- exactly the "precision fingerprint" style tell this note's own "hook"
+  section (above) argues you should look for, except here it's evidence *for* a real, traceable
+  digitization step having happened, not evidence of circularity.
+- `corrected-wide`: those OCR errors hand-corrected, still in the table's *original* layout --
+  birth-year cohort (`Anni di nascita`, 5-year bands) x age at observation. This is the detail
+  that changes the shipped dataset's own documentation: `Year` in `HistData::Perozzo` is *census*
+  year, which is not how Perozzo's own table was organized -- it comes from a `birth_year + Age`
+  transform applied after OCR, not from the table's own row/column layout.
+- `plotMe-wide` / `plotMe-tidy`: the cohort table transformed into the `Year` (census) x `Age` grid
+  and tidied to long format -- confirmed matching `HistData::Perozzo` exactly (spot-checked several
+  rows, e.g. Year=1750/1755, Age=0).
+
+`R/Perozzo.R`'s `@details`/`@source` rewritten 2026-08-31 to describe this chain (without naming or
+linking the private spreadsheet -- only the public HathiTrust and `old-charts` links). `issues/TASKS.md`'s
+Perozzo TODO marked resolved on this point.
+
 ### The actual goal, restated
 
 Tracing the file's ancestry is bookkeeping, not verification -- worth being honest about that.
@@ -234,22 +261,24 @@ which would itself be a finding, not just a footnote. Not yet resolved either wa
   The "old-charts is itself a re-vision, with the same provenance gap" observation above is good
   material for this framing.
 - Whether to actually build check 4 (the axonometric re-digitizer) as part of this piece, or leave
-  it as a described-but-not-built methodology step, same trade-off `histdata-challenge.md` made
-  for `gganimate`/gallery-image licensing elsewhere.
-- Whether to reach out to RJ Andrews directly about `old-charts`' own source for `porozzo-tidy.csv`
-  -- the fastest possible way to close the remaining `???` in the provenance chain, if he still has
-  it.
-- If the digitization source genuinely can't be recovered further (asked RJ, checked old
-  email/notes, nothing), that's itself worth stating explicitly in `R/Perozzo.R`'s `@details`
-  rather than leaving it as an open TODO indefinitely -- "unknown, presumed lost" is a legitimate,
-  honest end state for provenance, not a failure to keep chasing.
+  it as a described-but-not-built methodology step. **Largely moot now** (2026-08-31 update above):
+  the numbers trace to OCR of Perozzo's own printed table, not to re-derivable pixel positions off
+  the lithograph, so a from-scratch re-digitization would mostly be re-deriving what OCR + RJ's own
+  correction pass already did, not independent verification. Still worth doing if the *lithograph
+  itself* (as opposed to the printed table) is ever suspected to diverge from the table -- but
+  that's a different, much narrower question than "where did these numbers come from."
+- ~~Whether to reach out to RJ Andrews directly~~ -- **done, 2026-08-31**, see the update above. He
+  had the full trace.
 
 ## Related files
 
-- `R/Perozzo.R` -- dataset documentation; `@source`/`@details` now name the `old-charts` trace and
-  the still-unresolved ultimate digitization question (updated 2026-08-07).
-- `data-raw/Perozzo-import.R`, `data-raw/perozzo-tidy.csv` -- the shipped data; immediate upstream
-  now identified (see above), earlier provenance still unknown.
+- `R/Perozzo.R` -- dataset documentation; `@source`/`@details` rewritten 2026-08-31 to describe the
+  full chain to Perozzo's printed table (see update above), superseding the 2026-08-07 version
+  that stopped at `old-charts`.
+- `data-raw/Perozzo-import.R`, `data-raw/perozzo-tidy.csv` -- the shipped data; full upstream chain
+  now known (see 2026-08-31 update above).
+- `data-raw/Perozzo-Sweden.xlsx` -- RJ Andrews' own OCR/correction/transform trace, kept locally,
+  gitignored, not public pending his permission to include it.
 - `data-raw/perozzo-contours.json`, `data-raw/Perozzo-contours-compare.R` (+ `.csv`/`.png`
   output) -- the circular comparison this note is built around; now independently confirmed
   circular by reading `old-charts`' `core/contours.ts`.
@@ -257,7 +286,8 @@ which would itself be a finding, not just a footnote. Not yet resolved either wa
   also where the "1850-1870 dip" TODO already lives.
 - `issues/vignettes/figures/Perozzo-600dpi.jpg`, `perozzo-original.jpg` -- reference images used
   for the informal gridline check above, and for the still-to-build side-by-side reproduction.
-- `issues/TASKS.md` (lines 66-93) -- the Perozzo TODO entry, updated 2026-08-07 with the trace.
+- `issues/TASKS.md` -- the Perozzo TODO entry, marked resolved on the digitization-source question
+  2026-08-31.
 
 ## External
 
