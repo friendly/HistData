@@ -11,4 +11,4 @@ vignettes/*.html
 vignettes/*.knit.md
 vignettes/*_files/
 .release_check_result.rds
-data-raw/Perozzo-Sweden.xlsx
+data-raw/Perozzo/Perozzo-Sweden.xlsx

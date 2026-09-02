@@ -1,5 +1,5 @@
 library(readr)
-Perozzo <- read_csv("data-raw/perozzo-tidy.csv")
+Perozzo <- read_csv("data-raw/Perozzo/perozzo-tidy.csv")
 
 Perozzo <- as.data.frame(Perozzo)
 str(Perozzo)

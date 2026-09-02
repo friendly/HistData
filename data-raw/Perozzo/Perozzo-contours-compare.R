@@ -13,7 +13,7 @@ ages  <- as.numeric(colnames(Pmat))
 
 ## ---- digitized contours (from JSON) --------------------------------------
 
-raw <- fromJSON("data-raw/perozzo-contours.json", simplifyVector = FALSE)
+raw <- fromJSON("data-raw/Perozzo/perozzo-contours.json", simplifyVector = FALSE)
 
 digitized <- bind_rows(lapply(seq_along(raw), function(i) {
   pts <- bind_rows(lapply(raw[[i]]$points, as.data.frame))
@@ -59,7 +59,7 @@ p <- ggplot(both, aes(year, age, group = group, color = source)) +
        x = "Year", y = "Age", color = "Source") +
   theme_minimal()
 
-ggsave("data-raw/Perozzo-contours-compare.png", p, width = 8, height = 6, dpi = 150)
+ggsave("data-raw/Perozzo/Perozzo-contours-compare.png", p, width = 8, height = 6, dpi = 150)
 print(p)
 
 ## ---- numeric comparison ----------------------------------------------------
@@ -85,4 +85,4 @@ compare_level <- function(lev) {
 comparison <- bind_rows(lapply(levels_used, compare_level))
 print(comparison, row.names = FALSE)
 
-write.csv(comparison, "data-raw/Perozzo-contours-compare.csv", row.names = FALSE)
+write.csv(comparison, "data-raw/Perozzo/Perozzo-contours-compare.csv", row.names = FALSE)
