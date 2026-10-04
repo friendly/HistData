@@ -64,6 +64,11 @@
 - [`HalleyLifeTable`](https://friendly.github.io/HistData/reference/HalleyLifeTable.md)
   : Halley's Life Table
 
+- [`Handwashing.clinics`](https://friendly.github.io/HistData/reference/Handwashing.md)
+  [`Handwashing.monthly`](https://friendly.github.io/HistData/reference/Handwashing.md)
+  [`Handwashing.hospital`](https://friendly.github.io/HistData/reference/Handwashing.md)
+  : Semmelweis' Data on Handwashing and Deaths from Childbed Fever
+
 - [`HistData-package`](https://friendly.github.io/HistData/reference/HistData-package.md)
   [`HistData`](https://friendly.github.io/HistData/reference/HistData-package.md)
   [`_PACKAGE`](https://friendly.github.io/HistData/reference/HistData-package.md)

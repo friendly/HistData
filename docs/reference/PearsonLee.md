@@ -73,7 +73,6 @@ See the example by John Russell for the
 ## Examples
 
 ``` r
-
 data(PearsonLee)
 str(PearsonLee)
 #> 'data.frame':    746 obs. of  6 variables:

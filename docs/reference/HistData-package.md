@@ -81,9 +81,18 @@ Data sets included in the HistData package are:
 
   Elderton and Pearson's (1910) data on drinking and wages
 
+- [`Ebbinghaus`](https://friendly.github.io/HistData/reference/Ebbinghaus.md):
+
+  Ebbinghaus' forgetting curve and three replications
+
 - [`EdgeworthDeaths`](https://friendly.github.io/HistData/reference/EdgeworthDeaths.md):
 
   Edgeworth's Data on Death Rates in British Counties
+
+- [`Federalist`](https://friendly.github.io/HistData/reference/Federalist.md):
+
+  The Federalist Papers: texts and word counts for authorship
+  attribution
 
 - [`Fingerprints`](https://friendly.github.io/HistData/reference/Fingerprints.md):
 
@@ -100,6 +109,10 @@ Data sets included in the HistData package are:
 - [`Guerry`](https://friendly.github.io/HistData/reference/Guerry.md):
 
   Data from A.-M. Guerry, "Essay on the Moral Statistics of France"
+
+- [`Handwashing`](https://friendly.github.io/HistData/reference/Handwashing.md):
+
+  Semmelweis' data on handwashing and deaths from childbed fever
 
 - [`HalleyLifeTable`](https://friendly.github.io/HistData/reference/HalleyLifeTable.md):
 
@@ -143,6 +156,14 @@ Data sets included in the HistData package are:
 
   Pearson and Lee's 1896 data on the heights of parents and children
   classified by gender
+
+- [`Perozzo`](https://friendly.github.io/HistData/reference/Perozzo.md):
+
+  Perozzo's Swedish population survivorship data
+
+- [`Playfair1824`](https://friendly.github.io/HistData/reference/Playfair1824.md):
+
+  Playfair's Linear Chronology
 
 - [`PolioTrials`](https://friendly.github.io/HistData/reference/PolioTrials.md):
 
@@ -226,12 +247,15 @@ https://www.hup.harvard.edu/books/9780674975231, Web site:
 
 [`Dactyl`](https://friendly.github.io/HistData/reference/Dactyl.md),
 [`DrinksWages`](https://friendly.github.io/HistData/reference/DrinksWages.md),
+[`Ebbinghaus`](https://friendly.github.io/HistData/reference/Ebbinghaus.md),
 [`EdgeworthDeaths`](https://friendly.github.io/HistData/reference/EdgeworthDeaths.md),
+[`Federalist`](https://friendly.github.io/HistData/reference/Federalist.md),
 [`Fingerprints`](https://friendly.github.io/HistData/reference/Fingerprints.md),
 [`Galton`](https://friendly.github.io/HistData/reference/Galton.md),
 [`GaltonFamilies`](https://friendly.github.io/HistData/reference/GaltonFamilies.md),
 [`Guerry`](https://friendly.github.io/HistData/reference/Guerry.md),
 [`HalleyLifeTable`](https://friendly.github.io/HistData/reference/HalleyLifeTable.md),
+[`Handwashing`](https://friendly.github.io/HistData/reference/Handwashing.md),
 
 [`Jevons`](https://friendly.github.io/HistData/reference/Jevons.md),
 [`Langren`](https://friendly.github.io/HistData/reference/Langren.md),
@@ -242,6 +266,8 @@ https://www.hup.harvard.edu/books/9780674975231, Web site:
 
 [`OldMaps`](https://friendly.github.io/HistData/reference/OldMaps.md),
 [`PearsonLee`](https://friendly.github.io/HistData/reference/PearsonLee.md),
+[`Perozzo`](https://friendly.github.io/HistData/reference/Perozzo.md),
+[`Playfair1824`](https://friendly.github.io/HistData/reference/Playfair1824.md),
 [`PolioTrials`](https://friendly.github.io/HistData/reference/PolioTrials.md),
 [`Pollen`](https://friendly.github.io/HistData/reference/Pollen.md),
 [`Prostitutes`](https://friendly.github.io/HistData/reference/Prostitutes.md),
@@ -256,7 +282,7 @@ https://www.hup.harvard.edu/books/9780674975231, Web site:
 Other packages containing data sets of historical interest include:
 
 The
-[`Guerry-package`](https://rdrr.io/pkg/Guerry/man/Guerry-package.html),
+[`Guerry-package`](http://friendly.github.io/Guerry/reference/Guerry-package.md),
 containing maps and other data sets related to Guerry's (1833) *Moral
 Statistics of France*.
 
@@ -285,6 +311,5 @@ Maintainer: Michael Friendly
 ## Examples
 
 ``` r
-
 # see examples for the separate data sets, e.g., with ?Dataset or example(Dataset)
 ```

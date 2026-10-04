@@ -74,7 +74,6 @@ Riley, J. (2023). "Cholera in Victorian England", blog post,
 ## Examples
 
 ``` r
-
 data(CholeraDeaths1849)
 str(CholeraDeaths1849)
 #> tibble [730 × 6] (S3: tbl_df/tbl/data.frame)

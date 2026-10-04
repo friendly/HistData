@@ -93,7 +93,6 @@ enel Reyno de Portugal. Lisbon, 1588.
 ## Examples
 
 ``` r
-
 data(Armada)
 # delete character and redundant variable
 armada <- Armada[,-c(1,6)]

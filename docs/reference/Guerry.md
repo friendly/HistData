@@ -191,13 +191,13 @@ Statistics of France (1833),
 ## See also
 
 The Guerry package for maps of France:
-[`gfrance`](https://rdrr.io/pkg/Guerry/man/gfrance.html), related data,
-creating maps of his data and multivariate spatial analysis.
+[`gfrance`](http://friendly.github.io/Guerry/reference/gfrance.md),
+related data, creating maps of his data and multivariate spatial
+analysis.
 
 ## Examples
 
 ``` r
-
 data(Guerry)
 ## maybe str(Guerry) ; plot(Guerry) ...
 ```

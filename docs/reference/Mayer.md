@@ -103,7 +103,6 @@ Luiz Fernando Palin Droubi
 ## Examples
 
 ``` r
-
 library(sp)
 library(effects)
 data(Mayer)

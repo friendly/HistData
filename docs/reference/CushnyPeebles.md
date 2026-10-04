@@ -96,7 +96,6 @@ of this data set.
 ## Examples
 
 ``` r
-
 data(CushnyPeebles)
 # quick looks at the data
 plot(CushnyPeebles)
@@ -189,7 +188,6 @@ if (require(heplots)) {
   pairs(CPmod, idata=Treats, idesign= ~Treatment, iterm="Treatment")
 }
 #> Loading required package: heplots
-#> Loading required package: broom
 #> Note: model has only an intercept; equivalent type-III tests substituted.
 
 #> Note: model has only an intercept; equivalent type-III tests substituted.
