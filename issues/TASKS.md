@@ -180,7 +180,7 @@ work rather than clean-up:
     
   - [X] **Resolved 2026-08-31: original digitization source now known** — MF emailed RJ Andrews
     directly asking where `porozzo-tidy.csv`'s numbers originally came from; he replied with a
-    Google Sheet (`data-raw/Perozzo-Sweden.xlsx` locally, gitignored — not public, pending his
+    Google Sheet (`data-raw/Perozzo/Perozzo-Sweden.xlsx`, included in the repo with his
     permission) tracing the full chain: the numbers come from **OCR of the printed table** in
     Perozzo's own 1880 paper (*Annali di Statistica* ser. 2, v.11-12), scanned by HathiTrust
     (<https://babel.hathitrust.org/cgi/pt?id=mdp.39015033949978&seq=226>) — not from reading pixel

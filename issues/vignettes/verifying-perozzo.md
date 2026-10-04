@@ -100,8 +100,8 @@ So the chain is now: **Perozzo (1880/1881 plate) &rarr; ??? &rarr; `infowetrust/
 mean asking RJ Andrews directly, or finding whatever *they* worked from.
 
 **Update 2026-08-31: the `???` is closed.** MF emailed RJ Andrews asking exactly that question; he
-replied with a Google Sheet tracing his own process (kept locally as `data-raw/Perozzo-Sweden.xlsx`,
-gitignored -- not public pending his permission). It has five tabs: `source`, `OCR`, `corrected-wide`,
+replied with a Google Sheet tracing his own process (kept as `data-raw/Perozzo/Perozzo-Sweden.xlsx`,
+included in the repo with his permission). It has five tabs: `source`, `OCR`, `corrected-wide`,
 `plotMe-wide`, `plotMe-tidy`.
 
 - `source`: a HathiTrust scan of the actual page, *Annali di Statistica* ser. 2, v.11-12 (1880):
@@ -277,8 +277,8 @@ which would itself be a finding, not just a footnote. Not yet resolved either wa
   that stopped at `old-charts`.
 - `data-raw/Perozzo-import.R`, `data-raw/perozzo-tidy.csv` -- the shipped data; full upstream chain
   now known (see 2026-08-31 update above).
-- `data-raw/Perozzo-Sweden.xlsx` -- RJ Andrews' own OCR/correction/transform trace, kept locally,
-  gitignored, not public pending his permission to include it.
+- `data-raw/Perozzo/Perozzo-Sweden.xlsx` -- RJ Andrews' own OCR/correction/transform trace,
+  included in the repo with his permission.
 - `data-raw/perozzo-contours.json`, `data-raw/Perozzo-contours-compare.R` (+ `.csv`/`.png`
   output) -- the circular comparison this note is built around; now independently confirmed
   circular by reading `old-charts`' `core/contours.ts`.
