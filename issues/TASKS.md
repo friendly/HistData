@@ -227,6 +227,20 @@ work rather than clean-up:
   Thematically connects to `WordPools` (memory-research datasets).
   File: `data-raw/Ebbinghaus/Ebbinghaus Replication Schema and Results.xlsx`
 
+- [ ] **New dataset: `Handwashing`** — built 2026-10-04, not yet committed or released.
+  `Handwashing.clinics`, `Handwashing.monthly`, `Handwashing.hospital`: Semmelweis' (1861) births
+  and maternal deaths at the Vienna maternity clinics, transcribed from the page scans of the
+  Wellcome Collection copy. Everything is in `data-raw/handwashing/`: the transcription CSVs,
+  `Handwashing-import.R`, `handwashing-check.R` (totals and cross-checks), and
+  `handwashing-notes.md` (sources, checks, discrepancies, online versions). Documented in
+  `R/Handwashing.R`. Still to do:
+  - [X] `NEWS.md` entry added under 1.1.1 (no version bump: 1.1.1 is still ahead of CRAN).
+  - [X] Added `Handwashing`, `Ebbinghaus`, `Federalist`, `Perozzo`, `Playfair1824` to the index
+    and `@seealso` in `R/HistData-package.R`.
+  - [X] Added to `timeref.bib`: `Semmelweis:1861` and `Semmelweis:1983` (Carter's translation).
+  - [ ] Open questions in the notes: February 1845 deaths (13 vs. a printed percent implying 14);
+    why monthly births sum to less than yearly births; what Tabelle XVII counts.
+
 ## Reference material (not TODO, not clean-up)
 
 - `sandbox/*.R` (14 loose scripts: `Arbuthnot-PieGlyph.R`, `Cholera-plots.R`,

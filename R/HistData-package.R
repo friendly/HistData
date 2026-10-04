@@ -43,11 +43,14 @@
 #'   \item{\code{\link{CushnyPeebles}}}{Cushny-Peebles data: Soporific effects of scopolamine derivatives}
 #'   \item{\code{\link{Dactyl}}}{Edgeworth's counts of dactyls in Virgil's Aeneid}
 #'   \item{\code{\link{DrinksWages}}}{Elderton and Pearson's (1910) data on drinking and wages}
+#'   \item{\code{\link{Ebbinghaus}}}{Ebbinghaus' forgetting curve and three replications}
 #'   \item{\code{\link{EdgeworthDeaths}}}{Edgeworth's Data on Death Rates in British Counties}
+#'   \item{\code{\link{Federalist}}}{The Federalist Papers: texts and word counts for authorship attribution}
 #'   \item{\code{\link{Fingerprints}}}{Waite's data on Patterns in Fingerprints}
 #'   \item{\code{\link{Galton}}}{Galton's data on the heights of parents and their children}
 #'   \item{\code{\link{GaltonFamilies}}}{Galton's data on the heights of parents and their children, by family}
 #'   \item{\code{\link{Guerry}}}{Data from A.-M. Guerry, "Essay on the Moral Statistics of France"}
+#'   \item{\code{\link{Handwashing}}}{Semmelweis' data on handwashing and deaths from childbed fever}
 #'   \item{\code{\link{HalleyLifeTable}}}{Halley's Life Table}
 #'   \item{\code{\link{Jevons}}}{W. Stanley Jevons' data on numerical discrimination}
 #'   \item{\code{\link{Langren}}}{van Langren's data on longitude distance between Toledo and Rome}
@@ -58,6 +61,8 @@
 #'   \item{\code{\link{Nightingale}}}{Florence Nightingale's data on deaths from various causes in the Crimean War}
 #'   \item{\code{\link{OldMaps}}}{Latitudes and Longitudes of 39 Points in 11 Old Maps}
 #'   \item{\code{\link{PearsonLee}}}{Pearson and Lee's 1896 data on the heights of parents and children classified by gender}
+#'   \item{\code{\link{Perozzo}}}{Perozzo's Swedish population survivorship data}
+#'   \item{\code{\link{Playfair1824}}}{Playfair's Linear Chronology}
 #'   \item{\code{\link{PolioTrials}}}{Polio Field Trials Data on the Salk vaccine}
 #'   \item{\code{\link{Pollen}}}{5D dataset from the 1986 JSM Challenge}
 #'   \item{\code{\link{Prostitutes}}}{Parent-Duchatelet's time-series data on the number of prostitutes in Paris}
@@ -81,15 +86,16 @@
 #' \code{\link{Cholera}}, \code{\link{CholeraDeaths1849}},
 #' \code{\link{CushnyPeebles}},
 #' 
-#' \code{\link{Dactyl}}, \code{\link{DrinksWages}},
-#' \code{\link{EdgeworthDeaths}}, \code{\link{Fingerprints}},
+#' \code{\link{Dactyl}}, \code{\link{DrinksWages}}, \code{\link{Ebbinghaus}},
+#' \code{\link{EdgeworthDeaths}}, \code{\link{Federalist}}, \code{\link{Fingerprints}},
 #' \code{\link{Galton}}, \code{\link{GaltonFamilies}}, \code{\link{Guerry}},
-#' \code{\link{HalleyLifeTable}},
+#' \code{\link{HalleyLifeTable}}, \code{\link{Handwashing}},
 #' 
 #' \code{\link{Jevons}}, \code{\link{Langren}}, \code{\link{Macdonell}},
 #' \code{\link{Michelson}}, \code{\link{Minard}}, \code{\link{Nightingale}},
 #' 
-#' \code{\link{OldMaps}}, \code{\link{PearsonLee}}, \code{\link{PolioTrials}},
+#' \code{\link{OldMaps}}, \code{\link{PearsonLee}}, \code{\link{Perozzo}},
+#' \code{\link{Playfair1824}}, \code{\link{PolioTrials}},
 #' \code{\link{Pollen}}, \code{\link{Prostitutes}}, \code{\link{Pyx}},
 #' 
 #' \code{\link{Quarrels}}, \code{\link{Snow}}, \code{\link{Wheat}},
