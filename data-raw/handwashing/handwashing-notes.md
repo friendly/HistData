@@ -1,10 +1,10 @@
 # Semmelweis handwashing data — working notes
 
-Candidate new dataset(s) for HistData: puerperal ("childbed") fever mortality at the Vienna
+New datasets for HistData: puerperal ("childbed") fever mortality at the Vienna
 General Hospital's lying-in clinics, before and after Semmelweis introduced chlorine
 handwashing in mid-May 1847.
 
-Dataset name(s) not yet decided: `Handwashing.*` vs `Semmelweis.*`. -> MF: Go with "Handwashing.*""
+Dataset names: `Handwashing.*` (MF's choice, over `Semmelweis.*`).
 
 Impetus for this: A mention in "This Month in Statistics History", AMSTAT News, Sept. 2026 (Penny S. Reynolds)
 
@@ -92,6 +92,9 @@ figures (e.g. 13.₃₉). Those decimals are not reliably legible in the scan ev
 
 Tabelle I's percents are legible and worth keeping for documentation: clinic 1 —
 7.7, 15.8, 8.9, 8.2, 6.8, 11.4, total 9.92; clinic 2 — 3.5, 7.5, 5.9, 2.3, 2.03, 2.7, total 3.38.
+The clinic 2 total disagrees with the counts: 691/17791 = 3.88, not 3.38 (clinic 1's 9.92 =
+1989/20042 is right). So the ratio of the clinics over 1841–1846 is 2.6, not the 2.9 the
+printed percents imply.
 
 ## Checks (`handwashing-check.R`)
 
@@ -262,16 +265,20 @@ saves them to `data/`; they are documented together in `R/Handwashing.R` (help t
 The `table` / `page` provenance columns stay in the CSVs and are described in the help page
 rather than carried in the data frames.
 
-## Not done / possible next steps
+## Decided
 
-- Decide dataset names and whether to ship three data frames or fewer.
-  MF: Call them "Handwashing.clinics", "Handwashing.monthly"
-  
-- Other tables in the book that could extend this: IV–XIV (crowding vs. mortality
-  comparisons), XX (paying ward), XXI and XXXII–XXXIII (Paris Maternité, Dubois' clinic),
-  XXV–XXX and XXXV (London and Dublin hospitals), XXXI (Vienna vs. Dublin), and the newborn
-  mortality table that Wikipedia cites as Carter's table 4.
-  MF: That's too much; ignore these
-  
-- Check Carter (1983) for his notes on the births discrepancy and for the 1792 / 1848 figures.
-- Read Semmelweis's text around pp. 62–64 to see what Tabelle XVII counts.
+- Names: `Handwashing.clinics`, `Handwashing.monthly`, `Handwashing.hospital`, shipped as
+  three data frames (MF).
+- Not extending to the other tables in the book (MF: "too much"): IV–XIV (crowding vs.
+  mortality comparisons), XX (paying ward), XXI and XXXII–XXXIII (Paris Maternité, Dubois'
+  clinic), XXV–XXX and XXXV (London and Dublin hospitals), XXXI (Vienna vs. Dublin), and the
+  newborn mortality table that Wikipedia cites as Carter's table 4.
+- The 1792 and 1848 figures are settled against Carter's excerpt (see "Wikipedia" above).
+
+## Still open
+
+- February 1845 deaths: 13 as printed, vs. a printed percent implying 14.
+- Why the monthly births for clinic 1 sum to less than the yearly births; check the full
+  Carter (1983) for a note on this.
+- What Tabelle XVII counts, given it is not clinic 1 + clinic 2; read Semmelweis's text around
+  pp. 62–64.

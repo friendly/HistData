@@ -8,8 +8,8 @@
 #' Ignaz Semmelweis (1861) used counts of births and maternal deaths at the Vienna General
 #' Hospital's maternity clinics to argue that childbed (puerperal) fever was carried to women
 #' in labor on the hands of physicians and medical students coming from the autopsy room.
-#' In the First Clinic, where physicians were trained, mortality had been about three times
-#' that of the Second Clinic, where midwives were trained. After he required washing the
+#' In the First Clinic, where physicians were trained, mortality had been about two and a half
+#' times that of the Second Clinic, where midwives were trained. After he required washing the
 #' hands in a chlorine solution, beginning in mid-May 1847, mortality in the First Clinic
 #' fell to the level of the Second.
 #'
@@ -85,6 +85,9 @@
 #'   therefore somewhat higher than the yearly rates for the same year.
 #' - The figures for the whole hospital in `Handwashing.hospital` are not the sum
 #'   of the two clinics for 1833-1848.
+#' - In Table I the percent printed for the Second Clinic over 1841-1846 is 3.38,
+#'   but the printed totals give 691 / 17791 = 3.88. The First Clinic's 9.92 agrees
+#'   with its counts, so the ratio of the two clinics is about 2.6, not 2.9.
 #' - Semmelweis noted that mortality in the First Clinic was understated, because
 #'   in bad periods sick patients were transferred to the general hospital and their
 #'   deaths were recorded there.
@@ -92,9 +95,12 @@
 #' **Other versions of these data.** The data for the two clinics in 1841-1846 and the
 #' monthly series are widely used in teaching, in versions that derive from the tables in
 #' the Wikipedia article "Historical mortality rates of puerperal fever", taken in turn
-#' from Carter's (1983) translation. The data here agree with those tables except for two
-#' values, which were checked against both the 1861 original and Carter: births in the Second
-#' Clinic in 1848 are 3219 (not 3319), and births in the hospital in 1792 are 1574 (not 1579).
+#' from Carter's (1983) translation. `Handwashing.monthly` is identical to the Wikipedia
+#' table. The other two differ from it in one value each, which were checked against both the
+#' 1861 original and Carter: births in the Second Clinic in 1848 are 3219 (not 3319), and
+#' births in the hospital in 1792 are 1574 (not 1579). The Wikipedia yearly series for
+#' 1784-1849 can be compared with `Handwashing.hospital` only up to 1832: from 1833 it gives
+#' the First Clinic alone, whereas Table XVII is the whole hospital throughout.
 #'
 #' @source
 #' Semmelweis, I. P. (1861). *Die Aetiologie, der Begriff und die Prophylaxis des

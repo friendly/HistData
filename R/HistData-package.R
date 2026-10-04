@@ -50,8 +50,8 @@
 #'   \item{\code{\link{Galton}}}{Galton's data on the heights of parents and their children}
 #'   \item{\code{\link{GaltonFamilies}}}{Galton's data on the heights of parents and their children, by family}
 #'   \item{\code{\link{Guerry}}}{Data from A.-M. Guerry, "Essay on the Moral Statistics of France"}
-#'   \item{\code{\link{Handwashing}}}{Semmelweis' data on handwashing and deaths from childbed fever}
 #'   \item{\code{\link{HalleyLifeTable}}}{Halley's Life Table}
+#'   \item{\code{\link{Handwashing}}}{Semmelweis' data on handwashing and deaths from childbed fever}
 #'   \item{\code{\link{Jevons}}}{W. Stanley Jevons' data on numerical discrimination}
 #'   \item{\code{\link{Langren}}}{van Langren's data on longitude distance between Toledo and Rome}
 #'   \item{\code{\link{Macdonell}}}{Macdonell's data on height and finger length of criminals, used by Gosset (1908)}
