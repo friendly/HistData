@@ -69,7 +69,6 @@ the scatterplot *Journal of the History of the Behavioral Sciences*,
 ## Examples
 
 ``` r
-
 data(Wheat)
 
 # ------------------------------------

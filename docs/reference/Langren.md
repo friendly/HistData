@@ -121,7 +121,6 @@ Lelewel, J. (1851). *Geographie du Moyen Age*. Paris: Pilliet, 1851.
 ## Examples
 
 ``` r
-
 data(Langren1644)
 
 ####################################################

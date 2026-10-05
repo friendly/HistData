@@ -74,7 +74,6 @@ Breslaw; with an attempt to ascertain the price of annuities upon lives.
 ## Examples
 
 ``` r
-
 data(Breslau)
 
 # Reproduce Figure 1 in Bellhouse (2011)

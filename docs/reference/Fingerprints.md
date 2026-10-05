@@ -56,7 +56,6 @@ Waite, H. (1915). The analysis of fingerprints, *Biometrika*, 10,
 ## Examples
 
 ``` r
-
 data(Fingerprints)
 xtabs(count ~ Whorls + Loops, data=Fingerprints)
 #>       Loops

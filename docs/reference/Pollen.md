@@ -73,7 +73,6 @@ the Section on Statistical Graphics*, 113-116.
 ## Examples
 
 ``` r
-
 data(Pollen)
 
 # All pairwise plots -- just a bunch of blobs?

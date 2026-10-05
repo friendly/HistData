@@ -60,7 +60,6 @@ the data according to the gender of the father/mother and son/daughter.
 Wachsmuth, A.W., Wilkinson L., Dallal G.E. (2003). Galton's bend: A
 previously undiscovered nonlinearity in Galton's family stature
 regression data. *The American Statistician*, **57**, 190-192.
-%<http://staff.ustc.edu.cn/~zwp/teach/Reg/galton.pdf>
 [doi:10.1198/0003130031874](https://doi.org/10.1198/0003130031874) .
 
 See the example by John Russell for the
@@ -73,7 +72,6 @@ See the example by John Russell for the
 ## Examples
 
 ``` r
-
 data(PearsonLee)
 str(PearsonLee)
 #> 'data.frame':    746 obs. of  6 variables:

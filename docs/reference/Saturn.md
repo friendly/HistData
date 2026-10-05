@@ -103,7 +103,6 @@ Luiz Fernando Palin Droubi
 ## Examples
 
 ``` r
-
 data(Saturn)
 
 # some scatterplots
