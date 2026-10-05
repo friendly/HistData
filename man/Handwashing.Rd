@@ -125,12 +125,17 @@ monthly <- within(Handwashing.monthly, {
   rate <- 100 * deaths / births
   washing <- date > start
 })
-plot(rate ~ date, data = monthly, type = "b", pch = 16,
-     col = ifelse(washing, "blue", "red"),
+
+plot(rate ~ date, data = monthly, type = "l", col = "grey", xaxt = "n",
      xlab = "Date", ylab = "Maternal deaths per 100 births",
-     main = "First Clinic: monthly mortality from childbed fever")
+     main = "First Clinic: monthly mortality from childbed fever, 1841 - 1849")
+points(rate ~ date, data = monthly, pch = 16,
+       col = ifelse(washing, "blue", "red"))
+# a tick mark for each year
+axis.Date(1, at = seq(as.Date("1841-01-01"), as.Date("1850-01-01"), by = "year"),
+          format = "\%Y")
 abline(v = start, lty = 2)
-text(start, 30, "Handwashing begins", pos = 4)
+text(start, 30, "Handwashing\nbegins", pos = 4)
 
 # mean monthly mortality rate, before and after
 with(monthly, tapply(100 * deaths / births, washing, mean, na.rm = TRUE))
