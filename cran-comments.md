@@ -3,12 +3,7 @@
 * win-builder R Under development (unstable) (2026-09-30 r90605 ucrt)
 
 ## R CMD check results
-0 error(s) | 0 warning(s) | 1 note(s)
-
-win-builder reports one possibly invalid URL:
-
-* `https://observablehq.com/` (in the `HistData-Challenge` vignette): status 429, "Too Many Requests".
-  The URL is valid; the Observable site rate-limits automated requests.
+0 error(s) | 0 warning(s) | 0 note(s)
 
 
 
