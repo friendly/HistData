@@ -2,6 +2,7 @@
 
 * Document `Perozzo`'s full provenance chain to the original 1880 printed table [Thx: RJ Andrews]
 * Add `Handwashing` data: `Handwashing.clinics`, `Handwashing.monthly`, and `Handwashing.hospital`, Semmelweis' (1861) counts of births and maternal deaths from childbed fever at the Vienna maternity clinics, before and after he introduced handwashing in May 1847. Transcribed from the tables in the original 1861 book.
+* Use `tinyplot` for a couple of examples, to try this out. Possibly extend to other examples
 
 ## Version 1.1.0
 

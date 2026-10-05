@@ -2049,14 +2049,14 @@ NULL
 #' library(effects)
 #' data(Mayer)
 #' 
-#' # some scatterplots
-#' plot(Y ~ X2, pch=(15:17)[as.factor(Group)], 
-#'              col=c("red", "blue", "darkgreen")[as.factor(Group)], data=Mayer)
-#' abline(lm(Y ~ X2, data=Mayer), lwd=2)
-#' 
-#' plot(Y ~ X3, pch=(15:17)[as.factor(Group)], 
-#'              col=c("red", "blue", "darkgreen")[as.factor(Group)], data=Mayer)
-#' abline(lm(Y ~ X3, data=Mayer), lwd=2)
+#' # some scatterplots, by Group, with the overall regression line
+#' if (require(tinyplot)) {
+#'   plt(Y ~ X2 | Group, data=Mayer, pch=15:17, palette=c("red", "blue", "darkgreen"))
+#'   plt_add(Y ~ X2, type=type_lm(se=FALSE), col="black", lwd=2)
+#'
+#'   plt(Y ~ X3 | Group, data=Mayer, pch=15:17, palette=c("red", "blue", "darkgreen"))
+#'   plt_add(Y ~ X3, type=type_lm(se=FALSE), col="black", lwd=2)
+#' }
 #' 
 #' 
 #' fit <- lm(Y ~ X2 + X3, data=Mayer)

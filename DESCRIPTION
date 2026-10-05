@@ -61,7 +61,8 @@ Suggests:
     vcd,
     MASS,
     forcats,
-    plotly
+    plotly,
+    tinyplot
 License: GPL
 LazyLoad: yes
 LazyData: yes
