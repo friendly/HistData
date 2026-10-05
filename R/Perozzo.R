@@ -71,7 +71,7 @@
 #' @references
 #' 
 #' Friendly, M., & Wainer, H. (2021). A History of Data Visualization and Graphic Communication. 
-#' Harvard University Press. https://doi.org/10.4159/9780674259034
+#' Harvard University Press. \doi{10.4159/9780674259034}
 #' 
 #' Perozzo, L. (1880). Della Rappresentazione Graphica di una Collettivita di Individuinella
 #' Successione del Tempo. *Annali di Statistica*, 12, 1-16.

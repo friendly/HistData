@@ -227,19 +227,21 @@ work rather than clean-up:
   Thematically connects to `WordPools` (memory-research datasets).
   File: `data-raw/Ebbinghaus/Ebbinghaus Replication Schema and Results.xlsx`
 
-- [ ] **New dataset: `Handwashing`** — built 2026-10-04, not yet committed or released.
+- [X] **DONE 2026-10-04: New dataset: `Handwashing`** — committed and pushed (`2dbfb4e` and
+  follow-ups), in 1.1.1; not yet on CRAN.
   `Handwashing.clinics`, `Handwashing.monthly`, `Handwashing.hospital`: Semmelweis' (1861) births
   and maternal deaths at the Vienna maternity clinics, transcribed from the page scans of the
   Wellcome Collection copy. Everything is in `data-raw/handwashing/`: the transcription CSVs,
   `Handwashing-import.R`, `handwashing-check.R` (totals and cross-checks), and
   `handwashing-notes.md` (sources, checks, discrepancies, online versions). Documented in
-  `R/Handwashing.R`. Still to do:
+  `R/Handwashing.R`. Steps:
   - [X] `NEWS.md` entry added under 1.1.1 (no version bump: 1.1.1 is still ahead of CRAN).
   - [X] Added `Handwashing`, `Ebbinghaus`, `Federalist`, `Perozzo`, `Playfair1824` to the index
     and `@seealso` in `R/HistData-package.R`.
   - [X] Added to `timeref.bib`: `Semmelweis:1861` and `Semmelweis:1983` (Carter's translation).
-  - [ ] Open questions in the notes: February 1845 deaths (13 vs. a printed percent implying 14);
-    why monthly births sum to less than yearly births; what Tabelle XVII counts.
+  - Open questions left in the notes, not blocking (all described in the help page as
+    inconsistencies in the original): February 1845 deaths (13 vs. a printed percent implying
+    14); why monthly births sum to less than yearly births; what Tabelle XVII counts.
 
 - [ ] **Idea: `theme_histdata()`** — MF, 2026-10-04. A ggplot2 theme to make plots of historical
   data look the part: old-looking fonts, and a very light tan (aged paper) or textured

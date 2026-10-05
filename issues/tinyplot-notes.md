@@ -183,3 +183,33 @@ theme may reach more of them than a ggplot2 `theme_histdata()` would. This bears
 
 Do `Handwashing` (clinics) and `Mayer` as a trial: both are short, both clearly improve, and
 neither needs data reshaping. If the result reads well on the help page, go on to `Nightingale`.
+
+## Done so far (2026-10-04)
+
+MF's decisions: guard with `if (require(tinyplot))`, replace the base version rather than add
+alongside, and no minimum version for `tinyplot` in `Suggests`.
+
+- **`Handwashing` (clinics)** — as in candidate 1, drawn with
+  `tinytheme("classic", family = "serif", bg = "#F4ECD8")` as a trial of the antique look, then
+  reset with `tinytheme()`. Legend reads "First" / "Second" under the title "Clinic".
+- **`Mayer`** — as in candidate 3, but with `type_lm(se = FALSE)` so the overall line has no
+  confidence band, like the `abline(lm())` it replaced.
+- **`Nightingale`** — both line graphs (death rates, and percent of deaths), from a long data
+  frame `Night.long` built in base R, so that section no longer depends on `reshape`. What it
+  took beyond candidate 2:
+  - Legend placement: `legend = "right"` (inside the plot) for the rates, where the upper right
+    is empty; `legend = "bottom!"` (a row below the plot) for the percents, where the lines fill
+    the panel. The default right-margin legend took too much width with the long labels.
+  - `"\n"` in legend labels does not work: tinyplot adds no line spacing, so two-line entries
+    overlap each other.
+  - Date axis: `xaxb = quarters, xaxl = function(x) format(x, "%b %Y")`.
+  - **`draw =` fails under pkgdown.** The shading and period labels were first passed as
+    `draw = regimes(980)`, with `regimes()` a helper defined in the example. That ran at top
+    level but failed in the pkgdown build with `could not find function "regimes"`, leaving an
+    empty plot. Calling `regimes(980)` after `plt()` works in both. Avoid `draw =` with
+    anything defined in the example itself.
+  - At pkgdown's figure size the two-line period labels collided with the lines, so they are
+    now one line each at `cex = 0.85`, and the percent plot uses `ylim = c(0, 110)`.
+
+Still candidates: `Cholera`, and the smaller ones (`Arbuthnot`, `DrinksWages`, `Snow` dates,
+`Michelson`, `GaltonFamilies`).
