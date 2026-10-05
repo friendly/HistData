@@ -241,6 +241,23 @@ work rather than clean-up:
   - [ ] Open questions in the notes: February 1845 deaths (13 vs. a printed percent implying 14);
     why monthly births sum to less than yearly births; what Tabelle XVII counts.
 
+- [ ] **Idea: `theme_histdata()`** — MF, 2026-10-04. A ggplot2 theme to make plots of historical
+  data look the part: old-looking fonts, and a very light tan (aged paper) or textured
+  background. Current ggplot2 use in the package is modest: about a dozen `ggplot()` calls in
+  the examples (`R/data-concepts.R`, `R/Ebbinghaus.R`) and five in `HistData-Challenge.Rmd`;
+  most examples use base graphics. Things to settle (Claude's notes):
+  - ggplot2 is only in `Suggests`, so the function has to guard with `requireNamespace()` (or
+    ggplot2 moves to `Imports`).
+  - Fonts: a period typeface has to be installed to be used, which is fragile on CRAN check
+    machines and for users. Fall back to `"serif"` when the font is missing; decide whether to
+    recommend a specific free font (e.g. via `systemfonts` / `showtext`).
+  - Background: a tan `plot.background` / `panel.background` is one line. A real paper texture
+    is not a theme element; it needs a raster image drawn under the panel, so it would be a
+    separate helper and an image file shipped in `inst/`.
+  - Whether to offer a base-graphics counterpart (a `par()` wrapper), since that is what most
+    examples use.
+  - Where to use it: a few showcase examples and the vignette, not every example.
+
 ## Reference material (not TODO, not clean-up)
 
 - `sandbox/*.R` (14 loose scripts: `Arbuthnot-PieGlyph.R`, `Cholera-plots.R`,
