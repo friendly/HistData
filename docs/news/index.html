@@ -41,6 +41,10 @@
 <ul><li>Document <code>Perozzo</code>’s full provenance chain to the original 1880 printed table [Thx: RJ Andrews]</li>
 <li>Add <code>Handwashing</code> data: <code>Handwashing.clinics</code>, <code>Handwashing.monthly</code>, and <code>Handwashing.hospital</code>, Semmelweis’ (1861) counts of births and maternal deaths from childbed fever at the Vienna maternity clinics, before and after he introduced handwashing in May 1847. Transcribed from the tables in the original 1861 book.</li>
 <li>Use <code>tinyplot</code> for a couple of examples, to try this out. Possibly extend to other examples</li>
+<li>
+<code>tinyplot</code> is now used for the <code>Nightingale</code> line graphs, as well as <code>Handwashing</code> (two clinics) and <code>Mayer</code>.</li>
+<li>Fix <code>GaltonFamilies</code> examples: <code><a href="https://rdrr.io/pkg/car/man/scatterplot.html" class="external-link">car::scatterplot()</a></code> calls used outdated argument names, so the 68% data ellipses and legend position were ignored.</li>
+<li>Fix <code>ggplot2</code> warnings in the <code>Breslau</code>, <code>Minard</code> and <code>PearsonLee</code> examples (<code>linewidth</code> for lines, <code>legend.position.inside</code>, no <code>data$var</code> inside <code><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes()</a></code>).</li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.1.0" id="version-110">Version 1.1.0<a class="anchor" aria-label="anchor" href="#version-110"></a></h2><p class="text-muted">CRAN release: 2026-08-30</p>

@@ -11,6 +11,16 @@
   from the tables in the original 1861 book.
 - Use `tinyplot` for a couple of examples, to try this out. Possibly
   extend to other examples
+- `tinyplot` is now used for the `Nightingale` line graphs, as well as
+  `Handwashing` (two clinics) and `Mayer`.
+- Fix `GaltonFamilies` examples:
+  [`car::scatterplot()`](https://rdrr.io/pkg/car/man/scatterplot.html)
+  calls used outdated argument names, so the 68% data ellipses and
+  legend position were ignored.
+- Fix `ggplot2` warnings in the `Breslau`, `Minard` and `PearsonLee`
+  examples (`linewidth` for lines, `legend.position.inside`, no
+  `data$var` inside
+  [`aes()`](https://ggplot2.tidyverse.org/reference/aes.html)).
 
 ## Version 1.1.0
 

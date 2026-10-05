@@ -172,13 +172,14 @@ of handwashing on maternal mortality observed by Ignaz Semmelweis?
 
 Loudon, I. (2013). Ignaz Phillip Semmelweis' studies of death in
 childbirth. *Journal of the Royal Society of Medicine*, **106**(11),
-461-463. <https://doi.org/10.1177/0141076813507844>
+461-463.
+[doi:10.1177/0141076813507844](https://doi.org/10.1177/0141076813507844)
 
 Stang, A., Standl, F., & Poole, C. (2022). A twenty-first century
 perspective on concepts of modern epidemiology in Ignaz Philipp
 Semmelweis' work on puerperal sepsis. *European Journal of
 Epidemiology*, **37**, 437-445.
-<https://doi.org/10.1007/s10654-022-00871-8>
+[doi:10.1007/s10654-022-00871-8](https://doi.org/10.1007/s10654-022-00871-8)
 
 Wikipedia, "Historical mortality rates of puerperal fever",
 <https://en.wikipedia.org/wiki/Historical_mortality_rates_of_puerperal_fever>
