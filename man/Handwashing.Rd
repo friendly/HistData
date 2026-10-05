@@ -126,9 +126,9 @@ monthly <- within(Handwashing.monthly, {
   washing <- date > start
 })
 
-plot(rate ~ date, data = monthly, type = "l", col = "grey", xaxt = "n",
+plot(rate ~ date, data = monthly, type = "l", col = "grey40", xaxt = "n",
      xlab = "Date", ylab = "Maternal deaths per 100 births",
-     main = "Monthly mortality from childbed fever, First Clinic, 1841 - 1849")
+     main = "Monthly mortality from childbed fever, First Clinic, 1841-1849")
 points(rate ~ date, data = monthly, pch = 16,
        col = ifelse(washing, "blue", "red"))
 # a tick mark for each year
