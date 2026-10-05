@@ -208,7 +208,7 @@ points(rate ~ date, data = monthly, pch = 16,
 axis.Date(1, at = seq(as.Date("1841-01-01"), as.Date("1850-01-01"), by = "year"),
           format = "%Y")
 abline(v = start, lty = 2)
-text(start, 30, "Handwashing\nbegins", pos = 4)
+text(start, 28, "Handwashing\nbegins", pos = 4)
 
 
 # mean monthly mortality rate, before and after
