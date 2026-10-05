@@ -96,6 +96,7 @@ of this data set.
 ## Examples
 
 ``` r
+
 data(CushnyPeebles)
 # quick looks at the data
 plot(CushnyPeebles)

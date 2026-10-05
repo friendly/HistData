@@ -30,6 +30,7 @@ Digitized from Bowley's graph.
 ## Examples
 
 ``` r
+
 data(Bowley)
 
 # plot the data 

@@ -71,6 +71,7 @@ See the example by John Russell for the
 ## Examples
 
 ``` r
+
 data(Galton)
 
 ###########################################################################

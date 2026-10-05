@@ -85,6 +85,7 @@ See the example by John Russell for the
 ## Examples
 
 ``` r
+
 data(Macdonell)
 
 # display the frequency table

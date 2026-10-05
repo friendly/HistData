@@ -5,10 +5,10 @@ Vienna General Hospital's maternity clinics to argue that childbed
 (puerperal) fever was carried to women in labor on the hands of
 physicians and medical students coming from the autopsy room. In the
 First Clinic, where physicians were trained, mortality had been about
-three times that of the Second Clinic, where midwives were trained.
-After he required washing the hands in a chlorine solution, beginning in
-mid-May 1847, mortality in the First Clinic fell to the level of the
-Second.
+two and a half times that of the Second Clinic, where midwives were
+trained. After he required washing the hands in a chlorine solution,
+beginning in mid-May 1847, mortality in the First Clinic fell to the
+level of the Second.
 
 These three datasets were transcribed from the tables in his 1861 book.
 They give the comparison of the two clinics by year, the month-by-month
@@ -138,6 +138,11 @@ agree with each other.
 - The figures for the whole hospital in `Handwashing.hospital` are not
   the sum of the two clinics for 1833-1848.
 
+- In Table I the percent printed for the Second Clinic over 1841-1846 is
+  3.38, but the printed totals give 691 / 17791 = 3.88. The First
+  Clinic's 9.92 agrees with its counts, so the ratio of the two clinics
+  is about 2.6, not 2.9.
+
 - Semmelweis noted that mortality in the First Clinic was understated,
   because in bad periods sick patients were transferred to the general
   hospital and their deaths were recorded there.
@@ -146,10 +151,14 @@ agree with each other.
 1841-1846 and the monthly series are widely used in teaching, in
 versions that derive from the tables in the Wikipedia article
 "Historical mortality rates of puerperal fever", taken in turn from
-Carter's (1983) translation. The data here agree with those tables
-except for two values, which were checked against both the 1861 original
-and Carter: births in the Second Clinic in 1848 are 3219 (not 3319), and
-births in the hospital in 1792 are 1574 (not 1579).
+Carter's (1983) translation. `Handwashing.monthly` is identical to the
+Wikipedia table. The other two differ from it in one value each, which
+were checked against both the 1861 original and Carter: births in the
+Second Clinic in 1848 are 3219 (not 3319), and births in the hospital in
+1792 are 1574 (not 1579). The Wikipedia yearly series for 1784-1849 can
+be compared with `Handwashing.hospital` only up to 1832: from 1833 it
+gives the First Clinic alone, whereas Table XVII is the whole hospital
+throughout.
 
 ## References
 
@@ -189,12 +198,17 @@ monthly <- within(Handwashing.monthly, {
   rate <- 100 * deaths / births
   washing <- date > start
 })
-plot(rate ~ date, data = monthly, type = "b", pch = 16,
-     col = ifelse(washing, "blue", "red"),
+
+plot(rate ~ date, data = monthly, type = "l", col = "grey40", xaxt = "n",
      xlab = "Date", ylab = "Maternal deaths per 100 births",
-     main = "First Clinic: monthly mortality from childbed fever")
+     main = "Monthly mortality from childbed fever, First Clinic, 1841-1849")
+points(rate ~ date, data = monthly, pch = 16,
+       col = ifelse(washing, "blue", "red"))
+# a tick mark for each year
+axis.Date(1, at = seq(as.Date("1841-01-01"), as.Date("1850-01-01"), by = "year"),
+          format = "%Y")
 abline(v = start, lty = 2)
-text(start, 30, "Handwashing begins", pos = 4)
+text(start, 30, "Handwashing\nbegins", pos = 4)
 
 
 # mean monthly mortality rate, before and after
@@ -227,7 +241,7 @@ xtabs(cbind(births, deaths) ~ clinic, data = clinics, subset = year %in% 1841:18
 
 # The whole hospital, 1784-1848
 plot(100 * deaths / births ~ year, data = Handwashing.hospital, type = "h", lwd = 3,
-     xlab = "Year", ylab = "Maternal deaths per 100 births",
+     xlab = "Year", ylab = "Maternal deaths per 100 patients admitted",
      main = "Vienna maternity hospital, 1784-1848")
 
 ```

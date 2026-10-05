@@ -83,6 +83,7 @@ K. A. Brownlee (1955). "Statistics of the 1954 Polio Vaccine Trials",
 ## Examples
 
 ``` r
+
 data(PolioTrials)
 ## maybe str(PolioTrials) ; plot(PolioTrials) ...
 ```

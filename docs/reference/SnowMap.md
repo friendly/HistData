@@ -219,6 +219,7 @@ Michael Friendly
 ## Examples
 
 ``` r
+
 SnowMap()
 
 SnowMap(axis.labels=TRUE)

@@ -105,6 +105,7 @@ See the example by John Russell for the
 ## Examples
 
 ``` r
+
 data(Virginis)
 data(Virginis.interp)
 

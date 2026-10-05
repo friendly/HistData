@@ -110,13 +110,13 @@ Data sets included in the HistData package are:
 
   Data from A.-M. Guerry, "Essay on the Moral Statistics of France"
 
-- [`Handwashing`](https://friendly.github.io/HistData/reference/Handwashing.md):
-
-  Semmelweis' data on handwashing and deaths from childbed fever
-
 - [`HalleyLifeTable`](https://friendly.github.io/HistData/reference/HalleyLifeTable.md):
 
   Halley's Life Table
+
+- [`Handwashing`](https://friendly.github.io/HistData/reference/Handwashing.md):
+
+  Semmelweis' data on handwashing and deaths from childbed fever
 
 - [`Jevons`](https://friendly.github.io/HistData/reference/Jevons.md):
 
@@ -311,5 +311,6 @@ Maintainer: Michael Friendly
 ## Examples
 
 ``` r
+
 # see examples for the separate data sets, e.g., with ?Dataset or example(Dataset)
 ```

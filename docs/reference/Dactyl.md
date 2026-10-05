@@ -41,6 +41,7 @@ Society*, 48, 628-649.
 ## Examples
 
 ``` r
+
 data(Dactyl)
 
 # display the basic table

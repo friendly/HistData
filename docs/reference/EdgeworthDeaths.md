@@ -52,6 +52,7 @@ Society of London*, 48(4), 628-649. doi:10.2307/2979201
 ## Examples
 
 ``` r
+
 data(EdgeworthDeaths)
 
 # fit the additive ANOVA model

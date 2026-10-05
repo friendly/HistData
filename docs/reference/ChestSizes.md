@@ -48,6 +48,7 @@ of Uncertainty before 1900*. Cambridge, MA: Harvard University Press,
 ## Examples
 
 ``` r
+
 data(ChestSizes)
 
 # frequency polygon

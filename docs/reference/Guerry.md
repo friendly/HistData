@@ -198,6 +198,7 @@ analysis.
 ## Examples
 
 ``` r
+
 data(Guerry)
 ## maybe str(Guerry) ; plot(Guerry) ...
 ```

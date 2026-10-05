@@ -64,6 +64,7 @@ and engineering*, NY: Wiley, p. 520.
 ## Examples
 
 ``` r
+
 data(Cavendish)
 summary(Cavendish)
 #>     density         density2        density3    

@@ -9,6 +9,7 @@ are three pairs of cases that have identical “x” and “y” coordinates: 1)
 93 and 214; 2) 91 and 241; and 3) 209 and 429.
 
 ``` r
+
 library(HistData)
 
 duplicates <- Snow.deaths[(duplicated(Snow.deaths[, c("x", "y")])), ]
@@ -31,6 +32,7 @@ An expedient solution would be to copy the data set and recode the data
 with the following values:
 
 ``` r
+
 Snow.deaths2 <- Snow.deaths
 
 fix <- data.frame(x = c(12.56974, 12.53617, 12.33145), y = c(11.51226, 11.58107, 14.80316)) 
@@ -110,6 +112,7 @@ of reference. Doing so boils down to solving a quadratic equation. The
 two formulas below were used to compute the solution.
 
 ``` r
+
 quadratic <- function(a, b, c) {
   root1 <- (-b + sqrt(b^2 - 4 * a * c)) / (2 * a)
   root2 <- (-b - sqrt(b^2 - 4 * a * c)) / (2 * a)
