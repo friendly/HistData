@@ -380,8 +380,8 @@ included examples using:
   [“What They Were
   Thinking”](https://www.datavis.ca/gallery/minard/IML-thinking.html)),
 - [Protovis](https://mbostock.github.io/protovis/), by Mike Bostock,
-  superseded by D3.js, whose modern home is
-  [Observable](https://observablehq.com/)).
+  superseded by [D3.js](https://d3js.org/), whose modern home is
+  Observable).
 
 The content doesn’t change; what changes is what the choice of tool
 reveals about the graphic’s underlying structure and how you think about

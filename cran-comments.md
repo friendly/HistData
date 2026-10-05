@@ -3,7 +3,7 @@
 * win-builder R Under development (unstable) (2026-09-30 r90605 ucrt)
 
 ## R CMD check results
-0 error(s) | 0 warning(s) | 0 note(s)
+0 error(s) | 0 warning(s) | 1 note(s)
 
 win-builder reports one possibly invalid URL:
 
