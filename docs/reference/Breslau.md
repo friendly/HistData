@@ -85,8 +85,8 @@ Breslau5 <- Breslau |>
   filter(age >= 5) |>
   mutate(div5 = factor(age %% 5 == 0))
 
-ggplot(Breslau5, aes(x=age, y=total), size=1.5) +
-  geom_point(aes(color=div5)) +
+ggplot(Breslau5, aes(x=age, y=total)) +
+  geom_point(aes(color=div5), size=1.5) +
   scale_color_manual(labels = c(FALSE, TRUE), 
                      values = c("blue", "red")) +
   guides(color=guide_legend("Age divisible by 5")) +
@@ -94,10 +94,6 @@ ggplot(Breslau5, aes(x=age, y=total), size=1.5) +
   labs(x = "Age current at death",
        y = "Total number of deaths") +
   theme_bw()
-#> Warning: Arguments in `...` must be used.
-#> ✖ Problematic argument:
-#> • size = 1.5
-#> ℹ Did you misspell an argument name?
 
 
 ```

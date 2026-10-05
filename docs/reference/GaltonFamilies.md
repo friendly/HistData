@@ -98,57 +98,21 @@ str(GaltonFamilies)
 ## reproduce Fig 2 in Hanley (2004)
 library(car)
 scatterplot(childHeight ~ midparentHeight | gender, data=GaltonFamilies, 
-    ellipse=TRUE, levels=0.68, legend.coords=list(x=64, y=78))
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
+    ellipse=list(levels=0.68), legend=list(coords=list(x=64, y=78)))
 
 
 # multiply daughters' heights by 1.08
 GF1 <- within(GaltonFamilies, 
               {childHeight <- ifelse (gender=="female", 1.08*childHeight, childHeight)} )
 scatterplot(childHeight ~ midparentHeight | gender, data=GF1, 
-    ellipse=TRUE, levels=0.68, legend.coords=list(x=64, y=78))
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
+    ellipse=list(levels=0.68), legend=list(coords=list(x=64, y=78)))
 
 
 # add 5.2 to daughters' heights 
 GF2 <- within(GaltonFamilies, 
               {childHeight <- ifelse (gender=="female", childHeight+5.2, childHeight)} )
 scatterplot(childHeight ~ midparentHeight | gender, data=GF2, 
-    ellipse=TRUE, levels=0.68, legend.coords=list(x=64, y=78))
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
-#> Warning: "levels" is not a graphical parameter
-#> Warning: "legend.coords" is not a graphical parameter
+    ellipse=list(levels=0.68), legend=list(coords=list(x=64, y=78)))
 
 
 #########################################

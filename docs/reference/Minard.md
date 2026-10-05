@@ -135,14 +135,12 @@ plot_minard <- plot_troops + plot_cities +
  
 #' ## plot temperature vs. longitude, with labels for dates
 plot_temp <- ggplot(Minard.temp, aes(long, temp)) +
-  geom_path(color="grey", size=1.5) +
+  geom_path(color="grey", linewidth=1.5) +
   geom_point(size=2) +
-  geom_text(aes(label=date)) +
+  geom_text(aes(label=date), na.rm=TRUE) +
   xlab("Longitude") + ylab("Temperature") +
   coord_cartesian(xlim = c(24, 38)) + 
   theme_bw()
-#> Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-#> ℹ Please use `linewidth` instead.
   
 
 #' The plot works best if we  re-scale the plot window to an aspect ratio of ~ 2 x 1
@@ -150,8 +148,6 @@ plot_temp <- ggplot(Minard.temp, aes(long, temp)) +
 
 #' Combine the two plots into one
 grid.arrange(plot_minard, plot_temp, nrow=2, heights=c(3,1))
-#> Warning: Removed 1 row containing missing values or values outside the scale range
-#> (`geom_text()`).
 
 
 ```
