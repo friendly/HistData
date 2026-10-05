@@ -146,7 +146,7 @@
 #' 
 #' plot(rate ~ date, data = monthly, type = "l", col = "grey", xaxt = "n",
 #'      xlab = "Date", ylab = "Maternal deaths per 100 births",
-#'      main = "First Clinic: monthly mortality from childbed fever, 1841 - 1849")
+#'      main = "Monthly mortality from childbed fever, First Clinic, 1841 - 1849")
 #' points(rate ~ date, data = monthly, pch = 16,
 #'        col = ifelse(washing, "blue", "red"))
 #' # a tick mark for each year
@@ -178,7 +178,7 @@
 #'
 #' # The whole hospital, 1784-1848
 #' plot(100 * deaths / births ~ year, data = Handwashing.hospital, type = "h", lwd = 3,
-#'      xlab = "Year", ylab = "Maternal deaths per 100 births",
+#'      xlab = "Year", ylab = "Maternal deaths per 100 patients admitted",
 #'      main = "Vienna maternity hospital, 1784-1848")
 #'
 #' @keywords datasets
