@@ -71,28 +71,24 @@ xyplot(child ~ parent|par+chl, data=PearsonLee, type=c("p", "r", "smooth"), col.
 require(ggplot2)
 ggplot(PearsonLee, aes(x = parent, y = child, weight=frequency)) +
    geom_point(size = 1.5, position = position_jitter(width = 0.2)) +
-   geom_smooth(method = lm, aes(weight = PearsonLee$frequency,
-               colour = 'Linear'), se = FALSE, size = 1.5) +
-   geom_smooth(aes(weight = PearsonLee$frequency,
-               colour = 'Loess'), se = FALSE, size = 1.5) +
+   geom_smooth(method = lm, aes(colour = 'Linear'), se = FALSE, linewidth = 1.5) +
+   geom_smooth(aes(colour = 'Loess'), se = FALSE, linewidth = 1.5) +
    facet_grid(chl ~ par) +
    scale_colour_manual(breaks = c('Linear', 'Loess'),
                        values = c('green', 'red')) +
-   theme(legend.position = c(0.14, 0.885),
+   theme(legend.position = "inside", legend.position.inside = c(0.14, 0.885),
         legend.background = element_rect(fill = 'white'))
 
 # inverse regression, as in Wachmuth et al. (2003)
 
 ggplot(PearsonLee, aes(x = child, y = parent, weight=frequency)) +
    geom_point(size = 1.5, position = position_jitter(width = 0.2)) +
-   geom_smooth(method = lm, aes(weight = PearsonLee$frequency,
-               colour = 'Linear'), se = FALSE, size = 1.5) +
-   geom_smooth(aes(weight = PearsonLee$frequency,
-               colour = 'Loess'), se = FALSE, size = 1.5) +
+   geom_smooth(method = lm, aes(colour = 'Linear'), se = FALSE, linewidth = 1.5) +
+   geom_smooth(aes(colour = 'Loess'), se = FALSE, linewidth = 1.5) +
    facet_grid(chl ~ par) +
    scale_colour_manual(breaks = c('Linear', 'Loess'),
                        values = c('green', 'red')) +
-   theme(legend.position = c(0.14, 0.885),
+   theme(legend.position = "inside", legend.position.inside = c(0.14, 0.885),
         legend.background = element_rect(fill = 'white'))
 
 

@@ -294,8 +294,8 @@ NULL
 #'   filter(age >= 5) |>
 #'   mutate(div5 = factor(age %% 5 == 0))
 #' 
-#' ggplot(Breslau5, aes(x=age, y=total), size=1.5) +
-#'   geom_point(aes(color=div5)) +
+#' ggplot(Breslau5, aes(x=age, y=total)) +
+#'   geom_point(aes(color=div5), size=1.5) +
 #'   scale_color_manual(labels = c(FALSE, TRUE), 
 #'                      values = c("blue", "red")) +
 #'   guides(color=guide_legend("Age divisible by 5")) +
@@ -1186,19 +1186,19 @@ NULL
 #' ## reproduce Fig 2 in Hanley (2004)
 #' library(car)
 #' scatterplot(childHeight ~ midparentHeight | gender, data=GaltonFamilies, 
-#'     ellipse=TRUE, levels=0.68, legend.coords=list(x=64, y=78))
+#'     ellipse=list(levels=0.68), legend=list(coords=list(x=64, y=78)))
 #' 
 #' # multiply daughters' heights by 1.08
 #' GF1 <- within(GaltonFamilies, 
 #'               {childHeight <- ifelse (gender=="female", 1.08*childHeight, childHeight)} )
 #' scatterplot(childHeight ~ midparentHeight | gender, data=GF1, 
-#'     ellipse=TRUE, levels=0.68, legend.coords=list(x=64, y=78))
+#'     ellipse=list(levels=0.68), legend=list(coords=list(x=64, y=78)))
 #' 
 #' # add 5.2 to daughters' heights 
 #' GF2 <- within(GaltonFamilies, 
 #'               {childHeight <- ifelse (gender=="female", childHeight+5.2, childHeight)} )
 #' scatterplot(childHeight ~ midparentHeight | gender, data=GF2, 
-#'     ellipse=TRUE, levels=0.68, legend.coords=list(x=64, y=78))
+#'     ellipse=list(levels=0.68), legend=list(coords=list(x=64, y=78)))
 #' 
 #' #########################################
 #' # relationship between heights of parents
@@ -2268,9 +2268,9 @@ NULL
 #'  
 #' #' ## plot temperature vs. longitude, with labels for dates
 #' plot_temp <- ggplot(Minard.temp, aes(long, temp)) +
-#' 	geom_path(color="grey", size=1.5) +
+#' 	geom_path(color="grey", linewidth=1.5) +
 #' 	geom_point(size=2) +
-#' 	geom_text(aes(label=date)) +
+#' 	geom_text(aes(label=date), na.rm=TRUE) +
 #' 	xlab("Longitude") + ylab("Temperature") +
 #' 	coord_cartesian(xlim = c(24, 38)) + 
 #' 	theme_bw()
@@ -2626,28 +2626,24 @@ NULL
 #' require(ggplot2)
 #' ggplot(PearsonLee, aes(x = parent, y = child, weight=frequency)) +
 #'    geom_point(size = 1.5, position = position_jitter(width = 0.2)) +
-#'    geom_smooth(method = lm, aes(weight = PearsonLee$frequency,
-#'                colour = 'Linear'), se = FALSE, size = 1.5) +
-#'    geom_smooth(aes(weight = PearsonLee$frequency,
-#'                colour = 'Loess'), se = FALSE, size = 1.5) +
+#'    geom_smooth(method = lm, aes(colour = 'Linear'), se = FALSE, linewidth = 1.5) +
+#'    geom_smooth(aes(colour = 'Loess'), se = FALSE, linewidth = 1.5) +
 #'    facet_grid(chl ~ par) +
 #'    scale_colour_manual(breaks = c('Linear', 'Loess'),
 #'                        values = c('green', 'red')) +
-#'    theme(legend.position = c(0.14, 0.885),
+#'    theme(legend.position = "inside", legend.position.inside = c(0.14, 0.885),
 #'         legend.background = element_rect(fill = 'white'))
 #' 
 #' # inverse regression, as in Wachmuth et al. (2003)
 #' 
 #' ggplot(PearsonLee, aes(x = child, y = parent, weight=frequency)) +
 #'    geom_point(size = 1.5, position = position_jitter(width = 0.2)) +
-#'    geom_smooth(method = lm, aes(weight = PearsonLee$frequency,
-#'                colour = 'Linear'), se = FALSE, size = 1.5) +
-#'    geom_smooth(aes(weight = PearsonLee$frequency,
-#'                colour = 'Loess'), se = FALSE, size = 1.5) +
+#'    geom_smooth(method = lm, aes(colour = 'Linear'), se = FALSE, linewidth = 1.5) +
+#'    geom_smooth(aes(colour = 'Loess'), se = FALSE, linewidth = 1.5) +
 #'    facet_grid(chl ~ par) +
 #'    scale_colour_manual(breaks = c('Linear', 'Loess'),
 #'                        values = c('green', 'red')) +
-#'    theme(legend.position = c(0.14, 0.885),
+#'    theme(legend.position = "inside", legend.position.inside = c(0.14, 0.885),
 #'         legend.background = element_rect(fill = 'white'))
 #' 
 #' 

@@ -89,9 +89,9 @@ plot_minard <- plot_troops + plot_cities +
  
 #' ## plot temperature vs. longitude, with labels for dates
 plot_temp <- ggplot(Minard.temp, aes(long, temp)) +
-	geom_path(color="grey", size=1.5) +
+	geom_path(color="grey", linewidth=1.5) +
 	geom_point(size=2) +
-	geom_text(aes(label=date)) +
+	geom_text(aes(label=date), na.rm=TRUE) +
 	xlab("Longitude") + ylab("Temperature") +
 	coord_cartesian(xlim = c(24, 38)) + 
 	theme_bw()
