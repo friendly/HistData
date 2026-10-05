@@ -216,20 +216,21 @@ with(monthly, tapply(100 * deaths / births, washing, mean, na.rm = TRUE))
 #>     FALSE      TRUE 
 #> 10.504998  2.109338 
 
-# Yearly mortality in the two clinics
+# Yearly mortality in the two clinics: First (physicians), Second (midwives)
 clinics <- within(Handwashing.clinics, rate <- 100 * deaths / births)
-plot(rate ~ year, data = clinics, type = "n",
-     xlab = "Year", ylab = "Maternal deaths per 100 births",
-     main = "Mortality in the two clinics")
-lines(rate ~ year, data = clinics, subset = clinic == "First",
-      type = "b", pch = 16, col = "red")
-lines(rate ~ year, data = clinics, subset = clinic == "Second",
-      type = "b", pch = 17, col = "blue")
-abline(v = c(1840.5, 1847.4), lty = 2)
-text(1840.5, 15, "Clinics\nseparated", pos = 2, cex = 0.8)
-text(1847.4, 15, "Handwashing", pos = 4, cex = 0.8)
-legend("topright", legend = c("First (physicians)", "Second (midwives)"),
-       col = c("red", "blue"), pch = 16:17, lty = 1)
+if (require(tinyplot)) {
+  # a theme for an antique look: serif type on a paper-coloured background
+  tinytheme("classic", family = "serif", bg = "#F4ECD8")
+  plt(rate ~ year | clinic, data = clinics, type = "b", pch = 16:17,
+      palette = c("firebrick", "navy"), legend = list(title = "Clinic"),
+      xlab = "Year", ylab = "Maternal deaths per 100 births",
+      main = "Mortality in the two clinics")
+  abline(v = c(1840.5, 1847.4), lty = 2)
+  text(1840.5, 15, "Clinics\nseparated", pos = 2, cex = 0.8)
+  text(1847.4, 15, "Handwashing", pos = 4, cex = 0.8)
+  tinytheme()   # reset to the default theme
+}
+#> Loading required package: tinyplot
 
 
 # The six years Semmelweis compared in his Table I

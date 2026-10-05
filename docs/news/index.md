@@ -9,6 +9,8 @@
   maternal deaths from childbed fever at the Vienna maternity clinics,
   before and after he introduced handwashing in May 1847. Transcribed
   from the tables in the original 1861 book.
+- Use `tinyplot` for a couple of examples, to try this out. Possibly
+  extend to other examples
 
 ## Version 1.1.0
 
