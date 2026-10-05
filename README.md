@@ -21,7 +21,7 @@ Commit](https://img.shields.io/github/last-commit/friendly/HistData)](https://gi
 
 <!-- Dev. Version: 1.0.0 -->
 
-Version 1.1.1 (2026-10-04)
+Version 1.1.1 (2026-10-05)
 
 The `HistData` package provides a collection of small data sets that are
 interesting and important in the history of statistics and data
@@ -297,6 +297,12 @@ tt(dsets, width = c(.2, .8)) |>
   some of historical interest.
 
 ## Contributors
+
+Contributions of new data sets, corrections and examples are welcome.
+See the [contributing
+guide](https://github.com/friendly/HistData/blob/master/CONTRIBUTING.md)
+for what fits, how to document a data set’s source, and the rules on
+copyright and permissions.
 
 Please note that the `HistData` project is released with a [Contributor
 Code of

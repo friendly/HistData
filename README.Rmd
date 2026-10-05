@@ -163,6 +163,8 @@ Wright (2013) reanalysed this and extended the datasets in the [agridat package]
 which also contains a wide variety other datasets from agricultural experiments, some of historical interest.
 
 ## Contributors
+Contributions of new data sets, corrections and examples are welcome. See the [contributing guide](https://github.com/friendly/HistData/blob/master/CONTRIBUTING.md) for what fits, how to document a data set's source, and the rules on copyright and permissions.
+
 Please note that the `HistData` project is released with a [Contributor Code of Conduct](https://friendly.github.io/HistData/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 
 Over the years, many people have contributed new data sets, offered corrections,
