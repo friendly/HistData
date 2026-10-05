@@ -18,6 +18,7 @@ sandbox/
 ^issues$
 ^\.positai$
 ^\.claude$
+^\.codex-staging$
 ^\.github$
 ^dev$
 ^\.release_check_result\.rds$
