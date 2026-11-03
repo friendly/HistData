@@ -298,3 +298,8 @@ which would itself be a finding, not just a footnote. Not yet resolved either wa
   specific component: `data/` (the two files traced here), `core/` (grid + projection math,
   including `contours.ts`), `plate/` (the `PlateViz.tsx` rendering + `layers/` decomposition
   described above).
+- <https://observablehq.com/@mthevenin/tests-pour-maj-du-wpp-de-l-onu-de-juillet-2027> -- an
+  Observable notebook (M. Thevenin) that aims to reproduce Perozzo's stereogram; another
+  independent reproduction to compare against for the side-by-side / "closer to Perozzo" challenge.
+  (Recorded here 2026-11-03. Deliberately *not* linked from `R/Perozzo.R` or the vignette:
+  observablehq.com returns HTTP 429 to CRAN's URL checks -- see commit 1464374.)
